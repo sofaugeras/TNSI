@@ -97,4 +97,21 @@ class ArbreB:
         return [] + liste_gauche + liste_droite  + [self.noeud]
     
     def parcoursLargeur(self):
-       pass
+        #Initialisation d'une file vide pour stocker les éléments à traiter
+        f=File()
+        #Mettre le noeud source
+        f.enfile(self)
+        #Liste des sommets pour restituer le parcours en largeur
+        l=[]
+        #Tant quee la file n'est pas vide
+        while not f.estFileVide():
+            # on dépile le noeud du début de la file pour le traiter
+            a=f.defile()
+            l.append(a.noeud)
+            if not a.gauche is None:
+                #f.insert(0,a.gauche)
+                f.enfile(a.gauche)
+            if not a.droit is None:
+                #f.insert(0,a.droit)
+                f.enfile(a.droit)
+        return l
