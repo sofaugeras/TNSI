@@ -1,1 +1,139 @@
-site_name: My Docs
+site_name: Saint Sauveur TNSI
+site_url: https://github.com/sofaugeras/TNSI
+repo_url: https://github.com/sofaugeras/TNSI
+repo_name: 'Cours Terminale NSI Saint Sauveur'
+edit_uri: edit/main/docs/
+site_description: Site de cours Terminale NSI
+site_author: "Sophie FAUGERAS" 
+docs_dir: docs
+
+### Structure de navigation 
+#nav:
+#    - Accueil: index.md
+#    - ressources: aide-mémoire.md
+#    - T1 Structure de données: Consignes.md
+#    - Prérequis: prérequis.md
+
+
+
+
+   
+theme:
+  name: material
+  
+  custom_dir: my_theme_customizations/
+  font: false
+  language: fr
+  favicon: xtra/favTNSI.png
+  icon:
+    logo: material/code-greater-than
+    repo : fontawesome/brands/github
+    admonition:
+      note: fontawesome/solid/pen-to-square
+
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+    - header.autohide
+    - content.code.annotate 
+
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Mode sombre
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Mode clair
+
+
+markdown_extensions:
+  - meta
+  - abbr
+  - admonition
+  - def_list
+  - attr_list
+  - footnotes
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.highlight:
+      linenums: None
+  - pymdownx.tasklist:
+      custom_checkbox: false
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.keys
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      permalink: ⚓︎
+      toc_depth: 3
+
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: false
+      locale: fr
+  - awesome-pages:
+      collapse_single_pages: false
+  - macros
+  #- page-to-pdf
+ 
+ 
+ # - mkdocs-jupyter
+
+extra:
+  analytics: 
+    provider: google
+    property: G-NXDLLVVQEB
+
+  social:
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:sophie.faugeras@ac-rennes.fr
+      name: Écrire à l'auteur
+
+    - icon: fontawesome/brands/github
+      link: https://github.com/sofaugeras/TNSI
+      name: Dépôt git
+
+    - icon: fontawesome/solid/school
+      link: https://www.lycee-saint-sauveur-redon.eu/
+      name: Lycée Saint Sauveur - Redon
+
+extra_javascript:
+  - scripts/mathjax.js
+  - xtra/javascripts/interpreter.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js
+
+extra_css:
+  - stylesheets/extra.css
+  - xtra/stylesheets/pyoditeur.css
+
+
+copyright:  CC BY-SA / S.Faugeras
