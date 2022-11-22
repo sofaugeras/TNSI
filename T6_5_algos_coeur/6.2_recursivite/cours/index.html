@@ -12,21 +12,21 @@
         <meta name="author" content="Sophie FAUGERAS">
       
       
-        <link rel="canonical" href="https://github.com/sofaugeras/TNSI/">
+        <link rel="canonical" href="https://github.com/sofaugeras/TNSI/T6_5_algos_coeur/6.2_recursivite/cours/">
       
-      <link rel="icon" href="xtra/favTNSI.png">
+      <link rel="icon" href="../../../xtra/favTNSI.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Saint Sauveur TNSI</title>
+        <title>Récursivité :hearts: - Saint Sauveur TNSI</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.472b142f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.472b142f.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.08040f6c.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.08040f6c.min.css">
         
       
       
@@ -45,11 +45,11 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="xtra/stylesheets/pyoditeur.css">
+      <link rel="stylesheet" href="../../../xtra/stylesheets/pyoditeur.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#themes-deja-traites" class="md-skip">
+        <a href="#recursivite" class="md-skip">
           Aller au contenu
         </a>
       
@@ -104,7 +104,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="." title="Saint Sauveur TNSI" class="md-header__button md-logo" aria-label="Saint Sauveur TNSI" data-md-component="logo">
+    <a href="../../.." title="Saint Sauveur TNSI" class="md-header__button md-logo" aria-label="Saint Sauveur TNSI" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Z"/></svg>
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Récursivité :hearts:
             
           </span>
         </div>
@@ -219,12 +219,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="." class="md-tabs__link md-tabs__link--active">
+    <a href="../../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -239,7 +237,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="T1_Structures_de_donnees/sommaire/" class="md-tabs__link">
+      <a href="../../../T1_Structures_de_donnees/sommaire/" class="md-tabs__link">
         T1 Structures de données
       </a>
     </li>
@@ -255,7 +253,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="T2_Programmation/sommaire/" class="md-tabs__link">
+      <a href="../../../T2_Programmation/sommaire/" class="md-tabs__link">
         T2 Programmation
       </a>
     </li>
@@ -271,7 +269,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="T3_Algorithmique/sommaire/" class="md-tabs__link">
+      <a href="../../../T3_Algorithmique/sommaire/" class="md-tabs__link">
         T3 Algorithmique
       </a>
     </li>
@@ -287,7 +285,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="T4_Bases_de_donnees/sommaire/" class="md-tabs__link">
+      <a href="../../../T4_Bases_de_donnees/sommaire/" class="md-tabs__link">
         T4 Bases de donnees
       </a>
     </li>
@@ -303,7 +301,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="T5_Architecture_materielle/sommaire/" class="md-tabs__link">
+      <a href="../../../T5_Architecture_materielle/sommaire/" class="md-tabs__link">
         T5 Architecture matérielle
       </a>
     </li>
@@ -313,13 +311,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="T6_5_algos_coeur/sommaire/" class="md-tabs__link">
+      <a href="../../sommaire/" class="md-tabs__link md-tabs__link--active">
         T6 5 algos coeur
       </a>
     </li>
@@ -335,7 +335,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="T6_6_Epreuve_pratique/BNS_2022/" class="md-tabs__link">
+      <a href="../../../T6_6_Epreuve_pratique/BNS_2022/" class="md-tabs__link">
         EP 💻
       </a>
     </li>
@@ -351,7 +351,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="T6_Annales/epreuve_bac/" class="md-tabs__link">
+      <a href="../../../T6_Annales/epreuve_bac/" class="md-tabs__link">
         Bac 🖊️
       </a>
     </li>
@@ -372,7 +372,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="T7_Divers/1_Conseils_generaux/cours/" class="md-tabs__link">
+      <a href="../../../T7_Divers/1_Conseils_generaux/cours/" class="md-tabs__link">
         T7 Divers
       </a>
     </li>
@@ -404,7 +404,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Saint Sauveur TNSI" class="md-nav__button md-logo" aria-label="Saint Sauveur TNSI" data-md-component="logo">
+    <a href="../../.." title="Saint Sauveur TNSI" class="md-nav__button md-logo" aria-label="Saint Sauveur TNSI" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Z"/></svg>
@@ -433,48 +433,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Home
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         Home
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#themes-deja-traites" class="md-nav__link">
-    Thèmes déjà traités
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -513,7 +476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="T1_Structures_de_donnees/sommaire/" class="md-nav__link">
+      <a href="../../../T1_Structures_de_donnees/sommaire/" class="md-nav__link">
         Sommaire
       </a>
     </li>
@@ -553,7 +516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/" class="md-nav__link">
+      <a href="../../../T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -567,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/" class="md-nav__link">
+      <a href="../../../T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/" class="md-nav__link">
         Exercices
       </a>
     </li>
@@ -622,7 +585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="T2_Programmation/sommaire/" class="md-nav__link">
+      <a href="../../../T2_Programmation/sommaire/" class="md-nav__link">
         Sommaire
       </a>
     </li>
@@ -662,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="T2_Programmation/2.4_Mise_au_point_de_programme/cours/" class="md-nav__link">
+      <a href="../../../T2_Programmation/2.4_Mise_au_point_de_programme/cours/" class="md-nav__link">
         Bonnes pratiques
       </a>
     </li>
@@ -717,7 +680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="T3_Algorithmique/sommaire/" class="md-nav__link">
+      <a href="../../../T3_Algorithmique/sommaire/" class="md-nav__link">
         Sommaire
       </a>
     </li>
@@ -765,7 +728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="T4_Bases_de_donnees/sommaire/" class="md-nav__link">
+      <a href="../../../T4_Bases_de_donnees/sommaire/" class="md-nav__link">
         Sommaire
       </a>
     </li>
@@ -813,7 +776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="T5_Architecture_materielle/sommaire/" class="md-nav__link">
+      <a href="../../../T5_Architecture_materielle/sommaire/" class="md-nav__link">
         Sommaire
       </a>
     </li>
@@ -853,7 +816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="T5_Architecture_materielle/5.0_Autour_de_GNU_Linux/cours/" class="md-nav__link">
+      <a href="../../../T5_Architecture_materielle/5.0_Autour_de_GNU_Linux/cours/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -900,7 +863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/" class="md-nav__link">
+      <a href="../../../T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -947,7 +910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="T5_Architecture_materielle/5.2_Gestion_des_processus/cours/" class="md-nav__link">
+      <a href="../../../T5_Architecture_materielle/5.2_Gestion_des_processus/cours/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -961,7 +924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="T5_Architecture_materielle/5.2_Gestion_des_processus/Exercices/" class="md-nav__link">
+      <a href="../../../T5_Architecture_materielle/5.2_Gestion_des_processus/Exercices/" class="md-nav__link">
         Exercices
       </a>
     </li>
@@ -988,12 +951,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
       
       
       
@@ -1016,7 +981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="T6_5_algos_coeur/sommaire/" class="md-nav__link">
+      <a href="../../sommaire/" class="md-nav__link">
         Sommaire
       </a>
     </li>
@@ -1056,7 +1021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="T6_5_algos_coeur/6.1_algos_premiere/cours/" class="md-nav__link">
+      <a href="../../6.1_algos_premiere/cours/" class="md-nav__link">
         Algos de première :brain:
       </a>
     </li>
@@ -1075,12 +1040,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7_3" type="checkbox" id="__nav_7_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3" type="checkbox" id="__nav_7_3" checked>
       
       
       
@@ -1101,11 +1068,80 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="T6_5_algos_coeur/6.2_recursivite/cours/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Récursivité :hearts:
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Récursivité :hearts:
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-factorielle-recursive" class="md-nav__link">
+    1. Factorielle récursive
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-pgcd-recursif" class="md-nav__link">
+    2. PGCD récursif
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-puissance-recursive-simple" class="md-nav__link">
+    3. Puissance récursive (simple)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-puissance-recursive-optimisee" class="md-nav__link">
+    4. Puissance récursive (optimisée)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-recherche-dichotomique-recursive-avec-slicing" class="md-nav__link">
+    5. Recherche dichotomique récursive (avec slicing)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1158,7 +1194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="T6_6_Epreuve_pratique/BNS_2022/" class="md-nav__link">
+      <a href="../../../T6_6_Epreuve_pratique/BNS_2022/" class="md-nav__link">
         BNS 2022
       </a>
     </li>
@@ -1172,7 +1208,7 @@
   
   
     <li class="md-nav__item">
-      <a href="T6_6_Epreuve_pratique/BNS_2021/" class="md-nav__link">
+      <a href="../../../T6_6_Epreuve_pratique/BNS_2021/" class="md-nav__link">
         (!!! old !!!) BNS 2021
       </a>
     </li>
@@ -1220,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="T6_Annales/epreuve_bac/" class="md-nav__link">
+      <a href="../../../T6_Annales/epreuve_bac/" class="md-nav__link">
         Épreuves du baccalauréat
       </a>
     </li>
@@ -1234,7 +1270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="T6_Annales/liste_sujets/" class="md-nav__link">
+      <a href="../../../T6_Annales/liste_sujets/" class="md-nav__link">
         Annales des Épreuves Écrites
       </a>
     </li>
@@ -1308,7 +1344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="T7_Divers/1_Conseils_generaux/cours/" class="md-nav__link">
+      <a href="../../../T7_Divers/1_Conseils_generaux/cours/" class="md-nav__link">
         Conseils de travail
       </a>
     </li>
@@ -1345,79 +1381,96 @@
 
                   
 
-  <a href="https://github.com/sofaugeras/TNSI/tree/main/docs/index.md" title="Editer cette page" class="md-content__button md-icon">
+  <a href="https://github.com/sofaugeras/TNSI/tree/main/docs/T6_5_algos_coeur/6.2_recursivite/cours.md" title="Editer cette page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>Home</h1>
-
-<div class="admonition abstract">
-<p class="admonition-title">Actualités</p>
-<ul>
-<li>14 sujets posés en 2022 sont disponibles <a class="" href="T6_Annales/liste_sujets/" target="_blank">ici</a></li>
-<li>Site d'entrainement épreuve pratique : <a class="" href="https://ens-fr.gitlab.io/nsi-pratique/" target="_blank">ici</a></li>
-<li>Site recensant les sujets de BAC écrit : <a class="" href="https://boiling-aletopelta-ff5.notion.site/be357c0d12cb430faa79dd890feb660b?v=56349470c9704fc2b93983c20d5b9a65" target="_blank">ici</a></li>
-</ul>
-<p>Les modalités des épreuves écrites (du 20 au 22 mars 2023) ont été <a class="" href="https://www.education.gouv.fr/bo/22/Hebdo36/MENE2226770N.htm" target="_blank">annoncées</a> :</p>
-<ul>
-<li>le sujet comportera 3 exercices (il n'y a plus de choix comme auparavant)</li>
-<li>seuls les items marqués <em>BAC</em> dans les sommaires des différents thèmes sont au programme de l'épreuve. Voir la liste <a class="" href="T6_Annales/epreuve_bac/#epreuve-ecrite" target="_blank">ici</a></li>
-</ul>
-</div>
-<div class="admonition note">
-<p class="admonition-title"><img alt="⭐" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2b50.svg" title=":star:" /> Thèmes en cours d'étude <img alt="⭐" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2b50.svg" title=":star:" /> </p>
-<ul>
-<li><a href="T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/">Structure de données</a></li>
-</ul>
-</div>
-<h3 id="themes-deja-traites"><em>Thèmes déjà traités</em><a class="headerlink" href="#themes-deja-traites" title="Permanent link">⚓︎</a></h3>
-<ul>
-<li><a href="T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/">Listes / piles / files</a></li>
-<li><a href="T2_Programmation/2.2_Recursivite/cours/">Récursivité</a>  </li>
-<li><a href="T2_Programmation/2.1_Programmation_Orientee_Objet/cours/">Programmation Orientée Objet</a>   </li>
-</ul>
-<!--
-!!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
-    Chers élèves de Première (Groupe 1 et Groupe 2), voilà les chapitres à revoir en priorité pour aborder sereinement l'année de Terminale en NSI :
-    - Les listes, les tuples et les dictionnaires. À retrouver [ici](https://glassus.github.io/premiere_nsi/T2_Representation_des_donnees/sommaire/){. target="_blank"}.
-    - Le plus important : les chapitres suivants d'algorithmique, à retrouver [ici](https://glassus.github.io/premiere_nsi/T4_Algorithmique/sommaire/){. target="_blank"} :
-        - Complexité
-        - Tris par sélection et insertion
-        - Dichotomie
-
-!!! abstract ":star: Actualités :star:"
-    - Organisez-vous avec (par exemple) [Trello](https://trello.com/fr){. target="_blank"}, [Notion](https://www.notion.so/fr-fr){. target="_blank"} ou [Zenkit](https://zenkit.com/){. target="_blank"}
-    - Épreuves Pratiques : [entraînez-vous sur nsi-pratique](https://ens-fr.gitlab.io/nsi-pratique/){. target="_blank"}
-
-    - Les sujets de la BNS 2022 de l'Épreuve Pratique sont parus, vous pouvez les retrouver [ici](T6_6_Epreuve_pratique/BNS_2022/)
-    - **Infos orientation :**
-        - [Lien](https://www.geipi-polytech.org/){. target="_blank"} vers le site des 34 écoles d'ingénieurs **publiques** du groupe GEIPI
-        - [Lien](data/sujet0_geipi.pdf){. target="_blank"} vers le sujet 0 de leur épreuve NSI.
-
-!!! note "*Thèmes traités*"
-    - [Architecture Von Neumann (1ère)](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.2_Architecture_Von_Neumann/cours/)
-    - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) 
-    - [Gestion des processus](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/)  
-    - [Cryptographie](T5_Architecture_materielle/5.4_Cryptographie/cours/)
-    - [Diviser pour régner](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
-    - [Arbres](T1_Structures_de_donnees/1.3_Arbres/cours/)
-    - [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
-    - [Dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/)  
-    - [Langage SQL](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
-    - [Modèle relationnel](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)
-    - [Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)  
-    - [Récursivité](T2_Programmation/2.2_Recursivite/cours/)  
-    - [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/)  
--->
+<h1 id="recursivite">Récursivité <img alt="♥" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2665.svg" title=":hearts:" /><a class="headerlink" href="#recursivite" title="Permanent link">⚓︎</a></h1>
+<h2 id="1-factorielle-recursive">1. Factorielle récursive<a class="headerlink" href="#1-factorielle-recursive" title="Permanent link">⚓︎</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">factorielle</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorielle</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="2-pgcd-recursif">2. PGCD récursif<a class="headerlink" href="#2-pgcd-recursif" title="Permanent link">⚓︎</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">pgcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">a</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">pgcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="3-puissance-recursive-simple">3. Puissance récursive (simple)<a class="headerlink" href="#3-puissance-recursive-simple" title="Permanent link">⚓︎</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">puissance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="4-puissance-recursive-optimisee">4. Puissance récursive (optimisée)<a class="headerlink" href="#4-puissance-recursive-optimisee" title="Permanent link">⚓︎</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">puissance</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">puissance</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="5-recherche-dichotomique-recursive-avec-slicing">5. Recherche dichotomique récursive (avec slicing)<a class="headerlink" href="#5-recherche-dichotomique-recursive-avec-slicing" title="Permanent link">⚓︎</a></h2>
+<p><em>Note : le slicing de liste n'est pas au programme de NSI.</em></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> 
+        <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">m</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">else</span><span class="p">:</span>              
+        <span class="n">mid</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>
+        <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">m</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">recherche</span><span class="p">(</span><span class="n">lst</span><span class="p">[:</span><span class="n">mid</span><span class="p">],</span> <span class="n">m</span><span class="p">)</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="k">return</span> <span class="n">recherche</span><span class="p">(</span><span class="n">lst</span><span class="p">[</span><span class="n">mid</span><span class="p">:],</span> <span class="n">m</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">17 novembre 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">22 novembre 2022</span>
       
     
   </small>
@@ -1484,15 +1537,30 @@
     
     <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
       
+        
+        <a href="../../6.1_algos_premiere/cours/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Algos de première :brain:" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              Algos de première :brain:
+            </div>
+          </div>
+        </a>
+      
       
         
-        <a href="T1_Structures_de_donnees/sommaire/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Sommaire" rel="next">
+        <a href="../../../T6_6_Epreuve_pratique/BNS_2022/" class="md-footer__link md-footer__link--next" aria-label="Suivant: BNS 2022" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Suivant
               </span>
-              Sommaire
+              BNS 2022
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1549,14 +1617,14 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate"], "search": "assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
-        <script src="scripts/mathjax.js"></script>
+        <script src="../../../scripts/mathjax.js"></script>
       
-        <script src="xtra/javascripts/interpreter.js"></script>
+        <script src="../../../xtra/javascripts/interpreter.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

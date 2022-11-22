@@ -1,4 +1,4 @@
-# Algorithmes de référence :heart:
+# Récursivité :hearts:
 
 ## 1. Factorielle récursive
 
