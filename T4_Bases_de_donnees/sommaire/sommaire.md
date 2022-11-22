@@ -1,1 +1,1 @@
-0. [cours SQL](../5.0_SQL)
+0. Cours SQL
