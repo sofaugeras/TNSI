@@ -1517,8 +1517,7 @@
 
 
 <h1 id="structures-de-donnees-lineaires-listes-piles-files">Structures de données linéaires :  listes, piles, files<a class="headerlink" href="#structures-de-donnees-lineaires-listes-piles-files" title="Permanent link">⚓︎</a></h1>
-<p>Lien vers le notebook  <a href="https://nbviewer.org/urls/sofaugeras.github.io/TNSI/docs/T1_Structures_de_donnees/1.1_Listes_Piles_Files/01_Listes_Piles_Files.ipynb" target="_blank">ici</a>  <a class="md-button md-button--primary" href="https://sofaugeras.github.io/TNSI/docs/T1_Structures_de_donnees/1.1_Listes_Piles_Files/01_Listes_Piles_Files.ipynb"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32v242.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64v-32c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 104c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24z"/></svg></span></a> </p>
-<p>sofaugeras.github.io/TNSI/docs/T1_Structures_de_donnees/1.1_Listes_Piles_Files/01_Listes_Piles_Files.ipynb</p>
+<p>Lien vers le notebook  <a href="https://nbviewer.org/urls/sofaugeras.github.io/TNSI/site/T1_Structures_de_donnees/1.1_Listes_Piles_Files/01_Listes_Piles_Files.ipynb" target="_blank">ici</a>  <a class="md-button md-button--primary" href="https://sofaugeras.github.io/TNSI/docs/T1_Structures_de_donnees/1.1_Listes_Piles_Files/01_Listes_Piles_Files.ipynb"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32v242.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64v-32c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 104c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24z"/></svg></span></a> </p>
 <h2 id="0-preambule-interface-implementation">0. Préambule : interface ≠ implémentation<a class="headerlink" href="#0-preambule-interface-implementation" title="Permanent link">⚓︎</a></h2>
 <p>Les structures que nous allons voir peuvent s'envisager sous deux aspects :
 - le côté utilisateur, qui utilisera une <strong>interface</strong> pour manipuler les données.
@@ -1599,18 +1598,15 @@ Cette problématique est universelle : voir par exemple <a href="https://www.mec
 <p>Mais plus précisément, on a :
 <img alt="" src="../data/ex2.png" /></p>
 <p><strong>Exercice :</strong> retrouvez comment accéder aux éléments 3, 5 et 1.</p>
-<div class="highlight"><pre><span></span><code>
+<p><div class="highlight"><pre><span></span><code>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>3
+    3</p>
+<p><div class="highlight"><pre><span></span><code>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>
+    5</p>
+<p><div class="highlight"><pre><span></span><code>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>5
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>1
-</code></pre></div>
+    1</p>
 <p>On pourra remarquer que l'interface proposée à l'utilisateur n'est pas des plus pratiques...</p>
 <h3 id="24-et-les-listes-de-python">2.4 Et les listes de Python ???<a class="headerlink" href="#24-et-les-listes-de-python" title="Permanent link">⚓︎</a></h3>
 <p>Nous connaissons déjà les listes de Python :</p>
@@ -1708,10 +1704,9 @@ On considère l'enchaînement d'opérations ci-dessous. Écrire à chaque étape
 <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">p</span>
+<p><div class="highlight"><pre><span></span><code><span class="n">p</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>|5|3|7|
-</code></pre></div>
+    |5|3|7|</p>
 <h4 id="322-a-laide-dune-liste-chainee-et-de-la-classe-cellule-creee-au-23">3.2.2 À l'aide d'une liste chaînée et de la classe  <code>Cellule</code> créée au 2.3<a class="headerlink" href="#322-a-laide-dune-liste-chainee-et-de-la-classe-cellule-creee-au-23" title="Permanent link">⚓︎</a></h4>
 <p>Au <strong>2.3</strong> nous avons créé la classe  <code>Cellule</code> :</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Cellule</span> <span class="p">:</span>
@@ -1839,10 +1834,6 @@ On considère l'enchaînement d'opérations ci-dessous. Écrire à chaque étape
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>|5|8|
 
-
-
-
-
 5
 </code></pre></div>
 <p><strong>Remarque :</strong><br />
@@ -1919,18 +1910,16 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie.
 <div class="highlight"><pre><span></span><code>5
 </code></pre></div>
 <h2 id="5-mise-en-application">5. Mise en application<a class="headerlink" href="#5-mise-en-application" title="Permanent link">⚓︎</a></h2>
-<p><a href="https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/">Lien vers les exercices</a></p>
+<p><a href="https://sofaugeras.github.io/TNSI/T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/">Lien vers les exercices</a></p>
 <hr />
 <h2 id="bibliographie">Bibliographie<a class="headerlink" href="#bibliographie" title="Permanent link">⚓︎</a></h2>
 <ul>
 <li>Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.</li>
 <li>Prépabac NSI, Terminale, G.CONNAN, V.PETROV, G.ROZSAVOLGYI, L.SIGNAC, éditions HATIER.</li>
 <li>Cours du DIU-EIL, David RENAULT, Université de Bordeaux.</li>
+<li>Cours de Gilles Lassus <img alt="" src="../data/ccbysa.png" title="image" /> Lycée François Mauriac --  Bordeaux  </li>
 </ul>
 <hr />
-<p><img alt="" src="../data/ccbysa.png" title="image" /> G.Lassus, Lycée François Mauriac --  Bordeaux  </p>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
 
   <hr>
 <div class="md-source-file">

@@ -1,8 +1,7 @@
 # Structures de données linéaires :  listes, piles, files
 
-Lien vers le notebook  [ici](https://nbviewer.org/urls/sofaugeras.github.io/TNSI/docs/T1_Structures_de_donnees/1.1_Listes_Piles_Files/01_Listes_Piles_Files.ipynb){target=_blank}  [:fontawesome-solid-download:](https://sofaugeras.github.io/TNSI/docs/T1_Structures_de_donnees/1.1_Listes_Piles_Files/01_Listes_Piles_Files.ipynb){ .md-button .md-button--primary} 
+Lien vers le notebook  [ici](https://nbviewer.org/urls/sofaugeras.github.io/TNSI/site/T1_Structures_de_donnees/1.1_Listes_Piles_Files/01_Listes_Piles_Files.ipynb){target=_blank}  [:fontawesome-solid-download:](https://sofaugeras.github.io/TNSI/docs/T1_Structures_de_donnees/1.1_Listes_Piles_Files/01_Listes_Piles_Files.ipynb){ .md-button .md-button--primary} 
 
-sofaugeras.github.io/TNSI/docs/T1_Structures_de_donnees/1.1_Listes_Piles_Files/01_Listes_Piles_Files.ipynb
 
 ## 0. Préambule : interface ≠ implémentation
 
@@ -141,10 +140,6 @@ Mais plus précisément, on a :
 ```python
 
 ```
-
-
-
-
     3
 
 
@@ -153,10 +148,6 @@ Mais plus précisément, on a :
 ```python
 
 ```
-
-
-
-
     5
 
 
@@ -165,10 +156,6 @@ Mais plus précisément, on a :
 ```python
 
 ```
-
-
-
-
     1
 
 
@@ -312,10 +299,6 @@ p.empile(7)
 ```python
 p
 ```
-
-
-
-
     |5|3|7|
 
 
@@ -499,10 +482,6 @@ f.defile()
 ```
 
     |5|8|
-    
-
-
-
 
     5
 
@@ -606,7 +585,7 @@ f.defile()
 
 ## 5. Mise en application
 
-[Lien vers les exercices](https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/)
+[Lien vers les exercices](https://sofaugeras.github.io/TNSI/T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/)
 
 
 
@@ -615,14 +594,7 @@ f.defile()
 - Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
 - Prépabac NSI, Terminale, G.CONNAN, V.PETROV, G.ROZSAVOLGYI, L.SIGNAC, éditions HATIER.
 - Cours du DIU-EIL, David RENAULT, Université de Bordeaux.
+- Cours de Gilles Lassus ![](data/ccbysa.png "image") Lycée François Mauriac --  Bordeaux  
 
 
 ---
-
-![](data/ccbysa.png "image") G.Lassus, Lycée François Mauriac --  Bordeaux  
-
-
-
-```python
-
-```
