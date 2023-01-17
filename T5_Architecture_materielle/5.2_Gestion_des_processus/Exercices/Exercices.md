@@ -37,7 +37,7 @@ Montrer que les applications s'attendent mutuellement. Comment s'appelle cette s
 _2021, Métropole sujet 1_
 
 **Partie A**
-Cette partie est un questionnaire à choix mulcheckles (QCM).
+Cette partie est un questionnaire à choix mutiples (QCM).
 Pour chacune des questions, une seule des quatre réponses est exacte.
 
 1. Parmi les commandes ci-dessous, laquelle permet d’afficher les processus en cours

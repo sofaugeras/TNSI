@@ -1088,6 +1088,33 @@
     2. Le protocole RIP
   </a>
   
+    <nav class="md-nav" aria-label="2. Le protocole RIP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etape-0" class="md-nav__link">
+    Étape 0
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-1" class="md-nav__link">
+    Étape 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-3" class="md-nav__link">
+    Étape 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1674,6 +1701,7 @@ Elle envoie donc dans le sous-réseau une trame ayant pour entête l'adresse MAC
 </li>
 </ul>
 <p>Ces questions trouveront des réponses grâce à <strong>table de routage</strong> du routeur.</p>
+<p>Regarder la vidéo suivante sur les notions de routage : <img alt="" src="https://youtu.be/sT9-IcbjqzI" /></p>
 </div>
 <h2 id="1-tables-de-routage">1. Tables de routage<a class="headerlink" href="#1-tables-de-routage" title="Permanent link">⚓︎</a></h2>
 <p><img alt="" class="center" src="../data/reseau_total2.png" /></p>
@@ -1744,7 +1772,6 @@ Elle envoie donc dans le sous-réseau une trame ayant pour entête l'adresse MAC
 <li>Soit de manière <strong>dynamique</strong> : les réseaux s'envoient eux-mêmes des informations permettant de mettre à jour leurs tables de routages respectives. Des algorithmes de détermination de meilleur chemin sont alors utilisés : nous allons en découvrir deux, le protocole RIP et le protocole OSPF.</li>
 </ul>
 <h2 id="2-le-protocole-rip">2. Le protocole RIP<a class="headerlink" href="#2-le-protocole-rip" title="Permanent link">⚓︎</a></h2>
-<p><em>voir le TP débranché</em> : <a href="https://github.com/glassus/nsi/tree/master/Terminale/Theme_5_Architecture_materielle/5.3_Protocoles_de_routage/TP_protocole_RIP">le jeu dont vous êtes le routeur</a></p>
 <p>Le Routing Information Protocol est basé sur l'échange (toutes les 30 secondes) des tables de routage de chaque routeur.
 Au début, chaque routeur ne connaît que les réseaux auquel il est directement connecté, associé à la distance 1.</p>
 <p>Ensuite, chaque routeur reçoit périodiquement la table des réseaux auquel il est connecté, suivant les règles ci-dessous :</p>
@@ -1783,6 +1810,301 @@ Au début, chaque routeur ne connaît que les réseaux auquel il est directement
 <p>La <em>métrique</em> utilisée (le nombre de sauts) ne tient pas compte de la qualité de la liaison, contrairement au protocole OSPF.    </p>
 </li>
 </ul>
+<p><strong>Application :</strong></p>
+<p>Considérons le réseau suivant qui relie deux réseaux d'une entreprise :
+-   Le réseau 1 contient des postes de travail dans un bureau.
+-   Le réseau 2 contient un serveur dans un centre de données.
+Image du schéma réseau : 
+<img alt="" src="../data/rip.png" /></p>
+<p>Les routeurs R1 et R6 permettent d'accéder au réseau de l'entreprise, R2, R3, R4 et R5, des routeurs internes au réseau. 
+Nous allons nous intéresser à l'évolution des tables de routage des routeurs R1 et R3 sur lesquels on a activé le protocole RIP.</p>
+<h3 id="etape-0">Étape 0<a class="headerlink" href="#etape-0" title="Permanent link">⚓︎</a></h3>
+<p>Au démarrage, les routeurs R1 et R3 ne connaissent que leurs voisins proches. Leurs tables peuvent donc ressembler à ceci :</p>
+<table>
+<thead>
+<tr>
+<th align="center">destination</th>
+<th>passerelle</th>
+<th>interface</th>
+<th>Nb sauts</th>
+<th>remarques</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">192.168.1.0</td>
+<td></td>
+<td>wifi0</td>
+<td>1</td>
+<td>==&gt; vers les postes de travail</td>
+</tr>
+<tr>
+<td align="center">172.16.0.0</td>
+<td></td>
+<td>eth0</td>
+<td>1</td>
+<td>==&gt; vers R3</td>
+</tr>
+</tbody>
+</table>
+<p>Au départ, R1 ne peut atteindre que ses voisins immédiats (nb Sauts vaut 1). Aucune passerelle n'est nécessaire puisque la communication est directe. Chaque sous réseau utilise une interface spécifique. Le réseau local 1 contenant les postes de travail est accessible en wifi.
+En ce qui concerne le routeur 3, celui-ci possède 4 interfaces réseau filaires, que nous nommerons eth0-3 qui permettent d'atteindre les routeurs immédiats (R1, R2, R4 et R5). Voici à quoi peut ressembler sa table de routage au démarrage :</p>
+<table>
+<thead>
+<tr>
+<th align="center">destination</th>
+<th>passerelle</th>
+<th>interface</th>
+<th>Nb sauts</th>
+<th>remarques</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">172.16.0.0</td>
+<td></td>
+<td>eth0</td>
+<td>1</td>
+<td>==&gt; vers R1</td>
+</tr>
+<tr>
+<td align="center">172.16.1.0</td>
+<td></td>
+<td>eth1</td>
+<td>1</td>
+<td>==&gt; vers R2</td>
+</tr>
+<tr>
+<td align="center">172.16.6.0</td>
+<td></td>
+<td>eth2</td>
+<td>1</td>
+<td>==&gt; vers R5</td>
+</tr>
+<tr>
+<td align="center">172.16.3.0</td>
+<td></td>
+<td>eth3</td>
+<td>1</td>
+<td>==&gt; vers R4</td>
+</tr>
+</tbody>
+</table>
+<h3 id="etape-1">Étape 1<a class="headerlink" href="#etape-1" title="Permanent link">⚓︎</a></h3>
+<p>Au bout de 30 secondes, un premier échange intervient avec les voisins immédiats de chacun des routeurs.
+<em>Le principe de l'algorithme</em>
+Lorsqu'un routeur reçoit une nouvelle route de la part d'un voisin, 4 cas sont envisageables : </p>
+<ul>
+<li>Il découvre une route vers un nouveau <strong>réseau inconnu</strong> 
+    &gt; Il l'ajoute à sa table.</li>
+<li>Il découvre une route vers un réseau <strong>connu</strong>, <strong>plus courte</strong> que celle qu'il possède dans sa table 
+    &gt; Il actualise sa table.</li>
+<li>Il découvre une route vers un réseau <strong>connu</strong>, <strong>plus longue</strong> que celle qu'il possède dans sa table 
+    &gt; Il ignore cette route.</li>
+<li>Il reçoit une route vers un réseau <strong>connu</strong> en provenance d'un routeur <strong>déjà existant dans sa table</strong> 
+    &gt; Il met à jour sa table car la topologie du réseau a été modifiée.</li>
+</ul>
+<p>En appliquant ces règles, voici la table de routage de R1 après une étape :</p>
+<table>
+<thead>
+<tr>
+<th align="center">destination</th>
+<th>passerelle</th>
+<th>interface</th>
+<th>Nb sauts</th>
+<th>remarques</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">192.168.1.0</td>
+<td></td>
+<td>wifi0</td>
+<td>1</td>
+<td>==&gt; vers les postes de travail</td>
+</tr>
+<tr>
+<td align="center">172.16.0.0</td>
+<td></td>
+<td>eth0</td>
+<td>1</td>
+<td>==&gt; vers R3</td>
+</tr>
+<tr>
+<td align="center">172.16.1.0</td>
+<td>172.16.0.3</td>
+<td>eth0</td>
+<td>2</td>
+<td>Ces 3 routes</td>
+</tr>
+<tr>
+<td align="center">172.16.6.0</td>
+<td>172.16.0.3</td>
+<td>eth0</td>
+<td>2</td>
+<td>proviennent</td>
+</tr>
+<tr>
+<td align="center">172.16.3.0</td>
+<td>172.16.0.3</td>
+<td>eth0</td>
+<td>2</td>
+<td>de R3</td>
+</tr>
+</tbody>
+</table>
+<p>172.16.0.3 est l'adresse IP du routeur R3. On ajoute à la table précédente les réseaux atteignables par R3. On pense cependant à ajouter 1 au nombre de sauts ! Si R1 veut atteindre le réseau 172.16.3.0, il s'adressera à R3 et atteindra le réseau cible en 2 sauts.
+ 
+Voici la table de R3 qui s'enrichit des informations envoyées par R1 afin d'atteindre le réseau local, mais aussi des informations en provenance de R2, R4 et R5. Il découvre ainsi 4 nouveaux réseaux.</p>
+<table>
+<thead>
+<tr>
+<th align="center">destination</th>
+<th>passerelle</th>
+<th>interface</th>
+<th>Nb sauts</th>
+<th>remarques</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">172.16.0.0</td>
+<td></td>
+<td>eth0</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">172.16.1.0</td>
+<td></td>
+<td>eth1</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">172.16.6.0</td>
+<td></td>
+<td>eth2</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">172.16.3.0</td>
+<td></td>
+<td>eth3</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">192.168.1.0</td>
+<td>172.16.0.1</td>
+<td>eth0</td>
+<td>2</td>
+<td>reçu de R1</td>
+</tr>
+<tr>
+<td align="center">172.16.2.0</td>
+<td>172.16.1.2</td>
+<td>eth1</td>
+<td>2</td>
+<td>reçu de R2</td>
+</tr>
+<tr>
+<td align="center">172.16.5.0</td>
+<td>172.16.6.5</td>
+<td>eth2</td>
+<td>2</td>
+<td>reçu de R5</td>
+</tr>
+<tr>
+<td align="center">172.16.4.0</td>
+<td>172.16.3.4</td>
+<td>eth3</td>
+<td>2</td>
+<td>reçu de R4</td>
+</tr>
+</tbody>
+</table>
+<h3 id="etape-3">Étape 3<a class="headerlink" href="#etape-3" title="Permanent link">⚓︎</a></h3>
+<p>Comme vous le voyez, les tables deviennent vite longues et énumérer dans le détail chacune d'elle est trop long. On va donc passer directement à l'étape finale : l'étape 3. </p>
+<p>Voici ce que contient la table de routage de R1 :</p>
+<table>
+<thead>
+<tr>
+<th align="center">destination</th>
+<th>passerelle</th>
+<th>interface</th>
+<th>Nb sauts</th>
+<th>remarques</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">192.168.1.0</td>
+<td></td>
+<td>wifi0</td>
+<td>1</td>
+<td>==&gt; vers les postes de travail</td>
+</tr>
+<tr>
+<td align="center">172.16.0.0</td>
+<td></td>
+<td>eth0</td>
+<td>1</td>
+<td>==&gt; vers R3</td>
+</tr>
+<tr>
+<td align="center">172.16.1.0</td>
+<td>172.16.0.3</td>
+<td>eth0</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">172.16.6.0</td>
+<td>172.16.0.3</td>
+<td>eth0</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">172.16.3.0</td>
+<td>172.16.0.3</td>
+<td>eth0</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">172.16.5.0</td>
+<td>172.16.0.3</td>
+<td>eth0</td>
+<td>3</td>
+<td>obtenu à l'étape 2</td>
+</tr>
+<tr>
+<td align="center">192.168.2.0</td>
+<td>172.16.0.3</td>
+<td>eth0</td>
+<td>4</td>
+<td>obtenu à l'étape 3</td>
+</tr>
+</tbody>
+</table>
+<p>Comme vous le voyez, le routeur R1 est à présent en capacité d'acheminer un paquet du poste de travail du réseau 1 vers le serveur se trouvant dans le réseau 2.</p>
+<p><strong><em>Détection des pannes</em></strong>
+Le protocole RIP est en mesure de détecter des pannes : Si un routeur ne reçoit pas d'information de la part d'un de ses voisins au bout d'un temps de l'ordre de 3 minutes (configurable) il va considérer que ce lien est mort et en informer ses voisins en indiquant un nombre de sauts égal à 16. Puisque RIP ne gère que 15 sauts au maximum, 16 peut être considéré comme une distance infinie.
+De cette manière, les voisins vont pouvoir recalculer leurs routes en conséquence en évitant le lien qui est tombé.
+ 
+<strong><em>Détection des boucles</em></strong>
+RIP implémente d'autres mécanismes pour empêcher que se forment des boucles de routage. Une boucle est par exemple une route du type R2 -&gt; R3 -&gt; R5 -&gt; R2. Des exemples de tels mécanismes sont :
+-   Une durée de vie limitée sur les paquets (TTL) afin qu'un paquet qui tourne en rond soit détruit
+-   Ne pas renvoyer une information vers un routeur si celle-ci est déjà passée par ce routeur</p>
+<blockquote>
+<blockquote>
+<p>A vous de jouer : 
+Élaborez au fil du temps la table de routage du routeur R4 de manière similaire à ce que l'on vient de faire.</p>
+</blockquote>
+</blockquote>
 <h2 id="3-le-protocole-ospf">3. Le protocole OSPF<a class="headerlink" href="#3-le-protocole-ospf" title="Permanent link">⚓︎</a></h2>
 <p>OSPF : <em>Open Shortest Path First</em></p>
 <p>Un inconvénient majeur du protocole précédent est la non-prise en compte de la bande passante reliant les routeurs.</p>
@@ -1889,6 +2211,42 @@ En gris, le chemin RIP. En bleu, l'OSPF.
 </p>
 
 <p>Cet algorithme, ici exécuté de manière manuelle, est bien sûr programmable. Et c'est donc grâce à lui que chaque routeur calcule la route la plus rapide pour acheminer les données qu'il reçoit.</p>
+<div class="admonition abtract">
+<p class="admonition-title">Calculs d'itinéraire</p>
+<p><img alt="" src="../data/GPS.png" /></p>
+<p>On souhaite aller de Rennes à Paris. Compléter le tableau suivant en utilisant l’algorithme de Dijkstra (suivre le remplissage du tableau dans la vidéo).</p>
+<table>
+<thead>
+<tr>
+<th align="center">Rennes</th>
+<th>Le Mans</th>
+<th>Nantes</th>
+<th>Caen</th>
+<th>Tours</th>
+<th>Rouen</th>
+<th>Orléans</th>
+<th>Paris</th>
+<th>Choix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<details class="tip"><summary>Correction</summary><p><img alt="" src="../data/GPS_corrige.jpg" />
+Il faut Rennes, Le Mans, Paris, on annonce 359 km</p>
+</details>
+</div>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice d'application de l'algorithme de Dijkstra (HP)</p>
 <p>Donner le plus court chemin pour aller de E à F dans le graphe ci-dessous :
@@ -1994,8 +2352,11 @@ Pour le justifier, on peut (non obligatoire) faire un algorithme de Dijkstra :
 <p class="admonition-title">Bibliographie</p>
 <ul>
 <li>Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.</li>
-<li>Prépabac NSI, Terminale, G. CONNAN, V. PETROV, G. ROZSAVOLGYI, L. SIGNAC, éditions HATIER.</li>
-<li>Site d'Olivier Lécluse <a href="https://www.lecluse.fr/nsi/NSI_T/archi/routage/">https://www.lecluse.fr/nsi/NSI_T/archi/routage/</a></li>
+<li>Prépabac NSI, édition Hatier, Terminale, G. CONNAN, V. PETROV, G. ROZSAVOLGYI, L. SIGNAC, éditions HATIER.</li>
+<li><img alt="Site d'Olivier Lécluse" src="https://www.lecluse.fr/nsi/NSI_T/archi/routage/" /></li>
+<li>David Roche : https://pixees.fr/informatiquelycee/n_site/nsi_term_archi_routage.html</li>
+<li>MOOC SNT / Internet, IP un protocole universel ? : <img alt="" src="https://www.youtube.com/watch?v=s18KtOLpCg4&amp;feature=youtu.be" /></li>
+<li>Lumni : Histoire de l’architecture des ordinateurs – <img alt="" src="https://www.lumni.fr/video/une-histoire-de-l-architecture-des-ordinateurs" /></li>
 </ul>
 </div>
 <hr />
