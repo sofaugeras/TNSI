@@ -15,7 +15,7 @@
 
 
 !!! note ":star: Thèmes en cours d'étude :star: "
-    - [Structure de données](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
+    - [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
 
 
 
@@ -24,6 +24,8 @@
 - [Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
 - [Récursivité](T2_Programmation/2.2_Recursivite/cours/)  
 - [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/)   
+- [Structure de données](T1_Structures_de_donnees/)
+- [Gestion des processus](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/)  
 
 
 <!--

@@ -104,13 +104,18 @@ Ensuite, chaque routeur reçoit périodiquement la table des réseaux auquel il 
 **Application :**
 
 Considérons le réseau suivant qui relie deux réseaux d'une entreprise :
+
 -	Le réseau 1 contient des postes de travail dans un bureau.
 -	Le réseau 2 contient un serveur dans un centre de données.
+
 Image du schéma réseau : 
 ![](data/rip.png)
 
+Maquette Filius  [ici](data/RIP_filus_reseau.fls){target=_blank}  [:fontawesome-solid-download:](data/RIP_filus_reseau.fls){ .md-button .md-button--primary} 
+
 Les routeurs R1 et R6 permettent d'accéder au réseau de l'entreprise, R2, R3, R4 et R5, des routeurs internes au réseau. 
 Nous allons nous intéresser à l'évolution des tables de routage des routeurs R1 et R3 sur lesquels on a activé le protocole RIP.
+
 ### Étape 0
 Au démarrage, les routeurs R1 et R3 ne connaissent que leurs voisins proches. Leurs tables peuvent donc ressembler à ceci :
 
@@ -185,12 +190,14 @@ Voici ce que contient la table de routage de R1 :
 
 Comme vous le voyez, le routeur R1 est à présent en capacité d'acheminer un paquet du poste de travail du réseau 1 vers le serveur se trouvant dans le réseau 2.
 
-***Détection des pannes***
+**Détection des pannes**
 Le protocole RIP est en mesure de détecter des pannes : Si un routeur ne reçoit pas d'information de la part d'un de ses voisins au bout d'un temps de l'ordre de 3 minutes (configurable) il va considérer que ce lien est mort et en informer ses voisins en indiquant un nombre de sauts égal à 16. Puisque RIP ne gère que 15 sauts au maximum, 16 peut être considéré comme une distance infinie.
 De cette manière, les voisins vont pouvoir recalculer leurs routes en conséquence en évitant le lien qui est tombé.
  
-***Détection des boucles***
+
+**Détection des boucles**
 RIP implémente d'autres mécanismes pour empêcher que se forment des boucles de routage. Une boucle est par exemple une route du type R2 -> R3 -> R5 -> R2. Des exemples de tels mécanismes sont :
+
 -	Une durée de vie limitée sur les paquets (TTL) afin qu'un paquet qui tourne en rond soit détruit
 -	Ne pas renvoyer une information vers un routeur si celle-ci est déjà passée par ce routeur
 

@@ -1811,11 +1811,14 @@ Au début, chaque routeur ne connaît que les réseaux auquel il est directement
 </li>
 </ul>
 <p><strong>Application :</strong></p>
-<p>Considérons le réseau suivant qui relie deux réseaux d'une entreprise :
--   Le réseau 1 contient des postes de travail dans un bureau.
--   Le réseau 2 contient un serveur dans un centre de données.
-Image du schéma réseau : 
+<p>Considérons le réseau suivant qui relie deux réseaux d'une entreprise :</p>
+<ul>
+<li>Le réseau 1 contient des postes de travail dans un bureau.</li>
+<li>Le réseau 2 contient un serveur dans un centre de données.</li>
+</ul>
+<p>Image du schéma réseau : 
 <img alt="" src="../data/rip.png" /></p>
+<p>Maquette Filius  <a href="../data/RIP_filus_reseau.fls" target="_blank">ici</a>  <a class="md-button md-button--primary" href="../data/RIP_filus_reseau.fls"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32v242.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64v-32c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 104c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24z"/></svg></span></a> </p>
 <p>Les routeurs R1 et R6 permettent d'accéder au réseau de l'entreprise, R2, R3, R4 et R5, des routeurs internes au réseau. 
 Nous allons nous intéresser à l'évolution des tables de routage des routeurs R1 et R3 sur lesquels on a activé le protocole RIP.</p>
 <h3 id="etape-0">Étape 0<a class="headerlink" href="#etape-0" title="Permanent link">⚓︎</a></h3>
@@ -2091,14 +2094,16 @@ Voici la table de R3 qui s'enrichit des informations envoyées par R1 afin d'att
 </tbody>
 </table>
 <p>Comme vous le voyez, le routeur R1 est à présent en capacité d'acheminer un paquet du poste de travail du réseau 1 vers le serveur se trouvant dans le réseau 2.</p>
-<p><strong><em>Détection des pannes</em></strong>
+<p><strong>Détection des pannes</strong>
 Le protocole RIP est en mesure de détecter des pannes : Si un routeur ne reçoit pas d'information de la part d'un de ses voisins au bout d'un temps de l'ordre de 3 minutes (configurable) il va considérer que ce lien est mort et en informer ses voisins en indiquant un nombre de sauts égal à 16. Puisque RIP ne gère que 15 sauts au maximum, 16 peut être considéré comme une distance infinie.
 De cette manière, les voisins vont pouvoir recalculer leurs routes en conséquence en évitant le lien qui est tombé.
- 
-<strong><em>Détection des boucles</em></strong>
-RIP implémente d'autres mécanismes pour empêcher que se forment des boucles de routage. Une boucle est par exemple une route du type R2 -&gt; R3 -&gt; R5 -&gt; R2. Des exemples de tels mécanismes sont :
--   Une durée de vie limitée sur les paquets (TTL) afin qu'un paquet qui tourne en rond soit détruit
--   Ne pas renvoyer une information vers un routeur si celle-ci est déjà passée par ce routeur</p>
+ </p>
+<p><strong>Détection des boucles</strong>
+RIP implémente d'autres mécanismes pour empêcher que se forment des boucles de routage. Une boucle est par exemple une route du type R2 -&gt; R3 -&gt; R5 -&gt; R2. Des exemples de tels mécanismes sont :</p>
+<ul>
+<li>Une durée de vie limitée sur les paquets (TTL) afin qu'un paquet qui tourne en rond soit détruit</li>
+<li>Ne pas renvoyer une information vers un routeur si celle-ci est déjà passée par ce routeur</li>
+</ul>
 <blockquote>
 <blockquote>
 <p>A vous de jouer : 
