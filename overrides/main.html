@@ -1,11 +1,14 @@
 {% extends "base.html" %}    
+
 {% block content %}
+
 {% if page.nb_url %}
     <a href="{{ page.nb_url }}" title="Download" class="md-content__button md-icon">
         {% include ".icons/material/download.svg" %}
     </a>
 {% endif %}
 {{ super() }}
+<script src="{{ base_url }}/js/ide.js"></script>
 <style>
     .jp-RenderedHTMLCommon p {
         font-size: 0.8rem;
@@ -42,3 +45,17 @@
     }
 </style>
 {% endblock content %}
+
+{% block libs %}
+    {{ super() }}
+    <script src="{{ base_url }}/xtra/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="{{ base_url }}/xtra/gifplayer/gif-player.es6.js" defer async></script>
+    <!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.asm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.23.0/js/jquery.terminal.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.23.0/css/jquery.terminal.min.css" rel="stylesheet">
+{% endblock %}

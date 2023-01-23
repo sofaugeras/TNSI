@@ -1,8 +1,4 @@
-{{initexo(0)}}
-
-
-
-!!! abstract "{{ exercice() }}"
+!!! abstract "Exercice 5 du sujet La Réunion J1 2022"
     === "Énoncé"
         Exercice 5 du sujet [La Réunion J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LeReunion_J1.pdf){. target="_blank"}
     
@@ -42,7 +38,7 @@
                     print("pas trouvée, ajoutée")
             ```
 
-!!! abstract "{{ exercice() }}"
+!!! abstract "Exercice du sujet 0 de 2020"
     === "Énoncé"
         _2020, sujet 0_
 
@@ -94,7 +90,7 @@
         |F|D|4|
 
 
-!!! abstract "{{ exercice() }}"
+!!! abstract "Exercice du sujet Métropole J1 2021"
     === "Énoncé"
         _2021, sujet Métropole 1_
 
@@ -155,7 +151,7 @@
         
 
 
-!!! abstract "{{ exercice() }}"
+!!! abstract "Exercice du sujet Métropole J2 2021"
     === "Énoncé"
         _2021, sujet Métropole 2_ (sujet modifié, correction d'erreurs sur les adresses passerelles)
 
@@ -240,7 +236,7 @@
         |192.168.1.0/24|10.1.7.1|Interface 2|
     
 
-!!! abstract "{{ exercice() }}"
+!!! abstract "Exercice du sujet Amérique du Nord 2021"
     === "Énoncé"
         _2021, sujet Amérique du Nord_
 

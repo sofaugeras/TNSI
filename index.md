@@ -2,7 +2,7 @@
 !!! abstract "Actualités"
 
     - 14 sujets posés en 2022 sont disponibles [ici](T6_Annales/liste_sujets/){. target="_blank"}
-    - Site d'entrainement épreuve pratique : [ici](https://ens-fr.gitlab.io/nsi-pratique/){. target="_blank"}
+    - Site d'entrainement épreuve pratique : [ici](https://e-nsi.gitlab.io/pratique/tags/){. target="_blank"}
     - Site recensant les sujets de BAC écrit : [ici](https://boiling-aletopelta-ff5.notion.site/be357c0d12cb430faa79dd890feb660b?v=56349470c9704fc2b93983c20d5b9a65){. target="_blank"}
 
 
@@ -15,7 +15,7 @@
 
 
 !!! note ":star: Thèmes en cours d'étude :star: "
-    - [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
+    - [Retour sur les dictionnaires]((T1_Structures_de_donnees/1.2_Dictionnaires/cours/))
 
 
 
@@ -26,6 +26,7 @@
 - [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/)   
 - [Structure de données](T1_Structures_de_donnees/)
 - [Gestion des processus](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/)  
+- [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
 
 
 <!--
