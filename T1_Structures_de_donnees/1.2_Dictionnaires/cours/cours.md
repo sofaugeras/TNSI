@@ -32,9 +32,6 @@ En Python, le **dictionnaire** est une structure native de tableau associatif.
     1639001177.0923798
     ```
 
-
-
-
 ### 1.1 Préparation des mesures
 
 Considérons deux fonctions ```fabrique_liste()``` et ```fabrique_dict()``` capables de fabriquer respectivement des listes et des dictionnaires de taille donnée en paramètre.
@@ -227,7 +224,7 @@ La clé calculée sur l'ordinateur correspond bien à celle indiquée sur le sit
 Quelle que soit la taille du fichier donné en entrée, la fonction MD5 va le réduire à un mot de 128 bits.
 Ce mot binaire de 128 bits est représenté par une chaîne de 32 caractères (en hexadécimal, de 0 à f). Il y a donc $2^{128}$ (de l'ordre de $10^{39}$) empreintes MD5 différentes, ce qui rend quasiment impossible le fait d'avoir un mauvais fichier qui donnerait (par un très très mauvais hasard) la bonne empreinte.
 
-Le mécanisme effectif de calcul de la fonction MD5 est très complexe : une explication en est donnée [ici](http://www.bibmath.net/crypto/index.php?action=affiche&quoi=moderne/md5){:target="_blank".
+Le mécanisme effectif de calcul de la fonction MD5 est très complexe : une explication en est donnée [ici](http://www.bibmath.net/crypto/index.php?action=affiche&quoi=moderne/md5){:target="_blank"}.
 
 
 Il est évidemment **impossible** de revenir en arrière et de recréer le fichier original à partir de l'empreinte MD5. Dans le cas contraire, cela voudrait dire qu'on est capable de compresser *sans perte* un fichier de 1,9 Go en une chaîne de 128 bits. Cette impossibilité de trouver une fonction réciproque à la fonction de hachage est très importante en cryptographie.

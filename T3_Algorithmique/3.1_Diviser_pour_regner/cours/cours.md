@@ -249,14 +249,11 @@ Principe de l'interclassement de deux listes ```lst1``` et ```lst2```.
 - quand une liste est épuisée, on y ajoute la totalité restante de l'autre liste.
 
 
-
-
 !!! example "Exercice"
     === "Énoncé"
         Coder la fonction ```interclassement```. 
     === "Correction"
-        {{ correction(True,
-        "
+        
         ```python
         def interclassement(lst1, lst2):
             i1 = 0
@@ -272,8 +269,6 @@ Principe de l'interclassement de deux listes ```lst1``` et ```lst2```.
             return lst_totale + lst1[i1:] + lst2[i2:]
         ```
         "
-        ) }}
-
 
 ### 4.2 La fusion
 
@@ -315,7 +310,6 @@ La grande force de ce tri va être qu'il se programme simplement de manière **r
             m = len(lst) // 2
             return interclassement(tri_fusion(lst[:m]), tri_fusion(lst[m:]))
     ```
-
 
 
 #### 4.2.3 Visualisation

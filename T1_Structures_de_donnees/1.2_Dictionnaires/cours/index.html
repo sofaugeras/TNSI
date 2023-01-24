@@ -2015,7 +2015,7 @@ Pour comprendre cela nous allons faire un petit détour par les <strong>fonction
 <p><img alt="" class="center" src="../data/md5iso.png" /></p>
 <p>Quelle que soit la taille du fichier donné en entrée, la fonction MD5 va le réduire à un mot de 128 bits.
 Ce mot binaire de 128 bits est représenté par une chaîne de 32 caractères (en hexadécimal, de 0 à f). Il y a donc <span class="arithmatex">\(2^{128}\)</span> (de l'ordre de <span class="arithmatex">\(10^{39}\)</span>) empreintes MD5 différentes, ce qui rend quasiment impossible le fait d'avoir un mauvais fichier qui donnerait (par un très très mauvais hasard) la bonne empreinte.</p>
-<p>Le mécanisme effectif de calcul de la fonction MD5 est très complexe : une explication en est donnée <a href="http://www.bibmath.net/crypto/index.php?action=affiche&amp;quoi=moderne/md5">ici</a>{:target="_blank".</p>
+<p>Le mécanisme effectif de calcul de la fonction MD5 est très complexe : une explication en est donnée <a href="http://www.bibmath.net/crypto/index.php?action=affiche&amp;quoi=moderne/md5" target="_blank">ici</a>.</p>
 <p>Il est évidemment <strong>impossible</strong> de revenir en arrière et de recréer le fichier original à partir de l'empreinte MD5. Dans le cas contraire, cela voudrait dire qu'on est capable de compresser <em>sans perte</em> un fichier de 1,9 Go en une chaîne de 128 bits. Cette impossibilité de trouver une fonction réciproque à la fonction de hachage est très importante en cryptographie.</p>
 <p>En effet, les simples chaînes de caractères peuvent aussi être transformées par une fonction de hachage :
 <img alt="" class="center" src="../data/terminal.png" /></p>
@@ -2266,11 +2266,11 @@ TypeError: unhashable type: &#39;list&#39;
       
         <script src="https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js"></script>
       
-        <script src="../../../javascripts/mermaid.js"></script>
+        <script src="../../../javascript/mermaid.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../../../javascript/mathjax.js"></script>
       
-        <script src="../../../javascripts/interpreter.js"></script>
+        <script src="../../../javascript/interpreter.js"></script>
       
         <script src="../../../javascript/ide.js"></script>
       
