@@ -230,6 +230,41 @@ Ainsi, dans le cas où $n$ est pair, il suffit d'élever $a$ au carré (une seul
         donne le graphique suivant :
 
         ![image](data/carre.png){: .center}
+    
+    === "Correction"
+
+        ```python
+        import matplotlib.pyplot as plt
+        import timeit
+
+        def puissance(a, n):
+            if n == 0:
+                return 1
+            else:
+                return a * puissance(a, n-1)
+
+        def puissance_mod(a, n):
+            if n == 0:
+                return 1
+            if n % 2 == 0:
+                return puissance_mod(a*a, n//2)
+            else:
+                return a * puissance_mod(a*a, (n-1)//2)
+
+        def calcule_tps_normal(n):
+            return timeit.timeit(lambda: puissance(3, n), number=1000)
+
+        def calcule_tps_rapide(n):
+            return timeit.timeit(lambda: puissance_mod(3, n), number=1000)
+
+        x = list(range(0, 200, 1))   #[0, ..., 200]
+        y = [calcule_tps_normal(k) for k in x]  
+        y_2 = [calcule_tps_rapide(k) for k in x]  
+        plt.plot(x, y)
+        plt.plot(x, y_2)
+        plt.show()
+        ```
+
         
 ## 4. Le tri-fusion
 En anglais le *merge sort*.

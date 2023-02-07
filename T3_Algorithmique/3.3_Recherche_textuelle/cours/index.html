@@ -332,7 +332,7 @@
   
     <li class="md-tabs__item">
       <a href="../../../T6_5_algos_coeur/sommaire/" class="md-tabs__link">
-        T6 Algos
+        Algos ❤
       </a>
     </li>
   
@@ -347,7 +347,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../T6_6_Epreuve_pratique/BNS_2022/" class="md-tabs__link">
+      <a href="../../../T6_6_Epreuve_pratique/BNS_2023/" class="md-tabs__link">
         EP 💻
       </a>
     </li>
@@ -1008,6 +1008,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#10-cadre-du-probleme" class="md-nav__link">
+    1.0 Cadre du probléme
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#11-premier-algorithme" class="md-nav__link">
     1.1 Premier algorithme
   </a>
@@ -1042,8 +1049,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-principe" class="md-nav__link">
-    2.1 Principe
+  <a href="#21-les-deux-idees-du-principe-de-boyer-moore-horspool" class="md-nav__link">
+    2.1 Les deux idées du principe de Boyer-Moore-Horspool
   </a>
   
 </li>
@@ -1057,6 +1064,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-bonus-comparaison-des-temps-de-calcul" class="md-nav__link">
+    3. Bonus : comparaison des temps de calcul
+  </a>
   
 </li>
       
@@ -1486,14 +1500,14 @@
       
       
         <label class="md-nav__link" for="__nav_7">
-          T6 Algos
+          Algos ❤
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="T6 Algos" data-md-level="1">
+      <nav class="md-nav" aria-label="Algos ❤" data-md-level="1">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
-          T6 Algos
+          Algos ❤
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1645,8 +1659,22 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../T6_6_Epreuve_pratique/BNS_2023/" class="md-nav__link">
+        BNS 2023
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../T6_6_Epreuve_pratique/BNS_2022/" class="md-nav__link">
-        BNS 2022
+        (!!! old !!!) BNS 2022
       </a>
     </li>
   
@@ -1887,8 +1915,8 @@
 
 
 <h1 id="recherche-textuelle">Recherche textuelle<a class="headerlink" href="#recherche-textuelle" title="Permanent link">⚓︎</a></h1>
-<p><img alt="image" class="center" src="../data/illus.png" width="40%" /></p>
-<p><img alt="image" class="center" src="../data/BO.png" /></p>
+<p><img alt="image" class="center" src="../data/illus.png" width="70%" /></p>
+<p><img alt="image" class="center" src="../data/BO.png" width="70%" /></p>
 <!--
 <gif-player src="https://glassus.github.io/terminale_nsi/T3_Algorithmique/3.3_Recherche_textuelle/data/gif_naive.gif" speed="1" play></gif-player>
 
@@ -1898,7 +1926,21 @@
 <details class="tip" open="open"><summary>Illustration de l'algorithme</summary><p><gif-player src="https://glassus.github.io/terminale_nsi/T3_Algorithmique/3.3_Recherche_textuelle/data/gif_naive.gif" speed="1" play></gif-player></p>
 <p><em>Vous pouvez contrôler le déroulement de l'animation en la survolant avec la souris.</em></p>
 </details>
+<h3 id="10-cadre-du-probleme">1.0 Cadre du probléme<a class="headerlink" href="#10-cadre-du-probleme" title="Permanent link">⚓︎</a></h3>
+<p>Dans toute la suite on cherche donc la première occurrence d’un <font color='blue'><em>motif</em></font> de longueur <span class="arithmatex">\(p\)</span> dans un <font color='blue'><em>texte</em></font> de longueur <span class="arithmatex">\(n\)</span>.</p>
+<p>À un moment donné de la recherche, on observe une <font color='blue'><em>fenêtre</em></font> de taille <code>p</code> du texte complet, sur laquelle on aligne le motif, et on regarde s'il y a bien correspondance.</p>
+<p><img alt="cadre du probléme" class="center" src="../data/img_BM2.png" width="70%" /></p>
+<p>Dans ce schéma, la fenêtre est positionnée en <code>i=6</code>. Les caractère du motif sont indicés par <code>j</code> tandis que ceux du texte sont indicés par <code>i</code>.</p>
+<p>Pour voir si on a trouvé un <font color='blue'><em>motif</em></font>, on doit comparer les caractères du motif à ceux qui leur font face dans le texte.</p>
+<p><img alt="▶" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25b6.svg" title=":arrow_forward:" /> Pour chaque caractère du <font color='blue'><em>motif</em></font>, on va comparer <code>motif[j]</code> à <code>texte[i:j]</code> avec Les caractères du texte présents dans la fenêtre numérotés de 0 à <code>p-1</code></font></p>
+<p><img alt="🆗" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f197.svg" title=":ok:" /> Si la fenêtre présente un défaut de correspondance entre les caractères du texte et ceux du motif, on déplace la fenêtre. Si le motif correspond parfaitement au texte dévoilé dans la fenêtre, on a trouvé une occurrence à la position <code>i</code>.</p>
+<p><img alt="*⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2a-20e3.svg" title=":asterisk:" /> Précondition : pour que la recherche puisse se faire, on doit avoir l'inégalité <span class="arithmatex">\(0 &lt; len(motif) &lt; len(texte)\)</span>, autrement exprimé ici <code>0 &lt; p &lt; n</code></p>
 <h3 id="11-premier-algorithme">1.1 Premier algorithme<a class="headerlink" href="#11-premier-algorithme" title="Permanent link">⚓︎</a></h3>
+<p>On balaye la fenêtre de gauche à droite et on teste si chaque caractère correspond. Si ce n’est pas le cas, on décale la fenêtre de 1 vers la droite.</p>
+<p>Ici : échec de la correspondance pour j = 1</p>
+<p><img alt="img fenetre" class="center" src="../data/img_BM3.png" width="60%" /></p>
+<p>Donc décalage de la fenêtre d’un cran vers la droite</p>
+<p><img alt="img fenetre" class="center" src="../data/img_BM4.png" width="60%" /></p>
 <div class="admonition note">
 <p class="admonition-title">Algorithme de recherche naïve <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1916,7 +1958,8 @@
 <span class="normal">13</span>
 <span class="normal">14</span>
 <span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>    <span class="k">def</span> <span class="nf">recherche_naive</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">):</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>    <span class="k">def</span> <span class="nf">recherche_naive</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        renvoie la liste des indices (éventuellement vide) des occurrences de</span>
 <span class="sd">        de la chaîne motif dans la chaîne texte.</span>
@@ -1925,11 +1968,12 @@
         <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">texte</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">):</span>
             <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
-            <span class="k">while</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span> <span class="ow">and</span> <span class="n">texte</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="n">motif</span><span class="p">[</span><span class="n">k</span><span class="p">]:</span>
-                <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">):</span>
-                <span class="n">indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="c1">#On parcourt la fenêtre du motif</span>
+            <span class="k">while</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span> <span class="ow">and</span> <span class="n">texte</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">motif</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+                <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span> 
+            <span class="k">if</span> <span class="n">j</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">):</span>
+                <span class="n">indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="c1">#On a trouvé le motif</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1">#décalage de 1 en cas d&#39;échec ou en cas de motif trouvé</span>
 
         <span class="k">return</span> <span class="n">indices</span>
 </code></pre></div></td></tr></table></div>
@@ -1982,10 +2026,10 @@
 </div>
 <h3 id="13-application-a-la-recherche-dun-motif-dans-un-roman">1.3 Application à la recherche d'un motif dans un roman<a class="headerlink" href="#13-application-a-la-recherche-dun-motif-dans-un-roman" title="Permanent link">⚓︎</a></h3>
 <p>Le <a class="" href="https://www.gutenberg.org/browse/languages/fr" target="_blank">Projet Gutenberg</a> permet de télécharger légalement des ouvrages libres de droits dans différents formats.</p>
-<p>Nous allons travailler avec le Tome 1 du roman <em>Les Misérables</em> de Victor Hugo, à télécharger <a class="" href="../data/Les_Miserables.txt" target="_blank">ici</a> au format <code>txt</code>. </p>
+<p>Nous allons travailler avec le Tome 1 du roman <em>Le rouge et le noir</em> de Stendhal, à télécharger <a class="" href="../data/stendhal.txt" target="_blank">ici</a> au format <code>txt</code>. </p>
 <h4 id="131-recuperation-du-texte-dans-une-seule-chaine-de-caracteres">1.3.1 Récupération du texte dans une seule chaîne de caractères<a class="headerlink" href="#131-recuperation-du-texte-dans-une-seule-chaine-de-caracteres" title="Permanent link">⚓︎</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;Les_Miserables.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;stendhals.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">texte</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="132-verification-et-mesure-du-temps-de-recherche">1.3.2 Vérification et mesure du temps de recherche<a class="headerlink" href="#132-verification-et-mesure-du-temps-de-recherche" title="Permanent link">⚓︎</a></h4>
@@ -1995,29 +2039,214 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ol>
-<li>Testez la validité de vos réponses en comparant avec les résultats donnés par la fonctionnalité <code>Ctrl-F</code> proposée par votre navigateur</li>
+<li>Testez la validité de vos réponses en comparant avec les résultats donnés par la fonctionnalité <code>find</code> proposée par <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.25.18.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/></svg></span></li>
 <li>Mesurez le temps d'exécution de votre algorithme à l'aide du module <code>time</code>.  </li>
 </ol>
 </div>
 <div class="tabbed-block">
-<p><em>à faire</em></p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<span class="n">top</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="c1">#Avec le find de python</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">stendhal</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;Mme de Rênal fut fidèle à sa promesse&#39;</span><span class="p">)</span>
+<span class="n">t_fin</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t_fin</span> <span class="o">-</span> <span class="n">top</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<span class="n">top</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">h</span> <span class="o">=</span> <span class="n">recherche_naive_bool</span><span class="p">(</span><span class="n">stendhal</span><span class="p">,</span> <span class="s1">&#39;Mme de Rênal fut fidèle à sa promesse&#39;</span><span class="p">)</span>
+<span class="n">t_fin</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t_fin</span> <span class="o">-</span> <span class="n">top</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+</code></pre></div>
 </div>
 </div>
 </div>
 </div>
 <h2 id="2-algorithme-de-boyer-moore-horspool">2. Algorithme de Boyer-Moore-Horspool<a class="headerlink" href="#2-algorithme-de-boyer-moore-horspool" title="Permanent link">⚓︎</a></h2>
+<p>Les performances de la recherche naïve laissant à désirer, de nombreux informaticiens ont proposé des solutions pour améliorer la recherche. Un des algorithmes les plus connus est <strong>l’algorithme de Knuth, Morris, Pratt</strong>, mais il ne
+figure pas au programme. Un autre algorithme, très efficace, est <a href="https://www.canal-u.tv/video/inria/3_6_l_algorithme_de_boyer_moore.24590"><strong>l’algorithme de Boyer et Moore</strong></a>, qui a été inventé en 1977.</p>
+<p>Boyer et Moore travaillaient alors à l’université d’Austin au Texas en tant qu’informaticiens. Boyer qui était aussi un mathématicien est maintenant à la retraite.
+Nigel Horspool  est né en Grande-Bretagne mais citoyen canadien. Il est professeur émérite d’informatique de l’université de Victoria, retraité depuis 2016. Il a conçu une <strong>variante simplifiée de l'algorithme de Boyer-Moore</strong>.</p>
 <details class="tip" open="open"><summary>Illustration de l'algorithme</summary><p><gif-player src="https://glassus.github.io/terminale_nsi/T3_Algorithmique/3.3_Recherche_textuelle/data/gif_BM.gif" speed="1" play></gif-player></p>
 <p><em>Vous pouvez contrôler le déroulement de l'animation en la survolant avec la souris.</em></p>
 </details>
-<h3 id="21-principe">2.1 Principe<a class="headerlink" href="#21-principe" title="Permanent link">⚓︎</a></h3>
+<h3 id="21-les-deux-idees-du-principe-de-boyer-moore-horspool">2.1 Les deux idées du principe de Boyer-Moore-Horspool<a class="headerlink" href="#21-les-deux-idees-du-principe-de-boyer-moore-horspool" title="Permanent link">⚓︎</a></h3>
+<p><img alt="💡" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4a1.svg" title=":bulb:" /> <strong>La première idée</strong> consiste à comparer le motif avec la portion du texte qui apparaît dans la fenêtre <font color='blue' size='3'><strong>de droite à gauche</strong></font>, et non pas de gauche à droite. Ainsi, on fait décroître <code>j</code> à partir de <code>p − 1</code> jusqu’à trouver que le caractère qui lui fait face dans le texte, c’est-à-dire <code>x = texte[i + j]</code>, est différent du caractère <code>y = motif[j]</code> du motif.</p>
+<p><img alt="💡" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4a1.svg" title=":bulb:" /> <strong>La deuxième idée</strong> consiste à opérer sur la fenêtre <font color = 'blue' size='3'><strong>un décalage qui varie</font></strong> en fonction de la paire de caractères qui ont révélé la non-correspondance, c’est-à-dire en fonction de (x; y). Pour cela, <font color = 'blue' size='3'><strong>on effectue un pré-traitement du motif.</font></strong></p>
+<h4 id="211-calcul-du-decalage-quand-x-napparait-pas-dans-le-motif">2.1.1 Calcul du décalage quand x n'apparaît pas dans le motif<a class="headerlink" href="#211-calcul-du-decalage-quand-x-napparait-pas-dans-le-motif" title="Permanent link">⚓︎</a></h4>
+<p>Quand <code>x</code> n'apparaît pas du tout dans le motif : on déplace la fenêtre <font color = 'blue' size='3'><strong>pour qu'elle soit juste à droite du couple <code>(x,y)</code> qui a provoqué l'échec</strong></font>. </p>
+<p><img alt="img fenetre" class="center" src="../data/img_BM5.png" width="60%" /></p>
+<p><img alt="img fenetre" class="center" src="../data/img_BM6.png" width="60%" /></p>
+<p><img alt="▶" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25b6.svg" title=":arrow_forward:" /> Le décalage dans ce cas pour un échec en position <code>j</code> du motif est donc de <code>d=p+1</code>.</p>
+<h4 id="212-calcul-du-decalage-quand-x-apparait-ailleurs-dans-le-motif">2.1.2 Calcul du décalage quand x apparaît ailleurs dans le motif<a class="headerlink" href="#212-calcul-du-decalage-quand-x-apparait-ailleurs-dans-le-motif" title="Permanent link">⚓︎</a></h4>
+<p>Dans le cas où x apparaît dans le motif, on déplace la fenêtre <font color = 'blue' size='3'><strong>pour que x apparaisse juste au-dessus de la lettre du motif qui lui est égale</strong></font>.</p>
+<p>Si <span class="arithmatex">\(x\)</span> apparaît plusieurs fois dans le motif, alors on utilisera pour décaler <font color = 'blue' size='3'><strong>la position la plus à droite, qu'on note <span class="arithmatex">\(r\)</span>.</font></strong></p>
+<p><img alt="img fenetre" class="center" src="../data/img_BM7.png" width="60%" /></p>
+<p><img alt="img fenetre" class="center" src="../data/img_BM8.png" width="60%" /></p>
+<p><img alt="▶" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25b6.svg" title=":arrow_forward:" /> On calcule alors <code>d</code> : </p>
+<ul>
+<li>si <code>d &gt; 0</code>, on décale de <code>d</code> </li>
+<li>Sinon, on décale de <code>1</code> comme dans la méthode naïve. </li>
+</ul>
 <h3 id="22-implementation">2.2 Implémentation<a class="headerlink" href="#22-implementation" title="Permanent link">⚓︎</a></h3>
+<h4 id="221-calcul-de-la-position-la-plus-a-droite-et-stockage-dans-un-dictionnaire">2.2.1 calcul de la position la plus à droite et stockage dans un dictionnaire<a class="headerlink" href="#221-calcul-de-la-position-la-plus-a-droite-et-stockage-dans-un-dictionnaire" title="Permanent link">⚓︎</a></h4>
+<p>On va ici construire un dictionnaire <code>aDroite</code> dont :<br />
+- les <strong>clés</strong> sont les caractères (les lettres) du motif<br />
+- les <strong>valeurs</strong> sont la position la plus à droite du caractère.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">#Exemple &quot;à la main&quot; pour le mot &#39;maman&#39;</span>
+<span class="n">aDroite</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="n">aDroite</span><span class="p">[</span><span class="s1">&#39;m&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span> <span class="c1">#car c&#39;est le premier qu&#39;on a trouvé</span>
+<span class="n">aDroite</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span> <span class="c1">#idem</span>
+<span class="n">aDroite</span><span class="p">[</span><span class="s1">&#39;m&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">2</span> <span class="c1">#on a trouvé un &#39;m&#39; plus à droite donc on change la valeur pour &#39;m&#39;</span>
+<span class="n">aDroite</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">3</span> <span class="c1">#idem : on vient de trouver un &#39;a&#39; plus à droite que le précédent</span>
+<span class="n">aDroite</span><span class="p">[</span><span class="s1">&#39;n&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">4</span>
+<span class="c1">#fini !</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;dico résultat : &quot;</span><span class="p">,</span> <span class="n">aDroite</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">A faire</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">construitADroite</label><label for="__tabbed_3_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>écrire la fonction <code>construitADroite(motif)</code> qui renvoie le dictionnaire ainsi construit pour le motif donné en paramètre.**</p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">construitADroite</span><span class="p">(</span><span class="n">motif</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;calcule et renvoie un dictionnaire dont les clefs sont les caractères du motif</span>
+<span class="sd">    et le valeurs sont leur position la plus à droite dans le motif&#39;&#39;&#39;</span>
+    <span class="n">aDroite</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+        <span class="n">aDroite</span><span class="p">[</span><span class="n">motif</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span><span class="o">=</span><span class="n">j</span>
+    <span class="k">return</span> <span class="n">aDroite</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">construitADroite</span><span class="p">(</span><span class="s1">&#39;maman&#39;</span><span class="p">)</span><span class="o">==</span><span class="p">{</span><span class="s1">&#39;m&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">})</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<h4 id="222-ecriture-de-la-nouvelle-fonction-correspondance">2.2.2 Ecriture de la nouvelle fonction correspondance<a class="headerlink" href="#222-ecriture-de-la-nouvelle-fonction-correspondance" title="Permanent link">⚓︎</a></h4>
+<blockquote>
+<p>A faire : compléter le code de la fonction <code>correspondance(texte, motif)</code></p>
+</blockquote>
+<p>Comme dans la partie <a href="http://localhost:8000/sofaugeras/TNSI/T3_Algorithmique/3.3_Recherche_textuelle/cours/#11-premier-algorithme">1.1</a>, cette fonction renvoie, pour une fenêtre en position <code>i</code>, un couple formé :<br />
+- d'un booléen <code>ok</code> qui vaut <code>True</code> si on a trouvé une occurrence du motif, et <code>False</code> sinon <br />
+- d'un entier <code>decalage</code> qui est cette fois calculé selon la méthode de Horspool<br /></p>
+<div class="admonition note">
+<p class="admonition-title">Correspondance</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Correspondance</label><label for="__tabbed_4_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">correspondance</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">aDroite</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39; On suppose que le dictionnaire pour le motif a déjà été calculé au niveau global</span>
+<span class="sd">    Cette fonction, pour une fenêtre en position i, teste si le motif correspond et sinon, indique quel décalage appliquer&#39;&#39;&#39;</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">.....</span><span class="p">,</span> <span class="o">.....</span><span class="p">,</span> <span class="o">....</span><span class="p">):</span> <span class="c1">#on balaie cette fois la fenêtre de droite à gauche : de p-1 à 0 inclus en décroissant</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">texte</span><span class="p">[</span><span class="o">.....</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="n">motif</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+            <span class="c1">#on calcule le décalage</span>
+            <span class="c1">#on teste déjà si x est dans le motif quelque part</span>
+            <span class="k">if</span> <span class="o">...............</span><span class="p">:</span>
+                <span class="n">r</span> <span class="o">=</span> <span class="o">.......</span> <span class="c1">#position la plus à droite</span>
+                <span class="n">d</span> <span class="o">=</span> <span class="o">........</span> <span class="c1">#décalage</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1">#x n&#39;est pas dans le motif : décalage maximal</span>
+                <span class="n">d</span> <span class="o">=</span> <span class="o">.........</span>
+            <span class="k">return</span> <span class="p">(</span><span class="o">.....</span><span class="p">,</span> <span class="o">.....</span><span class="p">)</span>
+    <span class="c1">#si on est arrivé là, c&#39;est qu&#39;il y a eu correspondance parfaite : on a trouvé une occurrence. Décalage à 0</span>
+    <span class="k">return</span> <span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">correspondance</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">aDroite</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39; On suppose que le dictionnaire pour le motif a déjà été calculé au niveau global</span>
+<span class="sd">    Cette fonction, pour une fenêtre en position i, teste si le motif correspond et sinon, indique quel décalage appliquer&#39;&#39;&#39;</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">texte</span><span class="p">)</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span>
+    <span class="n">aDroite</span> <span class="o">=</span> <span class="n">construitADroite</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">p</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span> <span class="c1">#on balaie cette fois la fenêtre de droite à gauche : de p-1 à 0 inclus en décroissant</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">texte</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="n">motif</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+            <span class="c1">#on calcule le décalage</span>
+            <span class="c1">#on teste déjà si x est dans le motif quelque part</span>
+            <span class="k">if</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">aDroite</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="n">r</span> <span class="o">=</span> <span class="n">aDroite</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="c1">#position la plus à droite</span>
+                <span class="n">d</span> <span class="o">=</span> <span class="n">j</span> <span class="o">-</span> <span class="n">r</span> <span class="c1">#décalage</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1">#x n&#39;est pas dans le motif : décalage maximal</span>
+                <span class="n">d</span> <span class="o">=</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span>
+            <span class="k">return</span> <span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+    <span class="c1">#si on est arrivé là, c&#39;est qu&#39;il y a eu correspondance parfaite : on a trouvé une occurrence. Décalage à 0</span>
+    <span class="k">return</span> <span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">texte</span> <span class="o">=</span> <span class="s1">&#39;CAATGTCTGCACCAAGAC&#39;</span>
+<span class="n">motif</span> <span class="o">=</span> <span class="s1">&#39;CAAG&#39;</span>
+<span class="n">aDroite</span> <span class="o">=</span> <span class="n">construitADroite</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">correspondance</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">aDroite</span><span class="p">)</span><span class="o">==</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">correspondance</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">aDroite</span><span class="p">)</span><span class="o">==</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">correspondance</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="n">aDroite</span><span class="p">)</span><span class="o">==</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">correspondance</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="n">aDroite</span><span class="p">)</span><span class="o">==</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<h4 id="223-ecriture-de-la-fonction-de-recherche-finale">2.2.3 Ecriture de la fonction de recherche finale<a class="headerlink" href="#223-ecriture-de-la-fonction-de-recherche-finale" title="Permanent link">⚓︎</a></h4>
+<p>Maintenant qu'on a la fonction <code>correspondance</code>, on peut passer à l'écriture de la fonction de recherche finale.</p>
+<p>Cette fonction <code>recherche(texte, motif)</code> :<br />
+- calcule d'abord le dictionnaire des positions à droite pour le motif<br />
+- puis parcourt le texte de gauche à droite en appliquant à chaque étape le décalage calculé par la fonction <code>correspondance</code>.<br />
+- Elle renvoie l'indice de la première occurrence du motif cherché, ou à défaut -1 s'il ne s'y trouve pas.<br /></p>
+<p>C'est donc quasiment la même qu'en partie 2 : la seule différence est qu'elle calcule le dictionnaire !<br /></p>
+<div class="admonition note">
+<p class="admonition-title">Recherche Finale</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">A faire</label><label for="__tabbed_5_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>écrire ci-dessous cette fonction finale de <code>recherche</code></p>
+</div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">texte</span><span class="p">)</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span>
+    <span class="n">aDroite</span> <span class="o">=</span> <span class="n">construitADroite</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span><span class="o">+</span><span class="n">p</span> <span class="o">&lt;=</span><span class="n">n</span><span class="p">:</span>
+        <span class="n">ok</span><span class="p">,</span> <span class="n">decalage</span> <span class="o">=</span> <span class="n">correspondance</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">aDroite</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">ok</span><span class="o">==</span><span class="kc">True</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">i</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="n">decalage</span>
+    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">texte</span> <span class="o">=</span> <span class="s1">&#39;CAATGTCTGCACCAAGAC&#39;</span>
+<span class="n">motif</span> <span class="o">=</span> <span class="s1">&#39;CAAG&#39;</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">recherche</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">)</span> <span class="o">==</span> <span class="mi">12</span><span class="p">)</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">recherche</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="s1">&#39;BB&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<h2 id="3-bonus-comparaison-des-temps-de-calcul">3. Bonus : comparaison des temps de calcul<a class="headerlink" href="#3-bonus-comparaison-des-temps-de-calcul" title="Permanent link">⚓︎</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">texte_pire</span> <span class="o">=</span> <span class="s1">&#39;A&#39;</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span>
+<span class="n">motif_pire</span> <span class="o">=</span> <span class="s1">&#39;A&#39;</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="s1">&#39;B&#39;</span>
+
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="n">top</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">recherche</span><span class="p">(</span><span class="n">texte_pire</span><span class="p">,</span> <span class="n">motif_pire</span><span class="p">)</span>
+<span class="n">t_fin</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t_fin</span> <span class="o">-</span> <span class="n">top</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<span class="n">top</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">h</span> <span class="o">=</span> <span class="n">recherche_naive</span><span class="p">(</span><span class="n">texte_pire</span><span class="p">,</span> <span class="n">motif_pire</span><span class="p">)</span>
+<span class="n">t_fin</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t_fin</span> <span class="o">-</span> <span class="n">top</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">24 janvier 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">7 février 2023</span>
       
     
   </small>
