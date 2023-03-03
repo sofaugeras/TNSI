@@ -12,13 +12,8 @@
     - seuls les items marqués *BAC* dans les sommaires des différents thèmes sont au programme de l'épreuve. Voir la liste [ici](T6_Annales/epreuve_bac/#epreuve-ecrite){. target="_blank"}
 
 
-
-
 !!! note ":star: Thèmes en cours d'étude :star: "
-    - [Retour sur les dictionnaires]((T1_Structures_de_donnees/1.2_Dictionnaires/cours/))
-
-
-
+    - [Révision Epreuve Pratique](T6_6_Epreuve_pratique/BNS_2023.md)
 
 ### *Thèmes déjà traités*
 - [Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
@@ -27,6 +22,9 @@
 - [Structure de données](T1_Structures_de_donnees/)
 - [Gestion des processus](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/)  
 - [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
+- [Retour sur les dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/)
+- [Diviser pour régner](T3_Algorithmique/3.1_Diviser_pour_regner/cours)
+- [Recherche Textuelle](T3_Algorithmique/3.2_Recherche_textuelle/cours)
 
 
 <!--

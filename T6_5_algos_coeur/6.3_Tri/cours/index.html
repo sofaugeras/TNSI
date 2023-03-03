@@ -12,14 +12,14 @@
         <meta name="author" content="Sophie FAUGERAS">
       
       
-        <link rel="canonical" href="https://github.com/sofaugeras/TNSI/T6_5_algos_coeur/6.2_recursivite/cours/">
+        <link rel="canonical" href="https://github.com/sofaugeras/TNSI/T6_5_algos_coeur/6.3_Tri/cours/">
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Algos récursif 🔂 - Saint Sauveur TNSI</title>
+        <title>Algos de tris ♻️ - Saint Sauveur TNSI</title>
       
     
     
@@ -102,7 +102,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#algos-recursif" class="md-skip">
+        <a href="#algos-de-tris" class="md-skip">
           Aller au contenu
         </a>
       
@@ -135,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Algos récursif 🔂
+              Algos de tris ♻️
             
           </span>
         </div>
@@ -1465,14 +1465,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3" type="checkbox" id="__nav_7_3" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7_3" type="checkbox" id="__nav_7_3" checked>
       
       
       
@@ -1493,80 +1491,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Algos récursif 🔂
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../6.2_recursivite/cours/" class="md-nav__link">
         Algos récursif 🔂
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#factorielle-recursive" class="md-nav__link">
-    Factorielle récursive
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pgcd-recursif" class="md-nav__link">
-    PGCD récursif
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#puissance-recursive-simple" class="md-nav__link">
-    Puissance récursive (simple)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#puissance-recursive-optimisee" class="md-nav__link">
-    Puissance récursive (optimisée)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recherche-dichotomique-recursive-avec-slicing" class="md-nav__link">
-    Recherche dichotomique récursive (avec slicing)
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1583,12 +1512,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7_4" type="checkbox" id="__nav_7_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_4" type="checkbox" id="__nav_7_4" checked>
       
       
       
@@ -1609,11 +1540,73 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../6.3_Tri/cours/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Algos de tris ♻️
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Algos de tris ♻️
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#comparaison-des-tris" class="md-nav__link">
+    Comparaison des Tris
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tri-par-insertion" class="md-nav__link">
+    Tri par insertion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tri-par-selection" class="md-nav__link">
+    Tri par sélection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tri-fusion" class="md-nav__link">
+    Tri fusion
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1915,93 +1908,203 @@
 
                   
 
-  <a href="https://github.com/sofaugeras/TNSI/edit/main/docs/T6_5_algos_coeur/6.2_recursivite/cours.md" title="Editer cette page" class="md-content__button md-icon">
+  <a href="https://github.com/sofaugeras/TNSI/edit/main/docs/T6_5_algos_coeur/6.3_Tri/cours.md" title="Editer cette page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="algos-recursif">Algos récursif 🔂<a class="headerlink" href="#algos-recursif" title="Permanent link">⚓︎</a></h1>
-<h2 id="factorielle-recursive">Factorielle récursive<a class="headerlink" href="#factorielle-recursive" title="Permanent link">⚓︎</a></h2>
-<details class="note"><summary>Factorielle récursive</summary><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">factorielle</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span>
+<h1 id="algos-de-tris">Algos de tris ♻️<a class="headerlink" href="#algos-de-tris" title="Permanent link">⚓︎</a></h1>
+<h2 id="comparaison-des-tris">Comparaison des Tris<a class="headerlink" href="#comparaison-des-tris" title="Permanent link">⚓︎</a></h2>
+<p><img alt="image" class="center" src="../data/comparaisons.gif" /></p>
+<h2 id="tri-par-insertion">Tri par insertion<a class="headerlink" href="#tri-par-insertion" title="Permanent link">⚓︎</a></h2>
+<details class="note"><summary>Tri par insertion</summary><p>Fonction qui prend comme paramètre une liste et trie cette liste en place (c'est-à-dire que la liste initiale est modifiée) en utilisant l'algorithme de tri par insertion. Plusieurs versions proposées .</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Version1</label><label for="__tabbed_1_2">Version 2</label><label for="__tabbed_1_3">Version 3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Tri en place, itératif</p>
+<div class="highlight"><pre><span></span><code>```python
+def insere(donnees, indice):
+    &quot;&quot;&quot;insere la donnee d&#39;indice indice à sa bonne place dans la liste formée des
+    éléments d&#39;indice inférieur ou égaux à indice.
+    Le début de la liste est sensé être trié.
+    LA MODIFICATION SE FAIT EN PLACE
+
+    param :
+        donnees : list
+        indice : int
+
+    exemple :
+    &gt;&gt;&gt; a = [3, 9, 5, 6, 4, 1]
+    &gt;&gt;&gt; insere(a, 2)
+    &gt;&gt;&gt; a
+    [3, 5, 9, 6, 4, 1]
+
+    &quot;&quot;&quot;
+    while indice&gt;0 and donnees[indice]&lt;donnees[indice-1]:
+        donnees[indice-1], donnees[indice] = donnees[indice], donnees[indice-1]
+        indice = indice -1
+
+def tri_insertion(donnees):
+    &quot;&quot;&quot;tri la liste données en place, avec l&#39;algorithme de tri par insertion
+    LE TRI SE FAIT EN PLACE.
+
+    param :
+        donnees : list
+
+    exemple :
+    &gt;&gt;&gt; liste3 = [ &quot;ruby&quot;, &quot;python&quot;, &quot;logo&quot;, &quot;elan&quot;, &quot;rust&quot;]
+    &gt;&gt;&gt; tri_insertion(liste3)
+    &gt;&gt;&gt; liste3
+    [&#39;elan&#39;, &#39;logo&#39;, &#39;python&#39;, &#39;ruby&#39;, &#39;rust&#39;]
+
+    &quot;&quot;&quot;
+    for ind in range(len(donnees)):
+        insere(donnees,ind)
+```
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>Tri itératif qui renvoie une nouvelle liste</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">insere2</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Insère la valeur dans la liste, supposée triée. la modification est en place</span>
+
+<span class="sd">    param :</span>
+<span class="sd">        liste : list : liste de nombres</span>
+<span class="sd">        valeur : float/int</span>
+<span class="sd">        return :</span>
+<span class="sd">            list : nouvelle liste avec la valeur insérée</span>
+
+<span class="sd">    Exemple:</span>
+<span class="sd">        &gt;&gt;&gt; liste1 = [3,5.2,6]</span>
+<span class="sd">        &gt;&gt;&gt; insere2(liste1, 4)</span>
+<span class="sd">        &gt;&gt;&gt; liste1</span>
+<span class="sd">        [3, 4, 5.2, 6]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+    <span class="n">liste</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
+    <span class="n">indice</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+    <span class="k">while</span> <span class="n">indice</span><span class="o">&gt;</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">liste</span><span class="p">[</span><span class="n">indice</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">liste</span><span class="p">[</span><span class="n">indice</span><span class="p">]:</span>
+        <span class="n">liste</span><span class="p">[</span><span class="n">indice</span><span class="p">],</span><span class="n">liste</span><span class="p">[</span><span class="n">indice</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">liste</span><span class="p">[</span><span class="n">indice</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">liste</span><span class="p">[</span><span class="n">indice</span><span class="p">]</span>
+        <span class="n">indice</span> <span class="o">=</span> <span class="n">indice</span> <span class="o">-</span> <span class="mi">1</span>
+
+
+<span class="k">def</span> <span class="nf">tri_insertion2</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;renvoie une nouvelle liste qui est une version triée de liste</span>
+
+<span class="sd">     param :</span>
+<span class="sd">            liste : list</span>
+<span class="sd">    return :</span>
+<span class="sd">            liste</span>
+
+<span class="sd">    Exemple :</span>
+<span class="sd">        &gt;&gt;&gt; tri_insertion2([8,2,6,5])</span>
+<span class="sd">        [2, 5, 6, 8]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+    <span class="n">liste_triee</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">liste</span><span class="p">:</span>
+        <span class="n">insere2</span><span class="p">(</span><span class="n">liste_triee</span><span class="p">,</span> <span class="n">element</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">liste_triee</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>Tri récursif qui renvoie une nouvelle liste</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">insere3</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+<span class="sd">&quot;&quot;&quot;Insère la valeur dans la liste, supposée triée</span>
+
+<span class="sd">    param :</span>
+<span class="sd">        liste : list : liste de nombres</span>
+<span class="sd">           valeur : float/int</span>
+<span class="sd">    return :</span>
+<span class="sd">         list : nouvelle liste avec la valeur insérée</span>
+
+<span class="sd">    Exemple:</span>
+<span class="sd">        &gt;&gt;&gt; liste1 = [3,5.2,6]</span>
+<span class="sd">        &gt;&gt;&gt; liste2 = insere3(liste1, 4)</span>
+<span class="sd">        &gt;&gt;&gt; liste2</span>
+<span class="sd">        [3, 4, 5.2, 6]</span>
+<span class="sd">&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">liste</span> <span class="o">==</span> <span class="p">[]:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">valeur</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">liste</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;</span><span class="n">valeur</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">insere3</span><span class="p">(</span><span class="n">liste</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">valeur</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="n">liste</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorielle</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<h2 id="pgcd-recursif">PGCD récursif<a class="headerlink" href="#pgcd-recursif" title="Permanent link">⚓︎</a></h2>
-<details class="note"><summary>PGCD récursif</summary><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">pgcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">a</span>
+        <span class="k">return</span> <span class="n">liste</span> <span class="o">+</span> <span class="p">[</span><span class="n">valeur</span><span class="p">]</span>
+
+ <span class="k">def</span> <span class="nf">tri_recursif_insertion3</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+<span class="sd">&quot;&quot;&quot;renvoie une nouvelle liste qui est une version triée de liste. Méthode récursive.</span>
+
+<span class="sd">    param :</span>
+<span class="sd">        liste : list</span>
+<span class="sd">    return :</span>
+<span class="sd">        liste</span>
+
+<span class="sd">    Exemple :</span>
+<span class="sd">    &gt;&gt;&gt; tri_recursif_insertion3([8,2,6,5])</span>
+<span class="sd">        [2, 5, 6, 8]</span>
+<span class="sd"> &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">liste</span> <span class="o">==</span> <span class="p">[]:</span>
+        <span class="k">return</span> <span class="p">[]</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">pgcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
+        <span class="k">return</span> <span class="n">insere3</span><span class="p">(</span><span class="n">tri_recursif_insertion3</span><span class="p">(</span><span class="n">liste</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]),</span><span class="n">liste</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 </details>
-<h2 id="puissance-recursive-simple">Puissance récursive (simple)<a class="headerlink" href="#puissance-recursive-simple" title="Permanent link">⚓︎</a></h2>
-<details class="note"><summary>Puissance récursive </summary><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span>
+<h2 id="tri-par-selection">Tri par sélection<a class="headerlink" href="#tri-par-selection" title="Permanent link">⚓︎</a></h2>
+<details class="note"><summary>Tri par sélection</summary><p>Fonction qui renvoie la liste triée par ordre croissant.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">index_min</span><span class="p">(</span><span class="n">donnees</span><span class="p">,</span> <span class="n">indice</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;retourne l&#39;indice du plus petit élément d&#39;une liste, à partir d&#39;un indice donné</span>
+
+<span class="sd">        Exemple:</span>
+
+<span class="sd">        &gt;&gt;&gt; index_min([&quot;curl&quot;, &quot;bash&quot;, &quot;python&quot;, &quot;cilk&quot;, &quot;nesl&quot;], 0)</span>
+<span class="sd">        1</span>
+<span class="sd">        &gt;&gt;&gt; index_min([&quot;curl&quot;, &quot;bash&quot;, &quot;python&quot;, &quot;cilk&quot;, &quot;nesl&quot;], 2)</span>
+<span class="sd">        3</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="n">indice</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">indice</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">donnees</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">donnees</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;</span><span class="n">donnees</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span> <span class="p">:</span>
+            <span class="n">pos</span> <span class="o">=</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">pos</span>
+
+<span class="k">def</span> <span class="nf">tri_selection</span><span class="p">(</span><span class="n">donnees</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;tri la liste donnees en place, avec l&#39;algorithme de tri par sélection</span>
+
+<span class="sd">        &gt;&gt;&gt; liste3 = [ &quot;ruby&quot;, &quot;python&quot;, &quot;logo&quot;, &quot;elan&quot;, &quot;rust&quot;]</span>
+<span class="sd">        &gt;&gt;&gt; tri_selection(liste3)</span>
+<span class="sd">        &gt;&gt;&gt; liste3</span>
+<span class="sd">        [&#39;elan&#39;, &#39;logo&#39;, &#39;python&#39;, &#39;ruby&#39;, &#39;rust&#39;]</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">donnees</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="n">index_min</span><span class="p">(</span><span class="n">donnees</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">donnees</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">donnees</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">donnees</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">donnees</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</code></pre></div>
+</details>
+<h2 id="tri-fusion">Tri fusion<a class="headerlink" href="#tri-fusion" title="Permanent link">⚓︎</a></h2>
+<details class="note"><summary>Algorithme de tri fusion (<em>merge sort</em>) <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></summary><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">interclassement</span><span class="p">(</span><span class="n">lst1</span><span class="p">,</span> <span class="n">lst2</span><span class="p">):</span>
+    <span class="n">lst_totale</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst1</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst2</span><span class="p">)</span>
+    <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i1</span> <span class="o">&lt;</span> <span class="n">n1</span> <span class="ow">and</span> <span class="n">i2</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">lst1</span><span class="p">[</span><span class="n">i1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lst2</span><span class="p">[</span><span class="n">i2</span><span class="p">]:</span>
+            <span class="n">lst_totale</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lst1</span><span class="p">[</span><span class="n">i1</span><span class="p">])</span>
+            <span class="n">i1</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">lst_totale</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lst2</span><span class="p">[</span><span class="n">i2</span><span class="p">])</span>
+            <span class="n">i2</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">lst_totale</span> <span class="o">+</span> <span class="n">lst1</span><span class="p">[</span><span class="n">i1</span><span class="p">:]</span> <span class="o">+</span> <span class="n">lst2</span><span class="p">[</span><span class="n">i2</span><span class="p">:]</span>
+
+<span class="k">def</span> <span class="nf">tri_fusion</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">lst</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">puissance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<h2 id="puissance-recursive-optimisee">Puissance récursive (optimisée)<a class="headerlink" href="#puissance-recursive-optimisee" title="Permanent link">⚓︎</a></h2>
-<details class="note"><summary>Puissance récursive</summary><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">puissance</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span>
-        <span class="k">else</span> <span class="p">:</span>
-            <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">puissance</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<h2 id="recherche-dichotomique-recursive-avec-slicing">Recherche dichotomique récursive (avec slicing)<a class="headerlink" href="#recherche-dichotomique-recursive-avec-slicing" title="Permanent link">⚓︎</a></h2>
-<p><em>Note : le slicing de liste n'est pas au programme de NSI.</em></p>
-<details class="note"><summary>Recherche dichotomique récursive</summary><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> 
-        <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">m</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">True</span>
-        <span class="k">else</span> <span class="p">:</span>
-            <span class="k">return</span> <span class="kc">False</span>
-    <span class="k">else</span><span class="p">:</span>              
-        <span class="n">mid</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>
-        <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">m</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">recherche</span><span class="p">(</span><span class="n">lst</span><span class="p">[:</span><span class="n">mid</span><span class="p">],</span> <span class="n">m</span><span class="p">)</span>
-        <span class="k">else</span> <span class="p">:</span>
-            <span class="k">return</span> <span class="n">recherche</span><span class="p">(</span><span class="n">lst</span><span class="p">[</span><span class="n">mid</span><span class="p">:],</span> <span class="n">m</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
+        <span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+        <span class="k">return</span> <span class="n">interclassement</span><span class="p">(</span><span class="n">tri_fusion</span><span class="p">(</span><span class="n">lst</span><span class="p">[:</span><span class="n">m</span><span class="p">]),</span> <span class="n">tri_fusion</span><span class="p">(</span><span class="n">lst</span><span class="p">[</span><span class="n">m</span><span class="p">:]))</span>
+</code></pre></div>
 </details>
 
   <hr>
@@ -2009,7 +2112,7 @@
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">12 janvier 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">3 mars 2023</span>
       
     
   </small>
@@ -2078,7 +2181,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
       
         
-        <a href="../../6.1_algos_premiere/cours/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: algos de première 1️⃣" rel="prev">
+        <a href="../../6.2_recursivite/cours/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Algos récursif 🔂" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -2087,20 +2190,20 @@
               <span class="md-footer__direction">
                 Précédent
               </span>
-              algos de première 1️⃣
+              Algos récursif 🔂
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../6.3_Tri/cours/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Algos de tris ♻️" rel="next">
+        <a href="../../../T6_6_Epreuve_pratique/BNS_2023/" class="md-footer__link md-footer__link--next" aria-label="Suivant: BNS 2023" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Suivant
               </span>
-              Algos de tris ♻️
+              BNS 2023
             </div>
           </div>
           <div class="md-footer__button md-icon">
