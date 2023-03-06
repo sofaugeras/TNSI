@@ -1,0 +1,3002 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Site de cours Terminale NSI">
+      
+      
+        <meta name="author" content="Sophie FAUGERAS">
+      
+      
+        <link rel="canonical" href="https://github.com/sofaugeras/TNSI/T6_Annales/revisionTAD/">
+      
+      <link rel="icon" href="../../xtra/favTNSI.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Révision Structure de données - Saint Sauveur TNSI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.472b142f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.08040f6c.min.css">
+        
+      
+      
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0l-30.1 30 97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2l-18.7-18.6zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.8 15.7-7.4 21.9-13.5l167.3-167.4-98-98-167.3 167.4zM96 64c-53 0-96 43-96 96v256c0 53 43 96 96 96h256c53 0 96-43 96-96v-96c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H96z"/></svg>');}</style>
+
+
+    
+    
+    
+    <script src="../../xtra/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../../xtra/gifplayer/gif-player.es6.js" defer async></script>
+    <!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.asm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.23.0/js/jquery.terminal.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.23.0/css/jquery.terminal.min.css" rel="stylesheet">
+
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../xtra/stylesheets/pyoditeur.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-NXDLLVVQEB"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-NXDLLVVQEB",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-NXDLLVVQEB",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#revision-listepilefile" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="Saint Sauveur TNSI" class="md-header__button md-logo" aria-label="Saint Sauveur TNSI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Saint Sauveur TNSI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Révision Structure de données
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Mode sombre"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Mode sombre" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Mode clair"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Mode clair" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/sofaugeras/TNSI" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Cours Terminale NSI Saint Sauveur
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../T1_Structures_de_donnees/sommaire/" class="md-tabs__link">
+        T1 Structures de données
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../T2_Programmation/sommaire/" class="md-tabs__link">
+        T2 Programmation
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../T3_Algorithmique/sommaire/" class="md-tabs__link">
+        T3 Algorithmique
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../T4_Bases_de_donnees/sommaire/" class="md-tabs__link">
+        T4 Bases de donnees
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../T5_Architecture_materielle/sommaire/" class="md-tabs__link">
+        T5 Architecture matérielle
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../T6_5_algos_coeur/sommaire/" class="md-tabs__link">
+        Algos ❤
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../T6_6_Epreuve_pratique/BNS_2023/" class="md-tabs__link">
+        EP 💻
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../epreuve_bac/" class="md-tabs__link md-tabs__link--active">
+        Bac 🖊️
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../T7_Divers/10_orientation/cours/" class="md-tabs__link">
+        T7 Divers
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Saint Sauveur TNSI" class="md-nav__button md-logo" aria-label="Saint Sauveur TNSI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Z"/></svg>
+
+    </a>
+    Saint Sauveur TNSI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sofaugeras/TNSI" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Cours Terminale NSI Saint Sauveur
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          T1 Structures de données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="T1 Structures de données" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          T1 Structures de données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T1_Structures_de_donnees/sommaire/" class="md-nav__link">
+        Sommaire
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          1.1 Listes Piles Files
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1.1 Listes Piles Files" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          1.1 Listes Piles Files
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/" class="md-nav__link">
+        Exercices
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          1.2 Dictionnaires
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1.2 Dictionnaires" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          1.2 Dictionnaires
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T1_Structures_de_donnees/1.2_Dictionnaires/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T1_Structures_de_donnees/1.2_Dictionnaires/exercices/" class="md-nav__link">
+        Exercices
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4">
+          1.3 Arbres
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1.3 Arbres" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          1.3 Arbres
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T1_Structures_de_donnees/1.3_Arbres/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T1_Structures_de_donnees/1.3_Arbres/Exercices/" class="md-nav__link">
+        Exercices
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          T2 Programmation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="T2 Programmation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          T2 Programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T2_Programmation/sommaire/" class="md-nav__link">
+        Sommaire
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          2.4 Mise au point de programme
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2.4 Mise au point de programme" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          2.4 Mise au point de programme
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T2_Programmation/2.4_Mise_au_point_de_programme/cours/" class="md-nav__link">
+        Bonnes pratiques
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          T3 Algorithmique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="T3 Algorithmique" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          T3 Algorithmique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T3_Algorithmique/sommaire/" class="md-nav__link">
+        Sommaire
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          3.1 Diviser pour regner
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3.1 Diviser pour regner" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          3.1 Diviser pour regner
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T3_Algorithmique/3.1_Diviser_pour_regner/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T3_Algorithmique/3.1_Diviser_pour_regner/exercices/" class="md-nav__link">
+        Exercices
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          3.2 Programmation dynamique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3.2 Programmation dynamique" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          3.2 Programmation dynamique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T3_Algorithmique/3.2_Programmation_dynamique/cours/" class="md-nav__link">
+        Programmation dynamique
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          3.3 Recherche textuelle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3.3 Recherche textuelle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          3.3 Recherche textuelle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T3_Algorithmique/3.3_Recherche_textuelle/cours/" class="md-nav__link">
+        Recherche textuelle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          T4 Bases de donnees
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="T4 Bases de donnees" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          T4 Bases de donnees
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T4_Bases_de_donnees/sommaire/" class="md-nav__link">
+        Sommaire
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          T5 Architecture matérielle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="T5 Architecture matérielle" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          T5 Architecture matérielle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T5_Architecture_materielle/sommaire/" class="md-nav__link">
+        Sommaire
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_2">
+          5.0 Autour de GNU Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="5.0 Autour de GNU Linux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          5.0 Autour de GNU Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T5_Architecture_materielle/5.0_Autour_de_GNU_Linux/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_3">
+          5.1 Systemes sur puce
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="5.1 Systemes sur puce" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_3">
+          <span class="md-nav__icon md-icon"></span>
+          5.1 Systemes sur puce
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_4">
+          5.2 Gestion des processus
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="5.2 Gestion des processus" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          5.2 Gestion des processus
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T5_Architecture_materielle/5.2_Gestion_des_processus/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T5_Architecture_materielle/5.2_Gestion_des_processus/Exercices/" class="md-nav__link">
+        Exercices
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6_5" type="checkbox" id="__nav_6_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_5">
+          5.3 Protocoles de routage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="5.3 Protocoles de routage" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_5">
+          <span class="md-nav__icon md-icon"></span>
+          5.3 Protocoles de routage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T5_Architecture_materielle/5.3_Protocoles_de_routage/Exercices/" class="md-nav__link">
+        Exercices
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6_6" type="checkbox" id="__nav_6_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_6">
+          5.4 Cryptographie
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="5.4 Cryptographie" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_6">
+          <span class="md-nav__icon md-icon"></span>
+          5.4 Cryptographie
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T5_Architecture_materielle/5.4_Cryptographie/02_Exercices/" class="md-nav__link">
+        02 Exercices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T5_Architecture_materielle/5.4_Cryptographie/Exercices/" class="md-nav__link">
+        Exercices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T5_Architecture_materielle/5.4_Cryptographie/cours/" class="md-nav__link">
+        Cryptographie
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Algos ❤
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algos ❤" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Algos ❤
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T6_5_algos_coeur/sommaire/" class="md-nav__link">
+        Sommaire
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_2">
+          algos de première 1️⃣
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="algos de première 1️⃣" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          algos de première 1️⃣
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T6_5_algos_coeur/6.1_algos_premiere/cours/" class="md-nav__link">
+        algos de première 1️⃣
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7_3" type="checkbox" id="__nav_7_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_3">
+          Algos récursif 🔂
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algos récursif 🔂" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          Algos récursif 🔂
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T6_5_algos_coeur/6.2_recursivite/cours/" class="md-nav__link">
+        Algos récursif 🔂
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7_4" type="checkbox" id="__nav_7_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_4">
+          Algos de tris ♻️
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algos de tris ♻️" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_4">
+          <span class="md-nav__icon md-icon"></span>
+          Algos de tris ♻️
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T6_5_algos_coeur/6.3_Tri/cours/" class="md-nav__link">
+        Algos de tris ♻️
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          EP 💻
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="EP 💻" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          EP 💻
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T6_6_Epreuve_pratique/BNS_2023/" class="md-nav__link">
+        BNS 2023
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T6_6_Epreuve_pratique/BNS_2022/" class="md-nav__link">
+        (!!! old !!!) BNS 2022
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T6_6_Epreuve_pratique/BNS_2021/" class="md-nav__link">
+        (!!! old !!!) BNS 2021
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Bac 🖊️
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bac 🖊️" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Bac 🖊️
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../epreuve_bac/" class="md-nav__link">
+        Epreuve du BAC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../liste_sujets/" class="md-nav__link">
+        Liste des sujets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../revisionBD/" class="md-nav__link">
+        Révision Base de données
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Révision Structure de données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Révision Structure de données
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#passage-automatique-en-caisse" class="md-nav__link">
+    Passage automatique en caisse
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-syntaxique-de-parentheses-ou-de-balises" class="md-nav__link">
+    Vérification syntaxique de parenthèses ou de balises
+  </a>
+  
+    <nav class="md-nav" aria-label="Vérification syntaxique de parenthèses ou de balises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partie-a-expression-correctement-parenthesee" class="md-nav__link">
+    Partie A : Expression correctement parenthésée
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partie-b-texte-correctement-balise" class="md-nav__link">
+    Partie B : Texte correctement balisé
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traitement-dune-pile" class="md-nav__link">
+    Traitement d'une pile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jeu-de-la-poussette" class="md-nav__link">
+    Jeu de la poussette
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          T7 Divers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="T7 Divers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          T7 Divers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_10_1" type="checkbox" id="__nav_10_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_1">
+          Orientation post-bac
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Orientation post-bac" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_1">
+          <span class="md-nav__icon md-icon"></span>
+          Orientation post-bac
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T7_Divers/10_orientation/cours/" class="md-nav__link">
+        Orientation Post-Bac
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_10_2" type="checkbox" id="__nav_10_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_2">
+          Conseils généraux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Conseils généraux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_2">
+          <span class="md-nav__icon md-icon"></span>
+          Conseils généraux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T7_Divers/1_Conseils_generaux/cours/" class="md-nav__link">
+        Conseils de travail
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+
+
+                  
+
+  <a href="https://github.com/sofaugeras/TNSI/edit/main/docs/T6_Annales/revisionTAD.md" title="Editer cette page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="revision-listepilefile">Révision Liste/Pile/File<a class="headerlink" href="#revision-listepilefile" title="Permanent link">⚓︎</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Crédits</p>
+<ul>
+<li>Crédit de la mise en pages des exercices  : <a href="https://glassus.github.io">@Gilles Lassus</a></li>
+<li>Sujet 2022, Centres étrangers, J1, Ex. 2 Mise en page par Franck Chambon</li>
+<li>Sujet 2022, Métropole, J1, Ex. 1 Mise en page par Franck Chambon</li>
+<li>Sujet 2022, Polynésie, J1, Ex. 4 Mise en page par Franck Chambon</li>
+<li>Sujet 2022, Métropole, J2, Ex. 2 Mise en page par Nicolas Revéret</li>
+</ul>
+</div>
+<h2 id="passage-automatique-en-caisse">Passage automatique en caisse<a class="headerlink" href="#passage-automatique-en-caisse" title="Permanent link">⚓︎</a></h2>
+<blockquote>
+<p>D'après 2022, Centres étrangers, J1, Ex. 2</p>
+</blockquote>
+<p>Un supermarché met en place un système de passage automatique en caisse. Un client scanne les articles à l'aide d'un scanner de code-barres au fur et à mesure qu'il les ajoute dans son panier.</p>
+<p>Les articles s'enregistrent alors dans une structure de données. La structure de données utilisée est une file définie par la classe <code>Panier</code>, avec les primitives habituelles sur la structure de file.</p>
+<p>Pour faciliter la lecture, le code de la classe <code>Panier</code> n'est pas écrit.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Panier</span><span class="p">():</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s2">&quot;Initialise la file comme une file vide.&quot;</span>
+
+    <span class="k">def</span> <span class="nf">est_vide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s2">&quot;Renvoie True si la file est vide, False sinon.&quot;</span>
+
+    <span class="k">def</span> <span class="nf">enfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
+        <span class="s2">&quot;Ajoute l&#39;élément e en dernière position de la file, ne renvoie rien.&quot;</span>
+
+    <span class="k">def</span> <span class="nf">defile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s2">&quot;Retire le premier élément de la file et le renvoie.&quot;</span>
+</code></pre></div>
+<p>Le panier d'un client sera représenté par une file contenant les articles scannés.</p>
+<p>Les articles sont représentés par des tuples <code>(code_barre, designation, prix, horaire_scan)</code> où</p>
+<ul>
+<li><code>code_barre</code> est un nombre entier identifiant l'article ;</li>
+<li><code>designation</code> est une chaine de caractères qui pourra être affichée sur le ticket de caisse ;</li>
+<li><code>prix</code> est un nombre décimal donnant le prix d'une unité de cet article ;</li>
+<li><code>horaire_scan</code> est un nombre entier de secondes permettant de connaitre l'heure où l'article a été scanné.</li>
+</ul>
+<p><strong>1.</strong> On souhaite ajouter un article dont le tuple est le suivant <code>(31002, "café noir", 1.50, 50525)</code>.</p>
+<p>Écrire le code utilisant une des quatre méthodes ci-dessus permettant d'ajouter l'article à l'objet de classe <code>Panier</code> appelé <code>panier_1</code>.</p>
+<details class="success"><summary>Réponse</summary><p><code class="highlight"><span class="n">panier_1</span><span class="o">.</span><span class="n">enfile</span><span class="p">((</span><span class="mi">31002</span><span class="p">,</span> <span class="s2">&quot;café noir&quot;</span><span class="p">,</span> <span class="mf">1.50</span><span class="p">,</span> <span class="mi">50525</span><span class="p">))</span></code></p>
+</details>
+<p><strong>2.</strong> On souhaite définir une méthode <code>remplir</code> de paramètre <code>panier_temp</code> dans la classe <code>Panier</code> permettant de transférer vers la file tout le contenu d'un autre panier <code>panier_temp</code> qui est aussi un objet de type <code>Panier</code>. Recopier et compléter le code de la méthode <code>remplir</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">remplir</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">panier_temp</span><span class="p">):</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">panier_temp</span><span class="o">.</span> <span class="o">...</span> <span class="p">:</span>
+        <span class="n">article</span> <span class="o">=</span> <span class="n">panier_temp</span><span class="o">.</span> <span class="o">...</span>
+        <span class="bp">self</span><span class="o">.</span> <span class="o">...</span> <span class="p">(</span><span class="n">article</span><span class="p">)</span>
+</code></pre></div>
+<details class="success"><summary>Réponse</summary><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">remplir</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">panier_temp</span><span class="p">):</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">panier_temp</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="n">article</span> <span class="o">=</span> <span class="n">panier_temp</span><span class="o">.</span><span class="n">defile</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enfile</span><span class="p">(</span><span class="n">article</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<p><strong>3.</strong> Pour que le client puisse connaitre à tout moment le montant de son panier, on souhaite ajouter une méthode <code>prix_total</code> (sans paramètres) à la classe <code>Panier</code> qui renvoie la somme des prix de tous les articles présents dans le panier.</p>
+<p>Écrire le code de la méthode <code>prix_total</code>.</p>
+<p><img alt="⚠" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26a0.svg" title=":warning:" /> Attention, après l'appel de cette méthode, le panier devra toujours contenir ses articles.</p>
+<details class="success"><summary>Réponse</summary><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">prix_total</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">cumul</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">panier_temp</span> <span class="o">=</span> <span class="n">Panier</span><span class="p">()</span>
+
+    <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="n">article</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">defile</span><span class="p">()</span>
+        <span class="n">code_barre</span><span class="p">,</span> <span class="n">designation</span><span class="p">,</span> <span class="n">prix</span><span class="p">,</span> <span class="n">horaire_scan</span> <span class="o">=</span> <span class="n">article</span>
+        <span class="c1"># ou alors prix = article[2]</span>
+        <span class="n">cumul</span> <span class="o">+=</span> <span class="n">prix</span>
+        <span class="n">panier_temp</span><span class="o">.</span><span class="n">enfile</span><span class="p">(</span><span class="n">article</span><span class="p">)</span>
+
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">panier_temp</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="n">article</span> <span class="o">=</span> <span class="n">panier_temp</span><span class="o">.</span><span class="n">defile</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enfile</span><span class="p">(</span><span class="n">article</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">cumul</span>
+</code></pre></div>
+</details>
+<p><strong>4.</strong> Le magasin souhaite connaitre pour chaque client la durée du passage en caisse. Cette durée sera obtenue en faisant la différence entre le champ <code>horaire_scan</code> du dernier article scanné et le champ <code>horaire_scan</code> du premier article scanné dans le panier du client. Un panier vide renverra une durée égale à <code>None</code>. On pourra accepter que le panier soit vide après l'appel de cette méthode.</p>
+<p>Écrire une méthode <code>duree_passage_en_caisse</code> de la classe <code>Panier</code> qui renvoie cette durée.</p>
+<details class="success"><summary>Réponse</summary><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">duree_passage_en_caisse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">article</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">defile</span><span class="p">()</span>
+        <span class="n">code_barre</span><span class="p">,</span> <span class="n">designation</span><span class="p">,</span> <span class="n">prix</span><span class="p">,</span> <span class="n">horaire_scan</span> <span class="o">=</span> <span class="n">article</span>
+        <span class="n">h_mini</span> <span class="o">=</span> <span class="n">h_maxi</span> <span class="o">=</span> <span class="n">horaire_scan</span>
+
+        <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+            <span class="n">article</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">defile</span><span class="p">()</span>
+            <span class="n">code_barre</span><span class="p">,</span> <span class="n">designation</span><span class="p">,</span> <span class="n">prix</span><span class="p">,</span> <span class="n">horaire_scan</span> <span class="o">=</span> <span class="n">article</span>
+            <span class="k">if</span> <span class="n">horaire_scan</span> <span class="o">&gt;</span> <span class="n">h_maxi</span><span class="p">:</span>
+                <span class="n">h_maxi</span> <span class="o">=</span> <span class="n">horaire_scan</span>
+            <span class="k">if</span> <span class="n">horaire_scan</span> <span class="o">&lt;</span> <span class="n">h_mini</span><span class="p">:</span>
+                <span class="n">h_mini</span> <span class="o">=</span> <span class="n">horaire_scan</span>
+
+    <span class="k">return</span> <span class="n">h_maxi</span> <span class="o">-</span> <span class="n">h_mini</span>
+</code></pre></div>
+<p>Si on est certain que la file est dans l'ordre croissant des horaires de scan, on peut proposer le code plus simple</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">duree_passage_en_caisse</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="n">article</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">defile</span><span class="p">()</span>
+        <span class="n">debut</span> <span class="o">=</span> <span class="n">article</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="p">:</span>
+            <span class="n">article</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">defile</span><span class="p">()</span>
+        <span class="n">duree</span> <span class="o">=</span> <span class="n">article</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">-</span> <span class="n">debut</span>
+        <span class="k">return</span> <span class="n">duree</span>
+</code></pre></div>
+</details>
+<h2 id="verification-syntaxique-de-parentheses-ou-de-balises">Vérification syntaxique de parenthèses ou de balises<a class="headerlink" href="#verification-syntaxique-de-parentheses-ou-de-balises" title="Permanent link">⚓︎</a></h2>
+<blockquote>
+<p>D'après 2022, Métropole, J1, Ex. 1</p>
+</blockquote>
+<h3 id="partie-a-expression-correctement-parenthesee">Partie A : Expression correctement parenthésée<a class="headerlink" href="#partie-a-expression-correctement-parenthesee" title="Permanent link">⚓︎</a></h3>
+<p>On veut déterminer si une expression arithmétique est correctement parenthésée.
+À chaque parenthèse fermante ")" correspond une parenthèse précédemment ouverte "(".</p>
+<div class="admonition example">
+<p class="admonition-title">Exemples</p>
+<ul>
+<li>L'expression arithmétique <code>"(2 + 3) × (18/(4 + 2))"</code> est correctement parenthésée.</li>
+<li>L'expression arithmétique <code>"(2 + 3) × (18/(4 + 2"</code> est non correctement parenthésée.</li>
+</ul>
+</div>
+<p>Pour simplifier les expressions arithmétiques, on enregistre, dans une structure de données, uniquement les parenthèses dans leur ordre d'apparition. On appelle expression simplifiée cette structure.</p>
+<table>
+<thead>
+<tr>
+<th>Expression arithmétique</th>
+<th>Structure de données</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>"(2 + 3) × (18/(4 + 2))"</code></td>
+<td><code>()(())</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>1.</strong> Indiquer si la phrase « les éléments sont maintenant retirés (pour être lus) de cette structure de données dans le même ordre qu'ils y ont été ajoutés lors de l'enregistrement » décrit le comportement d'une file ou d'une pile. Justifier.</p>
+<details class="success"><summary>Réponse</summary><p><em>Le premier à être retiré était le premier à être ajouté</em>, donc cela correspond à une <strong>file</strong>.</p>
+</details>
+<p>Pour vérifier le parenthésage, on peut utiliser une variable <code>controleur</code> qui :</p>
+<ul>
+<li>est un nombre entier égal à 0 en début d'analyse de l'expression simplifiée ;</li>
+<li>augmente de 1 si l'on rencontre une parenthèse ouvrante <code>"("</code> ;</li>
+<li>diminue de 1 si l'on rencontre une parenthèse fermante <code>")"</code>.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>On considère l'expression simplifiée A : <code>"()(())"</code></p>
+<p>Lors de l'analyse de l'expression A, <code>controleur</code> (initialement égal à 0) prend successivement pour valeur 1, 0, 1, 2, 1, 0.</p>
+<p>Le parenthésage est correct.</p>
+</div>
+<p><strong>2.</strong> Écrire, pour chacune des 2 expressions simplifiées B et C suivantes, les valeurs successives prises par la variable <code>controleur</code> lors de leur analyse.</p>
+<ul>
+<li>Expression simplifiée B : " ((()()"</li>
+<li>Expression simplifiée C : "(()))("</li>
+</ul>
+<details class="success"><summary>Réponse</summary><ul>
+<li>Expression simplifiée B : <strong>1, 2, 3, 2, 3, 2</strong></li>
+<li>Expression simplifiée C : <strong>1, 2, 1, 0, -1, 0</strong></li>
+</ul>
+</details>
+<p><strong>3.</strong> L'expression simplifiée B précédente est mal parenthésée (parenthèses fermantes manquantes) car le <code>controleur</code> est différent de zéro en fin d'analyse.<br />
+L'expression simplifiée C précédente est également mal parenthésée (parenthèse fermante sans parenthèse ouvrante) car le <code>controleur</code> prend une valeur strictement négative pendant l'analyse.</p>
+<p>Recopier et compléter uniquement les lignes 13 et 16 du code ci-dessous pour que la fonction <code>parenthesage_correct</code> réponde à sa description.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">parenthesage_correct</span><span class="p">(</span><span class="n">expression</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; fonction renvoyant True si l&#39;expression arithmétique</span>
+<span class="sd">    simplifiée (str) est correctement parenthésée, False sinon.</span>
+<span class="sd">    Condition: expression ne contient que</span>
+<span class="sd">      des parenthèses ouvrantes et fermantes</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">controleur</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">parenthese</span> <span class="ow">in</span> <span class="n">expression</span><span class="p">:</span>  <span class="c1"># pour chaque parenthèse</span>
+        <span class="k">if</span> <span class="n">parenthese</span> <span class="o">==</span> <span class="s1">&#39;(&#39;</span><span class="p">:</span>
+            <span class="n">controleur</span> <span class="o">=</span> <span class="n">controleur</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>  <span class="c1"># parenthese == &#39;)&#39;</span>
+            <span class="n">controleur</span> <span class="o">=</span> <span class="n">controleur</span> <span class="o">-</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="n">controleur</span> <span class="o">...</span> <span class="p">:</span>  <span class="c1"># test 1 (à recopier et compléter)</span>
+                <span class="c1"># parenthèse fermante sans parenthèse ouvrante</span>
+                <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="n">controleur</span> <span class="o">...</span>  <span class="c1"># test 2 (à recopier et compléter)</span>
+    <span class="c1"># test 2 est un booléen renvoyé</span>
+    <span class="c1">#   True : le parenthésage est correct</span>
+    <span class="c1">#   False : parenthèse(s) fermante(s) manquante(s)</span>
+</code></pre></div></td></tr></table></div>
+<details class="success"><summary>Réponse</summary><ul>
+<li>ligne 13: <code class="highlight"><span class="p">(</span><span class="n">controleur</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span></code></li>
+<li>ligne 16: <code class="highlight"><span class="p">(</span><span class="n">controleur</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span></code></li>
+</ul>
+<p>Les parenthèses sont inutiles.</p>
+</details>
+<h3 id="partie-b-texte-correctement-balise">Partie B : Texte correctement balisé<a class="headerlink" href="#partie-b-texte-correctement-balise" title="Permanent link">⚓︎</a></h3>
+<p>On peut faire l'analogie entre le texte simplifié des fichiers HTML (uniquement constitué de balises ouvrantes <code class="highlight"><span class="p">&lt;</span><span class="nt">nom</span><span class="p">&gt;</span></code> et fermantes <code class="highlight"><span class="p">&lt;/</span><span class="nt">nom</span><span class="p">&gt;</span></code>) et les expressions parenthésées.</p>
+<p>Par exemple, l'expression HTML simplifiée : <code class="highlight">&quot;<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>&quot;</code> est correctement balisée.</p>
+<p>On ne tiendra pas compte dans cette partie des balises ne comportant pas de fermeture comme <code class="highlight"><span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span></code> ou <code class="highlight"><span class="p">&lt;</span><span class="nt">img</span> <span class="err">...</span><span class="p">&gt;</span></code>.</p>
+<p>Afin de vérifier qu'une expression HTML simplifiée est correctement balisée, on peut utiliser une pile (initialement vide) selon l'algorithme suivant :</p>
+<ul>
+<li>
+<p>On parcourt successivement chaque balise de l'expression :</p>
+<ul>
+<li>lorsque l'on rencontre une balise ouvrante, on l'empile ;</li>
+<li>lorsque l'on rencontre une balise fermante :<ul>
+<li>si la pile est vide, alors l'analyse s'arrête : le balisage est incorrect,</li>
+<li>sinon, on dépile et on vérifie que les deux balises (la balise fermante rencontrée et la balise ouvrante dépilée) correspondent (c'est-à-dire ont le même nom) si ce n'est pas le cas, l'analyse s'arrête (balisage incorrect).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="exemple-detaille">Exemple détaillé<a class="headerlink" href="#exemple-detaille" title="Permanent link">⚓︎</a></h4>
+<table markdown>
+  <tr>
+    <td>
+<div class="highlight"><span class="filename">Étape 1</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>
+ ↑
+</code></pre></div>
+    </td>
+    <td>
+<div class="highlight"><span class="filename">Étape 2</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>
+     ↑
+</code></pre></div>
+    </td>
+    <td>
+<div class="highlight"><span class="filename">Étape 3</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>
+         ↑
+</code></pre></div>
+    </td>
+  </tr>
+
+  <tr markdown>
+État de la pile lors du déroulement de cet algorithme pour l'expression simplifiée
+
+`#!html "<p><em></p></em>"` qui n'est pas correctement balisée :
+    <td markdown>
+Balise `#!html <p>` ouvrante,</br> on empile.
+    </td>
+    <td markdown>
+Balise `#!html <em>` ouvrante,</br> on empile.
+    </td>
+    <td markdown>
+Balise `#!html </p>` fermante, </br> on dépile, mais...
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+<div class="highlight"><span class="filename">Pile</span><pre><span></span><code>.
+.         ↙
+.
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+    </td>
+    <td>
+<div class="highlight"><span class="filename">Pile</span><pre><span></span><code>.
+.         ↙
+<span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+    </td>
+    <td>
+<div class="highlight"><span class="filename">Pile</span><pre><span></span><code>.          <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>
+.         ↗
+.
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+    </td>
+  </tr>
+</table>
+
+<p><code class="highlight"><span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span></code> et <code class="highlight"><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code> ne correspondent pas !
+Donc le balisage est incorrect.</p>
+<p><strong>4.</strong> Cette question traite de l'état de la pile lors du déroulement de l'algorithme.</p>
+<p><strong>4.a.</strong> Représenter la pile à chaque étape du déroulement de cet algorithme pour l'expression <code>"&lt;p&gt;&lt;em&gt;&lt;/em&gt;&lt;/p&gt;"</code> (balisage correct).</p>
+<details class="success"><summary>Réponse</summary><div class="tabbed-set tabbed-alternate" data-tabs="1:6"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Départ</label><label for="__tabbed_1_2">Étape 1</label><label for="__tabbed_1_3">Étape 2</label><label for="__tabbed_1_4">Étape 3</label><label for="__tabbed_1_5">Étape 4</label><label for="__tabbed_1_6">Fin</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">Parcours de l'expression</span><pre><span></span><code>&quot;<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>&quot;
+↑
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>flowchart TD
+    A[&quot;&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;=====&lt;br&gt;Pile&quot;]
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">Parcours de l'expression</span><pre><span></span><code>&quot;<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>&quot;
+  ↑                  Balise  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>  ouvrante, on empile
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>flowchart TD
+    A[&quot;&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;&amp;lt;p&amp;gt;&lt;br&gt;=====&lt;br&gt;Pile&quot;]
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">Parcours de l'expression</span><pre><span></span><code>&quot;<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>&quot;
+      ↑              Balise  <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span> ouvrante, on empile
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>flowchart TD
+    A[&quot;&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;&amp;lt;em&amp;gt;&lt;br&gt;&amp;lt;p&amp;gt;&lt;br&gt;=====&lt;br&gt;Pile&quot;]
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">Parcours de l'expression</span><pre><span></span><code>&quot;<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>&quot;
+          ↑          Balise <span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> fermante, on dépile
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>flowchart TD
+    A[&quot;&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;&amp;lt;p&amp;gt;&lt;br&gt;=====&lt;br&gt;Pile&quot;]
+</code></pre></div>
+<p><code>&lt;#!html em&gt;</code> et <code class="highlight"><span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span></code> se correspondent.</p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">Parcours de l'expression</span><pre><span></span><code>&quot;<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>&quot;
+               ↑     Balise <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>  fermante, on dépile
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>flowchart TD
+    A[&quot;&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;=====&lt;br&gt;Pile&quot;]
+</code></pre></div>
+<p><code class="highlight"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span></code> et <code class="highlight"><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code> se correspondent.</p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">Parcours de l'expression</span><pre><span></span><code>&quot;<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>&quot;
+                 ↑
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>flowchart TD
+    A[&quot;&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;=====&lt;br&gt;Pile&quot;]
+</code></pre></div>
+<p>La pile est vide. Le balisage est correct.</p>
+</div>
+</div>
+</div>
+</details>
+<p><strong>4.b.</strong> Indiquer quelle condition simple (sur le contenu de la pile) permet alors de dire que le balisage est correct lorsque toute l'expression HTML simplifiée a été entièrement parcourue, sans que l'analyse ne s'arrête.</p>
+<details class="success"><summary>Réponse</summary><p>Il suffirait de vérifier que la pile est <strong>vide</strong>.</p>
+</details>
+<p><strong>5.</strong> Une expression HTML correctement balisée contient 12 balises.</p>
+<p>Indiquer le nombre d'éléments que pourrait contenir au maximum la pile lors de
+son analyse.</p>
+<details class="success"><summary>Réponse</summary><p><strong>6 éléments</strong> au maximum seront empilés, dans le cas où 12 balises HTML sont imbriquées. 6 ouvrantes qui seront empilées, puis les 6 fermantes.</p>
+</details>
+<h2 id="traitement-dune-pile">Traitement d'une pile<a class="headerlink" href="#traitement-dune-pile" title="Permanent link">⚓︎</a></h2>
+<blockquote>
+<p>D'après 2022, Polynésie, J1, Ex. 4</p>
+</blockquote>
+<p>La classe <code>Pile</code> utilisée dans cet exercice est implémentée en utilisant des listes Python et propose quatre éléments d'interface :</p>
+<ul>
+<li>Un constructeur qui permet de créer une pile vide, représentée par <code>[]</code> ;</li>
+<li>La méthode <code>est_vide()</code> qui renvoie <code>True</code> si l'objet est une pile ne contenant aucun élément, et <code>False</code> sinon ;</li>
+<li>La méthode <code>empile</code> qui prend un objet quelconque en paramètre et ajoute cet objet au sommet de la pile. Dans la représentation de la pile dans la console, cet objet apparait à droite des autres éléments de la pile ;</li>
+<li>La méthode <code>depile</code> qui renvoie l'objet présent au sommet de la pile et le retire de la pile.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Exemples :</p>
+<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">ma_pile</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ma_pile</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ma_pile</span>
+<span class="go">[2]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ma_pile</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ma_pile</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ma_pile</span>
+<span class="go">[2, 3, 50]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ma_pile</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>
+<span class="go">50</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ma_pile</span>
+<span class="go">[2, 3]</span>
+</code></pre></div>
+</div>
+<p>La méthode <code>est_triee</code> ci-dessous renvoie <code>True</code> si, en dépilant tous les éléments, ils sont traités dans l'ordre croissant, et <code>False</code> sinon.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">est_triee</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="n">e1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+            <span class="n">e2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">e1</span> <span class="o">...</span> <span class="n">e2</span> <span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+            <span class="n">e1</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">return</span> <span class="kc">True</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>1.</strong> Recopier sur la copie les lignes 6 et 8 en complétant les points de suspension.</p>
+<details class="success"><summary>Réponse</summary><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">est_triee</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="n">e1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+            <span class="n">e2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">e1</span> <span class="o">&gt;</span> <span class="n">e2</span> <span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+            <span class="n">e1</span> <span class="o">=</span> <span class="n">e2</span>
+    <span class="k">return</span> <span class="kc">True</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>On crée dans la console la pile <code>A</code> représentée par <code>[1, 2, 3, 4]</code>.</p>
+<p><strong>2.a.</strong> Donner la valeur renvoyée par l'appel <code>A.est_triee()</code>.</p>
+<details class="success"><summary>Réponse</summary><p>La valeur <span class="arithmatex">\(4\)</span> est d'abord dépilée, puis <span class="arithmatex">\(3\)</span>. L'ordre n'est pas croissant, ainsi <code>A.est_triee()</code> renvoie <code>False</code>.</p>
+</details>
+<p><strong>2.b.</strong> Donner le contenu de la pile <code>A</code> après l'exécution de cette instruction.</p>
+<details class="success"><summary>Réponse</summary><p><code>A</code> sera représenté par <code>[1, 2]</code>.</p>
+</details>
+<p>On souhaite maintenant écrire le code d'une méthode <code>depile_max</code> d'une pile non vide ne contenant que des nombres entiers et renvoyant le plus grand élément de cette pile en le retirant de la pile.</p>
+<p>Après l'exécution de <code>p.depile_max()</code>, le nombre d'éléments de la pile <code>p</code> diminue donc de 1.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">depile_max</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">(),</span> <span class="s2">&quot;Pile vide&quot;</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+    <span class="n">maxi</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="n">elt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">maxi</span> <span class="o">&lt;</span> <span class="n">elt</span><span class="p">:</span>
+            <span class="n">q</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="n">maxi</span><span class="p">)</span>
+            <span class="n">maxi</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="o">...</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">q</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="n">q</span><span class="o">.</span><span class="n">depile</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">maxi</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>3.</strong> Recopier sur la copie les lignes 9 et 11 en complétant les points de suspension.</p>
+<details class="success"><summary>Réponse</summary><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">depile_max</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">(),</span> <span class="s2">&quot;Pile vide&quot;</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+    <span class="n">maxi</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="n">elt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">maxi</span> <span class="o">&lt;</span> <span class="n">elt</span><span class="p">:</span>
+            <span class="n">q</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="n">maxi</span><span class="p">)</span>
+            <span class="n">maxi</span> <span class="o">=</span> <span class="n">elt</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="n">q</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="n">elt</span><span class="p">)</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">q</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="n">q</span><span class="o">.</span><span class="n">depile</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">maxi</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>On crée la pile <code>B</code> représentée par <code>[9, -7, 8, 12, 4]</code> et on effectue l'appel <code>B.depile_max()</code>.</p>
+<p><strong>4.a.</strong> Donner le contenu des piles <code>B</code> et <code>q</code> à la fin de chaque itération de la boucle <code class="highlight"><span class="k">while</span></code> de la ligne 5.</p>
+<details class="success"><summary>Réponse</summary><div class="tabbed-set tabbed-alternate" data-tabs="2:5"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Initialisation</label><label for="__tabbed_2_2">Fin du tour 1</label><label for="__tabbed_2_3">Fin du tour 2</label><label for="__tabbed_2_4">Fin du tour 3</label><label for="__tabbed_2_5">Fin du tour 4</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><code>B</code> contient <code>[9, -7, 8, 12]</code> ;</li>
+<li><code>q</code> est vide ;</li>
+<li><code>maxi</code> est égal à <code>4</code>.</li>
+</ul>
+<p>Juste avant le premier tour de boucle</p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><code>B</code> contient <code>[9, -7, 8]</code> ;</li>
+<li><code>q</code> contient <code>[4]</code> ;</li>
+<li><code>maxi</code> est égal à <code>12</code>.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><code>B</code> contient <code>[9, -7]</code> ;</li>
+<li><code>q</code> contient <code>[4, 8]</code> ;</li>
+<li><code>maxi</code> est égal à <code>12</code>.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><code>B</code> contient <code>[9]</code> ;</li>
+<li><code>q</code> contient <code>[4, 8, -7]</code> ;</li>
+<li><code>maxi</code> est égal à <code>12</code>.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><code>B</code> est vide ;</li>
+<li><code>q</code> contient <code>[4, 8, -7, 9]</code> ;</li>
+<li><code>maxi</code> est égal à <code>12</code>.</li>
+</ul>
+</div>
+</div>
+</div>
+</details>
+<p><strong>4.b.</strong> Donner le contenu des piles <code>B</code> et <code>q</code> avant l'exécution de la ligne 14.</p>
+<details class="success"><summary>Réponse</summary><p>La dernière boucle renverse la pile <code>q</code> dans la pile <code>B</code>, ainsi, à la ligne 14 :</p>
+<ul>
+<li><code>q</code> est vide ;</li>
+<li><code>B</code> contient <code>[9, -7, 8, 4]</code>.</li>
+</ul>
+</details>
+<p><strong>4.c.</strong> Donner un exemple de pile qui montre que l'ordre des éléments restants n'est pas préservé après l'exécution de <code>depile_max</code>.</p>
+<details class="success"><summary>Réponse</summary><p>Avec une pile <code>B</code> qui contient <code>[3, 1, 2]</code></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Initialisation</label><label for="__tabbed_3_2">Fin du tour 1</label><label for="__tabbed_3_3">Fin du tour 2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><code>B</code> contient <code>[3, 1]</code> ;</li>
+<li><code>q</code> est vide ;</li>
+<li><code>maxi</code> est égal à <code>2</code>.</li>
+</ul>
+<p>Juste avant le premier tour de boucle</p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><code>B</code> contient <code>[3]</code> ;</li>
+<li><code>q</code> contient <code>[1]</code> ;</li>
+<li><code>maxi</code> est égal à <code>2</code>.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><code>B</code> est vide ;</li>
+<li><code>q</code> contient <code>[1, 2]</code> ;</li>
+<li><code>maxi</code> est égal à <code>3</code>.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>La dernière boucle renverse la pile <code>q</code> dans la pile <code>B</code>, ainsi, à la ligne 14 :</p>
+<ul>
+<li><code>q</code> est vide ;</li>
+<li><code>B</code> contient <code>[2, 1]</code>.</li>
+</ul>
+<p>Sans <code>3</code> dans la pile <code>B</code> initiale, on a dans l'ordre <code>[1, 2]</code> ce qui est différent de <code>[2, 1]</code> obtenu ici avec <code>depile_max</code>.</p>
+<p>On a ainsi un exemple où l'ordre des éléments restants n'est pas préservé après l'exécution de <code>depile_max</code>.</p>
+</details>
+<p>On donne le code de la fonction <code>traite</code> :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">traite</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="n">q</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">depile_max</span><span class="p">())</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">q</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="n">q</span><span class="o">.</span><span class="n">depile</span><span class="p">())</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>5.a.</strong> Donner les contenus successifs des piles <code>B</code> et <code>q</code></p>
+<ul>
+<li>avant la ligne 3,</li>
+<li>avant la ligne 5,</li>
+<li>à la fin de l'exécution de la fonction <code>traite</code> lorsque la fonction <code>traite</code> est appelée avec la pile <code>B</code> contenant <code>[1, 6, 4, 3, 7, 2]</code>.</li>
+</ul>
+<details class="success"><summary>Réponse</summary><p>Avec <code>B = [1, 6, 4, 3, 7, 2]</code>, un appel <code>B.traite()</code> conduit successivement à :</p>
+<ul>
+<li>Avant la ligne 3,<ul>
+<li><code>B</code> contient <code>[1, 6, 4, 3, 7, 2]</code> ;</li>
+<li><code>q</code> est vide.</li>
+</ul>
+</li>
+<li>Avant la ligne 5,<ul>
+<li><code>B</code> est vide ;</li>
+<li><code>q</code> contient <code>[7, 6, 4, 3, 2, 1]</code></li>
+</ul>
+</li>
+<li>À la fin,<ul>
+<li><code>B</code> contient <code>[1, 2, 3, 4, 6, 7]</code></li>
+<li><code>q</code> est vide.</li>
+</ul>
+</li>
+</ul>
+</details>
+<p><strong>5.b.</strong> Expliquer le traitement effectué par cette méthode.</p>
+<details class="success"><summary>Réponse</summary><p>Ce traitement est un tri de la pile. On construit d'abord <code>q</code> comme la pile des éléments de <code>self</code> dans l'ordre décroissant. On renverse ensuite la pile, qui se retrouve comme si on avait empilé les éléments de <code>self</code> dans l'ordre croissant.</p>
+<p>Attention, il s'agit de l'ordre inverse de celui proposé par la fonction <code>est_triee</code> vu à la question <strong>1</strong>. ici, si on dépile les éléments, ils sont désormais dans l'ordre décroissant.</p>
+</details>
+<h2 id="jeu-de-la-poussette">Jeu de la poussette<a class="headerlink" href="#jeu-de-la-poussette" title="Permanent link">⚓︎</a></h2>
+<blockquote>
+<p>D'après 2022, Métropole, J2, Ex. 2</p>
+</blockquote>
+<p>La poussette est un jeu de cartes en solitaire. Cet exercice propose une version simplifiée de ce jeu basée sur des nombres.</p>
+<p>On considère une pile constituée de nombres entiers tirés aléatoirement. Le jeu consiste à réduire la pile suivant la règle suivante : quand la pile contient du haut vers le bas un triplet dont les termes du haut et du bas sont de même parité, on supprime l'élément central.</p>
+<p>Par exemple :</p>
+<ul>
+<li>Si la pile contient du haut vers le bas le triplet 1 ; 0 ; 3, on supprime le 0, car 1 et 3 sont tous les deux impairs.</li>
+<li>Si la pile contient du haut vers le bas le triplet 1 ; 0 ; 8, la pile reste inchangée, car 1 et 8 n'ont pas la même parité.</li>
+</ul>
+<p>On parcourt la pile ainsi de haut en bas et on procède aux réductions.</p>
+<p>Arrivé en bas de la pile, <strong>on recommence la réduction</strong> en repartant du sommet de la pile jusqu'à ce que la pile ne soit plus réductible.</p>
+<p>Une partie est « gagnante » lorsque la pile finale est réduite à deux éléments exactement.</p>
+<p>Voici un exemple détaillé de déroulement d'une partie.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:4"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><input id="__tabbed_4_4" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Premier parcours de la pile</label><label for="__tabbed_4_2">Deuxième parcours</label><label for="__tabbed_4_3">Troisième parcours</label><label for="__tabbed_4_4">Quatrième parcours</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="Pile 1" class="autolight" src="../data/images_22-ME2-ex2/1.svg" />
+<img alt="Pile 2" class="autolight" src="../data/images_22-ME2-ex2/2.svg" />
+<img alt="Pile 3" class="autolight" src="../data/images_22-ME2-ex2/3.svg" />
+<img alt="Pile 4" class="autolight" src="../data/images_22-ME2-ex2/4.svg" /></p>
+<ul>
+<li>La première comparaison (7, 5 et 4) laisse la pile inchangée.</li>
+<li>On retire le 4 lors de la deuxième itération.</li>
+<li>On retire le 8 lors de la troisième.</li>
+<li>Il ne reste plus que deux valeurs en bas de la pile (9 et 6) : on a fini le premier parcours.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><img alt="Pile 5" class="autolight" src="../data/images_22-ME2-ex2/5.svg" />
+<img alt="Pile 6" class="autolight" src="../data/images_22-ME2-ex2/6.svg" />
+<img alt="Pile 7" class="autolight" src="../data/images_22-ME2-ex2/7.svg" /></p>
+<ul>
+<li>On recommence à partir du haut de la pile : on retire le 5.</li>
+<li>Le triplet suivant (3, 9 et 6) n'entraine pas de suppression.</li>
+<li>Il ne reste plus que deux valeurs à étudier (9 et 6) : on a terminé le deuxième parcours.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><img alt="Pile 8" class="autolight" src="../data/images_22-ME2-ex2/8.svg" />
+<img alt="Pile 9" class="autolight" src="../data/images_22-ME2-ex2/9.svg" /></p>
+<ul>
+<li>On recommence en haut de la pile avec 7, 3 et 9 : on retire le 3.</li>
+<li>Il ne reste que le 9 et le 6 : on a terminé le troisième parcours.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><img alt="Pile 10" class="autolight" src="../data/images_22-ME2-ex2/10.svg" /></p>
+<ul>
+<li>On recommence en haut de la pile avec 7, 9 et 6. La pile est inchangée.</li>
+<li>La pile n'a pas été modifiée lors de ce parcours : la partie est terminée et cette pile n'est pas gagnante.</li>
+</ul>
+</div>
+</div>
+</div>
+<p><strong>1.a.</strong> Donner les différentes étapes de réduction de la pile suivante :</p>
+<p><img alt="Pile 1.a." class="autolight" src="../data/images_22-ME2-ex2/1a0.svg" /></p>
+<details class="success"><summary>Réponse</summary><p>Il s'agit d'une pile gagnante :</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Premier parcours</label><label for="__tabbed_5_2">Second parcours</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="Pile 1" class="autolight" src="../data/images_22-ME2-ex2/1a1.svg" />
+<img alt="Pile 2" class="autolight" src="../data/images_22-ME2-ex2/1a2.svg" />
+<img alt="Pile 3" class="autolight" src="../data/images_22-ME2-ex2/1a3.svg" /></p>
+<ul>
+<li>Lors de la première comparaison, on retire le 9.</li>
+<li>Lors de la seconde comparaison, on retire le 7.</li>
+<li>Il ne reste plus que deux valeurs en bas de la pile (4 et 2) : on a fini le premier parcours.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><img alt="Pile 4" class="autolight" src="../data/images_22-ME2-ex2/1a4.svg" />
+<img alt="Pile 5" class="autolight" src="../data/images_22-ME2-ex2/1a5.svg" />
+<img alt="Pile 6" class="autolight" src="../data/images_22-ME2-ex2/1a6.svg" /></p>
+<ul>
+<li>Lors de la première comparaison, on retire le 8.</li>
+<li>Lors de la seconde comparaison, on retire le 4.</li>
+<li>Il ne reste plus que deux valeurs en bas de la pile (4 et 2) : la pile est gagnante.</li>
+</ul>
+</div>
+</div>
+</div>
+</details>
+<p><strong>1.b.</strong> Parmi les piles proposées ci-dessous, donner celle qui est gagnante.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Pile A</label><label for="__tabbed_6_2">Pile B</label><label for="__tabbed_6_3">Pile C</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="Pile A" class="autolight" src="../data/images_22-ME2-ex2/1bA.svg" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="Pile B" class="autolight" src="../data/images_22-ME2-ex2/1bB.svg" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="Pile C" class="autolight" src="../data/images_22-ME2-ex2/1bC.svg" /></p>
+</div>
+</div>
+</div>
+<details class="success"><summary>Réponse</summary><p>Seule la pile B est gagnante. On fournit ci dessous les piles en début et fin de partie :</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><input id="__tabbed_7_3" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Pile A</label><label for="__tabbed_7_2">Pile B</label><label for="__tabbed_7_3">Pile C</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="Pile A" class="autolight" src="../data/images_22-ME2-ex2/1bA.svg" />
+<img alt="Pile A" class="autolight" src="../data/images_22-ME2-ex2/1bAfinal.svg" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="Pile B" class="autolight" src="../data/images_22-ME2-ex2/1bB.svg" />
+<img alt="Pile B" class="autolight" src="../data/images_22-ME2-ex2/1bBfinal.svg" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="Pile C" class="autolight" src="../data/images_22-ME2-ex2/1bC.svg" />
+<img alt="Pile C" class="autolight" src="../data/images_22-ME2-ex2/1bCfinal.svg" /></p>
+</div>
+</div>
+</div>
+</details>
+<p>L'interface d'une pile est proposée ci-dessous :</p>
+<ul>
+<li><code>pile_vide()</code> renvoie une pile vide, </li>
+<li><code>est_vide(p)</code> renvoie <code>True</code> si <code>p</code> est vide, <code>False</code> sinon, </li>
+<li><code>empile(p, element)</code> ajoute <code>element</code> au sommet de <code>p</code>, </li>
+<li><code>depile(p)</code> retire l'élément au sommet de <code>p</code> et le renvoie, </li>
+<li><code>sommet(p)</code> renvoie l'élément au sommet de <code>p</code> sans le retirer de <code>p</code>, </li>
+<li><code>taille(p):</code> renvoie le nombre d'éléments de <code>p</code>.</li>
+</ul>
+<p>Dans la suite de l'exercice on utilisera uniquement ces fonctions.</p>
+<p><strong>2.</strong> La fonction <code>reduit_triplet_au_sommet</code> permet de supprimer l'élément central des trois premiers éléments en partant du haut de la pile, si l'élément du bas et du haut sont de même parité. Les éléments dépilés et non supprimés sont replacés dans le bon ordre dans la pile.</p>
+<p>Recopier et compléter sur la copie le code de la fonction <code>reduit_triplet_au_sommet</code> prenant une pile <code>p</code> en paramètre et la
+modifiant en place. Cette fonction renvoie le booléen <code>est_reduit</code> indiquant si le triplet du sommet a été réduit ou non.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">reduit_triplet_au_sommet</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+    <span class="n">haut</span> <span class="o">=</span> <span class="n">depile</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="n">milieu</span> <span class="o">=</span> <span class="n">depile</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="n">bas</span> <span class="o">=</span> <span class="n">sommet</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="n">est_reduit</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">if</span> <span class="n">haut</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="o">...</span><span class="p">:</span>
+        <span class="n">empile</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+        <span class="o">...</span>
+    <span class="n">empile</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+    <span class="k">return</span> <span class="o">...</span>
+</code></pre></div></td></tr></table></div>
+<details class="success"><summary>Réponse</summary><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">reduit_triplet_au_sommet</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+    <span class="n">haut</span> <span class="o">=</span> <span class="n">depile</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="n">milieu</span> <span class="o">=</span> <span class="n">depile</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="n">bas</span> <span class="o">=</span> <span class="n">sommet</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="n">est_reduit</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">haut</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="n">bas</span> <span class="o">%</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">empile</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">milieu</span><span class="p">)</span>
+        <span class="n">est_reduit</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">empile</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">haut</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">est_reduit</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p><strong>3.</strong> On se propose maintenant d'écrire une fonction <code>parcourt_pile_en_reduisant</code> qui parcourt la pile du haut vers le bas en procédant aux réductions pour chaque triplet rencontré quand cela est possible.</p>
+<p>La pile est toujours modifiée en place.</p>
+<p>La fonction <code>parcourt_pile_en_reduisant</code> renvoie un booléen indiquant si la pile a été réduite à au moins une reprise lors du parcours.</p>
+<p><strong>3.a.</strong> Donner la taille minimale que doit avoir une pile pour être réductible.</p>
+<details class="success"><summary>Résultat</summary><p>Si une pile a une taille de 2 ou moins, elle n'est pas réductible.</p>
+<p>Si une pile est réductible, alors sa taille est supérieure ou égale à 3.</p>
+</details>
+<p><strong>3.b.</strong> Recopier et compléter sur la copie :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">parcourt_pile_en_reduisant</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="n">pile_vide</span><span class="p">()</span>
+    <span class="n">reduction_pendant_parcours</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">while</span> <span class="n">taille</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">if</span> <span class="o">...</span><span class="p">:</span>
+            <span class="n">reduction_pendant_parcours</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="n">depile</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+        <span class="n">empile</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">q</span><span class="p">):</span>
+        <span class="o">...</span>
+        <span class="o">...</span>
+    <span class="k">return</span> <span class="o">...</span>
+</code></pre></div></td></tr></table></div>
+<details class="success"><summary>Résultat</summary><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">parcourt_pile_en_reduisant</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="n">pile_vide</span><span class="p">()</span>
+    <span class="n">reduction_pendant_parcours</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">while</span> <span class="n">taille</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">reduit_triplet_au_sommet</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+            <span class="n">reduction_pendant_parcours</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="n">depile</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+        <span class="n">empile</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">q</span><span class="p">):</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="n">depile</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+        <span class="n">empile</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">reduction_pendant_parcours</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p><strong>4.</strong> Partant d'une pile d'entiers <code>p</code>, on propose ici d'implémenter une fonction récursive <code>joue</code> jouant une partie complète sur la pile <code>p</code>.</p>
+<p>On effectue donc autant de parcours que nécessaire.</p>
+<p>Une fois la pile parcourue de haut en bas, on effectue un nouveau parcours à condition que le parcours précédent ait modifié la pile. Si à l'inverse, la pile n'a pas été modifiée, on ne fait rien, car la partie est terminée.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">joue</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">parcourt_pile_en_reduisant</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
+        <span class="o">...</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<details class="success"><summary>Résultat</summary><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">joue</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">parcourt_pile_en_reduisant</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+        <span class="n">joue</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Dernière mise à jour:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">6 mars 2023</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+
+
+                
+<script src="../../js/ide.js"></script>
+<style>
+    .jp-RenderedHTMLCommon p {
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+    .jp-RenderedHTMLCommon li {
+        font-size: .8rem;
+        line-height: 1.6;
+    }
+    .jp-RenderedHTMLCommon h1 {
+        margin: 0 0 1.25em;
+        color: var(--md-default-fg-color--light);
+        font-weight: 300;
+        font-size: 2em;
+        line-height: 1.3;
+        letter-spacing: -0.01em;
+    }
+    .jp-RenderedHTMLCommon h2 {
+        margin: 1.6em 0 .64em;
+        font-weight: 300;
+        font-size: 1.965em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
+    }
+    .jp-RenderedHTMLCommon h3 {
+        margin: 1.6em 0 .8em;
+        font-weight: 400;
+        font-size: 1.57em;
+        line-height: 1.5;
+        letter-spacing: -0.01em;
+    }
+    .jp-RenderedHTMLCommon hr {
+        border: none;
+    }
+</style>
+
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Retour en haut de la page
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+      
+        
+        <a href="../revisionBD/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Révision Base de données" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              Révision Base de données
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../T7_Divers/10_orientation/cours/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Orientation Post-Bac" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              Orientation Post-Bac
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      CC BY-SA / S.Faugeras avec l'apport majeur de Gilles Lassus (CC BY-SA)
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="mailto:sophie.faugeras@ac-rennes.fr" target="_blank" rel="noopener" title="Écrire à l&#39;auteur" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6l-126.3-52.5-40.1 74.5c-5.2 9.7-16.3 14.6-27 11.9S192 499 192 488v-96c0-5.3 1.8-10.5 5.1-14.7l165.3-212.6c2.5-7.1-6.5-14.3-13-8.4l-179 161.9-32 28.9c-9.2 8.3-22.3 10.6-33.8 5.8l-85-35.4C8.4 312.8.8 302.2.1 290s5.5-23.7 16.1-29.8l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://github.com/sofaugeras/TNSI" target="_blank" rel="noopener" title="Dépôt git" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://www.lycee-saint-sauveur-redon.eu/" target="_blank" rel="noopener" title="Lycée Saint Sauveur - Redon" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M337.8 5.4c-10.8-7.2-24.8-7.2-35.6 0l-139 92.7L37.6 126C15.6 130.9 0 150.3 0 172.8V464c0 26.5 21.5 48 48 48h544c26.5 0 48-21.5 48-48V172.8c0-22.5-15.6-42-37.6-46.9L476.8 98.1l-139-92.7zM256 416c0-35.3 28.7-64 64-64s64 28.7 64 64v96H256v-96zM96 192h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H96c-8.8 0-16-7.2-16-16v-64c0-8.8 7.2-16 16-16zm400 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16v-64zM96 320h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H96c-8.8 0-16-7.2-16-16v-64c0-8.8 7.2-16 16-16zm400 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16v-64zm-88-160c0 48.6-39.4 88-88 88s-88-39.4-88-88 39.4-88 88-88 88 39.4 88 88zm-88-48c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16h-16v-16c0-8.8-7.2-16-16-16z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascript/mermaid.js"></script>
+      
+        <script src="../../javascript/mathjax.js"></script>
+      
+        <script src="../../javascript/interpreter.js"></script>
+      
+        <script src="../../javascript/ide.js"></script>
+      
+    
+  </body>
+</html>
