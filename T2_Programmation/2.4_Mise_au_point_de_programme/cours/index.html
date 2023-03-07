@@ -1866,6 +1866,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_Annales/revisionArbre/" class="md-nav__link">
+        Révision Arbres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_Annales/revisionRecurisivite/" class="md-nav__link">
+        Révision Récursivité
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -2035,13 +2063,13 @@
 <h3 id="les-espaces">Les espaces<a class="headerlink" href="#les-espaces" title="Permanent link">⚓︎</a></h3>
 <p><img alt="image" class="center" src="../data/standards.jpg" width="40%" /></p>
 <p>▶ Il faut mettre une espace (oui, en typographie, on dit «une» espace et non pas «un» espace) avant et après chaque opérateur de comparaison, d'affectation, ou mathématique  (<code>=, ==, &gt;, +, *, ...</code> )</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># PAS BIEN </span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># PAS BIEN </span>
 <span class="n">a</span><span class="o">=</span><span class="mi">3</span>
 
 <span class="c1"># BIEN </span>
 <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1"># PAS BIEN</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># PAS BIEN</span>
 <span class="k">if</span> <span class="n">x</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ok&quot;</span><span class="p">)</span>
 
@@ -2050,21 +2078,21 @@
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ok&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>▶ Pour les opérateurs mathématiques, on essaie de reconstituer les groupes de priorité (lorsqu'il y en a) :</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># PAS BIEN</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># PAS BIEN</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="mi">2</span>
 
 <span class="c1"># BIEN</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">2</span>
 </code></pre></div>
 <p>mais </p>
-<div class="highlight"><pre><span></span><code><span class="c1"># PAS BIEN</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># PAS BIEN</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span>
 
 <span class="c1"># BIEN</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span>
 </code></pre></div>
 <p>▶ On ne met pas d'espace à intérieur des parenthèses, des crochets ou des accolades :</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># PAS BIEN</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># PAS BIEN</span>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">5</span> <span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;bonjour&#39;</span> <span class="p">)</span>
 
@@ -2074,7 +2102,7 @@
 </code></pre></div>
 <p>▶ Pour les virgules, et les deux points : 
 pas d'espace avant mais une espace après.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># PAS BIEN</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># PAS BIEN</span>
 <span class="k">if</span> <span class="n">color</span> <span class="o">==</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;vert&#39;</span><span class="p">)</span>
 
@@ -2086,7 +2114,7 @@ pas d'espace avant mais une espace après.</p>
 <h3 id="les-conventions-de-nommage">Les conventions de nommage<a class="headerlink" href="#les-conventions-de-nommage" title="Permanent link">⚓︎</a></h3>
 <p>▶ Les variables à une lettre (comme <code>i</code>, <code>j</code>, <code>k</code> ) sont réservées aux indices (notamment dans les boucles).</p>
 <p>▶ Les autres variables doivent avoir des noms explicites, éventuellement écrits en <code>snake_case</code> si plusieurs mots doivent être reliés.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># PAS BIEN</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># PAS BIEN</span>
 <span class="k">if</span> <span class="n">d</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
     <span class="n">cep</span> <span class="o">+=</span> <span class="n">vm</span>
 
@@ -2102,7 +2130,7 @@ pas d'espace avant mais une espace après.</p>
 <li><code>kebab-case</code> : les mots sont séparés par des tirets courts. Conseillé en HTML - CSS.</li>
 </ul>
 <p>▶ Cas particulier des classes en Programmation Orientée Objet : leur nom doit commencer par une majuscule.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># PAS BIEN</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># PAS BIEN</span>
 <span class="k">class</span> <span class="nc">voiture</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">annee</span><span class="p">,</span> <span class="n">marque</span><span class="p">,</span> <span class="n">modele</span><span class="p">):</span>
        <span class="c1">#pass</span>
@@ -2123,13 +2151,13 @@ Il est d'usage de dire qu'un code doit être assez <strong>explicite</strong> po
 <p><img alt="image" class="center" src="../data/smart.jpeg" width="40%" /></p>
 <p><strong>Exemple :</strong></p>
 <p>Considérons la fonction suivante.
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="c1"># c est le capital de départ, t le taux annuel et n le nombre d&#39;années</span>
     <span class="k">return</span> <span class="n">c</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">t</span><span class="p">)</span><span class="o">**</span><span class="n">n</span>  <span class="c1">#renvoie le capital après n années</span>
 </code></pre></div>
 Elle est bien commentée. Mais si on croise la fonction <code>f()</code> ailleurs dans le code, se souviendra-t-on de son rôle ?</p>
 <p>Il aurait mieux valu écrire :
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">capital_apres_n_annees</span><span class="p">(</span><span class="n">capital</span><span class="p">,</span> <span class="n">taux</span><span class="p">,</span> <span class="n">nombre_annees</span><span class="p">)</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">capital_apres_n_annees</span><span class="p">(</span><span class="n">capital</span><span class="p">,</span> <span class="n">taux</span><span class="p">,</span> <span class="n">nombre_annees</span><span class="p">)</span> <span class="p">:</span>
     <span class="k">return</span> <span class="n">capital</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">taux</span><span class="p">)</span><span class="o">**</span><span class="n">nombre_annees</span>
 </code></pre></div>
 Ce code est plus long, mais assez explicite pour se passer de commentaires.</p>
@@ -2139,11 +2167,11 @@ Ce code est plus long, mais assez explicite pour se passer de commentaires.</p>
 <p><strong>Exemples :</strong></p>
 <p>Nous connaissons la fonction <code>len()</code> qui permet par exemple de connaître la longueur d'une liste passée en paramètre.</p>
 <p>Si nous tapons en console la commande <code>print(len.__doc__)</code>, nous aurons la description de cette fonction. </p>
-<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="o">.</span><span class="vm">__doc__</span>
+<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="o">.</span><span class="vm">__doc__</span>
 <span class="s1">&#39;Return the number of items in a container.&#39;</span>
 </code></pre></div>
 Il est aussi possible d'accéder à la docstring d'une fonction <code>f</code>  par la commande <code>help(f)</code> :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
 <span class="n">Help</span> <span class="n">on</span> <span class="n">built</span><span class="o">-</span><span class="ow">in</span> <span class="n">function</span> <span class="nb">len</span> <span class="ow">in</span> <span class="n">module</span> <span class="n">builtins</span><span class="p">:</span>
 
 <span class="nb">len</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="o">/</span><span class="p">)</span>
@@ -2151,7 +2179,7 @@ Il est aussi possible d'accéder à la docstring d'une fonction <code>f</code>  
 </code></pre></div>
 <p><img alt="image" class="center" src="../data/help.jpeg" /></p>
 <p>De même pour la fonction <code>range</code> :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="nb">range</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="nb">range</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
 <span class="nb">range</span><span class="p">(</span><span class="n">stop</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">range</span> <span class="nb">object</span>
 <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">[,</span> <span class="n">step</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">range</span> <span class="nb">object</span>
 
@@ -2164,7 +2192,7 @@ Il est aussi possible d'accéder à la docstring d'une fonction <code>f</code>  
 <p>Le résultat de la commande <code>help(range)</code> est trop long pour être repris ici, mais on y retrouve bien la docstring de la fonction <code>range</code>.</p>
 <h4 id="222-creer-ses-propres-docstrings">2.2.2 Créer ses propres docstrings<a class="headerlink" href="#222-creer-ses-propres-docstrings" title="Permanent link">⚓︎</a></h4>
 <p>Il suffit pour cela de commencer la fonction à documenter par une ou plusieurs phrases entre triples quotes :</p>
-<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">capital_apres_n_annees</span><span class="p">(</span><span class="n">capital</span><span class="p">,</span> <span class="n">taux</span><span class="p">,</span> <span class="n">nombre_annees</span><span class="p">)</span> <span class="p">:</span>
+<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">capital_apres_n_annees</span><span class="p">(</span><span class="n">capital</span><span class="p">,</span> <span class="n">taux</span><span class="p">,</span> <span class="n">nombre_annees</span><span class="p">)</span> <span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Renvoie le capital après n années.</span>
 <span class="sd">    capital : valeur initiale</span>
@@ -2174,7 +2202,7 @@ Il est aussi possible d'accéder à la docstring d'une fonction <code>f</code>  
     <span class="k">return</span> <span class="n">capital</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">taux</span><span class="p">)</span><span class="o">**</span><span class="n">nombre_annees</span>
 </code></pre></div>
 Ainsi, un utilisateur pourra trouver en console le mode d'emploi de notre fonction :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">(</span><span class="n">capital_apres_n_annees</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">(</span><span class="n">capital_apres_n_annees</span><span class="p">)</span>
 <span class="n">Help</span> <span class="n">on</span> <span class="n">function</span> <span class="n">capital_apres_n_annees</span> <span class="ow">in</span> <span class="n">module</span> <span class="n">__main__</span><span class="p">:</span>
 
 <span class="n">capital_apres_n_annees</span><span class="p">(</span><span class="n">capital</span><span class="p">,</span> <span class="n">taux</span><span class="p">,</span> <span class="n">nombre_annees</span><span class="p">)</span>
@@ -2189,12 +2217,12 @@ Ainsi, un utilisateur pourra trouver en console le mode d'emploi de notre foncti
 De manière bien plus concrète, il est d'usage d'essayer de répérer si des données (souvent des paramètres d'une fonction) sont susceptibles de créer des problèmes, ou sont hors spécification.</p>
 <p><strong>Un exemple :</strong></p>
 <p>La fonction :</p>
-<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">racine_carree</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">racine_carree</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">assert</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;un nombre positif ou nul est requis&#39;</span>
     <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="mf">0.5</span>
 </code></pre></div>
 donnera, lors de l'appel à <code>racine_carree(-2)</code>, le message suivant :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">racine_carree</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">racine_carree</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
   <span class="n">File</span> <span class="s2">&quot;&lt;pyshell&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
   <span class="n">File</span> <span class="s2">&quot;/home/gilles/Bureau/exemples_assert.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span> <span class="ow">in</span> <span class="n">racine_carree</span>
@@ -2202,7 +2230,7 @@ donnera, lors de l'appel à <code>racine_carree(-2)</code>, le message suivant :
 <span class="ne">AssertionError</span><span class="p">:</span> <span class="n">un</span> <span class="n">nombre</span> <span class="n">positif</span> <span class="n">ou</span> <span class="n">nul</span> <span class="n">est</span> <span class="n">requis</span>
 </code></pre></div>
 <p><strong>Un autre exemple :</strong></p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne_trimestrielle</span><span class="p">(</span><span class="n">liste_notes</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne_trimestrielle</span><span class="p">(</span><span class="n">liste_notes</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    calcule la moyenne des nombres de la liste liste_notes</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -2220,7 +2248,7 @@ Ils sont en réalité plus utiles que cela : lors de la conception d'un programm
 <p><img alt="image" class="center" src="../data/tester.jpg" width="40%" /></p>
 <p>Tester une fonction est la première chose que l'on fait (normalement...) lorsqu'on vient de finir de l'écrire. </p>
 <p>Par exemple, si on vient de construire la fonction <code>valeur_absolue(n)</code>, il est fort probable qu'on aille taper ceci dans la console :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
 <span class="mi">3</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="mi">0</span>
@@ -2243,7 +2271,7 @@ la méthode de développement logiciel TDD (Test Driven Developement) est basée
 </blockquote>
 <p><img alt="image" class="center" src="../data/TDD.png" width="40%" /></p>
 <p>Revenons à nos tests sur la fonction <code>valeur_absolue(n)</code></p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">test_valeur_absolue</span><span class="p">():</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">test_valeur_absolue</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span> <span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ok&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
@@ -2260,7 +2288,7 @@ la méthode de développement logiciel TDD (Test Driven Developement) est basée
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;erreur&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>En console, il suffit maintenant d'appeler la fonction <code>test_valeur_absolue()</code> :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">test_valeur_absolue</span><span class="p">()</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">test_valeur_absolue</span><span class="p">()</span>
 <span class="n">ok</span>
 <span class="n">ok</span>
 <span class="n">ok</span>
@@ -2268,7 +2296,7 @@ la méthode de développement logiciel TDD (Test Driven Developement) est basée
 <h3 id="42-revoila-les-assert">4.2 Revoilà les <code>assert</code><a class="headerlink" href="#42-revoila-les-assert" title="Permanent link">⚓︎</a></h3>
 <p>Utiliser des <code>assert</code> permet d'écrire très simplement les tests précédents.</p>
 <p>Reprenons notre fonction <code>valeur_absolue()</code>. Sa fonction test  <code>test_valeur_absolue()</code> peut s'écrire :</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">test_valeur_absolue</span><span class="p">():</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">test_valeur_absolue</span><span class="p">():</span>
     <span class="k">assert</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span>
     <span class="k">assert</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
     <span class="k">assert</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="mi">7</span>
@@ -2279,7 +2307,7 @@ Vous écrirez <strong>d'abord</strong> une fonction <code>test_maxi()</code> ava
 <h3 id="43-le-module-doctest">4.3 Le module <code>doctest</code><a class="headerlink" href="#43-le-module-doctest" title="Permanent link">⚓︎</a></h3>
 <p>Le module <code>doctest</code>  permet d'écrire les tests <strong>à l'intérieur</strong> de la docstring d'une fonction. </p>
 <p>Considérons une fonction dont le but est de compter les voyelles du mot passé en paramètre.</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">compte_voyelles</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">compte_voyelles</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    renvoie le nombre de voyelles du mot donné en paramètre.</span>
 <span class="sd">    &gt;&gt;&gt; compte_voyelles(&quot;python&quot;)</span>
@@ -2300,11 +2328,11 @@ Vous écrirez <strong>d'abord</strong> une fonction <code>test_maxi()</code> ava
 On écrit donc les trois chevrons <code>&gt;&gt;&gt;</code> suivi de l'appel à la fonction, et à la ligne en dessous ce que nous espérons que la fonction nous renvoie.
 On peut écrire autant de tests que l'on veut.</p>
 <p>Ensuite, en console :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">doctest</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">doctest</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
 </code></pre></div>
 Dans notre cas, le retour sera celui-ci :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">doctest</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">doctest</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
 <span class="o">**********************************************************************</span>
 <span class="n">File</span> <span class="s2">&quot;voyelles.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">4</span><span class="p">,</span> <span class="ow">in</span> <span class="n">__main__</span><span class="o">.</span><span class="n">compte_voyelles</span>
@@ -2322,7 +2350,7 @@ Dans notre cas, le retour sera celui-ci :</p>
 </code></pre></div>
 <p>On voit que le test <code>compte_voyelles("python")</code> a renvoyé la valeur 1 alors qu'on attendait 2. En regardant notre fonction, on s'aperçoit donc qu'on avait oublié le <code>y</code> dans la liste des voyelles. </p>
 <p>En corrigeant ceci, le test devient :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">doctest</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">doctest</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
 <span class="n">TestResults</span><span class="p">(</span><span class="n">failed</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">attempted</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 </code></pre></div>

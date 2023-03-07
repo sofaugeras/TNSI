@@ -1,12 +1,12 @@
 # Révision sur les Bases de données
 
-## Exercice en console
-
 !!! info "Crédits"
     - Crédit de la mise en pages des exercices  : [@Gilles Lassus](https://glassus.github.io)
     - Exercice 2 basé sur le travail de G.Viateau (Bayonne)
     - Exercice 0 basé sur le travail de J. Le Coupanec (Académie de Rennes)
     - Exercice 1 d'après Prépabac NSI, Terminale, G.CONNAN, V.PETROV, G.ROZSAVOLGYI, L.SIGNAC, éditions HATIER.
+
+## Exercice en console
 
 !!! abstract "exercice 0"
     Championnat de France de Football 2015-2016

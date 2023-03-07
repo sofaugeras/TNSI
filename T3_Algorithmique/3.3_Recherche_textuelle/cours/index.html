@@ -1832,6 +1832,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_Annales/revisionArbre/" class="md-nav__link">
+        Révision Arbres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_Annales/revisionRecurisivite/" class="md-nav__link">
+        Révision Récursivité
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -2018,7 +2046,7 @@
 <p><img alt="img fenetre" class="center" src="../data/img_BM4.png" width="60%" /></p>
 <div class="admonition note">
 <p class="admonition-title">Algorithme de recherche naïve <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -2063,7 +2091,7 @@
 <p>La fonction renverra uniquement un booléen. </p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -2103,7 +2131,7 @@
 <p>Le <a class="" href="https://www.gutenberg.org/browse/languages/fr" target="_blank">Projet Gutenberg</a> permet de télécharger légalement des ouvrages libres de droits dans différents formats.</p>
 <p>Nous allons travailler avec le Tome 1 du roman <em>Le rouge et le noir</em> de Stendhal, à télécharger <a class="" href="../data/stendhal.txt" target="_blank">ici</a> au format <code>txt</code>. </p>
 <h4 id="131-recuperation-du-texte-dans-une-seule-chaine-de-caracteres">1.3.1 Récupération du texte dans une seule chaîne de caractères<a class="headerlink" href="#131-recuperation-du-texte-dans-une-seule-chaine-de-caracteres" title="Permanent link">⚓︎</a></h4>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;stendhals.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">texte</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -2119,7 +2147,7 @@
 </ol>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
 <span class="n">top</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 <span class="c1">#Avec le find de python</span>
 <span class="n">g</span> <span class="o">=</span> <span class="n">stendhal</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;Mme de Rênal fut fidèle à sa promesse&#39;</span><span class="p">)</span>
@@ -2167,7 +2195,7 @@ Nigel Horspool  est né en Grande-Bretagne mais citoyen canadien. Il est profess
 <p>On va ici construire un dictionnaire <code>aDroite</code> dont :<br />
 - les <strong>clés</strong> sont les caractères (les lettres) du motif<br />
 - les <strong>valeurs</strong> sont la position la plus à droite du caractère.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">#Exemple &quot;à la main&quot; pour le mot &#39;maman&#39;</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1">#Exemple &quot;à la main&quot; pour le mot &#39;maman&#39;</span>
 <span class="n">aDroite</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
 <span class="n">aDroite</span><span class="p">[</span><span class="s1">&#39;m&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span> <span class="c1">#car c&#39;est le premier qu&#39;on a trouvé</span>
 <span class="n">aDroite</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span> <span class="c1">#idem</span>
@@ -2185,7 +2213,7 @@ Nigel Horspool  est né en Grande-Bretagne mais citoyen canadien. Il est profess
 <p>écrire la fonction <code>construitADroite(motif)</code> qui renvoie le dictionnaire ainsi construit pour le motif donné en paramètre.**</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">construitADroite</span><span class="p">(</span><span class="n">motif</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">construitADroite</span><span class="p">(</span><span class="n">motif</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;calcule et renvoie un dictionnaire dont les clefs sont les caractères du motif</span>
 <span class="sd">    et le valeurs sont leur position la plus à droite dans le motif&#39;&#39;&#39;</span>
     <span class="n">aDroite</span> <span class="o">=</span> <span class="p">{}</span>
@@ -2211,7 +2239,7 @@ Nigel Horspool  est né en Grande-Bretagne mais citoyen canadien. Il est profess
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Correspondance</label><label for="__tabbed_4_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">correspondance</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">aDroite</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">correspondance</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">aDroite</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39; On suppose que le dictionnaire pour le motif a déjà été calculé au niveau global</span>
 <span class="sd">    Cette fonction, pour une fenêtre en position i, teste si le motif correspond et sinon, indique quel décalage appliquer&#39;&#39;&#39;</span>
     <span class="n">p</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span>
@@ -2232,7 +2260,7 @@ Nigel Horspool  est né en Grande-Bretagne mais citoyen canadien. Il est profess
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">correspondance</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">aDroite</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">correspondance</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">aDroite</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39; On suppose que le dictionnaire pour le motif a déjà été calculé au niveau global</span>
 <span class="sd">    Cette fonction, pour une fenêtre en position i, teste si le motif correspond et sinon, indique quel décalage appliquer&#39;&#39;&#39;</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">texte</span><span class="p">)</span>
@@ -2281,7 +2309,7 @@ Nigel Horspool  est né en Grande-Bretagne mais citoyen canadien. Il est profess
 <div class="tabbed-block"></div>
 </div>
 </div>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">texte</span><span class="p">)</span>
     <span class="n">p</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span>
     <span class="n">aDroite</span> <span class="o">=</span> <span class="n">construitADroite</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span>
@@ -2300,7 +2328,7 @@ Nigel Horspool  est né en Grande-Bretagne mais citoyen canadien. Il est profess
 </code></pre></div>
 </div>
 <h2 id="3-bonus-comparaison-des-temps-de-calcul">3. Bonus : comparaison des temps de calcul<a class="headerlink" href="#3-bonus-comparaison-des-temps-de-calcul" title="Permanent link">⚓︎</a></h2>
-<div class="highlight"><pre><span></span><code><span class="n">texte_pire</span> <span class="o">=</span> <span class="s1">&#39;A&#39;</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">texte_pire</span> <span class="o">=</span> <span class="s1">&#39;A&#39;</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span>
 <span class="n">motif_pire</span> <span class="o">=</span> <span class="s1">&#39;A&#39;</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="s1">&#39;B&#39;</span>
 
 <span class="kn">import</span> <span class="nn">time</span>
@@ -2321,7 +2349,7 @@ Nigel Horspool  est né en Grande-Bretagne mais citoyen canadien. Il est profess
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">6 mars 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">7 mars 2023</span>
       
     
   </small>

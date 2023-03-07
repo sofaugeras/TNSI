@@ -1726,6 +1726,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_Annales/revisionArbre/" class="md-nav__link">
+        Révision Arbres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_Annales/revisionRecurisivite/" class="md-nav__link">
+        Révision Récursivité
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1935,7 +1963,7 @@ Il en faut 4 + 3 + 2 + 1 = 10.<br /></p>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>On considère la fonction <code>rechercher(x,T,debut,fin)</code> de recherche, entre debut et fin inclus, de l'indice d'un élément <code>x</code> dans un tableau <code>T</code> trié suivant l'ordre croissant.</p>
-<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">rechercher</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">debut</span><span class="p">,</span> <span class="n">fin</span><span class="p">):</span>
+<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">rechercher</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">debut</span><span class="p">,</span> <span class="n">fin</span><span class="p">):</span>
 <span class="sd">&quot;&quot;&quot; Renvoie l&#39;indice de x, entre debut et fin, dans le tableau trié dans l&#39;ordre croissant T, et -1 sinon. &quot;&quot;&quot;</span>
     <span class="k">while</span> <span class="n">debut</span> <span class="o">&lt;=</span> <span class="n">fin</span><span class="p">:</span>
         <span class="n">milieu</span> <span class="o">=</span> <span class="p">(</span><span class="n">debut</span> <span class="o">+</span> <span class="n">fin</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
@@ -1967,7 +1995,7 @@ Il s'agit d'une implémentation itérative de la recherche dichotomique.<br />
 L'algorithme de recherche dichotomique divise l'intervalle de recherche en deux sous-intervalles disjoints <code>([debut;milieu-1] et [milieu+1;fin])</code> et détermine, au moyen d'une comparaison, le sous-intervalle sur lequel il convient de poursuivre cette recherche pour trouver la réponse (l'indice de
 l'élément recherché).<br />
 L'algorithme procède donc par division en sous problèmes indépendants, qu'il résout en combinant les réponses (en poursuivant la recherche sur le seul sous-intervalle pertinent, capable de fournir la réponse si elle existe)<br /></p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">rechercher</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">debut</span><span class="p">,</span> <span class="n">fin</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">rechercher</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">debut</span><span class="p">,</span> <span class="n">fin</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">debut</span> <span class="o">&gt;</span> <span class="n">fin</span><span class="p">:</span>
         <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
     <span class="k">else</span><span class="p">:</span>
@@ -2001,7 +2029,7 @@ résultat.<br /></p>
 <em>Remarque :</em> ceux qui sont à l’aise essaieront autant que possible de ne pas utiliser de slices, mais plutôt des indices de début et de fin. Ceci pour des raisons d’efficacité lors de l’implémentation.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
 
 <span class="n">liste</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">):</span>
@@ -2048,7 +2076,7 @@ résultat.<br /></p>
 <p>@Credits: <a href="https://fullyunderstood.com/pseudocodes/quick-sort/">fullyunderstood.com</a> et <a href="https://www.codesdope.com/course/algorithms-quicksort/">codescope.com</a></p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
 
 <span class="n">liste</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">):</span>
@@ -2111,7 +2139,7 @@ résultat.<br /></p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">6 mars 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">7 mars 2023</span>
       
     
   </small>

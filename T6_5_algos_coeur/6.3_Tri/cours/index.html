@@ -1785,6 +1785,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_Annales/revisionArbre/" class="md-nav__link">
+        Révision Arbres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_Annales/revisionRecurisivite/" class="md-nav__link">
+        Révision Récursivité
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1951,7 +1979,7 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Tri en place, itératif</p>
-<div class="highlight"><pre><span></span><code>```python
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```python
 def insere(donnees, indice):
     &quot;&quot;&quot;insere la donnee d&#39;indice indice à sa bonne place dans la liste formée des
     éléments d&#39;indice inférieur ou égaux à indice.
@@ -1994,7 +2022,7 @@ def tri_insertion(donnees):
 </div>
 <div class="tabbed-block">
 <p>Tri itératif qui renvoie une nouvelle liste</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">insere2</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">insere2</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Insère la valeur dans la liste, supposée triée. la modification est en place</span>
 
 <span class="sd">    param :</span>
@@ -2036,7 +2064,7 @@ def tri_insertion(donnees):
 </div>
 <div class="tabbed-block">
 <p>Tri récursif qui renvoie une nouvelle liste</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">insere3</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">insere3</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
 <span class="sd">&quot;&quot;&quot;Insère la valeur dans la liste, supposée triée</span>
 
 <span class="sd">    param :</span>
@@ -2081,7 +2109,7 @@ def tri_insertion(donnees):
 </details>
 <h2 id="tri-par-selection">Tri par sélection<a class="headerlink" href="#tri-par-selection" title="Permanent link">⚓︎</a></h2>
 <details class="note"><summary>Tri par sélection</summary><p>Fonction qui renvoie la liste triée par ordre croissant.</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">index_min</span><span class="p">(</span><span class="n">donnees</span><span class="p">,</span> <span class="n">indice</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">index_min</span><span class="p">(</span><span class="n">donnees</span><span class="p">,</span> <span class="n">indice</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;retourne l&#39;indice du plus petit élément d&#39;une liste, à partir d&#39;un indice donné</span>
 
 <span class="sd">        Exemple:</span>
@@ -2113,7 +2141,7 @@ def tri_insertion(donnees):
 </code></pre></div>
 </details>
 <h2 id="tri-fusion">Tri fusion<a class="headerlink" href="#tri-fusion" title="Permanent link">⚓︎</a></h2>
-<details class="note"><summary>Algorithme de tri fusion (<em>merge sort</em>) <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></summary><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">interclassement</span><span class="p">(</span><span class="n">lst1</span><span class="p">,</span> <span class="n">lst2</span><span class="p">):</span>
+<details class="note"><summary>Algorithme de tri fusion (<em>merge sort</em>) <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></summary><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">interclassement</span><span class="p">(</span><span class="n">lst1</span><span class="p">,</span> <span class="n">lst2</span><span class="p">):</span>
     <span class="n">lst_totale</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst1</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst2</span><span class="p">)</span>
     <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
@@ -2140,7 +2168,7 @@ def tri_insertion(donnees):
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">6 mars 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">7 mars 2023</span>
       
     
   </small>

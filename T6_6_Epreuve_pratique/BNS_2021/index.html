@@ -2175,6 +2175,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T6_Annales/revisionArbre/" class="md-nav__link">
+        Révision Arbres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T6_Annales/revisionRecurisivite/" class="md-nav__link">
+        Révision Récursivité
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -2358,7 +2386,7 @@
 <div class="tabbed-block">
 <p>Programmer la fonction <code>recherche</code>, prenant en paramètre un tableau non vide <code>tab</code> (type <code>list</code>) d'entiers et un entier <code>n</code>, et qui renvoie l'indice de la <strong>dernière</strong> occurrence de l'élément cherché. Si l'élément n'est pas présent, la fonction renvoie la longueur du tableau.</p>
 <p>Exemples
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
 <span class="mi">2</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span><span class="mi">2</span><span class="p">)</span>
 <span class="mi">0</span>
@@ -2369,7 +2397,7 @@
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -2402,7 +2430,7 @@ est donnée par la formule :</p>
 <div class="arithmatex">\[d=\sqrt{(x-x')^2+(y-y')^2}\]</div>
 <p>On importe pour cela la fonction racine carrée (<code>sqrt</code>) du module <code>math</code> de Python.</p>
 <p>On dispose d'une fonction <code>distance</code> et d'une fonction <code>plus_courte_distance</code> :</p>
-<p><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>     <span class="c1"># import de la fonction racine carrée</span>
+<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>     <span class="c1"># import de la fonction racine carrée</span>
 
 <span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">point1</span><span class="p">,</span> <span class="n">point2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Calcule et renvoie la distance entre deux points. &quot;&quot;&quot;</span>
@@ -2427,7 +2455,7 @@ code et ajouter une ou des déclarations (<code>assert</code>) à la fonction <c
 de vérifier la ou les préconditions.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -2481,7 +2509,7 @@ de vérifier la ou les préconditions.</p>
 <code>list</code>) qui renvoie la moyenne de ses éléments si le tableau est non vide et affiche
 'erreur' si le tableau est vide.</p>
 <p>Exemples :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">moyenne</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">])</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">moyenne</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">])</span>
 <span class="mf">5.333333333333333</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">moyenne</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">])</span>
 <span class="mf">5.5</span>
@@ -2493,7 +2521,7 @@ de vérifier la ou les préconditions.</p>
 <p>{{ correction(True,
 "
 L'énoncé n'est pas très clair quand il dit «d'afficher 'erreur'» (ce qui suppose un <code>print</code> et non un <code>return</code>). Nous choississons donc dans ce cas de renvoyer <code>None</code>.</p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -2540,7 +2568,7 @@ considère alors qu’il appartient à la zone ne contenant que des 1.</li>
 </ul>
 <p>Dans tous les cas, la longueur de la zone non triée diminue de 1.</p>
 <p>Recopier sous Python en la complétant la fonction <code>tri</code> suivante :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -2569,14 +2597,14 @@ considère alors qu’il appartient à la zone ne contenant que des 1.</li>
     <span class="o">...</span>
 </code></pre></div></td></tr></table></div>
 <p>Exemple :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tri</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tri</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
 <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>       
 </code></pre></div></p>
 </div>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -2624,7 +2652,7 @@ Les seules opérations autorisées sont l’addition et la soustraction. </p>
 <p>{{ correction(True,
 "
 Énoncé peu clair, on ne sait pas si <code>n1</code> et <code>n2</code> sont entiers naturels ou relatifs. Nous décidons qu'ils sont relatifs et donc qu'ils peuvent être négatifs, auquel cas on utilise le fait que <span class="arithmatex">\(5 \\times (-6)= - (5 \\times 6)\)</span>.
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -2656,7 +2684,7 @@ Les seules opérations autorisées sont l’addition et la soustraction. </p>
 <div class="tabbed-block">
 <p>Recopier et compléter sous Python la fonction suivante en respectant la spécification. On
 ne recopiera pas les commentaires.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -2691,14 +2719,14 @@ ne recopiera pas les commentaires.</p>
     <span class="k">return</span> <span class="o">...</span>
 </code></pre></div></td></tr></table></div>
 <p>Exemples :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">dichotomie</span><span class="p">([</span><span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">33</span><span class="p">],</span><span class="mi">28</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">dichotomie</span><span class="p">([</span><span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">33</span><span class="p">],</span><span class="mi">28</span><span class="p">)</span>
 <span class="kc">True</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">dichotomie</span><span class="p">([</span><span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">33</span><span class="p">],</span><span class="mi">27</span><span class="p">)</span>
 <span class="kc">False</span>
 </code></pre></div></p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -2745,7 +2773,7 @@ ne recopiera pas les commentaires.</p>
 <p>Écrire une fonction qui prend en paramètre un tableau d'entiers non vide et qui renvoie la
 moyenne de ces entiers. La fonction est spécifiée ci-après et doit passer les assertions
 fournies.
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span> <span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span> <span class="p">(</span><span class="n">tab</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    moyenne(list) -&gt; float</span>
 <span class="sd">    Entrée : un tableau non vide d&#39;entiers</span>
@@ -2762,7 +2790,7 @@ fournies.
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -2806,7 +2834,7 @@ la valeur est comprise entre les valeurs extrêmes du tableau.</p>
 <p>On distingue les trois cas qui renvoient <code>False</code> en renvoyant <code>False,1</code> , <code>False,2</code> et
 <code>False,3</code>.</p>
 <p>Compléter l'algorithme de dichotomie donné ci-après.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -2853,7 +2881,7 @@ la valeur est comprise entre les valeurs extrêmes du tableau.</p>
     <span class="k">return</span> <span class="o">...</span>
 </code></pre></div></td></tr></table></div>
 <p>Exemples :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">dichotomie</span><span class="p">([</span><span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">33</span><span class="p">],</span><span class="mi">28</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">dichotomie</span><span class="p">([</span><span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">33</span><span class="p">],</span><span class="mi">28</span><span class="p">)</span>
 <span class="kc">True</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">dichotomie</span><span class="p">([</span><span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">33</span><span class="p">],</span><span class="mi">27</span><span class="p">)</span>
 <span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
@@ -2864,7 +2892,7 @@ la valeur est comprise entre les valeurs extrêmes du tableau.</p>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -2926,7 +2954,7 @@ l'écriture binaire de l'entier dont l'écriture décimale est
 <code>2**6 + 2**4 + 2**1 + 2**0 = 83</code>.</p>
 <p>À l'aide d'un parcours séquentiel, écrire la fonction convertir répondant aux
 spécifications suivantes :</p>
-<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">convertir</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">convertir</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    T est un tableau d&#39;entiers, dont les éléments sont 0 ou 1 et</span>
 <span class="sd">    représentant un entier écrit en binaire. Renvoie l&#39;écriture</span>
@@ -2935,7 +2963,7 @@ spécifications suivantes :</p>
 <span class="sd">    &quot;&quot;&quot;</span>
 </code></pre></div>
 Exemple :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">convertir</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">convertir</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
 <span class="mi">83</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">convertir</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
 <span class="mi">130</span>
@@ -2944,7 +2972,7 @@ Exemple :
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -2973,7 +3001,7 @@ Exemple :
 <p>La fonction <code>tri_insertion</code> suivante prend en argument une liste <code>L</code> et trie cette liste en
 utilisant la méthode du tri par insertion. Compléter cette fonction pour qu'elle réponde à la
 spécification demandée.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3024,7 +3052,7 @@ spécification demandée.</p>
     <span class="k">return</span> <span class="n">L</span>
 </code></pre></div></td></tr></table></div>
 <p>Exemples :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tri_insertion</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">28</span><span class="p">])</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tri_insertion</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">28</span><span class="p">])</span>
 <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">28</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">tri_insertion</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
 <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
@@ -3033,7 +3061,7 @@ spécification demandée.</p>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3106,7 +3134,7 @@ pièces de 1 euro (<code>n3</code>) à rendre afin que le total rendu soit égal
 <p>On utilisera un algorithme glouton : on commencera par rendre le nombre maximal de
 billets de 5 euros, puis celui des pièces de 2 euros et enfin celui des pièces de 1 euros.</p>
 <p>Exemples :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">rendu</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">rendu</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
 <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">rendu</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span>
 <span class="p">[</span><span class="mi">12</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
@@ -3117,7 +3145,7 @@ billets de 5 euros, puis celui des pièces de 2 euros et enfin celui des pièces
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -3149,7 +3177,7 @@ billets de 5 euros, puis celui des pièces de 2 euros et enfin celui des pièces
 <p>On veut écrire une classe pour gérer une file à l’aide d’une liste chaînée. On dispose d’une
 classe <code>Maillon</code> permettant la création d’un maillon de la chaîne, celui-ci étant constitué
 d’une valeur et d’une référence au maillon suivant de la chaîne :</p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Maillon</span> <span class="p">:</span>
@@ -3159,7 +3187,7 @@ d’une valeur et d’une référence au maillon suivant de la chaîne :</p>
 </code></pre></div></td></tr></table></div>
 Compléter la classe <code>File suivante</code> où l’attribut <code>dernier_file</code> contient le maillon
 correspondant à l’élément arrivé en dernier dans la file :</p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3223,7 +3251,7 @@ correspondant à l’élément arrivé en dernier dans la file :</p>
 </code></pre></div></td></tr></table></div>
 On pourra tester le fonctionnement de la classe en utilisant les commandes
 suivantes dans la console Python :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">F</span> <span class="o">=</span> <span class="n">File</span><span class="p">()</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">F</span> <span class="o">=</span> <span class="n">File</span><span class="p">()</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">F</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span>
 <span class="kc">True</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">F</span><span class="o">.</span><span class="n">enfile</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -3248,7 +3276,7 @@ suivantes dans la console Python :
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3339,7 +3367,7 @@ suivantes dans la console Python :
 <code>n</code> de cette suite.</p>
 <p>On utilisera une programmation dynamique (pas de récursivité).</p>
 <p>Exemple :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="mi">1</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="mi">1</span>
@@ -3353,7 +3381,7 @@ suivantes dans la console Python :
 <p>{{ correction(True,
 "
 On utilise un dictionnaire pour stocker au fur et à mesure les valeurs.
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -3383,7 +3411,7 @@ On utilise un dictionnaire pour stocker au fur et à mesure les valeurs.
 de même longueur, la fonction <code>meilleures_notes</code> renvoie la note maximale qui a été
 attribuée, le nombre d’élèves ayant obtenu cette note et la liste des noms de ces élèves.</p>
 <p>Compléter le code Python de la fonction <code>meilleures_notes</code> ci-dessous.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3420,14 +3448,14 @@ attribuée, le nombre d’élèves ayant obtenu cette note et la liste des noms 
     <span class="k">return</span> <span class="p">(</span><span class="n">note_maxi</span><span class="p">,</span><span class="n">nb_eleves_note_maxi</span><span class="p">,</span><span class="n">liste_maxi</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>Une fois complété, le code ci-dessus donne</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">meilleures_notes</span><span class="p">()</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">meilleures_notes</span><span class="p">()</span>
 <span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">])</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3479,7 +3507,7 @@ attribuée, le nombre d’élèves ayant obtenu cette note et la liste des noms 
 <code>mot</code>, une chaîne de caractères, et qui renvoie le nombre d’occurrences de <code>caractere</code>
 dans <code>mot</code>, c’est-à-dire le nombre de fois où <code>caractere</code> apparaît dans <code>mot</code>.</p>
 <p>Exemples :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s2">&quot;sciences&quot;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s2">&quot;sciences&quot;</span><span class="p">)</span>
 <span class="mi">2</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">,</span><span class="s2">&quot;mississippi&quot;</span><span class="p">)</span>
 <span class="mi">4</span>
@@ -3490,7 +3518,7 @@ dans <code>mot</code>, c’est-à-dire le nombre de fois où <code>caractere</co
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -3521,7 +3549,7 @@ pas de limitation quant à leur nombre), on cherche à donner la liste de pièce
 pour une somme donnée en argument.
 Compléter le code Python ci-dessous de la fonction <code>rendu_glouton</code> qui implémente cet
 algorithme et renvoie la liste des pièces à rendre.</p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3544,7 +3572,7 @@ algorithme et renvoie la liste des pièces à rendre.</p>
         <span class="k">return</span> <span class="n">rendu_glouton</span><span class="p">(</span><span class="n">arendre</span><span class="p">,</span> <span class="n">solution</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 On devra obtenir :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="n">rendu_glouton</span><span class="p">(</span><span class="mi">68</span><span class="p">,[],</span><span class="mi">0</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="n">rendu_glouton</span><span class="p">(</span><span class="mi">68</span><span class="p">,[],</span><span class="mi">0</span><span class="p">)</span>
 <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span><span class="n">rendu_glouton</span><span class="p">(</span><span class="mi">291</span><span class="p">,[],</span><span class="mi">0</span><span class="p">)</span>
 <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
@@ -3553,7 +3581,7 @@ On devra obtenir :</p>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3603,7 +3631,7 @@ résultat du calcul suivant :</p>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -3642,7 +3670,7 @@ deux cases situées juste au-dessus, comme l’indique la figure suivante :</p>
 triangle de Pascal de la ligne <code>1</code> à la ligne <code>n</code> où <code>n</code> est un nombre entier supérieur ou égal à
 <code>2</code> (le tableau sera contenu dans la variable <code>C</code>). La variable <code>Ck</code> doit, quant à elle, contenir,
 à l’étape numéro <code>k</code>, la <code>k</code>-ième ligne du tableau.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -3661,18 +3689,18 @@ triangle de Pascal de la ligne <code>1</code> à la ligne <code>n</code> où <co
     <span class="k">return</span> <span class="n">C</span>
 </code></pre></div></td></tr></table></div>
 <p>Pour <code>n = 4</code>, voici ce qu'on devra obtenir :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">pascal</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">pascal</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="p">[[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
 </code></pre></div>
 Pour <code>n = 5</code>, voici ce qu'on devra obtenir :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">pascal</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">pascal</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="p">[[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
 </code></pre></div></p>
 </div>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -3704,14 +3732,14 @@ Pour <code>n = 5</code>, voici ce qu'on devra obtenir :
 <div class="tabbed-block">
 <p>Écrire une fonction <code>maxi</code> qui prend en paramètre une liste <code>tab</code> de nombres entiers et renvoie un couple donnant le plus grand élément de cette liste, ainsi que l’indice de la première apparition de ce maximum dans la liste.</p>
 <p>Exemple :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maxi</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">])</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maxi</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">])</span>
 <span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 </code></pre></div></p>
 </div>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -3746,7 +3774,7 @@ enfin, que l’expression <code>T.append(v)</code> place la valeur <code>v</code
 <p>Compléter le code Python de la fonction <code>positif</code> ci-dessous qui prend une pile <code>T</code> de
 nombres entiers en paramètre et qui renvoie la pile des entiers positifs dans le même
 ordre, sans modifier la variable <code>T</code>.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3773,7 +3801,7 @@ ordre, sans modifier la variable <code>T</code>.</p>
     <span class="k">return</span> <span class="n">T2</span>
 </code></pre></div></td></tr></table></div>
 <p>Exemple :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">positif</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="o">-</span><span class="mi">8</span> <span class="p">])</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">positif</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="o">-</span><span class="mi">8</span> <span class="p">])</span>
 <span class="n">T</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">]</span>
 <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
 </code></pre></div></p>
@@ -3781,7 +3809,7 @@ ordre, sans modifier la variable <code>T</code>.</p>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3826,7 +3854,7 @@ couple (<code>b,bit)</code> où :</p>
 <li><code>bit</code> correspond aux nombre de bits qui constituent <code>b</code>.</li>
 </ul>
 <p>Exemple :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">conv_bin</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">conv_bin</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
 <span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="mi">4</span><span class="p">)</span>
 </code></pre></div></p>
 <p>Aide :</p>
@@ -3847,7 +3875,7 @@ Soit <code>T=[5,2,4,10]</code>. Après <code>T.reverse()</code>, la liste devien
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -3879,7 +3907,7 @@ Soit <code>T=[5,2,4,10]</code>. Après <code>T.reverse()</code>, la liste devien
 <div class="tabbed-block">
 <p>La fonction <code>tri_bulles</code> prend en paramètre une liste <code>T</code> d’entiers non triés et renvoie la liste triée par ordre croissant.
 Compléter le code Python ci-dessous qui implémente la fonction <code>tri_bulles</code>.</p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -3898,14 +3926,14 @@ Compléter le code Python ci-dessous qui implémente la fonction <code>tri_bulle
     <span class="k">return</span> <span class="n">T</span>
 </code></pre></div></td></tr></table></div>
 Écrire une autre version de l’algorithme avec</p>
-<p><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
 </code></pre></div>
 en lieu et place de la troisième ligne du code précédent.</p>
 </div>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3962,14 +3990,14 @@ en lieu et place de la troisième ligne du code précédent.</p>
 <div class="tabbed-block">
 <p>Écrire une fonction <code>maxi</code> qui prend en paramètre une liste <code>tab</code> de nombres entiers et renvoie un couple donnant le plus grand élément de cette liste, ainsi que l’indice de la première apparition de ce maximum dans la liste.</p>
 <p>Exemple :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maxi</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">])</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maxi</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">])</span>
 <span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 </code></pre></div></p>
 </div>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -4000,7 +4028,7 @@ en lieu et place de la troisième ligne du code précédent.</p>
 <p>La fonction <code>recherche</code> prend en paramètres deux chaines de caractères <code>gene</code> et
 <code>seq_adn</code> et renvoie <code>True</code> si on retrouve <code>gene</code> dans <code>seq_adn</code> et <code>False</code> sinon.
 Compléter le code Python ci-dessous pour qu’il implémente la fonction <code>recherche</code>.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -4027,7 +4055,7 @@ Compléter le code Python ci-dessous pour qu’il implémente la fonction <code>
     <span class="k">return</span> <span class="n">trouve</span>
 </code></pre></div></td></tr></table></div>
 <p>Exemples :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="s2">&quot;AATC&quot;</span><span class="p">,</span> <span class="s2">&quot;GTACAAATCTTGCC&quot;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="s2">&quot;AATC&quot;</span><span class="p">,</span> <span class="s2">&quot;GTACAAATCTTGCC&quot;</span><span class="p">)</span>
 <span class="kc">True</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="s2">&quot;AGTC&quot;</span><span class="p">,</span> <span class="s2">&quot;GTACAAATCTTGCC&quot;</span><span class="p">)</span>
 <span class="kc">False</span>
@@ -4036,7 +4064,7 @@ Compléter le code Python ci-dessous pour qu’il implémente la fonction <code>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -4084,14 +4112,14 @@ d'indice 1 ;</li>
 <li>on continue de cette façon jusqu'à ce que le tableau soit entièrement trié.</li>
 </ul>
 <p>Exemple :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tri_selection</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">52</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span><span class="mi">12</span><span class="p">])</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tri_selection</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">52</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span><span class="mi">12</span><span class="p">])</span>
 <span class="p">[</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">52</span><span class="p">]</span>
 </code></pre></div></p>
 </div>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -4133,7 +4161,7 @@ est averti. Il peut alors en tester un autre ;</li>
 <p>La fonction <code>randint</code> est utilisée. Si a et b sont des entiers, <code>randint(a,b)</code> renvoie un
 nombre entier compris entre <code>a</code> et <code>b</code>.
 Compléter le code ci-dessous et le tester :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -4175,7 +4203,7 @@ Compléter le code ci-dessous et le tester :</p>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -4228,7 +4256,7 @@ Compléter le code ci-dessous et le tester :</p>
 <p>Écrire une fonction <code>recherche</code> qui prend en paramètres <code>elt</code> un nombre et <code>tab</code> un
 tableau de nombres, et qui renvoie le tableau des indices de <code>elt</code> dans <code>tab</code> si <code>elt</code> est dans <code>tab</code> et le tableau vide <code>[]</code> sinon.</p>
 <p>Exemples :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
 <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 <span class="p">[]</span>
@@ -4237,7 +4265,7 @@ tableau de nombres, et qui renvoie le tableau des indices de <code>elt</code> da
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -4269,7 +4297,7 @@ dictionnaire :</p>
 valeurs sont les notes obtenues associées à leurs coefficients.</li>
 </ul>
 <p>Avec :</p>
-<div class="highlight"><pre><span></span><code><span class="n">resultats</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Dupont&#39;</span><span class="p">:{</span> <span class="s1">&#39;DS1&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="mf">15.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">resultats</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Dupont&#39;</span><span class="p">:{</span> <span class="s1">&#39;DS1&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="mf">15.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
                         <span class="s1">&#39;DM1&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="mf">14.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
                         <span class="s1">&#39;DS2&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
                         <span class="s1">&#39;PROJET1&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
@@ -4286,7 +4314,7 @@ valeurs sont les notes obtenues associées à leurs coefficients.</li>
 Le professeur crée une fonction <code>moyenne</code> qui prend en paramètre le nom d’un de ces
 élèves et lui renvoie sa moyenne arrondie au dixième.</p>
 <p>Compléter le code du professeur ci-dessous :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -4314,7 +4342,7 @@ Le professeur crée une fonction <code>moyenne</code> qui prend en paramètre le
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -4381,7 +4409,7 @@ non triés <code>tab</code>, et qui renvoie la plus petite et la plus grande val
 forme d’un dictionnaire à deux clés ‘min’ et ‘max’. Les tableaux seront représentés sous
 forme de liste Python.</p>
 <p>Exemples :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tableau</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tableau</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">resultat</span> <span class="o">=</span> <span class="n">rechercheMinMax</span><span class="p">(</span><span class="n">tableau</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">resultat</span>
 <span class="p">{</span><span class="s1">&#39;min&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">}</span>
@@ -4394,7 +4422,7 @@ forme de liste Python.</p>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -4434,7 +4462,7 @@ forme de liste Python.</p>
 selon les éléments indiqués dans le code ci-dessous.
 Compléter ce code aux endroits indiqués par <code>#A compléter</code>, puis ajouter des
 assertions dans l’initialiseur de <code>Carte</code>, ainsi que dans la méthode <code>getCarteAt()</code>.</p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -4503,7 +4531,7 @@ assertions dans l’initialiseur de <code>Carte</code>, ainsi que dans la métho
         <span class="c1">#A compléter</span>
 </code></pre></div></td></tr></table></div>
 Exemple :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">unPaquet</span> <span class="o">=</span> <span class="n">PaquetDeCarte</span><span class="p">()</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">unPaquet</span> <span class="o">=</span> <span class="n">PaquetDeCarte</span><span class="p">()</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">unPaquet</span><span class="o">.</span><span class="n">remplir</span><span class="p">()</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">uneCarte</span> <span class="o">=</span> <span class="n">unPaquet</span><span class="o">.</span><span class="n">getCarteAt</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">uneCarte</span><span class="o">.</span><span class="n">getNom</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; de &quot;</span> <span class="o">+</span> <span class="n">uneCarte</span><span class="o">.</span><span class="n">getCouleur</span><span class="p">())</span>
@@ -4515,7 +4543,7 @@ Exemple :</p>
 <li>il ne faut pas de majuscules sur les noms des attributs</li>
 <li>la docstring se place à l'intérieur de la fonction et non au dessus.</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -4607,7 +4635,7 @@ Exemple :</p>
 flottants et qui renvoie la moyenne des valeurs du tableau. Les tableaux seront
 représentés sous forme de liste Python.</p>
 <p>Exemples :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">moyenne</span><span class="p">([</span><span class="mf">1.0</span><span class="p">])</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">moyenne</span><span class="p">([</span><span class="mf">1.0</span><span class="p">])</span>
 <span class="mf">1.0</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">moyenne</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">])</span>
 <span class="mf">2.3333333333333335</span>
@@ -4616,7 +4644,7 @@ représentés sous forme de liste Python.</p>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -4639,7 +4667,7 @@ représentés sous forme de liste Python.</p>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>On considère la fonction <code>dec_to_bin</code> ci-dessous qui prend en paramètre un entier positif <code>a</code> en écriture décimale et qui renvoie son écriture binaire sous la forme d'une chaine de caractères.</p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -4655,7 +4683,7 @@ représentés sous forme de liste Python.</p>
 </code></pre></div></td></tr></table></div>
 Compléter la fonction <code>dec_to_bin</code>.</p>
 <p>Exemples :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">dec_to_bin</span><span class="p">(</span><span class="mi">83</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">dec_to_bin</span><span class="p">(</span><span class="mi">83</span><span class="p">)</span>
 <span class="s1">&#39;1010011&#39;</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">dec_to_bin</span><span class="p">(</span><span class="mi">127</span><span class="p">)</span>
 <span class="s1">&#39;1111111&#39;</span>
@@ -4664,7 +4692,7 @@ Compléter la fonction <code>dec_to_bin</code>.</p>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -4694,7 +4722,7 @@ Compléter la fonction <code>dec_to_bin</code>.</p>
 trié <code>tab</code>, et qui renvoie l'indice de la première occurrence du minimum de ce tableau. Les
 tableaux seront représentés sous forme de liste Python.</p>
 <p>Exemples :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">indice_du_min</span><span class="p">([</span><span class="mi">5</span><span class="p">])</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">indice_du_min</span><span class="p">([</span><span class="mi">5</span><span class="p">])</span>
 <span class="mi">0</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">indice_du_min</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
 <span class="mi">2</span>
@@ -4705,7 +4733,7 @@ tableaux seront représentés sous forme de liste Python.</p>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -4732,7 +4760,7 @@ tableaux seront représentés sous forme de liste Python.</p>
 <p>On considère la fonction <code>separe</code> ci-dessous qui prend en argument un tableau <code>tab</code> dont
 les éléments sont des <code>0</code> et des <code>1</code> et qui sépare les <code>0</code> des <code>1</code> en plaçant les <code>0</code> en début de
 tableau et les <code>1</code> à la suite.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -4754,7 +4782,7 @@ tableau et les <code>1</code> à la suite.</p>
 </code></pre></div></td></tr></table></div>
 <p>Compléter la fonction <code>separe</code> ci-dessus.</p>
 <p>Exemples :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">separe</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">separe</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
 <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">separe</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
 <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
@@ -4763,7 +4791,7 @@ tableau et les <code>1</code> à la suite.</p>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -4799,7 +4827,7 @@ tableau et les <code>1</code> à la suite.</p>
 un tableau de nombres entiers, et qui renvoie l’indice de la première occurrence de <code>elt</code>
 dans <code>tab</code> si <code>elt</code> est dans <code>tab</code> et <code>-1</code> sinon.</p>
 <p>Exemples :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
 <span class="o">-</span><span class="mi">1</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">56</span><span class="p">])</span>
 <span class="mi">2</span>
@@ -4812,7 +4840,7 @@ dans <code>tab</code> si <code>elt</code> est dans <code>tab</code> et <code>-1<
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -4839,7 +4867,7 @@ tableau <code>tab</code> d'entiers triés par ordre croissant. Cette fonction in
 tableau et renvoie le nouveau tableau. Les tableaux seront représentés sous la forme de
 listes python.</p>
 <p><em>Sujet légèrement modifié</em></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -4859,7 +4887,7 @@ listes python.</p>
 </code></pre></div></td></tr></table></div>
 <p>Compléter la fonction <code>insere</code> ci-dessus.</p>
 <p>Exemples :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">insere</span><span class="p">(</span><span class="mi">3</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">insere</span><span class="p">(</span><span class="mi">3</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">insere</span><span class="p">(</span><span class="mi">10</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">25</span><span class="p">])</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
@@ -4870,7 +4898,7 @@ listes python.</p>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -4906,7 +4934,7 @@ dichotomique du nombre entier <code>n</code> dans le tableau non vide <code>tab<
 Cette fonction doit renvoyer un indice correspondant au nombre cherché s’il est dans le
 tableau, <code>-1</code> sinon.</p>
 <p>Exemples :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="mi">5</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="mi">5</span><span class="p">)</span>
 <span class="mi">3</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="mi">5</span><span class="p">)</span>
 <span class="o">-</span><span class="mi">1</span>
@@ -4915,7 +4943,7 @@ tableau, <code>-1</code> sinon.</p>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -4961,7 +4989,7 @@ et <code>-1</code> sinon.
 La fonction <code>cesar</code> prend en paramètre une chaîne de caractères <code>message</code> et un nombre
 entier <code>decalage</code> et renvoie le nouveau message codé avec le codage de César utilisant
 le décalage <code>decalage</code>.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -4991,7 +5019,7 @@ le décalage <code>decalage</code>.</p>
 </code></pre></div></td></tr></table></div>
 <p>Compléter la fonction <code>cesar</code>.</p>
 <p>Exemples :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">cesar</span><span class="p">(</span><span class="s1">&#39;BONJOUR A TOUS. VIVE LA MATIERE NSI !&#39;</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">cesar</span><span class="p">(</span><span class="s1">&#39;BONJOUR A TOUS. VIVE LA MATIERE NSI !&#39;</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
 <span class="s1">&#39;FSRNSYV E XSYW. ZMZI PE QEXMIVI RWM !&#39;</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">cesar</span><span class="p">(</span><span class="s1">&#39;GTSOTZW F YTZX. ANAJ QF RFYNJWJ SXN !&#39;</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">)</span>
 <span class="s1">&#39;BONJOUR A TOUS. VIVE LA MATIERE NSI !&#39;</span>
@@ -5000,7 +5028,7 @@ le décalage <code>decalage</code>.</p>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -5042,21 +5070,21 @@ le décalage <code>decalage</code>.</p>
 <div class="tabbed-block">
 <p>On a relevé les valeurs moyennes annuelles des températures à Paris pour la période
 allant de 2013 à 2019. Les résultats ont été récupérés sous la forme de deux listes : l’une pour les températures, l’autre pour les années :
-<div class="highlight"><pre><span></span><code><span class="n">t_moy</span> <span class="o">=</span> <span class="p">[</span><span class="mf">14.9</span><span class="p">,</span> <span class="mf">13.3</span><span class="p">,</span> <span class="mf">13.1</span><span class="p">,</span> <span class="mf">12.5</span><span class="p">,</span> <span class="mf">13.0</span><span class="p">,</span> <span class="mf">13.6</span><span class="p">,</span> <span class="mf">13.7</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">t_moy</span> <span class="o">=</span> <span class="p">[</span><span class="mf">14.9</span><span class="p">,</span> <span class="mf">13.3</span><span class="p">,</span> <span class="mf">13.1</span><span class="p">,</span> <span class="mf">12.5</span><span class="p">,</span> <span class="mf">13.0</span><span class="p">,</span> <span class="mf">13.6</span><span class="p">,</span> <span class="mf">13.7</span><span class="p">]</span>
 <span class="n">annees</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2013</span><span class="p">,</span> <span class="mi">2014</span><span class="p">,</span> <span class="mi">2015</span><span class="p">,</span> <span class="mi">2016</span><span class="p">,</span> <span class="mi">2017</span><span class="p">,</span> <span class="mi">2018</span><span class="p">,</span> <span class="mi">2019</span><span class="p">]</span>
 </code></pre></div></p>
 <p>Écrire la fonction <code>mini</code> qui prend en paramètres le tableau <code>releve</code> des relevés et le
 tableau <code>date</code> des dates et qui renvoie la plus petite valeur relevée au cours de la
 période et l’année correspondante.</p>
 <p>Exemple :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">mini</span><span class="p">(</span><span class="n">t_moy</span><span class="p">,</span> <span class="n">annees</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">mini</span><span class="p">(</span><span class="n">t_moy</span><span class="p">,</span> <span class="n">annees</span><span class="p">)</span>
 <span class="p">(</span><span class="mf">12.5</span><span class="p">,</span> <span class="mi">2016</span><span class="p">)</span>
 </code></pre></div></p>
 </div>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -5107,7 +5135,7 @@ la fonction précédente.</p>
 renvoie <code>True</code> si c’est le cas et <code>False</code> sinon. Cette fonction s’appuie sur la fonction
 précédente.</p>
 <p>Compléter le code des trois fonctions ci-dessous.</p>
-<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inverse_chaine</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
+<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">inverse_chaine</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
     <span class="n">result</span> <span class="o">=</span> <span class="o">...</span>
     <span class="k">for</span> <span class="n">caractere</span> <span class="ow">in</span> <span class="n">chaine</span><span class="p">:</span>
         <span class="n">result</span> <span class="o">=</span> <span class="o">...</span>
@@ -5122,7 +5150,7 @@ précédente.</p>
     <span class="k">return</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span>
 </code></pre></div>
 Exemples :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">inverse_chaine</span><span class="p">(</span><span class="s1">&#39;bac&#39;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">inverse_chaine</span><span class="p">(</span><span class="s1">&#39;bac&#39;</span><span class="p">)</span>
 <span class="s1">&#39;cab&#39;</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="s1">&#39;NSI&#39;</span><span class="p">)</span>
 <span class="kc">False</span>
@@ -5137,7 +5165,7 @@ Exemples :</p>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -5179,7 +5207,7 @@ Exemples :</p>
 élément <code>elt</code> et une liste <code>tab</code> et renvoie le nombre de fois où l’élément apparaît dans la
 liste.</p>
 <p>Exemples :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">nb_repetitions</span><span class="p">(</span><span class="mi">5</span><span class="p">,[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">nb_repetitions</span><span class="p">(</span><span class="mi">5</span><span class="p">,[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
 <span class="mi">3</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">nb_repetitions</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,[</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">])</span>
 <span class="mi">2</span>
@@ -5190,7 +5218,7 @@ liste.</p>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -5219,7 +5247,7 @@ des divisions successives comme illustré ici :</p>
 <p><img alt="image" class="center" src="../data/img21_2.png" /></p>
 <p>Voici une fonction Python basée sur la méthode des divisions successives permettant de
 convertir un nombre entier positif en binaire :
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -5235,7 +5263,7 @@ convertir un nombre entier positif en binaire :
 </code></pre></div></td></tr></table></div>
 Compléter la fonction <code>binaire</code>.</p>
 <p>Exemples :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">binaire</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">binaire</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="s1">&#39;0&#39;</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">binaire</span><span class="p">(</span><span class="mi">77</span><span class="p">)</span>
 <span class="s1">&#39;1001101&#39;</span>
@@ -5244,7 +5272,7 @@ Compléter la fonction <code>binaire</code>.</p>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -5274,7 +5302,7 @@ Compléter la fonction <code>binaire</code>.</p>
 variable <code>a</code> de type numérique (<code>float</code> ou <code>int</code>) et un tableau <code>t</code> (type <code>list</code>) et qui
 renvoie le nombre d'occurrences de <code>a</code> dans <code>t</code>.</p>
 <p>Exemples :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="mi">5</span><span class="p">,[])</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="mi">5</span><span class="p">,[])</span>
 <span class="mi">0</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="mi">5</span><span class="p">,[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
 <span class="mi">0</span>
@@ -5287,7 +5315,7 @@ renvoie le nombre d'occurrences de <code>a</code> dans <code>t</code>.</p>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -5324,7 +5352,7 @@ renverra
 <code>[20, 20, 5, 2, 1]</code>.</p>
 <p>En effet, la somme à rendre est de <code>48</code> centimes soit <code>20 + 20 + 5 + 2 + 1</code>.
 Le code de la fonction est donné ci-dessous :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -5349,7 +5377,7 @@ Le code de la fonction est donné ci-dessous :</p>
     <span class="k">return</span> <span class="n">rendu</span>
 </code></pre></div></td></tr></table></div>
 <p>Compléter ce code pour qu'il donne :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">rendu_monnaie_centimes</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span><span class="mi">700</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">rendu_monnaie_centimes</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span><span class="mi">700</span><span class="p">)</span>
 <span class="p">[]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">rendu_monnaie_centimes</span><span class="p">(</span><span class="mi">112</span><span class="p">,</span><span class="mi">500</span><span class="p">)</span>
 <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
@@ -5358,7 +5386,7 @@ Le code de la fonction est donné ci-dessous :</p>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -5415,7 +5443,7 @@ occurrences des caractères présents dans la phrase.</p>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -5446,7 +5474,7 @@ occurrences des caractères présents dans la phrase.</p>
 <p>La fonction <code>fusion</code> prend deux listes <code>L1</code>, <code>L2</code> d’entiers triées par ordre croissant et les
 fusionne en une liste triée <code>L12</code> qu’elle renvoie.</p>
 <p>Le code Python de la fonction est</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -5496,14 +5524,14 @@ fusionne en une liste triée <code>L12</code> qu’elle renvoie.</p>
 </code></pre></div></td></tr></table></div>
 <p>Compléter le code.</p>
 <p>Exemple :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">fusion</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">10</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">fusion</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">10</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span>
 <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -5568,7 +5596,7 @@ fusionne en une liste triée <code>L12</code> qu’elle renvoie.</p>
 un tableau de nombres entiers, et qui renvoie l’indice de la première occurrence de <code>elt</code>
 dans <code>tab</code> si <code>elt</code> est dans <code>tab</code> et <code>-1</code> sinon.</p>
 <p>Exemples :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
 <span class="o">-</span><span class="mi">1</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">56</span><span class="p">])</span>
 <span class="mi">2</span>
@@ -5581,7 +5609,7 @@ dans <code>tab</code> si <code>elt</code> est dans <code>tab</code> et <code>-1<
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -5624,7 +5652,7 @@ une plage d’adresses IP de <code>192.168.0.0</code> à <code>192.168.0.255</co
 <p>On considère que les adresses IP saisies sont valides.</p>
 <p>Les adresses IP <code>192.168.0.0</code> et <code>192.168.0.255</code> sont des adresses réservées.</p>
 <p>Le code ci-dessous implémente la classe <code>AdresseIP</code>.</p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -5674,7 +5702,7 @@ Compléter le code ci-dessus et instancier trois objets : <code>adresse1</code>,
 <code>adresse3</code> avec respectivement les arguments suivants :</p>
 <p><code>'192.168.0.1'</code>, <code>'192.168.0.2'</code>, <code>'192.168.0.0'</code></p>
 <p>Vérifier que : 
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">adresse1</span><span class="o">.</span><span class="n">est_reservee</span><span class="p">()</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">adresse1</span><span class="o">.</span><span class="n">est_reservee</span><span class="p">()</span>
 <span class="kc">False</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">adresse3</span><span class="o">.</span><span class="n">est_reservee</span><span class="p">()</span>
 <span class="kc">True</span>
@@ -5683,7 +5711,7 @@ Compléter le code ci-dessus et instancier trois objets : <code>adresse1</code>,
 </code></pre></div></p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -5751,7 +5779,7 @@ Compléter le code ci-dessus et instancier trois objets : <code>adresse1</code>,
 <code>tab</code>, et qui renvoie la liste (éventuellement vide) des couples d'entiers consécutifs
 successifs qu'il peut y avoir dans <code>tab</code>.</p>
 <p>Exemples :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
 <span class="p">[]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 <span class="p">[(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
@@ -5764,7 +5792,7 @@ successifs qu'il peut y avoir dans <code>tab</code>.</p>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -5804,7 +5832,7 @@ valeur entière <code>val</code>. Elle met à la valeur <code>val</code> tous le
 <p>Par exemple, <code>propager(M,2,1,3)</code> donne
 <img alt="image" class="center" src="../data/252c.png" width="30%" /></p>
 <p>Compléter le code récursif de la fonction <code>propager</code> donné ci-dessous :</p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -5847,7 +5875,7 @@ valeur entière <code>val</code>. Elle met à la valeur <code>val</code> tous le
         <span class="n">propager</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 Exemple :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">M</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]]</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">M</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">propager</span><span class="p">(</span><span class="n">M</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">M</span>
 <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
@@ -5856,7 +5884,7 @@ Exemple :
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -5919,7 +5947,7 @@ On pourra s’aider du tableau</p>
 nombre d’apparitions de <code>alphabet[i]</code> dans la chaine.<br />
 Puis on calculera l’indice <code>k</code> d’un maximum du tableau <code>occurrence</code> et on affichera <code>alphabet[k]</code>.</p>
 <p>Exemple :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">ch</span> <span class="o">=</span> <span class="s1">&#39;je suis en terminale et je passe le bac et je souhaite poursuivre des etudes pour devenir expert en informatique&#39;</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">ch</span> <span class="o">=</span> <span class="s1">&#39;je suis en terminale et je passe le bac et je souhaite poursuivre des etudes pour devenir expert en informatique&#39;</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">occurrence_max</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
 <span class="err">‘</span><span class="n">e</span><span class="err">’</span>
 </code></pre></div></p>
@@ -5927,7 +5955,7 @@ Puis on calculera l’indice <code>k</code> d’un maximum du tableau <code>occu
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -5976,7 +6004,7 @@ nombre de sous-listes.</p>
 <p>Chaque sous-liste représente une ligne de l’image et chaque élément des sous-listes est
 un entier compris entre 0 et 255, représentant l’intensité lumineuse du pixel.</p>
 <p>Compléter le programme ci-dessous :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -6035,7 +6063,7 @@ un entier compris entre 0 et 255, représentant l’intensité lumineuse du pixe
     <span class="k">return</span> <span class="n">L</span>    
 </code></pre></div></td></tr></table></div>
 <p>Exemple :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">img</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">254</span><span class="p">,</span> <span class="mi">145</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">124</span><span class="p">,</span> <span class="mi">287</span><span class="p">,</span> <span class="mi">225</span><span class="p">,</span> <span class="mi">69</span><span class="p">],</span> <span class="p">[</span><span class="mi">197</span><span class="p">,</span> <span class="mi">174</span><span class="p">,</span> <span class="mi">207</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">87</span><span class="p">],</span> <span class="p">[</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">197</span><span class="p">,</span> <span class="mi">189</span><span class="p">]]</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">img</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">254</span><span class="p">,</span> <span class="mi">145</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">124</span><span class="p">,</span> <span class="mi">287</span><span class="p">,</span> <span class="mi">225</span><span class="p">,</span> <span class="mi">69</span><span class="p">],</span> <span class="p">[</span><span class="mi">197</span><span class="p">,</span> <span class="mi">174</span><span class="p">,</span> <span class="mi">207</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">87</span><span class="p">],</span> <span class="p">[</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">197</span><span class="p">,</span> <span class="mi">189</span><span class="p">]]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">nbLig</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
 <span class="mi">4</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">nbCol</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
@@ -6047,7 +6075,7 @@ un entier compris entre 0 et 255, représentant l’intensité lumineuse du pixe
 </code></pre></div></p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -6118,14 +6146,14 @@ un entier compris entre 0 et 255, représentant l’intensité lumineuse du pixe
 <p>Écrire une fonction <code>moyenne</code> prenant en paramètres une liste d’entiers et qui renvoie la
 moyenne des valeurs de cette liste.</p>
 <p>Exemple :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">moyenne</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">110</span><span class="p">])</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">moyenne</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">110</span><span class="p">])</span>
 <span class="mf">45.0</span>
 </code></pre></div></p>
 </div>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -6160,7 +6188,7 @@ renvoie une liste où chaque élément de <code>liste_depart</code> est dupliqu�
 <p>La fonction <code>zoomDessin</code> prend en argument la grille <code>dessin</code> et renvoie une grille où
 toutes les lignes de <code>dessin</code> sont zoomées <code>k</code> fois et répétées <code>k</code> fois.</p>
 <p>Soit le code ci-dessous :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -6247,12 +6275,12 @@ toutes les lignes de <code>dessin</code> sont zoomées <code>k</code> fois et r�
     <span class="k">return</span> <span class="n">grille_zoom</span>
 </code></pre></div></td></tr></table></div>
 <p>Résultats à obtenir :</p>
-<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">affiche</span><span class="p">(</span><span class="n">coeur</span><span class="p">)</span>
+<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">affiche</span><span class="p">(</span><span class="n">coeur</span><span class="p">)</span>
 </code></pre></div>
 <img alt="image" class="left" src="../data/272b.png" /></p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">affiche</span><span class="p">(</span><span class="n">zoomDessin</span><span class="p">(</span><span class="n">coeur</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">affiche</span><span class="p">(</span><span class="n">zoomDessin</span><span class="p">(</span><span class="n">coeur</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>            * * * * * *                   * * * * * *                  
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>            * * * * * *                   * * * * * *                  
             * * * * * *                   * * * * * *                  
             * * * * * *                   * * * * * *                  
       * * *             * * *       * * *             * * *            
@@ -6285,7 +6313,7 @@ toutes les lignes de <code>dessin</code> sont zoomées <code>k</code> fois et r�
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -6375,7 +6403,7 @@ chaque clef, la liste des caractères des fils gauche et droit du nœud.</p>
 <p>Par exemple, l’arbre</p>
 <p><img alt="image" class="center" src="../data/img28_1.png" width="40%" /></p>
 <p>est stocké dans</p>
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;F&#39;</span><span class="p">:[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;G&#39;</span><span class="p">],</span> <span class="s1">&#39;B&#39;</span><span class="p">:[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;D&#39;</span><span class="p">],</span> <span class="s1">&#39;A&#39;</span><span class="p">:[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">],</span> <span class="s1">&#39;D&#39;</span><span class="p">:[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;E&#39;</span><span class="p">],</span> \
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;F&#39;</span><span class="p">:[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;G&#39;</span><span class="p">],</span> <span class="s1">&#39;B&#39;</span><span class="p">:[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;D&#39;</span><span class="p">],</span> <span class="s1">&#39;A&#39;</span><span class="p">:[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">],</span> <span class="s1">&#39;D&#39;</span><span class="p">:[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;E&#39;</span><span class="p">],</span> \
 <span class="s1">&#39;C&#39;</span><span class="p">:[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">],</span> <span class="s1">&#39;E&#39;</span><span class="p">:[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">],</span> <span class="s1">&#39;G&#39;</span><span class="p">:[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;I&#39;</span><span class="p">],</span> <span class="s1">&#39;I&#39;</span><span class="p">:[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;H&#39;</span><span class="p">],</span> \
 <span class="s1">&#39;H&#39;</span><span class="p">:[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">]}</span>
 </code></pre></div>
@@ -6385,14 +6413,14 @@ l’arbre, et qui renvoie la taille de l’arbre à savoir le nombre total de n�
 On pourra distinguer les 4 cas où les deux « fils » du nœud sont <code>''</code>, le fils gauche
 seulement est <code>''</code>, le fils droit seulement est <code>''</code>, aucun des deux fils n’est <code>''</code>.</p>
 <p>Exemple :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">taille</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="err">’</span><span class="n">F</span><span class="err">’</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">taille</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="err">’</span><span class="n">F</span><span class="err">’</span><span class="p">)</span>
 <span class="mi">9</span>
 </code></pre></div></p>
 </div>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -6452,7 +6480,7 @@ grand élément.</p>
 <p>Le tableau devient : <code>t = [6, 25, 21, 18, 12, 41, 55]</code> </p>
 <p>Et ainsi de suite. La code de la fonction <code>tri_iteratif</code> qui implémente cet algorithme est donné ci-
 dessous.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -6471,7 +6499,7 @@ dessous.</p>
     <span class="k">return</span> <span class="n">tab</span>
 </code></pre></div></td></tr></table></div>
 <p>Compléter le code qui doit donner :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tri_iteratif</span><span class="p">([</span><span class="mi">41</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">25</span><span class="p">])</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tri_iteratif</span><span class="p">([</span><span class="mi">41</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">25</span><span class="p">])</span>
 <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">55</span><span class="p">]</span>
 </code></pre></div>
 <p>On rappelle que l'instruction <code>a, b = b, a</code> échange les contenus de <code>a</code> et <code>b</code>.</p>
@@ -6479,7 +6507,7 @@ dessous.</p>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -6525,7 +6553,7 @@ obtienne la valeur 1.</p>
 <p><strong>On admet que, quel que soit l'entier <code>k</code> choisi au départ, la suite finit toujours sur la valeur 1.</strong></p>
 <p>Écrire une fonction <code>calcul</code> prenant en paramètres un entier <code>n</code> strictement positif et qui renvoie la liste des valeurs de la suite, en partant de <code>n</code> et jusqu'à atteindre 1.</p>
 <p>Exemple :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">calcul</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">calcul</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 </code></pre></div></p>
 </div>
@@ -6628,7 +6656,7 @@ parfait.</p>
 <p>Compléter la fonction <code>est_parfait</code> ci-dessous qui prend comme argument une chaîne
 de caractères <code>mot</code> (en lettres majuscules) et qui renvoie le code alphabétique concaténé,
 le code additionné de <code>mot</code>, ainsi qu’un booléen qui indique si <code>mot</code> est parfait ou pas.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -6665,14 +6693,14 @@ le code additionné de <code>mot</code>, ainsi qu’un booléen qui indique si <
     <span class="k">return</span> <span class="p">[</span><span class="n">code_a</span><span class="p">,</span> <span class="n">code_c</span><span class="p">,</span> <span class="n">mot_est_parfait</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
 <p>Exemples :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">est_parfait</span><span class="p">(</span><span class="s2">&quot;PAUL&quot;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">est_parfait</span><span class="p">(</span><span class="s2">&quot;PAUL&quot;</span><span class="p">)</span>
 <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">1612112</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">est_parfait</span><span class="p">(</span><span class="s2">&quot;ALAIN&quot;</span><span class="p">)</span>
 <span class="p">[</span><span class="mi">37</span><span class="p">,</span> <span class="mi">1121914</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
 </code></pre></div></p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -6722,7 +6750,7 @@ le code additionné de <code>mot</code>, ainsi qu’un booléen qui indique si <
 <code>n1</code> et <code>n2</code>, et qui renvoie le produit de ces deux nombres.
 Les seules opérations autorisées sont l’addition et la soustraction. </p>
 <p>Exemples :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">multiplication</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">multiplication</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
 <span class="mi">15</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">multiplication</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="o">-</span><span class="mi">8</span><span class="p">)</span>
 <span class="mi">32</span>
@@ -6735,7 +6763,7 @@ Les seules opérations autorisées sont l’addition et la soustraction. </p>
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -6781,7 +6809,7 @@ régner ».</p>
 Si cette
 condition n’est pas vérifiée, elle affiche <code>"Erreur"</code> puis renvoie <code>None</code>.</p>
 <p>Recopier et compléter le code de la fonction <code>chercher</code> proposée ci-dessous :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -6808,7 +6836,7 @@ condition n’est pas vérifiée, elle affiche <code>"Erreur"</code> puis renvoi
         <span class="k">return</span> <span class="err">???</span>
 </code></pre></div></td></tr></table></div>
 <p>L'exécution du code doit donner :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">chercher</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">12</span><span class="p">],</span><span class="mi">7</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">chercher</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">12</span><span class="p">],</span><span class="mi">7</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">Erreur</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">chercher</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">12</span><span class="p">],</span><span class="mi">7</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">chercher</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">12</span><span class="p">],</span><span class="mi">9</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
@@ -6820,7 +6848,7 @@ condition n’est pas vérifiée, elle affiche <code>"Erreur"</code> puis renvoi
 <div class="tabbed-block">
 <p>{{ correction(True,
 "
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -6850,7 +6878,7 @@ condition n’est pas vérifiée, elle affiche <code>"Erreur"</code> puis renvoi
 ) }}</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>Soit `T` un tableau non vide d&#39;entiers triés dans l&#39;ordre croissant et `n` un entier.
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Soit `T` un tableau non vide d&#39;entiers triés dans l&#39;ordre croissant et `n` un entier.
 La fonction `chercher`, donnée à la page suivante, doit renvoyer un indice où la valeur `n`
 apparaît éventuellement dans `T`, et `None` sinon. 
 

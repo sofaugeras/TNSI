@@ -1,11 +1,11 @@
 # Révision Liste/Pile/File
 
 !!! info "Crédits"
-    - Crédit de la mise en pages des exercices  : [@Gilles Lassus](https://glassus.github.io)
+    - Crédit de la mise en pages des exercices  : [Gilles Lassus](https://glassus.github.io)
     - Sujet 2022, Centres étrangers, J1, Ex. 2 Mise en page par Franck Chambon
-    - Sujet 2022, Métropole, J1, Ex. 1 Mise en page par Franck Chambon
-    - Sujet 2022, Polynésie, J1, Ex. 4 Mise en page par Franck Chambon
-    - Sujet 2022, Métropole, J2, Ex. 2 Mise en page par Nicolas Revéret
+    - Sujet 2022, Métropole, J1, Ex. 1 Mise en page et correction par [Franck Chambon](https://e-nsi.gitlab.io/ecrit/)
+    - Sujet 2022, Polynésie, J1, Ex. 4 Mise en page et correction par [Franck Chambon](https://e-nsi.gitlab.io/ecrit/)
+    - Sujet 2022, Métropole, J2, Ex. 2 Mise en page et correction par [Nicolas Revéret](https://e-nsi.gitlab.io/ecrit/)
     
 ## Passage automatique en caisse
 

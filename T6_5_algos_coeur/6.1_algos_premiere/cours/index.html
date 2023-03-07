@@ -1827,6 +1827,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_Annales/revisionArbre/" class="md-nav__link">
+        Révision Arbres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_Annales/revisionRecurisivite/" class="md-nav__link">
+        Révision Récursivité
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1991,7 +2019,7 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Parcours élément par élément</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">minimum</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">minimum</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
 <span class="k">if</span> <span class="n">liste</span> <span class="o">!=</span> <span class="p">[]:</span>
     <span class="n">minimum</span> <span class="o">=</span> <span class="n">liste</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">liste</span><span class="p">:</span>
@@ -2002,7 +2030,7 @@
 </div>
 <div class="tabbed-block">
 <p>Parcours à l'aide des indices</p>
-<div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">minimum</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code>    <span class="k">def</span> <span class="nf">minimum</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">liste</span> <span class="o">!=</span> <span class="p">[]:</span>
             <span class="n">indice_minimum</span> <span class="o">=</span> <span class="mi">0</span>
             <span class="k">for</span> <span class="n">indice</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
@@ -2013,7 +2041,7 @@
 </div>
 <div class="tabbed-block">
 <p>Informatiom : "liste.pop()" supprime le dernier élément de la liste et le renvoie. La liste est, ici, supposée non vide.</p>
-<div class="highlight"><pre><span></span><code>```python
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```python
 def minimum(liste):
     &quot;&quot;&quot;Renvoie le minimum de la liste d&#39;entiers, supposée non vide
 
@@ -2052,7 +2080,7 @@ def minimum(liste):
 </details>
 <h2 id="maximum">Maximum<a class="headerlink" href="#maximum" title="Permanent link">⚓︎</a></h2>
 <details class="note"><summary>Maximum</summary><p>Fonction qui renvoie le maximum d'une liste de nombres ou None si vide.</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">maximum</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">maximum</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">liste</span> <span class="o">!=</span> <span class="p">[]:</span>
         <span class="n">maximum</span> <span class="o">=</span> <span class="n">liste</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)):</span>
@@ -2063,7 +2091,7 @@ def minimum(liste):
 </details>
 <h2 id="indice-du-minimum-et-du-maximum">Indice du minimum et du maximum<a class="headerlink" href="#indice-du-minimum-et-du-maximum" title="Permanent link">⚓︎</a></h2>
 <details class="note"><summary>Indice du minimum et du maximum</summary><p>Fonction qui renvoie un tuple (indice du minimum, indice du maximum) d'une liste de nombres ou None si la liste est vide.</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">indice_mini_maxi</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">indice_mini_maxi</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">liste</span> <span class="o">!=</span> <span class="p">[]:</span>
         <span class="n">indice_minimum</span><span class="p">,</span> <span class="n">indice_maximum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
         <span class="k">for</span> <span class="n">indice</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)):</span>
@@ -2076,7 +2104,7 @@ def minimum(liste):
 </details>
 <h2 id="chaine-a-lenvers">Chaîne à l'envers<a class="headerlink" href="#chaine-a-lenvers" title="Permanent link">⚓︎</a></h2>
 <details class="note"><summary>A l'envers</summary><p>Fonction qui renvoie une chaîne de caractère à l'envers.</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">renverse</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">renverse</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Renvoie la chaîne de caractère renversée, le dernier caractère devient le premier, l&#39;avant dernier</span>
 <span class="sd">    le deuxième et ainsi de suite...</span>
 
@@ -2100,7 +2128,7 @@ def minimum(liste):
 </details>
 <h2 id="nombre-doccurrence">Nombre d'occurrence<a class="headerlink" href="#nombre-doccurrence" title="Permanent link">⚓︎</a></h2>
 <details class="note"><summary>Compter le nombre d'occurrences</summary><p>Fonction qui compte le nombre d'occurrences d'un caractère dans une chaîne.</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">nombre_occurrences</span><span class="p">(</span><span class="n">chaine</span><span class="p">,</span> <span class="n">carac</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">nombre_occurrences</span><span class="p">(</span><span class="n">chaine</span><span class="p">,</span> <span class="n">carac</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;Renvoie le nombre d&#39;occurrences de carac dans chaine</span>
 
 <span class="sd">    param : </span>
@@ -2128,7 +2156,7 @@ def minimum(liste):
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Avec une boucle  <code>for</code></p>
-<div class="highlight"><pre><span></span><code>```python
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```python
 def indice(car, string):
 &quot;&quot;&quot;Renvoie l&#39;indice de la première occurrence du caractère car dans la chaine string. 
 Renvoie -1 si car n&#39;est pas dans string.
@@ -2155,7 +2183,7 @@ return -1
 </div>
 <div class="tabbed-block">
 <p>Avec une boucle <code>while</code></p>
-<div class="highlight"><pre><span></span><code>```python
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```python
 def indice(car, string):
     &quot;&quot;&quot;Renvoie l&#39;indice de la première occurrence du caractère car dans la chaine string. Renvoie -1 si car n&#39;est pas dans string.
 
@@ -2186,7 +2214,7 @@ def indice(car, string):
 </details>
 <h2 id="recherche-dichotomique">Recherche dichotomique<a class="headerlink" href="#recherche-dichotomique" title="Permanent link">⚓︎</a></h2>
 <details class="note"><summary>Recherche dichotomique</summary><p>Fonction qui renvoie la position d'un élément dans une liste, ou False si l'élément ne s'y trouve pas. Le principe de dichotomie est utilisé.</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_dicho</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">table</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_dicho</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">table</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    recherche la position de la valeur  dans la table</span>
 
@@ -2222,7 +2250,7 @@ def indice(car, string):
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">version 1</label><label for="__tabbed_3_2">version 2</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">conv_dec_bin</span><span class="p">(</span><span class="n">entier</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">conv_dec_bin</span><span class="p">(</span><span class="n">entier</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; cette fonction permet de convertir un nombre entier en binaire</span>
 
 <span class="sd">    param</span>
@@ -2254,7 +2282,7 @@ def indice(car, string):
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">conv_dec_bin</span><span class="p">(</span><span class="n">entier</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">conv_dec_bin</span><span class="p">(</span><span class="n">entier</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; cette fonction permet de convertir un nombre entier en binaire</span>
 
 <span class="sd">    param</span>
@@ -2298,7 +2326,7 @@ def indice(car, string):
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">version 1</label><label for="__tabbed_4_2">version 2</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">conv_bin_dec</span><span class="p">(</span><span class="n">binaire</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">conv_bin_dec</span><span class="p">(</span><span class="n">binaire</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; cette fonction permet de convertir un nombre en binaire en décimal.</span>
 
 <span class="sd">        param</span>
@@ -2325,7 +2353,7 @@ def indice(car, string):
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">conv_bin_dec</span><span class="p">(</span><span class="n">binaire</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">conv_bin_dec</span><span class="p">(</span><span class="n">binaire</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; cette fonction permet de convertir un nombre en binaire en décimal.</span>
 
 <span class="sd">        param</span>
@@ -2357,7 +2385,7 @@ def indice(car, string):
 </details>
 <h2 id="moyenne-dune-liste-de-nombres">Moyenne d'une liste de nombres<a class="headerlink" href="#moyenne-dune-liste-de-nombres" title="Permanent link">⚓︎</a></h2>
 <details class="note"><summary>Moyenne d'une liste de nombres</summary><p>Fonction qui renvoie la moyenne d'une liste de nombres et None si la liste est vide</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;renvoie la valeur moyenne d&#39;une liste de nombres et None en cas de liste vide.</span>
 
 <span class="sd">    param:</span>

@@ -1907,6 +1907,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_Annales/revisionArbre/" class="md-nav__link">
+        Révision Arbres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_Annales/revisionRecurisivite/" class="md-nav__link">
+        Révision Récursivité
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -2136,14 +2164,14 @@ Ci-dessous, une file... de piles (électriques). Le chargement par le haut du di
 <p>Une conséquence de cette implémentation sous forme de liste chaînée est la non-constance du temps d'accès à un élément de liste : pour accéder au 3ème élément, il faut obligatoirement passer par les deux précédents.</p>
 <p><strong>À retenir :</strong> dans une liste chaînée, le temps d'accès aux éléments n'est pas constant.</p>
 <h3 id="23-exemple-dimplementation-minimale-dune-liste-chainee">2.3 Exemple d'implémentation minimale d'une liste chaînée<a class="headerlink" href="#23-exemple-dimplementation-minimale-dune-liste-chainee" title="Permanent link">⚓︎</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Cellule</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Cellule</span> <span class="p">:</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">contenu</span><span class="p">,</span> <span class="n">suivante</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">=</span> <span class="n">contenu</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">suivante</span> <span class="o">=</span> <span class="n">suivante</span>
 </code></pre></div>
 <p>Cette implémentation rudimentaire permet bien la création d'une liste :</p>
-<div class="highlight"><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="n">Cellule</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">Cellule</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">Cellule</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="kc">None</span><span class="p">)))</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="n">Cellule</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">Cellule</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">Cellule</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="kc">None</span><span class="p">)))</span>
 </code></pre></div>
 <p>La liste créée est donc :<br />
 <img alt="" class="center" src="../data/ex1.png" /></p>
@@ -2167,7 +2195,7 @@ pour 1 : lst.suivante.suivante.contenu</p>
 <p>On pourra remarquer que l'interface proposée à l'utilisateur n'est pas des plus pratiques...</p>
 <h3 id="24-et-les-listes-de-python">2.4 Et les listes de Python ???<a class="headerlink" href="#24-et-les-listes-de-python" title="Permanent link">⚓︎</a></h3>
 <p>Nous connaissons déjà les listes de Python :</p>
-<div class="highlight"><pre><span></span><code><span class="n">maliste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">42</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">maliste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">42</span><span class="p">]</span>
 </code></pre></div>
 <p>Et nous connaissons aussi (un peu) l'interface de ce type <code>list</code>, notamment avec les méthodes <code>append()</code> ou <code>reverse()</code>.<br />
 Néanmoins, l'implémentation qui a été choisie par les concepteurs de Python de ce type <code>list</code> fait que le celui-ci se rapproche plus d'un <strong>tableau dynamique</strong>. </p>
@@ -2190,7 +2218,7 @@ Néanmoins, l'implémentation qui a été choisie par les concepteurs de Python 
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>On considère l'enchaînement d'opérations ci-dessous. Écrire à chaque étape l'état de la liste <code>lst</code> et la valeur éventuellement renvoyée.</p>
-<div class="highlight"><pre><span></span><code><span class="mf">1.</span> <span class="n">lst</span> <span class="o">=</span> <span class="n">Liste</span><span class="p">()</span>      <span class="c1"># lst = </span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="mf">1.</span> <span class="n">lst</span> <span class="o">=</span> <span class="n">Liste</span><span class="p">()</span>      <span class="c1"># lst = </span>
 <span class="mf">2.</span> <span class="n">lst</span><span class="o">.</span><span class="n">ajoute_tete</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># lst = </span>
 <span class="mf">3.</span> <span class="n">lst</span><span class="o">.</span><span class="n">ajoute_tete</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># lst = </span>
 <span class="mf">4.</span> <span class="n">lst</span><span class="o">.</span><span class="n">ajoute_tete</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># lst = </span>
@@ -2204,7 +2232,7 @@ Néanmoins, l'implémentation qui a été choisie par les concepteurs de Python 
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="mf">1.</span> <span class="n">lst</span> <span class="o">=</span> <span class="n">Liste</span><span class="p">()</span>      <span class="c1"># lst = None</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="mf">1.</span> <span class="n">lst</span> <span class="o">=</span> <span class="n">Liste</span><span class="p">()</span>      <span class="c1"># lst = None</span>
 <span class="mf">2.</span> <span class="n">lst</span><span class="o">.</span><span class="n">ajoute_tete</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># lst = 3</span>
 <span class="mf">3.</span> <span class="n">lst</span><span class="o">.</span><span class="n">ajoute_tete</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># lst = 5 3 </span>
 <span class="mf">4.</span> <span class="n">lst</span><span class="o">.</span><span class="n">ajoute_tete</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># lst = 1 5 3</span>
@@ -2235,7 +2263,7 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :
 <div class="tabbed-block">
 <p>On considère l'enchaînement d'opérations ci-dessous. Écrire à chaque étape l'état de la pile <code>p</code> et la valeur éventuellement renvoyée.</p>
 <p>Bien comprendre que la classe <code>Pile()</code> et ses méthodes n'existent pas vraiment. Nous <em>jouons</em> avec son interface.</p>
-<div class="highlight"><pre><span></span><code><span class="mf">1.</span> <span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>   <span class="c1"># p</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="mf">1.</span> <span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>   <span class="c1"># p</span>
 <span class="mf">2.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># p=</span>
 <span class="mf">3.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># p= </span>
 <span class="mf">4.</span> <span class="n">p</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="c1">#  </span>
@@ -2249,7 +2277,7 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="mf">1.</span> <span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>  <span class="c1"># p=None</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="mf">1.</span> <span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>  <span class="c1"># p=None</span>
 <span class="mf">2.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>   <span class="c1"># p= 3</span>
 <span class="mf">3.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># p= 3 5 par convention</span>
 <span class="mf">4.</span> <span class="n">p</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span>  <span class="c1">#  False</span>
@@ -2281,7 +2309,7 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :
 <div class="tabbed-block">
 <p>créer la classe ci-dessus. Le type <code>list</code> de Python est parfaitement adapté. <br />
 Des renseignement intéressants à son sujet peuvent être trouvés <a href="https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists">ici</a>.</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Pile</span><span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Pile</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
 
@@ -2313,7 +2341,7 @@ Des renseignement intéressants à son sujet peuvent être trouvés <a href="htt
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Pile</span><span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Pile</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
 
@@ -2356,7 +2384,7 @@ Des renseignement intéressants à son sujet peuvent être trouvés <a href="htt
 </div>
 <h4 id="322-a-laide-dune-liste-chainee-et-de-la-classe-cellule-creee-au-23">3.2.2 À l'aide d'une liste chaînée et de la classe  <code>Cellule</code> créée au 2.3<a class="headerlink" href="#322-a-laide-dune-liste-chainee-et-de-la-classe-cellule-creee-au-23" title="Permanent link">⚓︎</a></h4>
 <p>Au <strong>2.3</strong> nous avons créé la classe  <code>Cellule</code> :</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Cellule</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Cellule</span> <span class="p">:</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">contenu</span><span class="p">,</span> <span class="n">suivante</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">=</span> <span class="n">contenu</span>
@@ -2368,7 +2396,7 @@ Des renseignement intéressants à son sujet peuvent être trouvés <a href="htt
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>à l'aide cette classe, re-créer une classe <code>Pile</code> disposant exactement de la même interface que dans l'exercice précédent.</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Pile</span><span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Pile</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="kc">None</span>
 
@@ -2401,7 +2429,7 @@ Des renseignement intéressants à son sujet peuvent être trouvés <a href="htt
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Pile</span><span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Pile</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="kc">None</span>
 
@@ -2441,7 +2469,7 @@ Des renseignement intéressants à son sujet peuvent être trouvés <a href="htt
 <div class="tabbed-block">
 <p>À l'aide de deux variables <code>adresses</code> et <code>adresse_courante</code>, et de la classe <code>Pile</code> créée plus haut, simulez une gestion de l'historique de navigation internet.<br />
 Seules deux fonctions <code>go_to(nouvelle_adresse)</code> et <code>back()</code> sont à créer.</p>
-<div class="highlight"><pre><span></span><code><span class="n">adresses</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">adresses</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
 <span class="n">adresse_courante</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 
 <span class="k">def</span> <span class="nf">go_to</span><span class="p">(</span><span class="n">nouvelle_adresse</span><span class="p">)</span> <span class="p">:</span>
@@ -2465,7 +2493,7 @@ Seules deux fonctions <code>go_to(nouvelle_adresse)</code> et <code>back()</code
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="n">adresses</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">adresses</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
 <span class="n">adresse_courante</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 
 <span class="k">def</span> <span class="nf">go_to</span><span class="p">(</span><span class="n">nouvelle_adresse</span><span class="p">)</span> <span class="p">:</span>
@@ -2496,7 +2524,7 @@ Pour être utilisée, une file doit permettre a minima :<br />
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>On considère l'enchaînement d'opérations ci-dessous. Écrire à chaque étape l'état de la file <code>f</code> et la valeur éventuellement renvoyée.</p>
-<div class="highlight"><pre><span></span><code><span class="mf">1.</span> <span class="n">f</span> <span class="o">=</span> <span class="n">File</span><span class="p">()</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="mf">1.</span> <span class="n">f</span> <span class="o">=</span> <span class="n">File</span><span class="p">()</span>
 <span class="mf">2.</span> <span class="n">f</span><span class="o">.</span><span class="n">enfile</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># f =</span>
 <span class="mf">3.</span> <span class="n">f</span><span class="o">.</span><span class="n">enfile</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># f  = </span>
 <span class="mf">4.</span> <span class="n">f</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="c1"># </span>
@@ -2510,7 +2538,7 @@ Pour être utilisée, une file doit permettre a minima :<br />
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="mf">1.</span> <span class="n">f</span> <span class="o">=</span> <span class="n">File</span><span class="p">()</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="mf">1.</span> <span class="n">f</span> <span class="o">=</span> <span class="n">File</span><span class="p">()</span>
 <span class="mf">2.</span> <span class="n">f</span><span class="o">.</span><span class="n">enfile</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># f = 3</span>
 <span class="mf">3.</span> <span class="n">f</span><span class="o">.</span><span class="n">enfile</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># f  = 5 3</span>
 <span class="mf">4.</span> <span class="n">f</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="c1"># False</span>
@@ -2539,7 +2567,7 @@ Pour être utilisée, une file doit permettre a minima :<br />
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>créer la classe ci-dessus. Là encore, le type «list» de Python est peut être utilisé, voir <a href="https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists">ici</a>. Néanmoins quelques remarques seront à apporter.</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">File</span><span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">File</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
 
@@ -2566,7 +2594,7 @@ Pour être utilisée, une file doit permettre a minima :<br />
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">File</span><span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">File</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
 
@@ -2603,7 +2631,7 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie. <br
 - quand on veut défiler, on dépile sur la pile de sortie.<br />
 - si celle-ci est vide, on dépile entièrement la pile d'entrée dans la pile de sortie.</p>
 <p><img alt="" class="center" src="../data/2piles1file.webp" /></p>
-<div class="highlight"><pre><span></span><code><span class="c1"># il est impératif de comprendre qu&#39;on peut choisir l&#39;implémentation</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># il est impératif de comprendre qu&#39;on peut choisir l&#39;implémentation</span>
 <span class="c1"># de la classe Pile qu&#39;on préfère parmi les deux traitées plus haut.</span>
 <span class="c1"># Comme elles ont la MÊME INTERFACE et qu&#39;on ne va se servir que</span>
 <span class="c1"># de cette interface, leur mécanisme interne n&#39;a aucune influence</span>
@@ -2649,7 +2677,7 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie. <br
 <div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">classe File</label><label for="__tabbed_9_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">File</span><span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">File</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">entree</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sortie</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
@@ -2671,7 +2699,7 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie. <br
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">File</span><span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">File</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">entree</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sortie</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
