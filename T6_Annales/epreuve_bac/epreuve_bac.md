@@ -78,3 +78,12 @@ Une page spécifique consacrée aux exercices de la BNS est disponible [ici](../
 La liste de tous les sujets d'épreuves écrites déjà posés peut être consultée [ici](T6_Annales/liste_sujets/){. target="_blank"}
 
 
+## Grand Oral 
+
+:warning En Construction
+
+- [Lien vers Eduscol](https://www.education.gouv.fr/reussir-au-lycee/baccalaureat-comment-se-passe-le-grand-oral-100028)
+
+![programme](data/grando.jpg){. center width=50%}
+
+![Grille d'évaluation](data/grando_grille.jpg)

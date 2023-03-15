@@ -1,5 +1,8 @@
 # Annales des Épreuves Écrites
 
+!!! warning "Corrigés"
+    Vous pouvez retrouver les corrigés des épreuves pratiques et écrites sur le site de Fabrice Nativel [ici](https://fabricenativel.github.io/index_annales/)
+
 ## 2023
 
 - [Sujet 0 - version A](data/2023/2023-sujet_0-a.pdf)
