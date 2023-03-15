@@ -14,6 +14,7 @@
 
 !!! note ":star: Thèmes en cours d'étude :star: "
     - [Révision Epreuve Pratique](T6_6_Epreuve_pratique/BNS_2023.md)
+    - [Révision Epreuve Ecrite](T6_Annales/)
 
 ### *Thèmes déjà traités*
 - [Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)

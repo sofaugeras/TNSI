@@ -4,6 +4,9 @@
 
 - [Sujet 0 - version A](data/2023/2023-sujet_0-a.pdf)
 - [Sujet 0 - version B](data/2023/2023-sujet_0-b.pdf)
+- [Centres Étrangers J2](data/2023/NSI_J2-4.pdf)
+- [Centres Étrangers J1](data/2023/NSI_J1-1.pdf)
+- [Polynésie](data/2023/nsi23poj1.pdf)
 
 ## 2022
 
