@@ -1979,45 +1979,43 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Tri en place, itératif</p>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```python
-def insere(donnees, indice):
-    &quot;&quot;&quot;insere la donnee d&#39;indice indice à sa bonne place dans la liste formée des
-    éléments d&#39;indice inférieur ou égaux à indice.
-    Le début de la liste est sensé être trié.
-    LA MODIFICATION SE FAIT EN PLACE
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">insere</span><span class="p">(</span><span class="n">donnees</span><span class="p">,</span> <span class="n">indice</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;insere la donnee d&#39;indice indice à sa bonne place dans la liste formée des</span>
+<span class="sd">    éléments d&#39;indice inférieur ou égaux à indice.</span>
+<span class="sd">    Le début de la liste est sensé être trié.</span>
+<span class="sd">    LA MODIFICATION SE FAIT EN PLACE</span>
 
-    param :
-        donnees : list
-        indice : int
+<span class="sd">    param :</span>
+<span class="sd">        donnees : list</span>
+<span class="sd">        indice : int</span>
 
-    exemple :
-    &gt;&gt;&gt; a = [3, 9, 5, 6, 4, 1]
-    &gt;&gt;&gt; insere(a, 2)
-    &gt;&gt;&gt; a
-    [3, 5, 9, 6, 4, 1]
+<span class="sd">    exemple :</span>
+<span class="sd">    &gt;&gt;&gt; a = [3, 9, 5, 6, 4, 1]</span>
+<span class="sd">    &gt;&gt;&gt; insere(a, 2)</span>
+<span class="sd">    &gt;&gt;&gt; a</span>
+<span class="sd">    [3, 5, 9, 6, 4, 1]</span>
 
-    &quot;&quot;&quot;
-    while indice&gt;0 and donnees[indice]&lt;donnees[indice-1]:
-        donnees[indice-1], donnees[indice] = donnees[indice], donnees[indice-1]
-        indice = indice -1
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">while</span> <span class="n">indice</span><span class="o">&gt;</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">donnees</span><span class="p">[</span><span class="n">indice</span><span class="p">]</span><span class="o">&lt;</span><span class="n">donnees</span><span class="p">[</span><span class="n">indice</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="n">donnees</span><span class="p">[</span><span class="n">indice</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">donnees</span><span class="p">[</span><span class="n">indice</span><span class="p">]</span> <span class="o">=</span> <span class="n">donnees</span><span class="p">[</span><span class="n">indice</span><span class="p">],</span> <span class="n">donnees</span><span class="p">[</span><span class="n">indice</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">indice</span> <span class="o">=</span> <span class="n">indice</span> <span class="o">-</span><span class="mi">1</span>
 
-def tri_insertion(donnees):
-    &quot;&quot;&quot;tri la liste données en place, avec l&#39;algorithme de tri par insertion
-    LE TRI SE FAIT EN PLACE.
+<span class="k">def</span> <span class="nf">tri_insertion</span><span class="p">(</span><span class="n">donnees</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;tri la liste données en place, avec l&#39;algorithme de tri par insertion</span>
+<span class="sd">    LE TRI SE FAIT EN PLACE.</span>
 
-    param :
-        donnees : list
+<span class="sd">    param :</span>
+<span class="sd">        donnees : list</span>
 
-    exemple :
-    &gt;&gt;&gt; liste3 = [ &quot;ruby&quot;, &quot;python&quot;, &quot;logo&quot;, &quot;elan&quot;, &quot;rust&quot;]
-    &gt;&gt;&gt; tri_insertion(liste3)
-    &gt;&gt;&gt; liste3
-    [&#39;elan&#39;, &#39;logo&#39;, &#39;python&#39;, &#39;ruby&#39;, &#39;rust&#39;]
+<span class="sd">    exemple :</span>
+<span class="sd">    &gt;&gt;&gt; liste3 = [ &quot;ruby&quot;, &quot;python&quot;, &quot;logo&quot;, &quot;elan&quot;, &quot;rust&quot;]</span>
+<span class="sd">    &gt;&gt;&gt; tri_insertion(liste3)</span>
+<span class="sd">    &gt;&gt;&gt; liste3</span>
+<span class="sd">    [&#39;elan&#39;, &#39;logo&#39;, &#39;python&#39;, &#39;ruby&#39;, &#39;rust&#39;]</span>
 
-    &quot;&quot;&quot;
-    for ind in range(len(donnees)):
-        insere(donnees,ind)
-```
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">donnees</span><span class="p">)):</span>
+        <span class="n">insere</span><span class="p">(</span><span class="n">donnees</span><span class="p">,</span><span class="n">ind</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -2110,16 +2108,13 @@ def tri_insertion(donnees):
 <h2 id="tri-par-selection">Tri par sélection<a class="headerlink" href="#tri-par-selection" title="Permanent link">⚓︎</a></h2>
 <details class="note"><summary>Tri par sélection</summary><p>Fonction qui renvoie la liste triée par ordre croissant.</p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">index_min</span><span class="p">(</span><span class="n">donnees</span><span class="p">,</span> <span class="n">indice</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;retourne l&#39;indice du plus petit élément d&#39;une liste, à partir d&#39;un indice donné</span>
-
-<span class="sd">        Exemple:</span>
-
-<span class="sd">        &gt;&gt;&gt; index_min([&quot;curl&quot;, &quot;bash&quot;, &quot;python&quot;, &quot;cilk&quot;, &quot;nesl&quot;], 0)</span>
-<span class="sd">        1</span>
-<span class="sd">        &gt;&gt;&gt; index_min([&quot;curl&quot;, &quot;bash&quot;, &quot;python&quot;, &quot;cilk&quot;, &quot;nesl&quot;], 2)</span>
-<span class="sd">        3</span>
-
-<span class="sd">        &quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;retourne l&#39;indice du plus petit élément d&#39;une liste, à partir d&#39;un indice donné</span>
+<span class="sd">    Exemple:  </span>
+<span class="sd">    &gt;&gt;&gt; index_min([&quot;curl&quot;, &quot;bash&quot;, &quot;python&quot;, &quot;cilk&quot;, &quot;nesl&quot;], 0)</span>
+<span class="sd">    1</span>
+<span class="sd">    &gt;&gt;&gt; index_min([&quot;curl&quot;, &quot;bash&quot;, &quot;python&quot;, &quot;cilk&quot;, &quot;nesl&quot;], 2)</span>
+<span class="sd">    3 </span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">pos</span> <span class="o">=</span> <span class="n">indice</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">indice</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">donnees</span><span class="p">)):</span>
         <span class="k">if</span> <span class="n">donnees</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;</span><span class="n">donnees</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span> <span class="p">:</span>
@@ -2127,14 +2122,12 @@ def tri_insertion(donnees):
     <span class="k">return</span> <span class="n">pos</span>
 
 <span class="k">def</span> <span class="nf">tri_selection</span><span class="p">(</span><span class="n">donnees</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;tri la liste donnees en place, avec l&#39;algorithme de tri par sélection</span>
-
-<span class="sd">        &gt;&gt;&gt; liste3 = [ &quot;ruby&quot;, &quot;python&quot;, &quot;logo&quot;, &quot;elan&quot;, &quot;rust&quot;]</span>
-<span class="sd">        &gt;&gt;&gt; tri_selection(liste3)</span>
-<span class="sd">        &gt;&gt;&gt; liste3</span>
-<span class="sd">        [&#39;elan&#39;, &#39;logo&#39;, &#39;python&#39;, &#39;ruby&#39;, &#39;rust&#39;]</span>
-
-<span class="sd">        &quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;tri la liste donnees en place, avec l&#39;algorithme de tri par sélection</span>
+<span class="sd">    &gt;&gt;&gt; liste3 = [ &quot;ruby&quot;, &quot;python&quot;, &quot;logo&quot;, &quot;elan&quot;, &quot;rust&quot;]</span>
+<span class="sd">    &gt;&gt;&gt; tri_selection(liste3)</span>
+<span class="sd">    &gt;&gt;&gt; liste3</span>
+<span class="sd">    [&#39;elan&#39;, &#39;logo&#39;, &#39;python&#39;, &#39;ruby&#39;, &#39;rust&#39;] </span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">donnees</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
         <span class="n">j</span> <span class="o">=</span> <span class="n">index_min</span><span class="p">(</span><span class="n">donnees</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
         <span class="n">donnees</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">donnees</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">donnees</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">donnees</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
@@ -2168,7 +2161,7 @@ def tri_insertion(donnees):
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">15 mars 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">19 mars 2023</span>
       
     
   </small>

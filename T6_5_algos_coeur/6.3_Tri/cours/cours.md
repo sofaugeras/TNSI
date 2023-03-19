@@ -10,45 +10,46 @@
     === "Version1"
         Tri en place, itératif
 
-            ```python
-            def insere(donnees, indice):
-                """insere la donnee d'indice indice à sa bonne place dans la liste formée des
-                éléments d'indice inférieur ou égaux à indice.
-                Le début de la liste est sensé être trié.
-                LA MODIFICATION SE FAIT EN PLACE
-                
-                param :
-                    donnees : list
-                    indice : int
+        ```python
+        def insere(donnees, indice):
+            """insere la donnee d'indice indice à sa bonne place dans la liste formée des
+            éléments d'indice inférieur ou égaux à indice.
+            Le début de la liste est sensé être trié.
+            LA MODIFICATION SE FAIT EN PLACE
+             
+            param :
+                donnees : list
+                indice : int
                     
-                exemple :
-                >>> a = [3, 9, 5, 6, 4, 1]
-                >>> insere(a, 2)
-                >>> a
-                [3, 5, 9, 6, 4, 1]
+            exemple :
+            >>> a = [3, 9, 5, 6, 4, 1]
+            >>> insere(a, 2)
+            >>> a
+            [3, 5, 9, 6, 4, 1]
                 
-                """
-                while indice>0 and donnees[indice]<donnees[indice-1]:
-                    donnees[indice-1], donnees[indice] = donnees[indice], donnees[indice-1]
-                    indice = indice -1
+            """
+            while indice>0 and donnees[indice]<donnees[indice-1]:
+                donnees[indice-1], donnees[indice] = donnees[indice], donnees[indice-1]
+                indice = indice -1
 
-            def tri_insertion(donnees):
-                """tri la liste données en place, avec l'algorithme de tri par insertion
-                LE TRI SE FAIT EN PLACE.
+        def tri_insertion(donnees):
+            """tri la liste données en place, avec l'algorithme de tri par insertion
+            LE TRI SE FAIT EN PLACE.
                 
-                param :
-                    donnees : list
+            param :
+                donnees : list
                     
-                exemple :
-                >>> liste3 = [ "ruby", "python", "logo", "elan", "rust"]
-                >>> tri_insertion(liste3)
-                >>> liste3
-                ['elan', 'logo', 'python', 'ruby', 'rust']
+            exemple :
+            >>> liste3 = [ "ruby", "python", "logo", "elan", "rust"]
+            >>> tri_insertion(liste3)
+            >>> liste3
+            ['elan', 'logo', 'python', 'ruby', 'rust']
                 
-                """
-                for ind in range(len(donnees)):
-                    insere(donnees,ind)
-            ```
+            """
+            for ind in range(len(donnees)):
+                insere(donnees,ind)
+        ```
+
     === "Version 2"
         Tri itératif qui renvoie une nouvelle liste
 
@@ -145,16 +146,13 @@
 
     ```python
     def index_min(donnees, indice):
-            """retourne l'indice du plus petit élément d'une liste, à partir d'un indice donné
-
-            Exemple:
-            
-            >>> index_min(["curl", "bash", "python", "cilk", "nesl"], 0)
-            1
-            >>> index_min(["curl", "bash", "python", "cilk", "nesl"], 2)
-            3
-            
-            """
+        """retourne l'indice du plus petit élément d'une liste, à partir d'un indice donné
+        Exemple:  
+        >>> index_min(["curl", "bash", "python", "cilk", "nesl"], 0)
+        1
+        >>> index_min(["curl", "bash", "python", "cilk", "nesl"], 2)
+        3 
+        """
         pos = indice
         for i in range(indice, len(donnees)):
             if donnees[i]<donnees[pos] :
@@ -162,14 +160,12 @@
         return pos
 
     def tri_selection(donnees):
-            """tri la liste donnees en place, avec l'algorithme de tri par sélection
-
-            >>> liste3 = [ "ruby", "python", "logo", "elan", "rust"]
-            >>> tri_selection(liste3)
-            >>> liste3
-            ['elan', 'logo', 'python', 'ruby', 'rust']
-            
-            """
+        """tri la liste donnees en place, avec l'algorithme de tri par sélection
+        >>> liste3 = [ "ruby", "python", "logo", "elan", "rust"]
+        >>> tri_selection(liste3)
+        >>> liste3
+        ['elan', 'logo', 'python', 'ruby', 'rust'] 
+        """
         for i in range(len(donnees)-1):
             j = index_min(donnees,i)
             donnees[i], donnees[j] = donnees[j], donnees[i]
@@ -178,6 +174,7 @@
 ## Tri fusion
 
 ??? note "Algorithme de tri fusion (*merge sort*) :heart: :heart: :heart:"
+
     ```python
     def interclassement(lst1, lst2):
         lst_totale = []
