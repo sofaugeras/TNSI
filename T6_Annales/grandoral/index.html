@@ -12,21 +12,21 @@
         <meta name="author" content="Sophie FAUGERAS">
       
       
-        <link rel="canonical" href="https://github.com/sofaugeras/TNSI/T5_Architecture_materielle/5.4_Cryptographie/cours/">
+        <link rel="canonical" href="https://github.com/sofaugeras/TNSI/T6_Annales/grandoral/">
       
-      <link rel="icon" href="../../../xtra/favTNSI.png">
+      <link rel="icon" href="../../xtra/favTNSI.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Cryptographie - Saint Sauveur TNSI</title>
+        <title>Grand Oral - Saint Sauveur TNSI</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.472b142f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.472b142f.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.08040f6c.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.08040f6c.min.css">
         
       
       
@@ -42,8 +42,8 @@
     
     
     
-    <script src="../../../xtra/webcomponentsjs/webcomponents-loader.js"></script>
-    <script src="../../../xtra/gifplayer/gif-player.es6.js" defer async></script>
+    <script src="../../xtra/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../../xtra/gifplayer/gif-player.es6.js" defer async></script>
     <!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
@@ -57,11 +57,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../xtra/stylesheets/pyoditeur.css">
+      <link rel="stylesheet" href="../../xtra/stylesheets/pyoditeur.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -102,7 +102,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cryptographie" class="md-skip">
+        <a href="#grand-oral" class="md-skip">
           Aller au contenu
         </a>
       
@@ -116,7 +116,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="../../.." title="Saint Sauveur TNSI" class="md-header__button md-logo" aria-label="Saint Sauveur TNSI" data-md-component="logo">
+    <a href="../.." title="Saint Sauveur TNSI" class="md-header__button md-logo" aria-label="Saint Sauveur TNSI" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Z"/></svg>
@@ -135,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cryptographie
+              Grand Oral
             
           </span>
         </div>
@@ -234,7 +234,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../.." class="md-tabs__link">
+    <a href="../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -249,7 +249,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../T1_Structures_de_donnees/sommaire/" class="md-tabs__link">
+      <a href="../../T1_Structures_de_donnees/sommaire/" class="md-tabs__link">
         T1 Structures de données
       </a>
     </li>
@@ -265,7 +265,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../T2_Programmation/sommaire/" class="md-tabs__link">
+      <a href="../../T2_Programmation/sommaire/" class="md-tabs__link">
         T2 Programmation
       </a>
     </li>
@@ -281,7 +281,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../T3_Algorithmique/sommaire/" class="md-tabs__link">
+      <a href="../../T3_Algorithmique/sommaire/" class="md-tabs__link">
         T3 Algorithmique
       </a>
     </li>
@@ -297,8 +297,56 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../T4_Bases_de_donnees/sommaire/" class="md-tabs__link">
+      <a href="../../T4_Bases_de_donnees/sommaire/" class="md-tabs__link">
         T4 Bases de donnees
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../T5_Architecture_materielle/sommaire/" class="md-tabs__link">
+        T5 Architecture matérielle
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../T6_5_algos_coeur/sommaire/" class="md-tabs__link">
+        Algos ❤
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../T6_6_Epreuve_pratique/BNS_2023/" class="md-tabs__link">
+        EP 💻
       </a>
     </li>
   
@@ -315,55 +363,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../sommaire/" class="md-tabs__link md-tabs__link--active">
-        T5 Architecture matérielle
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../T6_5_algos_coeur/sommaire/" class="md-tabs__link">
-        Algos ❤
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../T6_6_Epreuve_pratique/BNS_2023/" class="md-tabs__link">
-        EP 💻
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../T6_Annales/epreuve_bac/" class="md-tabs__link">
+      <a href="../epreuve_bac/" class="md-tabs__link md-tabs__link--active">
         Bac 🖊️
       </a>
     </li>
@@ -384,7 +384,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../T7_Divers/10_orientation/cours/" class="md-tabs__link">
+      <a href="../../T7_Divers/10_orientation/cours/" class="md-tabs__link">
         T7 Divers
       </a>
     </li>
@@ -416,7 +416,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Saint Sauveur TNSI" class="md-nav__button md-logo" aria-label="Saint Sauveur TNSI" data-md-component="logo">
+    <a href="../.." title="Saint Sauveur TNSI" class="md-nav__button md-logo" aria-label="Saint Sauveur TNSI" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Z"/></svg>
@@ -447,7 +447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -488,7 +488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/sommaire/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/sommaire/" class="md-nav__link">
         Sommaire
       </a>
     </li>
@@ -528,7 +528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -542,7 +542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/" class="md-nav__link">
         Exercices
       </a>
     </li>
@@ -589,7 +589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.2_Dictionnaires/cours/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.2_Dictionnaires/cours/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -603,7 +603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.2_Dictionnaires/exercices/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.2_Dictionnaires/exercices/" class="md-nav__link">
         Exercices
       </a>
     </li>
@@ -650,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.3_Arbres/cours/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.3_Arbres/cours/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -664,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.3_Arbres/Exercices/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.3_Arbres/Exercices/" class="md-nav__link">
         Exercices
       </a>
     </li>
@@ -719,7 +719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Programmation/sommaire/" class="md-nav__link">
+      <a href="../../T2_Programmation/sommaire/" class="md-nav__link">
         Sommaire
       </a>
     </li>
@@ -759,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Programmation/2.4_Mise_au_point_de_programme/cours/" class="md-nav__link">
+      <a href="../../T2_Programmation/2.4_Mise_au_point_de_programme/cours/" class="md-nav__link">
         Bonnes pratiques
       </a>
     </li>
@@ -814,7 +814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T3_Algorithmique/sommaire/" class="md-nav__link">
+      <a href="../../T3_Algorithmique/sommaire/" class="md-nav__link">
         Sommaire
       </a>
     </li>
@@ -854,7 +854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T3_Algorithmique/3.1_Diviser_pour_regner/cours/" class="md-nav__link">
+      <a href="../../T3_Algorithmique/3.1_Diviser_pour_regner/cours/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -868,7 +868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T3_Algorithmique/3.1_Diviser_pour_regner/exercices/" class="md-nav__link">
+      <a href="../../T3_Algorithmique/3.1_Diviser_pour_regner/exercices/" class="md-nav__link">
         Exercices
       </a>
     </li>
@@ -915,7 +915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T3_Algorithmique/3.2_Programmation_dynamique/cours/" class="md-nav__link">
+      <a href="../../T3_Algorithmique/3.2_Programmation_dynamique/cours/" class="md-nav__link">
         Programmation dynamique
       </a>
     </li>
@@ -962,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T3_Algorithmique/3.3_Recherche_textuelle/cours/" class="md-nav__link">
+      <a href="../../T3_Algorithmique/3.3_Recherche_textuelle/cours/" class="md-nav__link">
         Recherche textuelle
       </a>
     </li>
@@ -1017,7 +1017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T4_Bases_de_donnees/sommaire/" class="md-nav__link">
+      <a href="../../T4_Bases_de_donnees/sommaire/" class="md-nav__link">
         Sommaire
       </a>
     </li>
@@ -1037,14 +1037,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -1067,7 +1065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sommaire/" class="md-nav__link">
+      <a href="../../T5_Architecture_materielle/sommaire/" class="md-nav__link">
         Sommaire
       </a>
     </li>
@@ -1107,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5.0_Autour_de_GNU_Linux/cours/" class="md-nav__link">
+      <a href="../../T5_Architecture_materielle/5.0_Autour_de_GNU_Linux/cours/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -1154,7 +1152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5.1_Systemes_sur_puce/cours/" class="md-nav__link">
+      <a href="../../T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -1201,7 +1199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5.2_Gestion_des_processus/cours/" class="md-nav__link">
+      <a href="../../T5_Architecture_materielle/5.2_Gestion_des_processus/cours/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -1215,7 +1213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5.2_Gestion_des_processus/Exercices/" class="md-nav__link">
+      <a href="../../T5_Architecture_materielle/5.2_Gestion_des_processus/Exercices/" class="md-nav__link">
         Exercices
       </a>
     </li>
@@ -1262,7 +1260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5.3_Protocoles_de_routage/cours/" class="md-nav__link">
+      <a href="../../T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -1276,7 +1274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5.3_Protocoles_de_routage/Exercices/" class="md-nav__link">
+      <a href="../../T5_Architecture_materielle/5.3_Protocoles_de_routage/Exercices/" class="md-nav__link">
         Exercices
       </a>
     </li>
@@ -1295,14 +1293,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_6" type="checkbox" id="__nav_6_6" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6_6" type="checkbox" id="__nav_6_6" checked>
       
       
       
@@ -1325,7 +1321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02_Exercices/" class="md-nav__link">
+      <a href="../../T5_Architecture_materielle/5.4_Cryptographie/02_Exercices/" class="md-nav__link">
         02 Exercices
       </a>
     </li>
@@ -1339,7 +1335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Exercices/" class="md-nav__link">
+      <a href="../../T5_Architecture_materielle/5.4_Cryptographie/Exercices/" class="md-nav__link">
         Exercices
       </a>
     </li>
@@ -1351,147 +1347,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Cryptographie
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../T5_Architecture_materielle/5.4_Cryptographie/cours/" class="md-nav__link">
         Cryptographie
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-chiffrement-symetrique" class="md-nav__link">
-    1. Chiffrement symétrique
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Chiffrement symétrique">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-activite-du-masque-jetable" class="md-nav__link">
-    1.1 Activité du masque jetable
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-principe-du-chiffrement-symetrique" class="md-nav__link">
-    1.2 Principe du chiffrement symétrique
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-chiffrement-asymetrique" class="md-nav__link">
-    2. Chiffrement asymétrique
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Chiffrement asymétrique">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-principe-du-chiffrement-asymetrique" class="md-nav__link">
-    2.1 Principe du chiffrement asymétrique
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-le-role-interchangeable-des-cles-publiques-et-privees" class="md-nav__link">
-    2.2 Le rôle interchangeable des clés publiques et privées
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23-communication-authentifiee" class="md-nav__link">
-    2.3 Communication authentifiée.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23-un-exemple-de-chiffrement-asymetrique-le-chiffrement-rsa" class="md-nav__link">
-    2.3 Un exemple de chiffrement asymétrique : le chiffrement RSA
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-https-exemple-dutilisation-conjointe-dun-chiffrement-asymetrique-et-dun-chiffrement-symetrique" class="md-nav__link">
-    3. HTTPS : exemple d'utilisation conjointe d'un chiffrement asymétrique et d'un chiffrement symétrique.
-  </a>
-  
-    <nav class="md-nav" aria-label="3. HTTPS : exemple d'utilisation conjointe d'un chiffrement asymétrique et d'un chiffrement symétrique.">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-principe-general" class="md-nav__link">
-    3.1 Principe général
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-hp-fonctionnement-du-tls-explication-du-handshake" class="md-nav__link">
-    3.2 (HP) Fonctionnement du TLS : explication du handshake
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bibliographie" class="md-nav__link">
-    Bibliographie
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1544,7 +1404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_5_algos_coeur/sommaire/" class="md-nav__link">
+      <a href="../../T6_5_algos_coeur/sommaire/" class="md-nav__link">
         Sommaire
       </a>
     </li>
@@ -1584,7 +1444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_5_algos_coeur/6.1_algos_premiere/cours/" class="md-nav__link">
+      <a href="../../T6_5_algos_coeur/6.1_algos_premiere/cours/" class="md-nav__link">
         algos de première 1️⃣
       </a>
     </li>
@@ -1631,7 +1491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_5_algos_coeur/6.2_recursivite/cours/" class="md-nav__link">
+      <a href="../../T6_5_algos_coeur/6.2_recursivite/cours/" class="md-nav__link">
         Algos récursif 🔂
       </a>
     </li>
@@ -1678,7 +1538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_5_algos_coeur/6.3_Tri/cours/" class="md-nav__link">
+      <a href="../../T6_5_algos_coeur/6.3_Tri/cours/" class="md-nav__link">
         Algos de tris ♻️
       </a>
     </li>
@@ -1733,7 +1593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_6_Epreuve_pratique/BNS_2023/" class="md-nav__link">
+      <a href="../../T6_6_Epreuve_pratique/BNS_2023/" class="md-nav__link">
         BNS 2023
       </a>
     </li>
@@ -1747,7 +1607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_6_Epreuve_pratique/BNS_2022/" class="md-nav__link">
+      <a href="../../T6_6_Epreuve_pratique/BNS_2022/" class="md-nav__link">
         (!!! old !!!) BNS 2022
       </a>
     </li>
@@ -1761,7 +1621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_6_Epreuve_pratique/BNS_2021/" class="md-nav__link">
+      <a href="../../T6_6_Epreuve_pratique/BNS_2021/" class="md-nav__link">
         (!!! old !!!) BNS 2021
       </a>
     </li>
@@ -1781,12 +1641,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
       
       
       
@@ -1809,7 +1671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Annales/epreuve_bac/" class="md-nav__link">
+      <a href="../epreuve_bac/" class="md-nav__link">
         Epreuve du BAC
       </a>
     </li>
@@ -1823,7 +1685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Annales/liste_sujets/" class="md-nav__link">
+      <a href="../liste_sujets/" class="md-nav__link">
         Liste des sujets Ecrit
       </a>
     </li>
@@ -1835,11 +1697,52 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../T6_Annales/grandoral/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Grand Oral
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Grand Oral
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quelques-pistes-de-travail" class="md-nav__link">
+    Quelques pistes de travail
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1851,7 +1754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Annales/revisionBD/" class="md-nav__link">
+      <a href="../revisionBD/" class="md-nav__link">
         Révision Base de données
       </a>
     </li>
@@ -1865,7 +1768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Annales/revisionTAD/" class="md-nav__link">
+      <a href="../revisionTAD/" class="md-nav__link">
         Révision Structure de données
       </a>
     </li>
@@ -1879,7 +1782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Annales/revisionArbre/" class="md-nav__link">
+      <a href="../revisionArbre/" class="md-nav__link">
         Révision Arbres
       </a>
     </li>
@@ -1893,7 +1796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Annales/revisionRecurisivite/" class="md-nav__link">
+      <a href="../revisionRecurisivite/" class="md-nav__link">
         Révision Récursivité
       </a>
     </li>
@@ -1967,7 +1870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_Divers/10_orientation/cours/" class="md-nav__link">
+      <a href="../../T7_Divers/10_orientation/cours/" class="md-nav__link">
         Orientation Post-Bac
       </a>
     </li>
@@ -2014,7 +1917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_Divers/1_Conseils_generaux/cours/" class="md-nav__link">
+      <a href="../../T7_Divers/1_Conseils_generaux/cours/" class="md-nav__link">
         Conseils de travail
       </a>
     </li>
@@ -2052,270 +1955,97 @@
 
                   
 
-  <a href="https://github.com/sofaugeras/TNSI/edit/main/docs/T5_Architecture_materielle/5.4_Cryptographie/cours.md" title="Editer cette page" class="md-content__button md-icon">
+  <a href="https://github.com/sofaugeras/TNSI/edit/main/docs/T6_Annales/grandoral.md" title="Editer cette page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="cryptographie">Cryptographie<a class="headerlink" href="#cryptographie" title="Permanent link">⚓︎</a></h1>
-<p><img alt="image" class="center" src="../data/BO.png" /></p>
-<p><img alt="image" class="center" src="../data/meme.jpg" width="50%" /></p>
-<h2 id="1-chiffrement-symetrique">1. Chiffrement symétrique<a class="headerlink" href="#1-chiffrement-symetrique" title="Permanent link">⚓︎</a></h2>
-<h3 id="11-activite-du-masque-jetable">1.1 Activité du masque jetable<a class="headerlink" href="#11-activite-du-masque-jetable" title="Permanent link">⚓︎</a></h3>
-<div class="admonition example">
-<p class="admonition-title">Exercice</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Aide</label><label for="__tabbed_1_3">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>On considère la variable suivante :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">masque</span> <span class="o">=</span> <span class="s2">&quot;CETTEPHRASEESTVRAIMENTTRESTRESLONGUEMAISCESTFAITEXPRES&quot;</span>
-</code></pre></div>
+<h1 id="grand-oral">Grand Oral<a class="headerlink" href="#grand-oral" title="Permanent link">⚓︎</a></h1>
 <ul>
-<li>Créer une fonction <code>chiffre(message, masque)</code> qui chiffre <code>message</code> en le XORant avec <code>masque</code>.</li>
-<li>Cette fonction doit pouvoir <strong>aussi</strong> servir à déchiffrer le message chiffré.</li>
+<li>Texte réglementaire :  <a href="https://www.education.gouv.fr/reussir-au-lycee/baccalaureat-comment-se-passe-le-grand-oral-100028">Lien vers Eduscol</a></li>
 </ul>
-</div>
-<div class="tabbed-block">
-<ul>
-<li>Le <code>XOR</code> (voir <a href="https://glassus.github.io/premiere_nsi/T2_Representation_des_donnees/2.5_Booleens/cours/#disjonction-exclusive-xor" target="target">ici</a>) est une opération symétrique :
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">34</span> <span class="o">^</span> <span class="mi">23</span>
-<span class="mi">53</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">53</span> <span class="o">^</span> <span class="mi">23</span>
-<span class="mi">34</span>
-</code></pre></div></li>
-<li>La fonction <code>ord</code> permet de renvoyer le code ASCII d'un caractère. La fonction <code>chr</code> fait l'opération inverse.
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
-<span class="mi">65</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">chr</span><span class="p">(</span><span class="mi">65</span><span class="p">)</span>
-<span class="s1">&#39;A&#39;</span>
-</code></pre></div></li>
-</ul>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">masque</span> <span class="o">=</span> <span class="s2">&quot;CETTEPHRASEESTVRAIMENTTRESTRESLONGUEMAISCESTFAITEXPRES&quot;</span>
+<iframe width="560" height="315" text-align="center" src="https://www.youtube.com/embed/WlNTRgykfLw" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<span class="k">def</span> <span class="nf">chiffre</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">masque</span><span class="p">):</span>
-    <span class="n">message_chiffre</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">message</span><span class="p">)):</span>
-        <span class="n">lettre_chiffree</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">message</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">^</span> <span class="nb">ord</span><span class="p">(</span><span class="n">masque</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
-        <span class="n">message_chiffre</span> <span class="o">+=</span> <span class="n">lettre_chiffree</span>
-    <span class="k">return</span> <span class="n">message_chiffre</span>
-</code></pre></div></td></tr></table></div>
-</div>
-</div>
-</div>
-</div>
-<h3 id="12-principe-du-chiffrement-symetrique">1.2 Principe du chiffrement symétrique<a class="headerlink" href="#12-principe-du-chiffrement-symetrique" title="Permanent link">⚓︎</a></h3>
-<blockquote>
-<p>Dans un chiffrement symétrique, c'est <strong>la même clé</strong> qui va servir au chiffrement et au déchiffrement.</p>
-</blockquote>
-<p><img alt="image" class="center" src="../data/sym.png" /></p>
-<h4 id="quappelle-t-on-une-cle">Qu'appelle-t-on une clé ?<a class="headerlink" href="#quappelle-t-on-une-cle" title="Permanent link">⚓︎</a></h4>
-<p>La clé est un renseignement permettant de chiffrer ou déchiffrer un message. Cela peut être :</p>
-<ul>
-<li>un nombre (dans un simple décalage des lettres de l'alphabet, comme <a href="https://fr.wikipedia.org/wiki/Chiffrement_par_d%C3%A9calage">le chiffre de César</a>)</li>
-<li>une phrase (dans la méthode du <a href="https://fr.wikipedia.org/wiki/Masque_jetable">masque jetable</a>)</li>
-<li>une image (imaginez un chiffrement où on effectue un XOR par les pixels d'une image, comme dans <a href="https://github.com/glassus/nsi/blob/master/Premiere/DM/DM1/enonce.md">cette énigme</a>)</li>
-</ul>
-<p>Un chiffrement est dit symétrique lorsque la connaissance de la clé ayant servi au chiffrement permet de déchiffrer le message. Par exemple, Alice chiffre son message en décalant les lettres de 3 rangs vers la droite dans l'alphabet, Bob saura qu'il doit les décaler de 3 rangs vers la gauche pour retrouver le message initial.</p>
-<h4 id="quel-est-lavantage-dun-chiffrement-symetrique">Quel est l'avantage d'un chiffrement symétrique ?<a class="headerlink" href="#quel-est-lavantage-dun-chiffrement-symetrique" title="Permanent link">⚓︎</a></h4>
-<p>Les chiffrements symétriques sont souvent rapides, consommant peu de ressources et donc adaptés au chiffrement de flux important d'informations.</p>
-<p>Comme nous le verrons, la sécurisation des données transitant par le protocole <code>https</code> est basée sur un chiffrement symétrique.</p>
-<h4 id="quel-est-linconvenient-dun-chiffrement-symetrique">Quel est l'inconvénient d'un chiffrement symétrique ?<a class="headerlink" href="#quel-est-linconvenient-dun-chiffrement-symetrique" title="Permanent link">⚓︎</a></h4>
-<p>La clé ! Si Alice et Bob ont besoin d'utiliser un chiffrement pour se parler, comment peuvent-ils échanger leurs clés  puisque leur canal de transmission n'est pas sûr ?</p>
-<p>Le chiffrement symétrique impose qu'Alice et Bob aient pu se rencontrer physiquement au préalable pour convenir d'une clé secrète, ou bien qu'ils aient réussi à établir une connexion sécurisée pour s'échanger cette clé.</p>
-<h4 id="un-chiffrement-symetrique-est-il-un-chiffrement-de-mauvaise-qualite">Un chiffrement symétrique est-il un chiffrement de mauvaise qualité ?<a class="headerlink" href="#un-chiffrement-symetrique-est-il-un-chiffrement-de-mauvaise-qualite" title="Permanent link">⚓︎</a></h4>
-<p>Pas du tout ! S'il est associé naturellement à des chiffrements simples et faibles (comme le décalage de César), un chiffrement symétrique peut être très robuste... voire inviolable.</p>
-<p>C'est le cas du masque jetable. Si le masque avec lequel on effectue le XOR sur le message est aussi long que le message, alors il est <strong>impossible</strong> de retrouver le message initial. Pourquoi ?</p>
-<p>Imaginons qu'Alice veuille transmettre le message clair "LUNDI".
-Elle le chiffre avec un masque jetable (que connait aussi Bob), et Bob reçoit donc "KHZOK". 
-Si Marc a intercepté le message "KHZOK", <em>même s'il sait que la méthode de chiffrement utilisée est celle du masque jetable</em> (principe de Kerckhoffs), il n'a pas d'autre choix que de tester tous les masques de 5 lettres possibles.
-Ce qui lui donne <span class="arithmatex">\(26^5\)</span> possibilités (plus de 11 millions) pour le masque, et par conséquent (propriété de bijectivité du XOR) <span class="arithmatex">\(26^5\)</span> possibilités pour le message «déchiffré»...</p>
-<p>Cela signifie que Marc verra apparaître, dans sa tentative de déchiffrage, les mots "MARDI", "JEUDI", "JOUDI", "STYLO", "FSDJK", "LUNDI, "LUNDA"... 
-Il n'a aucune possibilité de savoir où est le bon message original parmi toutes les propositions (on parle de <em>sécurité sémantique</em>).</p>
-<blockquote>
-<p>Principe de Kerckhoffs : la sécurité d'un système de chiffrement ne doit reposer que sur la sécurité de la clé, et non pas sur la connaissance de l'algorithme de chiffrement. Cet algorithme peut même être public (ce qui est pratiquement toujours le cas).</p>
-</blockquote>
-<h4 id="quels-sont-les-chiffrements-symetriques-modernes">Quels sont les chiffrements symétriques modernes ?<a class="headerlink" href="#quels-sont-les-chiffrements-symetriques-modernes" title="Permanent link">⚓︎</a></h4>
-<p>L'algorithme de chiffrement symétrique le plus utilisé actuellement est le chiffrement <a href="https://fr.wikipedia.org/wiki/Advanced_Encryption_Standard">AES</a>, pour Advanced Encryption Standard.</p>
-<ul>
-<li>chiffrement par bloc de 128 bits, répartis dans une matrice de 16 octets (matrice carrée de taille 4).</li>
-<li>ces 128 bits sont transformés par des rotations, multiplications, transpositions, [...] de la matrice initiale, en faisant intervenir dans ces transformations une clé de 128, 192 ou 256 bits.</li>
-<li>pour l'AES-256 (avec une clé de 256 bits), l'attaque par force brute nécessiterait 2^256 opérations, soit un nombre à 78 chiffres...</li>
-<li>il n'existe pas d'attaque connue efficace à ce jour. Les seules attaques sont des attaques sur des faiblesses d'implémentation, ou par <a href="https://fr.wikipedia.org/wiki/Attaque_par_canal_auxiliaire">canal auxiliaire</a>.</li>
-</ul>
-<h2 id="2-chiffrement-asymetrique">2. Chiffrement asymétrique<a class="headerlink" href="#2-chiffrement-asymetrique" title="Permanent link">⚓︎</a></h2>
-<p>Inventé par Whitfield Diffie et Martin Hellman en 1976, le chiffrement asymétrique vient résoudre l'inconvénient essentiel du chiffrement symétrique : le nécessaire partage d'un secret (la clé) avant l'établissement de la communication sécurisée.</p>
-<h3 id="21-principe-du-chiffrement-asymetrique">2.1 Principe du chiffrement asymétrique<a class="headerlink" href="#21-principe-du-chiffrement-asymetrique" title="Permanent link">⚓︎</a></h3>
-<p>Le principe de base est l'existence d'une <strong>clé publique</strong>, appelée à être distribuée largement, et d'une <strong>clé privée</strong>, qui ne quitte jamais son propriétaire. </p>
-<p><img alt="image" class="center" src="../data/asym.png" /></p>
-<h3 id="22-le-role-interchangeable-des-cles-publiques-et-privees">2.2 Le rôle interchangeable des clés publiques et privées<a class="headerlink" href="#22-le-role-interchangeable-des-cles-publiques-et-privees" title="Permanent link">⚓︎</a></h3>
-<p>L'illustration précédente associe :</p>
-<ul>
-<li>une image de cadenas à la clé publique (car on s'en sert pour chiffrer les messages)</li>
-<li>une image de clé à la clé privée (car on s'en sert pour déchiffrer les messages)</li>
-</ul>
-<p>Concrètement, (nous le verrons dans l'application par le chiffrement RSA), la clé privée et la clé publique sont <strong>deux nombres</strong> aux rôles identiques. Appelons-les A et B :</p>
-<ul>
-<li>il est impossible de trouver A en fonction de B. Réciproquement, si on connaît A, il est impossible d'en déduire B.</li>
-<li>si on chiffre un message avec A, on peut le déchiffrer avec B. Réciproquement, si on chiffre avec B, on peut déchiffrer le message grâce à A.</li>
-<li>on peut donc chiffrer avec une clé publique et déchiffrer avec la clé privée associée (ce qui est fait dans l'exemple précédent). Mais on peut aussi chiffrer avec la clé privée, et déchiffrer avec la clé publique associée.</li>
-</ul>
-<p>A et B ont donc des rôles interchangeables (chacun peut être un cadenas, chacun peut être une clé), et ce n'est qu'en connaissant A <strong>et</strong> B qu'on peut déchiffrer le message.</p>
-<p>Nous allons donc maintenant adopter une nouvelle convention infographique :</p>
-<ul>
-<li>Considérons ce message :</li>
-</ul>
-<p><img alt="image" class="center" src="../data/a1.png" /></p>
-<ul>
-<li>
-<p>Si ce message est chiffré avec la clé publique d'Alice, le message sera :
-<img alt="image" class="center" src="../data/a2.png" /></p>
-</li>
-<li>
-<p>Si on déchiffre ce message avec la clé privée d'Alice, il deviendra
-<img alt="image" class="center" src="../data/a3.png" />
-et donc
-<img alt="image" class="center" src="../data/a1.png" /></p>
-</li>
-</ul>
-<p>puisque l'application de la clé privée sur la clé publique, ou bien de la clé publique sur la clé privée, permet de retrouver le message en clair.</p>
-<p>De manière graphique, la connaissance des deux moitiés du disque qui s'assemblent permet de les faire disparaitre, peu importe qu'on ait commencé par chiffrer avec la clé publique ou avec la clé privée.</p>
-<p><img alt="image" class="center" src="../data/gif_auth.webp" /></p>
-<h3 id="23-communication-authentifiee">2.3 Communication authentifiée.<a class="headerlink" href="#23-communication-authentifiee" title="Permanent link">⚓︎</a></h3>
-<p>Dans la situation du 2.1, Alice (qui a distribué largement sa clé publique) ne peut pas s'assurer que le message vient bien de Bob. Il peut avoir été créé par Marc, qui signe «Bob» et usurpe ainsi son identité. </p>
-<p>Le protocole que nous allons décrire ci-dessous permet :</p>
-<ul>
-<li>d'empêcher qu'un message intercepté soit déchiffré (ce qui était déjà le cas dans le 2.1)</li>
-<li>mais aussi de s'assurer que chaque personne est bien celle qu'elle prétend être : on résout le <strong>problème d'authentification</strong>.</li>
-</ul>
-<p><img alt="image" class="center" src="../data/total_auth.png" /></p>
-<p><strong>En résumé :</strong></p>
-<ul>
-<li>Alice est sûre que seul Bob pourra déchiffrer le message qu'elle envoie.</li>
-<li>Bob est sûr que le message qu'il reçoit vient bien d'Alice.</li>
-</ul>
-<h3 id="23-un-exemple-de-chiffrement-asymetrique-le-chiffrement-rsa">2.3 Un exemple de chiffrement asymétrique : le chiffrement RSA<a class="headerlink" href="#23-un-exemple-de-chiffrement-asymetrique-le-chiffrement-rsa" title="Permanent link">⚓︎</a></h3>
-<h4 id="231-histoire">2.3.1 Histoire<a class="headerlink" href="#231-histoire" title="Permanent link">⚓︎</a></h4>
-<p>Lorsqu'en 1976 Diffie et Hellman (chercheurs à Stanford) présentent le concept de chiffrement asymétrique (souvent appelé <em>cryptographie à clés publiques</em>), ils en proposent uniquement un modèle théorique, n'ayant pas trouvé une réelle implémentation de leur protocole.</p>
-<p>Trois chercheurs du MIT (Boston), Ron Rivest, Adi Shamir et Len Adleman se penchent alors sur ce protocole, convaincus qu'il est en effet impossible d'en trouver une implémentation pratique. En 1977, au cours de leurs recherches, ils démontrent en fait l'inverse de ce qu'ils cherchaient : ils créent le premier protocole concret de chiffrement asymétrique : le chiffrement <strong>RSA</strong>.</p>
-<p><img alt="image" class="center" src="../data/pic_RSA.jpeg" width="60%" /></p>
-<p>Au même moment à Londres, Clifford Cocks, (chercheur au très secret <a class="" href="https://fr.wikipedia.org/wiki/Government_Communications_Headquarters" target="_blank">GCHQ</a>) apprend que Rivest Shamir et Adleman viennent de découvrir ce que lui-même a découvert <strong>3 ans auparavant</strong> mais qui est resté classé Secret Défense.</p>
-<p>Il est le véritable inventeur du RSA... mais le reste du monde ne l'apprendra qu'en 1997 au moment de la déclassification de cette information. </p>
-<p><img alt="image" class="center" src="../data/clifford.jpg" width="40%" /></p>
-<h4 id="231-description">2.3.1 Description<a class="headerlink" href="#231-description" title="Permanent link">⚓︎</a></h4>
-<p>Le chiffrement RSA est basé sur <em>l'arithmétique modulaire</em>. Faire des calculs <em>modulo</em> un entier <span class="arithmatex">\(n\)</span>, c'est ne garder que le reste de la division euclidienne par <span class="arithmatex">\(n\)</span>.</p>
-<p>Le fait que 15 soit égal à 1 modulo 7 (car <span class="arithmatex">\(15=2 \times 7+1\)</span>) s'écrira <span class="arithmatex">\(15 \equiv 1 [7]\)</span>.</p>
-<p>De même, <span class="arithmatex">\(10 \equiv  3 [7]\)</span>, <span class="arithmatex">\(25 \equiv 4 [7]\)</span>, <span class="arithmatex">\(32 \equiv 2 [10]\)</span>, etc.</p>
-<h4 id="etape-1">Étape 1<a class="headerlink" href="#etape-1" title="Permanent link">⚓︎</a></h4>
-<p>Alice choisit 2 grands nombres premiers <span class="arithmatex">\(p\)</span> et <span class="arithmatex">\(q\)</span>. Dans la réalité ces nombres seront vraiment très grands (plus de 100 chiffres). Dans notre exemple, nous prendrons <span class="arithmatex">\(p = 3\)</span> et <span class="arithmatex">\(q = 11\)</span>.</p>
-<h4 id="etape-2">Étape 2<a class="headerlink" href="#etape-2" title="Permanent link">⚓︎</a></h4>
-<p>Alice multiplie ces deux nombres <span class="arithmatex">\(p\)</span> et <span class="arithmatex">\(q\)</span> et obtient ainsi un nombre <span class="arithmatex">\(n\)</span>.</p>
-<blockquote>
-<p>Il est très facile pour Alice de calculer <span class="arithmatex">\(n\)</span> en connaissant <span class="arithmatex">\(p\)</span> et <span class="arithmatex">\(q\)</span>, mais il  extrêmement difficile pour Marc de faire le travail inverse : trouver <span class="arithmatex">\(p\)</span> et <span class="arithmatex">\(q\)</span> en connaissant <span class="arithmatex">\(n\)</span> prend un temps exponentiel avec la taille de <span class="arithmatex">\(n\)</span>.<br />
-C'est sur cette difficulté (appelée difficulté de <em>factorisation</em>) que repose la robustesse du système RSA.</p>
-</blockquote>
-<h4 id="etape-3">Étape 3<a class="headerlink" href="#etape-3" title="Permanent link">⚓︎</a></h4>
-<p>Alice choisit un nombre <span class="arithmatex">\(e\)</span> qui doit être premier avec <span class="arithmatex">\((p-1)(q-1)\)</span>.  On note <span class="arithmatex">\(\phi(n)\)</span> le nombre <span class="arithmatex">\((p-1)(q-1)\)</span>.</p>
-<p>Dans notre exemple, <span class="arithmatex">\((p-1)(q-1) = 20\)</span>, Alice choisit donc <span class="arithmatex">\(e = 3\)</span>. (mais elle aurait pu aussi choisir 7, 9, 13...).</p>
-<p>Le couple <span class="arithmatex">\((e, n)\)</span> sera <strong>la clé publique</strong> d'Alice. Elle la diffuse à qui veut lui écrire.</p>
-<p>Dans notre exemple, la clé publique d'Alice est <span class="arithmatex">\((3, 33)\)</span>.</p>
-<h4 id="etape-4">Étape 4<a class="headerlink" href="#etape-4" title="Permanent link">⚓︎</a></h4>
-<p>Alice calcule maintenant sa clé privée : elle doit trouver un nombre <em>d</em> qui vérifie l'égalité <span class="arithmatex">\(e d \equiv 1 [\phi(n)]\)</span>.</p>
-<p>Dans notre exemple, comme <span class="arithmatex">\(7 \times 3  \equiv 1 [20]\)</span>, ce nombre <span class="arithmatex">\(d\)</span> est égal à 7.</p>
-<p>En pratique, il existe un algorithme simple (algorithme d'<a href="https://fr.wikipedia.org/wiki/Algorithme_d%27Euclide_%C3%A9tendu">Euclide étendu</a>) pour trouver cette valeur <span class="arithmatex">\(d\)</span>, appelée <em>inverse de e</em>.</p>
-<p>Le couple <span class="arithmatex">\((d, n)\)</span> sera <strong>la clé privée</strong> d'Alice. Elle ne la diffuse à personne.</p>
-<p>Dans notre exemple, la clé privée d'Alice est <span class="arithmatex">\((7, 33)\)</span>.</p>
-<h4 id="etape-5">Étape 5<a class="headerlink" href="#etape-5" title="Permanent link">⚓︎</a></h4>
-<p>Supposons que Bob veuille écrire à Alice pour lui envoyer le nombre 4. 
-Il possède la clé publique d'Alice, qui est <span class="arithmatex">\((3, 33)\)</span>.</p>
-<p>Il calcule donc <span class="arithmatex">\(4^3\)</span> modulo 33, qui vaut 31. C'est cette valeur 31 qu'il transmet à Alice.</p>
-<div class="arithmatex">\[4^3 \equiv 31 [33]\]</div>
-<blockquote>
-<p>Si Marc intercepte cette valeur 31, même en connaissant la clé publique d'Alice (3,33), il ne peut pas résoudre l'équation <span class="arithmatex">\(x^3 \equiv 31 [33]\)</span> de manière efficace.</p>
-</blockquote>
-<h4 id="etape-6">Étape 6<a class="headerlink" href="#etape-6" title="Permanent link">⚓︎</a></h4>
-<p>Alice reçoit la valeur 31.<br />
-Il lui suffit alors d'élever 31 à la puissance 7 (sa clé privée), et de calculer le reste modulo 33 :</p>
-<p><span class="arithmatex">\(31^7 = 27512614111\)</span></p>
-<p><span class="arithmatex">\(27512614111 \equiv 4 [33]\)</span></p>
-<p>Elle récupère la valeur 4, qui est bien le message original de Bob.</p>
-<blockquote>
-<p><strong>Comment ça marche ?</strong>
-Grâce au <a href="https://fr.wikipedia.org/wiki/Petit_th%C3%A9or%C3%A8me_de_Fermat">Petit Théorème de Fermat</a>, on démontre (voir <a href="https://fr.wikipedia.org/wiki/Chiffrement_RSA">ici</a>) assez facilement que <span class="arithmatex">\(M^{ed} \equiv M [n]\)</span>.</p>
-</blockquote>
-<p>Il faut remarquer que <span class="arithmatex">\(M^{ed} = M^{de}\)</span>. On voit que les rôles de la clé publique et de la clé privée sont <strong>symétriques</strong> : un message chiffré avec la clé publique se déchiffrera en le chiffrant avec la clé privée, tout comme un message chiffré avec la clé privée se déchiffrera en le chiffrant avec la clé publique.</p>
-<p><strong>Animation interactive</strong>
-voir <a href="https://animations.interstices.info/interstices-rsa/rsa.html">https://animations.interstices.info/interstices-rsa/rsa.html</a></p>
-<h4 id="rsa-un-systeme-inviolable">RSA, un système inviolable ?<a class="headerlink" href="#rsa-un-systeme-inviolable" title="Permanent link">⚓︎</a></h4>
-<p>Le chiffrement RSA a des défauts (notamment une grande consommation des ressources, due à la manipulation de très grands nombres).
-Mais le choix d'une clé publique de grande taille (actuellement 1024 ou 2048 bits) le rend pour l'instant inviolable. </p>
-<p>Actuellement, il n'existe pas d'algorithme efficace pour factoriser un nombre ayant plusieurs centaines de chiffres.</p>
-<p>Deux évènements pourraient faire s'écrouler la sécurité du RSA :</p>
-<ul>
-<li>la découverte d'un algorithme efficace de factorisation, capable de tourner sur les ordinateurs actuels. Cette annonce est régulièrement faite, et tout aussi régulièrement contredite par la communauté scientifique. (voir, le 05/03/2021,  <a href="https://www.schneier.com/blog/archives/2021/03/no-rsa-is-not-broken.html">https://www.schneier.com/blog/archives/2021/03/no-rsa-is-not-broken.html</a>)</li>
-<li>l'avènement d'<a href="https://fr.wikipedia.org/wiki/Calculateur_quantique">ordinateurs quantiques</a>, dont la vitesse d'exécution permettrait une factorisation rapide. Il est à noter que l'algorithme de factorisation destiné à tourner sur un ordinateur quantique existe déjà : <a href="https://fr.wikipedia.org/wiki/Algorithme_de_Shor">l'algorithme de Schor</a>.</li>
-</ul>
-<h2 id="3-https-exemple-dutilisation-conjointe-dun-chiffrement-asymetrique-et-dun-chiffrement-symetrique">3. HTTPS : exemple d'utilisation conjointe d'un chiffrement asymétrique et d'un chiffrement symétrique.<a class="headerlink" href="#3-https-exemple-dutilisation-conjointe-dun-chiffrement-asymetrique-et-dun-chiffrement-symetrique" title="Permanent link">⚓︎</a></h2>
-<h3 id="31-principe-general">3.1 Principe général<a class="headerlink" href="#31-principe-general" title="Permanent link">⚓︎</a></h3>
-<p>Aujourd'hui, plus de 90 % du trafic sur internet est chiffré : les données ne transitent plus en clair (protocole <code>http</code>) mais de manière chiffrée (protocole <code>https</code>), ce qui empêche la lecture de paquets éventuellements interceptés.</p>
-<p>Le protocole <code>https</code> est la réunion de deux protocoles :</p>
-<ul>
-<li>le protocole <code>TLS</code> (Transport Layer Security, qui a succédé au SSL) : ce protocole, basé sur du <strong>chiffrement asymétrique</strong>, va conduire à la génération d'une clé identique chez le client et chez le serveur.</li>
-<li>le (bon vieux) protocole  <code>http</code>, mais qui convoiera maintenant des données chiffrées avec la clé générée à l'étape précédente. Les données peuvent toujours être interceptées, mais sont illisibles. Le <strong>chiffrement symétrique</strong> utilisé est actuellement le chiffrement AES.</li>
-</ul>
-<p><strong>Pourquoi ne pas utiliser que le chiffrement asymétrique, RSA par exemple ?</strong>
-Car il est très gourmand en ressources ! Le chiffrement/déchiffrement doit être rapide pour ne pas ralentir les communications ou l'exploitation des données.
-Le chiffrement asymétrique est donc réservé à l'échange de clés (au début de la communication).
-Le chiffrement symétrique, bien plus rapide, prend ensuite le relais pour l'ensemble de la communication.</p>
-<p><img alt="image" class="center" src="../data/https.png" /></p>
-<h3 id="32-hp-fonctionnement-du-tls-explication-du-handshake">3.2 (HP) Fonctionnement du TLS : explication du <em>handshake</em><a class="headerlink" href="#32-hp-fonctionnement-du-tls-explication-du-handshake" title="Permanent link">⚓︎</a></h3>
-<p>Observons en détail le fonctionnement du protocole <code>TLS</code>, dont le rôle est de générer de manière sécurisée une clé dont disposeront à la fois le client et le serveur, leur permettant ainsi d'appliquer un chiffrement symétrique à leurs échanges.</p>
-<p><img alt="image" class="center" src="../data/tls.png" /></p>
-<ul>
-<li>
-<p><strong>étape 1</strong> : le «client Hello». Le client envoie sa version de TLS utilisée. </p>
-</li>
-<li>
-<p><strong>étape 2</strong> : le «server Hello». Le serveur répond en renvoyant son certificat prouvant son identité, ainsi que sa clé publique.</p>
-</li>
-<li>
-<p><strong>étape 3</strong> : le client interroge l'autorité de certification pour valider le fait que le certificat est bien valide et que le serveur est bien celui qu'il prétend être. Cette vérification est faite grâce à un mécanisme de chiffrement asymétrique.</p>
-</li>
-</ul>
-<blockquote>
-<p>La présentation du certificat à l'autorité de certification peut se représenter comme le scan d'une pièce d'identité dans un aéroport. L'autorité de certification est alors l'État (dont la base de données est interrogée par un logiciel) qui valide que la pièce d'identité est bien un document officiel.</p>
-</blockquote>
-<ul>
-<li><strong>étape 4</strong> : une fois vérifiée l'authenticité du serveur et que son certificat est valide, le client calcule ce qui sera la future clé de chiffrement symétrique (appelée «clé AES» dans l'infographie). Cette clé est chiffrée avec la clé publique du server (transmise à l'étape 1), ce qui assure la sécurité de son transfert. Le serveur déchiffre cette clé grâce à sa clé privée, et dispose ainsi lui aussi de la clé. </li>
-</ul>
-<p>Le transmission par protocole <code>http</code> de données chiffrées au préalable avec la clé AES peut commencer. </p>
-<blockquote>
-<p>Remarque : en réalité, ce n'est pas la clé AES qui est transmise à l'étape 4, mais un nombre choisi par le client, qui permettra, avec deux autres nombres choisis par le client (étape 1) et le serveur (étape 2) de reconstituer la clé AES, qui sera donc identique côté client et côté serveur.</p>
-</blockquote>
-<hr />
-<h2 id="bibliographie">Bibliographie<a class="headerlink" href="#bibliographie" title="Permanent link">⚓︎</a></h2>
-<ul>
-<li>Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.</li>
-<li>Prépabac NSI, Terminale, G. CONNAN, V. PETROV, G. ROZSAVOLGYI, L. SIGNAC, éditions HATIER.</li>
-<li>https://www.cloudflare.com/fr-fr/learning/ssl/what-happens-in-a-tls-handshake/</li>
-</ul>
-<hr />
+<p><img alt="programme" class="center" src="../data/grando.jpg" width="30%" /></p>
+<p><img alt="Grille d'évaluation" class="center" src="../data/grando_grille.jpg" width="70%" /></p>
+<h2 id="quelques-pistes-de-travail">Quelques pistes de travail<a class="headerlink" href="#quelques-pistes-de-travail" title="Permanent link">⚓︎</a></h2>
+<ol>
+<li>L’informatique quantique : une nouvelle révolution technologique</li>
+<li>P = NP</li>
+<li>Informatique dans le cloud </li>
+<li>Peut-on casser tous les codes ?</li>
+<li>Histoires de bug</li>
+<li>Le green-IT</li>
+<li>La sonde persévérance et le binaire</li>
+<li>Comment l’algèbre booléenne a-t-elle permis le développement de l’informatique ?</li>
+<li>Plusieurs questions autour de la cryptographie : un sujet axé sur le HTTPS, un sur l’authentification, un sur quelques grands principes de la crypto.</li>
+<li>Récursivité et récurrence : similarités et différences.</li>
+<li>Bug de rover martien et système d’exploitation multitâche</li>
+<li>Encoder toutes les écritures du monde avec des 1 et des 0</li>
+<li>Comment Mathématiques et Informatiques imitent-elles la nature ? (sujet Math-NSI sur les fractales)</li>
+<li>Comment s’adapter à la cyberguerre ?</li>
+<li>Comment casser le chiffrement de Vigenère (Maths / NSI, l’élève en question y parle de chiffrement à clé puis pour la partie maths, introduit la notion d’indice de coïncidence d’un texte et l’utilise pour expliquer comment trouver la longueur de la clé dans un chiffrement de Vigenère)</li>
+<li>Comment les cryptomonnaies sont-elles sécurisées ?</li>
+<li>Comment l’art de couper en deux permet-il de résoudre des problèmes en mathématiques et informatique (Maths/NSI, sujet autour de la dichotomie, parle de la recherche dichotomique, des algorithmes de dichotomie pour résoudre des équations en maths, voire des arbres binaires de recherche …)</li>
+<li>Les tours de Hanoï , entre récurrence et récursivité (Maths/NSI)</li>
+<li>Comment les caractères de nos claviers sont-ils encodés ?</li>
+<li>Deep Blue, un algorithme imbattable ? (parle d’IA et de bases de données)</li>
+<li>Que se cache-t-il derrière une page web ?</li>
+<li>La suite de Fibonacci, quels algorithmes pour calculer ses termes ? (Maths/NSI)</li>
+<li>Comment les données peuvent elle aider les entreprises à se développer ?</li>
+<li>Comment les systèmes d’exploitation permettent de rendre aisée l’utilisation de notre ordinateur ?</li>
+<li>Comment l’informatique permet-elle de sécuriser les transactions des cryptomonaies ?</li>
+<li>Qu’est-ce qui fait qu’une voiture est autonome ?</li>
+<li>Comment les robots militaires sont-ils contrôlés ?</li>
+<li>Quels sont les impacts de l’obsolescence programmée dans la société ?</li>
+<li>Comment le machine learning a-t-il révolutionné le domaine du médical</li>
+<li>En quoi les IA et les robots ont-ils permit une hausse de production dans les entreprises ?</li>
+<li>Comment l’informatique permet d’améliorer l’aide humanitaire ?</li>
+<li>En quoi les programmes écrits en langage en python permettent-ils d’effectuer des calculs scientifiques complexes ?</li>
+<li>En quoi les bases de données permettent la recherche d’information ?</li>
+<li>En quoi la cryptographie peut-elle optimiser la sécurisation des informations confidentielles ?</li>
+<li>Par quelles mesures la technologie Blockchain va t-elle remplacer les transactions classiques</li>
+<li>En quoi la miniaturisation a permis l’évolution des ordinateurs ?</li>
+<li>Quels sont les impacts de l’avancée des systèmes informatiques sur les emplois ?</li>
+<li>En quoi les bases de données ont permis une évolution de l’organisation du travail ?</li>
+<li>En quoi les nouvelles technologies ont impactés l’engagement politique ?</li>
+<li>De quelle manière sont cryptées les données informatiques ?</li>
+<li>Quel est le role de l’informatique dans la sécurité intérieure ?</li>
+<li>En quoi les bases de données sont-elles importantes dans la prise de décision ?</li>
+<li>Comment améliorer ses performances sportive grâce à l’informatique ?</li>
+<li>La 5G: quels sont ses avantages et ses inconvénients ?</li>
+<li>Comment fonctionne un logiciel de modélisation tridimentionnelle ?</li>
+<li>Quel impact les IA ont elles eu dans le monde des échecs ?</li>
+<li>Quels sont les impacts et la dangerosité des bugs dans notre société ?</li>
+<li>Comment un ordinateur peut-il apprendre de ses erreurs et pourquoi ?</li>
+<li>En quoi la notion de récurrence intervient-elle dans l’élaboration et le fonctionnement d’un programme récursif</li>
+<li>Quelle est l’importance des graphes de nos jours ?</li>
+<li>En quoi le raisonnement par récurrence est-il utile en mathématiques et informatiques ?</li>
+<li>A quoi servent les bases de données ?</li>
+<li>Comment les bases de données ont-elles révolutionné notre quotidien ?</li>
+<li>Pourquoi chiffrer les communications ?</li>
+<li>Comment le cryptage nous permet-il d’utiliser les outils informatiques de manière sûre ?</li>
+<li>Quelles sont les différentes étapes pour parvenir à un site web complet ?</li>
+<li>Quels sont les impacts et la dangerosité des bugs dans notre société</li>
+<li>Comment les transactions des cryptomonnaies sont-elles sécurisées ?</li>
+<li>Comment calculer le coût d’exécution en temps d’un algorithme ?</li>
+<li>Quels sont les les enjeux du cyber espace et quel est le rôle de la cryptologie dans cette nouvelle plateforme ?</li>
+<li>Pourquoi utilise ton les nombres premiers dans l’algorithme RSA ?</li>
+<li>Une IA est elle intelligente ?</li>
+<li>Comment une IA de type LLM construit elle une réponse ? (+math)</li>
+<li>Peut on se fier au résultat d'une IA ?</li>
+<li>Piloter une IA : de nouvelles compétences ?</li>
+<li>Peut on identifier/caractériser la production d'une IA ?</li>
+<li>Les IA : quels enjeux ? (science, geopolitique, économique)</li>
+</ol>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">12 janvier 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">28 mars 2023</span>
       
     
   </small>
@@ -2328,7 +2058,7 @@ Le chiffrement symétrique, bien plus rapide, prend ensuite le relais pour l'ens
 
 
                 
-<script src="../../../js/ide.js"></script>
+<script src="../../js/ide.js"></script>
 <style>
     .jp-RenderedHTMLCommon p {
         font-size: 0.8rem;
@@ -2384,7 +2114,7 @@ Le chiffrement symétrique, bien plus rapide, prend ensuite le relais pour l'ens
     <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
       
         
-        <a href="../Exercices/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Exercices" rel="prev">
+        <a href="../liste_sujets/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Liste des sujets Ecrit" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -2393,20 +2123,20 @@ Le chiffrement symétrique, bien plus rapide, prend ensuite le relais pour l'ens
               <span class="md-footer__direction">
                 Précédent
               </span>
-              Exercices
+              Liste des sujets Ecrit
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../../T6_5_algos_coeur/sommaire/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Sommaire" rel="next">
+        <a href="../revisionBD/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Révision Base de données" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Suivant
               </span>
-              Sommaire
+              Révision Base de données
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -2475,10 +2205,10 @@ Le chiffrement symétrique, bien plus rapide, prend ensuite le relais pour l'ens
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
@@ -2490,13 +2220,13 @@ Le chiffrement symétrique, bien plus rapide, prend ensuite le relais pour l'ens
       
         <script src="https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js"></script>
       
-        <script src="../../../javascript/mermaid.js"></script>
+        <script src="../../javascript/mermaid.js"></script>
       
-        <script src="../../../javascript/mathjax.js"></script>
+        <script src="../../javascript/mathjax.js"></script>
       
-        <script src="../../../javascript/interpreter.js"></script>
+        <script src="../../javascript/interpreter.js"></script>
       
-        <script src="../../../javascript/ide.js"></script>
+        <script src="../../javascript/ide.js"></script>
       
     
   </body>
