@@ -1,32 +1,29 @@
 
-!!! abstract "Actualités"
+!!! abstract "Actualités :newspaper:" 
 
     - 14 sujets posés en 2022 sont disponibles [ici](T6_Annales/liste_sujets/){. target="_blank"}
     - Site d'entrainement épreuve pratique : [ici](https://e-nsi.gitlab.io/pratique/tags/){. target="_blank"}
     - Site recensant les sujets de BAC écrit : [ici](https://boiling-aletopelta-ff5.notion.site/be357c0d12cb430faa79dd890feb660b?v=56349470c9704fc2b93983c20d5b9a65){. target="_blank"}
 
 
-    Les modalités des épreuves écrites (du 20 au 22 mars 2023) ont été [annoncées](https://www.education.gouv.fr/bo/22/Hebdo36/MENE2226770N.htm){. target="_blank"} :
+    Les modalités du BAC 2024 ont été [annoncées](https://www.education.gouv.fr/bo/2023/Hebdo36/MENE2317750N){. target="_blank"} :
 
-    - le sujet comportera 3 exercices (il n'y a plus de choix comme auparavant)
-    - seuls les items marqués *BAC* dans les sommaires des différents thèmes sont au programme de l'épreuve. Voir la liste [ici](T6_Annales/epreuve_bac/#epreuve-ecrite){. target="_blank"}
-
-
+    - le sujet écrit comportera 3 exercices noté sur 20
+    - l'épreuve pratique sera composé de 2 exercices notés sur 20
+    - Le poids de l'écrit sera de 3/4 et le poids de la pratique de 1/4
+   
 !!! note ":star: Thèmes en cours d'étude :star: "
-    - [Révision Epreuve Pratique](T6_6_Epreuve_pratique/BNS_2023.md)
-    - [Révision Epreuve Ecrite](T6_Annales/)
+    - [Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)  
 
-### *Thèmes déjà traités*
-- [Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
-- [Récursivité](T2_Programmation/2.2_Recursivite/cours/)  
-- [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/)   
-- [Structure de données](T1_Structures_de_donnees/)
-- [Gestion des processus](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/)  
-- [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
-- [Retour sur les dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/)
-- [Diviser pour régner](T3_Algorithmique/3.1_Diviser_pour_regner/cours)
-- [Recherche Textuelle](T3_Algorithmique/3.2_Recherche_textuelle/cours)
+!!! note "*Thèmes traités*"
+    - [Récursivité](T2_Programmation/2.2_Recursivite/cours/)  
+    - [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/)   
+    - [Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
 
+!!! info "Entraînement :running: "
+    Vous trouverez ci dessous quelques sites pour vous entrainez <br />
+    - [e-nsi écrit](https://e-nsi.forge.aeif.fr/ecrit/){. target="_blank"}<br />
+    - [e-nsi pratique](https://ens-fr.gitlab.io/nsi-pratique/){. target="_blank"}
 
 <!--
 !!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
@@ -60,4 +57,9 @@
     - [Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)  
     - [Récursivité](T2_Programmation/2.2_Recursivite/cours/)  
     - [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/)  
+    - [Gestion des processus](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/)  
+    - [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
+    - [Retour sur les dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/)
+    - [Diviser pour régner](T3_Algorithmique/3.1_Diviser_pour_regner/cours)
+    - [Recherche Textuelle](T3_Algorithmique/3.2_Recherche_textuelle/cours)
 -->
