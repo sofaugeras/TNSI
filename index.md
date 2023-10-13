@@ -13,7 +13,7 @@
     - Le poids de l'écrit sera de 3/4 et le poids de la pratique de 1/4
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    - [Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)  
+    - [Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)  c
 
 !!! note "*Thèmes traités*"
     - [Récursivité](T2_Programmation/2.2_Recursivite/cours/)  
