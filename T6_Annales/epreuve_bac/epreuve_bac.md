@@ -35,9 +35,6 @@ Pour le second exercice, un programme est fourni au candidat. Cet exercice ne de
     - [https://eduscol.education.fr/2661/banque-des-epreuves-pratiques-de-specialite-nsi](https://eduscol.education.fr/2661/banque-des-epreuves-pratiques-de-specialite-nsi)
 
 
-Une page spécifique consacrée aux exercices de la BNS est disponible [ici](../../T6_6_Epreuve_pratique/BNS_2022/).
-
-
 ## Épreuve Écrite
 
 À compter de la session 2023, l'épreuve consiste en **trois exercices** qui doivent tous être traités.
@@ -47,7 +44,7 @@ Une page spécifique consacrée aux exercices de la BNS est disponible [ici](../
 
 *Les annales des sujets passés (2020, 2021, 2022) comportent tous 5 exercices dont seulement 3 devaient être traités. Ce n'est plus le cas maintenant où la totalité du sujet doit être traité.*
 
-
+<!-->
 !!! abstract "Thèmes du programme susceptibles d'être évalués"
 
     - Rubrique « Structures de données », uniquement les items suivants :
@@ -74,5 +71,5 @@ Une page spécifique consacrée aux exercices de la BNS est disponible [ici](../
         - Algorithmes sur les arbres binaires et sur les arbres binaires de recherche
         - Méthode « diviser pour régner »
 
-
-La liste de tous les sujets d'épreuves écrites déjà posés peut être consultée [ici](T6_Annales/liste_sujets/){. target="_blank"}
+-->
+La liste de tous les sujets d'épreuves écrites déjà posés peut être consultée [ici](liste_sujets.md){. target="_blank"}

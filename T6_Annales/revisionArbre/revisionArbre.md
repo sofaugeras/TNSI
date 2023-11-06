@@ -2,7 +2,7 @@
 
 !!! info "Crédits"
     - Sujet 2022, Asie, J2, Ex. 2 Mise en page et correction par [Sébastien Hoarau](https://e-nsi.gitlab.io/ecrit/)
-    - Sujet 2022, Nouvelle-Calédonie, J1, Ex. 4 Mise en page et correction par [Sébastien Hoarau](https://e-nsi.gitlab.io/ecrit/)
+    - Sujet 2022, Nouvelle-Calédonie, J1, Ex. 4 Mise en page et correction par [Sébastien Hoarau](https://e-nsi.forge.aeif.fr/ecrit/2022/nouvelle_caledonie-j1/22-NC1-J1-ex4/)
 
 ## Nom d'auteur dans un ABR
 
@@ -184,7 +184,7 @@ On peut modéliser ce fonctionnement de parrainage à l'aide d'un arbre binaire 
 
 On donne ci-dessous l'arbre $P$ représentant les membres du club issus des parrainages de AnneB, fondatrice du club. Par exemple, Sophia a parrainé Malik2 avant AstridM.
 
-![arbre du club](arbre_binaire_exo4.svg){ width="400" }
+![arbre du club](./data/arbre_binaire_exo4.png){ width="400" }
 
 On munit la structure de données `ArbreBinaire` des opérations suivantes :
 
@@ -340,7 +340,7 @@ Dessiner un arbre possible pouvant correspondre à l'`arbre_2`.
 
     Comme pour la question 2b, on a à faire à un parcours préfixe donc `'LeaC'` est la racine de l'`arbre_2`. Ensuite à gauche on a `'Ali'` qui est une feuille (membre bronze). À droite on tombe sur `'Tom45'` qui a parrainé un seul membre : `'Vero'`.
 
-    ![arbre 2](arbre_2.svg){ width="200" }
+    ![arbre 2](./data/arbre_2.svg){ width="200" }
 
 **5)** Chaque année, les membres versent une cotisation en fonction de leur profil.
 

@@ -1,10 +1,7 @@
 
 !!! abstract "Actualités :newspaper:" 
 
-    - 14 sujets posés en 2022 sont disponibles [ici](T6_Annales/liste_sujets/){. target="_blank"}
-    - Site d'entrainement épreuve pratique : [ici](https://e-nsi.gitlab.io/pratique/tags/){. target="_blank"}
-    - Site recensant les sujets de BAC écrit : [ici](https://boiling-aletopelta-ff5.notion.site/be357c0d12cb430faa79dd890feb660b?v=56349470c9704fc2b93983c20d5b9a65){. target="_blank"}
-
+    - 14 sujets posés en 2022 sont disponibles [ici](T6_Annales/liste_sujets.md){. target="_blank"}
 
     Les modalités du BAC 2024 ont été [annoncées](https://www.education.gouv.fr/bo/2023/Hebdo36/MENE2317750N){. target="_blank"} :
 
@@ -13,17 +10,18 @@
     - Le poids de l'écrit sera de 3/4 et le poids de la pratique de 1/4
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    - [Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)  c
+    - [Listes / piles / files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md) 
 
 !!! note "*Thèmes traités*"
-    - [Récursivité](T2_Programmation/2.2_Recursivite/cours/)  
-    - [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/)   
-    - [Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
+    - [Récursivité](./T2_Programmation/2.2_Recursivite/cours.md)  
+    - [Programmation Orientée Objet](./T2_Programmation/2.1_Programmation_Orientee_Objet/cours.md)   
+    - [Listes / piles / files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md)
 
 !!! info "Entraînement :running: "
     Vous trouverez ci dessous quelques sites pour vous entrainez <br />
     - [e-nsi écrit](https://e-nsi.forge.aeif.fr/ecrit/){. target="_blank"}<br />
     - [e-nsi pratique](https://ens-fr.gitlab.io/nsi-pratique/){. target="_blank"}
+    - Site recensant les sujets de BAC écrit : [ici](https://boiling-aletopelta-ff5.notion.site/be357c0d12cb430faa79dd890feb660b?v=56349470c9704fc2b93983c20d5b9a65){. target="_blank"}
 
 <!--
 !!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
