@@ -3,22 +3,24 @@
 
 L'épreuve se partage en :
 
-- une **Épreuve Pratique** (sur 8 points, sur machine, durée 1h)
-- une **Épreuve Écrite** (sur 12 points, à l'écrit, durée 3h30)
+- une **Épreuve Pratique** (sur 20 points, sur machine, durée 1h)
+- une **Épreuve Écrite** (sur 20 points, à l'écrit, durée 3h30)
+- La note de l'épreuve de NSI est obtenu avec 1/4 de la note **Épreuve Pratique**  et 3/4 de la note **Épreuve Écrite**
 
 ## Épreuve Pratique
 
 !!! Abstract "Textes règlementaires"
     - [https://www.education.gouv.fr/bo/20/Special2/MENE2001797N.htm?cid_bo=149244](https://www.education.gouv.fr/bo/20/Special2/MENE2001797N.htm?cid_bo=149244)
+    -[https://www.education.gouv.fr/bo/2023/Hebdo36/MENE2317750N](https://www.education.gouv.fr/bo/2023/Hebdo36/MENE2317750N)
 
 
-- Durée : 1 heure
-- L'épreuve pratique donne lieu à une note sur **8 points**, qui s'ajouteront aux 12 points de l'épreuve écrite.
+- Durée : 1 heures
+- L'épreuve pratique donne lieu à une note sur **20 points**, qui pèsera pour 25% de la note finale
 
-La partie pratique consiste en la résolution de **deux exercices sur ordinateur**, chacun étant noté sur **4 points**.
+La partie pratique consiste en la résolution de **deux exercices sur ordinateur**, chacun étant noté sur **10 points**.
 
 Le candidat est évalué sur la base d’un dialogue avec un professeur-examinateur. Un examinateur évalue au maximum quatre élèves. L’examinateur ne peut pas évaluer un élève qu’il a eu en classe durant l’année en cours.
-L’évaluation de cette partie se déroule au cours du deuxième trimestre pendant la période de l’épreuve écrite de spécialité.
+
 
 **Premier exercice**
 
@@ -33,16 +35,17 @@ Pour le second exercice, un programme est fourni au candidat. Cet exercice ne de
 
 !!! Abstract "Textes règlementaires"
     - [https://eduscol.education.fr/2661/banque-des-epreuves-pratiques-de-specialite-nsi](https://eduscol.education.fr/2661/banque-des-epreuves-pratiques-de-specialite-nsi)
+    
 
 
 ## Épreuve Écrite
 
-À compter de la session 2023, l'épreuve consiste en **trois exercices** qui doivent tous être traités.
+À compter de la session 2024, l'épreuve consiste en **trois exercices** qui doivent tous être traités.
+L'épreuve est notée sur 20 points comptant pour 75% de la note finale.
 
 !!! Abstract "Textes règlementaires"
     - [Programme d'examen des épreuves terminales des enseignements de spécialité de la voie générale - à compter de la session 2023](https://www.education.gouv.fr/bo/22/Hebdo36/MENE2227884N.htm)
-
-*Les annales des sujets passés (2020, 2021, 2022) comportent tous 5 exercices dont seulement 3 devaient être traités. Ce n'est plus le cas maintenant où la totalité du sujet doit être traité.*
+    -[https://www.education.gouv.fr/bo/2023/Hebdo36/MENE2317750N](https://www.education.gouv.fr/bo/2023/Hebdo36/MENE2317750N)
 
 <!-->
 !!! abstract "Thèmes du programme susceptibles d'être évalués"

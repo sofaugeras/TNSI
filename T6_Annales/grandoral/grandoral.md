@@ -1,6 +1,10 @@
 # Grand Oral 
 
 - Texte réglementaire :  [Lien vers Eduscol](https://www.education.gouv.fr/reussir-au-lycee/baccalaureat-comment-se-passe-le-grand-oral-100028)
+- Complement 2024 : [Lien réglementaire](https://www.education.gouv.fr/bo/2023/Hebdo36/MENE2323117N)
+
+!!! warning "2024"
+    La durée du Grand oral est maintenue à 20 minutes. La troisième partie de l’épreuve, d’une durée de 5 minutes, consistant en un échange sur le projet d’orientation du candidat, est supprimée. Les deux parties restantes de l’épreuve seront désormais d’une durée égale de 10 minutes. Il sera donné au candidat la possibilité d’utiliser un tableau durant le second temps de l’épreuve.
 
 <iframe width="560" height="315" text-align="center" src="https://www.youtube.com/embed/WlNTRgykfLw" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
