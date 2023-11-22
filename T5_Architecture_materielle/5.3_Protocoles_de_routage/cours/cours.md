@@ -5,11 +5,13 @@
 
 ![image](data/BO.png){: .center}
 
+!!!- info "Crédits"
+    - [Gilles Lassus](https://glassus.github.io/)
 
 ## 0. Résumé des épisodes précédents
 
-- [cours](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.3_Architecture_reseau/cours/){:target="_blank"} de 1ère sur l'architecture d'un réseau
-- [cours](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/){:target="_blank"} de 1ère sur les différents protocoles de communication dans un réseau.
+- [cours](https://sofaugeras.github.io/1NSI/T4_Architecture_materielle/4.2_Architecture_reseau/cours/){:target="_blank"} de 1ère sur l'architecture d'un réseau
+- [cours](https://sofaugeras.github.io/1NSI/T4_Architecture_materielle/4.3_Protocoles_de_communication/cours/){:target="_blank"} de 1ère sur les différents protocoles de communication dans un réseau.
 
 
 !!! abstract "Notions essentielles :heart: :heart: :heart:"
