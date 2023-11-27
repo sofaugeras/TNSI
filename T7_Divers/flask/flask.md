@@ -262,7 +262,7 @@ return render_template("bonjour.html", date=date_du_jour)
 ...et comment ce dernier l’utilise
 <p>Nous sommes le {{date}}</p>
 
-En fait toutes les instructions {{...}} dans le code HTML du template correspondent à du code Python géré par le moteur de template Jinja2 utilisé par Flask.
+En fait toutes les instructions `{{...}}` dans le code HTML du template correspondent à du code Python géré par le moteur de template Jinja2 utilisé par Flask.
 
 2.5 - Envoi d’informations avec un formulaire
 Le plus souvent lorsque l’on souhaite transmettre des informations à une application web, il faut utiliser un formulaire HTML.

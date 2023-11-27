@@ -3,6 +3,11 @@
 !!! warning "Corrigés"
     Vous pouvez retrouver les corrigés des épreuves pratiques et écrites sur le site de Fabrice Nativel [ici](https://fabricenativel.github.io/index_annales/)
 
+## 2024
+- [Sujet 0 - version A](./data/2024/bac_nsi_2024_sujet0a.pdf)
+- [Sujet 0 - version B](./data/2024/bac_nsi_2024_sujet0b.pdf)
+- [Eléments de correction sujets 2024 - ici](https://pixees.fr/informatiquelycee/term/index.html#suj_bac)
+
 ## 2023
 
 - [Sujet 0 - version A](data/2023/2023-sujet_0-a.pdf)

@@ -1,7 +1,7 @@
 
 !!! abstract "Actualités :newspaper:" 
 
-    - 14 sujets posés en 2022 sont disponibles [ici](T6_Annales/liste_sujets.md){. target="_blank"}
+    - Le sujet 0 de l'épreuve de NSI 2024 est sorti 
 
     Les modalités du BAC 2024 ont été [annoncées](https://www.education.gouv.fr/bo/2023/Hebdo36/MENE2317750N){. target="_blank"} :
 
@@ -10,12 +10,13 @@
     - Le poids de l'écrit sera de 3/4 et le poids de la pratique de 1/4
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    - [Listes / piles / files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md) 
+    - [Listes chainées](./T1_Structures_de_donnees/1.2_Listes/Structures_ListesChainees.md)
 
 !!! note "*Thèmes traités*"
     - [Récursivité](./T2_Programmation/2.2_Recursivite/cours.md)  
     - [Programmation Orientée Objet](./T2_Programmation/2.1_Programmation_Orientee_Objet/cours.md)   
     - [Listes / piles / files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md)
+    - [Base de données](./T4_Bases_de_donnees/sommaire.md)
 
 !!! info "Entraînement :running: "
     Vous trouverez ci dessous quelques sites pour vous entrainez <br />

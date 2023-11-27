@@ -1,4 +1,4 @@
-# Structures de données linéaires :  listes, piles, files
+# Structures de données linéaires :  piles, files
 
 ## 0. Préambule : interface ≠ implémentation
 
