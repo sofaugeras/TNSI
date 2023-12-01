@@ -267,7 +267,6 @@ On peut noter que cette classe `Maillon` n'a pas de _méthodes_ dédiées.
     En vous servant des attributs de cet objet, explorer cette liste chainée puis la représenter.
 
     ```python
-    #--- HDR ---#
     class Maillon :
         def __init__(self, data = None, suivant = None)  :
             self.head= data
@@ -277,13 +276,11 @@ On peut noter que cette classe `Maillon` n'a pas de _méthodes_ dédiées.
     B = Maillon("Bronze", C)
     A = Maillon("Argent", B)
     maListeMystere = Maillon("Or",A)
-    #--- HDR ---#
     print("Merci d'avoir executé le code : à vous de découvrir la liste chainée maListeMystere")
     ```
     ??? danger "Solution"
-    La liste chainée est : Or → Argent → Bronze → Chocolat → ⟂.
-
-    On l'obtient en saisissant `maListeMystere.head`, puis `maListeMystere.tail.head`, etc.
+        La liste chainée est : Or → Argent → Bronze → Chocolat → ⟂.
+        On l'obtient en saisissant `maListeMystere.head`, puis `maListeMystere.tail.head`, etc.
 
 
 ## ^^6. Exercices et TP^^
