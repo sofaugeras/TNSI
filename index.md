@@ -10,15 +10,16 @@
     - Le poids de l'écrit sera de 3/4 et le poids de la pratique de 1/4
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    - [Listes chainées](./T1_Structures_de_donnees/1.2_Listes/Structures_ListesChainees.md)
+    - [Les arbres](./T1_Structures_de_donnees/1.4_Arbres/cours.md)
 
 !!! note "*Thèmes traités*"
     - [Récursivité](./T2_Programmation/2.2_Recursivite/cours.md)  
     - [Programmation Orientée Objet](./T2_Programmation/2.1_Programmation_Orientee_Objet/cours.md)   
     - [Listes / piles / files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md)
     - [Base de données](./T4_Bases_de_donnees/sommaire.md)
+    - [Listes chainées](./T1_Structures_de_donnees/1.2_Listes/Structures_ListesChainees.md)
 
-!!! info "Entraînement :running: "
+!!! info "Entraînement"
     Vous trouverez ci dessous quelques sites pour vous entrainez <br />
     - [e-nsi écrit](https://e-nsi.forge.aeif.fr/ecrit/){. target="_blank"}<br />
     - [e-nsi pratique](https://ens-fr.gitlab.io/nsi-pratique/){. target="_blank"}

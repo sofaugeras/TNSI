@@ -1,7 +1,7 @@
 # Découverte du langage SQL
 
 !!! note "Téléchargement"
-    Vous pouvez télécharger le notebook du cours [ici](../data/tnsi_BD_1.ipynb)
+    Vous pouvez télécharger le notebook du cours [ici](./data/tnsi_BD_1.ipynb)
 
 Dans ce TP jous allons découvrir le langage SQL (*Structured Query Language*) qui est le langage utilisé pour
 effectuer des requêtes sur une base de données relationnelles. Nous apprendrons lors de ce TP à : <br />

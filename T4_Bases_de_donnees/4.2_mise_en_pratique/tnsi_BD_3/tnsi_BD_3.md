@@ -1,7 +1,7 @@
 # Manipuler les données avec SQL
 
 !!! note "Téléchargement"
-    Vous pouvez télécharger le notebook du cours [ici](../data/tnsi_BD_3.ipynb)
+    Vous pouvez télécharger le notebook du cours [ici](./data/tnsi_BD_3.ipynb)
 
 Dans ce dernier TP, nous allons voir comment insérer, mettre à jour ou supprimer des enregistrements dans des tables.
 

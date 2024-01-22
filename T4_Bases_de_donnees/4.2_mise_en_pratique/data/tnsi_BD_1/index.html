@@ -12,28 +12,28 @@
         <meta name="author" content="Sophie FAUGERAS">
       
       
-        <link rel="canonical" href="https://github.com/sofaugeras/TNSI/T4_Bases_de_donnees/data/tnsi_BD_5_baseDataGouv/">
+        <link rel="canonical" href="https://github.com/sofaugeras/TNSI/T4_Bases_de_donnees/4.2_mise_en_pratique/data/tnsi_BD_1/">
       
       
-        <link rel="prev" href="../tnsi_BD_4_python/">
+        <link rel="prev" href="../../tnsi_BD_5_baseDataGouv/">
       
       
-        <link rel="next" href="../../../T5_Architecture_materielle/sommaire/">
+        <link rel="next" href="../tnsi_BD_2/">
       
       
-      <link rel="icon" href="../../../xtra/favTNSI.png">
+      <link rel="icon" href="../../../../xtra/favTNSI.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
     
     
       
-        <title>Exploiter un vrai jeu de donnée - Saint Sauveur TNSI</title>
+        <title>SQL 1/3 - Saint Sauveur TNSI</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.fad675c6.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.fad675c6.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.356b1318.min.css">
       
       
   
@@ -51,8 +51,8 @@
     
       
     
-    <script src="../../../xtra/webcomponentsjs/webcomponents-loader.js"></script>
-    <script src="../../../xtra/gifplayer/gif-player.es6.js" defer async></script>
+    <script src="../../../../xtra/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../../../../xtra/gifplayer/gif-player.es6.js" defer async></script>
     <!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
@@ -66,11 +66,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../xtra/stylesheets/pyoditeur.css">
+      <link rel="stylesheet" href="../../../../xtra/stylesheets/pyoditeur.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -109,7 +109,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exploiter-un-vrai-jeu-de-donnee" class="md-skip">
+        <a href="#sql-13" class="md-skip">
           Aller au contenu
         </a>
       
@@ -123,7 +123,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="../../.." title="Saint Sauveur TNSI" class="md-header__button md-logo" aria-label="Saint Sauveur TNSI" data-md-component="logo">
+    <a href="../../../.." title="Saint Sauveur TNSI" class="md-header__button md-logo" aria-label="Saint Sauveur TNSI" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Z"/></svg>
@@ -143,7 +143,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exploiter un vrai jeu de donnée
+              SQL 1/3
             
           </span>
         </div>
@@ -247,7 +247,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../../../.." class="md-tabs__link">
         
   
     
@@ -266,7 +266,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T1_Structures_de_donnees/sommaire/" class="md-tabs__link">
+        <a href="../../../../T1_Structures_de_donnees/sommaire/" class="md-tabs__link">
           
   
   T1 Structures de données
@@ -284,7 +284,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T2_Programmation/sommaire/" class="md-tabs__link">
+        <a href="../../../../T2_Programmation/sommaire/" class="md-tabs__link">
           
   
   T2 Programmation
@@ -302,7 +302,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T3_Algorithmique/sommaire/" class="md-tabs__link">
+        <a href="../../../../T3_Algorithmique/sommaire/" class="md-tabs__link">
           
   
   T3 Algorithmique
@@ -322,7 +322,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../sommaire/" class="md-tabs__link">
+        <a href="../../../sommaire/" class="md-tabs__link">
           
   
   T4 Bases de donnees
@@ -340,7 +340,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T5_Architecture_materielle/sommaire/" class="md-tabs__link">
+        <a href="../../../../T5_Architecture_materielle/sommaire/" class="md-tabs__link">
           
   
   T5 Architecture matérielle
@@ -358,7 +358,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T6_5_algos_coeur/sommaire/" class="md-tabs__link">
+        <a href="../../../../T6_5_algos_coeur/sommaire/" class="md-tabs__link">
           
   
   Algos ❤
@@ -376,7 +376,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T6_6_Epreuve_pratique/BNS_2023/" class="md-tabs__link">
+        <a href="../../../../T6_6_Epreuve_pratique/BNS_2023/" class="md-tabs__link">
           
   
   EP 💻
@@ -394,7 +394,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T6_Annales/epreuve_bac/" class="md-tabs__link">
+        <a href="../../../../T6_Annales/epreuve_bac/" class="md-tabs__link">
           
   
   Bac 🖊️
@@ -412,7 +412,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T7_Divers/conseils/" class="md-tabs__link">
+        <a href="../../../../T7_Divers/conseils/" class="md-tabs__link">
           
   
   T7 Divers
@@ -430,7 +430,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../my_theme_customizations/pyodide-mkdocs/end_REM/" class="md-tabs__link">
+        <a href="../../../../my_theme_customizations/pyodide-mkdocs/end_REM/" class="md-tabs__link">
           
   
   Pyodide mkdocs
@@ -465,7 +465,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Saint Sauveur TNSI" class="md-nav__button md-logo" aria-label="Saint Sauveur TNSI" data-md-component="logo">
+    <a href="../../../.." title="Saint Sauveur TNSI" class="md-nav__button md-logo" aria-label="Saint Sauveur TNSI" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Z"/></svg>
@@ -495,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -557,7 +557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/sommaire/" class="md-nav__link">
+      <a href="../../../../T1_Structures_de_donnees/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -617,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/" class="md-nav__link">
+      <a href="../../../../T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -638,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/" class="md-nav__link">
+      <a href="../../../../T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -706,11 +706,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.2_Listes/Structures_ListesChainees/" class="md-nav__link">
+      <a href="../../../../T1_Structures_de_donnees/1.2_Listes/Structures_ListesChainees/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     ⛓️ Les listes chainées ⛓️
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../T1_Structures_de_donnees/1.2_Listes/exercices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ⛓️ Exercices et TP sur les Listes Chainées ⛓️
   </span>
   
 
@@ -738,10 +759,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3_2" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3_3" >
         
           
-          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_3_3" id="__nav_2_3_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -752,8 +773,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_3_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_3">
             <span class="md-nav__icon md-icon"></span>
             Data
           </label>
@@ -766,7 +787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.2_Listes/data/Structures_ListesChainees_SujetBac_22NSIJ2AN1/" class="md-nav__link">
+      <a href="../../../../T1_Structures_de_donnees/1.2_Listes/data/Structures_ListesChainees_SujetBac_22NSIJ2AN1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -787,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.2_Listes/data/TP_Exos_ListesChainees/" class="md-nav__link">
+      <a href="../../../../T1_Structures_de_donnees/1.2_Listes/data/TP_Exos_ListesChainees/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -863,7 +884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.4_Arbres/cours/" class="md-nav__link">
+      <a href="../../../../T1_Structures_de_donnees/1.4_Arbres/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -884,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.4_Arbres/Exercices/" class="md-nav__link">
+      <a href="../../../../T1_Structures_de_donnees/1.4_Arbres/Exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -952,7 +973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.4_Dictionnaires/cours/" class="md-nav__link">
+      <a href="../../../../T1_Structures_de_donnees/1.4_Dictionnaires/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -973,7 +994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.4_Dictionnaires/exercices/" class="md-nav__link">
+      <a href="../../../../T1_Structures_de_donnees/1.4_Dictionnaires/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1002,7 +1023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.5_Graphes/cours/" class="md-nav__link">
+      <a href="../../../../T1_Structures_de_donnees/1.5_Graphes/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1072,7 +1093,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Programmation/sommaire/" class="md-nav__link">
+      <a href="../../../../T2_Programmation/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1132,7 +1153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Programmation/2.1_Recursivite/TP_Von_Koch/" class="md-nav__link">
+      <a href="../../../../T2_Programmation/2.1_Recursivite/TP_Von_Koch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1153,7 +1174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Programmation/2.1_Recursivite/cours/" class="md-nav__link">
+      <a href="../../../../T2_Programmation/2.1_Recursivite/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1174,7 +1195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Programmation/2.1_Recursivite/recursivite-Corrige/" class="md-nav__link">
+      <a href="../../../../T2_Programmation/2.1_Recursivite/recursivite-Corrige/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1203,7 +1224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Programmation/2.2_Programmation_Orientee_Objet/cours/" class="md-nav__link">
+      <a href="../../../../T2_Programmation/2.2_Programmation_Orientee_Objet/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1224,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Programmation/2.4_Mise_au_point_de_programme/cours/" class="md-nav__link">
+      <a href="../../../../T2_Programmation/2.4_Mise_au_point_de_programme/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1294,7 +1315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T3_Algorithmique/sommaire/" class="md-nav__link">
+      <a href="../../../../T3_Algorithmique/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1354,7 +1375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T3_Algorithmique/3.1_Diviser_pour_regner/cours/" class="md-nav__link">
+      <a href="../../../../T3_Algorithmique/3.1_Diviser_pour_regner/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1375,7 +1396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T3_Algorithmique/3.1_Diviser_pour_regner/exercices/" class="md-nav__link">
+      <a href="../../../../T3_Algorithmique/3.1_Diviser_pour_regner/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1404,7 +1425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T3_Algorithmique/3.2_Programmation_dynamique/cours/" class="md-nav__link">
+      <a href="../../../../T3_Algorithmique/3.2_Programmation_dynamique/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1425,7 +1446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T3_Algorithmique/3.3_Recherche_textuelle/cours/" class="md-nav__link">
+      <a href="../../../../T3_Algorithmique/3.3_Recherche_textuelle/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1495,7 +1516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sommaire/" class="md-nav__link">
+      <a href="../../../sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1516,7 +1537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.1_modele_relationnel/cours/" class="md-nav__link">
+      <a href="../../../4.1_modele_relationnel/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1525,158 +1546,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    4.2 mise en pratique
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_3">
-            <span class="md-nav__icon md-icon"></span>
-            4.2 mise en pratique
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../4.2_mise_en_pratique/tnsi_BD_1/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Découverte du langage SQL
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../4.2_mise_en_pratique/tnsi_BD_2/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Manipulation des base de données
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../4.2_mise_en_pratique/tnsi_BD_3/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Manipuler les données avec SQL
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../4.2_mise_en_pratique/tnsi_BD_4_python/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exploiter une base de données avec Python
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../4.2_mise_en_pratique/tnsi_BD_5_baseDataGouv/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exploiter un vrai jeu de donnée
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -1700,24 +1569,24 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
-    Data
+    4.2 mise en pratique
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_3">
             <span class="md-nav__icon md-icon"></span>
-            Data
+            4.2 mise en pratique
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1728,7 +1597,160 @@
   
   
     <li class="md-nav__item">
-      <a href="../tnsi_BD_1/" class="md-nav__link">
+      <a href="../../tnsi_BD_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Découverte du langage SQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tnsi_BD_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manipulation des base de données
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tnsi_BD_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manipuler les données avec SQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tnsi_BD_4_python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exploiter une base de données avec Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tnsi_BD_5_baseDataGouv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exploiter un vrai jeu de donnée
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_3_6" id="__nav_5_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1737,6 +1759,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1809,19 +1832,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../tnsi_BD_5_baseDataGouv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1830,6 +1844,13 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1900,7 +1921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T5_Architecture_materielle/sommaire/" class="md-nav__link">
+      <a href="../../../../T5_Architecture_materielle/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1921,7 +1942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T5_Architecture_materielle/5.0_Autour_de_GNU_Linux/cours/" class="md-nav__link">
+      <a href="../../../../T5_Architecture_materielle/5.0_Autour_de_GNU_Linux/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1942,7 +1963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/" class="md-nav__link">
+      <a href="../../../../T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2002,7 +2023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T5_Architecture_materielle/5.2_Gestion_des_processus/cours/" class="md-nav__link">
+      <a href="../../../../T5_Architecture_materielle/5.2_Gestion_des_processus/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2023,7 +2044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T5_Architecture_materielle/5.2_Gestion_des_processus/Exercices/" class="md-nav__link">
+      <a href="../../../../T5_Architecture_materielle/5.2_Gestion_des_processus/Exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2091,7 +2112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/" class="md-nav__link">
+      <a href="../../../../T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2112,7 +2133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T5_Architecture_materielle/5.3_Protocoles_de_routage/Exercices/" class="md-nav__link">
+      <a href="../../../../T5_Architecture_materielle/5.3_Protocoles_de_routage/Exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2180,28 +2201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T5_Architecture_materielle/5.4_Cryptographie/02_Exercices/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    02 Exercices
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../T5_Architecture_materielle/5.4_Cryptographie/Exercices/" class="md-nav__link">
+      <a href="../../../../T5_Architecture_materielle/5.4_Cryptographie/Exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2222,7 +2222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T5_Architecture_materielle/5.4_Cryptographie/cours/" class="md-nav__link">
+      <a href="../../../../T5_Architecture_materielle/5.4_Cryptographie/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2300,7 +2300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_5_algos_coeur/sommaire/" class="md-nav__link">
+      <a href="../../../../T6_5_algos_coeur/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2321,7 +2321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_5_algos_coeur/6.1_algos_premiere/cours/" class="md-nav__link">
+      <a href="../../../../T6_5_algos_coeur/6.1_algos_premiere/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2342,7 +2342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_5_algos_coeur/6.2_recursivite/cours/" class="md-nav__link">
+      <a href="../../../../T6_5_algos_coeur/6.2_recursivite/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2363,7 +2363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_5_algos_coeur/6.3_Tri/cours/" class="md-nav__link">
+      <a href="../../../../T6_5_algos_coeur/6.3_Tri/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2433,7 +2433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_6_Epreuve_pratique/BNS_2023/" class="md-nav__link">
+      <a href="../../../../T6_6_Epreuve_pratique/BNS_2023/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2454,7 +2454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_6_Epreuve_pratique/BNS_2022/" class="md-nav__link">
+      <a href="../../../../T6_6_Epreuve_pratique/BNS_2022/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2475,7 +2475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_6_Epreuve_pratique/BNS_2021/" class="md-nav__link">
+      <a href="../../../../T6_6_Epreuve_pratique/BNS_2021/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2545,7 +2545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Annales/epreuve_bac/" class="md-nav__link">
+      <a href="../../../../T6_Annales/epreuve_bac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2566,7 +2566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Annales/liste_sujets/" class="md-nav__link">
+      <a href="../../../../T6_Annales/liste_sujets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2587,7 +2587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Annales/grandoral/" class="md-nav__link">
+      <a href="../../../../T6_Annales/grandoral/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2608,7 +2608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Annales/revisionBD/" class="md-nav__link">
+      <a href="../../../../T6_Annales/revisionBD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2629,7 +2629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Annales/revisionTAD/" class="md-nav__link">
+      <a href="../../../../T6_Annales/revisionTAD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2650,7 +2650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Annales/revisionArbre/" class="md-nav__link">
+      <a href="../../../../T6_Annales/revisionArbre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2671,7 +2671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Annales/revisionRecurisivite/" class="md-nav__link">
+      <a href="../../../../T6_Annales/revisionRecurisivite/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2741,7 +2741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_Divers/conseils/" class="md-nav__link">
+      <a href="../../../../T7_Divers/conseils/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2762,7 +2762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_Divers/orientation/" class="md-nav__link">
+      <a href="../../../../T7_Divers/orientation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2783,7 +2783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_Divers/flask/" class="md-nav__link">
+      <a href="../../../../T7_Divers/flask/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2853,7 +2853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../my_theme_customizations/pyodide-mkdocs/end_REM/" class="md-nav__link">
+      <a href="../../../../my_theme_customizations/pyodide-mkdocs/end_REM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2874,7 +2874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../my_theme_customizations/pyodide-mkdocs/start_REM/" class="md-nav__link">
+      <a href="../../../../my_theme_customizations/pyodide-mkdocs/start_REM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2909,7 +2909,7 @@
                 
 
 
-    <a href="/sofaugeras/TNSI/T4_Bases_de_donnees/data/tnsi_BD_5_baseDataGouv/tnsi_BD_5_baseDataGouv.ipynb" title="Download" class="md-content__button md-icon">
+    <a href="/sofaugeras/TNSI/T4_Bases_de_donnees/4.2_mise_en_pratique/data/tnsi_BD_1/tnsi_BD_1.ipynb" title="Download" class="md-content__button md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7 7-7Z"/></svg>
     </a>
 
@@ -3327,7 +3327,18 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="exploiter-un-vrai-jeu-de-donnee">Exploiter un vrai jeu de donnée<a class="anchor-link" href="#exploiter-un-vrai-jeu-de-donnee">¶</a></h1><blockquote>
+<p>@crédits du cours : olivier lécluse, lycée Salvador Allende</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="sql-13">SQL 1/3<a class="anchor-link" href="#sql-13">¶</a></h1><blockquote>
 <p>Cours NSI Terminale - Thème 2.</p>
 </blockquote>
 </div>
@@ -3340,21 +3351,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="mise-en-pratique-sur-une-vraie-base">Mise en pratique sur une vraie base<a class="anchor-link" href="#mise-en-pratique-sur-une-vraie-base">¶</a></h1><p>A partir de maintenant, vous avez les connaissances pour réaliser une application s'appuyant sur une base de données. Il  ne reste plus qu'à les appliquer dans le cadre d'un projet ou un mini projet. Un exemple de mini-projet possible dans le domaine du <em>BigData</em> consiste à récupérer des données officielles et à s'aider du langage SQL pour les exploiter.</p>
-<h2 id="exemple-de-jeu-de-donnees">Exemple de jeu de données<a class="anchor-link" href="#exemple-de-jeu-de-donnees">¶</a></h2><p>Une source intéressante pour récupérer des données est <strong>data.gouv.fr</strong>. Voici un exemple de jeu de données : <a href="https://www.data.gouv.fr/fr/datasets/resultats-du-controle-sanitaire-de-leau-distribuee-commune-par-commune/#_">https://www.data.gouv.fr/fr/datasets/resultats-du-controle-sanitaire-de-leau-distribuee-commune-par-commune/#_</a></p>
-<p>La description de chacun des fichiers se trouve ici : <a href="https://static.data.gouv.fr/resources/resultats-du-controle-sanitaire-de-leau-distribuee-commune-par-commune/20190710-030936/20190708-eau-distrib-documentation-v4.pdf">https://static.data.gouv.fr/resources/resultats-du-controle-sanitaire-de-leau-distribuee-commune-par-commune/20190710-030936/20190708-eau-distrib-documentation-v4.pdf</a></p>
-<ol start="0">
-<li>Téléchargez le fichier dis-* le plus récent. Décompressez le et analysez sa structure.</li>
-<li>Créez une nouvelle base de données et 3 tables à l'intérieur :<ul>
-<li>Communes</li>
-<li>Prelevements</li>
-<li>Resultats</li>
-</ul>
-</li>
-<li>Créez dans chacune des tables une clé primaire nommée Id<em>NomTable</em> ainsi que des attributs correspondants aux intitulés de colonne</li>
-<li>A l'aide de Python, lisez chacun des fichiers et peuplez les tables correspondantes.</li>
-<li>Créez des requêtes SQL afin de vous renseigner sur la qualité de l'eau dans les communes proches de chez vous.</li>
-</ol>
+<h1 id="decouverte-du-langage-sql">Découverte du langage SQL<a class="anchor-link" href="#decouverte-du-langage-sql">¶</a></h1>
 </div>
 </div>
 </div>
@@ -3365,7 +3362,39 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="creation-des-tables">Création des tables<a class="anchor-link" href="#creation-des-tables">¶</a></h3>
+<p>Dans ce TP jous allons découvrir le langage SQL (<em>Structured Query Language</em>) qui est le langage utilisé pour
+effectuer des requêtes sur une base de données relationnelles. Nous apprendrons lors de ce TP à</p>
+<ul>
+<li>créer des tables avec les attributs que l'on souhaite</li>
+<li>insérer des enregistrements</li>
+<li>faire des requêtes sur la base pour extraire des informations</li>
+</ul>
+<p>Contrairement aux apparences, nous n'utiliserons pas Python dans ce classeur, mais directement SQL grâce à l'extension <strong>ipython-sql</strong> qu'il faut activer en ouvrant une console Anaconda prompt et taper les commandes suivantes :</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>jupyter-sql
+pip<span class="w"> </span>install<span class="w"> </span>ipython-sql
+</pre></div>
+<p>puis relancer jupyter.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>On charge le module SQL avec la commande suivante</p>
 </div>
 </div>
 </div>
@@ -3388,76 +3417,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
-<span class="n">bdd</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">"dis_db"</span><span class="p">)</span>
-<span class="n">curseur</span> <span class="o">=</span> <span class="n">bdd</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="o">%</span><span class="n">load_ext</span> <span class="n">sql</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-1">import sqlite3
-bdd = sqlite3.connect("dis_db")
-curseur = bdd.cursor()</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-2">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Creation table Communes</span>
-<span class="n">requete</span> <span class="o">=</span> <span class="s2">"""</span>
-<span class="s2">CREATE TABLE Communes</span>
-<span class="s2">(</span>
-<span class="s2">    IdCommune INTEGER  PRIMARY KEY,</span>
-<span class="s2">    inseecommune TEXT,</span>
-<span class="s2">    nomcommune TEXT,</span>
-<span class="s2">    quartier TEXT,</span>
-<span class="s2">    cdreseau TEXT,</span>
-<span class="s2">    nomreseau TEXT,</span>
-<span class="s2">    debutalim DATE</span>
-<span class="s2">);"""</span>
-<span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">requete</span><span class="p">)</span>
-
-<span class="c1"># Creation des tables Prelevements et Resultats</span>
-
-<span class="c1"># YOUR CODE HERE</span>
-
-<span class="n">bdd</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-2"># Creation table Communes
-requete = """
-CREATE TABLE Communes
-(
-    IdCommune INTEGER  PRIMARY KEY,
-    inseecommune TEXT,
-    nomcommune TEXT,
-    quartier TEXT,
-    cdreseau TEXT,
-    nomreseau TEXT,
-    debutalim DATE
-);"""
-curseur.execute(requete)
-
-# Creation des tables Prelevements et Resultats
-
-# YOUR CODE HERE
-
-bdd.commit()</div>
+<div class="clipboard-copy-txt" id="cell-1">%load_ext sql</div>
 </div>
 </div>
 </div>
@@ -3470,7 +3432,64 @@ bdd.commit()</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="alimentation-de-la-base-de-donnees">Alimentation de la base de données<a class="anchor-link" href="#alimentation-de-la-base-de-donnees">¶</a></h3>
+<h2 id="creer-la-base-de-donnees">Créer la base de données<a class="anchor-link" href="#creer-la-base-de-donnees">¶</a></h2><p>Nous allons commencer par créer une base vide dans laquelle nous allons travailler :</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-2">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="o">%</span><span class="n">sql</span> <span class="n">sqlite</span><span class="p">:</span><span class="o">///</span><span class="n">livres_db</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-2">%sql sqlite:///livres_db</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>La base s'appelle <strong>livres_db</strong> et est au format <em>sqlite</em> qui est un gestionnaire de base de données relationnelles léger et facile à prendre en main.</p>
+<p>Les données seront inscrites dans le fichier <strong>livres_db</strong> qui vient d'être créé à côté de ce classeur et que vous pourrez télécharger quand vous aurez fini ce TP.</p>
+<p>L'objectif est de peupler cette base de données avec la base <strong>livres</strong> que l'on a étudié lors de la découverte du modèle relationnel. Cette base sera constituée de 4 tables :</p>
+<ul>
+<li>Auteurs</li>
+<li>Livres</li>
+<li>Langues</li>
+<li>Themes</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="creer-une-table">Créer une table<a class="anchor-link" href="#creer-une-table">¶</a></h2><p>Il est temps de commencer à peupler notre base de données. Nous allons commencer par créer la table <strong>Langues</strong> en saisissant notre première requête :</p>
 </div>
 </div>
 </div>
@@ -3493,53 +3512,55 @@ bdd.commit()</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Exemple d'import d'un fichier CSV dans une BDD</span>
-
-<span class="kn">import</span> <span class="nn">csv</span>
-
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'DIS_COM_UDI_2020.txt'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
-    <span class="n">nb_lignes</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">lignes</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">csvfile</span><span class="p">)</span>
-    <span class="n">entete</span> <span class="o">=</span> <span class="kc">True</span>
-    <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">lignes</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">entete</span><span class="p">:</span>
-            <span class="n">entete</span> <span class="o">=</span> <span class="kc">False</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">nb_lignes</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="n">requete</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span>
-<span class="s2">            INSERT INTO Communes</span>
-<span class="s2">                (inseecommune,nomcommune,quartier,cdreseau,nomreseau,debutalim)</span>
-<span class="s2">            VALUES</span>
-<span class="s2">                (?, ?, ?, ?, ?, ?)</span>
-<span class="s2">            """</span>
-            <span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">requete</span><span class="p">,</span> <span class="n">l</span><span class="p">)</span>
-    <span class="n">bdd</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">nb_lignes</span><span class="si">}</span><span class="s2"> enregistrements créés"</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="o">%%</span><span class="n">sql</span> 
+<span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">Langues</span> 
+<span class="p">(</span>
+<span class="n">IdLangue</span> <span class="n">INTEGER</span>  <span class="n">PRIMARY</span> <span class="n">KEY</span><span class="p">,</span>
+<span class="n">Langue</span>   <span class="n">TEXT</span>
+<span class="p">);</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-3"># Exemple d'import d'un fichier CSV dans une BDD
-
-import csv
-
-with open('DIS_COM_UDI_2020.txt', encoding='utf-8') as csvfile:
-    nb_lignes = 0
-    lignes = csv.reader(csvfile)
-    entete = True
-    for l in lignes:
-        if entete:
-            entete = False
-        else:
-            nb_lignes += 1
-            requete = f"""
-            INSERT INTO Communes
-                (inseecommune,nomcommune,quartier,cdreseau,nomreseau,debutalim)
-            VALUES
-                (?, ?, ?, ?, ?, ?)
-            """
-            curseur.execute(requete, l)
-    bdd.commit()
-    print(f"{nb_lignes} enregistrements créés")</div>
+<div class="clipboard-copy-txt" id="cell-3">%%sql 
+CREATE TABLE Langues 
+(
+IdLangue INTEGER  PRIMARY KEY,
+Langue   TEXT
+);</div>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="quelques-explications">Quelques explications :<a class="anchor-link" href="#quelques-explications">¶</a></h3><p>Pour commencer, dans jupyter lorsque nous voulons taper une commande <strong>SQL</strong> et non du langage python. Pour cela, nous inscrirons <strong>en première ligne de cellule</strong> la commande <em>magique</em> <code>%%sql</code>. N'oubliez jamais de commencer toutes vos cellules ainsi car sinon, la commande sera interprétée par <em>python</em> et non <em>SQL</em>.</p>
+<p>La première requête <strong>SQL</strong> que nous allons apprendre est la requête <code>CREATE TABLE</code></p>
+<ul>
+<li>on indique le nom de la table à créer</li>
+<li>entre parenthèse on liste les <em>attributs</em> à mettre ainsi que leur <em>type</em>.</li>
+<li>une requête se termine <strong>toujours</strong> par ;</li>
+</ul>
+<p>Nous avons deux types différents dans notre base de données :</p>
+<ul>
+<li>le type TEXT pour tout ce qui est chaîne de caractères</li>
+<li>le type INTEGER pour les entiers</li>
+</ul>
+<p>L'attribut <strong>IdLangue</strong> est la <em>clé primaire</em> de la table. C'est un entier qui commence à 1 et qui sera automatiquement incrémenté au fur à mesure que l'on insère des données dans la table. C'est en indiquant <code>PRIMARY KEY</code> après le type dans la déclaration de l'attribut <strong>IdLangue</strong> que <em>sqlite</em> se comporte ainsi.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="inserer-des-enregistrements-dans-la-table">Insérer des enregistrements dans la table<a class="anchor-link" href="#inserer-des-enregistrements-dans-la-table">¶</a></h2><p>Maintenant que nous avons une table vide, il nous faut la remplir avec les données sur les auteurs. Nous utiliserons pour cela la requête <strong>INSERT</strong>. Voici son utilisation :</p>
 </div>
 </div>
 </div>
@@ -3562,26 +3583,64 @@ with open('DIS_COM_UDI_2020.txt', encoding='utf-8') as csvfile:
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Procédez de même pour le fichier prélèvement</span>
-
-<span class="c1"># YOUR CODE HERE</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="o">%%</span><span class="n">sql</span>
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">Langues</span> 
+    <span class="p">(</span><span class="n">Langue</span><span class="p">)</span>
+<span class="n">VALUES</span>
+    <span class="p">(</span><span class="s2">"Anglais"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"Français"</span><span class="p">);</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-4"># Procédez de même pour le fichier prélèvement
-
-# YOUR CODE HERE
+<div class="clipboard-copy-txt" id="cell-4">%%sql
+INSERT INTO Langues 
+    (Langue)
+VALUES
+    ("Anglais"),
+    ("Français");</div>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="quelques-explications">Quelques explications :<a class="anchor-link" href="#quelques-explications">¶</a></h3><p>La requête <strong>INSERT</strong> s'utilise ainsi :</p>
+<pre><code>INSERT INTO ##TABLE##
+    (## attributs dont on donne les valeurs##)
+VALUES
+    (## enregistrement 1 ##),
+    ...
+    (## enregistrement n ##);
+</code></pre>
+<p>On peut refaire une autre requête <strong>INSERT</strong> à la suite si on souhaite ajouter encore des données au bout de la table.</p>
+<p>Vous remarquez que l'on ne donne pas de valeur pour l'attribut <strong>IdLangue</strong>. C'est parce qu'on l'a déclaré en <code>PRIMARY KEY</code>. Il est donc automatiquement géré par sqlite. Nous verrons cela en lisant le contenu complet de la table.</p>
+<p>On est pas obligé de préciser tous les attributs. <strong>IdLangue</strong> est un exemple particulier, mais il est possible d'omettre d'autres attributs. Ils seront alors affectés d'une valeur nulle.</p>
+<p>A l'issue de la requête, sqlite nous informe que 2 lignes ont été créées.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="lire-le-contenu-dune-table">Lire le contenu d'une table<a class="anchor-link" href="#lire-le-contenu-dune-table">¶</a></h2><p>Nous allons à présent utiliser une requête <strong>SELECT</strong> afin de récupérer le contenu de la table. Ces requêtes peuvent être très sophistiquées comme on va le voir en fin de TP. Pour le moment, nous nous contenterons de la forme la plus simple :</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-5">
@@ -3594,13 +3653,60 @@ with open('DIS_COM_UDI_2020.txt', encoding='utf-8') as csvfile:
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"SELECT COUNT(*) FROM Prelevements;"</span><span class="p">)</span>
-<span class="k">assert</span> <span class="n">curseur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">126730</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="o">%%</span><span class="n">sql</span>
+
+<span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">Langues</span><span class="p">;</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-5">curseur.execute("SELECT COUNT(*) FROM Prelevements;")
-assert curseur.fetchone()[0] == 126730</div>
+<div class="clipboard-copy-txt" id="cell-5">%%sql
+
+SELECT * FROM Langues;</div>
 </div>
 </div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre> * sqlite:///livres_db
+Done.
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<table>
+<tr>
+<th>IdLangue</th>
+<th>Langue</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Anglais</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Français</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Vous voyez donc appraître le contenu de la table. Vous constatez que la clé primaire <strong>IdLangue</strong> a bien été générée correctement.</p>
+<p>Il est possible de stocker le résultat de cette requête dans une variable pour l'exploiter plus facilement dans jupyter. Voici comment procéder en modifiant légèrement la première ligne :</p>
 </div>
 </div>
 </div>
@@ -3623,15 +3729,22 @@ assert curseur.fetchone()[0] == 126730</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># et enfin le fichier Resultat</span>
-
-<span class="c1"># YOUR CODE HERE</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">resultat</span> <span class="o">=</span> <span class="o">%</span><span class="n">sql</span> <span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">Langues</span><span class="p">;</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-6"># et enfin le fichier Resultat
-
-# YOUR CODE HERE</div>
+<div class="clipboard-copy-txt" id="cell-6">resultat = %sql SELECT * FROM Langues;</div>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Vous voyez au passage la syntaxe concise permettant de récupérer le résultat d'une requête dans une variable. Cette variable résultat est exploitable dans ce classeur, y compris par python !!</p>
 </div>
 </div>
 </div>
@@ -3654,43 +3767,11 @@ assert curseur.fetchone()[0] == 126730</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"SELECT COUNT(*) FROM Resultats;"</span><span class="p">)</span>
-<span class="k">assert</span> <span class="n">curseur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3683342</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">resultat</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-7">curseur.execute("SELECT COUNT(*) FROM Resultats;")
-assert curseur.fetchone()[0] == 3683342</div>
+<div class="clipboard-copy-txt" id="cell-7">resultat</div>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="interrogation-de-la-base-de-donnees">Interrogation de la base de données<a class="anchor-link" href="#interrogation-de-la-base-de-donnees">¶</a></h3><p>Nous avons à présent une vraie base de données avec de vraies données, en nombre conséquent. Une petite requête sur la table Resultats suffit pour s'en convaincre : Plus de 3 millions et demi d'enregistrements !</p>
-<h3 id="quelques-idees-de-fonctions-a-creer">Quelques idées de fonctions à créer !<a class="anchor-link" href="#quelques-idees-de-fonctions-a-creer">¶</a></h3><ul>
-<li><p>une fonction <strong>liste_communes</strong> prenant en entrée un curseur et un numéro de département et renvoyant la liste des communes dans de département présentes dans la base.</p>
-<ul>
-<li>La fonction ne renverra pas plusieurs fois la même commune</li>
-<li>Attention, pour un numéro de département inférieur à 10, if faut penser à ajouter "0"...</li>
-<li>Le champ <em>numeroinsee</em> commence par le numéro du département mais est différent du code postal.</li>
-</ul>
-</li>
-<li><p>une fonction <strong>anomalies()</strong> prenant un curseur et un nom de commune et qui renvoie la date et la conclusion du prélévement (champ <em>conclusionprel</em> dans <strong>Prelevements</strong> dans la commune) et la référence du prélèvement (champ <em>referenceprel</em> dans <strong>Prelevements</strong>) en cas d'anomalie. Vous repèrerez dans la base la phrase type lorsque tout va bien !</p>
-</li>
-<li><p>une fonction <strong>resultat()</strong> prenant en paramètres un curseur et une référence de prélèvement et qui renvoie les résultats détaillés de l'analyse avec les informations suivantes :</p>
-<ul>
-<li>libellé associé à chaque code paramètre, composant la dénomination du paramètre sous forme de texte libre</li>
-<li>Le résultat de l’analyse physico-chimique ou microbiologique du paramètre</li>
-<li>L'unité de mesure du paramètre</li>
-<li>La limite(s) de qualité du paramètre concerné en vigueur  au moment du prélèvement</li>
-</ul>
-</li>
-</ul>
 </div>
 </div>
 </div>
@@ -3713,11 +3794,22 @@ assert curseur.fetchone()[0] == 3683342</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">resultat</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-8"># YOUR CODE HERE</div>
+<div class="clipboard-copy-txt" id="cell-8">print(resultat)</div>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Quel est le type de 'resultat' ?</p>
 </div>
 </div>
 </div>
@@ -3740,11 +3832,106 @@ assert curseur.fetchone()[0] == 3683342</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">assert</span> <span class="s2">"CAEN"</span> <span class="ow">in</span> <span class="n">liste_communes</span><span class="p">(</span><span class="n">curseur</span><span class="p">,</span> <span class="mi">14</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">resultat</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-9">assert "CAEN" in liste_communes(curseur, 14)</div>
+<div class="clipboard-copy-txt" id="cell-9">resultat[1]</div>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>On a donc ici le meilleur des deux mondes : des requêtes <strong>SQL</strong> et une base de données pour stocker efficacement les données, le langage python pour traiter ces données grâce à des algorithmes faciles à écrire.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="a-vous-de-jouer">A vous de jouer<a class="anchor-link" href="#a-vous-de-jouer">¶</a></h2><p>Créez la table Auteurs afin que celle-ci reflète les informations suivantes :</p>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Prenom</th>
+<th>annee naissance</th>
+<th>langue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Orwell</td>
+<td>George</td>
+<td>1903</td>
+<td>Anglais</td>
+</tr>
+<tr>
+<td>Herbert</td>
+<td>Frank</td>
+<td>1920</td>
+<td>Anglais</td>
+</tr>
+<tr>
+<td>Asimov</td>
+<td>Isaac</td>
+<td>1920</td>
+<td>Anglais</td>
+</tr>
+<tr>
+<td>Huxley</td>
+<td>Aldous</td>
+<td>1894</td>
+<td>Anglais</td>
+</tr>
+<tr>
+<td>Bradbury</td>
+<td>Ray</td>
+<td>1920</td>
+<td>Anglais</td>
+</tr>
+<tr>
+<td>K. Dick</td>
+<td>Philip</td>
+<td>1928</td>
+<td>Anglais</td>
+</tr>
+<tr>
+<td>Barjavel</td>
+<td>René</td>
+<td>1911</td>
+<td>Français</td>
+</tr>
+<tr>
+<td>Boulle</td>
+<td>Pierre</td>
+<td>1912</td>
+<td>Français</td>
+</tr>
+<tr>
+<td>Van Vogt</td>
+<td>Alfred Elton</td>
+<td>1912</td>
+<td>Anglais</td>
+</tr>
+<tr>
+<td>Verne</td>
+<td>Jules</td>
+<td>1828</td>
+<td>Français</td>
+</tr>
+</tbody>
+</table>
+<p>Pour cela, vous utiliserez la commande suivante pour créer la table et vous adapterez les données à cette structure.</p>
 </div>
 </div>
 </div>
@@ -3767,11 +3954,40 @@ assert curseur.fetchone()[0] == 3683342</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="o">%%</span><span class="n">sql</span> 
+<span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">Auteurs</span> <span class="p">(</span>
+    <span class="n">IdAuteur</span>       <span class="n">INTEGER</span>  <span class="n">PRIMARY</span> <span class="n">KEY</span><span class="p">,</span>
+    <span class="n">NomAuteur</span>      <span class="n">TEXT</span><span class="p">,</span>
+    <span class="n">PrenomAuteur</span>   <span class="n">TEXT</span><span class="p">,</span>
+    <span class="n">IdLangue</span>       <span class="n">INTEGER</span><span class="p">,</span>
+    <span class="n">AnneeNaissance</span> <span class="n">INTEGER</span><span class="p">,</span>
+    <span class="n">FOREIGN</span> <span class="n">KEY</span><span class="p">(</span><span class="n">IdLangue</span><span class="p">)</span> <span class="n">REFERENCES</span> <span class="n">Langues</span><span class="p">(</span><span class="n">IdLangue</span><span class="p">)</span>
+<span class="p">);</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-10"># YOUR CODE HERE</div>
+<div class="clipboard-copy-txt" id="cell-10">%%sql 
+CREATE TABLE Auteurs (
+    IdAuteur       INTEGER  PRIMARY KEY,
+    NomAuteur      TEXT,
+    PrenomAuteur   TEXT,
+    IdLangue       INTEGER,
+    AnneeNaissance INTEGER,
+    FOREIGN KEY(IdLangue) REFERENCES Langues(IdLangue)
+);</div>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Une nouveauté apparaît ici dans la création de la table : La table <strong>Auteurs</strong> possède une <em>clé étangère</em> : <em>IdLangue</em>. Cette clé est un entier.</p>
+<p>Remarquez la ligne <code>FOREIGN KEY(IdLangue) REFERENCES Langues(IdLangue)</code>. Celle-ci permet de déclarer une <em>contrainte</em> sur cette clé afin d'indiquer à SQLite que <em>IdLangue</em> est une clé étrangère. SQLite sera alors responsable de maintenir la cohérence entre les deux tables que l'on a ainsi reliée.</p>
+<p>Cette déclaration n'est pas obligatoire mais fortement conseillée.</p>
 </div>
 </div>
 </div>
@@ -3794,11 +4010,229 @@ assert curseur.fetchone()[0] == 3683342</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">anomalies</span><span class="p">(</span><span class="n">curseur</span><span class="p">,</span> <span class="s2">"HEROUVILLE-SAINT-CLAIR"</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="o">%%</span><span class="n">sql</span> 
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">Auteurs</span> <span class="p">(</span><span class="n">idAuteur</span><span class="p">,</span> <span class="n">NomAuteur</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+<span class="n">VALUES</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"Orwell"</span><span class="p">,</span> <span class="s2">"Georges"</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-11">anomalies(curseur, "HEROUVILLE-SAINT-CLAIR")</div>
+<div class="clipboard-copy-txt" id="cell-11">%%sql 
+
+INSERT INTO Auteurs (idAuteur, NomAuteur, ...)
+VALUES
+(1, "Orwell", "Georges", ...)</div>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="a-vous-de-jouer">A vous de jouer<a class="anchor-link" href="#a-vous-de-jouer">¶</a></h2><p>Notre base n'est pas encore complète : il nous reste à créer les tables <strong>Livres</strong> et <strong>Themes</strong> qui doivent refléter le contenu suivant :</p>
+<table>
+<thead>
+<tr>
+<th>Titre</th>
+<th>NomAuteur</th>
+<th>PrenomAuteur</th>
+<th>AnneeNaissance</th>
+<th>Langue</th>
+<th>AnneePubli</th>
+<th>Themes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1984</td>
+<td>Orwell</td>
+<td>George</td>
+<td>1903</td>
+<td>Anglais</td>
+<td>1949</td>
+<td>Totalitarisme, science-fiction, anticipation, Dystopie</td>
+</tr>
+<tr>
+<td>Dune</td>
+<td>Herbert</td>
+<td>Frank</td>
+<td>1920</td>
+<td>Anglais</td>
+<td>1965</td>
+<td>science-fiction, anticipation</td>
+</tr>
+<tr>
+<td>Fondation</td>
+<td>Asimov</td>
+<td>Isaac</td>
+<td>1920</td>
+<td>Anglais</td>
+<td>1951</td>
+<td>science-fiction, Economie</td>
+</tr>
+<tr>
+<td>Le meilleur des mondes</td>
+<td>Huxley</td>
+<td>Aldous</td>
+<td>1894</td>
+<td>Anglais</td>
+<td>1931</td>
+<td>Totalitarisme, science fiction, dystopie</td>
+</tr>
+<tr>
+<td>Fahrenheit 451</td>
+<td>Bradbury</td>
+<td>Ray</td>
+<td>1920</td>
+<td>Anglais</td>
+<td>1953</td>
+<td>science-fiction, Dystopie</td>
+</tr>
+<tr>
+<td>Ubik</td>
+<td>K. Dick</td>
+<td>Philip</td>
+<td>1928</td>
+<td>Anglais</td>
+<td>1969</td>
+<td>science-fiction, anticipation</td>
+</tr>
+<tr>
+<td>Chroniques martiennes</td>
+<td>Bradbury</td>
+<td>Ray</td>
+<td>1920</td>
+<td>Anglais</td>
+<td>1950</td>
+<td>science-fiction, anticipation</td>
+</tr>
+<tr>
+<td>La nuit des temps</td>
+<td>Barjavel</td>
+<td>René</td>
+<td>1911</td>
+<td>Français</td>
+<td>1968</td>
+<td>science-fiction, tragédie</td>
+</tr>
+<tr>
+<td>Blade Runner</td>
+<td>K. Dick</td>
+<td>Philip</td>
+<td>1928</td>
+<td>Anglais</td>
+<td>1968</td>
+<td>Intelligence artificielle, science fiction</td>
+</tr>
+<tr>
+<td>Les Robots</td>
+<td>Asimov</td>
+<td>Isaac</td>
+<td>1920</td>
+<td>Anglais</td>
+<td>1950</td>
+<td>science fiction, Intelligence artificielle</td>
+</tr>
+<tr>
+<td>La Planète des singes</td>
+<td>Boulle</td>
+<td>Pierre</td>
+<td>1912</td>
+<td>Français</td>
+<td>1963</td>
+<td>science fiction, Dystopie</td>
+</tr>
+<tr>
+<td>Ravage</td>
+<td>Barjavel</td>
+<td>René</td>
+<td>1911</td>
+<td>Français</td>
+<td>1943</td>
+<td>Science-Fiction, anticipation</td>
+</tr>
+<tr>
+<td>Le Maître du Haut Château</td>
+<td>K. Dick</td>
+<td>Philip</td>
+<td>1928</td>
+<td>Anglais</td>
+<td>1962</td>
+<td>Dystopie, Uchronie</td>
+</tr>
+<tr>
+<td>Le monde des A</td>
+<td>Van Vogt</td>
+<td>Alfred Elton</td>
+<td>1912</td>
+<td>Anglais</td>
+<td>1945</td>
+<td>science fiction, IA</td>
+</tr>
+<tr>
+<td>La Fin de l’éternité</td>
+<td>Asimov</td>
+<td>Isaac</td>
+<td>1920</td>
+<td>Anglais</td>
+<td>1955</td>
+<td>science-fiction, voyage dans le temps</td>
+</tr>
+<tr>
+<td>De la Terre à la Lune</td>
+<td>Verne</td>
+<td>Jules</td>
+<td>1828</td>
+<td>Français</td>
+<td>1865</td>
+<td>Science-Fiction, aventure</td>
+</tr>
+</tbody>
+</table>
+<h3 id="la-table-livres">La table LIVRES<a class="anchor-link" href="#la-table-livres">¶</a></h3><p>La table <strong>LIVRES</strong> devra avoir la structure décrite dans l'extrait suivant :</p>
+<table>
+<thead>
+<tr>
+<th>IdLivre</th>
+<th>Titre</th>
+<th>IdAuteur</th>
+<th>AnneePubli</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>8</td>
+<td>La nuit des temps</td>
+<td>7</td>
+<td>1968</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>l'année de publication est de type <strong>INTEGER</strong></li>
+<li><strong>IdLivre</strong> désigne bien sûr la clé primaire</li>
+<li><strong>IdAuteur</strong> est une <em>clé externe</em> faisant référence à l'auteur.</li>
+<li>dans l'extrait, la clé <strong>IdAuteur</strong> vaut 7. L'auteur de <em>La nuit des temps</em> est donc <em>Barjavel</em></li>
+<li>on ne renseigne pas la langue ou l'année de naissance de l'auteur car ces informations sont déjà présentes dans la table <strong>Auteurs</strong>.</li>
+<li>On traitera la problématique des thèmes plus tard...</li>
+</ul>
+<p>Dans la cellule ci-dessous, saisissez la requête pour créer la table <strong>Livres</strong></p>
 </div>
 </div>
 </div>
@@ -3821,11 +4255,32 @@ assert curseur.fetchone()[0] == 3683342</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="o">%%</span><span class="n">sql</span>
+
+<span class="o">/*</span> 
+<span class="c1"># YOUR CODE HERE</span>
+
+<span class="o">*/</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-12"># YOUR CODE HERE</div>
+<div class="clipboard-copy-txt" id="cell-12">%%sql
+
+/* 
+# YOUR CODE HERE
+
+*/</div>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>A présent, saisissez les données à l'intérieur de la table.</p>
 </div>
 </div>
 </div>
@@ -3848,9 +4303,17 @@ assert curseur.fetchone()[0] == 3683342</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">resultats</span><span class="p">(</span><span class="n">curseur</span><span class="p">,</span> <span class="s2">"01400207768"</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="o">%%</span><span class="n">sql</span>
+<span class="o">/*</span> 
+<span class="c1"># YOUR CODE HERE</span>
+
+<span class="o">*/</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-13">resultats(curseur, "01400207768")</div>
+<div class="clipboard-copy-txt" id="cell-13">%%sql
+/* 
+# YOUR CODE HERE
+
+*/</div>
 </div>
 </div>
 </div>
@@ -3863,8 +4326,7 @@ assert curseur.fetchone()[0] == 3683342</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="amusez-vous">Amusez vous<a class="anchor-link" href="#amusez-vous">¶</a></h3><p>Interrogez la base de données pour rechercher des anomalies dans votre commune ou les environs, et récupérez les résultats détaillés des analyses en cas de problème pour identifier la source de l'anomalie.</p>
-<p>Au fil de votre parcours de la base, vous pouvez avoir envie de créer d'autres fonctions pour afficher d'autres informations. Ne vous privez pas !!!</p>
+<p>Vérifiez votre travail en listant tous les enregistrements de la table <strong>LIVRES</strong> dans la variable <code>resultat</code></p>
 </div>
 </div>
 </div>
@@ -3887,11 +4349,9 @@ assert curseur.fetchone()[0] == 3683342</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Amusez vous !</span>
-<span class="n">liste_communes</span><span class="p">(</span><span class="n">curseur</span><span class="p">,</span><span class="mi">14</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">resultat</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-14"># Amusez vous !
-liste_communes(curseur,14)</div>
+<div class="clipboard-copy-txt" id="cell-14">resultat</div>
 </div>
 </div>
 </div>
@@ -3916,11 +4376,49 @@ liste_communes(curseur,14)</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">assert</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">'1984'</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1949</span><span class="p">)</span> <span class="ow">in</span> <span class="n">resultat</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-15"></div>
+<div class="clipboard-copy-txt" id="cell-15">assert (1, '1984', 1, 1949) in resultat</div>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="la-table-themes">La table Themes<a class="anchor-link" href="#la-table-themes">¶</a></h3><p>Traitons à présent la problématique des Thèmes. La table Themes devra avoir la structure décrite dans l'extrait suivant :</p>
+<table>
+<thead>
+<tr>
+<th>IdTheme</th>
+<th>Intitule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Science-fiction</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>IdTheme</strong> désigne bien sûr la clé primaire</li>
+<li><strong>Intitule</strong> est un champ texte contenant l'intitulé du thème tel qu'il apparaît dans le tableau global.</li>
+</ul>
+<p>Dans la cellule ci-dessous, vous saisirez donc 2 requêtes :</p>
+<ul>
+<li>Une pour créer la table Themes</li>
+<li>Une pour insérer les données dans la table.</li>
+</ul>
 </div>
 </div>
 </div>
@@ -3943,9 +4441,17 @@ liste_communes(curseur,14)</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="o">%%</span><span class="n">sql</span> 
+
+<span class="o">/*</span> 
+<span class="c1"># YOUR CODE HERE</span>
+<span class="o">*/</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-16"></div>
+<div class="clipboard-copy-txt" id="cell-16">%%sql 
+
+/* 
+# YOUR CODE HERE
+*/</div>
 </div>
 </div>
 </div>
@@ -3958,10 +4464,7 @@ liste_communes(curseur,14)</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="pour-aller-plus-loin">Pour aller plus loin<a class="anchor-link" href="#pour-aller-plus-loin">¶</a></h3><p>Vous avez les outils à présent pout construire une application graphique (avec TKInter par exemple) ou bien un site web (avec PHP ou Flask par exemple) mettant à disposition ces résultats. Cela peut faire l'objet d'un projet.</p>
-<h2 id="fin-du-travail">Fin du travail<a class="anchor-link" href="#fin-du-travail">¶</a></h2><p>On n'oublie pas de fermer l'accès à la base de données :)</p>
-<p>Vous aurez pu constater au cours de vos requêtes que les réponses de la base de données sont immédiates malgré les millions d'enregistrement que celle-ci contient !!</p>
-<p>Voici un petit aperçu de l'utilisation d'une base de donnée dans le monde réel.</p>
+<p>Vérifiez votre travail en lisant tous les enregistrements de la table <strong>Themes</strong> dans la variable <code>resultat</code></p>
 </div>
 </div>
 </div>
@@ -3984,9 +4487,169 @@ liste_communes(curseur,14)</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">bdd</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">resultat</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-17">bdd.close()</div>
+<div class="clipboard-copy-txt" id="cell-17">resultat</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-18">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">assert</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"Science-fiction"</span><span class="p">)</span> <span class="ow">in</span> <span class="n">resultat</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-18">assert (1, "Science-fiction") in resultat</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="une-table-manquante">Une table manquante !<a class="anchor-link" href="#une-table-manquante">¶</a></h3><p>La saisie de notre base de donnée est incomplète ! Nous avons en effet saisi tous les auteurs, tous les livres, toutes les langues, tous les thèmes et pourtant il manque une information. Laquelle ?</p>
+<p>Quelle solution envisager pour saisir cette information ?</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Créer une table <strong>RelationsLivreTheme</strong> mettant en relation les livres et les thèmes associés. Saisir le contenu de cette table.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-19">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="o">%%</span><span class="n">sql</span> 
+
+<span class="o">/*</span> 
+<span class="c1"># YOUR CODE HERE</span>
+<span class="o">*/</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-19">%%sql 
+
+/* 
+# YOUR CODE HERE
+*/</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-20">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">resultat</span> <span class="o">=</span> <span class="o">%</span><span class="n">sql</span> <span class="n">SELECT</span> <span class="n">IdLivre</span><span class="p">,</span> <span class="n">IdTheme</span> <span class="n">FROM</span> <span class="n">RelationsLivreTheme</span><span class="p">;</span>
+<span class="k">assert</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">in</span> <span class="n">resultat</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-20">resultat = %sql SELECT IdLivre, IdTheme FROM RelationsLivreTheme;
+assert (1, 1) in resultat</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="cardinalite">Cardinalité<a class="anchor-link" href="#cardinalite">¶</a></h2><p>En regardant notre base de données et les relations que nous avons créé entre les tables, on remarque que celles-ci ont des <em>cardinalités</em> différentes. La <em>cardinalité</em> d'une relation entre deux tables <strong>A</strong> et <strong>B</strong> exprime à combien d'enregistrements de <strong>A</strong> peut être relié chaque enregistrement de <strong>B</strong>.</p>
+<p>Par exemple, à un livre est associé un auteur unique, mais pour un auteur donné, il peut y avoir plusieurs livres. On parle alors de <strong>relation de 1 à n</strong></p>
+<p>Lorsque plusieurs enregistrements de la table <strong>A</strong> peuvent être associés à plusieurs enregistrements de la table <strong>B</strong>, on parle alors d'une <strong>relation de n à n</strong></p>
+<h3 id="a-vous-de-jouer">A vous de jouer<a class="anchor-link" href="#a-vous-de-jouer">¶</a></h3><p>Citez dans la base de données</p>
+<ul>
+<li>une relation de 1 à n</li>
+<li>une relation de n à n</li>
+</ul>
+<h3 id="table-de-relation">Table de relation<a class="anchor-link" href="#table-de-relation">¶</a></h3><p>Pour une <strong>relation de n à n</strong>, nous aurons en général recours à la création d'une nouvelle table de relation contenant les clés externes des tables à mettre en relation. C'est ce que nous avons mis en oeuvre pour la table <strong>RelationsLivreTheme</strong>.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-21">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-21"></div>
 </div>
 </div>
 </div>
@@ -4008,7 +4671,7 @@ liste_communes(curseur,14)</div>
 
 
                 
-<script src="../../../js/ide.js"></script>
+<script src="../../../../js/ide.js"></script>
 <style>
     .jp-RenderedHTMLCommon p {
         font-size: 0.8rem;
@@ -4131,10 +4794,10 @@ liste_communes(curseur,14)</div>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
@@ -4146,11 +4809,11 @@ liste_communes(curseur,14)</div>
       
         <script src="https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js"></script>
       
-        <script src="../../../javascript/mermaid.js"></script>
+        <script src="../../../../javascript/mermaid.js"></script>
       
-        <script src="../../../javascript/mathjax.js"></script>
+        <script src="../../../../javascript/mathjax.js"></script>
       
-        <script src="../../../javascript/interpreter.js"></script>
+        <script src="../../../../javascript/interpreter.js"></script>
       
     
   </body>

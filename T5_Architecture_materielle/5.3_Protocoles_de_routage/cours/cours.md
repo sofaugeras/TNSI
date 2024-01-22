@@ -28,7 +28,7 @@
 
     Ces questions trouveront des réponses grâce à **table de routage** du routeur.
 
-    Regarder la vidéo suivante sur les notions de routage : ![](https://youtu.be/sT9-IcbjqzI)
+    Regarder la vidéo suivante sur les notions de routage : ![ici](https://youtu.be/sT9-IcbjqzI)
 
 ## 1. Tables de routage
 

@@ -5,7 +5,7 @@ Pour chacun des exercices, on considérera que la hauteur de la racine vaut 1.
     On rappelle que la **hauteur** d'un arbre est définie comme la profondeur maximale des noeuds de l'arbre.
     **1.** $(1, \Delta, \Delta)$
     ??? aide "Correction"
-         Taille : 1
+        Taille : 1
         Hauteur : 1
         Feuilles : 1
         ```graphviz dot 
