@@ -47,7 +47,7 @@ L'épreuve est notée sur 20 points comptant pour 75% de la note finale.
     - [Programme d'examen des épreuves terminales des enseignements de spécialité de la voie générale - à compter de la session 2023](https://www.education.gouv.fr/bo/22/Hebdo36/MENE2227884N.htm)
     -[https://www.education.gouv.fr/bo/2023/Hebdo36/MENE2317750N](https://www.education.gouv.fr/bo/2023/Hebdo36/MENE2317750N)
 
-<!-->
+<!--
 !!! abstract "Thèmes du programme susceptibles d'être évalués"
 
     - Rubrique « Structures de données », uniquement les items suivants :

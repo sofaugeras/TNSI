@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://github.com/sofaugeras/TNSI/T5_Architecture_materielle/5.4_Cryptographie/Exercices/">
       
       
-        <link rel="prev" href="../../5.3_Protocoles_de_routage/Exercices/">
+        <link rel="prev" href="../cours/">
       
       
-        <link rel="next" href="../cours/">
+        <link rel="next" href="../../../T6_5_algos_coeur/sommaire/">
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
@@ -323,7 +323,7 @@
         <a href="../../../T4_Bases_de_donnees/sommaire/" class="md-tabs__link">
           
   
-  T4 Bases de donnees
+  T4 Base de données
 
         </a>
       </li>
@@ -416,24 +416,6 @@
           
   
   T7 Divers
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../my_theme_customizations/pyodide-mkdocs/end_REM/" class="md-tabs__link">
-          
-  
-  Pyodide mkdocs
 
         </a>
       </li>
@@ -1495,7 +1477,7 @@
             
   
   <span class="md-ellipsis">
-    T4 Bases de donnees
+    T4 Base de données
   </span>
   
 
@@ -1505,7 +1487,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            T4 Bases de donnees
+            T4 Base de données
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2188,6 +2170,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cours
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -2278,6 +2281,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#exercice-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 6
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2287,27 +2299,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Cryptographie
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -2881,97 +2872,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
-        
-          
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
-    Pyodide mkdocs
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11">
-            <span class="md-nav__icon md-icon"></span>
-            Pyodide mkdocs
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../my_theme_customizations/pyodide-mkdocs/end_REM/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    end REM
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../my_theme_customizations/pyodide-mkdocs/start_REM/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    start REM
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -3196,8 +3096,8 @@
 <span class="nb">print</span><span class="p">(</span><span class="n">long_to_bytes</span><span class="p">(</span><span class="n">res</span><span class="p">))</span>
 </code></pre></div></td></tr></table></div>
 </details>
-<h3 id="exercice-5">Exercice 5<a class="headerlink" href="#exercice-5" title="Permanent link">⚓︎</a></h3>
-<p><strong>module RSA</strong> dans les règles de l'art</p>
+<details class="info">
+<summary><strong>module RSA</strong> dans les règles de l'art</summary>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">Crypto.PublicKey</span> <span class="kn">import</span> <span class="n">RSA</span>
 <span class="kn">from</span> <span class="nn">Crypto.Cipher</span> <span class="kn">import</span> <span class="n">PKCS1_OAEP</span>
 <span class="kn">import</span> <span class="nn">binascii</span>
@@ -3221,6 +3121,61 @@
 <span class="n">decrypted</span> <span class="o">=</span> <span class="n">decryptor</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">encrypted</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Decrypted:&#39;</span><span class="p">,</span> <span class="n">decrypted</span><span class="p">)</span>
 </code></pre></div>
+</details>
+<h3 id="exercice-5">Exercice 5<a class="headerlink" href="#exercice-5" title="Permanent link">⚓︎</a></h3>
+<p><ins>Source :</ins> Edition Ellipses : NSI 24 leçons avec exercices corrigés.</p>
+<p>On se place dans le contexte de la figure ci-dessous. Le client est un navigateur web classique (par exemple Firefox). Le serveur web est configuré sur une machine dont le nom de domaine est <a href="www.monsite.fr">www.monsite.fr</a> . </p>
+<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" /> Dans chacune des situations suivantes, dire quelle étape de la poignée de main TLS échoue.<br /></p>
+<p><img alt="protocole HTTPS" class="center" src="../data/protocoleHTTP.jpg" width="50%" /></p>
+<p>Les questions sont indépendantes.</p>
+<ol>
+<li>Le serveur web n’est pas configuré pour supporter le protocole HTTPS et ne sert que des pages en http</li>
+<li>Le fichier contenant le certificat côté serveur est périmé</li>
+<li>L’utilisateur du navigateur pointe ce dernier vers l’URL http://www.monsite.fr:443</li>
+<li>L’administrateur du serveur a créé une paire de clé publique et privée, a signé le certificat que le serveur envoie aux clients et effacés les clés</li>
+<li>Le navigateur commence à afficher la page de garde du site. La câble connectant le serveur au réseau est coupé</li>
+</ol>
+<details class="tip">
+<summary>correction</summary>
+<ol>
+<li>
+<p>Le serveur web n’est pas configuré pour supporter le protocole HTTPS et ne sert que des pages en http.<br />
+L’étape 1 échoue immédiatement, le navigateur ne trouve aucun serveur en écoute sur le port 443, la connexion TCP ne peut pas se mettre en place</p>
+</li>
+<li>
+<p>Le fichier contenant le certificat côté serveur est périmé<br />
+L’étape 3 échoue, le client ne procède pas à la validation du certificat</p>
+</li>
+<li>
+<p>L’utilisateur du navigateur pointe ce dernier vers l’URL http://www.monsite.fr:443<br />
+L’étape 2 échoue car le client navigue vers le port HTTPS en http, il n’envoie pas les bons paquets et le serveur ne peut donc pas répondre ou répond un message d’erreur</p>
+</li>
+<li>
+<p>L’administrateur du serveur a créé une paire de clé publique et privée, a signé le certificat que le serveur envoie aux clients et effacés les clés<br />
+L’étape 3 échoue et le navigateur affiche un message d’alerte de sécurité. En effet, le navigateur ne pourra pas trouver une clé publique d’AC lui permettant de vérifier la signature</p>
+</li>
+<li>
+<p>Le navigateur commence à afficher la page de garde du site. La câble connectant le serveur au réseau est coupé<br />
+Si la page de garde du site s’affiche, c’est que la requête http récupérant la page a reçu une réponse du serveur. On est après l’étape 5, la connexion TCP est interrompue (car tous les paquets sont perdus)</p>
+</li>
+</ol>
+</details>
+<h3 id="exercice-6">Exercice 6<a class="headerlink" href="#exercice-6" title="Permanent link">⚓︎</a></h3>
+<p><ins>Source :</ins>  Edition Ellipses, Spécialité NSI, serge Bays </p>
+<p>Consulter la page d’accueil du site de la société informatique de France <a href="https://www.societe-informatique-de-france.fr/">https://www.societe-informatique-de-france.fr/</a> </p>
+<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" /> Préciser les informations disponibles sur le certificat de sécurité, quels sont les chiffrements utilisés, synmétrique et asymétrique.</p>
+<details class="tip">
+<summary>correction</summary>
+<p><img alt="SIF" class="center" src="../data/SIF.png" width="50%" /></p>
+<p>Lorsque la page est affichée, on clique sur le cadenas figurant devant l’adresse. On obtient les informations suivantes :
+Certificat vérifié par l’organisation Let’s Encrypt Authority X3
+Protocole TLS 1.2
+Clés : voir détails techniques
+Clé publique : voir Afficher le certificat
+Algorithme RSA
+Avec une taille de clé de 256 octets (2048 bits).
+AES, Advanced Encryption Standart, algorithme de chiffrement symétrique</p>
+</details>
 
 
   

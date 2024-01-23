@@ -1,6 +1,6 @@
 !!! abstract "Exercice 5 du sujet La Réunion J1 2022"
     === "Énoncé"
-        Exercice 5 du sujet [La Réunion J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LeReunion_J1.pdf){. target="_blank"}
+        Exercice 5 du sujet [La Réunion J1 2022](https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_02.pdf){. target="_blank"}
     
         ??? tip "Correction Q1.a."
             Une adresse IPv4 se code à l'aide de 4 octets.

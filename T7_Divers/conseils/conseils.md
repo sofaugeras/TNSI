@@ -4,12 +4,12 @@
 
 Il est conseillé de travailler avec 3 espaces:
 
-- l'écran de l'ordinateur partitionné avec les 2 premiers espaces: ce site et un IDE (Thonny par exemple);
+- l'écran de l'ordinateur partitionné avec les 2 premiers espaces: ce site et un IDE (VS Code par exemple)
 
 ![image](data/cap.png){: .center}
 
 !!! danger "C'est en codant qu'on apprend à coder"
-    **Tous** les exemples de code dans le cours doivent être **retapés** (résistez à l'envie du copier-coller) dans Thonny, soit en fenêtre de script, soit en console.
+    **Tous** les exemples de code dans le cours doivent être **retapés** (résistez à l'envie du copier-coller) dans votre éditeur, soit en fenêtre de script, soit en console.
 
     Cela permet de :
 
@@ -27,7 +27,7 @@ Il est conseillé de travailler avec 3 espaces:
 
 ## Script ou console ???
 
-Thonny, comme la grande majorité des IDE Python, est composé de deux zones distinctes :
+VS Code, comme la grande majorité des IDE Python, est composé de deux zones distinctes :
 
 - la zone de script
 - la console
