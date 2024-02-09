@@ -2976,8 +2976,7 @@
 <span class="normal">13</span>
 <span class="normal">14</span>
 <span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>    <span class="k">def</span> <span class="nf">recherche_naive</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">):</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>    <span class="k">def</span> <span class="nf">recherche_naive</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        renvoie la liste des indices (éventuellement vide) des occurrences de</span>
 <span class="sd">        de la chaîne motif dans la chaîne texte.</span>
@@ -2985,7 +2984,6 @@
         <span class="n">indices</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">texte</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">):</span>
-            <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
             <span class="c1">#On parcourt la fenêtre du motif</span>
             <span class="k">while</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span> <span class="ow">and</span> <span class="n">texte</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">motif</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
                 <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span> 
@@ -3118,7 +3116,6 @@ Nigel Horspool  est né en Grande-Bretagne mais citoyen canadien. Il est profess
 <span class="n">aDroite</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span> <span class="c1">#idem</span>
 <span class="n">aDroite</span><span class="p">[</span><span class="s1">&#39;m&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">2</span> <span class="c1">#on a trouvé un &#39;m&#39; plus à droite donc on change la valeur pour &#39;m&#39;</span>
 <span class="n">aDroite</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">3</span> <span class="c1">#idem : on vient de trouver un &#39;a&#39; plus à droite que le précédent</span>
-<span class="n">aDroite</span><span class="p">[</span><span class="s1">&#39;n&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">4</span>
 <span class="c1">#fini !</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;dico résultat : &quot;</span><span class="p">,</span> <span class="n">aDroite</span><span class="p">)</span>
 </code></pre></div>
@@ -3135,10 +3132,10 @@ Nigel Horspool  est né en Grande-Bretagne mais citoyen canadien. Il est profess
 <span class="sd">    et le valeurs sont leur position la plus à droite dans le motif&#39;&#39;&#39;</span>
     <span class="n">aDroite</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">p</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">p</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
         <span class="n">aDroite</span><span class="p">[</span><span class="n">motif</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span><span class="o">=</span><span class="n">j</span>
     <span class="k">return</span> <span class="n">aDroite</span>
-<span class="k">assert</span><span class="p">(</span><span class="n">construitADroite</span><span class="p">(</span><span class="s1">&#39;maman&#39;</span><span class="p">)</span><span class="o">==</span><span class="p">{</span><span class="s1">&#39;m&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">})</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">construitADroite</span><span class="p">(</span><span class="s1">&#39;maman&#39;</span><span class="p">)</span><span class="o">==</span><span class="p">{</span><span class="s1">&#39;m&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">})</span>
 </code></pre></div>
 </div>
 </div>
@@ -3223,9 +3220,7 @@ Nigel Horspool  est né en Grande-Bretagne mais citoyen canadien. Il est profess
 <div class="tabbed-block">
 <p>écrire ci-dessous cette fonction finale de <code>recherche</code></p>
 </div>
-<div class="tabbed-block"></div>
-</div>
-</div>
+<div class="tabbed-block">
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">texte</span><span class="p">)</span>
     <span class="n">p</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span>
@@ -3243,6 +3238,9 @@ Nigel Horspool  est né en Grande-Bretagne mais citoyen canadien. Il est profess
 <span class="k">assert</span><span class="p">(</span><span class="n">recherche</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">)</span> <span class="o">==</span> <span class="mi">12</span><span class="p">)</span>
 <span class="k">assert</span><span class="p">(</span><span class="n">recherche</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="s1">&#39;BB&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div>
+</div>
+</div>
+</div>
 </div>
 <h2 id="3-bonus-comparaison-des-temps-de-calcul">3. Bonus : comparaison des temps de calcul<a class="headerlink" href="#3-bonus-comparaison-des-temps-de-calcul" title="Permanent link">⚓︎</a></h2>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">texte_pire</span> <span class="o">=</span> <span class="s1">&#39;A&#39;</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span>

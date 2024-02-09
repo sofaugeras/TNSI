@@ -59,7 +59,6 @@ Donc décalage de la fenêtre d’un cran vers la droite
             indices = []
             i = 0
             while i <= len(texte) - len(motif):
-                k = 0
                 #On parcourt la fenêtre du motif
                 while j < len(motif) and texte[i+j] == motif[j]:
                     j += 1 
@@ -197,7 +196,6 @@ aDroite['m']=0 #car c'est le premier qu'on a trouvé
 aDroite['a']=1 #idem
 aDroite['m']=2 #on a trouvé un 'm' plus à droite donc on change la valeur pour 'm'
 aDroite['a']=3 #idem : on vient de trouver un 'a' plus à droite que le précédent
-aDroite['n']=4
 #fini !
 print("dico résultat : ", aDroite)
 ```
@@ -214,10 +212,10 @@ print("dico résultat : ", aDroite)
             et le valeurs sont leur position la plus à droite dans le motif'''
             aDroite = {}
             p = len(motif)
-            for j in range(p):
+            for j in range(p-1):
                 aDroite[motif[j]]=j
             return aDroite
-        assert(construitADroite('maman')=={'m': 2, 'a': 3, 'n': 4})
+        assert(construitADroite('maman')=={'m': 2, 'a': 3})
         ```
 
 #### 2.2.2 Ecriture de la nouvelle fonction correspondance
@@ -301,24 +299,24 @@ C'est donc quasiment la même qu'en partie 2 : la seule différence est qu'elle 
 
     === "Correction"
 
-    ```python
-    def recherche(texte, motif):
-        n = len(texte)
-        p = len(motif)
-        aDroite = construitADroite(motif)
-        i = 0
-        while i+p <=n:
-            ok, decalage = correspondance(texte, motif, i, aDroite)
-            if ok==True:
-                return i
-            else:
-                i = i + decalage
-        return -1
-    texte = 'CAATGTCTGCACCAAGAC'
-    motif = 'CAAG'
-    assert(recherche(texte, motif) == 12)
-    assert(recherche(texte, 'BB') == -1)
-    ```
+        ```python
+        def recherche(texte, motif):
+            n = len(texte)
+            p = len(motif)
+            aDroite = construitADroite(motif)
+            i = 0
+            while i+p <=n:
+                ok, decalage = correspondance(texte, motif, i, aDroite)
+                if ok==True:
+                    return i
+                else:
+                    i = i + decalage
+            return -1
+        texte = 'CAATGTCTGCACCAAGAC'
+        motif = 'CAAG'
+        assert(recherche(texte, motif) == 12)
+        assert(recherche(texte, 'BB') == -1)
+        ```
 
 ## 3. Bonus : comparaison des temps de calcul
 
