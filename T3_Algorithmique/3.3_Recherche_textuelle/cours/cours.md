@@ -257,7 +257,6 @@ Comme dans la partie [1.1](http://localhost:8000/sofaugeras/TNSI/T3_Algorithmiqu
             Cette fonction, pour une fenêtre en position i, teste si le motif correspond et sinon, indique quel décalage appliquer'''
             n = len(texte)
             p = len(motif)
-            aDroite = construitADroite(motif)
             for j in range(p-1, -1, -1): #on balaie cette fois la fenêtre de droite à gauche : de p-1 à 0 inclus en décroissant
                 x = texte[i+j]
                 if x != motif[j]:

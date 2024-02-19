@@ -3273,7 +3273,7 @@ Pour tout nombre <span class="arithmatex">\(a\)</span>, </p>
 <p>Coder la fonction <code>interclassement</code>. </p>
 </div>
 <div class="tabbed-block">
-<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">interclassement</span><span class="p">(</span><span class="n">lst1</span><span class="p">,</span> <span class="n">lst2</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">interclassement</span><span class="p">(</span><span class="n">lst1</span><span class="p">,</span> <span class="n">lst2</span><span class="p">):</span>
     <span class="n">i1</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">i2</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">lst_totale</span> <span class="o">=</span> <span class="p">[]</span>
@@ -3286,7 +3286,6 @@ Pour tout nombre <span class="arithmatex">\(a\)</span>, </p>
             <span class="n">i2</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="n">lst_totale</span> <span class="o">+</span> <span class="n">lst1</span><span class="p">[</span><span class="n">i1</span><span class="p">:]</span> <span class="o">+</span> <span class="n">lst2</span><span class="p">[</span><span class="n">i2</span><span class="p">:]</span>
 </code></pre></div>
-"</p>
 </div>
 </div>
 </div>
@@ -3328,7 +3327,7 @@ Pour tout nombre <span class="arithmatex">\(a\)</span>, </p>
 <h4 id="423-visualisation">4.2.3 Visualisation<a class="headerlink" href="#423-visualisation" title="Permanent link">⚓︎</a></h4>
 <p>Une erreur classique avec les fonctions récursives est de considérer que les appels récursifs sont simultanés. Ceci est faux !
 L'animation suivante montre la progression du tri :</p>
-<p><gif-player src="https://glassus.github.io/terminale_nsi/T3_Algorithmique/3.1_Diviser_pour_regner/data/gif_fusion.gif" speed="1" play></gif-player></p>
+<p><gif-player src="./data/gif_fusion.gif" speed="1" play></gif-player></p>
 <p>Il est aussi conseillé d'observer l'évolution de l'algorithme grâce à PythonTutor :</p>
 <iframe width="1000" height="700" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20interclassement%28lst1,%20lst2%29%3A%0A%20%20%20%20lst_totale%20%3D%20%5B%5D%0A%20%20%20%20n1,%20n2%20%3D%20len%28lst1%29,%20len%28lst2%29%0A%20%20%20%20i1,%20i2%20%3D%200,%200%0A%20%20%20%20while%20i1%20%3C%20n1%20and%20i2%20%3C%20n2%3A%0A%20%20%20%20%20%20%20%20if%20lst1%5Bi1%5D%20%3C%20lst2%5Bi2%5D%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20lst_totale.append%28lst1%5Bi1%5D%29%0A%20%20%20%20%20%20%20%20%20%20%20%20i1%20%2B%3D%201%0A%20%20%20%20%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20lst_totale.append%28lst2%5Bi2%5D%29%0A%20%20%20%20%20%20%20%20%20%20%20%20i2%20%2B%3D%201%0A%20%20%20%20return%20lst_totale%20%2B%20lst1%5Bi1%3A%5D%20%2B%20lst2%5Bi2%3A%5D%0A%0Adef%20tri_fusion%28lst%29%3A%0A%20%20%20%20if%20len%28lst%29%20%3C%3D%201%3A%0A%20%20%20%20%20%20%20%20return%20lst%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20m%20%3D%20len%28lst%29%20//%202%0A%20%20%20%20%20%20%20%20return%20interclassement%28tri_fusion%28lst%5B%3Am%5D%29,%20tri_fusion%28lst%5Bm%3A%5D%29%29%0A%0Alst%20%3D%20%5B4,%203,%208,%202,%207,%201,%205%5D%0Aprint%28tri_fusion%28lst%29%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 

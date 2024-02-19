@@ -1,7 +1,8 @@
 
 !!! abstract "Exercice 1 : Tri Fusion : application"
+
     === "Enoncé"
-        Détaillez les étapes du tri fusion sur le tableau [23, 17, 28, 11, 20, 22, 19, 16].<br />
+        Détaillez les étapes du **tri fusion** sur le tableau [23, 17, 28, 11, 20, 22, 19, 16].<br />
         Déterminez le nombre de comparaisons effectuées durant les étapes de fusion.<br />
         Combien faudrait-il faire de comparaisons avec l'algorithme de tri par sélection ?
 
@@ -19,23 +20,24 @@
         Il en faut 7 + 6 + 5 + 4 + 3 + 2 + 1 = 28.<br />
 
 !!! abstract "Exercice 2 : Tri Fusion : application"
-        === "Enoncé"
-            Détaillez les étapes du tri fusion sur le tableau [68, 46, 27, 54, 32].<br />
-            Déterminez le nombre de comparaisons effectuées durant les étapes de fusion.<br />
-            Combien faudrait-il faire de comparaisons avec l'algorithme de tri par sélection ?
 
-        === "Correction"
+    === "Enoncé"
+        Détaillez les étapes du **tri fusion** sur le tableau [68, 46, 27, 54, 32].<br />
+        Déterminez le nombre de comparaisons effectuées durant les étapes de fusion.<br />
+        Combien faudrait-il faire de comparaisons avec l'algorithme de tri par sélection ?
+
+    === "Correction"
         
-            ![etapes du tri fusion](data/ex2Correction.png)
+        ![etapes du tri fusion](data/ex2Correction.png)
 
-            **Déterminez le nombre de comparaisons effectuées durant les étapes de fusion.**<br />
-            Pour fusionner [68] avec [46] et [54] avec [32], il en faut 2×1 = 2.<br />
-            Pour fusionner [27] avec [32, 54], il en faut 1 seule.<br />
-            Pour fusionner [46, 68] avec [27, 32, 54], il en faut 4.<br />
-            Ce qui donne un total de 2 + 1 + 4 = 7 comparaisons.<br />
+        **Déterminez le nombre de comparaisons effectuées durant les étapes de fusion.**<br />
+        Pour fusionner [68] avec [46] et [54] avec [32], il en faut 2×1 = 2.<br />
+        Pour fusionner [27] avec [32, 54], il en faut 1 seule.<br />
+        Pour fusionner [46, 68] avec [27, 32, 54], il en faut 4.<br />
+        Ce qui donne un total de 2 + 1 + 4 = 7 comparaisons.<br />
 
-            ** Combien faudrait-il faire de comparaisons avec l'algorithme de tri par sélection ?**<br />
-            Il en faut 4 + 3 + 2 + 1 = 10.<br />
+        ** Combien faudrait-il faire de comparaisons avec l'algorithme de tri par sélection ?**<br />
+        Il en faut 4 + 3 + 2 + 1 = 10.<br />
 
 !!! abstract "Exercice 3 "
     === "Enoncé"
