@@ -1,16 +1,31 @@
 
-!!! abstract "Actualités :newspaper:" 
+   
+!!! note ":star: Thèmes en cours d'étude :star: "
+    :arrow_forward:  [Graphes](./T1_Structures_de_donnees/1.5_Graphes/)<br />
 
-    - Le sujet 0 de l'épreuve de NSI 2024 est sorti 
+    Reste à voir :<br />
+    :hourglass: Programmation fonctionnelle<br />
+    :hourglass: Programmation dynamique<br />
+    
+    A revoir : <br />
+    :zap: [Les dictionnaires](./T1_Structures_de_donnees/1.4_Dictionnaires/cours.md)<br />
+    :zap: [Arbre binaire de recherche](./T1_Structures_de_donnees/1.4_Arbres/cours.md)<br />
+
+
+!!! abstract "Actualités :newspaper:" 
 
     Les modalités du BAC 2024 ont été [annoncées](https://www.education.gouv.fr/bo/2023/Hebdo36/MENE2317750N){. target="_blank"} :
 
     - le sujet écrit comportera 3 exercices noté sur 20
     - l'épreuve pratique sera composé de 2 exercices notés sur 20
     - Le poids de l'écrit sera de 3/4 et le poids de la pratique de 1/4
-   
-!!! note ":star: Thèmes en cours d'étude :star: "
-    - [Cryptographie](./TNSI/T5_Architecture_materielle/5.4_Cryptographie/cours/)
+
+!!! info "Entraînement"
+    Vous trouverez ci dessous quelques sites pour vous entrainez <br />
+
+    - [e-nsi écrit](https://e-nsi.forge.aeif.fr/ecrit/){. target="_blank"}<br />
+    - [e-nsi pratique](https://ens-fr.gitlab.io/nsi-pratique/){. target="_blank"}<br />
+    - Site recensant les sujets de BAC écrit : [ici](https://boiling-aletopelta-ff5.notion.site/be357c0d12cb430faa79dd890feb660b?v=56349470c9704fc2b93983c20d5b9a65){. target="_blank"}
 
 !!! note "*Thèmes traités*"
 
@@ -20,16 +35,15 @@
     - [Programmation Orientée Objet](./T2_Programmation/2.1_Programmation_Orientee_Objet/cours.md)   
     - [Listes / piles / files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md)
     - [Base de données](./T4_Bases_de_donnees/sommaire.md)
+    - [Gestion des processus](./T5_Architecture_materielle/5.2_Gestion_des_processus/)
+    - [Système sur puce](./T5_Architecture_materielle/5.1_Systemes_sur_puce/)
     - [Listes chainées](./T1_Structures_de_donnees/1.2_Listes/Structures_ListesChainees.md)
     - [Les arbres](./T1_Structures_de_donnees/1.4_Arbres/)
     - [Protocole de routage](./TNSI/T5_Architecture_materielle/5.3_Protocoles_de_routage/)
+    - [Sécurisation des communications, Cryptographie](./TNSI/T5_Architecture_materielle/5.4_Cryptographie/cours/)
+    - [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/)
+    - [Diviser pour régner](./T3_Algorithmique/3.1_Diviser_pour_regner/)
 
-!!! info "Entraînement"
-    Vous trouverez ci dessous quelques sites pour vous entrainez <br />
-
-    - [e-nsi écrit](https://e-nsi.forge.aeif.fr/ecrit/){. target="_blank"}<br />
-    - [e-nsi pratique](https://ens-fr.gitlab.io/nsi-pratique/){. target="_blank"}<br />
-    - Site recensant les sujets de BAC écrit : [ici](https://boiling-aletopelta-ff5.notion.site/be357c0d12cb430faa79dd890feb660b?v=56349470c9704fc2b93983c20d5b9a65){. target="_blank"}
 
 <!--
 !!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
