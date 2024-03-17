@@ -8,7 +8,7 @@
 
 <iframe width="560" height="315" text-align="center" src="https://www.youtube.com/embed/WlNTRgykfLw" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-![programme](data/grando.jpg){: .center width=30%}
+![programme](data/GO_visuel.png){: .center width=30%}
 
 ![Grille d'évaluation](data/grando_grille.jpg){: .center width=70%}
 

@@ -18,7 +18,7 @@
         <link rel="prev" href="../TP_Labyrinthe/">
       
       
-        <link rel="next" href="../cours2/">
+        <link rel="next" href="../data/anim_laby/">
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>En construction 🚧 - Saint Sauveur TNSI</title>
+        <title>Graphes - Saint Sauveur TNSI</title>
       
     
     
@@ -109,7 +109,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#en-construction" class="md-skip">
+        <a href="#graphes" class="md-skip">
           Aller au contenu
         </a>
       
@@ -143,7 +143,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              En construction 	🚧
+              Graphes
             
           </span>
         </div>
@@ -376,7 +376,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T6_6_Epreuve_pratique/BNS_2023/" class="md-tabs__link">
+        <a href="../../../T6_6_Epreuve_pratique/BNS_2024/" class="md-tabs__link">
           
   
   EP 💻
@@ -1074,29 +1074,18 @@
         
       
       
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
   
   <span class="md-ellipsis">
-    En construction 	🚧
+    Graphes
   </span>
   
 
-      </a>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours2/" class="md-nav__link">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1105,6 +1094,200 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-probleme-des-ponts-de-konigsberg" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le problème des ponts de Königsberg
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-notion-de-graphe-et-vocabulaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Notion de graphe et vocabulaire
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Notion de graphe et vocabulaire">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-exemples-de-situations" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Exemples de situations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-vocabulaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Vocabulaire
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-modelisations-dun-graphe" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Modélisations d'un graphe
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Modélisations d'un graphe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-representation-par-matrice-dadjacence" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Représentation par matrice d'adjacence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-representation-par-listes-dadjacence" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Représentation par listes d'adjacence
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-creation-dune-classe-graphe" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Création d'une classe Graphe
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Création d'une classe Graphe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-interface-souhaitee" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Interface souhaitée
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-conseils-dimplementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Conseils d'implémentation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Implémentation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-parcours-de-graphes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.    Parcours de graphes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Parcours de graphes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-le-parcours-en-largeur-bfs-breadth-first-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Le parcours en largeur (BFS, Breadth First Search)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413-application-du-bfs-recherche-du-plus-court-chemin" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.3 Application du BFS : recherche du plus court chemin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-le-parcours-en-profondeur-dfs-depth-first-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Le parcours en profondeur (DFS, Depth First Search)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1128,10 +1311,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6_4" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6_3" >
         
           
-          <label class="md-nav__link" for="__nav_2_6_4" id="__nav_2_6_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_6_3" id="__nav_2_6_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1142,8 +1325,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_6_4">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_3">
             <span class="md-nav__icon md-icon"></span>
             Data
           </label>
@@ -1615,16 +1798,105 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3.2 Programmation dynamique
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            3.2 Programmation dynamique
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../../T3_Algorithmique/3.2_Programmation_dynamique/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Programmation dynamique
+    Cours
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T3_Algorithmique/3.2_Programmation_dynamique/TP_pyramides/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP Pyramides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T3_Algorithmique/3.2_Programmation_dynamique/TP_rendu_monnaie/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP Rendu de monnaie
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2614,11 +2886,32 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../T6_6_Epreuve_pratique/BNS_2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BNS 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../T6_6_Epreuve_pratique/BNS_2023/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    BNS 2023
+    (!!! old !!!) BNS 2023
   </span>
   
 
@@ -3006,7 +3299,704 @@
   
 
 
-<h1 id="en-construction">En construction   🚧<a class="headerlink" href="#en-construction" title="Permanent link">⚓︎</a></h1>
+<h1 id="graphes">Graphes<a class="headerlink" href="#graphes" title="Permanent link">⚓︎</a></h1>
+<p><img alt="image" class="center" src="../data/memestart.jpg" width="40%" /></p>
+<p><img alt="image" class="center" src="../data/BO1.png" /></p>
+<p><img alt="image" class="center" src="../data/BO2.png" /></p>
+<div class="admonition danger">
+<p class="admonition-title">Crédit</p>
+<p>Ce cours est intégralement inspiré du <a class="" href="https://cgouygou.github.io/TNSI/T01_StructuresDonnees/T1.5_Graphes/T1.5.1_Graphes/" target="_blank">cours de Cédric Gouygou</a> , du lycée Marguerite de Valois d'Angoulême (16) puis relu et mis en page par <strong>Gilles Lassus</strong>, académie de bordeaux</p>
+</div>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">⚓︎</a></h2>
+<p>selon l'idée de Fabrice Nativel</p>
+<h3 id="le-probleme-des-ponts-de-konigsberg">Le problème des ponts de Königsberg<a class="headerlink" href="#le-probleme-des-ponts-de-konigsberg" title="Permanent link">⚓︎</a></h3>
+<div class="centre">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aE3MtaDDk5U?si=w5MD2TyZzq49bFWa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<p>Voici une illustration du problème des septs points de Königsberg extrait de la vidéo précédente :
+<img alt="Konigsberg" class="center" src="../data/konigsberg.png" width="50%" /></p>
+<p>On rappelle que le but du problème est de trouver un chemin qui permet de passer une seule et unique fois par chaque pont de la ville.</p>
+<ol>
+<li>Faire quelques essais, que penser de ce problème ?<br /></li>
+<li>Vers les graphes<br /></li>
+</ol>
+<p>On divise la ville en quatre zones notées <strong>N</strong> (nord de la ville), <strong>S</strong> (sud de la ville), <strong>I</strong> (île centrale) et <strong>E</strong> (est de la ville) comme illustré ci-dessous. Faire un schéma en représentant chaque zone par un rond et un pont par un lien entre ces zones.</p>
+<p><img alt="Konigsberg2" class="center" src="../data/konigsberg2.png" width="50%" /></p>
+<details class="tip">
+<summary>Correction</summary>
+<p>Vous devriez obtenir un schéma similaire à  :</p>
+<p><img alt="image graphe Kônigsberg" class="center" src="../data/k1.png" width="40%" /></p>
+</details>
+<h2 id="1-notion-de-graphe-et-vocabulaire">1. Notion de graphe et vocabulaire<a class="headerlink" href="#1-notion-de-graphe-et-vocabulaire" title="Permanent link">⚓︎</a></h2>
+<p>Le concept de graphe permet de résoudre de nombreux problèmes en mathématiques comme en informatique. C'est un outil de représentation très courant, et nous l'avons déjà rencontré à plusieurs reprises, en particulier lors de l'étude de réseaux.</p>
+<h3 id="11-exemples-de-situations">1.1 Exemples de situations<a class="headerlink" href="#11-exemples-de-situations" title="Permanent link">⚓︎</a></h3>
+<h4 id="111-reseau-informatique">1.1.1 Réseau informatique<a class="headerlink" href="#111-reseau-informatique" title="Permanent link">⚓︎</a></h4>
+<p><img alt="" class="center" src="../data/22J2AS1_ex2.png" width="40%" /> </p>
+<h4 id="112-reseau-de-transport">1.1.2 Réseau de transport<a class="headerlink" href="#112-reseau-de-transport" title="Permanent link">⚓︎</a></h4>
+<p><img alt="" class="center" src="../data/carte-metro-parisien-768x890.jpg" width="60%" /> </p>
+<h4 id="113-reseau-social">1.1.3 Réseau social<a class="headerlink" href="#113-reseau-social" title="Permanent link">⚓︎</a></h4>
+<p><img alt="" class="center" src="../data/graphe_RS.png" width="40%" /> </p>
+<h4 id="114-generalisation">1.1.4 Généralisation<a class="headerlink" href="#114-generalisation" title="Permanent link">⚓︎</a></h4>
+<p>Une multitude de problèmes concrets d'origines très diverses peuvent donner lieu à des modélisations par des graphes : c'est donc une structure essentielle en sciences, qui requiert un formalisme mathématique particulier que nous allons découvrir. 
+<img alt="" class="center" src="../data/graph_math.png" /> </p>
+<p>L'étude de la théorie des graphes est un champ très vaste des mathématiques : nous allons surtout nous intéresser à l'implémentation en Python d'un graphe et à différents problèmes algorithmiques qui se posent dans les graphes.</p>
+<h3 id="12-vocabulaire">1.2 Vocabulaire<a class="headerlink" href="#12-vocabulaire" title="Permanent link">⚓︎</a></h3>
+<p>En général, un graphe est un ensemble d'objets, appelés <em>sommets</em> ou parfois <em>nœuds</em> (<em>vertex</em> or <em>nodes</em> en anglais) reliés par des <em>arêtes</em> ou <em>arcs</em> ((<em>edges</em> en anglais)).
+Ce graphe peut être <strong>non-orienté</strong> ou <strong>orienté</strong> .</p>
+<h4 id="121-graphe-non-oriente">1.2.1 Graphe non-orienté<a class="headerlink" href="#121-graphe-non-oriente" title="Permanent link">⚓︎</a></h4>
+<p><img alt="" class="center" src="../data/exemple_graphe.png" width="480" /> </p>
+<p>Dans un graphe <strong>non-orienté</strong>, les <em>arêtes</em> peuvent être empruntées dans les deux sens, et une <em>chaîne</em> est une suite de sommets reliés par des arêtes, comme C - B - A - E par exemple. La <em>longueur</em> de cette chaîne est alors 3, soit le nombre d'arêtes.</p>
+<p>Les sommets B et E sont <em>adjacents</em> au sommet A, ce sont les <em>voisins</em> de A.</p>
+<p><strong>Exemple de graphe non-orienté</strong> : le graphe des relations d'un individu sur Facebook est non-orienté, car si on est «ami» avec quelqu'un la réciproque est vraie.</p>
+<h4 id="122-graphe-oriente">1.2.2 Graphe orienté<a class="headerlink" href="#122-graphe-oriente" title="Permanent link">⚓︎</a></h4>
+<p><img alt="" class="center" src="../data/exemple_graphe_oriente.png" width="480" /> </p>
+<p>Dans un graphe <strong>orienté</strong>, les <em>arcs</em> ne peuvent être empruntés que dans le sens de la flèche, et un <em>chemin</em> est une suite de sommets reliés par des arcs, comme B → C → D → E par exemple.</p>
+<p>Les sommets C et D sont <em>adjacents</em> au sommet B (mais pas A !), ce sont les <em>voisins</em> de B.</p>
+<p><strong>Exemple de graphe orienté</strong> : le graphe des relations d'un individu sur Twitter est orienté, car on peut «suivre» quelqu'un sans que cela soit réciproque.</p>
+<h4 id="123-graphe-pondere">1.2.3 Graphe pondéré<a class="headerlink" href="#123-graphe-pondere" title="Permanent link">⚓︎</a></h4>
+<p><img alt="" class="center" src="../data/exemple_graphe_pondere.png" width="480" /> </p>
+<p>Un graphe est <strong>pondéré</strong> (ou valué) si on attribue à chaque arête une valeur numérique (la plupart du temps positive), qu'on appelle <em>mesure</em>, <em>poids</em>, <em>coût</em> ou <em>valuation</em>.</p>
+<p>Par exemple:</p>
+<ul>
+<li>dans le protocole OSPF, on pondère les liaisons entre routeurs par le coût;</li>
+<li>dans un réseau routier entre plusieurs villes, on pondère par les distances.</li>
+</ul>
+<h4 id="124-connexite">1.2.4 Connexité<a class="headerlink" href="#124-connexite" title="Permanent link">⚓︎</a></h4>
+<p>Un graphe est <strong>connexe</strong> s'il est d'un seul tenant: c'est-à-dire si n'importe quelle paire de sommets peut toujours être reliée par une chaîne. Autrement un graphe est connexe s'il est «en un seul morceau».</p>
+<p>Par exemple, le graphe précédent est connexe. Mais le suivant ne l'est pas: il n'existe pas de chaîne entre les sommets A et F par exemple.</p>
+<p><img alt="" class="center" src="../data/exemple_graphe_non_connexe.png" width="480" /> </p>
+<p>Il possède cependant deux <strong>composantes connexes</strong> : le sous-graphe composé des sommets A, B, C, D et E d'une part et le sous-graphe composé des sommets F, G et H.</p>
+<h2 id="2-modelisations-dun-graphe">2. Modélisations d'un graphe<a class="headerlink" href="#2-modelisations-dun-graphe" title="Permanent link">⚓︎</a></h2>
+<p>Pour modéliser un graphe, il faut établir par convention une manière de donner les renseignements suivants :</p>
+<ul>
+<li>qui sont les sommets ?</li>
+<li>pour chaque sommet, quels sont ses voisins ? (et éventuellement quel poids porte l'arête qui les relie)</li>
+</ul>
+<h3 id="21-representation-par-matrice-dadjacence">2.1 Représentation par matrice d'adjacence<a class="headerlink" href="#21-representation-par-matrice-dadjacence" title="Permanent link">⚓︎</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Principe</p>
+<ul>
+<li>On classe les sommets (en les numérotant, ou par ordre alphabétique).</li>
+<li>on représente les arêtes (ou les arcs) dans une matrice, c'est-à-dire un tableau à deux dimensions où on inscrit un 1 en ligne <code>i</code> et colonne <code>j</code> si les sommets de rang <code>i</code> et de rang <code>j</code> sont <strong>voisins</strong> (dits aussi <em>adjacents</em>).</li>
+</ul>
+<p>Ce tableau s'appelle une <strong>matrice d'adjacence</strong> (on aurait très bien pu l'appeler aussi <em>matrice de voisinage</em>).</p>
+</div>
+<h4 id="211-graphe-non-oriente">2.1.1 Graphe non orienté<a class="headerlink" href="#211-graphe-non-oriente" title="Permanent link">⚓︎</a></h4>
+<p><img alt="" class="center" src="../data/matgraph_1.png" width="70%" /></p>
+<p>Dans ce graphe non orienté, comme B est voisin de C, C est aussi voisin de B, ce qui signifie que l'arête qui relie B et C va donner lieu à deux "1" dans la matrice, situé de part et d'autre de la diagonale descendante (un mathématicien parlera de matrice <em>symétrique</em>).</p>
+<h4 id="212-graphe-oriente">2.1.2 Graphe orienté<a class="headerlink" href="#212-graphe-oriente" title="Permanent link">⚓︎</a></h4>
+<p><img alt="" class="center" src="../data/matgraph_2.png" width="70%" /></p>
+<h4 id="213-graphe-pondere">2.1.3 Graphe pondéré<a class="headerlink" href="#213-graphe-pondere" title="Permanent link">⚓︎</a></h4>
+<p><img alt="" class="center" src="../data/matgraph_3.png" width="75%" /></p>
+<h4 id="214-exercices">2.1.4 Exercices<a class="headerlink" href="#214-exercices" title="Permanent link">⚓︎</a></h4>
+<div class="admonition example">
+<p class="admonition-title">Exercice 1</p>
+<p>Soit un ensemble d'amis connectés sur un réseau social quelconque. Voici les interactions qu'on a recensées :</p>
+<ul>
+<li>André est ami avec Béa, Charles, Estelle et Fabrice,</li>
+<li>Béa est amie avec André, Charles, Denise et Héloïse,</li>
+<li>Charles est ami avec André, Béa, Denise, Estelle, Fabrice et Gilbert,</li>
+<li>Denise est amie avec Béa, Charles et Estelle,</li>
+<li>Estelle est amie avec André, Charles et Denise,</li>
+<li>Fabrice est ami avec André, Charles et Gilbert,</li>
+<li>Gilbert est ami avec Charles et Fabrice,</li>
+<li>Héloïse est amie avec Béa.</li>
+</ul>
+<p><strong>Q1.</strong> Représenter le graphe des relations dans ce réseau social (on désignera chaque individu par l'initiale de son prénom). Il est possible de faire en sorte que les arêtes ne se croisent pas !</p>
+<details class="tip">
+<summary>Correction Q1</summary>
+<p><img alt="image" class="center" src="../data/grapheRS.png" /></p>
+</details>
+<p><strong>Q2.</strong> Donner la matrice d'adjacence de ce graphe.</p>
+<details class="tip">
+<summary>Correction Q2</summary>
+<p><span class="arithmatex">\(\pmatrix{
+0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
+1 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+}\)</span></p>
+</details>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 2</p>
+<p>Construire les graphes correspondants aux matrices d'adjacence suivantes:</p>
+<p><strong>Q1.</strong> <span class="arithmatex">\(M_1 =\pmatrix{
+    0&amp;1&amp;1&amp;1&amp;1\\
+    1&amp;0&amp;1&amp;0&amp;0\\
+    1&amp;1&amp;0&amp;1&amp;0\\
+    1&amp;0&amp;1&amp;0&amp;1\\
+    1&amp;0&amp;0&amp;1&amp;0\\
+    }\)</span></p>
+<details class="tip">
+<summary>Correction</summary>
+<p><img alt="image" class="center" src="../data/ex2_Q1.png" /></p>
+</details>
+<p><strong>Q2.</strong> <span class="arithmatex">\(M_2=\pmatrix{
+    0&amp;1&amp;1&amp;0&amp;1\\
+    0&amp;0&amp;1&amp;0&amp;0\\
+    0&amp;0&amp;0&amp;1&amp;0\\
+    1&amp;0&amp;0&amp;0&amp;1\\
+    0&amp;0&amp;0&amp;0&amp;0\\
+    }\)</span></p>
+<details class="tip">
+<summary>Correction</summary>
+<p><img alt="image" class="center" src="../data/ex2_Q2.png" /></p>
+</details>
+<p><strong>Q3.</strong> <span class="arithmatex">\(M_3=\pmatrix{
+    0&amp;5&amp;10&amp;50&amp;12\\
+    5&amp;0&amp;10&amp;0&amp;0\\
+    10&amp;10&amp;0&amp;8&amp;0\\
+    50&amp;0&amp;8&amp;0&amp;100\\
+    12&amp;0&amp;0&amp;100&amp;0\\
+    }\)</span>    </p>
+<details class="tip">
+<summary>Correction</summary>
+<p><img alt="image" class="center" src="../data/ex2_Q3.png" /></p>
+</details>
+</div>
+<h4 id="215-implementation-python-des-matrices-dadjacence">2.1.5 Implémentation Python des matrices d'adjacence<a class="headerlink" href="#215-implementation-python-des-matrices-dadjacence" title="Permanent link">⚓︎</a></h4>
+<div class="admonition info">
+<p class="admonition-title">Matrices d'adjacence en Python</p>
+<p>Une matrice se représente naturellement par une liste de listes.</p>
+<p><strong>Exemple:</strong>
+La matrice <span class="arithmatex">\(M_1 =\pmatrix{
+    0&amp;1&amp;1&amp;1&amp;1\\
+    1&amp;0&amp;1&amp;0&amp;0\\
+    1&amp;1&amp;0&amp;1&amp;0\\
+    1&amp;0&amp;1&amp;0&amp;1\\
+    1&amp;0&amp;0&amp;1&amp;0\\
+    }\)</span>, associée au graphe <img alt="image" class="center" src="../data/ex2_Q1.png" /></p>
+<p>sera représentée par la variable <code>G</code> suivante :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">G</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+      <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+      <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+      <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+      <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+</code></pre></div>
+</div>
+<p><strong>Complexité en mémoire et temps d'accès :</strong></p>
+<ul>
+<li>
+<p>Pour un graphe à <span class="arithmatex">\(n\)</span> sommets, la complexité en mémoire (appelée aussi <em>complexité spatiale</em>) de la représentation matricielle est en <span class="arithmatex">\(O(n^2)\)</span>.</p>
+</li>
+<li>
+<p>Tester si un sommet est isolé (ou connaître ses voisins) est en <span class="arithmatex">\(O(n)\)</span> puisqu'il faut parcourir une ligne, mais tester si deux sommets sont adjacents (voisins) est en <span class="arithmatex">\(O(1)\)</span>, c'est un simple accès au tableau.</p>
+</li>
+</ul>
+<p>La modélisation d'un graphe par sa matrice d'adjacence est loin d'être la seule manière de représenter un graphe : nous allons voir une autre modélisation, par <strong>liste d'adjacence</strong>.</p>
+<h3 id="22-representation-par-listes-dadjacence">2.2 Représentation par listes d'adjacence<a class="headerlink" href="#22-representation-par-listes-dadjacence" title="Permanent link">⚓︎</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Principe</p>
+<ul>
+<li>
+<p>On associe à chaque sommet sa liste des voisins (c'est-à-dire les sommets adjacents). On utilise pour cela un dictionnaire dont les clés sont les sommets et les valeurs les listes des voisins.</p>
+</li>
+<li>
+<p>Dans le cas d'un graphe orienté on associe à chaque sommet la liste des <em>successeurs</em> (ou bien des <em>prédécesseurs</em>, au choix).</p>
+</li>
+</ul>
+<p>Par exemple, le graphe <img alt="image" class="center" src="../data/ex2_Q1.png" /> sera représenté par le dictionnaire :</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">G</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">],</span>
+     <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">],</span>
+     <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">],</span>
+     <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">],</span>
+     <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">]</span>
+    <span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p><strong>Complexité en mémoire et temps d'accès :</strong></p>
+<ul>
+<li>
+<p>Pour un graphe à <span class="arithmatex">\(n\)</span> sommets et <span class="arithmatex">\(m\)</span> arêtes, la complexité spatiale de la représentation en liste d'adjacence est en <span class="arithmatex">\(O(n+m)\)</span>. C'est beaucoup mieux qu'une matrice d'adjacence lorsque le graphe comporte peu d'arêtes (i.e. beaucoup de 0 dans la matrice, non stockés avec des listes).</p>
+</li>
+<li>
+<p>Tester si un sommet est isolé (ou connaître ses voisins) est en <span class="arithmatex">\(O(1)\)</span> puisqu'on y accède immédiatement, mais tester si deux sommets sont adjacents (voisins) est en <span class="arithmatex">\(O(n)\)</span> car il faut parcourir la liste.</p>
+</li>
+</ul>
+<h4 id="221-exercices">2.2.1 Exercices<a class="headerlink" href="#221-exercices" title="Permanent link">⚓︎</a></h4>
+<div class="admonition example">
+<p class="admonition-title">Exercice 3</p>
+<p>Construire les graphes correspondants aux listes d'adjacence suivantes.</p>
+<p><strong>Q1.</strong> 
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">G1</span> <span class="o">=</span> <span class="p">{</span>
+<span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">],</span>
+<span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span>
+<span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">],</span>
+<span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">],</span>
+<span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span>
+<span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">]</span>
+     <span class="p">}</span>
+</code></pre></div></p>
+<details class="tip">
+<summary>Correction Q1</summary>
+<p><img alt="image" class="center" src="../data/ex3_Q1.png" /></p>
+</details>
+<p><strong>Q2.</strong> 
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">G2</span> <span class="o">=</span> <span class="p">{</span>
+<span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">],</span>
+<span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">],</span>
+<span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">],</span>
+<span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="p">[],</span>
+<span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span>
+     <span class="p">}</span>
+</code></pre></div></p>
+<details class="tip">
+<summary>Correction Q2</summary>
+<p><img alt="image" class="center" src="../data/ex3_Q2.png" /></p>
+</details>
+</div>
+<h2 id="3-creation-dune-classe-graphe">3. Création d'une classe <code>Graphe</code><a class="headerlink" href="#3-creation-dune-classe-graphe" title="Permanent link">⚓︎</a></h2>
+<p>Dans cette partie, nous ne traiterons que des graphes <strong>non-orientés</strong>.</p>
+<h3 id="31-interface-souhaitee">3.1 Interface souhaitée<a class="headerlink" href="#31-interface-souhaitee" title="Permanent link">⚓︎</a></h3>
+<p>Nous voulons que le graphe <img alt="image" class="center" src="../data/ex2_Q1.png" /> puisse être créé grâce aux instructions suivantes :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">g</span> <span class="o">=</span> <span class="n">Graphe</span><span class="p">([</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">])</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p>Nous souhaitons aussi pouvoir tester si deux sommets sont voisins avec la méthode <code>sont_voisins</code> :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">sont_voisins</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">)</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">sont_voisins</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">)</span>
+<span class="kc">False</span>
+</code></pre></div>
+<p>Enfin, nous voulons pouvoir obtenir facilement la liste de tous les voisins d'un sommet avec la méthode <code>voisins</code>:
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">voisins</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">]</span>
+</code></pre></div></p>
+<h3 id="32-conseils-dimplementation">3.2 Conseils d'implémentation<a class="headerlink" href="#32-conseils-dimplementation" title="Permanent link">⚓︎</a></h3>
+<p>L'objet de type <code>Graphe</code> aura comme attributs :</p>
+<ul>
+<li>une liste <code>liste_sommets</code> (donnée en paramètre dans la liste <code>liste_sommets</code>) </li>
+<li>un dictionnaire <code>adjacents</code>, où chaque sommet se verra attribuer une liste vide <code>[]</code>.</li>
+</ul>
+<h3 id="33-implementation">3.3 Implémentation<a class="headerlink" href="#33-implementation" title="Permanent link">⚓︎</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Implémentation d'une classe <code>Graphe</code> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Graphe</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">liste_sommets</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">liste_sommets</span> <span class="o">=</span> <span class="n">liste_sommets</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span> <span class="o">=</span> <span class="p">{</span><span class="n">sommet</span> <span class="p">:</span> <span class="p">[]</span> <span class="k">for</span> <span class="n">sommet</span> <span class="ow">in</span> <span class="n">liste_sommets</span><span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">ajoute_arete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommetA</span><span class="p">,</span> <span class="n">sommetB</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommetA</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sommetB</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommetB</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sommetA</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">voisins</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommet</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommet</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">sont_voisins</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommetA</span><span class="p">,</span> <span class="n">sommetB</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">sommetB</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommetA</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<h2 id="4-parcours-de-graphes">4. <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2b50.svg" title=":star:" /> Parcours de graphes <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2b50.svg" title=":star:" /><a class="headerlink" href="#4-parcours-de-graphes" title="Permanent link">⚓︎</a></h2>
+<p><img alt="" class="center" src="../data/toutgraphe.jpeg" width="40%" /> </p>
+<div class="admonition gear">
+<p class="admonition-title">Algorithme de parcours</p>
+<p>Un parcours de graphe est un algorithme consistant à explorer <strong>tous</strong> les sommets d'un graphe de proche
+en proche à partir d'un sommet initial. Ces parcours sont notamment utilisés pour rechercher un plus court chemin (et donc dans les GPS) ou pour trouver la sortie d'un labyrinthe...</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/26a0.svg" title=":warning:" /> Parcourir simplement le dictionnaire ou la matrice d’un
+graphe n’est pas considéré comme un
+parcours de graphe. <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/26a0.svg" title=":warning:" /></p>
+<p>Tous les parcours suivent plus ou moins le même algorithme de base :</p>
+<ul>
+<li>
+<p>On visite un sommet <code>A</code> . On crée une structure <code>S</code>  qui contiendra au départ l’<em>ensemble</em> des voisins de <code>A</code> .</p>
+</li>
+<li>
+<p>Tant que <code>S</code> n’est pas vide :</p>
+<ul>
+<li>on choisit un sommet <code>s</code>  de <code>S</code></li>
+<li>on visite <code>s</code></li>
+<li>on ajoute à <code>S</code> tous les voisins de <code>s</code> <strong>pas encore visités</strong></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Sommets visités</p>
+<p>Contrairement à un parcours d'arbre, où les fils d'un nœud ne peuvent pas avoir été visités avant le nœud, un voisin d'un sommet peut avoir déjà été visité en tant que voisin d'un sommet précédent...</p>
+<p>Il est donc nécessaire de mémoriser les sommets déja visités ou découverts (on dira qu'un sommet est découvert lorsqu'on l'ajoute à <code>S</code>).</p>
+</div>
+<p>Le choix de la structure de l'ensemble <code>S</code> est prépondérant:</p>
+<ul>
+<li>Si on choisit une <strong>file</strong> (FIFO): on visitera les sommets dans l'ordre d'arrivée, donc les plus proches du sommet précédent. On obtient donc un <em>parcours en largeur</em> <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" /> <strong>BFS</strong>.</li>
+<li>Si on choisit une <strong>pile</strong> (LIFO): on visitera d'abord les derniers sommets arrivés, donc on parcourt le graphe en visitant à chaque étape un voisin du précédent. On obtient donc un <em>parcours en profondeur</em> <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" /> <strong>DFS</strong>.</li>
+</ul>
+<p><img alt="" class="center" src="../data/dfs_or_bfs_meme.jpg" width="30%" /> </p>
+<h3 id="41-le-parcours-en-largeur-bfs-breadth-first-search">4.1 Le parcours en largeur (BFS, Breadth First Search)<a class="headerlink" href="#41-le-parcours-en-largeur-bfs-breadth-first-search" title="Permanent link">⚓︎</a></h3>
+<h4 id="411-principe">4.1.1 Principe<a class="headerlink" href="#411-principe" title="Permanent link">⚓︎</a></h4>
+<p><strong>Exemple de parcours en largeur, avec B comme sommet de départ:</strong></p>
+<p><center>
+<gif-player src="https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.4_Graphes/data/bfs.gif" speed="1" play></gif-player>
+</center></p>
+<p><strong>Codes couleur :</strong></p>
+<ul>
+<li><strong>vert</strong> : les sommets non encore traités.</li>
+<li><strong>rouge</strong> : le sommet en cours de traitement.</li>
+<li><strong>orange</strong> : la file d'attente des sommets qui seront bientôt traités. On y rajoute à chaque fois les voisins du sommet en cours de traitement, uniquement <strong>si ils n'ont pas encore été découverts</strong>.</li>
+<li><strong>noir</strong> : les sommets traités.</li>
+</ul>
+<h4 id="412-algorithme-bfs">4.1.2 Algorithme BFS<a class="headerlink" href="#412-algorithme-bfs" title="Permanent link">⚓︎</a></h4>
+<p>On utilise :</p>
+<ul>
+<li>une liste <code class="highlight"><span class="n">traites</span></code> qui recueille les sommets visités (c'est-à-dire qu'on a fini de traiter, après avoir ajouté ses voisins dans la file d'attente) et qui sera renvoyée à la fin de l'algorithme;</li>
+<li>une liste <code class="highlight"><span class="n">decouverts</span></code> qui contient les sommets découverts au fur et à mesure du parcours;</li>
+<li>une <strong>file</strong> <code class="highlight"><span class="n">en_attente</span></code> qui contient les sommets découverts mais non encore visités. On utilisera au choix une classe <code>File</code> écrite plus tôt dans l'année ou tout simplement une <code class="highlight"><span class="nb">list</span></code> en utilisant <code class="highlight"><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span></code> (pour défiler) et <code class="highlight"><span class="n">append</span><span class="p">()</span></code> (pour enfiler).</li>
+</ul>
+<p>En début d'algorithme, seul le sommet de départ <code class="highlight"><span class="n">depart</span></code> donné en paramètre est découvert. La fonction <code>BFS</code> renvoie la liste des sommets dans l'ordre de visite lors du parcours en largeur.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Parcours en largeur - BFS </p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">BFS</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">depart</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Effectue un parcours en largeur du graphe g en partant du sommet depart,</span>
+<span class="sd">    et renvoie la liste des sommets visités dans l&#39;ordre du parcours.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">traites</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">decouverts</span> <span class="o">=</span> <span class="p">[</span><span class="n">depart</span><span class="p">]</span>
+    <span class="n">en_attente</span> <span class="o">=</span> <span class="p">[</span><span class="n">depart</span><span class="p">]</span>
+    <span class="k">while</span> <span class="n">en_attente</span> <span class="o">!=</span> <span class="p">[]</span> <span class="p">:</span>
+        <span class="n">sommet</span> <span class="o">=</span> <span class="n">en_attente</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">voisins</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">voisins</span><span class="p">(</span><span class="n">sommet</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">voisin</span> <span class="ow">in</span> <span class="n">voisins</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">voisin</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">decouverts</span><span class="p">:</span>
+                <span class="n">decouverts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">voisin</span><span class="p">)</span>
+                <span class="n">en_attente</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">voisin</span><span class="p">)</span>
+        <span class="n">traites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sommet</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">traites</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Intérêt de la liste <code>decouverts</code></p>
+<p>La liste <code>decouverts</code> contient tous les sommets qui ont été :</p>
+<ul>
+<li>soit traités (auquel cas ils sont dans la liste <code>traites</code>)</li>
+<li>soit en attente (auquel cas ils sont dans la liste <code>en_attente</code>)</li>
+</ul>
+<p>Le test de la ligne 13  <code class="highlight"><span class="k">if</span> <span class="n">voisin</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">decouverts</span><span class="p">:</span></code> permet donc de ne pas mettre en file d'attente un voisin qui est (ou a été) déjà en file d'attente. </p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Que contient la file <code>en_attente</code> ?</p>
+<p>À chaque instant, la file <code>en_attente</code> contient des sommets à la distance <code>k+1</code> et à la distance <code>k</code> du point de départ :</p>
+<p><img alt="image" class="center" src="../data/en_attente.png" /></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 4</p>
+<p><img alt="image" class="center" src="../data/BFS_ex1.png" /></p>
+<p>Grâce à la classe <code>Graphe</code> du 3.3, ce graphe s'implémente par :</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">g</span> <span class="o">=</span> <span class="n">Graphe</span><span class="p">([</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">])</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Q1.</strong> Donner le parcours en largeur de <code>g</code>  grâce à l'algorithme BFS, si le sommet de départ est B. Cela correspond au parcours présenté par le gif de début de paragraphe.</p>
+<details class="tip">
+<summary>correction Q1</summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">BFS</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">)</span>
+<span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">]</span>
+</code></pre></div>
+</details>
+<p><strong>Q2.</strong> Deviner le parcours en largeur de départ D, puis de départ G. Vérifier grâce à votre algorithme.</p>
+<details class="tip">
+<summary>Correction Q2</summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">BFS</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">)</span>
+<span class="p">[</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">BFS</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">)</span>
+<span class="p">[</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">]</span>
+</code></pre></div>
+</details>
+</div>
+<h3 id="413-application-du-bfs-recherche-du-plus-court-chemin">4.1.3 Application du BFS : recherche du plus court chemin<a class="headerlink" href="#413-application-du-bfs-recherche-du-plus-court-chemin" title="Permanent link">⚓︎</a></h3>
+<p>L'algorithme BFS découvre les sommets «par cercles concentriques» autour du point de départ (ainsi que le montre la structure de la file d'attente). On découvre d'abord tous les sommets à la distance 1 du point de départ, puis à la distance 2, puis 3, etc.</p>
+<p>Un sommet situé à la distance 5 sera découvert en tant que voisin d'un sommet à la distance 4, qui lui-même aura été découvert grâce à un sommet à la distance 3, qui lui-même...</p>
+<p>On comprend donc que si on arrive à se souvenir du sommet «parent» de chaque sommet (celui qui lui a permis d'être découvert), on pourra alors reconstituer un chemin permettant de remonter au point de départ.</p>
+<p>Nous allons pour cela nous servir d'une structure de dictionnaire pour associer à chaque sommet son sommet-parent.</p>
+<p>Il faudra ensuite une fonction pour recréer le chemin.</p>
+<div class="admonition warning">
+<p class="admonition-title">Pourquoi le plus court chemin ?</p>
+<ul>
+<li>Comment est-on sûr qu'un chemin va être trouvé entre deux sommets A et B ?</li>
+</ul>
+<p>Si le graphe est connexe, tout parcours BFS au départ de A va parcourir l'intégralité du graphe, et donc passera par B à un moment. Un chemin sera donc forcément trouvé entre A et B.</p>
+<ul>
+<li>Comment est-on sûr que ce chemin trouvé est <strong>le plus court</strong> ?</li>
+</ul>
+<p>La découverte des sommets par cercles concentriques entre A et B nous assure qu'on ne peut pas rater le point B : s'il est à la distance <code>k</code> de A, il sera forcément visité puisque tous les sommets à la distance <code>k</code> vont passer par la liste d'attente, après les sommets de distance <code>k-1</code> et avant les sommets de distance <code>k+1</code>.</p>
+<p>Lorsqu'on remontera de B vers A en passant par les sommets parents successifs, il ne peut y avoir qu'un seul sommet par «couche» : le chemin sera donc exactement de longueur <code>k</code>, il sera donc minimal. </p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Recherche du plus court chemin </p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_chemin</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Parcours en largeur du graphe g en partant du sommet depart,</span>
+<span class="sd">    qui s&#39;arrête dès que le sommet arrivee est atteint.</span>
+<span class="sd">    Renvoie alors le chemin du depart vers arrivee.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">traites</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">decouverts</span> <span class="o">=</span> <span class="p">[</span><span class="n">depart</span><span class="p">]</span>
+    <span class="n">en_attente</span> <span class="o">=</span> <span class="p">[</span><span class="n">depart</span><span class="p">]</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">while</span> <span class="n">en_attente</span> <span class="o">!=</span> <span class="p">[]</span> <span class="p">:</span>
+        <span class="n">sommet</span> <span class="o">=</span> <span class="n">en_attente</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">voisins</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">voisins</span><span class="p">(</span><span class="n">sommet</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">voisin</span> <span class="ow">in</span> <span class="n">voisins</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">voisin</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">decouverts</span><span class="p">:</span>
+                <span class="n">decouverts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">voisin</span><span class="p">)</span>
+                <span class="n">en_attente</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">voisin</span><span class="p">)</span>
+                <span class="n">parent</span><span class="p">[</span><span class="n">voisin</span><span class="p">]</span> <span class="o">=</span> <span class="n">sommet</span>
+                <span class="k">if</span> <span class="n">voisin</span> <span class="o">==</span> <span class="n">arrivee</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">remonte_chemin</span><span class="p">(</span><span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span>
+        <span class="n">traites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sommet</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s2">&quot;non trouvé&quot;</span>  
+
+
+<span class="k">def</span> <span class="nf">remonte_chemin</span><span class="p">(</span><span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
+    <span class="n">sommet</span> <span class="o">=</span> <span class="n">arrivee</span>
+    <span class="n">chemin</span> <span class="o">=</span> <span class="n">arrivee</span>
+    <span class="k">while</span> <span class="n">sommet</span> <span class="o">!=</span> <span class="n">depart</span><span class="p">:</span>
+        <span class="n">sommet</span> <span class="o">=</span> <span class="n">parent</span><span class="p">[</span><span class="n">sommet</span><span class="p">]</span>
+        <span class="n">chemin</span> <span class="o">=</span> <span class="n">sommet</span> <span class="o">+</span> <span class="n">chemin</span>
+    <span class="k">return</span> <span class="n">chemin</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 5</p>
+<p><img alt="image" class="center" src="../data/BFS_ex1.png" />
+Tester le code précédent pour trouver le plus court chemin entre A et G, entre H et C, entre B et G...</p>
+</div>
+<h3 id="42-le-parcours-en-profondeur-dfs-depth-first-search">4.2 Le parcours en profondeur (DFS, Depth First Search)<a class="headerlink" href="#42-le-parcours-en-profondeur-dfs-depth-first-search" title="Permanent link">⚓︎</a></h3>
+<h4 id="421-parcours-dfs-recursif">4.2.1 Parcours DFS récursif<a class="headerlink" href="#421-parcours-dfs-recursif" title="Permanent link">⚓︎</a></h4>
+<p>Le parcours en profondeur est un parcours où on va aller «le plus loin possible» sans se préoccuper des autres voisins non visités : on va visiter le premier de ses voisins non traités, qui va faire de même, etc. Lorsqu'il n'y a plus de voisin, on revient en arrière pour aller voir le dernier voisin non visité.</p>
+<p>Dans un labyrinthe, ce parcours s'explique très bien : on prend tous les chemins sur la droite jusqu'à rencontrer un mur, auquel cas on revient au dernier embranchement et on prend un autre chemin, puis on repart à droite, etc.</p>
+<p>C'est un parcours qui s'écrit naturellement de manière <strong>récursive</strong> :</p>
+<div class="admonition abstract">
+<p class="admonition-title">Parcours en profondeur - DFS <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">DFSrec</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">traites</span><span class="p">,</span> <span class="n">actuel</span><span class="p">):</span>
+    <span class="n">traites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">actuel</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">voisin</span> <span class="ow">in</span> <span class="n">g</span><span class="o">.</span><span class="n">voisins</span><span class="p">(</span><span class="n">actuel</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">voisin</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">traites</span><span class="p">:</span>
+            <span class="n">DFSrec</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">traites</span><span class="p">,</span> <span class="n">voisin</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">traites</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 6</p>
+<p><img alt="image" class="center" src="../data/BFS_ex1.png" /></p>
+<p><strong>Q1.</strong> Donner (de tête) le parcours DFS de ce graphe en partant de A.<br />
+Rappel : les voisins sont donnés par ordre alphabétique. Le premier voisin de A est donc B.</p>
+<p><strong>Q2.</strong> Vérifier avec le code précédent. </p>
+<details class="tip">
+<summary>Correction Q2</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Graphe</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">liste_sommets</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">liste_sommets</span> <span class="o">=</span> <span class="n">liste_sommets</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span> <span class="o">=</span> <span class="p">{</span><span class="n">sommet</span> <span class="p">:</span> <span class="p">[]</span> <span class="k">for</span> <span class="n">sommet</span> <span class="ow">in</span> <span class="n">liste_sommets</span><span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">ajoute_arete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommetA</span><span class="p">,</span> <span class="n">sommetB</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommetA</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sommetB</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommetB</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sommetA</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">voisins</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommet</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommet</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">sont_voisins</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommetA</span><span class="p">,</span> <span class="n">sommetB</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">sommetB</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommetA</span><span class="p">]</span>
+
+
+<span class="n">g</span> <span class="o">=</span> <span class="n">Graphe</span><span class="p">([</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">])</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">DFSrec</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">traites</span><span class="p">,</span> <span class="n">actuel</span><span class="p">):</span>
+    <span class="n">traites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">actuel</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">voisin</span> <span class="ow">in</span> <span class="n">g</span><span class="o">.</span><span class="n">voisins</span><span class="p">(</span><span class="n">actuel</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">voisin</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">traites</span><span class="p">:</span>
+            <span class="n">DFSrec</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">traites</span><span class="p">,</span> <span class="n">voisin</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">traites</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">DFSrec</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="p">[],</span> <span class="s1">&#39;A&#39;</span><span class="p">)</span>
+<span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">]</span>
+</code></pre></div>
+</details>
+<p><strong>Q3.</strong> Reprendre les questions précédentes en changeant le sommet de départ.</p>
+</div>
+<h4 id="422-parcours-dfs-iteratif">4.2.2 Parcours DFS itératif<a class="headerlink" href="#422-parcours-dfs-iteratif" title="Permanent link">⚓︎</a></h4>
+<p>Il «suffit» de remplacer la file du parcours BFS par une <strong>pile</strong>. Ainsi, on partira visiter le voisin tout juste ajouté à la <em>file d'attente</em> (qui porte maintenant mal son nom, puisque c'est devenu une pile).</p>
+<div class="admonition abstract">
+<p class="admonition-title">Parcours en profondeur itératif - DFS </p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">DFS_iteratif</span><span class="p">(</span><span class="n">graphe</span><span class="p">,</span> <span class="n">start</span><span class="p">):</span>
+    <span class="n">traites</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">en_attente</span> <span class="o">=</span> <span class="p">[</span><span class="n">start</span><span class="p">]</span>
+    <span class="k">while</span> <span class="n">en_attente</span> <span class="o">!=</span> <span class="p">[]:</span>
+        <span class="n">actuel</span> <span class="o">=</span> <span class="n">en_attente</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">actuel</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">traites</span><span class="p">:</span>
+            <span class="n">voisins</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">voisins</span><span class="p">(</span><span class="n">actuel</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">voisin</span> <span class="ow">in</span> <span class="n">voisins</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">voisin</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">traites</span><span class="p">:</span>
+                    <span class="n">en_attente</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">voisin</span><span class="p">)</span>
+            <span class="n">traites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">actuel</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">traites</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p><strong>Remarques :</strong></p>
+<ul>
+<li>
+<p>À la ligne 7, on inverse l'ordre des voisins pour que ce code renvoie le même parcours quele parcours récursif (sinon c'est le dernier voisin ajouté qui sera dépilé). Cela n'est pas obligatoire : il n'y a pas «un seul» parcours DFS (tout comme il n'y a pas qu'un seul BFS). Ce qui les caractérise est la <strong>méthode de découverte</strong>, plus que l'implémentation proprement dite.</p>
+</li>
+<li>
+<p>Contrairement au BFS, il est possible d'empiler un sommet déjà découvert (on vérifie juste qu'il n'ait pas déjà été traité). Vous pouvez vous en apercevoir en écrivant l'état de la pile lors du parcours DFS itératif du graphe de l'exercice 6.</p>
+</li>
+</ul>
 
 
   
@@ -3150,10 +4140,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
-      
-        <script src="https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js"></script>
-      
-        <script src="../../../javascript/mermaid.js"></script>
       
         <script src="../../../javascript/mathjax.js"></script>
       

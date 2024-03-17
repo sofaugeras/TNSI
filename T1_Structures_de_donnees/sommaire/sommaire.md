@@ -2,4 +2,4 @@
 2. [Listes chaînées](./1.2_Listes/cours.md)
 3. [Dictionnaires](./1.2_Dictionnaires/cours.md) 
 4. [Arbres](./1.3_Arbres/cours.md)
-5. [Graphes](./1.4_Graphes/cours.md)
+5. [Graphes](./1.5_Graphes/cours.md)

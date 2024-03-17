@@ -1,11 +1,10 @@
-
    
 !!! note ":star: Thèmes en cours d'étude :star: "
     :arrow_forward:  [Graphes](./T1_Structures_de_donnees/1.5_Graphes/)<br />
 
     Reste à voir :<br />
     :hourglass: Programmation fonctionnelle<br />
-    :hourglass: Programmation dynamique<br />
+    :hourglass: [Programmation dynamique](./T3_Algorithmique/3.2_Programmation_dynamique/)<br />
     
     A revoir : <br />
     :zap: [Les dictionnaires](./T1_Structures_de_donnees/1.4_Dictionnaires/cours.md)<br />
@@ -13,6 +12,8 @@
 
 
 !!! abstract "Actualités :newspaper:" 
+
+    - :star: :star: :star: La page contenant les 48 sujets l'Épreuve Pratique 2024 est [ici](T6_6_Epreuve_pratique/BNS_2024/){. target="_blank"} :star: :star: :star:
 
     Les modalités du BAC 2024 ont été [annoncées](https://www.education.gouv.fr/bo/2023/Hebdo36/MENE2317750N){. target="_blank"} :
 
@@ -23,6 +24,7 @@
 !!! info "Entraînement"
     Vous trouverez ci dessous quelques sites pour vous entrainez <br />
 
+    - :sparkles: [Nouveau site d'entraînement NSI](https://codex.forge.apps.education.fr/)
     - [e-nsi écrit](https://e-nsi.forge.aeif.fr/ecrit/){. target="_blank"}<br />
     - [e-nsi pratique](https://ens-fr.gitlab.io/nsi-pratique/){. target="_blank"}<br />
     - Site recensant les sujets de BAC écrit : [ici](https://boiling-aletopelta-ff5.notion.site/be357c0d12cb430faa79dd890feb660b?v=56349470c9704fc2b93983c20d5b9a65){. target="_blank"}
