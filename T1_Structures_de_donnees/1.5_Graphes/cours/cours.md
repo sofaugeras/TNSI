@@ -375,7 +375,7 @@ L'objet de type ```Graphe``` aura comme attributs :
         def sont_voisins(self, sommetA, sommetB):
             return ...
     ```
-!!! example "Exercice 3"
+!!! example "Application"
 
     1. Compléter la classe Graphe : constructeur, setter (ajoute_arete), voisins et sont voisins<br />
     2. Créer un fichier grapheTest pour tester votre classe<br />
@@ -485,6 +485,18 @@ L'objet de type ```Graphe``` aura comme attributs :
                         matrice[i][j] = 1
             return matrice
     ```
+
+!!! tips "Entraînement"
+    Page d'exercice sur l'implémentation des graphes : [ici](https://codex.forge.apps.education.fr/exercices/liste_adjacence/)
+    
+    ```mermaid 
+        graph TD
+            matrice --> dictionnaire
+            matrice --> liste
+            liste --> matrice
+            dictionnaire --> matrice
+    ```
+
 
 ## 4. :star: :star: :star: Parcours de graphes :star: :star: :star: 
 
