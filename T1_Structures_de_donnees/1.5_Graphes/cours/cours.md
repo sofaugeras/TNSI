@@ -358,8 +358,7 @@ L'objet de type ```Graphe``` aura comme attributs :
 
 ### 3.3 Implémentation
 
-{#
-!!! abstract "Implémentation d'une classe ```Graphe``` "
+!!! abstract "Implémentation d'une classe ```Graphe``` :heart: :heart: :heart:"
     ```python linenums='1'
     class Graphe:
         def __init__(self, liste_sommets):
@@ -376,27 +375,116 @@ L'objet de type ```Graphe``` aura comme attributs :
         def sont_voisins(self, sommetA, sommetB):
             return ...
     ```
-#}
+!!! example "Exercice 3"
 
+    1. Compléter la classe Graphe : constructeur, setter (ajoute_arete), voisins et sont voisins<br />
+    2. Créer un fichier grapheTest pour tester votre classe<br />
+    3. Compléter vos dosctring et ajouter des commentaires<br />
+    4. Ajouter la redéfinition de la fonction print pour votre graphe<br />
+    5. Ajouter une méthode de suppression d'une arête<br />
+    6. Ajouter une méthode permettant d'ajouter un sommet.<br />
+    7. Ajouter une méthode permettant de supprimer un sommet.<br />
+    8. Ecrire la méthode permettant de construire la matrice d'adjacence à partir du dictionnaire des successeurs.
 
-!!! abstract "Implémentation d'une classe ```Graphe``` :heart: :heart: :heart:"
+??? abstract "Implémentation d'une classe ```Graphe``` :heart: :heart: :heart:"
+
     ```python linenums='1'
     class Graphe:
         def __init__(self, liste_sommets):
+            #premier attribut : la liste des sommets
             self.liste_sommets = liste_sommets
+            #second attribut : un dictionnaire des adjacents
+            #pour chaque sommet de la liste des sommets, on crée une liste vide
             self.adjacents = {sommet : [] for sommet in liste_sommets}
+        
+        def autre_constructeur(self, liste_sommets):
+            '''Autre constructeur possible pour la classe Graphe'''
+            self.liste_sommets = liste_sommets
+            #initialisation du dictionnaire des adjacents
+            self.adjacents = {}
+            #pour chaque sommet de la liste des sommets, on crée une liste vide
+            for sommet in liste_sommets:
+                self.adjacents[sommet]=[]
 
         def ajoute_arete(self, sommetA, sommetB):
+            ''''
+            Procédure permettant d'ajouter une arête entre deux sommets
+            @param sommetA : le premier sommet
+            @param sommetB : le second sommet
+            @pas de retour
+            '''
             self.adjacents[sommetA].append(sommetB)
             self.adjacents[sommetB].append(sommetA)
-            
+                
         def voisins(self, sommet):
+            ''''
+            Méthode permettant de récupérer la liste des voisins d'un sommet
+            @param sommet : le sommet dont on veut connaître les voisins
+            @return la liste des voisins du sommet
+            '''
             return self.adjacents[sommet]
 
         def sont_voisins(self, sommetA, sommetB):
+            ''''
+            Méthode permettant de savoir si deux sommets sont voisins
+            @param sommetA : le premier sommet
+            @param sommetB : le second sommet
+            @return True si les deux sommets sont voisins, False sinon
+            '''
             return sommetB in self.adjacents[sommetA]
-    ```
 
+        def __str__(self):
+            return str(self.adjacents)  
+        
+        def supp_arete(self, sommetA, sommetB):
+            ''''
+            Procédure permettant de supprimer une arête entre deux sommets
+            @param sommetA : le premier sommet
+            @param sommetB : le second sommet
+            @pas de retour
+            '''
+            self.adjacents[sommetA].remove(sommetB)
+            self.adjacents[sommetB].remove(sommetA)
+
+
+        def ajoute_sommet(self, sommet):
+            ''''
+            Procédure permettant d'ajouter un sommet
+            @param sommet : le sommet à ajouter
+            @pas de retour
+            '''
+            self.liste_sommets.append(sommet)
+            self.adjacents[sommet]=[]
+
+        #Proposer une méthode permettant de supprimer un sommet.
+        def supp_sommet(self, sommet):
+            ''''
+            Procédure permettant de supprimer un sommet
+            @param sommet : le sommet à supprimer
+            @pas de retour
+            '''
+            self.liste_sommets.remove(sommet)
+            del self.adjacents[sommet]
+            for s in self.liste_sommets:
+                if sommet in self.adjacents[s]:
+                    self.adjacents[s].remove(sommet)
+            return
+        
+        def matriceAdjacence(self):
+            '''
+            Méthode permettant de renvoyer la matrice d'adjacence du graphe
+            @return la matrice d'adjacence
+            '''
+            n = len(self.liste_sommets)
+            #initialisation de la matrice  n x n à 0
+            matrice = [[0 for i in range(n)] for j in range(n)]
+            #pour chaque point de la matrice, on regarde si il existe une arête entre les sommets correspondants
+            for i in range(n):
+                for j in range(n):
+                    if self.sont_voisins(self.liste_sommets[i], self.liste_sommets[j]):
+                        matrice[i][j] = 1
+            return matrice
+    ```
 
 ## 4. :star: :star: :star: Parcours de graphes :star: :star: :star: 
 
@@ -405,6 +493,8 @@ L'objet de type ```Graphe``` aura comme attributs :
 !!! gear "Algorithme de parcours"
     Un parcours de graphe est un algorithme consistant à explorer **tous** les sommets d'un graphe de proche
     en proche à partir d'un sommet initial. Ces parcours sont notamment utilisés pour rechercher un plus court chemin (et donc dans les GPS) ou pour trouver la sortie d'un labyrinthe...
+
+    outil de visualisation des parcours de graphe : [lien ici](https://workshape.github.io/visual-graph-algorithms/#dfs-visualisation)
 
     :warning: Parcourir simplement le dictionnaire ou la matrice d’un
     graphe n’est pas considéré comme un

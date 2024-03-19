@@ -1,10 +1,11 @@
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward:  [Graphes](./T1_Structures_de_donnees/1.5_Graphes/)<br />
+    :arrow_forward:  [Graphes](./T1_Structures_de_donnees/1.5_Graphes/cours/)<br />
 
     Reste à voir :<br />
-    :hourglass: Programmation fonctionnelle<br />
     :hourglass: [Programmation dynamique](./T3_Algorithmique/3.2_Programmation_dynamique/)<br />
+    :hourglass: Programmation fonctionnelle<br />
+    
     
     A revoir : <br />
     :zap: [Les dictionnaires](./T1_Structures_de_donnees/1.4_Dictionnaires/cours.md)<br />

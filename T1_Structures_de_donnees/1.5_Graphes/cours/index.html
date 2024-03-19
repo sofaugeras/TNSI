@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://github.com/sofaugeras/TNSI/T1_Structures_de_donnees/1.5_Graphes/cours/">
       
       
-        <link rel="prev" href="../TP_Labyrinthe/">
+        <link rel="prev" href="../../1.4_Dictionnaires/exercices/">
       
       
-        <link rel="next" href="../data/anim_laby/">
+        <link rel="next" href="../TP_Labyrinthe/">
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Graphes - Saint Sauveur TNSI</title>
+        <title>Cours - Saint Sauveur TNSI</title>
       
     
     
@@ -143,7 +143,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Graphes
+              Cours
             
           </span>
         </div>
@@ -1041,27 +1041,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../TP_Labyrinthe/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Résolution d'un labyrinthe
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1078,7 +1057,7 @@
           
   
   <span class="md-ellipsis">
-    Graphes
+    Cours
   </span>
   
 
@@ -1089,7 +1068,7 @@
         
   
   <span class="md-ellipsis">
-    Graphes
+    Cours
   </span>
   
 
@@ -1299,105 +1278,16 @@
   
   
   
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_6_3" id="__nav_2_6_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Data
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_6_3">
-            <span class="md-nav__icon md-icon"></span>
-            Data
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../data/anim_laby/" class="md-nav__link">
+      <a href="../TP_Labyrinthe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Anim laby
+    TP Labyrinthe
   </span>
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data/anim_laby_DFSvsBFS_laby_degenere/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    anim laby DFSvsBFS laby degenere
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data/anim_laby_DFSvsBFS_laby_parfait/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    anim laby DFSvsBFS laby parfait
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -3603,26 +3493,233 @@ La matrice <span class="arithmatex">\(M_1 =\pmatrix{
 <span class="normal">13</span>
 <span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Graphe</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">liste_sommets</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">liste_sommets</span> <span class="o">=</span> <span class="n">liste_sommets</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span> <span class="o">=</span> <span class="p">{</span><span class="n">sommet</span> <span class="p">:</span> <span class="p">[]</span> <span class="k">for</span> <span class="n">sommet</span> <span class="ow">in</span> <span class="n">liste_sommets</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">liste_sommets</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span> <span class="o">=</span> <span class="o">...</span>
 
     <span class="k">def</span> <span class="nf">ajoute_arete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommetA</span><span class="p">,</span> <span class="n">sommetB</span><span class="p">):</span>
+        <span class="o">...</span>
+        <span class="o">...</span>
+
+    <span class="k">def</span> <span class="nf">voisins</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommet</span><span class="p">):</span>
+        <span class="k">return</span> <span class="o">...</span>
+
+    <span class="k">def</span> <span class="nf">sont_voisins</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommetA</span><span class="p">,</span> <span class="n">sommetB</span><span class="p">):</span>
+        <span class="k">return</span> <span class="o">...</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 3</p>
+<ol>
+<li>Compléter la classe Graphe : constructeur, setter (ajoute_arete), voisins et sont voisins<br /></li>
+<li>Créer un fichier grapheTest pour tester votre classe<br /></li>
+<li>Compléter vos dosctring et ajouter des commentaires<br /></li>
+<li>Ajouter la redéfinition de la fonction print pour votre graphe<br /></li>
+<li>Ajouter une méthode de suppression d'une arête<br /></li>
+<li>Ajouter une méthode permettant d'ajouter un sommet.<br /></li>
+<li>Ajouter une méthode permettant de supprimer un sommet.<br /></li>
+<li>Ecrire la méthode permettant de construire la matrice d'adjacence à partir du dictionnaire des successeurs.</li>
+</ol>
+</div>
+<details class="abstract">
+<summary>Implémentation d'une classe <code>Graphe</code> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span>
+<span class="normal">92</span>
+<span class="normal">93</span>
+<span class="normal">94</span>
+<span class="normal">95</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Graphe</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">liste_sommets</span><span class="p">):</span>
+        <span class="c1">#premier attribut : la liste des sommets</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">liste_sommets</span> <span class="o">=</span> <span class="n">liste_sommets</span>
+        <span class="c1">#second attribut : un dictionnaire des adjacents</span>
+        <span class="c1">#pour chaque sommet de la liste des sommets, on crée une liste vide</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span> <span class="o">=</span> <span class="p">{</span><span class="n">sommet</span> <span class="p">:</span> <span class="p">[]</span> <span class="k">for</span> <span class="n">sommet</span> <span class="ow">in</span> <span class="n">liste_sommets</span><span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">autre_constructeur</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">liste_sommets</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Autre constructeur possible pour la classe Graphe&#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">liste_sommets</span> <span class="o">=</span> <span class="n">liste_sommets</span>
+        <span class="c1">#initialisation du dictionnaire des adjacents</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="c1">#pour chaque sommet de la liste des sommets, on crée une liste vide</span>
+        <span class="k">for</span> <span class="n">sommet</span> <span class="ow">in</span> <span class="n">liste_sommets</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommet</span><span class="p">]</span><span class="o">=</span><span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">ajoute_arete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommetA</span><span class="p">,</span> <span class="n">sommetB</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;&#39;</span>
+<span class="sd">        Procédure permettant d&#39;ajouter une arête entre deux sommets</span>
+<span class="sd">        @param sommetA : le premier sommet</span>
+<span class="sd">        @param sommetB : le second sommet</span>
+<span class="sd">        @pas de retour</span>
+<span class="sd">        &#39;&#39;&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommetA</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sommetB</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommetB</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sommetA</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">voisins</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommet</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;&#39;</span>
+<span class="sd">        Méthode permettant de récupérer la liste des voisins d&#39;un sommet</span>
+<span class="sd">        @param sommet : le sommet dont on veut connaître les voisins</span>
+<span class="sd">        @return la liste des voisins du sommet</span>
+<span class="sd">        &#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommet</span><span class="p">]</span>
 
     <span class="k">def</span> <span class="nf">sont_voisins</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommetA</span><span class="p">,</span> <span class="n">sommetB</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;&#39;</span>
+<span class="sd">        Méthode permettant de savoir si deux sommets sont voisins</span>
+<span class="sd">        @param sommetA : le premier sommet</span>
+<span class="sd">        @param sommetB : le second sommet</span>
+<span class="sd">        @return True si les deux sommets sont voisins, False sinon</span>
+<span class="sd">        &#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="n">sommetB</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommetA</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">)</span>  
+
+    <span class="k">def</span> <span class="nf">supp_arete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommetA</span><span class="p">,</span> <span class="n">sommetB</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;&#39;</span>
+<span class="sd">        Procédure permettant de supprimer une arête entre deux sommets</span>
+<span class="sd">        @param sommetA : le premier sommet</span>
+<span class="sd">        @param sommetB : le second sommet</span>
+<span class="sd">        @pas de retour</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommetA</span><span class="p">]</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">sommetB</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommetB</span><span class="p">]</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">sommetA</span><span class="p">)</span>
+
+
+    <span class="k">def</span> <span class="nf">ajoute_sommet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommet</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;&#39;</span>
+<span class="sd">        Procédure permettant d&#39;ajouter un sommet</span>
+<span class="sd">        @param sommet : le sommet à ajouter</span>
+<span class="sd">        @pas de retour</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">liste_sommets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sommet</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommet</span><span class="p">]</span><span class="o">=</span><span class="p">[]</span>
+
+    <span class="c1">#Proposer une méthode permettant de supprimer un sommet.</span>
+    <span class="k">def</span> <span class="nf">supp_sommet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommet</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;&#39;</span>
+<span class="sd">        Procédure permettant de supprimer un sommet</span>
+<span class="sd">        @param sommet : le sommet à supprimer</span>
+<span class="sd">        @pas de retour</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">liste_sommets</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">sommet</span><span class="p">)</span>
+        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommet</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">liste_sommets</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">sommet</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">s</span><span class="p">]:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">sommet</span><span class="p">)</span>
+        <span class="k">return</span>
+
+    <span class="k">def</span> <span class="nf">matriceAdjacence</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Méthode permettant de renvoyer la matrice d&#39;adjacence du graphe</span>
+<span class="sd">        @return la matrice d&#39;adjacence</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">liste_sommets</span><span class="p">)</span>
+        <span class="c1">#initialisation de la matrice  n x n à 0</span>
+        <span class="n">matrice</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+        <span class="c1">#pour chaque point de la matrice, on regarde si il existe une arête entre les sommets correspondants</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sont_voisins</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">liste_sommets</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">liste_sommets</span><span class="p">[</span><span class="n">j</span><span class="p">]):</span>
+                    <span class="n">matrice</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">matrice</span>
 </code></pre></div></td></tr></table></div>
-</div>
+</details>
 <h2 id="4-parcours-de-graphes">4. <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2b50.svg" title=":star:" /> Parcours de graphes <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2b50.svg" title=":star:" /><a class="headerlink" href="#4-parcours-de-graphes" title="Permanent link">⚓︎</a></h2>
 <p><img alt="" class="center" src="../data/toutgraphe.jpeg" width="40%" /> </p>
 <div class="admonition gear">
 <p class="admonition-title">Algorithme de parcours</p>
 <p>Un parcours de graphe est un algorithme consistant à explorer <strong>tous</strong> les sommets d'un graphe de proche
 en proche à partir d'un sommet initial. Ces parcours sont notamment utilisés pour rechercher un plus court chemin (et donc dans les GPS) ou pour trouver la sortie d'un labyrinthe...</p>
+<p>outil de visualisation des parcours de graphe : <a href="https://workshape.github.io/visual-graph-algorithms/#dfs-visualisation">lien ici</a></p>
 <p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/26a0.svg" title=":warning:" /> Parcourir simplement le dictionnaire ou la matrice d’un
 graphe n’est pas considéré comme un
 parcours de graphe. <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/26a0.svg" title=":warning:" /></p>
