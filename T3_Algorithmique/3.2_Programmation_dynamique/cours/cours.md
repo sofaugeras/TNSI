@@ -33,19 +33,19 @@ Ce code, d'une grande simplicité, est malheureusement très inefficace.
     Mesurer le temps de calcul de ```fibo(40)```.
 
     ```python linenums='1'
-        import time
+    import time
 
-        def fibo(n):
-            if n == 0 :
-                return 0   
-            elif n == 1 :
-                return 1
-            else :
-                return fibo(n-1) + fibo(n-2)
+    def fibo(n):
+        if n == 0 :
+            return 0   
+        elif n == 1 :
+            return 1
+        else :
+            return fibo(n-1) + fibo(n-2)
             
-        t0 = time.time()
-        fibo(40)
-        print(time.time() - t0)
+    t0 = time.time()
+    fibo(40)
+    print(time.time() - t0)
     ```
 
     Le temps de calcul est de plusieurs dizaines de secondes, sur une machine récente. C'est très mauvais !

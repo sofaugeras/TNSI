@@ -13,15 +13,17 @@ Dans toute la suite, on considérera que la somme à rendre est un nombre entier
 
 ## 1. Retour sur l'algorithme glouton
 
-Nous avons vu [en Première](https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.6_Algorithmes_gloutons/cours/#2-le-probleme-du-rendu-de-monnaie){. target="_blank"} un algorithme capable de donner une combinaison de pièces pour rendre la somme ```somme```.
+Nous avons vu [en Première](https://sofaugeras.github.io/1NSI/T5_Algorithmique/5.6_Algorithmes_gloutons/cours/){. target="_blank"} un algorithme capable de donner une combinaison d'élèments avec une contrainte ```max```.
 
-Cet algorithme fonctionnait de manière gloutonne : on cherche à rendre à chaque fois la plus grosse pièce possible.
+Cet algorithme fonctionnait de manière gloutonne : on cherche à rendre à maximiser la solution.
 
-{{initexo(0)}}
+Il existe une autre type d'algorithme glouton, le rendu de monnaie.
 
-!!! example "{{ exercice() }}"
+!!! warning "Le rendu de monnaie"
+    L'objectif est pour une somme à rendre, de donnerr la combinaison utilisant un minimum de pièces ou de billets pour fabriquer la somme à rendre. 
+
+!!! example "exercice 1"
     Compléter la fonction ```rendu_glouton``` qui prend en paramètres une liste de pièces ```pieces``` (classées dans l'ordre croissant) et la somme à rendre ```somme``` et qui renvoie **le nombre minimal** de pièces qu'il faut rendre.
-
 
     ```python linenums='1'
     def rendu_glouton(pieces, somme):
@@ -44,25 +46,20 @@ Cet algorithme fonctionnait de manière gloutonne : on cherche à rendre à chaq
     3
     ``` 
 
-    {{
-    correction(False,
-    """
-    ??? success \"Correction\" 
-        ```python linenums='1'
-        def rendu_glouton(pieces, somme):
-            i =  len(pieces) - 1
-            nb_pieces = 0
-            while somme > 0:
-                if pieces[i] <= somme:
-                    nb_pieces += 1 
-                    somme -= pieces[i] 
-                else :
-                    i -= 1   
-            return nb_pieces
-        ```        
-    """
-    )
-    }}
+??? success "Correction" 
+
+    ```python linenums='1'
+    def rendu_glouton(pieces, somme):
+        i =  len(pieces) - 1
+        nb_pieces = 0
+        while somme > 0:
+            if pieces[i] <= somme:
+                nb_pieces += 1 
+                somme -= pieces[i] 
+            else :
+                i -= 1   
+        return nb_pieces
+    ```        
 
 Nous savons que cet algorithme est optimal sous certaines conditions sur la composition des pièces. Par exemple le système des euros (1, 2, 5, 10, 20, 50, 100, 200) rend l'algorithme glouton optimal (on dit que le système est *canonique*).
 
@@ -89,7 +86,8 @@ Cette dernière observation est cruciale. Elle repose sur le fait qu'il suffit d
 
 On va donc passer en revue toutes les pièces ```p``` et mettre à jour à chaque fois le nombre minimal de pièces.
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 2"
+
     Compléter la fonction ```rendu_recursif``` qui prend en paramètres une liste de pièces ```pieces``` et la somme à rendre ```somme``` et qui renvoie **le nombre minimal** de pièces qu'il faut rendre.
 
     ```python linenums='1'
@@ -108,27 +106,18 @@ On va donc passer en revue toutes les pièces ```p``` et mettre à jour à chaqu
     3. Peut-on rendre la pièce ```p``` ? 
 
 
+??? success "Correction" 
 
-
-    {{
-    correction(False,
-    """
-    ??? success \"Correction\" 
-        ```python linenums='1'
-        def rendu_recursif(pieces, somme):
-            nb_pieces = somme
-            if somme == 0:
-                return 0
-            for p in pieces:
-                if p <= somme:
-                    nb_pieces = min(nb_pieces, 1 + rendu_recursif(pieces, somme-p))
-            return nb_pieces    
-        ```
-
-    """
-    )
-    }}
-
+    ```python linenums='1'
+    def rendu_recursif(pieces, somme):
+        nb_pieces = somme
+        if somme == 0:
+            return 0
+        for p in pieces:
+            if p <= somme:
+                nb_pieces = min(nb_pieces, 1 + rendu_recursif(pieces, somme-p))
+        return nb_pieces    
+    ```
 Testons notre algorithme :
 
 ```python
@@ -158,7 +147,7 @@ On peut donc légitimement penser à **mémoïser** notre algorithme, en stockan
 
 ## 3. Algorithme récursif memoïsé
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 3"
     Compléter la fonction ```rendu_recursif_memoise``` qui prend en paramètres une liste de pièces ```pieces``` et la somme à rendre ```somme``` et qui renvoie **le nombre minimal** de pièces qu'il faut rendre.
 
     On utilisera le dictionnaire ```memo_rendu``` dans lequel on associera à chaque somme ```somme``` son nombre de pièces minimal. 
@@ -177,30 +166,21 @@ On peut donc légitimement penser à **mémoïser** notre algorithme, en stockan
         return nb_pieces        
     ```
 
-
-
-    {{
-    correction(False,
-    """
-    ??? success \"Correction\" 
-        ```python linenums='1'
-        memo_rendu = {}
-        def rendu_recursif_memoise(pieces, somme):
-            nb_pieces = somme
-            if somme == 0:
-                return 0
-            for p in pieces:
-                if p <= somme:
-                    if somme-p not in memo_rendu:
-                        memo_rendu[somme-p] = rendu_recursif_memoise(pieces, somme-p)
-                    nb_pieces = min(nb_pieces, 1 + memo_rendu[somme-p])
-            return nb_pieces        
+??? success "Correction" 
+    
+    ```python linenums='1'
+    memo_rendu = {}
+    def rendu_recursif_memoise(pieces, somme):
+        nb_pieces = somme
+        if somme == 0:
+            return 0
+        for p in pieces:
+            if p <= somme:
+                if somme-p not in memo_rendu:
+                    memo_rendu[somme-p] = rendu_recursif_memoise(pieces, somme-p)
+                nb_pieces = min(nb_pieces, 1 + memo_rendu[somme-p])
+        return nb_pieces        
         ```
-
-    """
-    )
-    }}
-
 
 Notre algorithme est maintenant beaucoup (beaucoup) plus efficace :
 
@@ -217,8 +197,8 @@ Nous avions calculé le $F_n$, n-ième terme de la suite de Fibonacci en calcula
 En s'inspirant de cette méthode (*bottom-up*) nous allons ici calculer successivement tous les rendus minimaux jusqu'à ```somme``` avant de calculer le rendu minimal de ```somme```.
 
 
+!!! example "exercice 4"
 
-!!! example "{{ exercice() }}"
     Compléter la fonction ```rendu_bottom_up``` qui prend en paramètres une liste de pièces ```pieces``` et la somme à rendre ```somme``` et qui renvoie **le nombre minimal** de pièces qu'il faut rendre.    
 
     Nous stockerons chaque rendu dans un dictionnaire ```rendu```, initialisé à la valeur 0 pour la clé 0.
@@ -237,24 +217,18 @@ En s'inspirant de cette méthode (*bottom-up*) nous allons ici calculer successi
     1. Attention, il faut aller jusqu'à la valeur ```somme```. 
     2. Nombre de pièces dans le pire des cas.
 
-    {{
-    correction(False,
-    """
-    ??? success \"Correction\" 
-        ```python linenums='1'
-        def rendu_bottom_up(pieces, somme):
-            rendu = {0:0}
-            for s in range(1, somme+1):
-                rendu[s] = s
-                for p in pieces:
-                    if p <= s:
-                        rendu[s] = min(rendu[s], 1 + rendu[s-p])
-            return rendu[somme]    
-        ```        
-    """
-    )
-    }}
+??? success "Correction" 
 
+    ```python linenums='1'
+    def rendu_bottom_up(pieces, somme):
+        rendu = {0:0}
+        for s in range(1, somme+1):
+            rendu[s] = s
+            for p in pieces:
+                if p <= s:
+                    rendu[s] = min(rendu[s], 1 + rendu[s-p])
+        return rendu[somme]    
+    ```        
 
 ```python
 >>> rendu_bottom_up([1, 6, 10], 107)
@@ -274,7 +248,8 @@ Il suffit de rajouter un dictionnaire *solutions* qui associera à chaque somme 
 
 Lors du parcours de toutes les pièces, si un nouveau nombre minimal de pièces est trouvé pour la pièce ```p```, il faut rajouter la pièce ```p``` à la liste des solutions.
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 5"
+
     Compléter la fonction ```rendu_solution``` qui prend en paramètres une liste de pièces ```pieces``` et la somme à rendre ```somme``` et qui renvoie **le nombre minimal** de pièces qu'il faut rendre.   
 
     ```python linenums='1'
@@ -296,29 +271,24 @@ Lors du parcours de toutes les pièces, si un nouveau nombre minimal de pièces 
 
     1. On effectue une copie de liste avec la méthode ```copy```. 
 
-    {{
-    correction(False,
-    """
-    ??? success \"Correction\" 
-        ```python linenums='1'
-        def rendu_solution(pieces, somme):
-            rendu = {0:0}
-            solution = {}
-            solution[0] = []
-            for s in range(1, somme+1):
-                rendu[s] = s
-                solution[s] = []
-                for p in pieces:
-                    if p <= s:
-                        if 1 + rendu[s-p] < rendu[s]:
-                            rendu[s] = 1 + rendu[s-p]
-                            solution[s] = solution[s-p].copy()
-                            solution[s].append(p)
-            return solution[somme]
-        ```        
-    """
-    )
-    }}
+??? success "Correction" 
+
+    ```python linenums='1'
+    def rendu_solution(pieces, somme):
+        rendu = {0:0}
+        solution = {}
+        solution[0] = []
+        for s in range(1, somme+1):
+            rendu[s] = s
+            solution[s] = []
+            for p in pieces:
+                if p <= s:
+                    if 1 + rendu[s-p] < rendu[s]:
+                        rendu[s] = 1 + rendu[s-p]
+                        solution[s] = solution[s-p].copy()
+                        solution[s].append(p)
+        return solution[somme]
+    ```      
 
 ```python
 >>> rendu_solution([1,6,10], 12)

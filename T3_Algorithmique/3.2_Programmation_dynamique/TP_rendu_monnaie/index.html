@@ -109,7 +109,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#macro-rendering-error" class="md-skip">
+        <a href="#optimisation-de-rendu-de-monnaie" class="md-skip">
           Aller au contenu
         </a>
       
@@ -1565,6 +1565,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    TP Rendu de monnaie
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1574,6 +1585,70 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-retour-sur-lalgorithme-glouton" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Retour sur l'algorithme glouton
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-algorithme-recursif" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Algorithme récursif
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-algorithme-recursif-memoise" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Algorithme récursif memoïsé
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-algorithme-bottom-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Algorithme bottom-up
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-bonus-construction-dune-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Bonus : construction d'une solution
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2985,22 +3060,324 @@
   
 
 
-<h1 id="macro-rendering-error"><em>Macro Rendering Error</em><a class="headerlink" href="#macro-rendering-error" title="Permanent link">⚓︎</a></h1>
-<p><em>File</em>: <code>T3_Algorithmique\3.2_Programmation_dynamique\TP_rendu_monnaie.md</code></p>
-<p><em>UndefinedError</em>: 'initexo' is undefined</p>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Traceback (most recent call last):
-  File &quot;C:\ProgramData\Anaconda3\Lib\site-packages\mkdocs_macros\plugin.py&quot;, line 527, in render
-    return md_template.render(**page_variables)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\ProgramData\Anaconda3\Lib\site-packages\jinja2\environment.py&quot;, line 1301, in render
-    self.environment.handle_exception()
-  File &quot;C:\ProgramData\Anaconda3\Lib\site-packages\jinja2\environment.py&quot;, line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File &quot;&lt;template&gt;&quot;, line 20, in top-level template code
-  File &quot;C:\ProgramData\Anaconda3\Lib\site-packages\jinja2\utils.py&quot;, line 83, in from_obj
-    if hasattr(obj, &quot;jinja_pass_arg&quot;):
-       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-jinja2.exceptions.UndefinedError: &#39;initexo&#39; is undefined
+<h1 id="optimisation-de-rendu-de-monnaie">Optimisation de rendu de monnaie<a class="headerlink" href="#optimisation-de-rendu-de-monnaie" title="Permanent link">⚓︎</a></h1>
+<div class="admonition question">
+<p class="admonition-title">Problème</p>
+<p><img alt="image" class="center" src="../data/francs.png" /></p>
+<p>Nous allons nous intéresser au problème suivant :</p>
+<p>Étant donnés une liste de pièces <code>pieces</code> et une somme à rendre <code>somme</code>, peut-on calculer le nombre minimal de pièces pour réaliser cette somme ?</p>
+</div>
+<p><strong>Remarque importante :</strong></p>
+<p>Dans toute la suite, on considérera que la somme à rendre est un nombre entier positif, et que dans la liste de pièces se trouve la pièce de valeur 1. Ainsi, il est <strong>toujours possible</strong> de rendre la monnaie.</p>
+<h2 id="1-retour-sur-lalgorithme-glouton">1. Retour sur l'algorithme glouton<a class="headerlink" href="#1-retour-sur-lalgorithme-glouton" title="Permanent link">⚓︎</a></h2>
+<p>Nous avons vu <a class="" href="https://sofaugeras.github.io/1NSI/T5_Algorithmique/5.6_Algorithmes_gloutons/cours/" target="_blank">en Première</a> un algorithme capable de donner une combinaison d'élèments avec une contrainte <code>max</code>.</p>
+<p>Cet algorithme fonctionnait de manière gloutonne : on cherche à rendre à maximiser la solution.</p>
+<p>Il existe une autre type d'algorithme glouton, le rendu de monnaie.</p>
+<div class="admonition warning">
+<p class="admonition-title">Le rendu de monnaie</p>
+<p>L'objectif est pour une somme à rendre, de donnerr la combinaison utilisant un minimum de pièces ou de billets pour fabriquer la somme à rendre. </p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">exercice 1</p>
+<p>Compléter la fonction <code>rendu_glouton</code> qui prend en paramètres une liste de pièces <code>pieces</code> (classées dans l'ordre croissant) et la somme à rendre <code>somme</code> et qui renvoie <strong>le nombre minimal</strong> de pièces qu'il faut rendre.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rendu_glouton</span><span class="p">(</span><span class="n">pieces</span><span class="p">,</span> <span class="n">somme</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span>  <span class="o">...</span> <span class="c1"># (1)</span>
+    <span class="n">nb_pieces</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">while</span> <span class="o">...</span> <span class="o">&gt;</span> <span class="o">...</span><span class="p">:</span>
+        <span class="k">if</span> <span class="o">...</span> <span class="o">&lt;=</span> <span class="n">somme</span><span class="p">:</span>
+            <span class="n">nb_pieces</span> <span class="o">+=</span> <span class="o">...</span> 
+            <span class="n">somme</span> <span class="o">-=</span> <span class="o">...</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="n">i</span> <span class="o">-=</span> <span class="o">...</span>   
+    <span class="k">return</span> <span class="o">...</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Attention, les pièces sont classées dans l'ordre <strong>croissant</strong>.</li>
+</ol>
+<p><em>Exemple d'utilisation :</em>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">rendu_glouton</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">12</span><span class="p">)</span>
+<span class="mi">3</span>
+</code></pre></div></p>
+</div>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rendu_glouton</span><span class="p">(</span><span class="n">pieces</span><span class="p">,</span> <span class="n">somme</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span>  <span class="nb">len</span><span class="p">(</span><span class="n">pieces</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">nb_pieces</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">somme</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">pieces</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">somme</span><span class="p">:</span>
+            <span class="n">nb_pieces</span> <span class="o">+=</span> <span class="mi">1</span> 
+            <span class="n">somme</span> <span class="o">-=</span> <span class="n">pieces</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> 
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>   
+    <span class="k">return</span> <span class="n">nb_pieces</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>Nous savons que cet algorithme est optimal sous certaines conditions sur la composition des pièces. Par exemple le système des euros (1, 2, 5, 10, 20, 50, 100, 200) rend l'algorithme glouton optimal (on dit que le système est <em>canonique</em>).</p>
+<p>Mais si le système n'est pas canonique, l'algorithme glouton peut ne pas donner la meilleure solution :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">rendu_glouton</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="mi">12</span><span class="p">)</span>
+<span class="mi">3</span>
+</code></pre></div>
+<p>Notre algorithme va trouver que <span class="arithmatex">\(12 = 10 + 1 + 1\)</span> et donc rendre 3 pièces, alors qu'il est possible de faire <span class="arithmatex">\(12 = 6+6\)</span> et ne rendre que 2 pièces.</p>
+<h2 id="2-algorithme-recursif">2. Algorithme récursif<a class="headerlink" href="#2-algorithme-recursif" title="Permanent link">⚓︎</a></h2>
+<p>Il est possible de construire un algorithme optimal de manière récursive.</p>
+<p>Il faut pour cela faire les observations suivantes :</p>
+<ul>
+<li>pour rappel, le rendu est toujours possible : dans le pire des cas, le nombre de pièces à rendre est égal à la somme de départ (rendu effectué à coups de pièces de 1)</li>
+<li><img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2b50.svg" title=":star:" /> Si <code>p</code> est une pièce de <code>pieces</code>, le nombre minimal de pièces nécessaires pour rendre la somme <code>somme</code>   est égal à 1 + le nombre minimal de pièces nécessaires (contenant <code>p</code>)    pour rendre la somme <code>somme - p</code>. <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2b50.svg" title=":star:" /> </li>
+</ul>
+<p>Cette dernière observation est cruciale. Elle repose sur le fait qu'il suffit de ajouter 1 pièce (la pièce de valeur <code>p</code>) à la meileure combinaison qui rend <code>somme - p</code> pour avoir la meilleure combinaison qui rend <code>somme</code> (meilleure combinaison parmi celles contenant <code>p</code>). </p>
+<p>On va donc passer en revue toutes les pièces <code>p</code> et mettre à jour à chaque fois le nombre minimal de pièces.</p>
+<div class="admonition example">
+<p class="admonition-title">exercice 2</p>
+<p>Compléter la fonction <code>rendu_recursif</code> qui prend en paramètres une liste de pièces <code>pieces</code> et la somme à rendre <code>somme</code> et qui renvoie <strong>le nombre minimal</strong> de pièces qu'il faut rendre.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rendu_recursif</span><span class="p">(</span><span class="n">pieces</span><span class="p">,</span> <span class="n">somme</span><span class="p">):</span>
+    <span class="n">nb_pieces</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># (1)</span>
+    <span class="k">if</span> <span class="n">somme</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">...</span> <span class="c1"># (2)</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pieces</span><span class="p">:</span>
+        <span class="k">if</span> <span class="o">...</span> <span class="o">&lt;=</span> <span class="o">...</span><span class="p">:</span> <span class="c1"># (3)</span>
+            <span class="n">nb_pieces</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">nb_pieces</span><span class="p">,</span> <span class="o">...</span> <span class="o">+</span> <span class="n">rendu_recursif</span><span class="p">(</span><span class="n">pieces</span><span class="p">,</span> <span class="o">...</span><span class="p">))</span>
+    <span class="k">return</span> <span class="o">...</span>   
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Nombre de pièces dans le pire des cas</li>
+<li>Cas de base</li>
+<li>Peut-on rendre la pièce <code>p</code> ? </li>
+</ol>
+</div>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rendu_recursif</span><span class="p">(</span><span class="n">pieces</span><span class="p">,</span> <span class="n">somme</span><span class="p">):</span>
+    <span class="n">nb_pieces</span> <span class="o">=</span> <span class="n">somme</span>
+    <span class="k">if</span> <span class="n">somme</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pieces</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">p</span> <span class="o">&lt;=</span> <span class="n">somme</span><span class="p">:</span>
+            <span class="n">nb_pieces</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">nb_pieces</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">rendu_recursif</span><span class="p">(</span><span class="n">pieces</span><span class="p">,</span> <span class="n">somme</span><span class="o">-</span><span class="n">p</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">nb_pieces</span>    
+</code></pre></div></td></tr></table></div>
+</details>
+<p>Testons notre algorithme :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">rendu_recursif</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">12</span><span class="p">)</span>
+<span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">rendu_recursif</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="mi">12</span><span class="p">)</span>
+<span class="mi">2</span>
+</code></pre></div>
+<p>Il ne se laisse pas pièger comme l'algorithme glouton et rend bien en 2 pièces la somme 12.</p>
+<p>Mais...</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">rendu_recursif</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="mi">107</span><span class="p">)</span>
+<span class="ne">RecursionError</span><span class="p">:</span> <span class="n">maximum</span> <span class="n">recursion</span> <span class="n">depth</span> <span class="n">exceeded</span> <span class="ow">in</span> <span class="n">comparison</span>
+</code></pre></div>
+<p><img alt="😢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f622.svg" title=":cry:" /></p>
+<p>Le nombre d'appels récursifs de notre algorithme augmente exponentiellement avec la valeur de la somme à rendre : on se retrouve très rapidement avec des milliards d'appels récursifs, ce qui n'est pas gérable.</p>
+<p>Ces appels récursifs ont lieu sur un nombre limité de valeurs : par construction de notre algorithme, si la somme à rendre est 100, il y aura beaucoup (beaucoup) d'appels vers 99, vers 98, vers 97... jusqu'à 0. </p>
+<p>On peut donc légitimement penser à <strong>mémoïser</strong> notre algorithme, en stockant les valeurs pour éviter de les recalculer.</p>
+<h2 id="3-algorithme-recursif-memoise">3. Algorithme récursif memoïsé<a class="headerlink" href="#3-algorithme-recursif-memoise" title="Permanent link">⚓︎</a></h2>
+<div class="admonition example">
+<p class="admonition-title">exercice 3</p>
+<p>Compléter la fonction <code>rendu_recursif_memoise</code> qui prend en paramètres une liste de pièces <code>pieces</code> et la somme à rendre <code>somme</code> et qui renvoie <strong>le nombre minimal</strong> de pièces qu'il faut rendre.</p>
+<p>On utilisera le dictionnaire <code>memo_rendu</code> dans lequel on associera à chaque somme <code>somme</code> son nombre de pièces minimal. </p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">memo_rendu</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">def</span> <span class="nf">rendu_recursif_memoise</span><span class="p">(</span><span class="n">pieces</span><span class="p">,</span> <span class="n">somme</span><span class="p">):</span>
+    <span class="n">nb_pieces</span> <span class="o">=</span> <span class="n">somme</span>
+    <span class="k">if</span> <span class="n">somme</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pieces</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">p</span> <span class="o">&lt;=</span> <span class="n">somme</span><span class="p">:</span>
+            <span class="k">if</span> <span class="o">...</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">memo_rendu</span><span class="p">:</span>
+                <span class="n">memo_rendu</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
+            <span class="n">nb_pieces</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">return</span> <span class="n">nb_pieces</span>        
+</code></pre></div></td></tr></table></div>
+</div>
+<details class="success">
+<summary>Correction</summary>
+<p><code>python linenums='1'
+memo_rendu = {}
+def rendu_recursif_memoise(pieces, somme):
+    nb_pieces = somme
+    if somme == 0:
+        return 0
+    for p in pieces:
+        if p &lt;= somme:
+            if somme-p not in memo_rendu:
+                memo_rendu[somme-p] = rendu_recursif_memoise(pieces, somme-p)
+            nb_pieces = min(nb_pieces, 1 + memo_rendu[somme-p])
+    return nb_pieces</code></p>
+</details>
+<p>Notre algorithme est maintenant beaucoup (beaucoup) plus efficace :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">rendu_recursif_memoise</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="mi">107</span><span class="p">)</span>
+<span class="mi">16</span>
+</code></pre></div>
+<h2 id="4-algorithme-bottom-up">4. Algorithme <em>bottom-up</em><a class="headerlink" href="#4-algorithme-bottom-up" title="Permanent link">⚓︎</a></h2>
+<p>Nous avions calculé le <span class="arithmatex">\(F_n\)</span>, n-ième terme de la suite de Fibonacci en calculant d'abord <span class="arithmatex">\(F_0\)</span>, <span class="arithmatex">\(F_1\)</span>, <span class="arithmatex">\(F_2\)</span>, ..., jusqu'à <span class="arithmatex">\(F_{n-1}\)</span> puis <span class="arithmatex">\(F_n\)</span>.</p>
+<p>En s'inspirant de cette méthode (<em>bottom-up</em>) nous allons ici calculer successivement tous les rendus minimaux jusqu'à <code>somme</code> avant de calculer le rendu minimal de <code>somme</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">exercice 4</p>
+<p>Compléter la fonction <code>rendu_bottom_up</code> qui prend en paramètres une liste de pièces <code>pieces</code> et la somme à rendre <code>somme</code> et qui renvoie <strong>le nombre minimal</strong> de pièces qu'il faut rendre.    </p>
+<p>Nous stockerons chaque rendu dans un dictionnaire <code>rendu</code>, initialisé à la valeur 0 pour la clé 0.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rendu_bottom_up</span><span class="p">(</span><span class="n">pieces</span><span class="p">,</span> <span class="n">somme</span><span class="p">):</span>
+    <span class="n">rendu</span> <span class="o">=</span> <span class="p">{</span><span class="o">...</span><span class="p">}</span>
+    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span> <span class="c1"># (1)</span>
+        <span class="n">rendu</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span> <span class="c1">#(2)</span>
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pieces</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">p</span> <span class="o">&lt;=</span> <span class="n">s</span><span class="p">:</span>
+                <span class="n">rendu</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span> <span class="o">+</span> <span class="o">...</span><span class="p">)</span>
+    <span class="k">return</span> <span class="o">...</span>   
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Attention, il faut aller jusqu'à la valeur <code>somme</code>. </li>
+<li>Nombre de pièces dans le pire des cas.</li>
+</ol>
+</div>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rendu_bottom_up</span><span class="p">(</span><span class="n">pieces</span><span class="p">,</span> <span class="n">somme</span><span class="p">):</span>
+    <span class="n">rendu</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span>
+    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">somme</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">rendu</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span>
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pieces</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">p</span> <span class="o">&lt;=</span> <span class="n">s</span><span class="p">:</span>
+                <span class="n">rendu</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">rendu</span><span class="p">[</span><span class="n">s</span><span class="p">],</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">rendu</span><span class="p">[</span><span class="n">s</span><span class="o">-</span><span class="n">p</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">rendu</span><span class="p">[</span><span class="n">somme</span><span class="p">]</span>    
+</code></pre></div></td></tr></table></div>
+</details>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">rendu_bottom_up</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="mi">107</span><span class="p">)</span>
+<span class="mi">12</span>
+</code></pre></div>
+<p>Notre algorithme itératif est de complexité linéaire (par rapport à la variable <code>somme</code>).</p>
+<h2 id="5-bonus-construction-dune-solution">5. Bonus : construction d'une solution<a class="headerlink" href="#5-bonus-construction-dune-solution" title="Permanent link">⚓︎</a></h2>
+<p>Nos différents algorithmes avaient pour but de nous renvoyer le nombre minimal de pièces. Mais peut-on les modifier pour qu'ils renvoient la liste de pièces utilisées ?</p>
+<p>Nous allons nous appuyer sur le dernier algorithme créé (par méthode <em>bottom-up</em>).</p>
+<p>Il suffit de rajouter un dictionnaire <em>solutions</em> qui associera à chaque somme la liste des pièces nécessaires.</p>
+<p>Lors du parcours de toutes les pièces, si un nouveau nombre minimal de pièces est trouvé pour la pièce <code>p</code>, il faut rajouter la pièce <code>p</code> à la liste des solutions.</p>
+<div class="admonition example">
+<p class="admonition-title">exercice 5</p>
+<p>Compléter la fonction <code>rendu_solution</code> qui prend en paramètres une liste de pièces <code>pieces</code> et la somme à rendre <code>somme</code> et qui renvoie <strong>le nombre minimal</strong> de pièces qu'il faut rendre.   </p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rendu_solution</span><span class="p">(</span><span class="n">pieces</span><span class="p">,</span> <span class="n">somme</span><span class="p">):</span>
+    <span class="n">rendu</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span>
+    <span class="n">solution</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">solution</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">somme</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">rendu</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span>
+        <span class="n">solution</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pieces</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">p</span> <span class="o">&lt;=</span> <span class="n">s</span><span class="p">:</span>
+                <span class="k">if</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">rendu</span><span class="p">[</span><span class="n">s</span><span class="o">-</span><span class="n">p</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">rendu</span><span class="p">[</span><span class="n">s</span><span class="p">]:</span>
+                    <span class="n">rendu</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
+                    <span class="n">solution</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span> <span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="c1"># (1)</span>
+                    <span class="n">solution</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="o">.</span> <span class="o">...</span>
+    <span class="k">return</span> <span class="o">...</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>On effectue une copie de liste avec la méthode <code>copy</code>. </li>
+</ol>
+</div>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rendu_solution</span><span class="p">(</span><span class="n">pieces</span><span class="p">,</span> <span class="n">somme</span><span class="p">):</span>
+    <span class="n">rendu</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span>
+    <span class="n">solution</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">solution</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">somme</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">rendu</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span>
+        <span class="n">solution</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pieces</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">p</span> <span class="o">&lt;=</span> <span class="n">s</span><span class="p">:</span>
+                <span class="k">if</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">rendu</span><span class="p">[</span><span class="n">s</span><span class="o">-</span><span class="n">p</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">rendu</span><span class="p">[</span><span class="n">s</span><span class="p">]:</span>
+                    <span class="n">rendu</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">rendu</span><span class="p">[</span><span class="n">s</span><span class="o">-</span><span class="n">p</span><span class="p">]</span>
+                    <span class="n">solution</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="n">solution</span><span class="p">[</span><span class="n">s</span><span class="o">-</span><span class="n">p</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+                    <span class="n">solution</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">solution</span><span class="p">[</span><span class="n">somme</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">rendu_solution</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span> <span class="mi">12</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">rendu_solution</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span> <span class="mi">107</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 </code></pre></div>
 
 
