@@ -84,6 +84,7 @@ L'idée générale est de stocker le résultat de chaque calcul, par exemple dan
         dict_fibo[n] = ... + ...
         return ...
     ```
+??? tips "correction"
 
     ```python linenums='1'
         dict_fibo = {0:0, 1:1}
@@ -94,18 +95,12 @@ L'idée générale est de stocker le résultat de chaque calcul, par exemple dan
             return dict_fibo[n]
     ```        
 
+!!! example "exercice"
+    === "Consignes"
+        Mesurer le temps de calcul de ```fibo(40)``` et comparer avec la mesure de l'exercice 1.
 
-!!! example "{{ exercice() }}"
-    Mesurer le temps de calcul de ```fibo(40)``` et comparer avec la mesure de l'exercice 1.
-
-    {{
-    correction(False,
-    """
-    ??? success \"Correction\" 
+    === "Enoncé"
         Le temps de calcul est maintenant de l'ordre de $10^{-5}$ secondes. C'est un million (!!!) de fois plus rapide qu'à l'exercice 1.
-    """
-    )
-    }}
 
 ### 1.3 Quelques remarques
 
@@ -177,11 +172,12 @@ Et si on commençait par le bas ?
 
 Si nous devions calculer mentalement le 6ème terme de la suite de Fibonacci, on commencerait par calculer le 3ème, puis le 4ème, puis le 5ème et enfin le 6ème.
 
-!!! example "{{ exercice() }}"
+!!! example "exercice"
+
     Compléter le code ci-dessous :
 
     ```python linenums='1'
-    def fibo(n):
+     def fibo(n):
         dict_fibo = {}
         dict_fibo[0] = ...
         dict_fibo[1] = ...
@@ -190,22 +186,17 @@ Si nous devions calculer mentalement le 6ème terme de la suite de Fibonacci, on
         return dict_fibo[...]
     ```
 
-    {{
-    correction(True,
-    """
-    ??? success \"Correction\" 
-        ```python linenums='1'
-        def fibo(n):
-            dict_fibo = {}
-            dict_fibo[0] = 0
-            dict_fibo[1] = 1
-            for k in range(2, n+1):
-                dict_fibo[k] = dict_fibo[k-1] + dict_fibo[k-2]
-            return dict_fibo[n]
-        ```        
-    """
-    )
-    }}
+??? tips "Correction"
+
+    ```python linenums='1'
+    def fibo(n):
+        dict_fibo = {}
+        dict_fibo[0] = 0
+        dict_fibo[1] = 1
+        for k in range(2, n+1):
+            dict_fibo[k] = dict_fibo[k-1] + dict_fibo[k-2]
+        return dict_fibo[n]
+    ```        
 
 Cette méthode itérative part du bas pour aller vers le haut. On parle de méthode *bottom-up*. 
 De manière plus générale, cette méthode est basée sur le fait de résoudre des problèmes de petite taille, puis de plus en plus gros, jusqu'au problème final.

@@ -1,11 +1,9 @@
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward:  [Graphes](./T1_Structures_de_donnees/1.5_Graphes/cours/)<br />
+    :arrow_forward: [Programmation dynamique](./T3_Algorithmique/3.2_Programmation_dynamique/cours.md) <br />
 
     Reste à voir :<br />
-    :hourglass: [Programmation dynamique](./T3_Algorithmique/3.2_Programmation_dynamique/)<br />
     :hourglass: Programmation fonctionnelle<br />
-    
     
     A revoir : <br />
     :zap: [Les dictionnaires](./T1_Structures_de_donnees/1.4_Dictionnaires/cours.md)<br />
@@ -46,6 +44,7 @@
     - [Sécurisation des communications, Cryptographie](./TNSI/T5_Architecture_materielle/5.4_Cryptographie/cours/)
     - [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/)
     - [Diviser pour régner](./T3_Algorithmique/3.1_Diviser_pour_regner/)
+    - [Graphes](./T1_Structures_de_donnees/1.5_Graphes/cours/)
 
 
 <!--
