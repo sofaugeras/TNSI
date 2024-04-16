@@ -235,3 +235,7 @@ La suite : [TP Pyramides](./TP_pyramides.md){. target="_blank" .md-button }
     Étant donnés une liste de pièces ```pieces``` et une somme à rendre ```somme```, peut-on calculer le nombre minimal de pièces pour réaliser cette somme ?
 
 La suite : [TP Rendu de monnaie](./TP_rendu_monnaie.md){. target="_blank" .md-button }
+
+Entrainement : [Énumération des permutations](https://codex.forge.apps.education.fr/exercices/nb_factoriel/){. target="_blank" .md-button }Difficulté : :star::star:
+
+Entrainement : [Nombre de chemins dans une grille](https://codex.forge.apps.education.fr/exercices/nb_chemins_grille/){. target="_blank" .md-button }Difficulté : :star::star:

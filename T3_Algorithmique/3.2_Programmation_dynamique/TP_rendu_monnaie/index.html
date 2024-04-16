@@ -3075,7 +3075,7 @@
 <p>Il existe une autre type d'algorithme glouton, le rendu de monnaie.</p>
 <div class="admonition warning">
 <p class="admonition-title">Le rendu de monnaie</p>
-<p>L'objectif est pour une somme à rendre, de donnerr la combinaison utilisant un minimum de pièces ou de billets pour fabriquer la somme à rendre. </p>
+<p>L'objectif est pour une somme à rendre, de donner la combinaison utilisant un minimum de pièces ou de billets pour fabriquer la somme à rendre. </p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">exercice 1</p>
@@ -3250,7 +3250,7 @@ def rendu_recursif_memoise(pieces, somme):
 </details>
 <p>Notre algorithme est maintenant beaucoup (beaucoup) plus efficace :</p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">rendu_recursif_memoise</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="mi">107</span><span class="p">)</span>
-<span class="mi">16</span>
+<span class="mi">12</span>
 </code></pre></div>
 <h2 id="4-algorithme-bottom-up">4. Algorithme <em>bottom-up</em><a class="headerlink" href="#4-algorithme-bottom-up" title="Permanent link">⚓︎</a></h2>
 <p>Nous avions calculé le <span class="arithmatex">\(F_n\)</span>, n-ième terme de la suite de Fibonacci en calculant d'abord <span class="arithmatex">\(F_0\)</span>, <span class="arithmatex">\(F_1\)</span>, <span class="arithmatex">\(F_2\)</span>, ..., jusqu'à <span class="arithmatex">\(F_{n-1}\)</span> puis <span class="arithmatex">\(F_n\)</span>.</p>

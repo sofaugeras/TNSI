@@ -20,7 +20,7 @@ Cet algorithme fonctionnait de manière gloutonne : on cherche à rendre à maxi
 Il existe une autre type d'algorithme glouton, le rendu de monnaie.
 
 !!! warning "Le rendu de monnaie"
-    L'objectif est pour une somme à rendre, de donnerr la combinaison utilisant un minimum de pièces ou de billets pour fabriquer la somme à rendre. 
+    L'objectif est pour une somme à rendre, de donner la combinaison utilisant un minimum de pièces ou de billets pour fabriquer la somme à rendre. 
 
 !!! example "exercice 1"
     Compléter la fonction ```rendu_glouton``` qui prend en paramètres une liste de pièces ```pieces``` (classées dans l'ordre croissant) et la somme à rendre ```somme``` et qui renvoie **le nombre minimal** de pièces qu'il faut rendre.
@@ -186,7 +186,7 @@ Notre algorithme est maintenant beaucoup (beaucoup) plus efficace :
 
 ```python
 >>> rendu_recursif_memoise([1, 6, 10], 107)
-16
+12
 ```
 
 
