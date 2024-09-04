@@ -1,13 +1,8 @@
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: [Programmation dynamique](./T3_Algorithmique/3.2_Programmation_dynamique/cours.md) <br />
+    :arrow_forward: Révision : [Codex](https://codex.forge.apps.education.fr/) <br />
 
-    Reste à voir :<br />
-    :hourglass: Programmation fonctionnelle<br />
-    
-    A revoir : <br />
-    :zap: [Les dictionnaires](./T1_Structures_de_donnees/1.4_Dictionnaires/cours.md)<br />
-    :zap: [Arbre binaire de recherche](./T1_Structures_de_donnees/1.4_Arbres/cours.md)<br />
+    :hourglass: A venir : [Récursivité](./T2_Programmation/2.2_Recursivite/cours.md)<br />
 
 !!! abstract "Actualités :newspaper:" 
 
@@ -31,21 +26,7 @@
 
     :rotating_light: Liste des thèmes à traiter dans le programme : [pdf](./data/programmeTNSI.pdf)
 
-    - [Récursivité](./T2_Programmation/2.2_Recursivite/cours.md)  
-    - [Programmation Orientée Objet](./T2_Programmation/2.1_Programmation_Orientee_Objet/cours.md)   
-    - [Listes / piles / files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md)
-    - [Base de données](./T4_Bases_de_donnees/sommaire.md)
-    - [Gestion des processus](./T5_Architecture_materielle/5.2_Gestion_des_processus/)
-    - [Système sur puce](./T5_Architecture_materielle/5.1_Systemes_sur_puce/)
-    - [Listes chainées](./T1_Structures_de_donnees/1.2_Listes/Structures_ListesChainees.md)
-    - [Les arbres](./T1_Structures_de_donnees/1.4_Arbres/)
-    - [Protocole de routage](./TNSI/T5_Architecture_materielle/5.3_Protocoles_de_routage/)
-    - [Sécurisation des communications, Cryptographie](./TNSI/T5_Architecture_materielle/5.4_Cryptographie/cours/)
-    - [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/)
-    - [Diviser pour régner](./T3_Algorithmique/3.1_Diviser_pour_regner/)
-    - [Graphes](./T1_Structures_de_donnees/1.5_Graphes/cours/)
-
-
+    
 <!--
 !!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
     Chers élèves de Première (Groupe 1 et Groupe 2), voilà les chapitres à revoir en priorité pour aborder sereinement l'année de Terminale en NSI :
@@ -84,4 +65,18 @@
     
     - [Diviser pour régner](T3_Algorithmique/3.1_Diviser_pour_regner/cours)
     - [Recherche Textuelle](T3_Algorithmique/3.2_Recherche_textuelle/cours)
+
+    - [Récursivité](./T2_Programmation/2.2_Recursivite/cours.md)  
+    - [Programmation Orientée Objet](./T2_Programmation/2.1_Programmation_Orientee_Objet/cours.md)   
+    - [Listes / piles / files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md)
+    - [Base de données](./T4_Bases_de_donnees/sommaire.md)
+    - [Gestion des processus](./T5_Architecture_materielle/5.2_Gestion_des_processus/)
+    - [Système sur puce](./T5_Architecture_materielle/5.1_Systemes_sur_puce/)
+    - [Listes chainées](./T1_Structures_de_donnees/1.2_Listes/Structures_ListesChainees.md)
+    - [Les arbres](./T1_Structures_de_donnees/1.4_Arbres/)
+    - [Protocole de routage](./TNSI/T5_Architecture_materielle/5.3_Protocoles_de_routage/)
+    - [Sécurisation des communications, Cryptographie](./TNSI/T5_Architecture_materielle/5.4_Cryptographie/cours/)
+    - [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/)
+    - [Diviser pour régner](./T3_Algorithmique/3.1_Diviser_pour_regner/)
+    - [Graphes](./T1_Structures_de_donnees/1.5_Graphes/cours/)
 -->
