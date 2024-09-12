@@ -1,8 +1,8 @@
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: Révision : [Codex](https://codex.forge.apps.education.fr/) <br />
+    :arrow_forward: Révision : [Récursivité](./T2_Programmation/2.1_Recursivite/cours.md) <br />
 
-    :hourglass: A venir : [Récursivité](./T2_Programmation/2.2_Recursivite/cours.md)<br />
+    :hourglass: A venir : [Programmation orienté objet](./T2_Programmation/2.2_Programmation_Orientee_Objet/cours.md) <br />
 
 !!! abstract "Actualités :newspaper:" 
 
@@ -13,6 +13,8 @@
     - le sujet écrit comportera 3 exercices noté sur 20
     - l'épreuve pratique sera composé de 2 exercices notés sur 20
     - Le poids de l'écrit sera de 3/4 et le poids de la pratique de 1/4
+
+    - :boom: Organisez-vous avec (par exemple) [Notion](https://www.notion.so/fr-fr){. target="_blank"} ou [Zenkit](https://zenkit.com/){. target="_blank"}
 
 !!! info "Entraînement"
     Vous trouverez ci dessous quelques sites pour vous entrainez <br />
@@ -26,6 +28,8 @@
 
     :rotating_light: Liste des thèmes à traiter dans le programme : [pdf](./data/programmeTNSI.pdf)
 
+    - Révision : [Codex](https://codex.forge.apps.education.fr/) <br />
+
     
 <!--
 !!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
@@ -36,15 +40,6 @@
         - Tris par sélection et insertion
         - Dichotomie
         
-!!! abstract ":star: Actualités :star:"
-    - Organisez-vous avec (par exemple) [Trello](https://trello.com/fr){. target="_blank"}, [Notion](https://www.notion.so/fr-fr){. target="_blank"} ou [Zenkit](https://zenkit.com/){. target="_blank"}
-    - Épreuves Pratiques : [entraînez-vous sur nsi-pratique](https://ens-fr.gitlab.io/nsi-pratique/){. target="_blank"}
-
-    - Les sujets de la BNS 2022 de l'Épreuve Pratique sont parus, vous pouvez les retrouver [ici](T6_6_Epreuve_pratique/BNS_2022/)
-    - **Infos orientation :**
-        - [Lien](https://www.geipi-polytech.org/){. target="_blank"} vers le site des 34 écoles d'ingénieurs **publiques** du groupe GEIPI
-        - [Lien](data/sujet0_geipi.pdf){. target="_blank"} vers le sujet 0 de leur épreuve NSI.
-
 !!! note "*Thèmes traités*"
     - [Architecture Von Neumann (1ère)](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.2_Architecture_Von_Neumann/cours/)
     - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) 
