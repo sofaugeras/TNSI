@@ -1,5 +1,7 @@
 # Projet Flask
 
+## 1. Ressources 
+
 ![icone Flask](data/flask.png){: .center width=30%}
 
 !!! warning "sources"
@@ -18,7 +20,7 @@
     - [Doc SQLlite](https://docs.python.org/3/library/sqlite3.html)<br />
     - [Executer des requêtes](https://zestedesavoir.com/tutoriels/1294/des-bases-de-donnees-en-python-avec-sqlite3/fonctionnalites-de-base/#2-executer-des-requetes)
 
-## Consignes
+## 2. Consignes
 
 !!! note "Consigne"
 
@@ -59,8 +61,11 @@
         Voulez vous Arrivez vous sur une page d’accueil ? ou sur une page de formulaire ?<br />
         Essayer de dessiner sur papier ou sur draw.io votre structure, avec vos différentes pages.
 
+## 3. Grille d'évaluation
 
-## Introduction
+## 4. Prise en main
+
+### Introduction
 
 Ce document présente Flask un framework (cadriciel) pour réaliser des applications web dynamiques en Python. Cela permet de rendre accessible n’importe quel code Python depuis une interface web dans un navigateur.
 
@@ -92,12 +97,12 @@ Pour installer Flask, il suffit de faire dans une console :
 $ pip3 install flask
 ```
 
-## Partie 1 : “bonjour”
+### Partie 1 : “bonjour”
 
 Dans ce chapitre, vous allez réaliser une application web dynamique en Python à l’aide de Flask.
 Il y aura plusieurs versions successives ajoutant chacune une nouvelle fonctionnalité à l’application web.
 
-### 1.1 Version basique bonjour_v01.py
+#### 1.1 Version basique bonjour_v01.py
 
 ```Python
 # Librairie(s) utilisée(s)
@@ -156,27 +161,29 @@ Le schéma sera alors le suivant :
 2.2 - Ajout d’une nouvelle page “a-propos”
 A présent créons une seconde page “A propos” associée à une fonction Python et une URL dédiée.
 ⇒ Récupérez le code source bonjour_v02.py disponible sur Moodle et également ci-dessous :
-# Librairie(s) utilisée(s)
+**Librairie(s) utilisée(s)**
 from flask import *
 
-# Création d'un objet application web Flask
+**Création d'un objet application web Flask**
 app = Flask(__name__)
 
-# Création d'une fonction accueillir() associée à l'URL "/"
-# pour générer une page web dynamique
+**Création d'une fonction accueillir() associée à l'URL "/"**
+**pour générer une page web dynamique**
 @app.route("/")
 def accueillir():
     """Affiche un message dans le navigateur web"""
     return "<h1>Bienvenue</h1>"
 
-# Nouvelle page "A propos" associée à l’URL "/a-propos"
+**Nouvelle page "A propos" associée à l’URL "/a-propos"**
 @app.route("/a-propos")
 def renseigner():
     """Affiche la page a-propos"""
     return "Application web BONJOUR v0.2"
 
-# Lancement de l'application web et son serveur
-# accessible à l'URL : http://127.0.0.1:1664
+**Lancement de l'application web et son serveur
+accessible à l'URL : http://127.0.0.1:1664**
+
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=1664, debug=True)
 
@@ -199,7 +206,8 @@ def renseigner():
 Dans cette nouvelle version, nous allons voir plus en détail comment Flask peut générer une page HTML complète.
 En fait c’est à chaque fonction Python associée à une certaine route qu’il incombe de générer le code HTML qui sera affiché dans le navigateur.
 ⇒ Récupérez le code source bonjour_v03.py disponible sur Moodle dont un extrait figure ci-dessous :
-# Nouvelle page affichant un message "bonjour"
+
+### Nouvelle page affichant un message "bonjour"
 @app.route("/bonjour")
 def dire_bonjour():
     """Affiche un message bonjour"""

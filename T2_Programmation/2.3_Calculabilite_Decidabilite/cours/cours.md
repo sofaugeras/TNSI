@@ -3,6 +3,9 @@
 # Décidabilité, calculabilité
 ![image](data/BO.png){: .center}
 
+!!! info "Crédit"
+    **Crédit du cours :** [Gilles Lassus](https://glassus.github.io/terminale_nsi/T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)
+
 ## 1. Un programme comme paramètre d'un programme
 
 Les codes que nous manipulons ressemblent souvent à cela :

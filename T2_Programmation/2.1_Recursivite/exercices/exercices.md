@@ -205,7 +205,8 @@
                     return puissance_mod(x*x,n//2)
                 else :
                     return x*puissance_mod(x*x,(n-1)//2)  
-
+        ```
+        
 ## Ex. 9 : Recherche
 
 !!! question "Exercice 9"
