@@ -1,8 +1,8 @@
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: Révision : [Récursivité](./T2_Programmation/2.1_Recursivite/cours.md) <br />
+    :arrow_forward: En cours : [Programmation orienté objet](./T2_Programmation/2.2_Programmation_Orientee_Objet/cours.md) <br />
 
-    :hourglass: A venir : [Programmation orienté objet](./T2_Programmation/2.2_Programmation_Orientee_Objet/cours.md) <br />
+    :hourglass: A venir : [piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)  <br />
 
 !!! abstract "Actualités :newspaper:" 
 
@@ -29,6 +29,7 @@
     :rotating_light: Liste des thèmes à traiter dans le programme : [pdf](./data/programmeTNSI.pdf)
 
     - Révision : [Codex](https://codex.forge.apps.education.fr/) <br />
+    - [Récursivité](./T2_Programmation/2.1_Recursivite/cours.md) <br />
 
     
 <!--
