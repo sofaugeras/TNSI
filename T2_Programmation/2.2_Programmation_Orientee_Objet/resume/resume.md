@@ -243,5 +243,5 @@ perso_2.setPv(120)
 
 ```python
 def __repr__(self) :
-  return f'{self._nom} a {self._pv} points de vie,\ninflige {self._degats} points de dégats au plus, \net est en position {self._position}'
-  ```
+    return f'{self._nom} a {self._pv} points de vie,\ninflige {self._degats} points de dégats au plus, \net est en position {self._position}'
+```

@@ -1,8 +1,8 @@
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: En cours : [Programmation orienté objet](./T2_Programmation/2.2_Programmation_Orientee_Objet/cours.md) <br />
+    :arrow_forward: En cours : [piles / files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md)  <br />
 
-    :hourglass: A venir : [piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)  <br />
+    :hourglass: A venir : [Mise au point de programme](./T2_Programmation/2.4_Mise_au_point_de_programme/cours.md) <br />
 
 !!! abstract "Actualités :newspaper:" 
 
@@ -30,6 +30,7 @@
 
     - Révision : [Codex](https://codex.forge.apps.education.fr/) <br />
     - [Récursivité](./T2_Programmation/2.1_Recursivite/cours.md) <br />
+    - [Programmation orienté objet](./T2_Programmation/2.2_Programmation_Orientee_Objet/cours.md)<br />
 
     
 <!--
@@ -42,7 +43,6 @@
         - Dichotomie
         
 !!! note "*Thèmes traités*"
-    - [Architecture Von Neumann (1ère)](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.2_Architecture_Von_Neumann/cours/)
     - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) 
     - [Gestion des processus](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/)  
     - [Cryptographie](T5_Architecture_materielle/5.4_Cryptographie/cours/)

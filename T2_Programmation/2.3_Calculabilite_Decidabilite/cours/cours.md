@@ -1,6 +1,5 @@
-
-
 # Décidabilité, calculabilité
+
 ![image](data/BO.png){: .center}
 
 !!! info "Crédit"

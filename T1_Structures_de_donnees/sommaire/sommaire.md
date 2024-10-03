@@ -1,5 +1,5 @@
 1. [Listes Piles Files](./1.1_Listes_Piles_Files/cours.md) 
 2. [Listes chaînées](./1.2_Listes/cours.md)
-3. [Dictionnaires](./1.2_Dictionnaires/cours.md) 
-4. [Arbres](./1.3_Arbres/cours.md)
+3. [Dictionnaires](./1.3_Dictionnaires/cours.md) 
+4. [Arbres](./1.4_Arbres/cours.md)
 5. [Graphes](./1.5_Graphes/cours.md)

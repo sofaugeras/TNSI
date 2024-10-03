@@ -587,6 +587,24 @@ Les variables de classes sont intéressantes pour définir des constantes comme 
     Testez le code précédent avec 32 cartes, et corrigez les erreurs.  <br />
     _Remarque_ : le paramètre `nbCartes`est renseigné par défaut à 32, il n'est pas focément nécessaire de le préciser lors de l'appel du constructeur. S'il est absent, il y aura 32 cartes dans le paquet, sinon il y aura le nombre de cartes précisé lors de l'appel.
 
+
+#### 5.3.2 Afficher les cartes
+
+Quand on joue aux cartes, c'est assez important de savoir ce que l'on a en main, ou au moins de savoir quelle est la valeur de la carte jouée ! Affichons donc les 10 premières cartes avec le code suivant.
+
+```python
+print(paquetBataille)
+for i in range(10):
+    print(paquetBataille.getPaquet()[i])
+```
+
+:question: Suivant que vous avez ou non défini la méthode `__repr__` dans la classe `Carte`, que constatez-vous ?  
+  
+!!! question "A faire"
+    modifiez le code des classes `Carte`et `PaquetCartes`, pour afficher les attributs de chaque carte et du paquet (utilisez `__repr__(self)`).  Vérifiez également que la valeur des as est correcte et qu'un paquet de 32 cartes contient bien toutes les cartes nécessaires.
+
+:trophy: Challenge :trophy:: le constructeur est mal conçu et non générique. Repensez le constructeur pour la génération du ``paquetCarte`` quelque soit le nombre de cartes.
+
 ??? question "Correction Constructeur"
 
     ```python
@@ -608,22 +626,6 @@ Les variables de classes sont intéressantes pour définir des constantes comme 
         #Exemple d'appel du constructeur dans la classe de test
         paquetBataille = PaquetCartes("bataille", 10) ;
     ```
-
-#### 5.3.2 Afficher les cartes
-
-Quand on joue aux cartes, c'est assez important de savoir ce que l'on a en main, ou au moins de savoir quelle est la valeur de la carte jouée ! Affichons donc les 10 premières cartes avec le code suivant.
-
-```python
-print(paquetBataille)
-for i in range(10):
-    print(paquetBataille.getPaquet()[i])
-```
-
-:question: Suivant que vous avez ou non défini la méthode `__repr__` dans la classe `Carte`, que constatez-vous ?  
-  
-!!! question "A faire"
-    modifiez le code des classes `Carte`et `PaquetCartes`, pour afficher les attributs de chaque carte et du paquet (utilisez `__repr__(self)`).  Vérifiez également que la valeur des as est correcte et qu'un paquet de 32 cartes contient bien toutes les cartes nécessaires.
-
 
 #### 5.3.3 Avec les objets composés d'objets, les méthodes "enchainées"
 

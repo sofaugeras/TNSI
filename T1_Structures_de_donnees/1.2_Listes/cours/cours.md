@@ -1,4 +1,4 @@
-# ⛓️ Les listes chainées ⛓️
+# Les listes chainées ⛓️
 
 !!! note "Crédits"
     @crédit de la page [Pierre-Alain Sallard](https://pasallard.gitlab.io/terminale_nsi_voltaire/Structures/1_StructuresLineaires/3_ListesChainees/Structures_ListesChainees/) sous licence CC BY-SA 

@@ -7,11 +7,17 @@
 
 ## 2. Consignes
 
-quelques idées : 
+!!! abstract "Consignes"
+    Créer un jeu vidéo sur pyxel en vous inspirant d'un jeu existant.
 
-- bouger des bulles de couleur qui doivent éviter les collisions
-- pong
-- Labyrinthe
-- Jeu de la vie
+
+!!! tip "Quelques idées"
+
+    - bouger des bulles de couleur qui doivent éviter les collisions
+    - pong
+    - Labyrinthe
+    - Jeu de la vie
+
+📆 Restitution attendue : Pour le **Jeudi 14 novembre 2024**
 
 ## Grille d'évaluation

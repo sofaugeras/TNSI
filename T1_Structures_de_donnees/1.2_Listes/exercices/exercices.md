@@ -1,4 +1,4 @@
-# ⛓️ Exercices et TP sur les Listes Chainées ⛓️
+# Exercices Listes Chainées ⛓️
 
 ## 🖊️ Exercice : utilisation de l'interface d'une liste chainée
 
