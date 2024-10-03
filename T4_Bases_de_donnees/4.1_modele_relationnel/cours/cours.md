@@ -7,7 +7,7 @@
     - Cours de Olivier Lecluse (licence by SA 2020)
 
 
-## Introduction
+## 1. Introduction
 
 Le développement des traitements informatiques nécessite la manipulation de données de plus en plus nombreuses. Leur organisation et leur stockage constituent un enjeu essentiel de performance.<br />
 
@@ -17,7 +17,7 @@ Les premières bases de données sont apparues dans les années 1960 et se sont 
 
 De nos jours les bases de données sont omniprésentes, en particulier sur le web. La plupart des sites, en particulier dans le commerce en ligne, y font largement appel.
 
-## Gérer efficacement les données
+###  1.1 Gérer efficacement les données
 
 Dans une base de données, l'information est stockée dans des fichiers, mais ceux-ci ne sont en général pas lisible par un humain : ils nécessitent l'utilisation d'un système de base de données (SGBD) pour les exploiter. Ceux-ci permettent :<br />
     - de lire, écrire, modifier, effacer, mettre en relation des données dans les différentes tables<br />
@@ -25,7 +25,7 @@ Dans une base de données, l'information est stockée dans des fichiers, mais ce
     - de gérer les droits d'accès aux différentes données<br />
     - d'assurer la sécurité et l'intégrité des données y compris lorsque plusieurs utilisateurs accèdent simultanément aux mêmes données.
 
-## Les grands logiciels de SGBDR
+### 1.2 Les grands logiciels de SGBDR
 
 Parmis les logiciels de gestion de bases de données les plus connus, nous avons
 
@@ -43,7 +43,7 @@ Ce sont de très gros logiciels, fonctionnant en mode client/serveur, assez comp
 En ce qui nous concerne, nous utiliserons dans la suite un outil libre simple à mettre en oeuvre mais permettant tout de même de se familiariser avec le langage SQL : **SQLite**.
 
 
-## Le modèle relationnel
+### 1.3 Le modèle relationnel
 
 Les informations et les données sont collectées depuis longtemps par les états, ou par diverses organisations.  Le stockage des données a évolué des fiches papier aux fiches cartonnées, puis aux fichiers informatiques, et enfin aux bases de données. 
 
@@ -52,7 +52,7 @@ Modéliser, c’est définir un monde abstrait qui coïncide avec une partie de 
 Bien modéliser, c’est faire que ce monde abstrait soit structuré, performant, et accessible facilement. Dans ce paragraphe, on va se concentrer sur le niveau logique de la représentation des données : le modèle relationnel.
 
  
-### 1.	Un exemple
+####  1.3.1	Un exemple
 
 Un club de sports dispose des données suivantes :
 
@@ -65,7 +65,7 @@ Un club de sports dispose des données suivantes :
 |Hans	|Kimkonzern	|Fléchettes	|Débutant	|Saint-Gély	|aucune	|0	|F2|
 |Janine	|Tutor	|Aquaponey	|Confirmé	|Saint-Clément	|31/05/2020	|8	|A2|
 
-#### a.	Premier modèle : fichier informatique de type tableur (Open Office, Excel, etc.)
+#### 1.3.2	Premier modèle : fichier informatique de type tableur (Open Office, Excel, etc.)
 
 Dans le modèle relationnel, ces données sont alors modélisées sous la forme de la **relation** (dite aussi **table**)<br />
 <code>Club = { Prénom String , Nom String , Sport String , Adresse String , DateC Date , Classement Int , Code_Sport String }</code><br />
@@ -76,7 +76,7 @@ On garde les données exactement comme elles sont présentées ci-dessus. Les an
 - **Suppression** : des informations dépendant d’autres informations. Par exemple, supprimer un sport demande aussi de supprimer son code.<br />
 - **Insertion** : insérer un nouvel enregistrement demande la connaissance de toutes les informations qui lui sont liées. Un nouvel inscrit doit immédiatement choisir un sport.<br />
 
-#### b.	Deuxième modèle : trois relations
+#### 1.3.3	Deuxième modèle : trois relations
 
 La base de données est constituée de trois **relations** _Inscrit_ , _Sport_ , _Compétition_. <br />
 Les schémas de ces relations sont : <br />
@@ -93,11 +93,11 @@ Les défauts identifiés ci-dessus disparaissent au moins partiellement, et la g
 !!! warning "A retenir"
     ![](../data/aretenir.png)
  
-### 2.	Les contraintes
+### 1.4	Les contraintes
 
 Les contraintes d’intégrité sont des règles permettant de garantir la **cohérence** des données lors de la mise à jour de la base.
 
-#### a.	Contraintes d’entité
+#### 1.4.1	Contraintes d’entité
 
 La contrainte d’entité permet de s’assurer que chaque enregistrement de la relation est **unique**. Comme on l’a vu ci-dessus, la donnée d’un nom et prénom ne suffit pas vu l’existence d’homonymes. Par ailleurs rajouter l’adresse en plus n’est pas une solution pratique, vu que la personne peut déménager. C’est pour cela que l’on rajoute parfois un identifiant unique : numéro de sécurité sociale, numéro de candidat pour le bac.<br />
 
@@ -119,7 +119,7 @@ Pratiquant = { <u>Identifiant_I Int, Code_Sport String </u>, Niveau String }<br 
 Compétition = { <u>Identifiant_I Int, , DateC Date , Code_Sport String </u>, Classement Int }
 </code>
 
-#### b.	Contraintes de référence
+#### 1.4.2	Contraintes de référence
 
 Les relations _Pratiquant_ et _Compétition_ font référence à des attributs d’autres tables. Lorsqu’on enregistre une nouvelle ligne dans ces tables, on vérifie que les attributs référencés existent : ce sont des **clés étrangères**. On les note dans le schéma par un `#` . <br />
 <code>
@@ -131,19 +131,19 @@ Compétition = { <u>#Identifiant_I Int, , DateC Date , #Code_Sport String </u>, 
 _Remarque :_ lors de la création de la base de données, on crée d’abord les tables **sans** clés étrangères, puis les tables **avec** clés étrangères. En effet le SGBD vérifie la **cohérence**  au fur et à mesure de la construction.  <br />
 _Remarque 2 :_ Une clé étrangère désigne **TOUJOURS** une clé primaire. Les deux attributs doivent être STRICTEMENT du même type de données. <br />
 
-#### c.	Contraintes de domaine
+#### 1.4.3	Contraintes de domaine
 
 Les contraintes de domaine concernent les _attributs_. On les a exprimées ici sous forme de type « générique », String, Int ou Date. On dispose d’autres types, Float, Boolean, Time, … qui dépendent en fait du SGB utilisé. <br />
 On verra par la suite sur SQL qu’en effet ces contraintes s’expriment légèrement différemment. On peut également préciser qu’une valeur doit être non nulle. <br />
 Par exemple lorsque l’on crée un nouvel adhérent, son adresse pourrait ne pas être immédiatement renseignée, mais pas ses nom et prénom. <br />
 
-#### d.	Contraintes utilisateur
+#### 1.4.4	Contraintes utilisateur
 
 Ce sont des contraintes spécifiques qui ne rentrent pas dans les catégories précédentes. <br />
 Par exemple, on peut préciser que le niveau est forcément dans la liste (débutant, confirmé, départemental, régional, national, international, intergalactique), qu’un numéro de téléphone portable débute par +33 suivi par un 6 ou un 7,  puis est suivi de 8 chiffres, qu’un émail est de la forme : une chaîne de caractères sans @, un seul caractère @, au moins un caractère, un point, et encore au moins un autre caractère.
 
 
-## II - Le langage SQL
+## 2. Le langage SQL
 
 Au niveau de la terminale retenez les structures des requêtes :<br />
 
