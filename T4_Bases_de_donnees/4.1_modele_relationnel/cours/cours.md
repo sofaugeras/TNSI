@@ -91,7 +91,7 @@ Compétition = { Identifiant_I Int, , DateC Date , Code_Sport String , Classemen
 Les défauts identifiés ci-dessus disparaissent au moins partiellement, et la gestion globale des données est bien plus simple : pas de redondance, des tables plus simples, insertion/modification/suppression plus simples également.
 
 !!! warning "A retenir"
-    ![](../data/aretenir.png)
+    ![](../4.2_mise_en_pratique/data/aretenir.png)
  
 ### 1.4	Les contraintes
 

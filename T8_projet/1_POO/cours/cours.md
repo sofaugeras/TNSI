@@ -8,7 +8,14 @@
 ## 2. Consignes
 
 !!! abstract "Consignes"
-    Créer un jeu vidéo sur pyxel en vous inspirant d'un jeu existant.
+    Créer un jeu vidéo de type "tir" sur pyxel en vous inspirant d'un jeu existant.
+
+    ^^Minima attendu :^^
+
+    - 2 classes POO
+    - une autre action ou capacité
+    - Un score ou un timer
+    - Une animation ou customisation de l'interface du jeu
 
 
 !!! tip "Quelques idées"
@@ -18,6 +25,15 @@
     - Labyrinthe
     - Jeu de la vie
 
-📆 Restitution attendue : Pour le **Jeudi 14 novembre 2024**
+📆 Restitution attendue : Pour le **Vendredi 15 novembre 2024**
+
+**A rendre :**
+
+- lien vers le projet Cahier académique
+- Cahier de vie du projet (pdf)
 
 ## Grille d'évaluation
+
+Evaluation suite à une présentation orale entre 5 et 10 minutes. Démo + explication du code.
+
+![Grille d'évaluation](./data/grille.png){: .center}

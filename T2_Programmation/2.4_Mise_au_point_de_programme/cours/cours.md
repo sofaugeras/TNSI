@@ -1,54 +1,51 @@
-Cours tests & bugs
-Antoine MAROT (antoine.marot@ensemblescolaire-niort.com)
-David SALLÉ (david.salle@ensemblescolaire-niort.com)
-Julien SIMONNEAU (julien.simonneau@ensemblescolaire-niort.com)
+# tests & bugs
 
+!!! note "Source"
 
+    Date : 15/10/2020
+    - Antoine MAROT (antoine.marot@ensemblescolaire-niort.com)
+    - David SALLÉ (david.salle@ensemblescolaire-niort.com)
+    - Julien SIMONNEAU (julien.simonneau@ensemblescolaire-niort.com)
 
-Ce document est mis à disposition selon les termes de la licence
-Creative Commons BY-NC-SA 4.0
+    Ce document est mis à disposition selon les termes de la licence ``Creative Commons BY-NC-SA 4.0``
  
+??? question "Table des matières"
 
-Version du document v0.2
-Date 15/10/2020
+    Table des matières
+    ```text
+    1 - Introduction	3
+        1.1 - Plan	3
+        1.2 - Un peu d’histoire	4
+        1.3 - Vue d’ensemble	5
+        1.4 - Conseils	5
+        1.5 - Erreur avec l’interpréteur Python	6
+    2 - Les exceptions	7
+        2.1 - Utiliser try/except	8
+        2.2 - Différenciation	8
+        2.3 - Et quoi qu’il arrive...	9
+        2.4 - Lever soi même une Exception	9
+    3 - Bogues et débogueur	10
+        3.1 - Causes des bogues	10
+        3.2 - Outil de débogage	10
+        3.3 - Source d’information	11
+    4 - Tests unitaires	12
+        4.1 - Introduction 	12
+            4.1.1 - Avantages/inconvénients	12
+            4.1.2 - Outils	12
+        4.2 - Mise en œuvre	13
+            4.2.1 - Fonctionnement 	13
+            4.2.2 - Module calculs.py 	13
+            4.2.3 - Tests unitaires avec les assertions	14
+            4.2.4 - Tests unitaires avec la librairie unittest	15
+    5 - Optimisation des performances	18
+        5.1 - Principe	18
+        5.2 - Chronométrage simple	18
+        5.3 - Profilage	18
+    ```
 
-Table des matières
-1 - Introduction	3
-1.1 - Plan	3
-1.2 - Un peu d’histoire	4
-1.3 - Vue d’ensemble	5
-1.4 - Conseils	5
-1.5 - Erreur avec l’interpréteur Python	6
-2 - Les exceptions	7
-2.1 - Utiliser try/except	8
-2.2 - Différenciation	8
-2.3 - Et quoi qu’il arrive...	9
-2.4 - Lever soi même une Exception	9
-3 - Bogues et débogueur	10
-3.1 - Causes des bogues	10
-3.2 - Outil de débogage	10
-3.3 - Source d’information	11
-4 - Tests unitaires	12
-4.1 - Introduction 	12
-4.1.1 - Avantages/inconvénients	12
-4.1.2 - Outils	12
-4.2 - Mise en œuvre	13
-4.2.1 - Fonctionnement 	13
-4.2.2 - Module calculs.py 	13
-4.2.3 - Tests unitaires avec les assertions	14
-4.2.4 - Tests unitaires avec la librairie unittest	15
-5 - Optimisation des performances	18
-5.1 - Principe	18
-5.2 - Chronométrage simple	18
-5.3 - Profilage	18
+## 1 - Introduction
 
-
-
-
-
-
-1 - Introduction
-1.1 - Plan
+### 1.1 - Plan
 Ce document présente quelques notions autours de la mise au point des programmes :
 ·	gestion des erreurs/exceptions
 ·	gestion des bugs

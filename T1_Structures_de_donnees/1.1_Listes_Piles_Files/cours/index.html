@@ -3294,18 +3294,20 @@
 
 <h1 id="structures-de-donnees-lineaires-piles-files">Structures de données linéaires :  piles, files<a class="headerlink" href="#structures-de-donnees-lineaires-piles-files" title="Permanent link">⚓︎</a></h1>
 <h2 id="0-preambule-interface-implementation">0. Préambule : interface ≠ implémentation<a class="headerlink" href="#0-preambule-interface-implementation" title="Permanent link">⚓︎</a></h2>
-<p>Les structures que nous allons voir peuvent s'envisager sous deux aspects :
-- le côté utilisateur, qui utilisera une <strong>interface</strong> pour manipuler les données.
+<p>Les structures que nous allons voir peuvent s'envisager sous deux aspects :<br />
+- le côté utilisateur, qui utilisera une <strong>interface</strong> pour manipuler les données.<br />
 - le côté concepteur, qui aura choisi une <strong>implémentation</strong> pour construire la structure de données.</p>
 <p>Par exemple, le volant et les pédales constituent (une partie de) l'interface d'une voiture. L'implémentation va désigner tous les mécanismes techniques qui sont mis en œuvre pour que le mouvement de rotation du volant aboutisse à un changement de direction des roues. </p>
 <p><img alt="" class="center" src="../data/voiture.png" width:30_="width:30%" /></p>
 <p>Nous avons déjà abordé ces deux aspects lors de la découverte de la Programmation Orientée Objet. Le principe d'<strong>encapsulation</strong> fait que l'utilisateur n'a qu'à connaître l'existence des méthodes disponibles, et non pas le contenu technique de celle-ci. Cela permet notamment de modifier le contenu technique (l'implémentation) sans que les habitudes de l'utilisateur (l'interface) ne soient changées.</p>
 <h2 id="1-structures-de-donnees-lineaires">1. Structures de données linéaires<a class="headerlink" href="#1-structures-de-donnees-lineaires" title="Permanent link">⚓︎</a></h2>
 <h3 id="11-a-chaque-donnee-sa-structure">1.1 À chaque donnée sa structure<a class="headerlink" href="#11-a-chaque-donnee-sa-structure" title="Permanent link">⚓︎</a></h3>
-<p>En informatique comme dans la vie courante, il est conseillé d'adapter sa manière de stocker et de traiter des données en fonction de la nature de celles-ci :
-- Le serveur d'un café, chargé de transporter les boissons du comptoir aux tables des clients, n'utilisera pas un sac en plastique pour faire le transport : il préfèrera un plateau. 
-- Le chercheur de champignons, lui, n'utilisera pas un plateau pour stocker ses trouvailles : il préfèrera un panier.
-- Pour stocker des chaussettes, on préfèrera les entasser dans un tiroir (après les avoir appairées), plutôt que de les suspendre à des cintres. </p>
+<p>En informatique comme dans la vie courante, il est conseillé d'adapter sa manière de stocker et de traiter des données en fonction de la nature de celles-ci :</p>
+<ul>
+<li>Le serveur d'un café, chargé de transporter les boissons du comptoir aux tables des clients, n'utilisera pas un sac en plastique pour faire le transport : il préfèrera un plateau. <br /></li>
+<li>Le chercheur de champignons, lui, n'utilisera pas un plateau pour stocker ses trouvailles : il préfèrera un panier.<br /></li>
+<li>Pour stocker des chaussettes, on préfèrera les entasser dans un tiroir (après les avoir appairées), plutôt que de les suspendre à des cintres. </li>
+</ul>
 <p>De même en informatique, pour chaque type de données, pour chaque utilisation prévue, une structure particulière de données se revèlera (peut-être) plus adaptée qu'une autre.</p>
 <p>Intéressons nous par exemple aux <strong>données linéaires</strong>. Ce sont des données qui ne comportent pas de <em>hiérarchie</em> : toutes les données sont de la même nature et ont le même rôle. 
 Par exemple, un relevé mensuel de températures, la liste des élèves d'une classe, un historique d'opérations bancaires... </p>
@@ -3336,18 +3338,18 @@ les éléments sont empilés les uns au-dessus des autres, et on ne peut toujour
 <p>Une structure de <strong>file</strong> (penser à une file d'attente) est associée à la méthode <strong>FIFO</strong> (First In, First Out) :
 les éléments sont enfilés les uns à la suite des autres, et on ne peut toujours défiler que l'élément du haut de la file. Le premier élément à être arrivé est donc le premier à en sortir. Sinon ça râle dans la file d'attente.</p>
 <p><img alt="un bien joli gif" class="center" src="../data/giffile.webp" /></p>
-<p><strong>Exemples de données stockées sous forme de file :</strong> 
-- les documents envoyés à l'imprimante sont traitées dans une file d'impression.
-- la «queue» à la cantine est (normalement) traitée sous forme de file.</p>
+<p><strong>Exemples de données stockées sous forme de file :</strong> </p>
+<ul>
+<li>les documents envoyés à l'imprimante sont traitées dans une file d'impression.<br /></li>
+<li>la «queue» à la cantine est (normalement) traitée sous forme de file.</li>
+</ul>
 <h4 id="123-le-probleme-du-stockage-transformer-les-piles-en-files">1.2.3 Le problème du stockage : transformer les piles en files<a class="headerlink" href="#123-le-probleme-du-stockage-transformer-les-piles-en-files" title="Permanent link">⚓︎</a></h4>
 <p>Dans les entrepôts de stockage, comme dans les rayons d'un supermarché, la structure naturelle est celle de la <strong>pile</strong> : les gens attrapent l'élément situé devant eux («en haut de la pile»). Si les employés du supermarché remettent en rayon les produits plus récents sur le dessus de la pile, les produits au bas de la pile ne seront jamais choisis et périmeront.<br />
 Ils doivent donc transformer la pile en file : lors de la mise en rayon de nouveaux produits, ceux-ci seront placés derrière («au bas de la file») afin que partent en priorité les produits à date de péremption plus courte.
 On passe donc du LIFO au FIFO.  </p>
 <p>Certains dispositifs permettent de le faire naturellement :<br />
-Ci-dessous, une file... de piles (électriques). Le chargement par le haut du distributeur fait que celle qui sera sortie (en bas) sera celle qui aurait été rentrée en premier (par le haut). Ce FIFO est donc provoqué naturellement par la gravité (et un peu d'astuce).&lt;br /</p>
-<blockquote>
-<p><img alt="" class="center" src="../data/fifoimg.png" /></p>
-</blockquote>
+Ci-dessous, une file... de piles (électriques). Le chargement par le haut du distributeur fait que celle qui sera sortie (en bas) sera celle qui aurait été rentrée en premier (par le haut). Ce FIFO est donc provoqué naturellement par la gravité (et un peu d'astuce).</p>
+<p><img alt="fifo" class="center" src="../data/fifoimg.png" /></p>
 <p>Cette problématique est universelle : voir par exemple <a href="https://www.mecalux.fr/blog/methode-lifo-fifo-peps">ce site</a>.</p>
 <p>Arrêtons-nous maintenant en détail sur les interfaces et implémentations possibles des listes, des piles et des files.</p>
 <h2 id="2-les-listes">2. Les listes<a class="headerlink" href="#2-les-listes" title="Permanent link">⚓︎</a></h2>
@@ -3356,13 +3358,18 @@ Ci-dessous, une file... de piles (électriques). Le chargement par le haut du di
 <h3 id="22-les-listes-chainees">2.2 Les listes chaînées<a class="headerlink" href="#22-les-listes-chainees" title="Permanent link">⚓︎</a></h3>
 <p>Lorsque l'implémentation de la liste fait apparaître une chaîne de valeurs, chacune pointant vers la suivante, on dit que la liste est une liste <strong>chaînée</strong>.</p>
 <p><img alt="" class="center" src="../data/listechainee.png" /></p>
-<p><strong>Implémentation choisie :</strong>
-- Une liste est caractérisée par un ensemble de cellules.
-- Le lien (on dira souvent le «pointeur») vers la variable est un lien vers la première cellule, qui renverra elle-même sur la deuxième, etc.
-- Chaque cellule contient donc une valeur et un lien vers la cellule suivante.
-- Une liste peut être vide (la liste vide est notée <code>x</code> ou bien <code>None</code> sur les schémas)</p>
+<p><strong>Implémentation choisie :</strong></p>
+<ul>
+<li>Une liste est caractérisée par un ensemble de cellules.<br /></li>
+<li>Le lien (on dira souvent le «pointeur») vers la variable est un lien vers la première cellule, qui renverra elle-même sur la deuxième, etc.<br /></li>
+<li>Chaque cellule contient donc une valeur et un lien vers la cellule suivante.<br /></li>
+<li>Une liste peut être vide (la liste vide est notée <code>x</code> ou bien <code>None</code> sur les schémas)</li>
+</ul>
 <p>Une conséquence de cette implémentation sous forme de liste chaînée est la non-constance du temps d'accès à un élément de liste : pour accéder au 3ème élément, il faut obligatoirement passer par les deux précédents.</p>
-<p><strong>À retenir :</strong> dans une liste chaînée, le temps d'accès aux éléments n'est pas constant.</p>
+<div class="admonition warning">
+<p class="admonition-title">A retenir</p>
+<p>Dans une liste chaînée, le temps d'accès aux éléments n'est pas constant.</p>
+</div>
 <h3 id="23-exemple-dimplementation-minimale-dune-liste-chainee">2.3 Exemple d'implémentation minimale d'une liste chaînée<a class="headerlink" href="#23-exemple-dimplementation-minimale-dune-liste-chainee" title="Permanent link">⚓︎</a></h3>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Cellule</span> <span class="p">:</span>
 
@@ -3399,12 +3406,16 @@ pour 1 : lst.suivante.suivante.contenu</p>
 </code></pre></div>
 <p>Et nous connaissons aussi (un peu) l'interface de ce type <code>list</code>, notamment avec les méthodes <code>append()</code> ou <code>reverse()</code>.<br />
 Néanmoins, l'implémentation qui a été choisie par les concepteurs de Python de ce type <code>list</code> fait que le celui-ci se rapproche plus d'un <strong>tableau dynamique</strong>. </p>
-<p><strong>Dans un tableau dynamique :</strong>
-- le temps d'accès à n'importe quel élément est rapide. Ce temps d'accès est constant quelque soit l'élément : on dit que l'accès est en <span class="arithmatex">\(O(1)\)</span>.
-- l'insertion d'un élément au début ou au milieu de la liste est lente : cela oblige à décaler tous les éléments à droite de celui-ci. Le temps pris par l'insertion est proportionnel au nombre d'éléments à déplacer : on dit que l'insertion est en <span class="arithmatex">\(O(n)\)</span>.</p>
-<p><strong>Dans une liste chaînée :</strong>
-- le temps d'accès à n'importe quel élément peut être lent (proportionnel à la position de l'élément dans la liste). Le temps d'accès est en <span class="arithmatex">\(O(n)\)</span>.
-- l'insertion d'un élément à l'intérieur de la liste est rapide : il y a simplement à modifier la valeur du lien de la cellule à gauche de l'endroit d'insertion. L'action d'insérer est donc en <span class="arithmatex">\(O(1)\)</span>. Toutefois, avant d'arriver à l'endroit d'insertion, il faut avoir parcouru toutes les cellules précédentes ! Le temps total d'insertion est donc lui aussi linéaire, en <span class="arithmatex">\(O(n)\)</span>.</p>
+<p><strong>Dans un tableau dynamique :</strong></p>
+<ul>
+<li>le temps d'accès à n'importe quel élément est rapide. Ce temps d'accès est constant quelque soit l'élément : on dit que l'accès est en <span class="arithmatex">\(O(1)\)</span>.</li>
+<li>l'insertion d'un élément au début ou au milieu de la liste est lente : cela oblige à décaler tous les éléments à droite de celui-ci. Le temps pris par l'insertion est proportionnel au nombre d'éléments à déplacer : on dit que l'insertion est en <span class="arithmatex">\(O(n)\)</span>.</li>
+</ul>
+<p><strong>Dans une liste chaînée :</strong></p>
+<ul>
+<li>le temps d'accès à n'importe quel élément peut être lent (proportionnel à la position de l'élément dans la liste). Le temps d'accès est en <span class="arithmatex">\(O(n)\)</span>.<br /></li>
+<li>l'insertion d'un élément à l'intérieur de la liste est rapide : il y a simplement à modifier la valeur du lien de la cellule à gauche de l'endroit d'insertion. L'action d'insérer est donc en <span class="arithmatex">\(O(1)\)</span>. Toutefois, avant d'arriver à l'endroit d'insertion, il faut avoir parcouru toutes les cellules précédentes ! Le temps total d'insertion est donc lui aussi linéaire, en <span class="arithmatex">\(O(n)\)</span>.</li>
+</ul>
 <p>Nous nous servirons parfois du type <code>list</code> de Python dans la suite de ce cours, mais il ne faut pas oublier qu'il n'est pas un «vrai» type <code>list</code>.</p>
 <h3 id="25-un-exemple-dinterface-pour-les-listes">2.5 Un exemple d'interface pour les listes<a class="headerlink" href="#25-un-exemple-dinterface-pour-les-listes" title="Permanent link">⚓︎</a></h3>
 <p>Imaginons que nous possédons une interface offrant les fonctionnalités suivantes : <br />
@@ -3451,9 +3462,9 @@ Néanmoins, l'implémentation qui a été choisie par les concepteurs de Python 
 <h2 id="3-les-piles">3. Les piles<a class="headerlink" href="#3-les-piles" title="Permanent link">⚓︎</a></h2>
 <p><img alt="" class="center" src="../data/gifpile.webp" /></p>
 <p>Comme expliqué précédemment, une pile travaille en mode LIFO (Last In First Out).
-Pour être utilisée, l'interface d'une pile doit permettre a minima :
-- la création d'une pile vide
-- l'ajout d'un élément dans la pile (qui sera forcément au dessus). On dira qu'on <strong>empile</strong>.
+Pour être utilisée, l'interface d'une pile doit permettre a minima :<br />
+- la création d'une pile vide<br />
+- l'ajout d'un élément dans la pile (qui sera forcément au dessus). On dira qu'on <strong>empile</strong>.<br />
 - le retrait d'un élément de la pile (qui sera forcément celui du dessus) et le renvoi de sa valeur. On dira qu'on <strong>dépile</strong>.</p>
 <h3 id="31-utilisation-dune-interface-de-pile">3.1 Utilisation d'une interface de pile<a class="headerlink" href="#31-utilisation-dune-interface-de-pile" title="Permanent link">⚓︎</a></h3>
 <div class="admonition abstract">
@@ -3467,13 +3478,13 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :
 <span class="mf">2.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># p=</span>
 <span class="mf">3.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># p= </span>
 <span class="mf">4.</span> <span class="n">p</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="c1">#  </span>
-<span class="mf">4.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># p= </span>
-<span class="mf">5.</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>   <span class="c1"># p= </span>
+<span class="mf">5.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># p= </span>
 <span class="mf">6.</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>   <span class="c1"># p= </span>
-<span class="mf">7.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>  <span class="c1"># p= </span>
-<span class="mf">8.</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>   <span class="c1"># p= </span>
+<span class="mf">7.</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>   <span class="c1"># p= </span>
+<span class="mf">8.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>  <span class="c1"># p= </span>
 <span class="mf">9.</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>   <span class="c1"># p= </span>
-<span class="mf">10.</span> <span class="n">p</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="c1"># </span>
+<span class="mf">10.</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>   <span class="c1"># p= </span>
+<span class="mf">11.</span> <span class="n">p</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="c1"># </span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -3481,13 +3492,13 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :
 <span class="mf">2.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>   <span class="c1"># p= 3</span>
 <span class="mf">3.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># p= 3 5 par convention</span>
 <span class="mf">4.</span> <span class="n">p</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span>  <span class="c1">#  False</span>
-<span class="mf">4.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># p= 3 5 1</span>
-<span class="mf">5.</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>  <span class="c1"># p= 3 5    valeur renvoyée : 1</span>
-<span class="mf">6.</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>  <span class="c1"># p= 3      valeur renvoyée : 5</span>
-<span class="mf">7.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>  <span class="c1"># p= 3 9</span>
-<span class="mf">8.</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>  <span class="c1"># p= 3       valeur renvoyée :9</span>
-<span class="mf">9.</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>  <span class="c1"># p= None      valeur renvoyée : 3</span>
-<span class="mf">10.</span> <span class="n">p</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="c1"># True</span>
+<span class="mf">5.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># p= 3 5 1</span>
+<span class="mf">6.</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>  <span class="c1"># p= 3 5    valeur renvoyée : 1</span>
+<span class="mf">7.</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>  <span class="c1"># p= 3      valeur renvoyée : 5</span>
+<span class="mf">8.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>  <span class="c1"># p= 3 9</span>
+<span class="mf">9.</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>  <span class="c1"># p= 3       valeur renvoyée :9</span>
+<span class="mf">10.</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>  <span class="c1"># p= None      valeur renvoyée : 3</span>
+<span class="mf">11.</span> <span class="n">p</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="c1"># True</span>
 </code></pre></div>
 </div>
 </div>
@@ -3496,9 +3507,9 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :
 <h3 id="32-implementations-dune-pile">3.2 Implémentation(s) d'une pile<a class="headerlink" href="#32-implementations-dune-pile" title="Permanent link">⚓︎</a></h3>
 <p>L'objectif est de créer une classe <code>Pile</code>. L'instruction  <code>Pile()</code>  créera une pile vide. Chaque objet <code>Pile</code> disposera des méthodes suivantes :</p>
 <ul>
-<li><code>est_vide()</code> : indique si la pile est vide.</li>
-<li><code>empile()</code> : insère un élément en haut de la pile.</li>
-<li><code>depile()</code> : renvoie la valeur de l'élément en haut de la pile ET le supprime de la pile.</li>
+<li><code>est_vide()</code> : indique si la pile est vide.<br /></li>
+<li><code>empile()</code> : insère un élément en haut de la pile.<br /></li>
+<li><code>depile()</code> : renvoie la valeur de l'élément en haut de la pile ET le supprime de la pile.<br /></li>
 <li><code>__str__()</code> : permet d'afficher la pile sous forme agréable (par ex : <code>|3|6|2|5|</code>) par <code>print()</code></li>
 </ul>
 <h4 id="321-a-laide-du-type-list-de-python">3.2.1 À l'aide du type <code>list</code> de Python<a class="headerlink" href="#321-a-laide-du-type-list-de-python" title="Permanent link">⚓︎</a></h4>
@@ -3534,10 +3545,16 @@ Des renseignement intéressants à son sujet peuvent être trouvés <a href="htt
             <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;|&quot;</span>
         <span class="k">return</span> <span class="n">s</span>  
 
-    <span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
-    <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-    <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-    <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">est_vide</span><span class="p">())</span> <span class="c1">#True</span>
+<span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1">#5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">est_vide</span><span class="p">())</span> <span class="c1">#False</span>
+<span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># 3 5</span>
+<span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="c1"># 7 3 5</span>
+<span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># 2 7 3 5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span> <span class="c1"># 7 3 5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -3550,13 +3567,13 @@ Des renseignement intéressants à son sujet peuvent être trouvés <a href="htt
 
 
     <span class="k">def</span> <span class="nf">empile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">depile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="o">==</span> <span class="kc">True</span> <span class="p">:</span>
             <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="s2">&quot;Vous avez essayé de dépiler une pile vide !&quot;</span><span class="p">)</span>
         <span class="k">else</span> <span class="p">:</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span> 
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> 
 
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>       <span class="c1"># Hors-Programme : pour afficher </span>
         <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;|&quot;</span>              <span class="c1"># convenablement la pile avec print(p)</span>
@@ -3570,13 +3587,16 @@ Des renseignement intéressants à son sujet peuvent être trouvés <a href="htt
             <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;|&quot;</span>
         <span class="k">return</span> <span class="n">s</span>  
 
-    <span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
-    <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-    <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-    <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
-
-    <span class="n">p</span> 
-    <span class="o">&gt;&gt;&gt;</span> <span class="o">|</span><span class="mi">5</span><span class="o">|</span><span class="mi">3</span><span class="o">|</span><span class="mi">7</span><span class="o">|</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">est_vide</span><span class="p">())</span> <span class="c1">#True</span>
+<span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1">#5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">est_vide</span><span class="p">())</span> <span class="c1">#False</span>
+<span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># 3 5</span>
+<span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="c1"># 7 3 5</span>
+<span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># 2 7 3 5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span> <span class="c1"># 7 3 5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 </code></pre></div>
 </div>
 </div>
@@ -3596,7 +3616,13 @@ Des renseignement intéressants à son sujet peuvent être trouvés <a href="htt
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>à l'aide cette classe, re-créer une classe <code>Pile</code> disposant exactement de la même interface que dans l'exercice précédent.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Pile</span><span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Cellule</span> <span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">contenu</span><span class="p">,</span> <span class="n">suivante</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">=</span> <span class="n">contenu</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">suivante</span> <span class="o">=</span> <span class="n">suivante</span>
+
+<span class="k">class</span> <span class="nc">Pile</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="kc">None</span>
 
@@ -3619,17 +3645,25 @@ Des renseignement intéressants à son sujet peuvent être trouvés <a href="htt
             <span class="n">c</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">suivante</span>
         <span class="k">return</span> <span class="n">s</span>
 
-    <span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
-    <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-    <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-    <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
-
-    <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
-    <span class="o">&gt;&gt;&gt;</span> <span class="o">|</span><span class="mi">7</span><span class="o">|</span><span class="mi">3</span><span class="o">|</span><span class="mi">5</span><span class="o">|</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">est_vide</span><span class="p">())</span> <span class="c1">#True</span>
+<span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1">#5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">est_vide</span><span class="p">())</span> <span class="c1">#False</span>
+<span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># 3 5</span>
+<span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="c1"># 7 3 5</span>
+<span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># 2 7 3 5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span> <span class="c1"># 7 3 5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Pile</span><span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Cellule</span> <span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">contenu</span><span class="p">,</span> <span class="n">suivante</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">=</span> <span class="n">contenu</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">suivante</span> <span class="o">=</span> <span class="n">suivante</span>
+<span class="k">class</span> <span class="nc">Pile</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="kc">None</span>
 
@@ -3651,6 +3685,16 @@ Des renseignement intéressants à son sujet peuvent être trouvés <a href="htt
             <span class="n">s</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">contenu</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;|&quot;</span>
             <span class="n">c</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">suivante</span>
         <span class="k">return</span> <span class="n">s</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">est_vide</span><span class="p">())</span> <span class="c1">#True</span>
+<span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1">#5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">est_vide</span><span class="p">())</span> <span class="c1">#False</span>
+<span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># 3 5</span>
+<span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="c1"># 7 3 5</span>
+<span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># 2 7 3 5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span> <span class="c1"># 7 3 5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 </code></pre></div>
 </div>
 </div>
@@ -3755,11 +3799,11 @@ Pour être utilisée, une file doit permettre a minima :<br />
 </div>
 </div>
 <h3 id="42-implementation-dune-file">4.2 Implémentation d'une file<a class="headerlink" href="#42-implementation-dune-file" title="Permanent link">⚓︎</a></h3>
-<p>L'objectif est de créer une classe <code>File</code>, disposant des méthodes suivantes :
-- <code>File()</code> : crée une file vide.
-- <code>est_vide()</code> : indique si la file est vide.
-- <code>enfile()</code> : insère un élément en bas de la file.
-- <code>defile()</code> : renvoie la valeur de l'élément en haut de la file ET le supprime de la file.
+<p>L'objectif est de créer une classe <code>File</code>, disposant des méthodes suivantes :<br />
+- <code>File()</code> : crée une file vide.<br />
+- <code>est_vide()</code> : indique si la file est vide.<br />
+- <code>enfile()</code> : insère un élément en bas de la file.<br />
+- <code>defile()</code> : renvoie la valeur de l'élément en haut de la file ET le supprime de la file.<br />
 - <code>__str__()</code> : permet d'afficher la file sous forme agréable (par ex : <code>|3|6|2|5|</code>) par <code>print()</code></p>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice</p>
@@ -3825,7 +3869,7 @@ Pour être utilisée, une file doit permettre a minima :<br />
 Notre implémentation répond parfaitement à l'interface qui était demandée. Mais si le «cahier des charges» obligeait à ce que les opérations <code>enfile()</code> et <code>defile()</code> aient lieu en temps constant (en <span class="arithmatex">\(O(1)\)</span>), notre implémentation ne conviendrait pas.  </p>
 <p>En cause : notre méthode <code>defile()</code> agit en temps linéaire  (<span class="arithmatex">\(O(n)\)</span>) et non pas en temps constant. L'utilisation de la structure de «liste» de Python (les <em>tableaux dynamiques</em>) provoque, lors de l'instruction <code>self.data.pop(0)</code> un redimensionnement de la liste, qui voit disparaître son premier élément. Chaque élément doit être recopié dans la case qui précède, avant de supprimer la dernière case. Ceci nous coûte un temps linéaire.</p>
 <h3 id="43-implementation-dune-file-avec-deux-piles">4.3 Implémentation d'une file avec deux piles<a class="headerlink" href="#43-implementation-dune-file-avec-deux-piles" title="Permanent link">⚓︎</a></h3>
-<p>Comment créer une file avec 2 piles ?<br />
+<p>Comment créer une file avec 2 piles ?  <br />
 L'idée est la suivante : on crée une pile d'entrée et une pile de sortie. <br />
 - quand on veut enfiler, on empile sur la pile d'entrée.<br />
 - quand on veut défiler, on dépile sur la pile de sortie.<br />
