@@ -18,7 +18,7 @@
         <link rel="prev" href="../../1.1_Listes_Piles_Files/Exercices/">
       
       
-        <link rel="next" href="../exercices/">
+        <link rel="next" href="../TD_FlaviusJoseph/">
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
@@ -824,11 +824,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../exercices/" class="md-nav__link">
+      <a href="../TD_FlaviusJoseph/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Exercices
+    TD Flavius Josephe
   </span>
   
 
@@ -3170,7 +3170,7 @@
 <p>Ne pas confondre la structure de données abstraites <strong>Liste chainée</strong> (ou simplement <strong>liste</strong> dans certains manuels) avec le type <code>list</code> de Python.</p>
 <p>Le type <code>list</code> de Python s'apparente à une implémentation de la structure de <strong>tableau dynamique</strong> (<em>hors-programme</em>).</p>
 </div>
-<h2 id="1-notion-de-liste-chainee"><ins>1. Notion de liste chainée</ins><a class="headerlink" href="#1-notion-de-liste-chainee" title="Permanent link">⚓︎</a></h2>
+<h2 id="1-notion-de-liste-chainee">1. Notion de liste chainée<a class="headerlink" href="#1-notion-de-liste-chainee" title="Permanent link">⚓︎</a></h2>
 <p>La structure <strong>liste chainée</strong> fait partie, comme les files (d'attente) et les piles, des <strong>structures de données linéaires</strong> : les données sont "alignées" les unes après les autres. </p>
 <p>Ce qui caractérise une <strong>liste chainée</strong>, ce n'est pas le mode de gestion des entrées et sorties des données (<em>FIFO</em> pour les files, <em>LIFO</em> pour les piles) mais c'est qu'elle offre un moyen de passer d'une donnée à la suivante.</p>
 <p>L'idée de base de la notion de structure de <strong>liste chainée</strong> est :</p>
@@ -3214,7 +3214,7 @@
 <p><em>Remarque :</em> le symbole "⟂" représente une liste vide, ce qui marque la fin de la liste chainée.</p>
 <p>Ceci illustre bien le principe : <strong>on "tient" la chaine par son premier maillon.</strong></p>
 </details>
-<h2 id="2-interface-dune-liste-chainee"><ins>2. Interface d'une liste chainée</ins><a class="headerlink" href="#2-interface-dune-liste-chainee" title="Permanent link">⚓︎</a></h2>
+<h2 id="2-interface-dune-liste-chainee">2. Interface d'une liste chainée<a class="headerlink" href="#2-interface-dune-liste-chainee" title="Permanent link">⚓︎</a></h2>
 <p>L'<strong>interface</strong> minimale d'une liste chainée comporte les opérations  (<em>les primitives</em>) suivantes :</p>
 <table>
 <thead>
@@ -3254,7 +3254,7 @@
 <li><code>queue(Bourbons)</code> renvoie la liste chainée "Louis XIII" → "Louis XIV" → "Louis XV" → "Louis XVI" → ⟂, c'est-à-dire tout ce qui vient après la "tête" de la liste <code>Bourbons</code>.</li>
 </ul>
 </div>
-<h2 id="3-longueur-dune-liste-chainee"><ins>3. Longueur d'une liste chainée</ins><a class="headerlink" href="#3-longueur-dune-liste-chainee" title="Permanent link">⚓︎</a></h2>
+<h2 id="3-longueur-dune-liste-chainee">3. Longueur d'une liste chainée<a class="headerlink" href="#3-longueur-dune-liste-chainee" title="Permanent link">⚓︎</a></h2>
 <p>Supposez que l'on vous demande la longueur d'une liste chainée <code>maListeChainée</code> qui a une queue (<code>tail(maListeChainée)</code>) de longueur 7 : vous répondrez sans hésitation que la longueur vaut 1+7= 8.</p>
 <p><img alt="" class="center" src="../data/longueurListe.png" width="60%" /></p>
 <p>Cette "structure imbriquée", cette disposition en "poupée russe" d'une liste chainée permet de définir une <strong>fonction récursive</strong> de calcul de longueur d'une liste chainée :</p>
@@ -3266,7 +3266,7 @@
         RENVOYER 1 + LongueurListeChainée(tail(lst))
 </code></pre></div>
 <p>En exercice, vous devrez coder en Python cette fonction pour chacun des deux modes de représentation (<em>pour chaque implémentation</em>) d'une liste chainée que l'on va proposer ci-dessous.</p>
-<h2 id="4-implementation-dune-liste-chainee-version-imperative-a-laide-de-tuples"><ins>4. Implémentation d'une liste chainée : version impérative, à l'aide de <strong><em>tuples</em></strong></ins><a class="headerlink" href="#4-implementation-dune-liste-chainee-version-imperative-a-laide-de-tuples" title="Permanent link">⚓︎</a></h2>
+<h2 id="4-implementation-dune-liste-chainee-version-imperative-a-laide-de-tuples">4. Implémentation d'une liste chainée : version impérative, à l'aide de <strong><em>tuples</em></strong><a class="headerlink" href="#4-implementation-dune-liste-chainee-version-imperative-a-laide-de-tuples" title="Permanent link">⚓︎</a></h2>
 <p>On peut choisir de représenter un maillon par un couple (type <code>tuple</code>) de la forme : <code>maillon = (valeur, maillon_suivant)</code>.</p>
 <p>Quand il n'y a pas de maillon suivant, on indique le couple vide <code>()</code> à la place. </p>
 <p>La variable qui désigne la liste chainée est alors simplement celle du premier maillon : souvenez-vous de l'idée de base "<strong>on tient toute la chaine grâce au premier maillon" !</strong></p>
@@ -3287,23 +3287,25 @@
 <p><img alt="" src="../data/schema_chaine_bourbons.png" /></p>
 </div>
 <p>Avec ce choix d'implémentation d'une liste chainée à l'aide de <em>tuples</em>, voici des codes possibles pour les fonctions  <code>creer_liste_vide()</code>, <code>inserer_en_tete(lst, donnée)</code>,  <code>head(lst)</code>,  <code>tail(lst)</code> et <code>est_vide(lst)</code> spécifiées par l'interface :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">creer_liste_vide</span><span class="p">()</span> <span class="p">:</span>
-    <span class="k">return</span> <span class="p">()</span> <span class="c1"># tuple vide</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Liste</span> <span class="p">:</span>
 
-<span class="k">def</span> <span class="nf">inserer_en_tete</span><span class="p">(</span> <span class="n">lst</span><span class="p">,</span> <span class="n">donnée</span> <span class="p">)</span> <span class="p">:</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">donnée</span><span class="p">,</span> <span class="n">lst</span><span class="p">)</span> <span class="c1"># c&#39;est le nouveau premier maillon de la chaine</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        <span class="n">lst</span> <span class="o">=</span> <span class="p">()</span> <span class="c1"># tuple vide</span>
 
-<span class="k">def</span> <span class="nf">head</span><span class="p">(</span> <span class="n">lst</span> <span class="p">)</span> <span class="p">:</span>
-    <span class="k">return</span> <span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># c&#39;est ce qu&#39;il y a en position 0 du couple L</span>
+    <span class="k">def</span> <span class="nf">inserer_en_tete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">donnée</span> <span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">donnée</span><span class="p">,</span> <span class="n">lst</span><span class="p">)</span> <span class="c1"># c&#39;est le nouveau premier maillon de la chaine</span>
 
-<span class="k">def</span> <span class="nf">tail</span><span class="p">(</span> <span class="n">lst</span> <span class="p">)</span> <span class="p">:</span>
-    <span class="k">return</span> <span class="n">lst</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># c&#39;est ce qu&#39;il y a en position 1 du couple L</span>
+    <span class="k">def</span> <span class="nf">head</span><span class="p">(</span> <span class="bp">self</span> <span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># c&#39;est ce qu&#39;il y a en position 0 du couple L</span>
 
-<span class="k">def</span> <span class="nf">est_vide</span><span class="p">(</span> <span class="n">lst</span> <span class="p">)</span> <span class="p">:</span>
-    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span> <span class="n">lst</span> <span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">def</span> <span class="nf">tail</span><span class="p">(</span> <span class="bp">self</span> <span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="n">lst</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># c&#39;est ce qu&#39;il y a en position 1 du couple L</span>
+
+    <span class="k">def</span> <span class="nf">est_vide</span><span class="p">(</span> <span class="bp">self</span> <span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span> <span class="n">lst</span> <span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
 </code></pre></div>
 <p>Une façon d'utiliser cette implémentation est alors :
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># exemple d&#39;utilisation</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># exemple d&#39;utilisation (a reprendre POO)</span>
 <span class="n">Bourbons</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Henri IV&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;Louis XIII&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;Louis XIV&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;Louis XV&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;Louis XVI&#39;</span><span class="p">,</span> <span class="p">())))))</span>
 <span class="n">roi</span> <span class="o">=</span> <span class="n">head</span><span class="p">(</span><span class="n">Bourbons</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La tête de la liste chaine : &quot;</span><span class="p">,</span> <span class="n">roi</span><span class="p">)</span>
@@ -3336,16 +3338,7 @@
 </li>
 </ol>
 </details>
-<div class="admonition question">
-<p class="admonition-title">Exercice  : protection des fonctions head et tail</p>
-<p>Une liste chainée vide n'a "ni queue ni tête" !  Cela signifie que l'exécution des fonctions <code>head</code> et <code>tail</code> sur une liste chainée vide va provoquer une erreur.</p>
-<p>Ajouter une instruction de type <code>assert</code> au début de ces fonctions afin de les "protéger". </p>
-</div>
-<details class="danger">
-<summary>Solution</summary>
-<p>On ajoute à ces fonctions l'instruction <code>assert not est_vide(lst), "impossible sur une chaine vide"</code>.</p>
-</details>
-<h2 id="5-implementation-dune-liste-chainee-version-programmation-orientee-objet"><ins>5. Implémentation d'une liste chainée : version Programmation Orientée Objet</ins><a class="headerlink" href="#5-implementation-dune-liste-chainee-version-programmation-orientee-objet" title="Permanent link">⚓︎</a></h2>
+<h2 id="5-implementation-dune-liste-chainee-version-programmation-orientee-objet">5. Implémentation d'une liste chainée : version Programmation Orientée Objet<a class="headerlink" href="#5-implementation-dune-liste-chainee-version-programmation-orientee-objet" title="Permanent link">⚓︎</a></h2>
 <p>Une autre façon d'implémenter une liste chainée est de créer un objet "Maillon", c'est-à-dire en Python de créer une <strong>classe Maillon</strong> qui a deux <strong>attributs</strong> :</p>
 <ul>
 <li>la donnée à stocker,</li>
@@ -3409,28 +3402,7 @@
 <span class="n">chaineAlimentaire</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;corn&quot;</span><span class="p">,</span><span class="n">souris</span><span class="p">)</span>
 </code></pre></div>
 </details>
-<div class="admonition question">
-<p class="admonition-title">Exploration d'une liste chainée </p>
-<p>En appuyant sur le bouton "Lancer", vous allez exécuter un code masqué qui crée (<em>qui instancie</em>) un objet <code>maListeMystere</code> de la classe <code>Maillon</code>. </p>
-<p>En vous servant des attributs de cet objet, explorer cette liste chainée puis la représenter.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Maillon</span> <span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">suivant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>  <span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="o">=</span> <span class="n">data</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">tail</span> <span class="o">=</span> <span class="n">suivant</span>
-
-<span class="n">C</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;Chocolat&quot;</span><span class="p">)</span>
-<span class="n">B</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;Bronze&quot;</span><span class="p">,</span> <span class="n">C</span><span class="p">)</span>
-<span class="n">A</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;Argent&quot;</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
-<span class="n">maListeMystere</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;Or&quot;</span><span class="p">,</span><span class="n">A</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Merci d&#39;avoir executé le code : à vous de découvrir la liste chainée maListeMystere&quot;</span><span class="p">)</span>
-</code></pre></div>
-<details class="danger">
-<summary>Solution</summary>
-<p>La liste chainée est : Or → Argent → Bronze → Chocolat → ⟂.
-On l'obtient en saisissant <code>maListeMystere.head</code>, puis <code>maListeMystere.tail.head</code>, etc.</p>
-</details>
-</div>
-<h2 id="6-exercices-et-tp"><ins>6. Exercices et TP</ins><a class="headerlink" href="#6-exercices-et-tp" title="Permanent link">⚓︎</a></h2>
+<h2 id="6-exercices-et-tp">6. Exercices et TP<a class="headerlink" href="#6-exercices-et-tp" title="Permanent link">⚓︎</a></h2>
 <ul>
 <li>
 <p>Généralités : télécharger le <a href="../data/TP_Exos_ListesChainees/">carnet Jupyter</a>, à ouvrir sous <a href="https://notebook.basthon.fr/" target="_blank">Basthon</a>.</p>

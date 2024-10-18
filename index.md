@@ -1,6 +1,6 @@
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: En cours : [piles / files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md)  <br />
+    :arrow_forward: En cours : [Listes chaînées](./T1_Structures_de_donnees/1.2_Listes/cours.md)  <br />
 
     :hourglass: A venir : [Mise au point de programme](./T2_Programmation/2.4_Mise_au_point_de_programme/cours.md) <br />
 
@@ -31,47 +31,24 @@
     - Révision : [Codex](https://codex.forge.apps.education.fr/) <br />
     - [Récursivité](./T2_Programmation/2.1_Recursivite/cours.md) <br />
     - [Programmation orienté objet](./T2_Programmation/2.2_Programmation_Orientee_Objet/cours.md)<br />
+    - [piles / files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md)<br />
 
     
-<!--
-!!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
-    Chers élèves de Première (Groupe 1 et Groupe 2), voilà les chapitres à revoir en priorité pour aborder sereinement l'année de Terminale en NSI :
-    - Les listes, les tuples et les dictionnaires. À retrouver [ici](https://glassus.github.io/premiere_nsi/T2_Representation_des_donnees/sommaire/){. target="_blank"}.
-    - Le plus important : les chapitres suivants d'algorithmique, à retrouver [ici](https://glassus.github.io/premiere_nsi/T4_Algorithmique/sommaire/){. target="_blank"} :
-        - Complexité
-        - Tris par sélection et insertion
-        - Dichotomie
-        
+<!--       
 !!! note "*Thèmes traités*"
+    - [Listes chainées](./T1_Structures_de_donnees/1.2_Listes/Structures_ListesChainees.md)
     - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) 
     - [Gestion des processus](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/)  
     - [Cryptographie](T5_Architecture_materielle/5.4_Cryptographie/cours/)
+    - [Sécurisation des communications, Cryptographie](./TNSI/T5_Architecture_materielle/5.4_Cryptographie/cours/)
     - [Diviser pour régner](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
     - [Arbres](T1_Structures_de_donnees/1.3_Arbres/cours/)
     - [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
     - [Dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/)  
+    - [Base de données](./T4_Bases_de_donnees/sommaire.md)
     - [Langage SQL](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
     - [Modèle relationnel](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)
-    - [Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)  
-    - [Récursivité](T2_Programmation/2.2_Recursivite/cours/)  
-    - [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/)  
-    - [Gestion des processus](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/)  
-    - [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
     - [Retour sur les dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/)
-    
-    - [Diviser pour régner](T3_Algorithmique/3.1_Diviser_pour_regner/cours)
-    - [Recherche Textuelle](T3_Algorithmique/3.2_Recherche_textuelle/cours)
-
-    - [Récursivité](./T2_Programmation/2.2_Recursivite/cours.md)  
-    - [Programmation Orientée Objet](./T2_Programmation/2.1_Programmation_Orientee_Objet/cours.md)   
-    - [Listes / piles / files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md)
-    - [Base de données](./T4_Bases_de_donnees/sommaire.md)
-    - [Gestion des processus](./T5_Architecture_materielle/5.2_Gestion_des_processus/)
-    - [Système sur puce](./T5_Architecture_materielle/5.1_Systemes_sur_puce/)
-    - [Listes chainées](./T1_Structures_de_donnees/1.2_Listes/Structures_ListesChainees.md)
-    - [Les arbres](./T1_Structures_de_donnees/1.4_Arbres/)
-    - [Protocole de routage](./TNSI/T5_Architecture_materielle/5.3_Protocoles_de_routage/)
-    - [Sécurisation des communications, Cryptographie](./TNSI/T5_Architecture_materielle/5.4_Cryptographie/cours/)
     - [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/)
     - [Diviser pour régner](./T3_Algorithmique/3.1_Diviser_pour_regner/)
     - [Graphes](./T1_Structures_de_donnees/1.5_Graphes/cours/)

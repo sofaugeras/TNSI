@@ -956,11 +956,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.2_Listes/exercices/" class="md-nav__link">
+      <a href="../../1.2_Listes/TD_FlaviusJoseph/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Exercices
+    TD Flavius Josephe
   </span>
   
 
@@ -3934,6 +3934,11 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie. <br
 
     <span class="k">def</span> <span class="nf">defile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">entree_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entree</span><span class="p">)</span>
+        <span class="n">sortie_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sortie</span><span class="p">)</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;entrée : </span><span class="si">{</span><span class="n">entree_str</span><span class="si">}</span><span class="s2">, sortie : </span><span class="si">{</span><span class="n">sortie_str</span><span class="si">}</span><span class="s2">.&quot;</span>
 
 <span class="n">f</span> <span class="o">=</span> <span class="n">File</span><span class="p">()</span>
 <span class="n">f</span><span class="o">.</span><span class="n">enfile</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>

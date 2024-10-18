@@ -709,6 +709,11 @@ class Cellule :
 
             def defile(self):
                 pass
+
+            def __str__(self):
+                entree_str = str(self.entree)
+                sortie_str = str(self.sortie)
+                return f"entrée : {entree_str}, sortie : {sortie_str}."
             
         f = File()
         f.enfile(5)

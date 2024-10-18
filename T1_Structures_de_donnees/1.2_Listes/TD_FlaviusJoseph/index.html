@@ -12,13 +12,13 @@
         <meta name="author" content="Sophie FAUGERAS">
       
       
-        <link rel="canonical" href="https://github.com/sofaugeras/TNSI/T1_Structures_de_donnees/1.4_Arbres/cours/">
+        <link rel="canonical" href="https://github.com/sofaugeras/TNSI/T1_Structures_de_donnees/1.2_Listes/TD_FlaviusJoseph/">
       
       
-        <link rel="prev" href="../../1.3_Dictionnaires/exercices/">
+        <link rel="prev" href="../cours/">
       
       
-        <link rel="next" href="../Exercices/">
+        <link rel="next" href="../../1.3_Dictionnaires/cours/">
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Cours - Saint Sauveur TNSI</title>
+        <title>TD Flavius Josephe - Saint Sauveur TNSI</title>
       
     
     
@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#structures-de-donnees-recursive-les-arbres" class="md-skip">
+        <a href="#le-probleme-de-flavius-josephe" class="md-skip">
           Aller au contenu
         </a>
       
@@ -140,7 +140,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cours
+              TD Flavius Josephe
             
           </span>
         </div>
@@ -666,8 +666,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -675,13 +677,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -695,7 +695,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             1.2 Listes
@@ -709,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.2_Listes/cours/" class="md-nav__link">
+      <a href="../cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -727,10 +727,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../1.2_Listes/TD_FlaviusJoseph/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    TD Flavius Josephe
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -739,6 +759,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-enonce" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Enoncé
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-une-implementation-des-listes-chainees" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Une implémentation des listes chainées
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-application-au-probleme-de-josephe" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Application au problème de Josèphe
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-un-deuxieme-type-de-liste-la-liste-chainee-circulaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Un deuxième type de liste : la liste chaînée circulaire
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-le-retour-de-flavius" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Le retour de Flavius
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-sil-vous-reste-du-temps" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. S'il vous reste du temps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -846,8 +940,6 @@
                 
   
   
-    
-  
   
   
     
@@ -857,11 +949,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
         
           
           <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
@@ -875,7 +969,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             1.4 Arbres
@@ -886,30 +980,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Cours
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../1.4_Arbres/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -918,35 +992,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -959,7 +1004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Exercices/" class="md-nav__link">
+      <a href="../../1.4_Arbres/Exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3115,284 +3160,459 @@
   
 
 
-<h1 id="structures-de-donnees-recursive-les-arbres">Structures de données récursive :  les arbres<a class="headerlink" href="#structures-de-donnees-recursive-les-arbres" title="Permanent link">⚓︎</a></h1>
-<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">⚓︎</a></h2>
-<p>Un organisateur de tournoi de rugby recherche la meilleure solution pour afficher les potentiels quarts de final, demi-finales et finale: </p>
-<p>Au départ nous avons 4 poules de 4 équipes. Les 4 équipes d'une poule s'affrontent dans un mini championnat (3 matchs par équipe). À l'issue de cette phase de poule, les 2 premières équipes de chaque poule sont qualifiées pour les quarts de finale. </p>
-<p>On connaît les 2 qualifiés par poule : </p>
+<h1 id="le-probleme-de-flavius-josephe">Le problème de Flavius Josèphe<a class="headerlink" href="#le-probleme-de-flavius-josephe" title="Permanent link">⚓︎</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Source</p>
+<p><strong>@crédit du cours :</strong>  Frederic Mandon <img alt="Licence CC BY NC SA" src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png" title="licence Creative Commons CC BY SA" /></p>
+</div>
+<h2 id="1-enonce">1. Enoncé<a class="headerlink" href="#1-enonce" title="Permanent link">⚓︎</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Problème de Flavius Josephe</p>
+<p>Flavius Josèphe est un historiographe romain juif du 1er siècle, dont l'oeuvre historique est sujette à caution. 
+Il a donné la première version du problème suivant : <br />
+"41 soldats juifs, cernés par des soldats romains, 
+décident de former un cercle. Un premier soldat [juif] est choisi au hasard et est exécuté, le troisième à partir de sa gauche 
+(ou droite) est ensuite exécuté. Tant qu'il y a des soldats, la sélection continue. Le but est de trouver à quel endroit 
+doit se tenir un soldat pour être le dernier. Josèphe, peu enthousiaste à l'idée de mourir, parvint à trouver l'endroit où se tenir. 
+Quel est-il ?"  </p>
+<p>Variante : 42 soldats juifs, deux survivants, et les romains en tuent un sur trois.<br /></p>
+<p>Problème de <a href="https://fr.wikipedia.org/wiki/Probl%C3%A8me_de_Jos%C3%A8phe">Flavius Josèphe</a></p>
+</div>
+<p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> <ins>Objectif :</ins> Résoudre le problème de Josèphe avec une liste chaînée "normale".  <br />
+Il y a deux sous-problèmes :<br /></p>
 <ul>
-<li>Poule 1 =&gt; 1er Eq1 et 2e Eq8 </li>
-<li>Poule 2 =&gt; 1er Eq2 et 2e Eq7 </li>
-<li>Poule 3 =&gt; 1er Eq3 et 2e Eq6 </li>
-<li>Poule 4 =&gt; 1er Eq4 et 2e Eq5 </li>
+<li>la création de la liste des soldats</li>
+<li>la recherche du ou des survivants </li>
 </ul>
-<p>En quart de final on va avoir : </p>
+<div class="admonition danger">
+<p class="admonition-title">Enoncé</p>
+<p>Josèphe fut amené à se disposer en cercle avec quarante personnes, sachant qu’en comptant de trois en trois à partir de l’un d’eux, ils devaient se supprimer mutuellement.</p>
 <ul>
-<li>quart de finale 1 =&gt; Eq1 contre Eq5 </li>
-<li>quart de finale 2 =&gt; Eq2 contre Eq6 </li>
-<li>quart de finale 3 =&gt; Eq3 contre Eq7 </li>
-<li>quart de finale 4 =&gt; Eq4 contre Eq8 </li>
+<li>Le premier à être supprimé est rangé en position 3 et il se fait supprimer par celui qui est rangé en position 6</li>
+<li>celui-ci est le suivant à être supprimé, par celui en position 9.</li>
 </ul>
-<p>Pour les demi-finales on aura : </p>
+<p>Ainsi de suite, progressivement, toute la troupe est appelée à s’autodétruire. À quelle place doit se ranger Josèphe pour être le dernier et devoir ainsi se supprimer lui-même ?</p>
+</div>
+<p>On va utiliser l'implémentation de la suite en POO telle que :</p>
+<p>On dispose des primitives suivante sur la structure liste : <br /></p>
 <ul>
-<li>demi-finale 1 =&gt; vainqueur quart de finale 1 contre vainqueur quart de finale 3 </li>
-<li>demi-finale 2 =&gt; vainqueur quart de finale 2 contre vainqueur quart de finale 4 </li>
+<li>test de vacuité d'une liste : <code>estVide(liste)</code></li>
+<li>Obtention de la longueur de la liste : <code>longueur(liste)</code></li>
+<li>Accéder au k-<em>ième</em> élément de la liste : <code>lire(liste , k)</code></li>
+<li>Supprimer le k-<em>ième</em> élément de la liste : <code>supprimer(liste , k)</code></li>
+<li>Insérer un élément en k-<em>ième</em> position dans la liste : <code>inserer(liste , k)</code>  </li>
 </ul>
-<p>L'organisateur du tournoi affiche les informations ci-dessus le jour du tournoi. Malheureusement, la plupart des spectateurs se perdent quand ils cherchent à déterminer les potentielles demi-finales (et ne parlons pas de la finale !) </p>
-<p>Comment faire ? naturellement, comment auriez-vous envie de représenter cette masse d’informations ?</p>
-<details class="check">
-<summary>exemple de structure possible</summary>
-<p><img alt="" src="../data/poules.jpg" /></p>
-</details>
-<p><img alt="" src="../data/boArbre.png" />
-<img alt="" src="../data/abrInfo.png" /></p>
-<h1 id="1-definitions">1.    Définitions<a class="headerlink" href="#1-definitions" title="Permanent link">⚓︎</a></h1>
-<p>Un arbre en informatique est un type particulier de <strong>graphe</strong>. Comme nous n'avons pas encore vu à ce stade de l'année les graphes, cette définition n'est pas d'une grande utilité...</p>
-<p><img align="right" alt="arbreDef" src="../data/arbDef.jpg" width="30%" />
-On dira donc qu'un arbre est constitué :</p>
+<h2 id="2-une-implementation-des-listes-chainees">2. Une  implémentation des listes chainées<a class="headerlink" href="#2-une-implementation-des-listes-chainees" title="Permanent link">⚓︎</a></h2>
+<p>Une liste peut être considérée comme une suite de cellules (ou noeuds), éventuellement vide (<code>None</code>) pour la liste vide. Chaque cellule comporte une tête (la <code>donnée</code>) et une queue (le <code>suivant</code>), qui est soit une autre liste, soit la liste vide <code>(None, None)</code>.   <br />
+<em>Remarque</em> : On utilise souvent <code>tête</code> au lieu de <code>donnee</code> et <code>queue</code> au lieu de <code>suivant</code>. Dans le cadre de ce TP, ces noms sont utilisés dans un autre sens pour les listes circulaires, ce qui pourrait porter à confusion.</p>
+<p><img alt="Image : liste chainéee" class="center" src="../data/liste_chainee.jpg" width="100%" /></p>
+<p>Les attributs de la classe <code>CelluleL</code> sont :<br /></p>
 <ul>
-<li>D’une <strong>racine</strong>, sommet de "départ" de l'arbre </li>
-<li>De <strong>nœuds</strong>, sommets intermédiaires de l'arbre </li>
-<li>De <strong>feuilles</strong>, sommets "finaux" de l'arbre </li>
-<li>Et de <strong>branches</strong>, qui relient les éléments précédents entre eux</li>
+<li><code>donnee</code> : l'élément de tête de la liste (éventuellement <code>None</code>)</li>
+<li><code>suivant</code>: la liste composant la deuxième partie du noeud</li>
+<li><code>longueur</code>: on rajoute cet attribut pour plus de commodité</li>
 </ul>
-<p>Les arbres informatiques ont ceci de particulier qu'ils poussent tête en bas. Les arbres sont des structures de données hiérarchiques, très utilisées en informatique. Ils sont orientés : la représentation standardisée, racine en haut, indique la relation "père-enfant" entre les sommets. Lorsque deux sommets sont reliés par une branche, celui du haut est le père, et celui du bas est l’enfant. Un père peut avoir plusieurs enfants, mais un enfant ne peut pas avoir plusieurs pères (faites un dessin, on obtiendrait alors ce qu’on appelle un cycle dans le vocabulaire des graphes).</p>
-<p><em>Question</em> : Citez des exemples de représentation arborescente que vous connaissez.</p>
-<details class="check">
-<summary>Réponses possibles</summary>
-<p>un arbre généalogique, Une arborescence de fichiers, Un document HTML
-<img align="right" alt="Une arborescence de fichiers" src="../data/fichier.jpg" width="50%" />
-<img alt="Une arborescence html" src="../data/html.jpg" width="50%" /></p>
-</details>
-<h2 id="definitions-complementaires">Définitions complémentaires<a class="headerlink" href="#definitions-complementaires" title="Permanent link">⚓︎</a></h2>
-<ul>
-<li>Les <strong>nœuds</strong> sont en général étiquetés, ci-contre les étiquettes sont les lettres a, b, c, etc…</li>
-<li>La <strong>taille</strong> d’un arbre est le <strong>nombre de ses nœuds</strong>. Dans l’exemple ci-dessus, la taille de l’arbre est 7.</li>
-<li>La <strong>hauteur</strong> (ou profondeur ou niveau) d’un nœud X est définie comme le <strong>nombre de nœud à parcourir pour aller de la racine au nœud X</strong>. La hauteur de la racine est arbitrairement fixée à 1, ou 0 suivant les définitions. Pour la suite du cours, nous choisirons la hauteur de la racine égale à 1.</li>
-<li>La <strong>hauteur de l’arbre</strong> est la plus grande des hauteurs de ses noeuds</li>
-</ul>
-<p>Exemple : </p>
-<ul>
-<li>le nœud ⓒ a pour hauteur 2 </li>
-<li>le nœud ⓕ a pour hauteur 3</li>
-<li>le nœud ⓖ a pour hauteur 3 (avec 1 comme hauteur pour a)</li>
-<li>la hauteur de l’arbre est égale à la hauteur du nœud ⓖ, soit 3.</li>
-</ul>
-<dl>
-<dt>Un arbre peut être défini de manière récursive : </dt>
-<dd>
-<p><img alt="➡️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/27a1.svg" title=":arrow_right:" /> un arbre est soit un arbre vide</p>
-</dd>
-<dd>
-<p><img alt="➡️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/27a1.svg" title=":arrow_right:" /> une racine <strong>et</strong> une liste de sous-arbres (éventuellement vide, auquel cas c’est une feuille). 
-C’est la définition qui est probablement la plus pertinente pour la vision « informatique » des arbres.</p>
-</dd>
-</dl>
-<p>En terminale, nous étudierons principalement les arbres binaires : </p>
-<p><strong>un arbre binaire est un arbre dont tous les nœuds sont d’arité au maximum 2.</strong></p>
-<p>Autrement dit, chaque père a aux plus deux enfants, appelés sous-arbre gauche et sous-arbre droit.
-Un arbre binaire est soit un arbre vide, soit une racine, un sous-arbre Gauche et un sous-arbre Droit. Il est essentiel de comprendre qu'un sous-arbre <strong>est</strong> un arbre. D'où la définition récursive ci dessus. 
-Les arbres binaires se rencontrent par exemple dans les compétitions sportives comme un tournoi de tennis.</p>
-<h3 id="trois-cas-particuliers">Trois cas particuliers :<a class="headerlink" href="#trois-cas-particuliers" title="Permanent link">⚓︎</a></h3>
-<details class="danger">
-<summary>Arbre dégénéré ou filiforme  ou arbre peigne</summary>
-<p>Un arbre binaire peigne est un cas particulier extrême d'arbre binaire, tous les nœuds intérieurs ont un seul enfant qui est non vide, et toujours du même côté. Techniquement c'est une liste chainée.
-<img alt="arbrefiliforme" src="../data/degenere.jpg" /></p>
-</details>
-<details class="danger">
-<summary>Arbre parfait</summary>
-<p>Un arbre binaire parfait possède des nœuds intérieurs qui ont tous exactement deux enfants non vides. C'est l'arbre idéal pour certains algorithmes... Une taille maximale pour une hauteur minimale. <br />
-<img alt="arbreParfait" src="../data/parfait.png" /></p>
-</details>
-<details class="danger">
-<summary>Arbre complet ou presque complet</summary>
-<p>c’est un arbre dont tous les niveaux sont complètement remplis, sauf éventuellement le dernier. Les feuilles du dernier niveau sont le plus à gauche possible
-<img alt="arbrecomplet" src="../data/complet.png" /></p>
-</details>
-<details class="attention" open="open">
-<summary>Attention</summary>
-<p>A noter que ces définitions varient suivant les auteurs et les livres ! notamment «parfait» et «complet» peuvent être intervertis !</p>
-</details>
-<h3 id="lien-entre-taille-et-hauteur">Lien entre taille et hauteur.<a class="headerlink" href="#lien-entre-taille-et-hauteur" title="Permanent link">⚓︎</a></h3>
-<p>Si un arbre binaire est de taille <code>n</code> et de hauteur <code>h</code>, alors : </p>
-<ul>
-<li>le nombre de sommets est au moins égal à la hauteur, et strictement inférieur à <span class="arithmatex">\(2^h\)</span> :
-    <span class="arithmatex">\(h &lt;= n &lt; 2^h\)</span></li>
-<li>De manière équivalente, la hauteur est strictement plus grande que le logarithme en base deux de la taille, et inférieur ou égal à la taille : <span class="arithmatex">\(\log _{2} n &lt; h &lt;= n\)</span></li>
-</ul>
-<p><em>Question</em> : Dessiner tous les arbres binaires ayant respectivement 3 et 4 nœuds</p>
-<details class="check">
-<summary>Réponse</summary>
-<p>Il y a 5 arbres binaires possédant 3 noeuds
-<img alt="arbres à 3 noeuds" src="../data/exo5arbres3noeuds.jpg" />
-Il y a 14 arbres binaires possédant 5 noeuds
-<img alt="arbres à 4 noeuds" src="../data/exo14arbres4noeuds.jpg" /></p>
-</details>
-<p><em>Question</em> :  calculer le nombre de d’arbres binaires contenant 5 nœuds. Sachant qu’il y a </p>
-<ul>
-<li>1 arbre binaire vide</li>
-<li>1 arbre binaire contenant 1 nœud</li>
-<li>2 arbres binaires contenant 2 nœuds</li>
-<li>5 arbres binaires contenant 3 nœuds</li>
-<li>14 arbres binaires contenant 4 nœuds</li>
-</ul>
-<p>On ne cherchera pas à les construire tous, mais seulement à les dénombrer</p>
-<p>??? check "Réponse"
-    Pour les dénombrer, on considère le noeud à la racine puis on répartit les quatres noeuds restants entre le sous-arbre gauche et le sous-arbre droit. Par exemple, on peut mettre un noeud dans le sous-arbre gauche et 3 dans le sous-arbre droit.
-    Au total, il y a 5 façons différentes de répartir les noeuds <span class="arithmatex">\((0+4, 1+3, 2+2, 3+1, 4+0)\)</span>.
-    Pour chacune, on connaît le nombre de sous-arbres possibles, ce qui donne la somme :
-    <center><span class="arithmatex">\(1*14 + 1*5 + 2*2 + 5*1 + 14*1\)</span></center>
-    Soit un total de <strong>42</strong> arbres binaires possédant 5 noeuds</p>
-<h3 id="mise-en-application-debranche">Mise en application débranché<a class="headerlink" href="#mise-en-application-debranche" title="Permanent link">⚓︎</a></h3>
-<p><a href="https://sofaugeras.github.io/TNSI/T1_Structures_de_donnees/1.3_arbres/Exercices/">Lien vers les exercices</a></p>
-<ol>
-<li>Une classe arbre binaire en Python</li>
-</ol>
-<p>Lien vers le notebook  <a href="https://nbviewer.org/urls/sofaugeras.github.io/TNSI/site/T1_Structures_de_donnees/1.1_Listes_Piles_Files/01_Listes_Piles_Files.ipynb" target="_blank">ici</a>  <a class="md-button md-button--primary" href="https://sofaugeras.github.io/TNSI/docs/T1_Structures_de_donnees/1.1_Listes_Piles_Files/01_Listes_Piles_Files.ipynb">:fontawesome-solid-download:</a> </p>
-<p>Le but est de créer une structure de données pour représenter un arbre binaire en Python. Les opérations sur les arbres binaires sont au minimum :
-•   Construction d’arbre vide
-•   Construction d’un arbre à partir d’un entier et de deux sous-arbres gauche et droit
-•   Test de vacuité
-•   Accès à la racine d’un arbre
-•   Accès au sous-arbre gauche
-•   Accès au sous-arbre droit</p>
-<p>a.  Première implémentation
-On crée une classe nœud, puis on utilise ce nœud pour construire un arbre
-class Noeud:
-    def <strong>init</strong>(self,valeur,gauche,droit):
-        self.n = valeur
-        self.g = gauche
-        self.d = droit</p>
-<p>class ArbreBinaire:
-    def <strong>init</strong>(self,c):
-        self.r = c</p>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>def creeVide():
-    return ArbreBinaire(None)
+<p>les méthodes sont celles données par les primitives ci-dessus(<code>estVide(liste)</code>,<code>longueur(liste)</code>,<code>lire(liste , k)</code>,<code>supprimer(liste , k)</code>,<code>inserer(liste , k)</code>).  </p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">CelluleL</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span> <span class="p">,</span> <span class="n">donnee</span> <span class="o">=</span> <span class="kc">None</span> <span class="p">,</span> <span class="n">suivant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">donnee</span> <span class="o">=</span> <span class="n">donnee</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">suivant</span> <span class="o">=</span> <span class="n">suivant</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">donnee</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">suivant</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">longueur</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">longueur</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">suivant</span><span class="o">.</span><span class="n">longueur</span> <span class="o">+</span> <span class="mi">1</span>
 
-def creeNGD(valeur, gauche = None, droit = None):
-    return ArbreBinaire(Noeud(valeur, gauche, droit))
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">donnee</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;()&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># la 1ère possibilité met l&#39;aspect récursif en avant</span>
+            <span class="c1"># la 2ème possibilité met l&#39;aspect chaîné en avant</span>
+            <span class="c1">#return &#39;(&#39; + str(self.donnee) + repr(self.suivant).replace(&#39;None&#39;,&#39;()&#39;) + &#39;)&#39;  </span>
+            <span class="k">return</span>  <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">donnee</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;-&gt;&#39;</span> <span class="o">+</span> <span class="nb">repr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">suivant</span><span class="p">)</span>
 
-def estVide(self):
-    return self.r is None
+    <span class="k">def</span> <span class="nf">estVide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">longueur</span> <span class="o">==</span> <span class="mi">0</span>
 
-def racine(self):
-    assert not(self.r is None),&#39;Arbre vide&#39;
-    # Deuxième version
-    # if self.estVide():
+    <span class="k">def</span> <span class="nf">lire</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="n">k</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">longueur</span> <span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="s1">&#39;Index trop grand&#39;</span><span class="p">)</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">donnee</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">suivant</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">lire</span><span class="p">(</span><span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">supprimer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">k</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">longueur</span> <span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="s1">&#39;Index trop grand&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">k</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
+            <span class="k">return</span> <span class="n">CelluleL</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">suivant</span><span class="o">.</span><span class="n">donnee</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">suivant</span><span class="o">.</span><span class="n">suivant</span><span class="p">)</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="k">return</span> <span class="n">CelluleL</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">donnee</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">suivant</span><span class="o">.</span><span class="n">supprimer</span><span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">inserer</span><span class="p">(</span><span class="bp">self</span> <span class="p">,</span> <span class="n">element</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span> <span class="p">:</span>
+        <span class="c1"># peut insérer en fin de liste avec k = self.longueur</span>
+        <span class="k">if</span> <span class="n">k</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">longueur</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="s1">&#39;Index trop grand&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">k</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">estVide</span><span class="p">():</span>
+            <span class="k">return</span> <span class="n">CelluleL</span><span class="p">(</span><span class="n">element</span><span class="p">,</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">k</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">estVide</span><span class="p">():</span>
+            <span class="k">return</span> <span class="n">CelluleL</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">CelluleL</span><span class="p">())</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="k">return</span> <span class="n">CelluleL</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">donnee</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">suivant</span><span class="o">.</span><span class="n">inserer</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd"># quelques tests</span>
+<span class="sd">liste_vide = CelluleL()</span>
+<span class="sd">print(&quot;test liste vide : &quot;, liste_vide, &quot;est vide : &quot;, liste_vide.estVide(), &quot; et de longueur &quot;,</span>
+<span class="sd">      liste_vide.longueur)</span>
+<span class="sd">maliste = CelluleL(5,liste_vide)</span>
+<span class="sd">for i in range(4 , -1 , -1) :</span>
+<span class="sd">    maliste = CelluleL(i,maliste)</span>
+
+<span class="sd">print(&quot;La liste : &quot;,maliste, &quot;a pour longueur &quot;,maliste.longueur)</span>
+<span class="sd">print(&quot;lecture des éléments d&#39;indices 1 et 5 :&quot;,maliste.lire(1),maliste.lire(5))</span>
+<span class="sd">print()</span>
+
+<span class="sd">i = 5</span>
+<span class="sd">print(&quot;Suppression puis ajout de l&#39;élément d&#39;indice &quot;,i)</span>
+<span class="sd">maliste = maliste.supprimer(i)</span>
+<span class="sd">print(&quot;Après suppression : &quot;,maliste, &quot;de longueur &quot;,maliste.longueur)</span>
+<span class="sd">maliste = maliste.inserer(i,i)</span>
+<span class="sd">print(&quot;Après insertion : &quot;,maliste, &quot;de longueur &quot;,maliste.longueur)</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="nb">print</span><span class="p">()</span>
 </code></pre></div>
-<p>#     Raise index error('Arbre vide')
-        # else : 
-        return self.r.n</p>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>def filsGauche(self):
-    assert not(self.r is None),&#39;Arbre vide&#39;
-    return self.r.g
+<h2 id="3-application-au-probleme-de-josephe">3. Application au problème de Josèphe<a class="headerlink" href="#3-application-au-probleme-de-josephe" title="Permanent link">⚓︎</a></h2>
+<p>On rappelle le terrible problème de Josèphe. Un nombre <em>n</em> de soldats juifs sont positionnés en cercle. Les soldats romains tuent le 1er soldat, puis tuent un soldat sur <em>k</em> jusqu'à ce qu'il n'y ait plus que <em>s</em> survivants. On demande le(s) numéro(s) du(des) survivants.<br />
+Résoudre ce problème en utilisant une liste chainée.</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">josephe</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Résoud le problème de Josèphe. Les soldats sont numérotés de 1 à n</span>
+<span class="sd">    @param n : entier &gt;= 1, nombre initial de soldats</span>
+<span class="sd">    @param k : entier &gt;= 2, saut entre deux meurtres de soldats</span>
+<span class="sd">    @param s: entier &gt;=0, nombre de soldats survivants</span>
+<span class="sd">    @return survivor : liste d&#39;entiers, numéros des sopldats survivants</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">#Construction de la liste vide initiale.</span>
+    <span class="n">survivor</span> <span class="o">=</span> <span class="n">CelluleL</span><span class="p">()</span>
+    <span class="c1">#Création de la liste intiale de soldat</span>
 
-def filsDroit(self):
-    assert not(self.r is None),&#39;Arbre vide&#39;
-    return self.r.d
+    <span class="c1">#Suppression des soldats tués</span>
+
+    <span class="c1">#Retourne la liste des soldats survivants</span>
+    <span class="k">return</span> <span class="n">survivor</span>
+
+<span class="c1">#tests à compléter (ça ne risque pas de fonctionner avec les &quot;?&quot;)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;un soldat sur deux&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">42</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Survivant pour &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;soldats :&quot;</span><span class="p">,</span><span class="n">josephe</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="err">???</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="n">tset</span> <span class="o">=</span> <span class="n">josephe</span><span class="p">(</span><span class="mi">41</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2 survivants pour 41 soldats, avec 1 sur 3  :&quot;</span><span class="p">,</span> <span class="n">tset</span><span class="o">.</span><span class="err">????</span><span class="p">,</span> <span class="n">tset</span><span class="o">.</span><span class="err">????</span><span class="p">)</span>
+<span class="n">tset</span> <span class="o">=</span> <span class="n">josephe</span><span class="p">(</span><span class="mi">1234</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;10 survivants pour 1234 soldats, avec 1 sur 7  :&quot;</span><span class="p">,</span> <span class="n">tset</span><span class="p">)</span>
 </code></pre></div>
-<p>b.  Deuxième implémentation
-Comme vu dans le notebook, la classe nœud suffit à créer un arbre, qui n’est rien d’autre qu’une suite récursive de nœuds. La classe ArbreBinaire du paragraphe précédent n’est donc pas obligatoire.</p>
-<ol>
-<li>Algorithmes sur les arbres
-Ces algorithmes sont à comprendre plus qu’à retenir
-a.  Taille et hauteur
-Calcul de la taille : retourne le nombre de sommets de l’arbre (racine + nœuds + feuilles)
-Fonction récursive taille(arbre) :
-Si arbre est vide
-Retourner 0
-Sinon
-Retourner 1 + taille (fils gauche) + taille (fils droit)</li>
-</ol>
-<p>Calcul de la hauteur : retourne la hauteur de l’arbre
-Fonction récursive hauteur(arbre) :
-Si arbre est vide
-Retourner 0
-Sinon
-Retourner 1 + max( hauteur (fils gauche), hauteur(fils droit))
-b.  Parcours en profondeur
-Dans le parcours en profondeur, on parcourt d’abord la racine de l’arbre, puis récursivement les enfants gauche et droit. L’ordre dans lequel est fait ce traitement donne les trois parcours possibles :</p>
-<p>i.  Parcours préfixe : racine – gauche – droit (la racine avant les enfants, la racine précèdent)
-ii. Parcours infixe : gauche – racine – droit (la racine est au milieu, « in »)
-iii.    Parcours suffixe : gauche – droit – racine (la racine est en dernier, la racine succède)</p>
-<p>Préfixe Infixe  Suffixe (postfixe)
-Fonction visitePréfixe(arbre) :
-    Si arbre n’est pas vide :
-         visiter racine
-         visitePréfixe (fils gauche) 
-         visitePréfixe (fils droit) Fonction visiteInfixe(arbre) :
-    Si arbre n’est pas vide :
-         visiteInfixe (fils gauche) 
-         visiter racine
-         visiteInfixe (fils droit)  Fonction visiteSuffixe(arbre) :
-    Si arbre n’est pas vide :
-         visiteSuffixe (fils gauche) 
-         visiteSuffixe (fils droit)
-         visiter racine</p>
-<p>c.  Parcours en largeur
-Principe : on parcourt tous les nœuds de hauteur 1 (la racine), puis tous les nœuds de hauteur 2, ceux de hauteur 3 etc. Le parcours se fait en général de gauche à droite.
-On utilise pour cela une file
-Étapes de l'algorithme : 
-1 . Mettre le nœud source dans la file.
-2.  Retirer le nœud du début de la file pour le traiter.
-3.  Mettre le fils gauche et le fils droits lorsqu’ils sont non vides, non explorés, à la fin de la file.
-4.  Si la file n'est pas vide reprendre à l'étape 2.</p>
-<ol>
-<li>Arbres binaires de recherche (ABR)
-a.  Définition
-Un arbre binaire de recherche, ou ABR, est un arbre binaire étiqueté possédant la propriété suivante :
-Pour tout nœud x, tous les nœuds situés dans le sous-arbre gauche de x ont une valeur inférieure ou égale à celle de x, et tous les nœuds situés dans le sous-arbre droit ont une valeur supérieure ou égale à celle de x.</li>
-</ol>
-<p>Les arbres binaires de recherche servent, comme leur nom l’indique, à rechercher rapidement des éléments ordonnés.
-Exemples :</p>
-<p>Est un arbre binaire de recherche   N’est pas un arbre binaire de recherche</p>
-<p>b.  Algorithmes sur les ABR
-i.  Recherche dans un ABR
-Principe : suivant la valeur à rechercher, et la valeur du nœud sur lequel on est, on cherche soit dans le sous-arbre gauche, soit dans le sous-arbre droit</p>
-<p>Fonction récursive recherche(ABR, valeur) :
-Si ABR est vide
-Retourner None          # variante : retourner Faux
-Sinon
-valeur(x)  = étiquette(ABR)     # valeur de la racine
-Si valeur &lt; valeur(x) :
-Retourner recherche(fils_gauche , valeur)
-Sinon si valeur &gt; valeur(x) :
-Retourner recherche(fils_droit , valeur)
-Sinon 
-Retourner ABR       # variante : retourner Vrai</p>
-<p>Pseudo-définition (peu rigoureuse et incomplète) : un arbre est équilibré si les hauteurs entre les sous-arbres gauche et droit sont différentes de 1 au maximum. Les arbres complets ou parfaits sont équilibrés.</p>
-<p>Arbre binaire de recherche équilibré (tout en étant ni parfait, ni complet) Arbre binaire de recherche déséquilibré. Cet arbre contient les mêmes données que celui de gauche.</p>
-<p>Complexité :
-Si l’arbre binaire de recherche est équilibré, alors le coût en temps de la recherche est en  , où n est le nombre de nœuds de l’arbre.
-Dans le cas ou l’arbre binaire de recherche n’est pas équilibré, la recherche est en   . Le cas le pire étant le cas ou l’ABR est filiforme.
-Remarque : on peut écrire une version itérative de cet algorithme (exercice intéressant)</p>
-<p>ii. Insertion dans un ABR
-Le problème de l’insertion dans un ABR correspond à celui de la construction de l’ABR. L’insertion dans un ABR commence par la recherche de l’endroit où l’on doit insérer la valeur. Si la valeur à insérer est plus petite –ou égale– que la valeur du nœud, on va à gauche, si elle est plus grande on va à droite. On arrive à un moment à un arbre vide : c’est là où on ajoute la nouvelle valeur. La gestion des arbres vides n’est cependant pas si simple dans cette approche.</p>
-<p>Fonction récursive ajoute(ABR, valeur) :</p>
-<p>Si ABR est vide
-ABR = Arbre(valeur, None, None)
-Sinon si valeur &lt;= étiquette_noeud(ABR) 
-ajoute(fils_gauche , valeur)
-Sinon 
-ajoute(fils_droit , valeur)</p>
-<p>Complexité : la complexité est identique à celle de la fonction de recherche. Dans le cas d’un arbre équilibré, elle est en  .
-Remarque : cette méthode ne donne pas forcément des arbres équilibrés. Pour avoir un arbre équilibré, une méthode efficace est d’insérer les éléments dans un ordre aléatoire.</p>
-<p>iii.    Suppression dans un ABR 
-Cette partie n’est pas au programme du bac. Elle constitue un complément enrichissant en vitamines pour les neurones.
-Le problème se décompose en trois cas, suivant le nombre de fils du nœud à supprimer.
-Si le nœud est une feuille (pas de fils), alors on supprime simplement le lien du père vers ce nœud (on décroche le nœud). Si ce lien n’existe pas, l’arbre devient l’arbre vide.</p>
-<p>Si le nœud a un seul fils, alors on décroche le nœud comme précédemment, et on remplace son fils dans le nœud père. Si le père n’existe pas, le nœud fils devient la racine de l’arbre.</p>
-<p>Si le nœud a deux fils, on cherche dans le sous-arbre gauche le nœud MaxLocal de valeur la plus grande (ou le nœud de valeur la plus petite dans le sous-arbre droit). La valeur de ce nœud va remplacer la valeur supprimée. Comme ce nœud MaxLocal a la valeur maximale dans le sous-arbre gauche, il n’a pas de fils droit. On peut donc le décrocher, comme on l’a fait dans le cas précédent.</p>
-<hr />
-<h2 id="bibliographie">Bibliographie<a class="headerlink" href="#bibliographie" title="Permanent link">⚓︎</a></h2>
+<details class="question">
+<summary>Correction</summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">celluleL</span> <span class="kn">import</span> <span class="n">CelluleL</span>
+
+<span class="k">def</span> <span class="nf">josephe</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Résoud le problème de Josèphe. Les soldats sont numérotés de 1 à n</span>
+<span class="sd">    @param n : entier &gt;= 1, nombre initial de soldats</span>
+<span class="sd">    @param k : entier &gt;= 2, saut entre deux meurtres de soldats</span>
+<span class="sd">    @param s: entier &gt;=0, nombre de soldats survivants</span>
+<span class="sd">    @return survivor : liste d&#39;entiers, numéros des sopldats survivants</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">survivor</span> <span class="o">=</span> <span class="n">CelluleL</span><span class="p">()</span>
+    <span class="c1">#Instanciation de la liste chaînée des n soldats en commencant par le numéro le plus élévé </span>
+    <span class="c1">#pour obtenir une liste chainée dans l&#39;ordre croissant : 0-&gt;1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;()</span>
+    <span class="n">survivor</span> <span class="o">=</span> <span class="n">CelluleL</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">survivor</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">:</span>
+        <span class="n">survivor</span> <span class="o">=</span> <span class="n">CelluleL</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">survivor</span><span class="p">)</span>
+
+    <span class="c1">#print(survivor)</span>
+    <span class="c1">#noVictime est la variable temporaire indiquant le n° d&#39;ordre de la victime</span>
+    <span class="n">noVictime</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1">#Tant que la longueur de la liste est supérieur au nb de survivants souhaités, on élimine de la liste</span>
+    <span class="k">while</span> <span class="n">survivor</span><span class="o">.</span><span class="n">longueur</span> <span class="o">&gt;</span> <span class="n">s</span> <span class="p">:</span>
+        <span class="c1">#On calcule qui sera la prochaine victime</span>
+        <span class="n">noVictime</span> <span class="o">=</span> <span class="p">(</span><span class="n">noVictime</span> <span class="o">+</span> <span class="n">k</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="p">(</span><span class="n">survivor</span><span class="o">.</span><span class="n">longueur</span><span class="p">)</span>
+        <span class="c1">#print(&quot;La &quot; + str(n-survivor.longueur) + &quot;e victime est le &quot; + str(survivor.lire(noVictime)))</span>
+        <span class="n">survivor</span><span class="o">=</span> <span class="n">survivor</span><span class="o">.</span><span class="n">supprimer</span><span class="p">(</span><span class="n">noVictime</span><span class="p">)</span>
+        <span class="c1">#print(survivor)</span>
+    <span class="k">return</span> <span class="n">survivor</span>
+
+<span class="c1">#Test pour 1 survivant, tout les 3 soldats avec 41 soldats au départ</span>
+<span class="c1"># tset = josephe(41, 3, 1)</span>
+<span class="c1"># print(&quot;le Survivant pour 1 survivant, tout les 3 soldats avec 41 soldats au départ est : &quot;,tset.donnee)</span>
+
+<span class="c1"># #tests à compléter (ça ne risque pas de fonctionner avec les &quot;?&quot;)</span>
+<span class="c1"># print(&quot;un soldat sur deux&quot;)</span>
+<span class="c1"># for i in range(40, 42):</span>
+<span class="c1">#     print(&quot;Survivant pour &quot;, i, &quot;soldats :&quot;,josephe(i,2,1).donnee)</span>
+<span class="c1"># print()</span>
+
+<span class="n">test2</span> <span class="o">=</span> <span class="n">josephe</span><span class="p">(</span><span class="mi">41</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="c1">#print(&quot;2 survivants pour 41 soldats, avec 1 sur 3  :&quot;, tset.donnee, tset.suivant.donnee)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2 survivants pour 41 soldats, avec 1 sur 3  :&quot;</span><span class="p">,</span> <span class="n">test2</span><span class="o">.</span><span class="n">donnee</span><span class="p">,</span> <span class="n">test2</span><span class="o">.</span><span class="n">suivant</span><span class="o">.</span><span class="n">donnee</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test2</span><span class="p">)</span>
+<span class="n">test3</span> <span class="o">=</span> <span class="n">josephe</span><span class="p">(</span><span class="mi">1234</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;10 survivants pour 1234 soldats, avec 1 sur 7  :&quot;</span><span class="p">,</span> <span class="n">test3</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<h2 id="4-un-deuxieme-type-de-liste-la-liste-chainee-circulaire">4. Un deuxième type de liste : la liste chaînée circulaire<a class="headerlink" href="#4-un-deuxieme-type-de-liste-la-liste-chainee-circulaire" title="Permanent link">⚓︎</a></h2>
+<p>Une liste chaînée circulaire est une liste chaînée dans laquelle le dernier élément n'est pas la liste vide, mais le premier élément de la liste. les listes chaînées circulaires sont notamment utilisées pour représenter des files. Cette structure de données est particulièrement adaptée à la résolution du problème de Josèphe. Mais elle est aussi utilisée par exemple pour gérer le partage du processeur (CPU) entre différents programmes (différents processus).</p>
+<p><img alt="image : liste chaînée circulaire" class="center" src="../data/liste_chainee_circ.jpg" width="100%" /></p>
+<p>On peut proposer différentes interfaces pour ce type de données. Dans le cadre de ce TP, les primitives proposées de <code>ListeCirc</code> sont  : <br /></p>
 <ul>
-<li>Cours de Frédéric Mandon <img alt="" src="../data/ccbysa.png" title="image" /></li>
-<li>Gilles Lassus – Enseignant NSI <img alt="" src="../data/ccbysa.png" title="image" /> Lycée François Mauriac --  Bordeaux </li>
-<li>NSI 24 Leçons avec exercices corrigés – Edition Ellipses</li>
-<li>Prépabac NSI, Terminale, G.CONNAN, V.PETROV, G.ROZSAVOLGYI, L.SIGNAC, éditions HATIER.</li>
-<li>Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.</li>
+<li>Test de vacuité d'une liste : <code>estVide(liste)</code></li>
+<li>Obtention de la longueur de la liste : <code>longueur(liste)</code></li>
+<li>Ajout d'un élément en fin de liste : <code>ajoutfin(donnee)</code></li>
+<li>Supprimer la cellule courante connaissant la précédente: <code>supprimer(courant , precedent)</code> </li>
 </ul>
-<hr />
+<p>Une implantation de cette structure est proposée ci-dessous. Elle possède deux classes, <code>Noeud</code> et <code>ListeCirc</code>. La classe <code>Noeud</code> est celle de la liste chaînée non circulaire, l'attribut <code>longueur</code>en moins.  <br />
+Les attributs de <code>Noeud</code> sont:  <br /></p>
+<ul>
+<li><code>donnée</code> : le contenu du noeud</li>
+<li><code>suivant</code> : le noeud suivant  </li>
+</ul>
+<p>La classe <code>ListeCirc</code> comporte deux noeuds : tête et queue. Plus précisément, les attributs à la création sont :<br /></p>
+<ul>
+<li><code>tête</code> : <code>Noeud(None par défaut, ou données de la tête)</code></li>
+<li><code>queue</code> : égale à <code>tête</code>lors de la création de la liste circulaire</li>
+<li><code>tête.suivant</code> : <code>queue</code>. Le noeud suivant la tête est la queue</li>
+<li><code>queue.suivant</code> : <code>tête</code>. Le noeud suivant la queue est la tête    </li>
+</ul>
+<p><em>Remarques / questions</em> : <br /></p>
+<p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> On aurait pu proposer une implémentation sans objet <code>ListeCirc</code>, et de même on aurait pu proposer un objet <code>ListeChainee</code>, qui aurait contenu les cellules de la liste chaînée non circulaire. On voit que les possibilités d'implémentations sont multiples.<br />
+<img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Utiliser les mêmes noms de primitives permet d'écrire des programmes fonctionnant de manière identique avec les deux structures de données. Ce qui peut être très pratique.<br />
+<img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> La liste vide est composée d'une seule cellule, de donnée <code>None</code>, pointant sur elle-même. Lors du calcul de la longueur, de l'insertion ou de la suppression d'un élément, on est obligé de différencier ce cas. Le code est plus complexe que pour la liste chaînée non circulaire.<br />
+<img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> Pourquoi utilise-t-on ici deux classes, Noeud et ListeCirc ? <br />
+<img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> Pourquoi ne reprend-on pas directement le calcul de la longueur comme dans le cas de la liste chaînée ?</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Noeud</span><span class="p">:</span>    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">donnee</span><span class="p">,</span> <span class="n">suivant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>    
+        <span class="bp">self</span><span class="o">.</span><span class="n">donnee</span> <span class="o">=</span> <span class="n">donnee</span>    
+        <span class="bp">self</span><span class="o">.</span><span class="n">suivant</span> <span class="o">=</span> <span class="n">suivant</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">donnee</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">donnee</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">ListeCirc</span><span class="p">:</span>    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">donnee_tete</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>    
+        <span class="bp">self</span><span class="o">.</span><span class="n">tete</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">donnee_tete</span><span class="p">)</span>    
+        <span class="bp">self</span><span class="o">.</span><span class="n">queue</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span>   
+        <span class="bp">self</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">suivant</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">queue</span>    
+        <span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">suivant</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span>
+
+    <span class="k">def</span> <span class="nf">estVide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">donnee</span> <span class="ow">is</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">longueur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">lg</span> <span class="o">=</span> <span class="kc">None</span>  
+        <span class="k">return</span> <span class="n">lg</span>
+
+    <span class="k">def</span> <span class="nf">supprimerCourant</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">precedent</span><span class="p">,</span> <span class="n">courant</span><span class="p">):</span>
+        <span class="c1"># Suppression du noeud courant connaissant le précédent</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">queue</span> <span class="p">:</span>    <span class="c1"># cas particulier : un seul noeud</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">donnee</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">elif</span> <span class="n">courant</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span> <span class="p">:</span>    <span class="c1"># cas particulier : suppression de la tête</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tete</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">suivant</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">suivant</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span>
+        <span class="k">elif</span> <span class="n">courant</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">queue</span> <span class="p">:</span>   <span class="c1"># cas particulier : suppression de la queue</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">queue</span> <span class="o">=</span> <span class="n">precedent</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">suivant</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span>
+        <span class="k">else</span><span class="p">:</span>                          <span class="c1"># cas général</span>
+            <span class="n">precedent</span><span class="o">.</span><span class="n">suivant</span> <span class="o">=</span> <span class="n">courant</span><span class="o">.</span><span class="n">suivant</span>
+
+    <span class="k">def</span> <span class="nf">ajoutfin</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">donnee</span><span class="p">):</span>           
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">donnee</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>     <span class="c1"># on remplit d&#39;abord la tête  </span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">donnee</span> <span class="o">=</span> <span class="n">donnee</span> 
+        <span class="k">else</span><span class="p">:</span>                            <span class="c1"># sinon on crée un nouveau noeud</span>
+            <span class="n">nouveauNoeud</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">donnee</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">suivant</span> <span class="o">=</span> <span class="n">nouveauNoeud</span> <span class="c1"># On ajoute le noeud à la fin</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">queue</span> <span class="o">=</span> <span class="n">nouveauNoeud</span>         <span class="c1"># il devient la nouvelle queue</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">suivant</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span>    <span class="c1"># et pointe sur la tête</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">donnee</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;Liste vide&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">chaine</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">donnee</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;-&gt;&quot;</span>
+            <span class="n">courant</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span>
+            <span class="k">while</span> <span class="n">courant</span><span class="o">.</span><span class="n">suivant</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span> <span class="ow">and</span> <span class="n">courant</span><span class="o">.</span><span class="n">suivant</span><span class="o">.</span><span class="n">donnee</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="p">:</span>    
+                <span class="n">courant</span> <span class="o">=</span> <span class="n">courant</span><span class="o">.</span><span class="n">suivant</span>    
+                <span class="n">chaine</span> <span class="o">=</span> <span class="n">chaine</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">courant</span><span class="o">.</span><span class="n">donnee</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;-&gt;&quot;</span>
+            <span class="n">chaine</span> <span class="o">=</span> <span class="n">chaine</span> <span class="o">+</span> <span class="s2">&quot;tête&quot;</span>
+            <span class="k">return</span>  <span class="n">chaine</span>
+</code></pre></div>
+<h2 id="5-le-retour-de-flavius">5. Le retour de Flavius<a class="headerlink" href="#5-le-retour-de-flavius" title="Permanent link">⚓︎</a></h2>
+<p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> <ins>objectif :</ins> Résoudre le problème de Flavius Josèphe avec une liste chaînée circulaire.  <br />
+<em>Remarque</em> : on utilisera la spécificité des listes circulaires, un petit schéma pour s'en sortir sur les courants/précédents est bien utile</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">josephe</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Résoud le problème de Josèphe. Les soldats sont numérotés de 1 à n</span>
+<span class="sd">    @param n : entier &gt;= 1, nombre initial de soldats</span>
+<span class="sd">    @param k : entier &gt;= 2, saut entre deux meurtres de soldats</span>
+<span class="sd">    @param s: entier &gt;=0, nombre de soldats survivants</span>
+<span class="sd">    @return survivor : liste d&#39;entiers, numéros des sopldats survivants</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">survivor</span> <span class="o">=</span> <span class="n">ListeCirc</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">survivor</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;un soldat sur deux&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">42</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Survivant pour &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;soldats :&quot;</span><span class="p">,</span><span class="n">josephe</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">donnee</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="n">tset</span> <span class="o">=</span> <span class="n">josephe</span><span class="p">(</span><span class="mi">41</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2 survivants pour 41 soldats, avec 1 sur 3  :&quot;</span><span class="p">,</span> <span class="n">tset</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">donnee</span><span class="p">,</span> <span class="n">tset</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">donnee</span><span class="p">)</span>
+<span class="n">tset</span> <span class="o">=</span> <span class="n">josephe</span><span class="p">(</span><span class="mi">1234</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;10 survivants pour 1234 soldats, avec 1 sur 7  :&quot;</span><span class="p">,</span> <span class="n">tset</span><span class="p">)</span>
+</code></pre></div>
+<details class="question">
+<summary>Correction</summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">josephe</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Résoud le problème de Josèphe. Les soldats sont numérotés de 1 à n</span>
+<span class="sd">    @param n : entier &gt;= 1, nombre initial de soldats</span>
+<span class="sd">    @param k : entier &gt;= 2, saut entre deux meurtres de soldats</span>
+<span class="sd">    @param s: entier &gt;=0, nombre de soldats survivants</span>
+<span class="sd">    @return survivor : liste d&#39;entiers, numéros des sopldats survivants</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">survivor</span> <span class="o">=</span> <span class="n">ListeCirc</span><span class="p">()</span>
+
+    <span class="c1">#Instanciation de la liste chaînée des soldats</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">:</span>
+        <span class="n">survivor</span><span class="o">.</span><span class="n">ajoutfin</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">survivor</span><span class="p">)</span>
+    <span class="n">nbTues</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">noeudcourant</span> <span class="o">=</span> <span class="n">survivor</span><span class="o">.</span><span class="n">tete</span>
+    <span class="c1">#Tant que la longueur de la liste est supérieur au nb de survivants souhaités, on élimine de la liste</span>
+    <span class="k">while</span> <span class="n">n</span><span class="o">-</span><span class="n">nbTues</span> <span class="o">&gt;</span> <span class="n">s</span> <span class="p">:</span>
+        <span class="c1">#on progresse dans la liste chainée par cran de k-1</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">)):</span>
+            <span class="n">survivor</span><span class="o">.</span><span class="n">supprimerCourant</span><span class="p">(</span><span class="n">noeudcourant</span><span class="p">,</span> <span class="n">noeudcourant</span><span class="o">.</span><span class="n">suivant</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">survivor</span><span class="p">)</span>
+            <span class="n">noeudcourant</span> <span class="o">=</span> <span class="n">noeudcourant</span><span class="o">.</span><span class="n">suivant</span>
+            <span class="n">i</span> <span class="o">=</span><span class="mi">1</span>
+            <span class="n">nbTues</span> <span class="o">+=</span> <span class="mi">1</span>   
+        <span class="k">else</span> <span class="p">:</span> 
+            <span class="n">noeudcourant</span> <span class="o">=</span> <span class="n">noeudcourant</span><span class="o">.</span><span class="n">suivant</span>
+            <span class="n">i</span> <span class="o">+=</span><span class="mi">1</span>
+    <span class="k">return</span> <span class="n">survivor</span>
+
+
+<span class="c1"># print(&quot;un soldat sur deux&quot;)</span>
+<span class="c1"># for i in range(1,42):</span>
+<span class="c1">#     print(&quot;Survivant pour &quot;, i, &quot;soldats :&quot;,josephe(i,2,1).tete.donnee)</span>
+<span class="c1"># print()</span>
+
+<span class="n">tset</span> <span class="o">=</span> <span class="n">josephe</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2 survivants pour 41 soldats, avec 1 sur 3  :&quot;</span><span class="p">,</span> <span class="n">tset</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">donnee</span><span class="p">,</span> <span class="n">tset</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">suivant</span><span class="o">.</span><span class="n">donnee</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tset</span><span class="p">)</span>
+<span class="c1"># tset = josephe(1234,7,10)</span>
+<span class="c1"># print(&quot;10 survivants pour 1234 soldats, avec 1 sur 7  :&quot;, tset)</span>
+</code></pre></div>
+</details>
+<h2 id="6-sil-vous-reste-du-temps">6. S'il vous reste du temps<a class="headerlink" href="#6-sil-vous-reste-du-temps" title="Permanent link">⚓︎</a></h2>
+<ol>
+<li>Construire un jeu de tests aussi complet que possible pour la classe <code>ListeCirc</code>.<br /></li>
+</ol>
+<details class="question">
+<summary>Correction</summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># quelques tests</span>
+<span class="n">liste_vide</span> <span class="o">=</span> <span class="n">ListeCirc</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;test liste vide : &quot;</span><span class="p">,</span> <span class="n">liste_vide</span><span class="p">,</span> <span class="s2">&quot;--&gt; est vide : &quot;</span><span class="p">,</span> <span class="n">liste_vide</span><span class="o">.</span><span class="n">estVide</span><span class="p">())</span>
+
+<span class="n">maliste</span> <span class="o">=</span> <span class="n">ListeCirc</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">maliste</span><span class="o">.</span><span class="n">ajoutfin</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La liste : &quot;</span><span class="p">,</span><span class="n">maliste</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;longeur de maliste :&quot;</span><span class="p">,</span> <span class="n">maliste</span><span class="o">.</span><span class="n">longueur</span><span class="p">())</span>
+<span class="c1"># print(&quot;lecture des éléments d&#39;indices 1 et 5 :&quot;,maliste.lire(1),maliste.lire(5))</span>
+<span class="c1"># print()</span>
+
+<span class="n">noeudcourant</span> <span class="o">=</span> <span class="n">maliste</span><span class="o">.</span><span class="n">tete</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">noeudcourant</span><span class="p">)</span>
+
+<span class="n">maliste</span><span class="o">.</span><span class="n">supprimerCourant</span><span class="p">(</span><span class="n">noeudcourant</span><span class="o">.</span><span class="n">suivant</span><span class="p">,</span> <span class="n">noeudcourant</span><span class="o">.</span><span class="n">suivant</span><span class="o">.</span><span class="n">suivant</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La liste apres suppression element +2 : &quot;</span><span class="p">,</span><span class="n">maliste</span><span class="p">)</span>
+
+<span class="c1"># print(&quot;ordre inverse&quot;)</span>
+<span class="c1"># maliste2 = CelluleL(10,liste_vide)</span>
+<span class="c1"># for i in range(9,0,-1) :</span>
+<span class="c1">#     maliste2 = CelluleL(i,maliste2)</span>
+<span class="c1"># print(maliste2)</span>
+
+<span class="c1"># i = 5</span>
+<span class="c1"># print(&quot;Suppression puis ajout de l&#39;élément d&#39;indice &quot;,i)</span>
+<span class="c1"># maliste = maliste.supprimer(i)</span>
+<span class="c1"># print(&quot;Après suppression : &quot;,maliste, &quot;de longueur &quot;,maliste.longueur)</span>
+<span class="c1"># maliste = maliste.inserer(i,i)</span>
+<span class="c1"># print(&quot;Après insertion : &quot;,maliste, &quot;de longueur &quot;,maliste.longueur)</span>
+</code></pre></div>
+</details>
+<ol>
+<li>Coder la méthode <code>longueur</code> pour la classe <code>ListeCirc</code>.<br /></li>
+</ol>
+<details class="question">
+<summary>Correction</summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code>    <span class="k">def</span> <span class="nf">longueur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">lg</span> <span class="o">=</span> <span class="kc">None</span>  
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">courant</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span>
+        <span class="n">fin</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">queue</span>
+        <span class="n">lg</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">while</span> <span class="n">courant</span> <span class="o">!=</span> <span class="n">fin</span><span class="p">:</span>
+            <span class="n">courant</span> <span class="o">=</span> <span class="n">courant</span><span class="o">.</span><span class="n">suivant</span>
+            <span class="n">lg</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">lg</span>
+</code></pre></div>
+</details>
+<ol>
+<li>Coder des méthodes <code>lire(liste , k)</code>, <code>supprimer(liste , k)</code> et <code>inserer(liste , k)</code> pour la classe <code>ListeCirc</code>.<br /></li>
+</ol>
+<details class="question">
+<summary>Correction</summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">lire</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="n">courant</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">courant</span> <span class="o">=</span> <span class="n">courant</span><span class="o">.</span><span class="n">suivant</span>
+    <span class="k">return</span> <span class="n">courant</span>
+
+<span class="k">def</span> <span class="nf">supprimer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="n">courant</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">precedent</span> <span class="o">=</span> <span class="n">courant</span>
+        <span class="n">courant</span> <span class="o">=</span> <span class="n">courant</span><span class="o">.</span><span class="n">suivant</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">queue</span> <span class="p">:</span>    
+        <span class="bp">self</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">donnee</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">elif</span> <span class="n">courant</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span> <span class="p">:</span>    
+        <span class="bp">self</span><span class="o">.</span><span class="n">tete</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">suivant</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">suivant</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span>
+    <span class="k">elif</span> <span class="n">courant</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">queue</span> <span class="p">:</span>   
+        <span class="bp">self</span><span class="o">.</span><span class="n">queue</span> <span class="o">=</span> <span class="n">precedent</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">suivant</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span>
+    <span class="k">else</span><span class="p">:</span>                         
+        <span class="n">precedent</span><span class="o">.</span><span class="n">suivant</span> <span class="o">=</span> <span class="n">courant</span><span class="o">.</span><span class="n">suivant</span>
+</code></pre></div>
+</details>
+<ol>
+<li>Le fin du fin serait d'avoir la même interface pour les deux classes <code>listeCir</code> et <code>listeChainee</code> (mêmes méthodes avec les mêmes spécifications), afin de pouvoir les utiliser indifféremment. L'optique de ce TP était de montrer deux types d'implémentation différents. Mais si vous en avez le courage, vous pouvez écrire la classe <code>listeChainee</code>, y mettre toutes les méthodes auparavant dans <code>CelluleL</code>, et compléter les deux classes afin que leur interface soit identique...<br /></li>
+</ol>
 
 
 

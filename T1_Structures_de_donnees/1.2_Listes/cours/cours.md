@@ -9,7 +9,7 @@
     Le type `list` de Python s'apparente à une implémentation de la structure de **tableau dynamique** (_hors-programme_).
 
 
-## ^^1. Notion de liste chainée^^
+## 1. Notion de liste chainée
 
 La structure **liste chainée** fait partie, comme les files (d'attente) et les piles, des **structures de données linéaires** : les données sont "alignées" les unes après les autres. 
 
@@ -56,7 +56,7 @@ L'idée de base de la notion de structure de **liste chainée** est :
 
     Ceci illustre bien le principe : **on "tient" la chaine par son premier maillon.**
 
-## ^^2. Interface d'une liste chainée^^
+## 2. Interface d'une liste chainée
 
 L'**interface** minimale d'une liste chainée comporte les opérations  (_les primitives_) suivantes :
 
@@ -75,7 +75,7 @@ L'**interface** minimale d'une liste chainée comporte les opérations  (_les pr
     - `queue(Bourbons)` renvoie la liste chainée "Louis XIII" → "Louis XIV" → "Louis XV" → "Louis XVI" → ⟂, c'est-à-dire tout ce qui vient après la "tête" de la liste `Bourbons`.
 
 
-## ^^3. Longueur d'une liste chainée^^
+## 3. Longueur d'une liste chainée
 
 Supposez que l'on vous demande la longueur d'une liste chainée `maListeChainée` qui a une queue (`tail(maListeChainée)`) de longueur 7 : vous répondrez sans hésitation que la longueur vaut 1+7= 8.
 
@@ -92,7 +92,7 @@ Cette "structure imbriquée", cette disposition en "poupée russe" d'une liste c
 
 En exercice, vous devrez coder en Python cette fonction pour chacun des deux modes de représentation (_pour chaque implémentation_) d'une liste chainée que l'on va proposer ci-dessous.
 
-## ^^4. Implémentation d'une liste chainée : version impérative, à l'aide de ***tuples***^^
+## 4. Implémentation d'une liste chainée : version impérative, à l'aide de ***tuples***
 
 On peut choisir de représenter un maillon par un couple (type `tuple`) de la forme : `maillon = (valeur, maillon_suivant)`.
 
@@ -126,25 +126,27 @@ La variable qui désigne la liste chainée est alors simplement celle du premier
 Avec ce choix d'implémentation d'une liste chainée à l'aide de _tuples_, voici des codes possibles pour les fonctions  `creer_liste_vide()`, `inserer_en_tete(lst, donnée)`,  `head(lst)`,  `tail(lst)` et `est_vide(lst) ` spécifiées par l'interface :
 
 ```python
-def creer_liste_vide() :
-    return () # tuple vide
+class Liste :
 
-def inserer_en_tete( lst, donnée ) :
-    return (donnée, lst) # c'est le nouveau premier maillon de la chaine
+    def __init__(self) :
+        lst = () # tuple vide
 
-def head( lst ) :
-    return lst[0] # c'est ce qu'il y a en position 0 du couple L
+    def inserer_en_tete(self, donnée ) :
+        return (donnée, lst) # c'est le nouveau premier maillon de la chaine
 
-def tail( lst ) :
-    return lst[1] # c'est ce qu'il y a en position 1 du couple L
+    def head( self ) :
+        return lst[0] # c'est ce qu'il y a en position 0 du couple L
 
-def est_vide( lst ) :
-    return len( lst ) == 0
+    def tail( self ) :
+        return lst[1] # c'est ce qu'il y a en position 1 du couple L
+
+    def est_vide( self ) :
+        return len( lst ) == 0
 ```
 
 Une façon d'utiliser cette implémentation est alors :
 ```python
-# exemple d'utilisation
+# exemple d'utilisation (a reprendre POO)
 Bourbons = ('Henri IV', ('Louis XIII', ('Louis XIV', ('Louis XV', ('Louis XVI', ())))))
 roi = head(Bourbons)
 print("La tête de la liste chaine : ", roi)
@@ -177,16 +179,7 @@ print("On a rajouté un roi en tête de la chaine  : ", Bourbons)
 
     2. Cela renvoie `mouse`.
 
-!!! question "Exercice  : protection des fonctions head et tail"
-
-    Une liste chainée vide n'a "ni queue ni tête" !  Cela signifie que l'exécution des fonctions `head` et `tail` sur une liste chainée vide va provoquer une erreur.
-    
-    Ajouter une instruction de type `assert` au début de ces fonctions afin de les "protéger". 
-
-??? danger "Solution"
-    On ajoute à ces fonctions l'instruction `assert not est_vide(lst), "impossible sur une chaine vide"`.
-
-## ^^5. Implémentation d'une liste chainée : version Programmation Orientée Objet^^
+## 5. Implémentation d'une liste chainée : version Programmation Orientée Objet
 
 Une autre façon d'implémenter une liste chainée est de créer un objet "Maillon", c'est-à-dire en Python de créer une **classe Maillon** qui a deux **attributs** :
 
@@ -260,30 +253,7 @@ On peut noter que cette classe `Maillon` n'a pas de _méthodes_ dédiées.
     chaineAlimentaire = Maillon("corn",souris)
     ```
 
-
-!!! question "Exploration d'une liste chainée "
-    En appuyant sur le bouton "Lancer", vous allez exécuter un code masqué qui crée (_qui instancie_) un objet `maListeMystere` de la classe `Maillon`. 
-
-    En vous servant des attributs de cet objet, explorer cette liste chainée puis la représenter.
-
-    ```python
-    class Maillon :
-        def __init__(self, data = None, suivant = None)  :
-            self.head= data
-            self.tail = suivant
-
-    C = Maillon("Chocolat")
-    B = Maillon("Bronze", C)
-    A = Maillon("Argent", B)
-    maListeMystere = Maillon("Or",A)
-    print("Merci d'avoir executé le code : à vous de découvrir la liste chainée maListeMystere")
-    ```
-    ??? danger "Solution"
-        La liste chainée est : Or → Argent → Bronze → Chocolat → ⟂.
-        On l'obtient en saisissant `maListeMystere.head`, puis `maListeMystere.tail.head`, etc.
-
-
-## ^^6. Exercices et TP^^
+## 6. Exercices et TP
 
 * Généralités : télécharger le [carnet Jupyter](data/TP_Exos_ListesChainees.ipynb), à ouvrir sous [Basthon](https://notebook.basthon.fr/){target="_blank"}.
 
