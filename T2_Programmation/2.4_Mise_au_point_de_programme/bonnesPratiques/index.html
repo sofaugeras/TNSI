@@ -18,7 +18,7 @@
         <link rel="prev" href="../cours/">
       
       
-        <link rel="next" href="../../../T3_Algorithmique/sommaire/">
+        <link rel="next" href="../TP/">
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
@@ -1505,18 +1505,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#les-espaces" class="md-nav__link">
+  <a href="#11-les-espaces" class="md-nav__link">
     <span class="md-ellipsis">
-      Les espaces
+      1.1 Les espaces
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#les-conventions-de-nommage" class="md-nav__link">
+  <a href="#12-les-conventions-de-nommage" class="md-nav__link">
     <span class="md-ellipsis">
-      Les conventions de nommage
+      1.2 Les conventions de nommage
     </span>
   </a>
   
@@ -1570,57 +1570,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-les-tests" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Les tests
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Les tests">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-pourquoi-des-tests" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.1 Pourquoi des tests ?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-revoila-les-assert" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.2 Revoilà les assert
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43-le-module-doctest" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.3 Le module doctest
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43-a-propos-des-tests" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.3 À propos des tests
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#bibliographie" class="md-nav__link">
     <span class="md-ellipsis">
       Bibliographie
@@ -1633,6 +1582,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP mise en application
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -3243,14 +3213,14 @@
 
 <h1 id="bonnes-pratiques">Bonnes pratiques<a class="headerlink" href="#bonnes-pratiques" title="Permanent link">⚓︎</a></h1>
 <p><img alt="" class="center" src="../data/pep8.webp" width="70%" /></p>
-<p><em>extrait du site https://realpython.com/python-pep8/</em></p>
+<p><ins>source :</ins> <a href="https://realpython.com/python-pep8/">https://realpython.com/python-pep8/</a></p>
 <h2 id="1-conventions-syntaxiques">1. Conventions syntaxiques<a class="headerlink" href="#1-conventions-syntaxiques" title="Permanent link">⚓︎</a></h2>
 <p>La programmation est un art délicat : un simple caractère en trop peut provoquer une erreur pour le code tout entier (penser à un innocent caractère d'espace en début de ligne dans un code Python).</p>
 <p><img alt="image" class="center" src="../data/extraspace.jpg" width="40%" /></p>
 <p>Mais même lorsqu'un code s'exécute sans erreur, il ne faut pas négliger l'aspect purement «esthétique» de celui-ci : il est nécessaire de respecter autant que possible des conventions typographiques, qui vont standardiser le code et le rendre ainsi plus lisible.</p>
-<p>Ainsi pour chaque langage, il existe une «bible» de bonnes pratiques de présentation du code, qui visent à l'uniformiser. Pour Python, cette référence s'appelle la Python Enhancement Proposal 8, plus connue sous le nom de PEP8. </p>
+<p>Ainsi pour chaque langage, il existe une «bible» de bonnes pratiques de présentation du code, qui visent à l'uniformiser. Pour Python, cette référence s'appelle la Python Enhancement Proposal 8, plus connue sous le nom de <strong>PEP8</strong>. </p>
 <p>En voici quelques extraits :</p>
-<h3 id="les-espaces">Les espaces<a class="headerlink" href="#les-espaces" title="Permanent link">⚓︎</a></h3>
+<h3 id="11-les-espaces">1.1 Les espaces<a class="headerlink" href="#11-les-espaces" title="Permanent link">⚓︎</a></h3>
 <p><img alt="image" class="center" src="../data/standards.jpg" width="40%" /></p>
 <p>▶ Il faut mettre une espace (oui, en typographie, on dit «une» espace et non pas «un» espace) avant et après chaque opérateur de comparaison, d'affectation, ou mathématique  (<code>=, ==, &gt;, +, *, ...</code> )</p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># PAS BIEN </span>
@@ -3301,7 +3271,7 @@ pas d'espace avant mais une espace après.</p>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;vert&#39;</span><span class="p">)</span>
 </code></pre></div>
 <p>On peut contrôler si son code vérifie les standards de la PEP8 sur ce site <a href="http://pep8online.com/">http://pep8online.com/</a></p>
-<h3 id="les-conventions-de-nommage">Les conventions de nommage<a class="headerlink" href="#les-conventions-de-nommage" title="Permanent link">⚓︎</a></h3>
+<h3 id="12-les-conventions-de-nommage">1.2 Les conventions de nommage<a class="headerlink" href="#12-les-conventions-de-nommage" title="Permanent link">⚓︎</a></h3>
 <p>▶ Les variables à une lettre (comme <code>i</code>, <code>j</code>, <code>k</code> ) sont réservées aux indices (notamment dans les boucles).</p>
 <p>▶ Les autres variables doivent avoir des noms explicites, éventuellement écrits en <code>snake_case</code> si plusieurs mots doivent être reliés.</p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># PAS BIEN</span>
@@ -3433,127 +3403,8 @@ donnera, lors de l'appel à <code>racine_carree(-2)</code>, le message suivant :
 <p>À ce stade, les <code>assert</code> sont donc pour nous juste un moyen rapide de remplacer un test <code>if ... then ... else</code> pour détecter des erreurs potentielles.<br />
 Ils sont en réalité plus utiles que cela : lors de la conception d'un programme, des <code>assert</code> sont posés pour vérifier l'intégrité du code, mais peuvent être désactivés à tout moment pour en faire un code optimisé (par la commande <code>-O</code> à l'exécution). Tout ceci dépasse largement le cadre de notre cours.</p>
 <p>Il est à noter aussi que les erreurs peuvent être gérées par le mécanisme <code>try ... except</code>, qui permet de «lever des exceptions». Pour les curieux, plus de renseignements <a href="http://perso.univ-lemans.fr/~berger/CoursPython/co/try_except.html">ici</a>.</p>
-<h2 id="4-les-tests">4. Les tests<a class="headerlink" href="#4-les-tests" title="Permanent link">⚓︎</a></h2>
-<h3 id="41-pourquoi-des-tests">4.1 Pourquoi des tests ?<a class="headerlink" href="#41-pourquoi-des-tests" title="Permanent link">⚓︎</a></h3>
+<p>et surtout on test !!!</p>
 <p><img alt="image" class="center" src="../data/tester.jpg" width="40%" /></p>
-<p>Tester une fonction est la première chose que l'on fait (normalement...) lorsqu'on vient de finir de l'écrire. </p>
-<p>Par exemple, si on vient de construire la fonction <code>valeur_absolue(n)</code>, il est fort probable qu'on aille taper ceci dans la console :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
-<span class="mi">3</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="mi">0</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
-<span class="mi">7</span>
-</code></pre></div>
-<ul>
-<li>On peut regrouper tous ces tests au sein d'une même fonction <code>test_valeur_absolue()</code>.</li>
-<li>On peut écrire cette fonction <code>test_valeur_absolue()</code> avant même de commencer à écrire la fonction <code>valeur_absolue(n)</code>.</li>
-</ul>
-<blockquote>
-<p>Remarque : 
-la méthode de développement logiciel TDD (Test Driven Developement) est basée en partie sur ce principe  : </p>
-<ol>
-<li>On commence par écrire le test de la fonction.</li>
-<li>Le test échoue (forcément, la fonction n'est pas encore codée !)</li>
-<li>On écrit le code de la fonction pour que le test soit validé.</li>
-<li>On améliore (si possible) ce code tout en vérifiant que le test continue à être valide.</li>
-</ol>
-</blockquote>
-<p><img alt="image" class="center" src="../data/TDD.png" width="40%" /></p>
-<p>Revenons à nos tests sur la fonction <code>valeur_absolue(n)</code></p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">test_valeur_absolue</span><span class="p">():</span>
-    <span class="k">if</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span> <span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ok&quot;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;erreur&quot;</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ok&quot;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;erreur&quot;</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="mi">7</span> <span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ok&quot;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;erreur&quot;</span><span class="p">)</span>
-</code></pre></div>
-<p>En console, il suffit maintenant d'appeler la fonction <code>test_valeur_absolue()</code> :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">test_valeur_absolue</span><span class="p">()</span>
-<span class="n">ok</span>
-<span class="n">ok</span>
-<span class="n">ok</span>
-</code></pre></div>
-<h3 id="42-revoila-les-assert">4.2 Revoilà les <code>assert</code><a class="headerlink" href="#42-revoila-les-assert" title="Permanent link">⚓︎</a></h3>
-<p>Utiliser des <code>assert</code> permet d'écrire très simplement les tests précédents.</p>
-<p>Reprenons notre fonction <code>valeur_absolue()</code>. Sa fonction test  <code>test_valeur_absolue()</code> peut s'écrire :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">test_valeur_absolue</span><span class="p">():</span>
-    <span class="k">assert</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span>
-    <span class="k">assert</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
-    <span class="k">assert</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="mi">7</span>
-</code></pre></div>
-<p><strong>Exercice :</strong><br />
-Écrire une fonction <code>maxi(liste)</code> qui renvoie le plus grand élément de la liste <code>liste</code> passée en paramètre (de préférence sans utiliser la fonction <code>max()</code> ...).<br />
-Vous écrirez <strong>d'abord</strong> une fonction <code>test_maxi()</code> avant d'écrire la fonction <code>maxi(liste)</code> </p>
-<h3 id="43-le-module-doctest">4.3 Le module <code>doctest</code><a class="headerlink" href="#43-le-module-doctest" title="Permanent link">⚓︎</a></h3>
-<p>Le module <code>doctest</code>  permet d'écrire les tests <strong>à l'intérieur</strong> de la docstring d'une fonction. </p>
-<p>Considérons une fonction dont le but est de compter les voyelles du mot passé en paramètre.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">compte_voyelles</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    renvoie le nombre de voyelles du mot donné en paramètre.</span>
-<span class="sd">    &gt;&gt;&gt; compte_voyelles(&quot;python&quot;)</span>
-<span class="sd">    2</span>
-<span class="sd">    &gt;&gt;&gt; compte_voyelles(&quot;HTTP&quot;)</span>
-<span class="sd">    0</span>
-<span class="sd">    &gt;&gt;&gt; compte_voyelles(&quot;eau&quot;)</span>
-<span class="sd">    3</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">voyelles</span> <span class="o">=</span> <span class="s2">&quot;aeiou&quot;</span>
-    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">mot</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">voyelles</span><span class="p">:</span>
-            <span class="n">total</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">total</span>
-</code></pre></div>
-<p>Observez bien la docstring : elle contient explicitement ce qu'on veut que renvoie le terminal lorsqu'on appellera la fonction.
-On écrit donc les trois chevrons <code>&gt;&gt;&gt;</code> suivi de l'appel à la fonction, et à la ligne en dessous ce que nous espérons que la fonction nous renvoie.
-On peut écrire autant de tests que l'on veut.</p>
-<p>Ensuite, en console :
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">doctest</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
-</code></pre></div>
-Dans notre cas, le retour sera celui-ci :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">doctest</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
-<span class="o">**********************************************************************</span>
-<span class="n">File</span> <span class="s2">&quot;voyelles.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">4</span><span class="p">,</span> <span class="ow">in</span> <span class="n">__main__</span><span class="o">.</span><span class="n">compte_voyelles</span>
-<span class="n">Failed</span> <span class="n">example</span><span class="p">:</span>
-    <span class="n">compte_voyelles</span><span class="p">(</span><span class="s2">&quot;python&quot;</span><span class="p">)</span>
-<span class="n">Expected</span><span class="p">:</span>
-    <span class="mi">2</span>
-<span class="n">Got</span><span class="p">:</span>
-    <span class="mi">1</span>
-<span class="o">**********************************************************************</span>
-<span class="mi">1</span> <span class="n">items</span> <span class="n">had</span> <span class="n">failures</span><span class="p">:</span>
-   <span class="mi">1</span> <span class="n">of</span>   <span class="mi">3</span> <span class="ow">in</span> <span class="n">__main__</span><span class="o">.</span><span class="n">compte_voyelles</span>
-<span class="o">***</span><span class="n">Test</span> <span class="n">Failed</span><span class="o">***</span> <span class="mi">1</span> <span class="n">failures</span><span class="o">.</span>
-<span class="n">TestResults</span><span class="p">(</span><span class="n">failed</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">attempted</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-</code></pre></div>
-<p>On voit que le test <code>compte_voyelles("python")</code> a renvoyé la valeur 1 alors qu'on attendait 2. En regardant notre fonction, on s'aperçoit donc qu'on avait oublié le <code>y</code> dans la liste des voyelles. </p>
-<p>En corrigeant ceci, le test devient :
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">doctest</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
-<span class="n">TestResults</span><span class="p">(</span><span class="n">failed</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">attempted</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-</code></pre></div>
-Ce qui est beaucoup plus satisfaisant.</p>
-<h3 id="43-a-propos-des-tests">4.3 À propos des tests<a class="headerlink" href="#43-a-propos-des-tests" title="Permanent link">⚓︎</a></h3>
-<p>Le comportement face aux tests en programmation doit être le même qu'en mathématiques : <em>un test qui ne marche pas est plus riche d'enseignements qu'un test qui marche</em>.</p>
-<p>En mathématiques, seule la notion de contre-exemple est fertile : si quelqu'un vous affirme que <em>«tous les nombres impairs sont premiers»</em>, il vous suffit d'exhiber le nombre 9 pour lui prouver qu'il a tort et achever la discussion.</p>
-<p>Par contre, il aurait pu essayer de vous convaincre avec les nombres 3, 5 et 13, qui sont bien impairs et premiers.</p>
-<p>De la même manière, voir qu'une fonction passe les tests que vous avez écrits ne vous assurera pas que cette fonction aura <em>toujours</em> le bon comportement souhaité. Elle l'aura pour les valeurs de test, mais pas forcément pour les autres.</p>
-<p>En revanche, si une fonction ne passe pas un des tests, vous avez la certitude qu'il y a un problème à régler quelque part.</p>
-<p>Tout ceci en admettant, bien sûr, que vos tests <em>eux-mêmes</em> ne comportent pas d'erreurs...</p>
-<p><img alt="image" class="center" src="../data/bug.jpg" width="40%" /></p>
-<p><img alt="image" class="center" src="../data/tests_couvrants.jpeg" /></p>
 <hr />
 <h2 id="bibliographie">Bibliographie<a class="headerlink" href="#bibliographie" title="Permanent link">⚓︎</a></h2>
 <ul>

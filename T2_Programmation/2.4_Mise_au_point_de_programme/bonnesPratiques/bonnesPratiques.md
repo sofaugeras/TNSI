@@ -1,23 +1,24 @@
 # Bonnes pratiques 
  
-![](data/pep8.webp){: .center width=70%}
+![](./data/pep8.webp){: .center width=70%}
 
-*extrait du site https://realpython.com/python-pep8/*
+^^source :^^ [https://realpython.com/python-pep8/](https://realpython.com/python-pep8/)
 
 ## 1. Conventions syntaxiques
+
 La programmation est un art délicat : un simple caractère en trop peut provoquer une erreur pour le code tout entier (penser à un innocent caractère d'espace en début de ligne dans un code Python).
 
-![image](data/extraspace.jpg){: .center width=40%}
+![image](./data/extraspace.jpg){: .center width=40%}
 
 Mais même lorsqu'un code s'exécute sans erreur, il ne faut pas négliger l'aspect purement «esthétique» de celui-ci : il est nécessaire de respecter autant que possible des conventions typographiques, qui vont standardiser le code et le rendre ainsi plus lisible.
 
-Ainsi pour chaque langage, il existe une «bible» de bonnes pratiques de présentation du code, qui visent à l'uniformiser. Pour Python, cette référence s'appelle la Python Enhancement Proposal 8, plus connue sous le nom de PEP8. 
+Ainsi pour chaque langage, il existe une «bible» de bonnes pratiques de présentation du code, qui visent à l'uniformiser. Pour Python, cette référence s'appelle la Python Enhancement Proposal 8, plus connue sous le nom de **PEP8**. 
 
 En voici quelques extraits :
 
-### Les espaces
+### 1.1 Les espaces
 
-![image](data/standards.jpg){: .center width=40%}
+![image](./data/standards.jpg){: .center width=40%}
 
 
 ▶ Il faut mettre une espace (oui, en typographie, on dit «une» espace et non pas «un» espace) avant et après chaque opérateur de comparaison, d'affectation, ou mathématique  (```=, ==, >, +, *, ...``` )
@@ -87,7 +88,7 @@ if color == (0, 255, 0):
 
 On peut contrôler si son code vérifie les standards de la PEP8 sur ce site [http://pep8online.com/](http://pep8online.com/)
 
-### Les conventions de nommage
+### 1.2 Les conventions de nommage
 
 ▶ Les variables à une lettre (comme ```i```, ```j```, ```k``` ) sont réservées aux indices (notamment dans les boucles).
 
@@ -102,7 +103,6 @@ if d == 1:
 if date == 1:
     compte_epargne += versement_mensuel
 ```
-
 
 Rappel des différents types de casse :
 
@@ -129,7 +129,7 @@ class Voiture:
 
 ### 2.1 Commenter son code ? (ou pas)
 
-![image](data/comment.jpg){: .center width=40%}
+![image](./data/comment.jpg){: .center width=40%}
 
 
 La nécessité de commenter son code est assez controversée.  
@@ -137,13 +137,13 @@ Il est d'usage de dire qu'un code doit être assez **explicite** pour que le lec
 
 De fait, les commentaires sont parfois (souvent) superflus :
 
-![image](data/cat.png){: .center width=40%}
+![image](./data/cat.png){: .center width=40%}
 
 
 Et s'ils sont réellement nécessaires, il faut se poser la question : est-ce que ce code n'aurait pas pu être plus simple ? (attention, la réponse n'est pas toujours oui)
 
 
-![image](data/smart.jpeg){: .center width=40%}
+![image](./data/smart.jpeg){: .center width=40%}
 
 
 **Exemple :**
@@ -191,7 +191,7 @@ len(obj, /)
 
 ```
 
-![image](data/help.jpeg){: .center}
+![image](./data/help.jpeg){: .center}
 
 
 De même pour la fonction ```range``` :
@@ -283,179 +283,9 @@ Ils sont en réalité plus utiles que cela : lors de la conception d'un programm
 
 Il est à noter aussi que les erreurs peuvent être gérées par le mécanisme ```try ... except```, qui permet de «lever des exceptions». Pour les curieux, plus de renseignements [ici](http://perso.univ-lemans.fr/~berger/CoursPython/co/try_except.html).
 
+et surtout on test !!!
 
-
-## 4. Les tests
-### 4.1 Pourquoi des tests ?
-
-
-![image](data/tester.jpg){: .center width=40%}
-
-
-
-Tester une fonction est la première chose que l'on fait (normalement...) lorsqu'on vient de finir de l'écrire. 
-
-Par exemple, si on vient de construire la fonction ```valeur_absolue(n)```, il est fort probable qu'on aille taper ceci dans la console :
-
-```python
->>> valeur_absolue(-3)
-3
->>> valeur_absolue(0)
-0
->>> valeur_absolue(7)
-7
-```
-
-- On peut regrouper tous ces tests au sein d'une même fonction ```test_valeur_absolue()```.
-- On peut écrire cette fonction ```test_valeur_absolue()``` avant même de commencer à écrire la fonction ```valeur_absolue(n)```.
-
-> Remarque : 
-> la méthode de développement logiciel TDD (Test Driven Developement) est basée en partie sur ce principe  : 
-
-> 1. On commence par écrire le test de la fonction.
-> 2. Le test échoue (forcément, la fonction n'est pas encore codée !)
- > 3. On écrit le code de la fonction pour que le test soit validé.
- > 4. On améliore (si possible) ce code tout en vérifiant que le test continue à être valide.
-
-
-![image](data/TDD.png){: .center width=40%}
-
-
-
-
-Revenons à nos tests sur la fonction ```valeur_absolue(n)```
-
-```python
-def test_valeur_absolue():
-    if valeur_absolue(-3) == 3 :
-        print("ok")
-    else:
-        print("erreur")
-        
-    if valeur_absolue(0) == 0 :
-        print("ok")
-    else:
-        print("erreur")
-        
-    if valeur_absolue(7) == 7 :
-        print("ok")
-    else:
-        print("erreur")
-```
-
-En console, il suffit maintenant d'appeler la fonction ```test_valeur_absolue()``` :
-
-```python
->>> test_valeur_absolue()
-ok
-ok
-ok
-```
-
-
-### 4.2 Revoilà les ```assert```
-
-Utiliser des ```assert``` permet d'écrire très simplement les tests précédents.
-
-Reprenons notre fonction ```valeur_absolue()```. Sa fonction test  ```test_valeur_absolue()``` peut s'écrire :
-
-```python
-def test_valeur_absolue():
-    assert valeur_absolue(-3) == 3
-    assert valeur_absolue(0) == 0
-    assert valeur_absolue(7) == 7
-
-```
-
-**Exercice :**  
-Écrire une fonction ```maxi(liste)``` qui renvoie le plus grand élément de la liste ```liste``` passée en paramètre (de préférence sans utiliser la fonction ```max()``` ...).  
-Vous écrirez **d'abord** une fonction ```test_maxi()``` avant d'écrire la fonction ```maxi(liste)``` 
-
-
-### 4.3 Le module ```doctest```
-
-Le module ```doctest```  permet d'écrire les tests **à l'intérieur** de la docstring d'une fonction. 
-
-Considérons une fonction dont le but est de compter les voyelles du mot passé en paramètre.
-
-```python
-def compte_voyelles(mot):
-    """
-    renvoie le nombre de voyelles du mot donné en paramètre.
-    >>> compte_voyelles("python")
-    2
-    >>> compte_voyelles("HTTP")
-    0
-    >>> compte_voyelles("eau")
-    3
-    """
-    voyelles = "aeiou"
-    total = 0
-    for lettre in mot:
-        if lettre in voyelles:
-            total += 1
-    return total
-```
-
-Observez bien la docstring : elle contient explicitement ce qu'on veut que renvoie le terminal lorsqu'on appellera la fonction.
-On écrit donc les trois chevrons ```>>>``` suivi de l'appel à la fonction, et à la ligne en dessous ce que nous espérons que la fonction nous renvoie.
-On peut écrire autant de tests que l'on veut.
-
-Ensuite, en console :
-```python
->>> import doctest
->>> doctest.testmod()
-```
-Dans notre cas, le retour sera celui-ci :
-
-```python
->>> import doctest
->>> doctest.testmod()
-**********************************************************************
-File "voyelles.py", line 4, in __main__.compte_voyelles
-Failed example:
-    compte_voyelles("python")
-Expected:
-    2
-Got:
-    1
-**********************************************************************
-1 items had failures:
-   1 of   3 in __main__.compte_voyelles
-***Test Failed*** 1 failures.
-TestResults(failed=1, attempted=3)
-```
-
-On voit que le test ```compte_voyelles("python")``` a renvoyé la valeur 1 alors qu'on attendait 2. En regardant notre fonction, on s'aperçoit donc qu'on avait oublié le ```y``` dans la liste des voyelles. 
-
-En corrigeant ceci, le test devient :
-```python
->>> import doctest
->>> doctest.testmod()
-TestResults(failed=0, attempted=3)
-```
-Ce qui est beaucoup plus satisfaisant.
-
-
-### 4.3 À propos des tests
-Le comportement face aux tests en programmation doit être le même qu'en mathématiques : _un test qui ne marche pas est plus riche d'enseignements qu'un test qui marche_.
-
-En mathématiques, seule la notion de contre-exemple est fertile : si quelqu'un vous affirme que _«tous les nombres impairs sont premiers»_, il vous suffit d'exhiber le nombre 9 pour lui prouver qu'il a tort et achever la discussion.
-
-Par contre, il aurait pu essayer de vous convaincre avec les nombres 3, 5 et 13, qui sont bien impairs et premiers.
-
-De la même manière, voir qu'une fonction passe les tests que vous avez écrits ne vous assurera pas que cette fonction aura _toujours_ le bon comportement souhaité. Elle l'aura pour les valeurs de test, mais pas forcément pour les autres.
-
-En revanche, si une fonction ne passe pas un des tests, vous avez la certitude qu'il y a un problème à régler quelque part.
-
-Tout ceci en admettant, bien sûr, que vos tests _eux-mêmes_ ne comportent pas d'erreurs...
-
-![image](data/bug.jpg){: .center width=40%}
-
-![image](data/tests_couvrants.jpeg){: .center}
-
-
-
+![image](./data/tester.jpg){: .center width=40%}
 
 ---
 ## Bibliographie

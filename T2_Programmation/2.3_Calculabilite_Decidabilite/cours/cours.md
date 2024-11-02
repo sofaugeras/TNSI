@@ -4,6 +4,14 @@
 
 !!! info "Crédit"
     **Crédit du cours :** [Gilles Lassus](https://glassus.github.io/terminale_nsi/T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)
+    **Bibliographie**
+
+    - Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
+    - Prépabac NSI, Terminale, G. CONNAN, V. PETROV, G. ROZSAVOLGYI, L. SIGNAC, éditions HATIER.
+    - https://interstices.info/pnp-elementaire-ma-chere-watson/
+    - https://interstices.info/alan-turing-du-calculable-a-lindecidable/
+    - https://www.labri.fr/perso/betrema/MC/MC8.html
+    - https://scienceetonnante.com/2020/07/17/est-ce-que-p-np/
 
 ## 1. Un programme comme paramètre d'un programme
 
@@ -297,15 +305,11 @@ Cela signifie qu'ils pensent que certains problèmes ne pourront jamais avoir un
 Alors, P = NP ou P ≠ NP ? Réponse peut-être un jour...
 
 
----
-## Bibliographie
-- Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
-- Prépabac NSI, Terminale, G. CONNAN, V. PETROV, G. ROZSAVOLGYI, L. SIGNAC, éditions HATIER.
-- https://interstices.info/pnp-elementaire-ma-chere-watson/
-- https://interstices.info/alan-turing-du-calculable-a-lindecidable/
-- https://www.labri.fr/perso/betrema/MC/MC8.html
-- https://scienceetonnante.com/2020/07/17/est-ce-que-p-np/
+!!! danger "A retenir"
 
+    <font color="red">Tout programme est une donnée</font>
+
+    Un **problème de décision** est une question s'appliquant aux éléments d'un ensemble et à laquelle la réponse est, pour chaque élément, soit oui, soit non. Un tel problème est dit **décidable** lorsqu'il existe un **algorithme** qui, **pour chaque élément**, calcule à coup sûr et en temps fini la réponse correspondante. Il existe des problèmes qui ne sont pas décidables, à commencer par le problème de l'arrêt, qui s'applique à l'ensemble des algorithmes et demande de répondre à la question "l'exécution de cet algorithme s'arrête-t-elle ?". La notion de décidabilité est **indépendante du langage de programmation**.
 
 
 
