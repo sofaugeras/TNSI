@@ -1,4 +1,4 @@
-2"""
+"""
 Exercice PizzaDrive sur les exceptions
 
 Le stagiaire qui a développé ce prototype débute dans le langage Python.

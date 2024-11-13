@@ -1,8 +1,11 @@
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: En cours : [Listes chaînées](./T1_Structures_de_donnees/1.2_Listes/cours.md)  <br />
+    :arrow_forward: En cours : [Mise au point de programme](./T2_Programmation/2.4_Mise_au_point_de_programme/cours.md)  <br />
 
-    :hourglass: A venir : [Mise au point de programme](./T2_Programmation/2.4_Mise_au_point_de_programme/cours.md) <br />
+    :hourglass: A venir :  <br />
+    - [calculabilité](./T2_Programmation/2.3_Calculabilite_Decidabilite/cours.md)<br />
+    - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) <br />
+    - [Base de données](./T4_Bases_de_donnees/sommaire.md)
 
 !!! abstract "Actualités :newspaper:" 
 
@@ -32,14 +35,13 @@
     - [Récursivité](./T2_Programmation/2.1_Recursivite/cours.md) <br />
     - [Programmation orienté objet](./T2_Programmation/2.2_Programmation_Orientee_Objet/cours.md)<br />
     - [piles / files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md)<br />
+    - [Listes chaînées](./T1_Structures_de_donnees/1.2_Listes/cours.md)
 
     
 <!--       
 !!! note "*Thèmes traités*"
-    - [Listes chainées](./T1_Structures_de_donnees/1.2_Listes/Structures_ListesChainees.md)
-    - [Mise au point de programme](./T2_Programmation/2.4_Mise_au_point_de_programme/cours.md)
-    - [calculabilité](./T2_Programmation/2.3_Calculabilite_Decidabilite/cours.md)
-    - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) 
+
+    
     - [Gestion des processus](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/)  
     - [Cryptographie](T5_Architecture_materielle/5.4_Cryptographie/cours/)
     - [Sécurisation des communications, Cryptographie](./TNSI/T5_Architecture_materielle/5.4_Cryptographie/cours/)
@@ -47,9 +49,6 @@
     - [Arbres](T1_Structures_de_donnees/1.3_Arbres/cours/)
     - [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
     - [Dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/)  
-    - [Base de données](./T4_Bases_de_donnees/sommaire.md)
-    - [Langage SQL](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
-    - [Modèle relationnel](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)
     - [Retour sur les dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/)
     - [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/)
     - [Diviser pour régner](./T3_Algorithmique/3.1_Diviser_pour_regner/)
