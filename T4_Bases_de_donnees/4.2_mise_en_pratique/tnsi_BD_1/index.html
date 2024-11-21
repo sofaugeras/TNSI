@@ -3304,7 +3304,7 @@ LIVRE (<u>idLivre</u> int, titre str, #idAuteur int, #idTheme int)
 </code></p>
 <h2 id="creer-une-table">Créer une table<a class="headerlink" href="#creer-une-table" title="Permanent link">⚓︎</a></h2>
 <p>Il est temps de commencer à peupler notre base de données. Nous allons commencer par créer la table <strong>Langues</strong> en saisissant notre première requête :</p>
-<div class="highlight"><span class="filename">🗂️ SQL</span><pre><span></span><code><span class="o">%%</span><span class="k">sql</span><span class="w"> </span>
+<div class="highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="o">%%</span><span class="k">sql</span><span class="w"> </span>
 <span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Langues</span><span class="w"> </span>
 <span class="p">(</span>
 <span class="n">IdLangue</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w">  </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
@@ -3323,7 +3323,7 @@ LIVRE (<u>idLivre</u> int, titre str, #idAuteur int, #idTheme int)
 <p>L'attribut <strong>IdLangue</strong> est la <img alt="🔑" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f511.svg" title=":key:" /> <strong>clé primaire</strong> de la table. C'est un entier qui commence à 1 et qui sera automatiquement incrémenté au fur à mesure que l'on insère des données dans la table. C'est en indiquant <code>PRIMARY KEY</code> après le type dans la déclaration de l'attribut <strong>IdLangue</strong> que <em>sqlite</em> se comporte ainsi.</p>
 <h2 id="inserer-des-enregistrements-dans-la-table">Insérer des enregistrements dans la table<a class="headerlink" href="#inserer-des-enregistrements-dans-la-table" title="Permanent link">⚓︎</a></h2>
 <p>Maintenant que nous avons une table vide, il nous faut la remplir avec les données sur les auteurs. Nous utiliserons pour cela la requête <strong>INSERT</strong>. Voici son utilisation :</p>
-<div class="highlight"><span class="filename">🗂️ SQL</span><pre><span></span><code><span class="o">%%</span><span class="k">sql</span>
+<div class="highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="o">%%</span><span class="k">sql</span>
 <span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Langues</span><span class="w"> </span>
 <span class="w">    </span><span class="p">(</span><span class="n">Langue</span><span class="p">)</span>
 <span class="k">VALUES</span>
@@ -3332,7 +3332,7 @@ LIVRE (<u>idLivre</u> int, titre str, #idAuteur int, #idTheme int)
 </code></pre></div>
 <h3 id="quelques-explications_1">Quelques explications :<a class="headerlink" href="#quelques-explications_1" title="Permanent link">⚓︎</a></h3>
 <p>La requête <strong>INSERT</strong> s'utilise ainsi :</p>
-<div class="highlight"><span class="filename">🗂️ SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="o">##</span><span class="k">TABLE</span><span class="o">##</span>
+<div class="highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="o">##</span><span class="k">TABLE</span><span class="o">##</span>
 <span class="w">    </span><span class="p">(</span><span class="o">##</span><span class="w"> </span><span class="n">attributs</span><span class="w"> </span><span class="n">dont</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">donne</span><span class="w"> </span><span class="n">les</span><span class="w"> </span><span class="n">valeurs</span><span class="o">##</span><span class="p">)</span>
 <span class="k">VALUES</span>
 <span class="w">    </span><span class="p">(</span><span class="o">##</span><span class="w"> </span><span class="n">enregistrement</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">##</span><span class="p">),</span>
@@ -3345,7 +3345,7 @@ LIVRE (<u>idLivre</u> int, titre str, #idAuteur int, #idTheme int)
 <p>A l'issue de la requête, sqlite nous informe que 2 lignes ont été créées.</p>
 <h2 id="lire-le-contenu-dune-table">Lire le contenu d'une table<a class="headerlink" href="#lire-le-contenu-dune-table" title="Permanent link">⚓︎</a></h2>
 <p>Nous allons à présent utiliser une requête <strong>SELECT</strong> afin de récupérer le contenu de la table. Ces requêtes peuvent être très sophistiquées comme on va le voir en fin de TP. Pour le moment, nous nous contenterons de la forme la plus simple :</p>
-<div class="highlight"><span class="filename">🗂️ SQL</span><pre><span></span><code><span class="o">%%</span><span class="k">sql</span>
+<div class="highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="o">%%</span><span class="k">sql</span>
 
 <span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Langues</span><span class="p">;</span>
 </code></pre></div>
@@ -3455,7 +3455,7 @@ LIVRE (<u>idLivre</u> int, titre str, #idAuteur int, #idTheme int)
 </tbody>
 </table>
 <p>Pour cela, vous utiliserez la commande suivante pour créer la table et vous adapterez les données à cette structure.</p>
-<div class="highlight"><span class="filename">🗂️ SQL</span><pre><span></span><code><span class="o">%%</span><span class="k">sql</span><span class="w"> </span>
+<div class="highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="o">%%</span><span class="k">sql</span><span class="w"> </span>
 <span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Auteurs</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">IdAuteur</span><span class="w">       </span><span class="nb">INTEGER</span><span class="w">  </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
 <span class="w">    </span><span class="n">NomAuteur</span><span class="w">      </span><span class="nb">TEXT</span><span class="p">,</span>
@@ -3474,7 +3474,7 @@ LIVRE (<u>idLivre</u> int, titre str, #idAuteur int, #idTheme int)
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Ajoutez les occurrences d'auteur à la la table Auteurs afin que celle-ci reflète les informations ci dessus :</p>
-<div class="highlight"><span class="filename">🗂️ SQL</span><pre><span></span><code><span class="o">%%</span><span class="k">sql</span><span class="w"> </span>
+<div class="highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="o">%%</span><span class="k">sql</span><span class="w"> </span>
 
 <span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Auteurs</span><span class="w"> </span><span class="p">(</span><span class="n">idAuteur</span><span class="p">,</span><span class="w"> </span><span class="n">NomAuteur</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span>
 <span class="k">VALUES</span>

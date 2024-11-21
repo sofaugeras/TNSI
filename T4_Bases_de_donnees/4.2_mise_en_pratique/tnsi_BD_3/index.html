@@ -3177,11 +3177,11 @@
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">%</span><span class="n">sql</span> <span class="n">SELECT</span> <span class="n">NomAuteur</span> <span class="n">FROM</span> <span class="n">Auteurs</span> <span class="n">WHERE</span> <span class="n">IdAuteur</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 </code></pre></div>
 <p>Modifions le nom de l'auteur grâce à une requête de mise à jour : </p>
-<div class="highlight"><span class="filename">🗂️ SQL</span><pre><span></span><code><span class="o">**</span><span class="k">UPDATE</span><span class="o">**</span><span class="w"> </span><span class="o">*</span><span class="k">table</span><span class="o">*</span><span class="w"> </span><span class="o">&lt;</span><span class="n">br</span><span class="o">&gt;</span>
+<div class="highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="o">**</span><span class="k">UPDATE</span><span class="o">**</span><span class="w"> </span><span class="o">*</span><span class="k">table</span><span class="o">*</span><span class="w"> </span><span class="o">&lt;</span><span class="n">br</span><span class="o">&gt;</span>
 <span class="o">**</span><span class="k">SET</span><span class="o">**</span><span class="w">  </span><span class="o">*</span><span class="n">attribut1</span><span class="o">*</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">valeur1</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">attribut2</span><span class="o">*</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">valeur2</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="o">&lt;</span><span class="n">br</span><span class="o">&gt;</span>
 <span class="o">**</span><span class="k">WHERE</span><span class="o">**</span><span class="w"> </span><span class="o">*</span><span class="n">critère</span><span class="o">*</span><span class="p">;</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🗂️ SQL</span><pre><span></span><code><span class="o">%%</span><span class="k">sql</span><span class="w"> </span>
+<div class="highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="o">%%</span><span class="k">sql</span><span class="w"> </span>
 
 <span class="k">UPDATE</span><span class="w"> </span><span class="n">Auteurs</span><span class="w"> </span>
 <span class="k">SET</span><span class="w"> </span><span class="n">NomAuteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Ze Djloule&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">PrenomAuteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Juju&quot;</span>
@@ -3190,10 +3190,10 @@
 <span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Auteurs</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 <p>supprimons vite cette entrée ! Nous utiliserons une requête</p>
-<div class="highlight"><span class="filename">🗂️ SQL</span><pre><span></span><code><span class="o">**</span><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="o">**</span><span class="w"> </span><span class="o">*</span><span class="k">table</span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="k">WHERE</span><span class="o">**</span><span class="w"> </span><span class="o">*</span><span class="n">critere</span><span class="o">*</span>
+<div class="highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="o">**</span><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="o">**</span><span class="w"> </span><span class="o">*</span><span class="k">table</span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="k">WHERE</span><span class="o">**</span><span class="w"> </span><span class="o">*</span><span class="n">critere</span><span class="o">*</span>
 </code></pre></div>
 <p><strong>Attention</strong> : soyez bien sûr de votre critère sous peine de perdre des données importantes !</p>
-<div class="highlight"><span class="filename">🗂️ SQL</span><pre><span></span><code><span class="o">%%</span><span class="k">sql</span><span class="w"> </span>
+<div class="highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="o">%%</span><span class="k">sql</span><span class="w"> </span>
 
 <span class="k">DELETE</span><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">Auteurs</span><span class="w">  </span><span class="k">WHERE</span><span class="w"> </span><span class="n">IdAuteur</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
 <span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Auteurs</span><span class="p">;</span>
@@ -3201,7 +3201,7 @@
 <h3 id="attention-a-la-coherence-des-donnees">Attention à la cohérence des données<a class="headerlink" href="#attention-a-la-coherence-des-donnees" title="Permanent link">⚓︎</a></h3>
 <p>Dans une base de données relationnelle il faut être vigilant lors de la suppression d'enregistrements : en effet la suppression d'un enregistrement entraîne la suppression de sa clé primaire qui peut être utilisée en tant que clé externe dans une autre table. Cela entraîne la corruption des données. Observez l'exemple ci-dessous dans lequel je me suis attribué un livre célèbre sans toucher à la table <strong>Livres</strong></p>
 <p>Il existe en SQL des moyens pour se prémunir de ce type de problèmes mais cela dépasse le cadre de ce cours.</p>
-<div class="highlight"><span class="filename">🗂️ SQL</span><pre><span></span><code><span class="o">%%</span><span class="k">sql</span>
+<div class="highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="o">%%</span><span class="k">sql</span>
 <span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Auteurs</span><span class="w"> </span>
 <span class="w">    </span><span class="p">(</span><span class="n">NomAuteur</span><span class="p">,</span><span class="w"> </span><span class="n">PrenomAuteur</span><span class="p">,</span><span class="w"> </span><span class="n">IdLangue</span><span class="p">,</span><span class="w"> </span><span class="n">AnneeNaissance</span><span class="p">)</span><span class="w"> </span>
 <span class="k">VALUES</span>

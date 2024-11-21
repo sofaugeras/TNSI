@@ -1,15 +1,18 @@
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: En cours : [Mise au point de programme](./T2_Programmation/2.4_Mise_au_point_de_programme/cours.md)  <br />
+    :arrow_forward: En cours : [Base de données](./T4_Bases_de_donnees/sommaire.md)<br />
 
     :hourglass: A venir :  <br />
     - [calculabilité](./T2_Programmation/2.3_Calculabilite_Decidabilite/cours.md)<br />
     - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) <br />
-    - [Base de données](./T4_Bases_de_donnees/sommaire.md)
+
 
 !!! abstract "Actualités :newspaper:" 
 
-    - :star: :star: :star: La page contenant les 48 sujets l'Épreuve Pratique 2024 est [ici](T6_6_Epreuve_pratique/BNS_2024/){. target="_blank"} :star: :star: :star:
+    - 👪 Réunion prof/parent/élève : Mercredi 18 décembre 2025
+    - 📆 Date Bac Blanc : 6 et 7 février 2025 puis 28-31 avril 2025
+
+    - ✨ La page contenant les 48 sujets l'Épreuve Pratique 2024 est [ici](T6_6_Epreuve_pratique/BNS_2024/){. target="_blank"} :star: :star: :star:
 
     Les modalités du BAC 2024 ont été [annoncées](https://www.education.gouv.fr/bo/2023/Hebdo36/MENE2317750N){. target="_blank"} :
 
@@ -17,7 +20,7 @@
     - l'épreuve pratique sera composé de 2 exercices notés sur 20
     - Le poids de l'écrit sera de 3/4 et le poids de la pratique de 1/4
 
-    - :boom: Organisez-vous avec (par exemple) [Notion](https://www.notion.so/fr-fr){. target="_blank"} ou [Zenkit](https://zenkit.com/){. target="_blank"}
+    -💥 Organisez-vous avec (par exemple) [Notion](https://www.notion.so/fr-fr){. target="_blank"} ou [Zenkit](https://zenkit.com/){. target="_blank"}
 
 !!! info "Entraînement"
     Vous trouverez ci dessous quelques sites pour vous entrainez <br />
@@ -29,13 +32,14 @@
 
 !!! note "*Thèmes traités*"
 
-    :rotating_light: Liste des thèmes à traiter dans le programme : [pdf](./data/programmeTNSI.pdf)
+    🚨 Liste des thèmes à traiter dans le programme : [pdf](./data/programmeTNSI.pdf)
 
     - Révision : [Codex](https://codex.forge.apps.education.fr/) <br />
     - [Récursivité](./T2_Programmation/2.1_Recursivite/cours.md) <br />
     - [Programmation orienté objet](./T2_Programmation/2.2_Programmation_Orientee_Objet/cours.md)<br />
     - [piles / files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md)<br />
     - [Listes chaînées](./T1_Structures_de_donnees/1.2_Listes/cours.md)
+    - [Mise au point de programme](./T2_Programmation/2.4_Mise_au_point_de_programme/cours.md)  
 
     
 <!--       
