@@ -11,7 +11,7 @@ effectuer des requêtes sur une base de données relationnelles. Nous apprendron
 
 Contrairement aux apparences, nous n'utiliserons pas Python dans ce classeur, mais directement SQL grâce à l'extension **ipython-sql** qu'il faut activer en ouvrant une console Anaconda prompt et taper les commandes suivantes :
 
- ```Python Console Session
+```Python Console Session
 pip install jupyter-sql
 pip install ipython-sql
 ```

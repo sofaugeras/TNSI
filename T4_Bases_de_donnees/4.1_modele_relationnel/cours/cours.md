@@ -56,7 +56,7 @@ Bien modéliser, c’est faire que ce monde abstrait soit structuré, performant
 
 Un club de sports dispose des données suivantes :
 
-|Prénom	|Nom|Sport|Niveau|Date dernière compétition|Classement dernière compétition|Code |sport|
+|Prénom	|Nom|Sport|Niveau|Adresse|Date dernière compétition|Classement dernière compétition|Code sport|
 |----|----|----|----|----|----|----|----|
 |Colette	|Mavallée	|Pétanque	|débutant	|Montpellier	|aucune	|0	|P1|
 |Berthe	|Mavallée	|Pétanque	|national	|Montpellier	|01/01/2020	|1	|P1|

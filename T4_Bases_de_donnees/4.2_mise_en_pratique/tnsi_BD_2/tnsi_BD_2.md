@@ -1,6 +1,7 @@
 # Manipulation des base de données
 
 !!! note "Téléchargement"
+    Vous pouvez télécharger le notebook du cours [ici](./data/tnsi_BD_2.ipynb)
 
 Dans ce cours, nous poursuivrons l'étude de l'exemple de la base de données de livres de SF et nous verrons des requêtes de sélection avancées ainsi que la manière de fusionner plusieurs tables (Jointure).
 
