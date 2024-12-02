@@ -108,8 +108,9 @@ On constate la présence de quelques doublons. <br />
 %sql SELECT DISTINCT AnneePubli from Livres ORDER BY AnneePubli;
 ```
 
-!!! example "A faire
+!!! example "A faire"
     === "Question"
+
         1. Donner la liste de tous les titres des livres écrits entre 1920 et 1950.
         2. Combien y en a t-il ?
 
@@ -120,6 +121,16 @@ On constate la présence de quelques doublons. <br />
         assert reponse_2[0][0] == 6
         ```
     === "Correction"
+
+        ```SQL
+        SELECT * 
+        FROM livres 
+        WHERE AnneePubli >= 1920 AND AnneePubli <=1950;
+        --Autre solution
+        SELECT * 
+        FROM livres
+        WHERE AnneePubli BETWEEN 1920 AND 1950 ;
+        ```
 
 
 ## Requêtes portant sur plusieurs tables

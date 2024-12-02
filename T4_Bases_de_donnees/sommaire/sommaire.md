@@ -9,3 +9,6 @@
 4. [Mise à jour de base de données](./4.2_mise_en_pratique/tnsi_BD_3.md)
 5. [Exploiter une base de données avec Python](./4.2_mise_en_pratique/tnsi_BD_4_python.md)
 6. [Exploiter un DataSet](./4.2_mise_en_pratique/tnsi_BD_5_baseDataGouv.md)
+
+!!! danger "Entraînement"
+    L'excellent site de [Nicolas Reveret ](https://nreveret.forge.apps.education.fr/exercices_bdd/){ target="blank"}

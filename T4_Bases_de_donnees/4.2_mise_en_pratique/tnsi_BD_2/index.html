@@ -3294,18 +3294,34 @@ Vous verrez à l'occation l'utilisation de l'opérateur <em>BETWEEN</em> pour te
 <img alt="⌛️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/231b.svg" title=":hourglass:" />  Pour éviter les redondances dans les résultats, on peut rajouter le mot-clé <em>DISTINCT</em> juste après le <em>SELECT</em>.</p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">%</span><span class="n">sql</span> <span class="n">SELECT</span> <span class="n">DISTINCT</span> <span class="n">AnneePubli</span> <span class="kn">from</span> <span class="nn">Livres</span> <span class="n">ORDER</span> <span class="n">BY</span> <span class="n">AnneePubli</span><span class="p">;</span>
 </code></pre></div>
-<p>!!! example "A faire
-    === "Question"
-        1. Donner la liste de tous les titres des livres écrits entre 1920 et 1950.
-        2. Combien y en a t-il ?</p>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>    ```python
-    # Vérification des réponses
+<div class="admonition example">
+<p class="admonition-title">A faire</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Question</label><label for="__tabbed_1_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>Donner la liste de tous les titres des livres écrits entre 1920 et 1950.</li>
+<li>Combien y en a t-il ?</li>
+</ol>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># Vérification des réponses</span>
 
-    assert reponse_1[3][0] == &#39;Les Robots&#39;
-    assert reponse_2[0][0] == 6
-    ```
-=== &quot;Correction&quot;
+<span class="k">assert</span> <span class="n">reponse_1</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Les Robots&#39;</span>
+<span class="k">assert</span> <span class="n">reponse_2</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">6</span>
 </code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">livres</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">AnneePubli</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">1920</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">AnneePubli</span><span class="w"> </span><span class="o">&lt;=</span><span class="mi">1950</span><span class="p">;</span>
+<span class="c1">--Autre solution</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">livres</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">AnneePubli</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="mi">1920</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="mi">1950</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
 <h2 id="requetes-portant-sur-plusieurs-tables">Requêtes portant sur plusieurs tables<a class="headerlink" href="#requetes-portant-sur-plusieurs-tables" title="Permanent link">⚓︎</a></h2>
 <p>Jusqu'à présent, nos requêtes ne portaient que sur une seule table. Néanmoins notre liste de livres comporte des données en provenance de plusieurs tables simultanément. Nous allons voir comment effectuer des requêtes pour croiser des données en provenance de plusieurs tables.</p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">%</span><span class="n">sql</span> <span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">Langues</span><span class="p">,</span> <span class="n">Auteurs</span>
@@ -3320,7 +3336,7 @@ Vous verrez à l'occation l'utilisation de l'opérateur <em>BETWEEN</em> pour te
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">A vous de jouer</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Questions</label><label for="__tabbed_1_2">Correction</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Questions</label><label for="__tabbed_2_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>En croisant la table <strong>Livres</strong> avec la table <strong>Auteurs</strong></p>
@@ -3343,7 +3359,7 @@ Vous verrez à l'occation l'utilisation de l'opérateur <em>BETWEEN</em> pour te
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">A vous de jouer</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Question</label><label for="__tabbed_2_2">Correction</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Question</label><label for="__tabbed_3_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Ecrire une requête permettant d'obtenir une liste dont les attributs sont <strong>Titre</strong>, <strong>NomAuteur</strong> et <strong>Langue</strong> triée par ordre croissant de date de naissance de l'auteur.</p>
