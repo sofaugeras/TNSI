@@ -1,15 +1,14 @@
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: En cours : [Base de données](./T4_Bases_de_donnees/sommaire.md)<br />
+    :arrow_forward: En cours : [Retour sur les dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/)
 
     :hourglass: A venir :  <br />
-    - [calculabilité](./T2_Programmation/2.3_Calculabilite_Decidabilite/cours.md)<br />
-    - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) <br />
+    - [Arbres](T1_Structures_de_donnees/1.3_Arbres/cours/) <br />
+    
 
 
 !!! abstract "Actualités :newspaper:" 
 
-    - 👪 Réunion prof/parent/élève : Mercredi 18 décembre 2025
     - 📆 Date Bac Blanc : 6 et 7 février 2025 puis 28-31 avril 2025
 
     - ✨ La page contenant les 48 sujets l'Épreuve Pratique 2024 est [ici](T6_6_Epreuve_pratique/BNS_2024/){. target="_blank"} :star: :star: :star:
@@ -38,22 +37,25 @@
     - [Récursivité](./T2_Programmation/2.1_Recursivite/cours.md) <br />
     - [Programmation orienté objet](./T2_Programmation/2.2_Programmation_Orientee_Objet/cours.md)<br />
     - [piles / files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md)<br />
-    - [Listes chaînées](./T1_Structures_de_donnees/1.2_Listes/cours.md)
-    - [Mise au point de programme](./T2_Programmation/2.4_Mise_au_point_de_programme/cours.md)  
+    - [Listes chaînées](./T1_Structures_de_donnees/1.2_Listes/cours.md)<br />
+    - [Mise au point de programme](./T2_Programmation/2.4_Mise_au_point_de_programme/cours.md)  <br />
+    - [Base de données](./T4_Bases_de_donnees/sommaire.md)<br />
+    - [calculabilité](./T2_Programmation/2.3_Calculabilite_Decidabilite/cours.md)<br />
+    - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) <br />
 
     
 <!--       
 !!! note "*Thèmes traités*"
 
     
-    - [Gestion des processus](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/)  
+
     - [Cryptographie](T5_Architecture_materielle/5.4_Cryptographie/cours/)
     - [Sécurisation des communications, Cryptographie](./TNSI/T5_Architecture_materielle/5.4_Cryptographie/cours/)
     - [Diviser pour régner](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
-    - [Arbres](T1_Structures_de_donnees/1.3_Arbres/cours/)
+    
     - [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
     - [Dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/)  
-    - [Retour sur les dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/)
+    
     - [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/)
     - [Diviser pour régner](./T3_Algorithmique/3.1_Diviser_pour_regner/)
     - [Graphes](./T1_Structures_de_donnees/1.5_Graphes/cours/)

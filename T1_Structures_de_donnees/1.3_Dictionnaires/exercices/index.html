@@ -105,6 +105,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#un-peu-de-cyber" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -821,6 +826,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Exercices
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -831,6 +849,88 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-quoi-sert-un-mot-de-passe" class="md-nav__link">
+    <span class="md-ellipsis">
+      A quoi sert un mot de passe ?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#un-mot-de-passe-cest" class="md-nav__link">
+    <span class="md-ellipsis">
+      un mot de passe, c'est
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-risques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les risques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#craquer-un-mot-de-passe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Craquer un mot de passe
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mais-un-souci-de-temps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mais un souci de temps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comment-construire-un-mot-de-passe-fort" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comment construire un mot de passe fort ? 🔐
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stockage-dun-mot-de-passe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stockage d'un mot de passe
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3090,15 +3190,86 @@
   
 
 
-  <h1>Exercices</h1>
-
 <div class="admonition abstract">
 <p class="admonition-title">Entrainement</p>
 <p>Pour s'entraîner avec les dictionnaires, c'est <a href="https://e-nsi.gitlab.io/pratique/tags/#3-dictionnaire">ici</a></p>
 </div>
+<h1 id="un-peu-de-cyber">Un peu de cyber<a class="headerlink" href="#un-peu-de-cyber" title="Permanent link">⚓︎</a></h1>
+<h2 id="a-quoi-sert-un-mot-de-passe">A quoi sert un mot de passe ?<a class="headerlink" href="#a-quoi-sert-un-mot-de-passe" title="Permanent link">⚓︎</a></h2>
+<p>• <strong>Accès</strong> à des services en ligne grâce au contrôle d’accès.<br/>
+• <strong>Imputabilité</strong>, preuve de qui a fait quoi.<br/>
+• <strong>Traçabilité</strong> des actions, historique des actions.<br/></p>
+<p>Exemple, <br/>
+<ins>télédéclaration de l’impôt :</ins> imputabilité = lien entre la déclaration et la personne <em>ET</em> traçabilité = connaître l’heure et la date de la déclaration.</p>
+<h2 id="un-mot-de-passe-cest">un mot de passe, c'est<a class="headerlink" href="#un-mot-de-passe-cest" title="Permanent link">⚓︎</a></h2>
+<p>• La connaissance <img alt="👉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f449.svg" title=":point_right:" /> JE CONNAIS<br/>
+• La possession <img alt="👉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f449.svg" title=":point_right:" /> JE POSSEDE<br/>
+• Les caractéristiques biométriques <img alt="👉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f449.svg" title=":point_right:" /> JE SUIS<br/></p>
+<p><img alt="source : https://www.apog.net/deploiement-solution-mfa-indispensable" class="center" src="./data/Facteurs.jpg" width="90%" /></p>
+<h2 id="les-risques">Les risques<a class="headerlink" href="#les-risques" title="Permanent link">⚓︎</a></h2>
+<p>• <strong>Divulgation :</strong><br/></p>
+<blockquote>
+<ul>
+<li>Par négligence : faiblesse d’une personne, support amovible, diffusion à un tiers.<br/></li>
+<li>Par un service non sécurisé : protocoles https, imaps, pop3s, etc… à privilégier.<br/></li>
+<li>Par l’utilisation d’un vecteur infecté.<br/></li>
+<li>Mot de passe enregistré sans protection.<br/></li>
+</ul>
+</blockquote>
+<p>• <strong>Malveillance :</strong><br/></p>
+<blockquote>
+<ul>
+<li>Authentification sur un service illégitime.<br/></li>
+<li>Attaque par ingénierie sociale, piège.<br/></li>
+<li>Attaque par force brute ou divulgation d’une base de données mal sécurisée.<br/></li>
+</ul>
+</blockquote>
+<p>• Ces deux cas de figure peuvent entraîner :<br/></p>
+<blockquote>
+<ul>
+<li>La compromission des messages personnels.<br/></li>
+<li>La destruction de données.<br/></li>
+<li>La publication de messages ou photos préjudiciables sur les réseaux sociaux par exemple.<br/></li>
+<li>Des achats.<br/></li>
+<li>Des virements bancaires.<br/></li>
+</ul>
+</blockquote>
+<h2 id="craquer-un-mot-de-passe">Craquer un mot de passe<a class="headerlink" href="#craquer-un-mot-de-passe" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>Par <strong>force brute</strong><br/></li>
+<li>Par <strong>dictionnaire</strong>, en général avant l’attaque par force brute<br/></li>
+<li>Par <strong>permutation</strong> en échangeant des caractères (exemple : E par 3 ou O par 0).<br/></li>
+</ul>
+<h2 id="mais-un-souci-de-temps">Mais un souci de temps<a class="headerlink" href="#mais-un-souci-de-temps" title="Permanent link">⚓︎</a></h2>
+<p>une image plutôt qu'un long discours :</p>
+<p><img alt="temps de craquage par force brute d'un mdp" class="center" src="./data/etude-hive-systems-mots-de-passe.jpg" width="90%" /></p>
+<h2 id="comment-construire-un-mot-de-passe-fort">Comment construire un mot de passe fort ? 🔐<a class="headerlink" href="#comment-construire-un-mot-de-passe-fort" title="Permanent link">⚓︎</a></h2>
+<p>Le mot de passe doit apporter un niveau de sécurité suffisant, c’est-à-dire difficile à découvrir par un attaquant dans un temps raisonnable à  l’aide d’outils automatisés de recherche qui mettent en oeuvre les différentes techniques d’attaque. Il doit être composé au minimum de <em>10 caractères</em> et ceux-ci doivent être de tout type.</p>
+<div class="admonition info">
+<p class="admonition-title">Préconisations ANSI</p>
+<p>Créez un mot de passe suffisamment long, complexe et inattendu : de 8 caractères minimum et contenant des minuscules, des majuscules, des chiffres et des caractères spéciaux. <a href="https://cyber.gouv.fr/bonnes-pratiques-protegez-vous">source</a></p>
+</div>
+<p>Quelques astuces : 
+- Grâce à une <a href="https://www.cnil.fr/fr/generer-un-mot-de-passe-solide">phrase de passe</a> avec des mots concaténés.
+- Par phonétique.
+- Les premières lettres des mots d’une phrase, citation, chanson, etc…
+- Mixer les trois méthodes.</p>
+<div class="admonition note">
+<p class="admonition-title">Activité Phrase de passe</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Manipulation de chaîne de caractère</label><label for="__tabbed_1_2">correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>🔽 Télécharger le notebook Activité correspondant <a href="../data/phrase_de_passe-v2/">ici</a><br /></p>
+</div>
+<div class="tabbed-block">
+<p>🔽 Télécharger le notebook Activité corrigé <a href="../data/phrase_de_passe-v2-Corrige/">ici</a></p>
+</div>
+</div>
+</div>
+</div>
 <div class="admonition abstract">
 <p class="admonition-title"><strong>Création d'une rainbow table</strong> <img alt="🌈" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f308.svg" title=":rainbow:" /></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Objectif</label><label for="__tabbed_1_2">Correction</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Objectif</label><label for="__tabbed_2_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Créer une fonction <code>inverse_md5()</code> qui va chercher dans un dictionnaire (construit préalablement) le mot correspondant au hash donné en paramètre.</p>
@@ -3150,6 +3321,45 @@
 </div>
 </div>
 </div>
+<h2 id="stockage-dun-mot-de-passe">Stockage d'un mot de passe<a class="headerlink" href="#stockage-dun-mot-de-passe" title="Permanent link">⚓︎</a></h2>
+<p>La règle de "base" en hygiène de codeur est de ne JAMAiS stocké un mot de passe en clair, que ce soit dans un fichier ou pire dans une base de données. Un site ne doit jamais être en capacité de vous communiquer votre mot de passe initial !</p>
+<p>Le seul moment où un mot de passe est en clair est quand il est saisi dans le champ du formulaire. <br />
+Imaginons ... Si tous les sites avaient tous la même méthode de chiffrement (MD5 ou SH256) et qu'un utilisateur utilisait le même mot de passe sur tous ces sites ...</p>
+<p>Il existe des fuites de données recensant le couple identifiant/mot de passe d'un grand nombre de personne ! <br />
+Vous pouvez tester votre adresse mail sur le site <a href="https://haveibeenpwned.com/">';--have i been pwned?</a> pour savoir si celle ci appartient à une fuite de données connue.</p>
+<p><ins>Mise en exemple :</ins> <br />
+Alphonse (al@mail.com) utilise le mot de passe "secret" pour les sites monsite.fr et concurrent.fr<br />
+Chacun des deux sites utilise la même méthode de chiffrement MD5.<br />
+Donc chacun des deux sites possèdent dans sa base le couple <code>al@mail.com</code> et <code>5ebe2294ecd0e0f08eab7690d2a6ee69</code>.<br />
+monsite.fr subit une attaque et une fuite de données massive.<br />
+le pirate possède donc le moyen de se connecter à concurrent.fr avec le compte d'alphonse...</p>
+<p>C'est la que l'on introduit la notion de <strong>salage</strong>.</p>
+<p><ins>Définition :</ins> Le salage est un procédé utilisé en cryptographie pour renforcer la sécurité des mots de passe stockés. Il consiste à ajouter une valeur aléatoire unique (appelée "sel" ou "salt") à chaque mot de passe avant de le hacher. Cela rend plus difficile pour les attaquants d'utiliser des attaques par table arc-en-ciel ou par dictionnaire, car même si deux utilisateurs ont le même mot de passe, leurs hashs seront différents grâce aux sels uniques.</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">hashlib</span>
+
+<span class="c1"># generate new salt, hash password</span>
+<span class="c1"># h est le sel qui sera utilisé pour le hachage</span>
+<span class="n">h</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;monsite.fr&quot;</span>
+<span class="c1"># Hash du mot de passe classique sans salage</span>
+<span class="n">pwd_md5</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;secret&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pwd_md5</span><span class="p">)</span>
+<span class="c1"># Hash du mot de passe classique avec salage</span>
+<span class="n">pwd</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">pbkdf2_hmac</span><span class="p">(</span><span class="s1">&#39;md5&#39;</span><span class="p">,</span> <span class="sa">b</span><span class="s2">&quot;secret&quot;</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="mi">100000</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pwd</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>5ebe2294ecd0e0f08eab7690d2a6ee69
+b&#39;\xc3;K\xc2\xfb\xb4z\xca`f\xc4T\xc9I\x1b.&#39;
+</code></pre></div></p>
 
 
 

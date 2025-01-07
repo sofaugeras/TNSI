@@ -28,8 +28,8 @@ En Python, le **dictionnaire** est une structure native de tableau associatif.
     **Indication :** on utilisera la fonction ```time.time()``` (après avoir importé le module ```time```) qui donne le nombre de secondes (à $10^{-7}$ près) écoulées depuis le 01 janvier 1970 à 00h00 (appelée [Heure Unix](https://fr.wikipedia.org/wiki/Heure_Unix) ou [Temps Posix](https://fr.wikipedia.org/wiki/Heure_Unix)).
     ```python
     >>> import time
-    >>> time.time()
-    1639001177.0923798
+    >>> time.perf_counter_ns()
+    2400
     ```
 
 ### 1.1 Préparation des mesures
@@ -76,10 +76,13 @@ lst = fabrique_liste(10)
 
 
 ```python
-%timeit "a" in lst
+t1 = time.perf_counter_ns()
+boo = "a" in fabrique_liste(10)
+t2 = time.perf_counter_ns()
+print(t2 - t1)
 ```
 
-    138 ns ± 0.054 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+    2500
 
 
 Nous sommes donc à l'ordre de grandeur $100 \times 10^{-9}$, soit $10^{-7}$ secondes.
@@ -93,10 +96,13 @@ lst = fabrique_liste(100)
 
 
 ```python
-%timeit "a" in lst
+t1 = time.perf_counter_ns()
+boo = "a" in fabrique_liste(100)
+t2 = time.perf_counter_ns()
+print(t2 - t1)
 ```
 
-    1.11 µs ± 1.54 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+    11300
 
 
 Nous sommes donc à l'ordre de grandeur $1 \times 10^{-6}$, soit $10^{-6}$ secondes.
@@ -110,10 +116,13 @@ lst = fabrique_liste(1000)
 
 
 ```python
-%timeit "a" in lst
+t1 = time.perf_counter_ns()
+boo = "a" in fabrique_liste(1000)
+t2 = time.perf_counter_ns()
+print(t2 - t1)
 ```
 
-    11.2 µs ± 41.8 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+    99200
 
 
 Nous sommes donc à l'ordre de grandeur $10 \times 10^{-6}$, soit $10^{-5}$ secondes.

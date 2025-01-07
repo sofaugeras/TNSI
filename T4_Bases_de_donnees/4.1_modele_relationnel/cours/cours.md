@@ -156,15 +156,16 @@ INNER JOIN table ON égalité d’attributs
 WHERE condition(s) 
 ORDER BY attributs de tri (chaque attribut suivi de DESC ou ASC)
 ```
+Fonction d'agrégation : MIN, MAX, SUM, COUNT, AVG.
 
 •	d’un **ajout d’enregistrement**
 ```SQL
-INSERT INTO table (liste d’attributs facultative) VALUES liste de valeurs
+INSERT INTO table [liste d’attributs facultative] VALUES liste de valeurs
 ```
 
 •	de **modification d’enregistrement(s)**
 ```SQL
-UPDATE table SET att1 = val1 , att2 = val2,… (WHERE condition)
+UPDATE table SET att1 = val1 , att2 = val2,… [WHERE condition]
 ```
 
 •	de **suppression d’un enregistrement**
@@ -182,14 +183,14 @@ WHERE condition(s)
 ORDER BY attributs de tri (chaque attribut suivi de DESC ou ASC)
 ```
 
-•	de création de table
+•	de **création de table**
 ```SQL
 CREATE table (
-Attribut1 type de données, (contrainte(s))
+Attribut1 type de données [contrainte(s)],
 …
-PRIMARY KEY attribut
-FOREIGN KEY attribut REFERENCES autre_table.attribut
-)
+PRIMARY KEY attribut,
+FOREIGN KEY attribut REFERENCES autre_table(attribut)
+);
 ```
 
 •	de suppression de table

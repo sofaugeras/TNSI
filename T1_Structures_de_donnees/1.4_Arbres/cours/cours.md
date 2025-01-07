@@ -127,7 +127,8 @@ _Question_ :  calculer le nombre de d’arbres binaires contenant 5 nœuds. Sach
 
 On ne cherchera pas à les construire tous, mais seulement à les dénombrer
 
- ??? check "Réponse"
+??? check "Réponse"
+
     Pour les dénombrer, on considère le noeud à la racine puis on répartit les quatres noeuds restants entre le sous-arbre gauche et le sous-arbre droit. Par exemple, on peut mettre un noeud dans le sous-arbre gauche et 3 dans le sous-arbre droit.
     Au total, il y a 5 façons différentes de répartir les noeuds $(0+4, 1+3, 2+2, 3+1, 4+0)$.
     Pour chacune, on connaît le nombre de sous-arbres possibles, ce qui donne la somme :
@@ -141,7 +142,9 @@ On ne cherchera pas à les construire tous, mais seulement à les dénombrer
 
 2.	Une classe arbre binaire en Python
 
-Lien vers le notebook  [ici](https://nbviewer.org/urls/sofaugeras.github.io/TNSI/site/T1_Structures_de_donnees/1.1_Listes_Piles_Files/01_Listes_Piles_Files.ipynb){target=_blank}  [:fontawesome-solid-download:](https://sofaugeras.github.io/TNSI/docs/T1_Structures_de_donnees/1.1_Listes_Piles_Files/01_Listes_Piles_Files.ipynb){ .md-button .md-button--primary} 
+Lien vers le notebook [Télécharger](https://sofaugeras.github.io/TNSI/docs/T1_Structures_de_donnees/1.1_Listes_Piles_Files/01_Listes_Piles_Files.ipynb){ .md-button .md-button--primary} 
+
+
 
 Le but est de créer une structure de données pour représenter un arbre binaire en Python. Les opérations sur les arbres binaires sont au minimum :
 •	Construction d’arbre vide

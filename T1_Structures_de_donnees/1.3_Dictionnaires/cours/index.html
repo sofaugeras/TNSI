@@ -3210,8 +3210,8 @@
 <p class="admonition-title">TP : protocole de test pour comparer les temps d'accès aux données.</p>
 <p><strong>Indication :</strong> on utilisera la fonction <code>time.time()</code> (après avoir importé le module <code>time</code>) qui donne le nombre de secondes (à <span class="arithmatex">\(10^{-7}\)</span> près) écoulées depuis le 01 janvier 1970 à 00h00 (appelée <a href="https://fr.wikipedia.org/wiki/Heure_Unix">Heure Unix</a> ou <a href="https://fr.wikipedia.org/wiki/Heure_Unix">Temps Posix</a>).
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">time</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-<span class="mf">1639001177.0923798</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span>
+<span class="mi">2400</span>
 </code></pre></div></p>
 </div>
 <h3 id="11-preparation-des-mesures">1.1 Préparation des mesures<a class="headerlink" href="#11-preparation-des-mesures" title="Permanent link">⚓︎</a></h3>
@@ -3241,9 +3241,12 @@
 </ul>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">lst</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span>
+<span class="n">boo</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>138 ns ± 0.054 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>2500
 </code></pre></div>
 <p>Nous sommes donc à l'ordre de grandeur <span class="arithmatex">\(100 \times 10^{-9}\)</span>, soit <span class="arithmatex">\(10^{-7}\)</span> secondes.</p>
 <ul>
@@ -3251,9 +3254,12 @@
 </ul>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">lst</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span>
+<span class="n">boo</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>1.11 µs ± 1.54 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>11300
 </code></pre></div>
 <p>Nous sommes donc à l'ordre de grandeur <span class="arithmatex">\(1 \times 10^{-6}\)</span>, soit <span class="arithmatex">\(10^{-6}\)</span> secondes.</p>
 <ul>
@@ -3261,9 +3267,12 @@
 </ul>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">lst</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span>
+<span class="n">boo</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>11.2 µs ± 41.8 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>99200
 </code></pre></div>
 <p>Nous sommes donc à l'ordre de grandeur <span class="arithmatex">\(10 \times 10^{-6}\)</span>, soit <span class="arithmatex">\(10^{-5}\)</span> secondes.</p>
 <p><strong>Conclusion</strong> : le temps de recherche d'une valeur dans une <strong>liste</strong> est directement <strong>proportionnel</strong> à la longueur de cette liste. On dit qu'il est linéaire, ou bien qu'il est en <span class="arithmatex">\(O(n)\)</span>.</p>

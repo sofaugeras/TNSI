@@ -3258,18 +3258,20 @@ Il y a 14 arbres binaires possédant 5 noeuds
 <li>14 arbres binaires contenant 4 nœuds</li>
 </ul>
 <p>On ne cherchera pas à les construire tous, mais seulement à les dénombrer</p>
-<p>??? check "Réponse"
-    Pour les dénombrer, on considère le noeud à la racine puis on répartit les quatres noeuds restants entre le sous-arbre gauche et le sous-arbre droit. Par exemple, on peut mettre un noeud dans le sous-arbre gauche et 3 dans le sous-arbre droit.
-    Au total, il y a 5 façons différentes de répartir les noeuds <span class="arithmatex">\((0+4, 1+3, 2+2, 3+1, 4+0)\)</span>.
-    Pour chacune, on connaît le nombre de sous-arbres possibles, ce qui donne la somme :
-    <center><span class="arithmatex">\(1*14 + 1*5 + 2*2 + 5*1 + 14*1\)</span></center>
-    Soit un total de <strong>42</strong> arbres binaires possédant 5 noeuds</p>
+<details class="check">
+<summary>Réponse</summary>
+<p>Pour les dénombrer, on considère le noeud à la racine puis on répartit les quatres noeuds restants entre le sous-arbre gauche et le sous-arbre droit. Par exemple, on peut mettre un noeud dans le sous-arbre gauche et 3 dans le sous-arbre droit.
+Au total, il y a 5 façons différentes de répartir les noeuds <span class="arithmatex">\((0+4, 1+3, 2+2, 3+1, 4+0)\)</span>.
+Pour chacune, on connaît le nombre de sous-arbres possibles, ce qui donne la somme :
+<center><span class="arithmatex">\(1*14 + 1*5 + 2*2 + 5*1 + 14*1\)</span></center>
+Soit un total de <strong>42</strong> arbres binaires possédant 5 noeuds</p>
+</details>
 <h3 id="mise-en-application-debranche">Mise en application débranché<a class="headerlink" href="#mise-en-application-debranche" title="Permanent link">⚓︎</a></h3>
 <p><a href="https://sofaugeras.github.io/TNSI/T1_Structures_de_donnees/1.3_arbres/Exercices/">Lien vers les exercices</a></p>
 <ol>
 <li>Une classe arbre binaire en Python</li>
 </ol>
-<p>Lien vers le notebook  <a href="https://nbviewer.org/urls/sofaugeras.github.io/TNSI/site/T1_Structures_de_donnees/1.1_Listes_Piles_Files/01_Listes_Piles_Files.ipynb" target="_blank">ici</a>  <a class="md-button md-button--primary" href="https://sofaugeras.github.io/TNSI/docs/T1_Structures_de_donnees/1.1_Listes_Piles_Files/01_Listes_Piles_Files.ipynb">:fontawesome-solid-download:</a> </p>
+<p>Lien vers le notebook <a class="md-button md-button--primary" href="https://sofaugeras.github.io/TNSI/docs/T1_Structures_de_donnees/1.1_Listes_Piles_Files/01_Listes_Piles_Files.ipynb">Télécharger</a> </p>
 <p>Le but est de créer une structure de données pour représenter un arbre binaire en Python. Les opérations sur les arbres binaires sont au minimum :
 •   Construction d’arbre vide
 •   Construction d’un arbre à partir d’un entier et de deux sous-arbres gauche et droit
