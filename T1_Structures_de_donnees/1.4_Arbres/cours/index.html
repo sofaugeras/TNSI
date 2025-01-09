@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#structures-de-donnees-recursive-les-arbres" class="md-skip">
+        <a href="#arbres" class="md-skip">
           Aller au contenu
         </a>
       
@@ -935,11 +935,266 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
+  <a href="#1-terminologie" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction
+      1. Terminologie
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="1. Terminologie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-vocabulaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Vocabulaire
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-exemples-darbres" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Exemples d'arbres
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-caracteristiques-dun-arbre" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Caractéristiques d'un arbre
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-parcours-darbres" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Parcours d'arbres
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Parcours d'arbres">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-parcours-en-largeur-dabord-bfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Parcours en largeur d'abord (BFS)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-parcours-prefixe" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Parcours préfixe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-parcours-infixe" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Parcours infixe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-parcours-postfixe" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Parcours postfixe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-comment-ne-pas-se-melanger-entre-le-pre-in-post-fixe" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 Comment ne pas se mélanger entre le pré / in / post fixe ?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-implementations-dun-arbre-binaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Implémentations d'un arbre binaire
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Implémentations d'un arbre binaire">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-en-utilisant-la-programmation-orientee-objet" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 En utilisant la Programmation Orientée Objet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-implementation-a-partir-de-tuples-imbriques" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Implémentation à partir de tuples imbriqués
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-implementation-a-partir-dune-simple-liste" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Implémentation à partir d'une «simple» liste
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-utilisation-de-limplementation-parcours-taille" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Utilisation de l'implémentation : parcours, taille...
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Utilisation de l'implémentation : parcours, taille...">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-parcours-prefixe-infixe-postfixe" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Parcours préfixe, infixe, postfixe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-calcul-de-la-taille-dun-arbre" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Calcul de la taille d'un arbre
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-calcul-de-la-hauteur-dun-arbre" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Calcul de la hauteur d'un arbre
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-calcul-du-nombre-de-feuilles-dun-arbre" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 Calcul du nombre de feuilles d'un arbre
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-recherche-dune-valeur-dans-un-arbre" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 Recherche d'une valeur dans un arbre
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-parcours-en-largeur" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6 Parcours en largeur
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-arbres-binaires-de-recherche-abr" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Arbres binaires de recherche (ABR)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Arbres binaires de recherche (ABR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-determiner-si-un-arbre-est-un-abr" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Déterminer si un arbre est un ABR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-rechercher-une-cle-dans-un-abr" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Rechercher une clé dans un ABR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-cout-de-la-recherche-dans-un-abr-equilibre" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Coût de la recherche dans un ABR équilibré
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-insertion-dans-un-abr" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 Insertion dans un ABR
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3136,118 +3391,207 @@
   
 
 
-<h1 id="structures-de-donnees-recursive-les-arbres">Structures de données récursive :  les arbres<a class="headerlink" href="#structures-de-donnees-recursive-les-arbres" title="Permanent link">⚓︎</a></h1>
-<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">⚓︎</a></h2>
-<p>Un organisateur de tournoi de rugby recherche la meilleure solution pour afficher les potentiels quarts de final, demi-finales et finale: </p>
-<p>Au départ nous avons 4 poules de 4 équipes. Les 4 équipes d'une poule s'affrontent dans un mini championnat (3 matchs par équipe). À l'issue de cette phase de poule, les 2 premières équipes de chaque poule sont qualifiées pour les quarts de finale. </p>
-<p>On connaît les 2 qualifiés par poule : </p>
+<h1 id="arbres">Arbres<a class="headerlink" href="#arbres" title="Permanent link">⚓︎</a></h1>
+<p><img alt="image" class="center" src="../data/banniere.png" width="70%" /></p>
+<p><img alt="image" class="center" src="../data/BO1.png" /></p>
+<p><img alt="image" class="center" src="../data/BO2.png" /></p>
+<h2 id="1-terminologie">1. Terminologie<a class="headerlink" href="#1-terminologie" title="Permanent link">⚓︎</a></h2>
+<h3 id="11-vocabulaire">1.1 Vocabulaire<a class="headerlink" href="#11-vocabulaire" title="Permanent link">⚓︎</a></h3>
+<p>Un arbre est une structure hiérarchique de données, composée de nœuds. Si on adopte le vocabulaire des graphes, un arbre est un graphe non orienté, connexe, sans cycle, et dans lequel un nœud joue le rôle de racine.</p>
+<p><img alt="" class="center" src="../data/term.png" /></p>
 <ul>
-<li>Poule 1 =&gt; 1er Eq1 et 2e Eq8 </li>
-<li>Poule 2 =&gt; 1er Eq2 et 2e Eq7 </li>
-<li>Poule 3 =&gt; 1er Eq3 et 2e Eq6 </li>
-<li>Poule 4 =&gt; 1er Eq4 et 2e Eq5 </li>
+<li>
+<p>Chaque <strong>nœud</strong> a exactement un seul <strong>nœud père</strong>, à l'exception du nœud <strong>racine</strong> qui est le seul nœud à ne pas avoir de père. (oui, <strong>la</strong> racine d'une arbre est <strong>en haut</strong>)
+<img alt="image" class="center" src="../data/real_tree.png" width="30%" /></p>
+</li>
+<li>
+<p>Chaque nœud peut avoir un nombre quelconque de <strong>fils</strong>, dont il est le père.</p>
+</li>
+<li>Les nœuds qui n'ont pas de fils sont appelés les <strong>feuilles</strong> (ou nœuds externes).</li>
+<li>Les nœuds qui ne sont pas des feuilles sont des <strong>nœuds internes</strong>.</li>
+<li>Le nom de chaque nœud est appelé son <strong>étiquette</strong>.</li>
 </ul>
-<p>En quart de final on va avoir : </p>
+<p><strong>Exemples :</strong>
+dans l'arbre ci-dessus,</p>
 <ul>
-<li>quart de finale 1 =&gt; Eq1 contre Eq5 </li>
-<li>quart de finale 2 =&gt; Eq2 contre Eq6 </li>
-<li>quart de finale 3 =&gt; Eq3 contre Eq7 </li>
-<li>quart de finale 4 =&gt; Eq4 contre Eq8 </li>
+<li>C est la racine, E, Z A et G sont les feuilles.</li>
+<li>K est le père de A et G.</li>
+<li>F est le père de Z.</li>
+<li>C est le père de B et K</li>
+<li>B est le père de E et F.</li>
 </ul>
-<p>Pour les demi-finales on aura : </p>
+<h3 id="12-exemples-darbres">1.2 Exemples d'arbres<a class="headerlink" href="#12-exemples-darbres" title="Permanent link">⚓︎</a></h3>
+<h4 id="121-la-famille-royale-britannique-avant-le-08-septembre-2022">1.2.1 La famille royale britannique (avant le 08 septembre 2022)<a class="headerlink" href="#121-la-famille-royale-britannique-avant-le-08-septembre-2022" title="Permanent link">⚓︎</a></h4>
+<p><img alt="image" class="center" src="../data/windsor.png" width="60%" /></p>
+<p>Redessinez de manière plus schématique cet arbre. Pour quelle raison cet arbre a-t-il été modifié par rapport à sa version orginale (voir <a href="https://i.pinimg.com/originals/e8/d1/c7/e8d1c7b2834ce2c368848cf7fc91a057.jpg">ici</a> ), qui laissait apparaître les parents de chaque enfant ?</p>
+<h4 id="122-le-dom-dune-page-web">1.2.2 Le DOM d'une page web<a class="headerlink" href="#122-le-dom-dune-page-web" title="Permanent link">⚓︎</a></h4>
+<p>DOM : Document Object Model</p>
+<p><img alt="image" class="center" src="../data/dom.svg" width="40%" /></p>
+<h4 id="123-larborescence-dun-disque-dur">1.2.3 L'arborescence d'un disque dur<a class="headerlink" href="#123-larborescence-dun-disque-dur" title="Permanent link">⚓︎</a></h4>
+<p>Les systèmes Unix (MacOS ou GNU/Linux) organisent leur disque dur suivant l'arborescence ci-dessous :
+<img alt="image" class="center" src="../data/arbo-unix.gif" width="40%" /></p>
+<h3 id="13-caracteristiques-dun-arbre">1.3 Caractéristiques d'un arbre<a class="headerlink" href="#13-caracteristiques-dun-arbre" title="Permanent link">⚓︎</a></h3>
+<h4 id="131-outils-numeriques-de-description">1.3.1 Outils numériques de description<a class="headerlink" href="#131-outils-numeriques-de-description" title="Permanent link">⚓︎</a></h4>
+<p><img alt="" class="center" src="../data/carac.png" width="30%" /></p>
+<div class="admonition note">
+<p class="admonition-title">Définitions <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:" /></p>
 <ul>
-<li>demi-finale 1 =&gt; vainqueur quart de finale 1 contre vainqueur quart de finale 3 </li>
-<li>demi-finale 2 =&gt; vainqueur quart de finale 2 contre vainqueur quart de finale 4 </li>
+<li>
+<p>la <strong>taille</strong> d'un arbre est son nombre total de nœuds. Ici, elle vaut 8.</p>
+</li>
+<li>
+<p>l'<strong>arité</strong> d'un nœud est son nombre de fils. Ici, l'arité de B vaut 2, celle de F vaut 1, celle de Z vaut 0.</p>
+</li>
+<li>
+<p>la <strong>profondeur</strong> d'un nœud est le nombre de nœuds de son chemin le plus court vers la racine. 
+Ici, la profondeur de G est 3 (G-K-C), la profondeur de B est 2 (B-C), la profondeur de Z est 4 (Z-F-B-C), la profondeur de C est 1.</p>
+</li>
+<li>
+<p>la <strong>hauteur</strong> d'un arbre est la profondeur de son nœud le plus profond. 
+Ici, la hauteur de l'arbre est 4.<br />
+    Nous prendrons comme <strong>convention</strong> que :  </p>
+<ul>
+<li>si un arbre est réduit à <strong>un seul nœud-racine</strong>, sa hauteur sera <strong>1</strong>.</li>
+<li>si un arbre est <strong>vide</strong>, sa hauteur est <strong>0</strong>.</li>
 </ul>
-<p>L'organisateur du tournoi affiche les informations ci-dessus le jour du tournoi. Malheureusement, la plupart des spectateurs se perdent quand ils cherchent à déterminer les potentielles demi-finales (et ne parlons pas de la finale !) </p>
-<p>Comment faire ? naturellement, comment auriez-vous envie de représenter cette masse d’informations ?</p>
-<details class="check">
-<summary>exemple de structure possible</summary>
-<p><img alt="" src="../data/poules.jpg" /></p>
-</details>
-<p><img alt="" src="../data/boArbre.png" />
-<img alt="" src="../data/abrInfo.png" /></p>
-<h1 id="1-definitions">1.    Définitions<a class="headerlink" href="#1-definitions" title="Permanent link">⚓︎</a></h1>
-<p>Un arbre en informatique est un type particulier de <strong>graphe</strong>. Comme nous n'avons pas encore vu à ce stade de l'année les graphes, cette définition n'est pas d'une grande utilité...</p>
-<p><img align="right" alt="arbreDef" src="../data/arbDef.jpg" width="30%" />
-On dira donc qu'un arbre est constitué :</p>
-<ul>
-<li>D’une <strong>racine</strong>, sommet de "départ" de l'arbre </li>
-<li>De <strong>nœuds</strong>, sommets intermédiaires de l'arbre </li>
-<li>De <strong>feuilles</strong>, sommets "finaux" de l'arbre </li>
-<li>Et de <strong>branches</strong>, qui relient les éléments précédents entre eux</li>
+</li>
 </ul>
-<p>Les arbres informatiques ont ceci de particulier qu'ils poussent tête en bas. Les arbres sont des structures de données hiérarchiques, très utilisées en informatique. Ils sont orientés : la représentation standardisée, racine en haut, indique la relation "père-enfant" entre les sommets. Lorsque deux sommets sont reliés par une branche, celui du haut est le père, et celui du bas est l’enfant. Un père peut avoir plusieurs enfants, mais un enfant ne peut pas avoir plusieurs pères (faites un dessin, on obtiendrait alors ce qu’on appelle un cycle dans le vocabulaire des graphes).</p>
-<p><em>Question</em> : Citez des exemples de représentation arborescente que vous connaissez.</p>
-<details class="check">
-<summary>Réponses possibles</summary>
-<p>un arbre généalogique, Une arborescence de fichiers, Un document HTML
-<img align="right" alt="Une arborescence de fichiers" src="../data/fichier.jpg" width="50%" />
-<img alt="Une arborescence html" src="../data/html.jpg" width="50%" /></p>
+</div>
+<p><em>Cette convention est celle adoptée dans le sujet 0 publié le 15/12/2020. Attention, dans certains ouvrages, l'arbre vide a pour hauteur -1, et donc l'arbre réduit à un seul nœud a pour hauteur 0, donc notre arbre aurait avec cette convention une hauteur 3.</em></p>
+<p><em>Question</em> : Dessinez chacun des arbres ci-dessous. Donner pour chaque arbre, sa taille, sa hauteur et son nombre de feuilles. <span class="arithmatex">\(\Delta\)</span> représente l'arbre vide. On rappelle que la <strong>hauteur</strong> d'un arbre est définie comme la profondeur maximale des noeuds de l'arbre.</p>
+<p><strong>1.</strong> <span class="arithmatex">\((1, \Delta, \Delta)\)</span></p>
+<details class="aide">
+<summary>Correction</summary>
+<p>Taille : 1
+Hauteur : 1
+Feuilles : 1</p>
+<p><code>graphviz dot 
+    digraph G1 {
+    rankdir=LR
+    1
+}</code></p>
 </details>
-<h2 id="definitions-complementaires">Définitions complémentaires<a class="headerlink" href="#definitions-complementaires" title="Permanent link">⚓︎</a></h2>
+<p><strong>2.</strong> <span class="arithmatex">\((2, (4,\Delta,(1, (5, \Delta, (3, \Delta, (2, \Delta, \Delta))), \Delta)), \Delta)\)</span></p>
+<details class="aide">
+<summary>Correction</summary>
+<p>Taille : 6
+Hauteur : 6
+Feuilles : 1</p>
+<p><span class="graphviz-light-dark" data-library-default="#789abc" data-default="#789abc" data-light="#8" data-dark="#ffffff"></span>&lt;svg width="413pt" height="355pt"</p>
+</details>
+<p>viewBox="0.00 0.00 413.00 355.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt; class="graphviz dot"&gt;<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 351)">
+<title>expression</title>
+<polygon fill="transparent" stroke="transparent" points="-4,4 -4,-351 409,-351 409,4 -4,4"/>
+<text text-anchor="middle" x="202.5" y="-7.8" font-family="Times New Roman,serif" font-size="14.00" fill="#789abc">Arbre peigne gauche de hauteur 4</text></p>
+<!-- 0 -->
+<p><g id="node1" class="node">
+<title>0</title>
+<ellipse fill="none" stroke="#789abc" cx="296.04" cy="-329" rx="27" ry="18"/>
+</g></p>
+<!-- 1 -->
+<p><g id="node2" class="node">
+<title>1</title>
+<ellipse fill="none" stroke="#789abc" cx="234.04" cy="-257" rx="27" ry="18"/>
+</g></p>
+<!-- 0&#45;&gt;1 -->
+<p><g id="edge1" class="edge">
+<title>0:&#45;&gt;1:</title>
+<path fill="none" stroke="#789abc" d="M282.89,-313.15C274.51,-303.69 263.48,-291.24 254.02,-280.56"/>
+<polygon fill="#789abc" stroke="#789abc" points="256.42,-277.99 247.17,-272.82 251.18,-282.63 256.42,-277.99"/>
+</g></p>
+<!-- 1d -->
+<p><g id="node3" class="node">
+<title>1d</title>
+</g></p>
+<!-- 0&#45;&gt;1d -->
+<p><g id="edge2" class="edge">
+<title>0:&#45;&gt;1d:</title>
+<path fill="none" stroke="#789abc" stroke-dasharray="5,2" d="M309.19,-313.15C319.07,-302 332.62,-286.7 342.95,-275.04"/>
+</g></p>
+<!-- 2 -->
+<p><g id="node4" class="node">
+<title>2</title>
+<ellipse fill="none" stroke="#789abc" cx="171.04" cy="-185" rx="27" ry="18"/>
+</g></p>
+<!-- 1&#45;&gt;2 -->
+<p><g id="edge3" class="edge">
+<title>1:&#45;&gt;2:</title>
+<path fill="none" stroke="#789abc" d="M220.68,-241.15C212.16,-231.69 200.95,-219.24 191.34,-208.56"/>
+<polygon fill="#789abc" stroke="#789abc" points="193.67,-205.92 184.38,-200.82 188.47,-210.6 193.67,-205.92"/>
+</g></p>
+<!-- 2d -->
+<p><g id="node5" class="node">
+<title>2d</title>
+</g></p>
+<!-- 1&#45;&gt;2d -->
+<p><g id="edge4" class="edge">
+<title>1:&#45;&gt;2d:</title>
+<path fill="none" stroke="#789abc" stroke-dasharray="5,2" d="M247.19,-241.15C257.07,-230 270.62,-214.7 280.95,-203.04"/>
+</g></p>
+<!-- 3 -->
+<p><g id="node6" class="node">
+<title>3</title>
+<ellipse fill="none" stroke="#789abc" cx="109.04" cy="-113" rx="27" ry="18"/>
+</g></p>
+<!-- 2&#45;&gt;3 -->
+<p><g id="edge5" class="edge">
+<title>2:&#45;&gt;3:</title>
+<path fill="none" stroke="#789abc" d="M157.89,-169.15C149.51,-159.69 138.48,-147.24 129.02,-136.56"/>
+<polygon fill="#789abc" stroke="#789abc" points="131.42,-133.99 122.17,-128.82 126.18,-138.63 131.42,-133.99"/>
+</g></p>
+<!-- 3d -->
+<p><g id="node7" class="node">
+<title>3d</title>
+</g></p>
+<!-- 2&#45;&gt;3d -->
+<p><g id="edge6" class="edge">
+<title>2:&#45;&gt;3d:</title>
+<path fill="none" stroke="#789abc" stroke-dasharray="5,2" d="M184.4,-169.15C194.44,-158 208.21,-142.7 218.7,-131.04"/>
+</g></p>
+<!-- 4 -->
+<p><g id="node8" class="node">
+<title>4</title>
+</g></p>
+<!-- 3&#45;&gt;4 -->
+<p><g id="edge7" class="edge">
+<title>3:&#45;&gt;4:</title>
+<path fill="none" stroke="#789abc" stroke-dasharray="5,2" d="M95.89,-97.15C86.01,-86 72.46,-70.7 62.13,-59.04"/>
+</g></p>
+<!-- 4d -->
+<p><g id="node9" class="node">
+<title>4d</title>
+</g></p>
+<!-- 3&#45;&gt;4d -->
+<p><g id="edge8" class="edge">
+<title>3:&#45;&gt;4d:</title>
+<path fill="none" stroke="#789abc" stroke-dasharray="5,2" d="M122.19,-97.15C132.07,-86 145.62,-70.7 155.95,-59.04"/>
+</g>
+</g>
+</svg></p>
+<h4 id="14-arbres-binaires">1.4 Arbres binaires<a class="headerlink" href="#14-arbres-binaires" title="Permanent link">⚓︎</a></h4>
+<p><img alt="image" class="center" src="../data/binary.jpg" width="50%" /></p>
+<div class="admonition note">
+<p class="admonition-title">Définition <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:" /></p>
+<p>Un arbre binaire est un arbre dont chaque nœud possède <strong>au plus</strong> deux fils.</p>
+</div>
+<p>L'arbre généalogique de la famille royale britannique n'est pas un arbre binaire. </p>
+<p>L'arbre ci-dessous est lui un arbre binaire.</p>
+<p><img alt="" class="center" src="../data/carac3.png" /></p>
+<h4 id="141-sous-arbres-dun-arbre-binaire">1.4.1 Sous-arbres d'un arbre binaire<a class="headerlink" href="#141-sous-arbres-dun-arbre-binaire" title="Permanent link">⚓︎</a></h4>
+<p>Chaque nœud d'un arbre binaire ne pouvant pas avoir plus de 2 fils, il est possible de séparer le «dessous» de chaque nœud en deux sous-arbres (éventuellement vides) : le <strong>sous-arbre gauche</strong> et le <strong>sous-arbre droit</strong>.</p>
+<p><img alt="" class="center" src="../data/sousarbres.png" /></p>
 <ul>
-<li>Les <strong>nœuds</strong> sont en général étiquetés, ci-contre les étiquettes sont les lettres a, b, c, etc…</li>
-<li>La <strong>taille</strong> d’un arbre est le <strong>nombre de ses nœuds</strong>. Dans l’exemple ci-dessus, la taille de l’arbre est 7.</li>
-<li>La <strong>hauteur</strong> (ou profondeur ou niveau) d’un nœud X est définie comme le <strong>nombre de nœud à parcourir pour aller de la racine au nœud X</strong>. La hauteur de la racine est arbitrairement fixée à 1, ou 0 suivant les définitions. Pour la suite du cours, nous choisirons la hauteur de la racine égale à 1.</li>
-<li>La <strong>hauteur de l’arbre</strong> est la plus grande des hauteurs de ses noeuds</li>
-</ul>
-<p>Exemple : </p>
-<ul>
-<li>le nœud ⓒ a pour hauteur 2 </li>
-<li>le nœud ⓕ a pour hauteur 3</li>
-<li>le nœud ⓖ a pour hauteur 3 (avec 1 comme hauteur pour a)</li>
-<li>la hauteur de l’arbre est égale à la hauteur du nœud ⓖ, soit 3.</li>
-</ul>
-<dl>
-<dt>Un arbre peut être défini de manière récursive : </dt>
-<dd>
-<p><img alt="➡️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/27a1.svg" title=":arrow_right:" /> un arbre est soit un arbre vide</p>
-</dd>
-<dd>
-<p><img alt="➡️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/27a1.svg" title=":arrow_right:" /> une racine <strong>et</strong> une liste de sous-arbres (éventuellement vide, auquel cas c’est une feuille). 
-C’est la définition qui est probablement la plus pertinente pour la vision « informatique » des arbres.</p>
-</dd>
-</dl>
-<p>En terminale, nous étudierons principalement les arbres binaires : </p>
-<p><strong>un arbre binaire est un arbre dont tous les nœuds sont d’arité au maximum 2.</strong></p>
-<p>Autrement dit, chaque père a aux plus deux enfants, appelés sous-arbre gauche et sous-arbre droit.
-Un arbre binaire est soit un arbre vide, soit une racine, un sous-arbre Gauche et un sous-arbre Droit. Il est essentiel de comprendre qu'un sous-arbre <strong>est</strong> un arbre. D'où la définition récursive ci dessus. 
-Les arbres binaires se rencontrent par exemple dans les compétitions sportives comme un tournoi de tennis.</p>
-<h3 id="trois-cas-particuliers">Trois cas particuliers :<a class="headerlink" href="#trois-cas-particuliers" title="Permanent link">⚓︎</a></h3>
-<details class="danger">
-<summary>Arbre dégénéré ou filiforme  ou arbre peigne</summary>
-<p>Un arbre binaire peigne est un cas particulier extrême d'arbre binaire, tous les nœuds intérieurs ont un seul enfant qui est non vide, et toujours du même côté. Techniquement c'est une liste chainée.
-<img alt="arbrefiliforme" src="../data/degenere.jpg" /></p>
-</details>
-<details class="danger">
-<summary>Arbre parfait</summary>
-<p>Un arbre binaire parfait possède des nœuds intérieurs qui ont tous exactement deux enfants non vides. C'est l'arbre idéal pour certains algorithmes... Une taille maximale pour une hauteur minimale. <br />
-<img alt="arbreParfait" src="../data/parfait.png" /></p>
-</details>
-<details class="danger">
-<summary>Arbre complet ou presque complet</summary>
-<p>c’est un arbre dont tous les niveaux sont complètement remplis, sauf éventuellement le dernier. Les feuilles du dernier niveau sont le plus à gauche possible
-<img alt="arbrecomplet" src="../data/complet.png" /></p>
-</details>
-<details class="attention" open="open">
-<summary>Attention</summary>
-<p>A noter que ces définitions varient suivant les auteurs et les livres ! notamment «parfait» et «complet» peuvent être intervertis !</p>
-</details>
-<h3 id="lien-entre-taille-et-hauteur">Lien entre taille et hauteur.<a class="headerlink" href="#lien-entre-taille-et-hauteur" title="Permanent link">⚓︎</a></h3>
-<p>Si un arbre binaire est de taille <code>n</code> et de hauteur <code>h</code>, alors : </p>
-<ul>
-<li>le nombre de sommets est au moins égal à la hauteur, et strictement inférieur à <span class="arithmatex">\(2^h\)</span> :
-    <span class="arithmatex">\(h &lt;= n &lt; 2^h\)</span></li>
-<li>De manière équivalente, la hauteur est strictement plus grande que le logarithme en base deux de la taille, et inférieur ou égal à la taille : <span class="arithmatex">\(\log _{2} n &lt; h &lt;= n\)</span></li>
+<li>Les deux sous-arbres représentés ici sont les sous-arbres du nœud-racine T. </li>
+<li>Le nœud O admet comme sous-arbre gauche le nœud H et comme sous-arbre droit le nœud N.</li>
+<li>Les feuilles P, H et N ont pour sous-arbre gauche et pour sous-arbre droit l'<strong>arbre vide</strong>.</li>
 </ul>
 <p><em>Question</em> : Dessiner tous les arbres binaires ayant respectivement 3 et 4 nœuds</p>
 <details class="check">
 <summary>Réponse</summary>
-<p>Il y a 5 arbres binaires possédant 3 noeuds
-<img alt="arbres à 3 noeuds" src="../data/exo5arbres3noeuds.jpg" />
-Il y a 14 arbres binaires possédant 5 noeuds
-<img alt="arbres à 4 noeuds" src="../data/exo14arbres4noeuds.jpg" /></p>
+<p>Il y a 5 arbres binaires possédant 3 noeuds. <br /></p>
+<p><img alt="arbres à 3 noeuds" src="../data/exo5arbres3noeuds.jpg" /></p>
+<p>Il y a 14 arbres binaires possédant 5 noeuds <br /></p>
+<p><img alt="arbres à 4 noeuds" src="../data/exo14arbres4noeuds.jpg" /></p>
 </details>
 <p><em>Question</em> :  calculer le nombre de d’arbres binaires contenant 5 nœuds. Sachant qu’il y a </p>
 <ul>
@@ -3266,156 +3610,811 @@ Pour chacune, on connaît le nombre de sous-arbres possibles, ce qui donne la so
 <center><span class="arithmatex">\(1*14 + 1*5 + 2*2 + 5*1 + 14*1\)</span></center>
 Soit un total de <strong>42</strong> arbres binaires possédant 5 noeuds</p>
 </details>
-<h3 id="mise-en-application-debranche">Mise en application débranché<a class="headerlink" href="#mise-en-application-debranche" title="Permanent link">⚓︎</a></h3>
-<p><a href="https://sofaugeras.github.io/TNSI/T1_Structures_de_donnees/1.3_arbres/Exercices/">Lien vers les exercices</a></p>
-<ol>
-<li>Une classe arbre binaire en Python</li>
-</ol>
-<p>Lien vers le notebook <a class="md-button md-button--primary" href="https://sofaugeras.github.io/TNSI/docs/T1_Structures_de_donnees/1.1_Listes_Piles_Files/01_Listes_Piles_Files.ipynb">Télécharger</a> </p>
-<p>Le but est de créer une structure de données pour représenter un arbre binaire en Python. Les opérations sur les arbres binaires sont au minimum :
-•   Construction d’arbre vide
-•   Construction d’un arbre à partir d’un entier et de deux sous-arbres gauche et droit
-•   Test de vacuité
-•   Accès à la racine d’un arbre
-•   Accès au sous-arbre gauche
-•   Accès au sous-arbre droit</p>
-<p>a.  Première implémentation
-On crée une classe nœud, puis on utilise ce nœud pour construire un arbre
-class Noeud:
-    def <strong>init</strong>(self,valeur,gauche,droit):
-        self.n = valeur
-        self.g = gauche
-        self.d = droit</p>
-<p>class ArbreBinaire:
-    def <strong>init</strong>(self,c):
-        self.r = c</p>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>def creeVide():
-    return ArbreBinaire(None)
-
-def creeNGD(valeur, gauche = None, droit = None):
-    return ArbreBinaire(Noeud(valeur, gauche, droit))
-
-def estVide(self):
-    return self.r is None
-
-def racine(self):
-    assert not(self.r is None),&#39;Arbre vide&#39;
-    # Deuxième version
-    # if self.estVide():
-</code></pre></div>
-<p>#     Raise index error('Arbre vide')
-        # else : 
-        return self.r.n</p>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>def filsGauche(self):
-    assert not(self.r is None),&#39;Arbre vide&#39;
-    return self.r.g
-
-def filsDroit(self):
-    assert not(self.r is None),&#39;Arbre vide&#39;
-    return self.r.d
-</code></pre></div>
-<p>b.  Deuxième implémentation
-Comme vu dans le notebook, la classe nœud suffit à créer un arbre, qui n’est rien d’autre qu’une suite récursive de nœuds. La classe ArbreBinaire du paragraphe précédent n’est donc pas obligatoire.</p>
-<ol>
-<li>Algorithmes sur les arbres
-Ces algorithmes sont à comprendre plus qu’à retenir
-a.  Taille et hauteur
-Calcul de la taille : retourne le nombre de sommets de l’arbre (racine + nœuds + feuilles)
-Fonction récursive taille(arbre) :
-Si arbre est vide
-Retourner 0
-Sinon
-Retourner 1 + taille (fils gauche) + taille (fils droit)</li>
-</ol>
-<p>Calcul de la hauteur : retourne la hauteur de l’arbre
-Fonction récursive hauteur(arbre) :
-Si arbre est vide
-Retourner 0
-Sinon
-Retourner 1 + max( hauteur (fils gauche), hauteur(fils droit))
-b.  Parcours en profondeur
-Dans le parcours en profondeur, on parcourt d’abord la racine de l’arbre, puis récursivement les enfants gauche et droit. L’ordre dans lequel est fait ce traitement donne les trois parcours possibles :</p>
-<p>i.  Parcours préfixe : racine – gauche – droit (la racine avant les enfants, la racine précèdent)
-ii. Parcours infixe : gauche – racine – droit (la racine est au milieu, « in »)
-iii.    Parcours suffixe : gauche – droit – racine (la racine est en dernier, la racine succède)</p>
-<p>Préfixe Infixe  Suffixe (postfixe)
-Fonction visitePréfixe(arbre) :
-    Si arbre n’est pas vide :
-         visiter racine
-         visitePréfixe (fils gauche) 
-         visitePréfixe (fils droit) Fonction visiteInfixe(arbre) :
-    Si arbre n’est pas vide :
-         visiteInfixe (fils gauche) 
-         visiter racine
-         visiteInfixe (fils droit)  Fonction visiteSuffixe(arbre) :
-    Si arbre n’est pas vide :
-         visiteSuffixe (fils gauche) 
-         visiteSuffixe (fils droit)
-         visiter racine</p>
-<p>c.  Parcours en largeur
-Principe : on parcourt tous les nœuds de hauteur 1 (la racine), puis tous les nœuds de hauteur 2, ceux de hauteur 3 etc. Le parcours se fait en général de gauche à droite.
-On utilise pour cela une file
-Étapes de l'algorithme : 
-1 . Mettre le nœud source dans la file.
-2.  Retirer le nœud du début de la file pour le traiter.
-3.  Mettre le fils gauche et le fils droits lorsqu’ils sont non vides, non explorés, à la fin de la file.
-4.  Si la file n'est pas vide reprendre à l'étape 2.</p>
-<ol>
-<li>Arbres binaires de recherche (ABR)
-a.  Définition
-Un arbre binaire de recherche, ou ABR, est un arbre binaire étiqueté possédant la propriété suivante :
-Pour tout nœud x, tous les nœuds situés dans le sous-arbre gauche de x ont une valeur inférieure ou égale à celle de x, et tous les nœuds situés dans le sous-arbre droit ont une valeur supérieure ou égale à celle de x.</li>
-</ol>
-<p>Les arbres binaires de recherche servent, comme leur nom l’indique, à rechercher rapidement des éléments ordonnés.
-Exemples :</p>
-<p>Est un arbre binaire de recherche   N’est pas un arbre binaire de recherche</p>
-<p>b.  Algorithmes sur les ABR
-i.  Recherche dans un ABR
-Principe : suivant la valeur à rechercher, et la valeur du nœud sur lequel on est, on cherche soit dans le sous-arbre gauche, soit dans le sous-arbre droit</p>
-<p>Fonction récursive recherche(ABR, valeur) :
-Si ABR est vide
-Retourner None          # variante : retourner Faux
-Sinon
-valeur(x)  = étiquette(ABR)     # valeur de la racine
-Si valeur &lt; valeur(x) :
-Retourner recherche(fils_gauche , valeur)
-Sinon si valeur &gt; valeur(x) :
-Retourner recherche(fils_droit , valeur)
-Sinon 
-Retourner ABR       # variante : retourner Vrai</p>
-<p>Pseudo-définition (peu rigoureuse et incomplète) : un arbre est équilibré si les hauteurs entre les sous-arbres gauche et droit sont différentes de 1 au maximum. Les arbres complets ou parfaits sont équilibrés.</p>
-<p>Arbre binaire de recherche équilibré (tout en étant ni parfait, ni complet) Arbre binaire de recherche déséquilibré. Cet arbre contient les mêmes données que celui de gauche.</p>
-<p>Complexité :
-Si l’arbre binaire de recherche est équilibré, alors le coût en temps de la recherche est en  , où n est le nombre de nœuds de l’arbre.
-Dans le cas ou l’arbre binaire de recherche n’est pas équilibré, la recherche est en   . Le cas le pire étant le cas ou l’ABR est filiforme.
-Remarque : on peut écrire une version itérative de cet algorithme (exercice intéressant)</p>
-<p>ii. Insertion dans un ABR
-Le problème de l’insertion dans un ABR correspond à celui de la construction de l’ABR. L’insertion dans un ABR commence par la recherche de l’endroit où l’on doit insérer la valeur. Si la valeur à insérer est plus petite –ou égale– que la valeur du nœud, on va à gauche, si elle est plus grande on va à droite. On arrive à un moment à un arbre vide : c’est là où on ajoute la nouvelle valeur. La gestion des arbres vides n’est cependant pas si simple dans cette approche.</p>
-<p>Fonction récursive ajoute(ABR, valeur) :</p>
-<p>Si ABR est vide
-ABR = Arbre(valeur, None, None)
-Sinon si valeur &lt;= étiquette_noeud(ABR) 
-ajoute(fils_gauche , valeur)
-Sinon 
-ajoute(fils_droit , valeur)</p>
-<p>Complexité : la complexité est identique à celle de la fonction de recherche. Dans le cas d’un arbre équilibré, elle est en  .
-Remarque : cette méthode ne donne pas forcément des arbres équilibrés. Pour avoir un arbre équilibré, une méthode efficace est d’insérer les éléments dans un ordre aléatoire.</p>
-<p>iii.    Suppression dans un ABR 
-Cette partie n’est pas au programme du bac. Elle constitue un complément enrichissant en vitamines pour les neurones.
-Le problème se décompose en trois cas, suivant le nombre de fils du nœud à supprimer.
-Si le nœud est une feuille (pas de fils), alors on supprime simplement le lien du père vers ce nœud (on décroche le nœud). Si ce lien n’existe pas, l’arbre devient l’arbre vide.</p>
-<p>Si le nœud a un seul fils, alors on décroche le nœud comme précédemment, et on remplace son fils dans le nœud père. Si le père n’existe pas, le nœud fils devient la racine de l’arbre.</p>
-<p>Si le nœud a deux fils, on cherche dans le sous-arbre gauche le nœud MaxLocal de valeur la plus grande (ou le nœud de valeur la plus petite dans le sous-arbre droit). La valeur de ce nœud va remplacer la valeur supprimée. Comme ce nœud MaxLocal a la valeur maximale dans le sous-arbre gauche, il n’a pas de fils droit. On peut donc le décrocher, comme on l’a fait dans le cas précédent.</p>
-<hr />
-<h2 id="bibliographie">Bibliographie<a class="headerlink" href="#bibliographie" title="Permanent link">⚓︎</a></h2>
+<h4 id="143-cas-des-arbres-binaires-complets">1.4.3 Cas des arbres binaires complets<a class="headerlink" href="#143-cas-des-arbres-binaires-complets" title="Permanent link">⚓︎</a></h4>
+<p>On rencontre très souvent des arbres binaires dits <strong>complets</strong> parce qu'aucun des fils gauche ou droit n'est manquant.</p>
+<p><img alt="" class="center" src="../data/complet.png" /></p>
+<p><strong>Taille d'un arbre complet de hauteur <span class="arithmatex">\(h\)</span> :</strong>
+<span class="arithmatex">\(1 + 2 + 2^2 + 2^3 + \dots + 2^{h-1} = 2^{h} - 1\)</span></p>
+<p><em>preuve</em> : ceci est la somme <span class="arithmatex">\(S\)</span> des <span class="arithmatex">\(h\)</span> premiers termes d'une suite géométrique de raison 2 et de premier terme 1, d'où <span class="arithmatex">\(S= \frac{1-2^{h}}{1-2} = 2^{h} -1\)</span>.</p>
+<p>Un arbre complet de hauteur <span class="arithmatex">\(h\)</span> (en prenant la convention que l'arbre vide a pour hauteur 0) a donc une taille égale à <span class="arithmatex">\(2^{h}-1\)</span>.</p>
+<p><strong>Remarque :</strong> On en déduit une inégalité classique sur l'encadrement de la taille <span class="arithmatex">\(t\)</span> d'un arbre binaire (non nécessairement complet) de hauteur <span class="arithmatex">\(h\)</span> :</p>
+<div class="arithmatex">\[h \leqslant t \leqslant 2^{h}-1\]</div>
+<h2 id="2-parcours-darbres">2. Parcours d'arbres<a class="headerlink" href="#2-parcours-darbres" title="Permanent link">⚓︎</a></h2>
+<p>Les arbres étant une structure hiérarchique, leur utilisation implique la nécessité d'un <strong>parcours</strong> des valeurs stockées. Par exemple pour toutes les récupérer dans un certain ordre, ou bien pour en chercher une en particulier.  </p>
+<p>Il existe plusieurs manières de parcourir un arbre.</p>
+<h3 id="21-parcours-en-largeur-dabord-bfs">2.1 Parcours en largeur d'abord (BFS)<a class="headerlink" href="#21-parcours-en-largeur-dabord-bfs" title="Permanent link">⚓︎</a></h3>
+<p><em>BFS : Breadth First Search</em></p>
+<div class="admonition note">
+<p class="admonition-title">Méthode du parcours en largeur (BFS) <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:" /></p>
+<p>Le parcours en largeur d'abord est un parcours étage par étage (de haut en bas) et de gauche à droite.</p>
+</div>
+<p><img alt="" class="center" src="../data/BFS.png" /></p>
+<p>L'ordre des lettres parcourues est donc T-Y-O-P-H-N.</p>
+<p>Les trois parcours que nous allons voir maintenant sont des parcours en <strong>profondeur d'abord</strong>, ou <strong>DFS</strong> (<em>Depth First Search</em>). Ce qui signifie qu'un des deux sous-arbres sera totalement parcouru avant que l'exploration du deuxième ne commence. </p>
+<h3 id="22-parcours-prefixe">2.2 Parcours préfixe<a class="headerlink" href="#22-parcours-prefixe" title="Permanent link">⚓︎</a></h3>
+<p>Le parcours <strong>préfixe</strong> est un parcours <strong>en profondeur d'abord</strong>. </p>
+<div class="admonition note">
+<p class="admonition-title">Méthode du parcours préfixe <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:" /></p>
+<p>(parfois aussi appelé <em>préordre</em>)</p>
 <ul>
-<li>Cours de Frédéric Mandon <img alt="" src="../data/ccbysa.png" title="image" /></li>
-<li>Gilles Lassus – Enseignant NSI <img alt="" src="../data/ccbysa.png" title="image" /> Lycée François Mauriac --  Bordeaux </li>
-<li>NSI 24 Leçons avec exercices corrigés – Edition Ellipses</li>
-<li>Prépabac NSI, Terminale, G.CONNAN, V.PETROV, G.ROZSAVOLGYI, L.SIGNAC, éditions HATIER.</li>
+<li>Chaque nœud est visité <strong>avant</strong> que ses fils le soient.</li>
+<li>On part de la racine, puis on visite son fils gauche (et éventuellement le fils gauche de celui-ci, etc.) avant de remonter et de redescendre vers le fils droit.</li>
+</ul>
+</div>
+<p><img alt="" class="center" src="../data/prefixe.png" /></p>
+<p>L'ordre des lettres parcourues est donc T-Y-P-O-H-N.</p>
+<h3 id="23-parcours-infixe">2.3 Parcours infixe<a class="headerlink" href="#23-parcours-infixe" title="Permanent link">⚓︎</a></h3>
+<p>Le parcours <strong>infixe</strong> est aussi un parcours en profondeur d'abord.</p>
+<div class="admonition note">
+<p class="admonition-title">Méthode du parcours infixe <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:" /></p>
+<p>(parfois aussi appelé <em>en ordre</em>)</p>
+<ul>
+<li>Chaque nœud est visité <strong>après son fils gauche mais avant son fils droit</strong>.</li>
+<li>On part donc de la feuille la plus à gauche et on remonte par vagues sucessives. Un nœud ne peut pas être visité si son fils gauche ne l'a pas été.</li>
+</ul>
+</div>
+<p><img alt="" class="center" src="../data/infixe.png" /></p>
+<p>L'ordre des lettres parcourues est donc P-Y-T-H-O-N.</p>
+<h3 id="24-parcours-postfixe">2.4 Parcours postfixe<a class="headerlink" href="#24-parcours-postfixe" title="Permanent link">⚓︎</a></h3>
+<p>Le parcours <strong>postfixe</strong> est aussi un parcours en profondeur d'abord.</p>
+<div class="admonition note">
+<p class="admonition-title">Méthode du parcours postfixe <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:" /></p>
+<p>(parfois aussi appelé <strong>post-ordre</strong> ou encore <strong>suffixe</strong>)</p>
+<ul>
+<li>Chaque nœud est visité <strong>après</strong> ses fils le soient.</li>
+<li>On part donc de la feuille la plus à gauche, et on ne remonte à un nœud père que si ses fils ont tous été visités. </li>
+</ul>
+</div>
+<p><img alt="" class="center" src="../data/postfixe.png" /></p>
+<p>L'ordre des lettres parcourues est donc P-Y-H-N-O-T.</p>
+<h3 id="25-comment-ne-pas-se-melanger-entre-le-pre-in-post-fixe">2.5 Comment ne pas se mélanger entre le pré / in / post fixe ?<a class="headerlink" href="#25-comment-ne-pas-se-melanger-entre-le-pre-in-post-fixe" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li><em>pré</em> veut dire <em>avant</em></li>
+<li><em>in</em> veut dire <em>au milieu</em></li>
+<li><em>post</em> veut dire <em>après</em></li>
+</ul>
+<p>Ces trois mots-clés parlent de la place du <strong>père</strong> par rapport à ses fils. 
+Ensuite, il faut toujours se souvenir qu'on traite le fils gauche avant le fils droit.</p>
+<ul>
+<li>préfixe : le père doit être le premier par rapport à ses fils.</li>
+<li>infixe : le père doit être entre son fils gauche (traité en premier) et son fils droit.</li>
+<li>postfixe : le père ne doit être traité que quand ses deux fils (gauche d'abord, droite ensuite) l'ont été.</li>
+</ul>
+<p>Un parcours préfixe commencera toujours par la racine, alors qu'un parcours postfixe finira toujours par la racine. Dans un parcours infixe, la racine sera «au milieu» (pas nécessairement parfaitement).</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice</p>
+<p><img alt="" class="center" src="../data/exo_parcours.png" /></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Corr. largeur</label><label for="__tabbed_1_3">Corr. préfixe</label><label for="__tabbed_1_4">Corr. infixe</label><label for="__tabbed_1_5">Corr. postfixe</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Donner le rendu de chaque parcours :</p>
+<ol>
+<li>Parcours en largeur </li>
+<li>Parcours préfixe</li>
+<li>Parcours infixe</li>
+<li>Parcours postfixe</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>largeur : 1 2 3 4 5 6 7 8 9</p>
+</div>
+<div class="tabbed-block">
+<p>préfixe : 1 2 4 5 7 8 3 6 9</p>
+</div>
+<div class="tabbed-block">
+<p>infixe : 4 2 7 5 8 1 3 9 6</p>
+</div>
+<div class="tabbed-block">
+<p>postfixe : 4 7 8 5 2 9 6 3 1</p>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice</p>
+<p><img alt="" class="center" src="../data/exo_2.png" /></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:5"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Corr. largeur</label><label for="__tabbed_2_3">Corr. préfixe</label><label for="__tabbed_2_4">Corr. infixe</label><label for="__tabbed_2_5">Corr. postfixe</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Donner le rendu de chaque parcours :</p>
+<ol>
+<li>Parcours en largeur </li>
+<li>Parcours préfixe</li>
+<li>Parcours infixe</li>
+<li>Parcours postfixe</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>largeur : 9 8 7 6 2 5 1 4 3</p>
+</div>
+<div class="tabbed-block">
+<p>préfixe : 9 8 6 2 1 7 5 4 3</p>
+</div>
+<div class="tabbed-block">
+<p>infixe : 6 8 1 2 9 7 4 5 3</p>
+</div>
+<div class="tabbed-block">
+<p>postfixe : 6 1 2 8 4 3 5 7 9</p>
+</div>
+</div>
+</div>
+</div>
+<h2 id="3-implementations-dun-arbre-binaire">3. Implémentations d'un arbre binaire<a class="headerlink" href="#3-implementations-dun-arbre-binaire" title="Permanent link">⚓︎</a></h2>
+<h3 id="31-en-utilisant-la-programmation-orientee-objet">3.1 En utilisant la Programmation Orientée Objet<a class="headerlink" href="#31-en-utilisant-la-programmation-orientee-objet" title="Permanent link">⚓︎</a></h3>
+<p>Le but est d'obtenir l'interface ci-dessous.</p>
+<p>Il est à remarquer que ce que nous allons appeler «Arbre» est en fait un nœud et ses deux fils gauche et droit.</p>
+<div class="admonition abstract">
+<p class="admonition-title">interface souhaitée</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="c1"># pour créer l&#39;arbre dont le nœud a pour valeur 4,</span>
+            <span class="c1"># et dont les sous-arbres gauche et droit sont None</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># pour donner la valeur 3 au nœud du sous-arbre gauche de a</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># pour donner la valeur 1 au nœud du sous-arbre droit de a</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">data</span> <span class="c1"># pour accéder à la valeur du fils droit de a</span>
+</code></pre></div>
+</div>
+<details class="example">
+<summary>exercice</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Enoncé</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<p>Dessinez l'arbre créé par les instructions suivantes :
+    <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+</code></pre></div></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="" src="../data/exo_imp.png" /></p>
+</div>
+</div>
+</div>
+</details>
+<p><strong><img alt="⭐️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2b50.svg" title=":star:" /> Implémentation <img alt="⭐️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2b50.svg" title=":star:" /></strong></p>
+<p>⯈ <strong>Principe</strong> : nous allons créer une classe <code>Arbre</code>, qui contiendra 3 attributs : </p>
+<ul>
+<li><code>data</code> : la valeur du nœud (de type <code>Int</code>)</li>
+<li><code>left</code> : le sous-arbre gauche (de type <code>Arbre</code>)</li>
+<li><code>right</code> : le sous-arbre droit (de type <code>Arbre</code>).</li>
+</ul>
+<p>Par défaut, les attributs <code>left</code> et <code>right</code> seront à <code>None</code>, qui représentera l'arbre vide (ce qui n'est pas très rigoureux, car <code>None</code> n'est pas de type <code>Arbre</code>...).</p>
+<p>⯈ <strong>Encapsulation ou pas ???</strong> : </p>
+<p>Afin de respecter le paradigme de la Programmation Orientée Objet, nous devrions jouer totalement le jeu de l'<strong>encapsulation</strong> en nous refusant d'accéder directement aux attributs.</p>
+<p>Pour cela  il faut construire des méthodes permettant d'accéder à ces attributs (avec des <strong>getters</strong>, ou <strong>accesseurs</strong> en français) ou de les modifier (avec des <strong>setters</strong>, ou <strong>mutateurs</strong> en français) .</p>
+<h4 id="311-implementation-avec-encapsulation">3.1.1 Implémentation avec encapsulation<a class="headerlink" href="#311-implementation-avec-encapsulation" title="Permanent link">⚓︎</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Classe <code>Arbre</code> avec encapsulation</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Arbre</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">set_left</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sousarbre</span><span class="p">):</span> <span class="c1"># mutateur</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">sousarbre</span>
+
+    <span class="k">def</span> <span class="nf">set_right</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sousarbre</span><span class="p">):</span> <span class="c1"># mutateur</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">sousarbre</span>  
+
+    <span class="k">def</span> <span class="nf">get_left</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># accesseur</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">left</span>
+
+    <span class="k">def</span> <span class="nf">get_right</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># accesseur</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">right</span>
+
+    <span class="k">def</span> <span class="nf">get_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># accesseur</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>L'implémentation précédente permet d'utiliser les instructions de l'exercice précédent et de vérifier que l'arbre a bien été créé.</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">set_left</span><span class="p">(</span><span class="n">Arbre</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">set_right</span><span class="p">(</span><span class="n">Arbre</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">get_right</span><span class="p">()</span><span class="o">.</span><span class="n">set_left</span><span class="p">(</span><span class="n">Arbre</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">get_right</span><span class="p">()</span><span class="o">.</span><span class="n">set_right</span><span class="p">(</span><span class="n">Arbre</span><span class="p">(</span><span class="mi">7</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">get_left</span><span class="p">()</span><span class="o">.</span><span class="n">set_left</span><span class="p">(</span><span class="n">Arbre</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">get_right</span><span class="p">()</span><span class="o">.</span><span class="n">get_right</span><span class="p">()</span><span class="o">.</span><span class="n">set_left</span><span class="p">(</span><span class="n">Arbre</span><span class="p">(</span><span class="mi">9</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+   <span class="o">&lt;</span><span class="n">__main__</span><span class="o">.</span><span class="n">Arbre</span> <span class="n">at</span> <span class="mh">0x7f0100361f40</span><span class="o">&gt;</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">get_right</span><span class="p">()</span><span class="o">.</span><span class="n">get_left</span><span class="p">()</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
+   <span class="mi">2</span>
+</code></pre></div>
+<h4 id="311-implementation-sans-encapsulation">3.1.1 Implémentation sans encapsulation<a class="headerlink" href="#311-implementation-sans-encapsulation" title="Permanent link">⚓︎</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Classe <code>Arbre</code> sans encapsulation <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Arbre</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="kc">None</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>C'est déjà fini !</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+   <span class="o">&lt;</span><span class="n">__main__</span><span class="o">.</span><span class="n">Arbre</span> <span class="n">at</span> <span class="mh">0x7f0100361f40</span><span class="o">&gt;</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">data</span>
+   <span class="mi">2</span>
+</code></pre></div>
+<p>On voit que l'implémentation avec accès direct aux attributs est beaucoup plus simple et rapide. Néanmoins, elle peut être considérée comme incorrecte dans certains langages qui obligent à passer par des accesseurs ou mutateurs pour lire ou modifier les attributs.</p>
+<h4 id="312-representation-graphique-en-console">3.1.2 Représentation graphique en console<a class="headerlink" href="#312-representation-graphique-en-console" title="Permanent link">⚓︎</a></h4>
+<p>La méthode <code>affiche</code> suivante (qui n'est pas à connaître) permet d'avoir un semblant de représentation graphique de l'arbre en console :</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">affiche</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indent</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">indent</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">affiche</span><span class="p">(</span><span class="n">indent</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39; &#39;</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">indent</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="s1">&#39;None&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>     
+
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">affiche</span><span class="p">(</span><span class="n">indent</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39; &#39;</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">indent</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="s1">&#39;None&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>  
+    <span class="k">return</span> <span class="n">s</span>
+</code></pre></div></td></tr></table></div>
+<p>La représentation de cet arbre :
+<img alt="" class="center" src="../data/exo_imp.png" />
+donnera alors :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">affiche</span><span class="p">())</span>
+<span class="o">|</span><span class="n">_4</span>
+  <span class="o">|</span><span class="n">_3</span>
+    <span class="o">|</span><span class="n">_6</span>
+    <span class="o">|</span><span class="n">_None</span>
+  <span class="o">|</span><span class="n">_1</span>
+    <span class="o">|</span><span class="n">_2</span>
+    <span class="o">|</span><span class="n">_7</span>
+      <span class="o">|</span><span class="n">_9</span>
+      <span class="o">|</span><span class="n">_None</span>
+</code></pre></div>
+<h3 id="32-implementation-a-partir-de-tuples-imbriques">3.2 Implémentation à partir de tuples imbriqués<a class="headerlink" href="#32-implementation-a-partir-de-tuples-imbriques" title="Permanent link">⚓︎</a></h3>
+<div class="admonition note">
+<p class="admonition-title"><code>Arbre</code> sous forme de tuples imbriqués <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:" /></p>
+<p>Un arbre peut se représenter par le tuple <code>(valeur, sous-arbre gauche, sous-arbre droit)</code>.
+L'arbre ci-dessous :
+<img alt="" class="center" src="../data/imp_tuple.png" />
+est représenté par le tuple :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="p">(</span><span class="mi">6</span><span class="p">,(),()),</span> <span class="p">(</span><span class="mi">9</span><span class="p">,(),())),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="p">(),()),</span> <span class="p">()))</span>
+</code></pre></div>
+</div>
+<p>Le sous-arbre gauche est alors <code>a[1]</code> et le sous-arbre droit est <code>a[2]</code>.</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="p">(),</span> <span class="p">()),</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="p">(),</span> <span class="p">()))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="p">(),</span> <span class="p">()),</span> <span class="p">())</span>
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Exercice</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Enoncé</label><label for="__tabbed_5_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="" class="center" src="../data/carac3.png" /></p>
+<p>Écrire le tuple représentant l'arbre ci-dessous.       </p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="n">T</span><span class="p">,(</span><span class="n">Y</span><span class="p">,(</span><span class="n">P</span><span class="p">,(),()),()),(</span><span class="n">O</span><span class="p">,(</span><span class="n">H</span><span class="p">,(),()),(</span><span class="n">N</span><span class="p">,(),())))</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<h3 id="33-implementation-a-partir-dune-simple-liste">3.3 Implémentation à partir d'une «simple» liste<a class="headerlink" href="#33-implementation-a-partir-dune-simple-liste" title="Permanent link">⚓︎</a></h3>
+<p>De manière plus surprenante, il existe une méthode pour implémenter un arbre binaire (qui est une structure hiérarchique) avec une liste (qui est une structure linéaire). 
+Ceci peut se faire par le biais d'une astuce sur les indices :</p>
+<p><strong>Les fils du nœud d'indice i sont placés aux indice 2i+1 et 2i+2</strong>.</p>
+<p>Cette méthode est connue sous le nom de «méthode d'Eytzinger», et utilisée notamment en <a href="https://fr.wikipedia.org/wiki/Num%C3%A9rotation_de_Sosa-Stradonitz">généalogie</a> pour numéroter facilement les individus d'un arbre généalogique.</p>
+<p><strong>Exemple :</strong></p>
+<p><img alt="" class="center" src="../data/eytzinger.png" /></p>
+<p>Pour comprendre facilement la numérotation, il suffit de s'imaginer l'arbre complet (en rajoutant les fils vides) et de faire une numérotation en largeur, niveau par niveau :</p>
+<p><img alt="" class="center" src="../data/eytzinger2.png" /></p>
+<div class="admonition example">
+<p class="admonition-title">Exercice</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Enoncé</label><label for="__tabbed_6_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Si on note Δ le sous-arbre vide, dessiner l'arbre représenté par la liste :
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">Δ</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="correction" class="center" src="../data/corrtuple.png" />        </p>
+</div>
+</div>
+</div>
+</div>
+<p><strong>Remarque :</strong> parfois (comme dans le sujet 0...) la racine de l'arbre est placée à l'indice 1. Dans ce cas, les fils du nœud d'indice i sont placés aux indice 2i et 2i+1.</p>
+<h2 id="4-utilisation-de-limplementation-parcours-taille">4. Utilisation de l'implémentation : parcours, taille...<a class="headerlink" href="#4-utilisation-de-limplementation-parcours-taille" title="Permanent link">⚓︎</a></h2>
+<p>Dans toute la suite, sauf mention contraire, on utilisera l'implémentation en Programmation Orientée Objet, en version sans encapsulation (la plus simple).
+Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, ou encore sa taille, sa hauteur, son nombre de feuilles... Toutes ses fonctions exploiteront la structure <strong>récursive</strong> d'un arbre.</p>
+<p><strong>Rappel de l'implémentation :</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Arbre</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="kc">None</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="41-parcours-prefixe-infixe-postfixe">4.1 Parcours préfixe, infixe, postfixe<a class="headerlink" href="#41-parcours-prefixe-infixe-postfixe" title="Permanent link">⚓︎</a></h3>
+<p>Dans un premier temps nous allons écrire ces parcours de manière récursive. Nous souhaitons <em>afficher</em> les sommets, donc nous utiliserons <code>print</code>. Et deux appels récursifs... </p>
+<h4 id="411-parcours-prefixe">4.1.1 Parcours préfixe<a class="headerlink" href="#411-parcours-prefixe" title="Permanent link">⚓︎</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Parcours préfixe <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">prefixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+    <span class="n">prefixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
+    <span class="n">prefixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>Exemple avec l'arbre 
+<img alt="" class="center" src="../data/exo_2.png" /></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">prefixe</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">9</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span>
+</code></pre></div>
+<h4 id="412-parcours-infixe">4.1.2 Parcours infixe<a class="headerlink" href="#412-parcours-infixe" title="Permanent link">⚓︎</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Parcours infixe <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+    <span class="n">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">infixe</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">6</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span>
+</code></pre></div>
+<h4 id="413-parcours-postfixe">4.1.3 Parcours postfixe<a class="headerlink" href="#413-parcours-postfixe" title="Permanent link">⚓︎</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Parcours postfixe <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">postfixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">postfixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
+    <span class="n">postfixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">postfixe</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">6</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span>
+</code></pre></div>
+<div class="admonition aide">
+<p class="admonition-title">Pause vidéo</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Vidéo</label><label for="__tabbed_7_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Regardez et appréciez <a class="" href="https://youtu.be/OTfp2_SwxHk" target="_blank">cette vidéo</a></li>
+<li>À l'aide de la vidéo, codez le parcours infixe en itératif.  </li>
+</ul>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="n">pile</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">while</span> <span class="n">pile</span> <span class="o">!=</span> <span class="p">[]</span> <span class="ow">or</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">pile</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">arbre</span><span class="p">)</span>
+            <span class="n">arbre</span> <span class="o">=</span> <span class="n">arbre</span><span class="o">.</span><span class="n">left</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">arbre</span> <span class="o">=</span> <span class="n">pile</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+            <span class="n">arbre</span> <span class="o">=</span> <span class="n">arbre</span><span class="o">.</span><span class="n">right</span>
+</code></pre></div></td></tr></table></div>
+<p>ou</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">infixe_avec_liste</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="n">parcours</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">pile</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="n">current</span> <span class="o">=</span> <span class="n">arbre</span>
+
+    <span class="k">while</span> <span class="n">pile</span> <span class="o">!=</span> <span class="p">[]</span> <span class="ow">or</span> <span class="n">current</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">current</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">pile</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current</span><span class="p">)</span>
+            <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">left</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">current</span> <span class="o">=</span> <span class="n">pile</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+            <span class="n">parcours</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+            <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">right</span>
+
+    <span class="k">return</span> <span class="n">parcours</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</div>
+<h3 id="42-calcul-de-la-taille-dun-arbre">4.2 Calcul de la taille d'un arbre<a class="headerlink" href="#42-calcul-de-la-taille-dun-arbre" title="Permanent link">⚓︎</a></h3>
+<p>Rappel : la taille d'un arbre est le nombre de ses nœuds.</p>
+<div class="admonition note">
+<p class="admonition-title">Taille d'un arbre <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">taille</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">taille</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">)</span> <span class="o">+</span> <span class="n">taille</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<p>Exemple avec l'arbre 
+<img alt="" class="center" src="../data/exo_2.png" /></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">taille</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">9</span>
+</code></pre></div>
+<h3 id="43-calcul-de-la-hauteur-dun-arbre">4.3 Calcul de la hauteur d'un arbre<a class="headerlink" href="#43-calcul-de-la-hauteur-dun-arbre" title="Permanent link">⚓︎</a></h3>
+<p>Rappel : on prendra comme convention que l'arbre vide a pour hauteur 0.</p>
+<div class="admonition note">
+<p class="admonition-title">Hauteur d'un arbre <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">hauteur</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="n">hauteur</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">),</span> <span class="n">hauteur</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">))</span>
+</code></pre></div>
+</div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">hauteur</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">4</span>
+</code></pre></div>
+<h3 id="44-calcul-du-nombre-de-feuilles-dun-arbre">4.4 Calcul du nombre de feuilles d'un arbre<a class="headerlink" href="#44-calcul-du-nombre-de-feuilles-dun-arbre" title="Permanent link">⚓︎</a></h3>
+<p>Rappel : une feuille est un nœud d'arité 0, autrement dit sans fils gauche ni fils droit.</p>
+<div class="admonition note">
+<p class="admonition-title">Nombre de feuilles d'un arbre <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">nb_feuilles</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">nb_feuilles</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">)</span> <span class="o">+</span>  <span class="n">nb_feuilles</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">nb_feuilles</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">4</span>
+</code></pre></div>
+<h3 id="45-recherche-dune-valeur-dans-un-arbre">4.5 Recherche d'une valeur dans un arbre<a class="headerlink" href="#45-recherche-dune-valeur-dans-un-arbre" title="Permanent link">⚓︎</a></h3>
+<p>On renverra <code>True</code> ou <code>False</code> en fonction de la présence ou non de la valeur dans l'arbre.</p>
+<div class="admonition note">
+<p class="admonition-title">Recherche d'une valeur dans un arbre <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="n">arbre</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span>  <span class="n">valeur</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="n">recherche</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">valeur</span><span class="p">)</span> <span class="ow">or</span> <span class="n">recherche</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">valeur</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
+<span class="kc">False</span>
+</code></pre></div>
+<h3 id="46-parcours-en-largeur">4.6 Parcours en largeur<a class="headerlink" href="#46-parcours-en-largeur" title="Permanent link">⚓︎</a></h3>
+<p>Le parcours en largeur (BFS) est le plus simple à faire visuellement : mais il est plus difficile à coder que les parcours préfixe, infixe, postfixe.<br />
+Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
+<ul>
+<li>On place l'arbre dans la file.</li>
+<li>Tant que la file n'est pas vide, on procède comme suit :<ul>
+<li>On défile, donc on récupère l'arbre situé en haut de la file.  </li>
+<li>Si cet arbre n'est pas vide :<ul>
+<li>On garde son étiquette.</li>
+<li>On enfile son sous-arbre gauche, puis son sous-arbre droit.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" class="center" src="../data/parcoursBFS.png" /></p>
+<p>On importera l'objet <code>Queue()</code> du module <code>queue</code> de Python, qui permet de  :</p>
+<ul>
+<li>créer une file vide avec <code>file = Queue()</code></li>
+<li>défiler un élément par <code>file.get()</code></li>
+<li>enfiler l'élément <code>a</code> par <code>file.put(a)</code></li>
+<li>savoir si la file est vide par le booléen <code>file.empty()</code></li>
+</ul>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># arbre-test</span>
+<span class="c1"># ne pas oublier de remonter plus haut dans le document pour relancer la classe Arbre</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Parcours en largeur (BFS) </p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">queue</span> <span class="kn">import</span> <span class="n">Queue</span>
+
+<span class="k">def</span> <span class="nf">BFS</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>        
+    <span class="n">file</span> <span class="o">=</span> <span class="n">Queue</span><span class="p">()</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">arbre</span><span class="p">)</span>
+    <span class="n">sol</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">file</span><span class="o">.</span><span class="n">empty</span><span class="p">():</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">a</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="p">:</span>
+            <span class="n">sol</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">sol</span>
+</code></pre></div>
+</div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">BFS</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</code></pre></div>
+<h2 id="5-arbres-binaires-de-recherche-abr">5. Arbres binaires de recherche (ABR)<a class="headerlink" href="#5-arbres-binaires-de-recherche-abr" title="Permanent link">⚓︎</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Définition d'un ABR <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:" /></p>
+<p>Un <strong>arbre binaire de recherche</strong> est un arbre binaire dont les valeurs des nœuds (valeurs qu'on appelle étiquettes, ou clés) vérifient la propriété suivante :</p>
+<ul>
+<li>l'étiquette d'un nœud est <strong>supérieure ou égale</strong> à celle de <strong>chaque</strong> nœud de son <strong>sous-arbre gauche</strong>.</li>
+<li>l'étiquette d'un nœud est <strong>strictement inférieure</strong> à celle du <strong>chaque</strong> nœud de son <strong>sous-arbre droit</strong>.</li>
+</ul>
+</div>
+<p><img alt="" class="center" src="../data/exABR.png" /></p>
+<p>À noter que l'arbre 3 (qui est bien un ABR) est appelé <strong>arbre filiforme</strong>. </p>
+<p>L'arbre 5 n'est pas un ABR à cause de la feuille 9, qui fait partie du sous-arbre gauche de 3 sans lui être inférieure.</p>
+<p><strong>Remarque :</strong> on pourrait aussi définir un ABR comme un arbre dont le parcours infixe est une suite croissante.</p>
+<h3 id="51-determiner-si-un-arbre-est-un-abr">5.1 Déterminer si un arbre est un ABR<a class="headerlink" href="#51-determiner-si-un-arbre-est-un-abr" title="Permanent link">⚓︎</a></h3>
+<p>Employer une méthode récursive imposerait de garder en mémoire dans l'exploration des sous-arbres la valeur maximale ou minimale. Nous allons plutôt utiliser la remarque précédente, et nous servir du parcours infixe.</p>
+<p>Méthode : récupérer le parcours infixe dans une liste, et faire un test sur cette liste.</p>
+<div class="admonition note">
+<p class="admonition-title">Être ou ne pas être un ABR</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">s</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+    <span class="n">s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">s</span>
+
+
+<span class="k">def</span> <span class="nf">est_ABR</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie un booléen indiquant si arbre est un ABR&#39;&#39;&#39;</span>
+    <span class="n">parcours</span> <span class="o">=</span> <span class="n">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">parcours</span> <span class="o">==</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">parcours</span><span class="p">)</span> <span class="c1"># on regarde si le parcours est égal au parcours trié </span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># arbres-tests </span>
+
+<span class="c1">#arbre n°4</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+
+<span class="c1">#arbre n°5</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">b</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">b</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">b</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">b</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">b</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">b</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">est_ABR</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">est_ABR</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="kc">False</span>
+</code></pre></div>
+<h3 id="52-rechercher-une-cle-dans-un-abr">5.2 Rechercher une clé dans un ABR<a class="headerlink" href="#52-rechercher-une-cle-dans-un-abr" title="Permanent link">⚓︎</a></h3>
+<p>Un arbre binaire de taille <span class="arithmatex">\(n\)</span> contient <span class="arithmatex">\(n\)</span> clés (pas forcément différentes). Pour savoir si une valeur particulière fait partie des clés, on peut parcourir tous les nœuds de l'arbre, jusqu'à trouver (ou pas) cette valeur dans l'arbre. Dans le pire des cas, il faut donc faire <span class="arithmatex">\(n\)</span> comparaisons.</p>
+<p>Mais si l'arbre est un ABR, le fait que les valeurs soient «rangées» va considérablement améliorer la vitesse de recherche de cette clé, puisque la moitié de l'arbre restant sera écartée après chaque comparaison.</p>
+<div class="admonition note">
+<p class="admonition-title">Recherche d'une clé dans un ABR <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_ABR</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="n">arbre</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="n">valeur</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">valeur</span> <span class="o">&lt;</span> <span class="n">arbre</span><span class="o">.</span><span class="n">data</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="n">recherche_ABR</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">valeur</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">recherche_ABR</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">valeur</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<p><strong>Exemple</strong> </p>
+<p>L'arbre <code>a</code> contient la valeur 8, mais pas la valeur 12.</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_ABR</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_ABR</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="kc">False</span>
+</code></pre></div>
+<h3 id="53-cout-de-la-recherche-dans-un-abr-equilibre">5.3  Coût de la recherche dans un ABR équilibré<a class="headerlink" href="#53-cout-de-la-recherche-dans-un-abr-equilibre" title="Permanent link">⚓︎</a></h3>
+<p><img alt="" class="center" src="../data/rechercheABR.png" /></p>
+<p>Imaginons un arbre équilibré de taille <span class="arithmatex">\(n\)</span>. Combien d'étapes faudra-t-il, dans le pire des cas, pour trouver (ou pas) une clé particulière dans cet arbre ?</p>
+<p>Après chaque nœud, le nombre de nœuds restant à explorer est divisé par 2. On retrouve là le principe de recherche dichotomique, vu en classe de Première (voir <a href="https://github.com/glassus/nsi/blob/master/Premiere/Theme05_Algorithmique/05_Dichotomie.ipynb">ici</a>).</p>
+<p>S'il faut parcourir tous les étages de l'arbre avant de trouver (ou pas) la clé recherchée, le nombre de nœuds parcourus est donc égal à la hauteur <span class="arithmatex">\(h\)</span> de l'arbre.</p>
+<p>Pour un arbre complet, cette hauteur vérifie la relation <span class="arithmatex">\(2^h -1= n\)</span>. et donc <span class="arithmatex">\(2^h = n+1\)</span>.</p>
+<p><span class="arithmatex">\(h\)</span> est donc le «nombre de puissance de 2» que l'on peut mettre dans <span class="arithmatex">\(n+1\)</span>. Cette notion s'appelle le logarithme de base 2 et se note <span class="arithmatex">\(\log_2\)</span>.</p>
+<p>Par exemple, <span class="arithmatex">\(\log_2(64)=6\)</span> car <span class="arithmatex">\(2^6=64\)</span>.</p>
+<p>Le nombre maximal de nœuds à parcourir pour rechercher une clé dans un ABR équilibré de taille <span class="arithmatex">\(n\)</span> est donc de l'ordre de <span class="arithmatex">\(\log_2(n)\)</span>, ce qui est très performant !</p>
+<p>Pour arbre contenant 1000 valeurs, 10 étapes suffisent.</p>
+<p>Cette <strong>complexité logarithmique</strong> est un atout essentiel de la structure d'arbre binaire de recherche.</p>
+<h3 id="54-insertion-dans-un-abr">5.4  Insertion dans un ABR<a class="headerlink" href="#54-insertion-dans-un-abr" title="Permanent link">⚓︎</a></h3>
+<p>L'insertion d'une clé va se faire au niveau d'une feuille, donc au bas de l'arbre. Dans la version récursive de l'algorithme d'insertion, que nous allons implémenter, il n'est pourtant pas nécessaire de descendre manuellement dans l'arbre jusqu'au bon endroit : il suffit de distinguer dans lequel des deux sous-arbres gauche et droit doit se trouver la future clé, et d'appeler récursivement la fonction d'insertion dans le sous-arbre en question.</p>
+<p><strong>Algorithme :</strong></p>
+<ul>
+<li>Si l'arbre est vide, on renvoie un nouvel objet Arbre contenant la clé.</li>
+<li>Sinon, on compare la clé à la valeur du nœud sur lequel on est positionné :<ul>
+<li>Si la clé est inférieure à cette valeur, on va modifier le sous-arbre gauche en le faisant pointer vers ce même sous-arbre une fois que la clé y aura été injectée, par un appel récursif.</li>
+<li>Si la clé est supérieure, on fait la même chose avec l'arbre de droite.</li>
+<li>on renvoie le nouvel arbre ainsi créé.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Insertion dans un ABR <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">insertion</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="n">Arbre</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">arbre</span><span class="o">.</span><span class="n">data</span>
+        <span class="k">if</span> <span class="n">cle</span> <span class="o">&lt;=</span> <span class="n">val</span> <span class="p">:</span>
+            <span class="n">arbre</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">insertion</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">cle</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">arbre</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">insertion</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">cle</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">arbre</span>
+</code></pre></div>
+</div>
+<p><strong>Exemple :</strong> Nous allons insérer la valeur 4 dans l'arbre <code>a</code> et vérifier par un parcours infixe (avant et après l'insertion) que la valeur 4 a bien été insérée au bon endroit.</p>
+<p><img alt="" class="center" src="../data/insertionABR.png" /></p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">infixe</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">0</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">insertion</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">__main__</span><span class="o">.</span><span class="n">Arbre</span> <span class="n">at</span> <span class="mh">0x7f46f0507e80</span><span class="o">&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">infixe</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">0</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span>
+</code></pre></div>
+<p>La valeur 4 a donc bien été insérée au bon endroit.</p>
+<hr />
+<div class="admonition quote">
+<p class="admonition-title">Bibliographie</p>
+<ul>
 <li>Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.</li>
 </ul>
-<hr />
+</div>
 
 
 

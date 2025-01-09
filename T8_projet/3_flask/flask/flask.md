@@ -54,7 +54,8 @@
         Créez un nouveau fichier : vue.py. Voici les imports nécessaires :<br />
 
             ```Python
-            from flask import Flask, render_template, request, redirect, url_for 
+            from flask import Flask, render_template, request, redirect
+            #ajout de url for
             ```
 
         **conseil :** Avant de vous lancer dans le code, essayer de structure<br />
@@ -398,15 +399,16 @@ En imaginant la répartition de fichier suivante :
 ·	templates/bonjour_css_img.html
 ·	static/css/mini.css
 ·	static/images/tux.png
-Pour accéder à ces fichiers statiques il faut utiliser la fonction url_for() dans les templates.
+Pour accéder à ces fichiers statiques il faut utiliser la fonction ```url_for()``` dans les templates.
 Par exemple pour ajouter la feuille de style CSS :
+```html
 <link 
    rel="stylesheet" 
    href="{{ url_for('static', filename='css/mini.css') }}" />
 
 Autre exemple affichant une image :
 <img src="{{ url_for('static', filename='images/tux.png') }}" />
-
+```
 
 3.2 - Hiérarchie des templates
 Flask propose un mécanisme d’héritage et de blocs permettant de factoriser le code HTML des templates de manière très efficace.
@@ -414,53 +416,61 @@ Flask propose un mécanisme d’héritage et de blocs permettant de factoriser l
 2.	Ensuite les pages suivantes doivent hériter du template de base et ajouter leur propre contenu.
 
 Par exemple avec ce template de base commun à toutes les pages : templates/base.html
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Bonjour v0.7</title>
-</head>
-<body>
-    {% block contenu %}
-    {% endblock %}
-</body>
-</html>
-
+```html
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bonjour v0.7</title>
+    </head>
+    <body>
+        <!--
+        {% block contenu %}
+        {% endblock %}
+        -->
+    </body>
+    </html>
+```
 La page templates/bonjour_heritage.html hérite du template de base et ajoute son propre code dans le bloc “contenu” :
-<!-- On hérite du template de base -->
-{% extends "base.html" %}
 
-<!-- On ajoute notre propre contenu -->
-{% block contenu %}
-    <h1>Héritage templates</h1>
-    <p>Page construite à l’aide de l’héritage de templates</p>
-{% endblock %}
+```html
+    <!-- On hérite du template de base -->
+    {% extends "base.html" %}
 
+    <!-- On ajoute notre propre contenu -->
+    {% block contenu2 %}
+        <h1>Héritage templates</h1>
+        <p>Page construite à l’aide de l’héritage de templates</p>
+    {% endblock %}
+```
 
 3.3 - if/endif et for/endfor dans les templates
 Le moteur de template Jinja2 propose via une syntaxe spécifique de réaliser de nombreuses actions possibles en Python.
 Les filtres :
+```html
 <!-- Affichage de valeur avec filtre -->
 <h1>{{ titre|upper }}</h1><!-- passe tout en majuscules -->
 <p>{{ valeur|round(1) }}</p><!-- arrondi à 1 décimale -->
 <p>{{ code_html|safe }}</p><!-- affiche le rendu HTML -->
-
+```
 Les boucles :
+```html
 <!-- Une boucle -->
 <ul>
 {% for valeur in donnees %}
     <li>{{ valeur }}</li>
 {% endfor %}
 </ul>
-
+```
 Les structures conditionnelles :
+```html
 <!-- Structure conditionnelle -->
 {% if choix == True %}
     <p>choix = VRAI</p>
 {% else %}
     <p>choix = FAUX</p>
 {% endif %}
-
+```
 
 3.4 - Les sessions
 Les sessions sont un mécanisme utilisé lorsque l’application web a besoin de garder des informations de page en page. C’est dû au fait que le protocole HTTP est sans état : il ne peut pas garder d’information d’une requête à une autre.
@@ -490,6 +500,7 @@ Pour envoyer un message de notification (depuis Flask) :
 flash("Ceci est un message de notification")
 
 Pour afficher un message de notification (depuis un template) :
+```html
 {% with messages = get_flashed_messages() %}
     {% if messages %}
         <ul>
@@ -499,7 +510,7 @@ Pour afficher un message de notification (depuis un template) :
         </ul>
     {% endif %}
 {% endwith %}
-
+```
 
 3.6 - Utiliser une base de données SQLite
 Même si il existe des librairies spécifiques pour gérer les bases de données dans Flask comme par exemple SQLAlchemy, le plus simple est de créer une classe Bdd que vous utiliserez dans Flask. Cela permet de bien séparer les rôles.
@@ -521,6 +532,7 @@ app = Flask(__name__)
 bdd = Bdd("bdd/data.sqlite")
 
 Exemple de méthode de la classe Bdd (Modèle)
+```python
 def recuperer_personnes(self):
     """Récupère des personnes dans la table
 
@@ -536,9 +548,10 @@ def recuperer_personnes(self):
     personnes = resultat.fetchall()
     connexion.close()
     return personnes
-
+```
 Exemple de route associée à une fonction Python dans le Contrôleur
 # Page utilisant une base de données
+```html
 @app.route("/test-bdd")
 def tester_bdd():
     # Récupération des personnes de la base de données SQLite
@@ -549,14 +562,15 @@ def tester_bdd():
         "bonjour_bdd.html",
         personnes=personnes
     )
-
+```
 Exemple d’affichage dans le Vue :
+```html
 <ul>
 {% for personne in personnes %}
     <li>id={{ personne[0] }}, nom={{ personne[1] }}</li>
 {% endfor %}
 </ul>
-
+```
 
 
 
@@ -605,10 +619,11 @@ def televerser_fichier():
 Flask permet d’utiliser les URLs pour passer des paramètres aux fonctions.
 C’est dans la fonction décorateur définissant la route qu’il faudra définir le paramètre à passer. La fonction associée pourra ensuite utiliser ce paramètre comme n’importe quel autre paramètre Python.
 Dans l’exemple suivant on utilisera un paramètre “nom”.
+```html
 @app.route("/test-parametre-url/<nom>")
 def utiliser_parametre_url(nom):
     return f"Vous avez passé le paramètre : {nom}"
-
+```
 Dans le navigateur, on utilisera l’URL suivante :
 http://127.0.0.1:1664/test-parametre-url/jbegood
 
@@ -622,8 +637,9 @@ Cet hébergement est gratuit si il n’utilise pas trop de ressources (connexion
 
 01 - Création d’un compte
 02 - Installation du client heroku cli
+```
 $ curl https://cli-assets.heroku.com/install.sh | sh
-
+```
 03 - Authentification (utilise le navigateur juste pour l’authentification)
 $ heroku login
 

@@ -1,10 +1,8 @@
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: En cours : [Retour sur les dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/)
+    :arrow_forward: En cours : [Arbres](T1_Structures_de_donnees/1.3_Arbres/cours/)
 
-    :hourglass: A venir :  <br />
-    - [Arbres](T1_Structures_de_donnees/1.3_Arbres/cours/) <br />
-    
+    :hourglass: A venir : [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/) <br />
 
 
 !!! abstract "Actualités :newspaper:" 
@@ -42,19 +40,15 @@
     - [Base de données](./T4_Bases_de_donnees/sommaire.md)<br />
     - [calculabilité](./T2_Programmation/2.3_Calculabilite_Decidabilite/cours.md)<br />
     - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) <br />
+    - [Retour sur les dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) <br />
 
     
 <!--       
 !!! note "*Thèmes traités*"
 
-    
-
     - [Cryptographie](T5_Architecture_materielle/5.4_Cryptographie/cours/)
     - [Sécurisation des communications, Cryptographie](./TNSI/T5_Architecture_materielle/5.4_Cryptographie/cours/)
     - [Diviser pour régner](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
-    
-    - [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
-    - [Dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/)  
     
     - [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/)
     - [Diviser pour régner](./T3_Algorithmique/3.1_Diviser_pour_regner/)

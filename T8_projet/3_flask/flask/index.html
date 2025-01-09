@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#macro-syntax-error" class="md-skip">
+        <a href="#macro-rendering-error" class="md-skip">
           Aller au contenu
         </a>
       
@@ -3095,11 +3095,23 @@
   
 
 
-<h1 id="macro-syntax-error"><em>Macro Syntax Error</em><a class="headerlink" href="#macro-syntax-error" title="Permanent link">⚓︎</a></h1>
+<h1 id="macro-rendering-error"><em>Macro Rendering Error</em><a class="headerlink" href="#macro-rendering-error" title="Permanent link">⚓︎</a></h1>
 <p><em>File</em>: <code>T8_projet\3_flask\flask.md</code></p>
-<p><em>Line 434 in Markdown file:</em> <strong>block 'contenu' defined twice</strong>
-<div class="highlight"><span class="filename">Markdown</span><pre><span></span><code>{% block contenu %}
-</code></pre></div></p>
+<p><em>UndefinedError</em>: 'url_for' is undefined</p>
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Traceback (most recent call last):
+  File &quot;C:\Users\corte\AppData\Roaming\Python\Python311\site-packages\mkdocs_macros\plugin.py&quot;, line 527, in render
+    return md_template.render(**page_variables)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\corte\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py&quot;, line 1304, in render
+    self.environment.handle_exception()
+  File &quot;C:\Users\corte\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py&quot;, line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File &quot;&lt;template&gt;&quot;, line 407, in top-level template code
+  File &quot;C:\Users\corte\AppData\Roaming\Python\Python311\site-packages\jinja2\utils.py&quot;, line 83, in from_obj
+    if hasattr(obj, &quot;jinja_pass_arg&quot;):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: &#39;url_for&#39; is undefined
+</code></pre></div>
 
 
 

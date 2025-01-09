@@ -1,121 +1,170 @@
-# Structures de données récursive :  les arbres
+# Arbres
 
-## Introduction
+![image](./data/banniere.png){: .center width=70%}
 
-Un organisateur de tournoi de rugby recherche la meilleure solution pour afficher les potentiels quarts de final, demi-finales et finale: 
+![image](./data/BO1.png){: .center}
 
-Au départ nous avons 4 poules de 4 équipes. Les 4 équipes d'une poule s'affrontent dans un mini championnat (3 matchs par équipe). À l'issue de cette phase de poule, les 2 premières équipes de chaque poule sont qualifiées pour les quarts de finale. 
+![image](./data/BO2.png){: .center}
 
-On connaît les 2 qualifiés par poule : 
 
-* Poule 1 => 1er Eq1 et 2e Eq8 
-* Poule 2 => 1er Eq2 et 2e Eq7 
-* Poule 3 => 1er Eq3 et 2e Eq6 
-* Poule 4 => 1er Eq4 et 2e Eq5 
+## 1. Terminologie
 
-En quart de final on va avoir : 
+### 1.1 Vocabulaire
+Un arbre est une structure hiérarchique de données, composée de nœuds. Si on adopte le vocabulaire des graphes, un arbre est un graphe non orienté, connexe, sans cycle, et dans lequel un nœud joue le rôle de racine.
 
-- quart de finale 1 => Eq1 contre Eq5 
-- quart de finale 2 => Eq2 contre Eq6 
-- quart de finale 3 => Eq3 contre Eq7 
-- quart de finale 4 => Eq4 contre Eq8 
+![](./data/term.png){: .center}
 
-Pour les demi-finales on aura : 
 
-- demi-finale 1 => vainqueur quart de finale 1 contre vainqueur quart de finale 3 
-- demi-finale 2 => vainqueur quart de finale 2 contre vainqueur quart de finale 4 
+- Chaque **nœud** a exactement un seul **nœud père**, à l'exception du nœud **racine** qui est le seul nœud à ne pas avoir de père. (oui, **la** racine d'une arbre est **en haut**)
+![image](./data/real_tree.png){: .center width=30%}
 
-L'organisateur du tournoi affiche les informations ci-dessus le jour du tournoi. Malheureusement, la plupart des spectateurs se perdent quand ils cherchent à déterminer les potentielles demi-finales (et ne parlons pas de la finale !) 
+- Chaque nœud peut avoir un nombre quelconque de **fils**, dont il est le père.
+- Les nœuds qui n'ont pas de fils sont appelés les **feuilles** (ou nœuds externes).
+- Les nœuds qui ne sont pas des feuilles sont des **nœuds internes**.
+- Le nom de chaque nœud est appelé son **étiquette**.
 
-Comment faire ? naturellement, comment auriez-vous envie de représenter cette masse d’informations ?
+**Exemples :**
+dans l'arbre ci-dessus,
 
-??? check "exemple de structure possible"
-    ![](data/poules.jpg)
+- C est la racine, E, Z A et G sont les feuilles.
+- K est le père de A et G.
+- F est le père de Z.
+- C est le père de B et K
+- B est le père de E et F.
 
-![](data/boArbre.png)
-![](data/abrInfo.png)
+### 1.2 Exemples d'arbres
 
-# 1.	Définitions
-Un arbre en informatique est un type particulier de **graphe**. Comme nous n'avons pas encore vu à ce stade de l'année les graphes, cette définition n'est pas d'une grande utilité...
+#### 1.2.1 La famille royale britannique (avant le 08 septembre 2022)
 
-![arbreDef](data/arbDef.jpg){width=30% align=right}
-On dira donc qu'un arbre est constitué :
+![image](./data/windsor.png){: .center width=60%}
 
--	D’une **racine**, sommet de "départ" de l'arbre 
--	De **nœuds**, sommets intermédiaires de l'arbre 
--	De **feuilles**, sommets "finaux" de l'arbre 
--	Et de **branches**, qui relient les éléments précédents entre eux
+Redessinez de manière plus schématique cet arbre. Pour quelle raison cet arbre a-t-il été modifié par rapport à sa version orginale (voir [ici](https://i.pinimg.com/originals/e8/d1/c7/e8d1c7b2834ce2c368848cf7fc91a057.jpg ) ), qui laissait apparaître les parents de chaque enfant ?
 
-Les arbres informatiques ont ceci de particulier qu'ils poussent tête en bas. Les arbres sont des structures de données hiérarchiques, très utilisées en informatique. Ils sont orientés : la représentation standardisée, racine en haut, indique la relation "père-enfant" entre les sommets. Lorsque deux sommets sont reliés par une branche, celui du haut est le père, et celui du bas est l’enfant. Un père peut avoir plusieurs enfants, mais un enfant ne peut pas avoir plusieurs pères (faites un dessin, on obtiendrait alors ce qu’on appelle un cycle dans le vocabulaire des graphes).
+#### 1.2.2 Le DOM d'une page web
+DOM : Document Object Model
 
-_Question_ : Citez des exemples de représentation arborescente que vous connaissez.
+![image](./data/dom.svg){: .center width=40%}
 
-??? check "Réponses possibles"
-    un arbre généalogique, Une arborescence de fichiers, Un document HTML
-    ![Une arborescence de fichiers](data/fichier.jpg){width=50% align=right}
-    ![Une arborescence html](data/html.jpg){width=50%}
+
+#### 1.2.3 L'arborescence d'un disque dur
+Les systèmes Unix (MacOS ou GNU/Linux) organisent leur disque dur suivant l'arborescence ci-dessous :
+![image](./data/arbo-unix.gif){: .center width=40%}
+
+
+### 1.3 Caractéristiques d'un arbre
+
+#### 1.3.1 Outils numériques de description
+
+![](./data/carac.png){: .center width=30%}
+
+!!! note "Définitions :heart:"
+
+    - la **taille** d'un arbre est son nombre total de nœuds. Ici, elle vaut 8.
+
+
+    - l'**arité** d'un nœud est son nombre de fils. Ici, l'arité de B vaut 2, celle de F vaut 1, celle de Z vaut 0.
+
+
+    - la **profondeur** d'un nœud est le nombre de nœuds de son chemin le plus court vers la racine. 
+    Ici, la profondeur de G est 3 (G-K-C), la profondeur de B est 2 (B-C), la profondeur de Z est 4 (Z-F-B-C), la profondeur de C est 1.
+
+
+    - la **hauteur** d'un arbre est la profondeur de son nœud le plus profond. 
+    Ici, la hauteur de l'arbre est 4.  
+        Nous prendrons comme **convention** que :  
+        - si un arbre est réduit à **un seul nœud-racine**, sa hauteur sera **1**.
+        - si un arbre est **vide**, sa hauteur est **0**.
+
+*Cette convention est celle adoptée dans le sujet 0 publié le 15/12/2020. Attention, dans certains ouvrages, l'arbre vide a pour hauteur -1, et donc l'arbre réduit à un seul nœud a pour hauteur 0, donc notre arbre aurait avec cette convention une hauteur 3.*
+
+_Question_ : Dessinez chacun des arbres ci-dessous. Donner pour chaque arbre, sa taille, sa hauteur et son nombre de feuilles. $\Delta$ représente l'arbre vide. On rappelle que la **hauteur** d'un arbre est définie comme la profondeur maximale des noeuds de l'arbre.
+
+**1.** $(1, \Delta, \Delta)$
+??? aide "Correction"
+    Taille : 1
+    Hauteur : 1
+    Feuilles : 1
+
+    ```graphviz dot 
+        digraph G1 {
+        rankdir=LR
+        1
+    }
+    ```
+       
+**2.** $(2, (4,\Delta,(1, (5, \Delta, (3, \Delta, (2, \Delta, \Delta))), \Delta)), \Delta)$
     
-  
-## Définitions complémentaires
+??? aide "Correction"
+       
+    Taille : 6
+    Hauteur : 6
+    Feuilles : 1
 
--	Les **nœuds** sont en général étiquetés, ci-contre les étiquettes sont les lettres a, b, c, etc…
--	La **taille** d’un arbre est le **nombre de ses nœuds**. Dans l’exemple ci-dessus, la taille de l’arbre est 7.
--	La **hauteur** (ou profondeur ou niveau) d’un nœud X est définie comme le **nombre de nœud à parcourir pour aller de la racine au nœud X**. La hauteur de la racine est arbitrairement fixée à 1, ou 0 suivant les définitions. Pour la suite du cours, nous choisirons la hauteur de la racine égale à 1.
--	La **hauteur de l’arbre** est la plus grande des hauteurs de ses noeuds
+    ```dot
+    digraph expression
+    {
+        ratio = 0.8
+        label = "Arbre peigne gauche de hauteur 4"
+        "0" [label=""];
 
-Exemple : 
+        "1" [label=""];
+        "1d" [label="",shape=plaintext];
+        "0" -> "1";
+        "0" -> "1d" [style=dashed, arrowhead=none];
 
-- le nœud ⓒ a pour hauteur 2 
-- le nœud ⓕ a pour hauteur 3
-- le nœud ⓖ a pour hauteur 3 (avec 1 comme hauteur pour a)
-- la hauteur de l’arbre est égale à la hauteur du nœud ⓖ, soit 3.
+        "2" [label=""];
+        "2d" [label="",shape=plaintext];
+        "1" -> "2";
+        "1" -> "2d" [style=dashed, arrowhead=none];
 
-Un arbre peut être défini de manière récursive : 
+        "3" [label=""];
+        "3d" [label="",shape=plaintext];
+        "2" -> "3";
+        "2" -> "3d" [style=dashed, arrowhead=none];
 
-: :arrow_right: un arbre est soit un arbre vide
-: :arrow_right: une racine **et** une liste de sous-arbres (éventuellement vide, auquel cas c’est une feuille). 
-C’est la définition qui est probablement la plus pertinente pour la vision « informatique » des arbres.
+        "4" [label="",shape=plaintext];
+        "4d" [label="",shape=plaintext];
+        "3" -> "4" [style=dashed, arrowhead=none];
+        "3" -> "4d" [style=dashed, arrowhead=none];
+    }
+    ```
 
-En terminale, nous étudierons principalement les arbres binaires : 
+#### 1.4 Arbres binaires
 
-**un arbre binaire est un arbre dont tous les nœuds sont d’arité au maximum 2.**
+![image](./data/binary.jpg){: .center width=50%}
 
-Autrement dit, chaque père a aux plus deux enfants, appelés sous-arbre gauche et sous-arbre droit.
-Un arbre binaire est soit un arbre vide, soit une racine, un sous-arbre Gauche et un sous-arbre Droit. Il est essentiel de comprendre qu'un sous-arbre **est** un arbre. D'où la définition récursive ci dessus. 
-Les arbres binaires se rencontrent par exemple dans les compétitions sportives comme un tournoi de tennis.
 
-### Trois cas particuliers :
- 
-??? danger "Arbre dégénéré ou filiforme	 ou arbre peigne"
-    Un arbre binaire peigne est un cas particulier extrême d'arbre binaire, tous les nœuds intérieurs ont un seul enfant qui est non vide, et toujours du même côté. Techniquement c'est une liste chainée.
-    ![arbrefiliforme](data/degenere.jpg)
+!!! note "Définition :heart:"
+    Un arbre binaire est un arbre dont chaque nœud possède **au plus** deux fils.
 
-??? danger "Arbre parfait"
-    Un arbre binaire parfait possède des nœuds intérieurs qui ont tous exactement deux enfants non vides. C'est l'arbre idéal pour certains algorithmes... Une taille maximale pour une hauteur minimale.   
-    ![arbreParfait](data/parfait.png)
+L'arbre généalogique de la famille royale britannique n'est pas un arbre binaire. 
 
-??? danger "Arbre complet ou presque complet" 
-    c’est un arbre dont tous les niveaux sont complètement remplis, sauf éventuellement le dernier. Les feuilles du dernier niveau sont le plus à gauche possible
-    ![arbrecomplet](data/complet.png)
+L'arbre ci-dessous est lui un arbre binaire.
 
-???+ attention
-    A noter que ces définitions varient suivant les auteurs et les livres ! notamment «parfait» et «complet» peuvent être intervertis !
+![](./data/carac3.png){: .center}
 
-### Lien entre taille et hauteur. 
-Si un arbre binaire est de taille ```n``` et de hauteur ```h```, alors : 
+#### 1.4.1 Sous-arbres d'un arbre binaire
 
--	le nombre de sommets est au moins égal à la hauteur, et strictement inférieur à $2^h$ :
-    $h <= n < 2^h$
--	De manière équivalente, la hauteur est strictement plus grande que le logarithme en base deux de la taille, et inférieur ou égal à la taille : $\log _{2} n < h <= n$
+Chaque nœud d'un arbre binaire ne pouvant pas avoir plus de 2 fils, il est possible de séparer le «dessous» de chaque nœud en deux sous-arbres (éventuellement vides) : le **sous-arbre gauche** et le **sous-arbre droit**.
 
+![](./data/sousarbres.png){: .center}
+
+
+- Les deux sous-arbres représentés ici sont les sous-arbres du nœud-racine T. 
+- Le nœud O admet comme sous-arbre gauche le nœud H et comme sous-arbre droit le nœud N.
+- Les feuilles P, H et N ont pour sous-arbre gauche et pour sous-arbre droit l'**arbre vide**.
 
 _Question_ : Dessiner tous les arbres binaires ayant respectivement 3 et 4 nœuds
 
 ??? check "Réponse"
-    Il y a 5 arbres binaires possédant 3 noeuds
-    ![arbres à 3 noeuds](data/exo5arbres3noeuds.jpg)
-    Il y a 14 arbres binaires possédant 5 noeuds
-    ![arbres à 4 noeuds](data/exo14arbres4noeuds.jpg)
+
+    Il y a 5 arbres binaires possédant 3 noeuds. <br />
+
+    ![arbres à 3 noeuds](./data/exo5arbres3noeuds.jpg)
+
+    Il y a 14 arbres binaires possédant 5 noeuds <br />
+
+    ![arbres à 4 noeuds](./data/exo14arbres4noeuds.jpg)
 
 _Question_ :  calculer le nombre de d’arbres binaires contenant 5 nœuds. Sachant qu’il y a 
 
@@ -123,7 +172,7 @@ _Question_ :  calculer le nombre de d’arbres binaires contenant 5 nœuds. Sach
 - 1 arbre binaire contenant 1 nœud
 - 2 arbres binaires contenant 2 nœuds
 - 5 arbres binaires contenant 3 nœuds
--  14 arbres binaires contenant 4 nœuds
+- 14 arbres binaires contenant 4 nœuds
 
 On ne cherchera pas à les construire tous, mais seulement à les dénombrer
 
@@ -135,181 +184,901 @@ On ne cherchera pas à les construire tous, mais seulement à les dénombrer
     <center>$1*14 + 1*5 + 2*2 + 5*1 + 14*1$</center>
     Soit un total de **42** arbres binaires possédant 5 noeuds
 
-### Mise en application débranché
+#### 1.4.3 Cas des arbres binaires complets
 
-[Lien vers les exercices](https://sofaugeras.github.io/TNSI/T1_Structures_de_donnees/1.3_arbres/Exercices/)
+On rencontre très souvent des arbres binaires dits **complets** parce qu'aucun des fils gauche ou droit n'est manquant.
 
-
-2.	Une classe arbre binaire en Python
-
-Lien vers le notebook [Télécharger](https://sofaugeras.github.io/TNSI/docs/T1_Structures_de_donnees/1.1_Listes_Piles_Files/01_Listes_Piles_Files.ipynb){ .md-button .md-button--primary} 
+![](./data/complet.png){: .center}
 
 
+**Taille d'un arbre complet de hauteur $h$ :**
+$1 + 2 + 2^2 + 2^3 + \dots + 2^{h-1} = 2^{h} - 1$
 
-Le but est de créer une structure de données pour représenter un arbre binaire en Python. Les opérations sur les arbres binaires sont au minimum :
-•	Construction d’arbre vide
-•	Construction d’un arbre à partir d’un entier et de deux sous-arbres gauche et droit
-•	Test de vacuité
-•	Accès à la racine d’un arbre
-•	Accès au sous-arbre gauche
-•	Accès au sous-arbre droit
+*preuve* : ceci est la somme $S$ des $h$ premiers termes d'une suite géométrique de raison 2 et de premier terme 1, d'où $S= \frac{1-2^{h}}{1-2} = 2^{h} -1$.
 
-a.	Première implémentation
-On crée une classe nœud, puis on utilise ce nœud pour construire un arbre
-class Noeud:
-    def __init__(self,valeur,gauche,droit):
-        self.n = valeur
-        self.g = gauche
-        self.d = droit
 
-class ArbreBinaire:
-    def __init__(self,c):
-        self.r = c
+Un arbre complet de hauteur $h$ (en prenant la convention que l'arbre vide a pour hauteur 0) a donc une taille égale à $2^{h}-1$.
+
+**Remarque :** On en déduit une inégalité classique sur l'encadrement de la taille $t$ d'un arbre binaire (non nécessairement complet) de hauteur $h$ :
+
+$$h \leqslant t \leqslant 2^{h}-1$$
+
+## 2. Parcours d'arbres
+Les arbres étant une structure hiérarchique, leur utilisation implique la nécessité d'un **parcours** des valeurs stockées. Par exemple pour toutes les récupérer dans un certain ordre, ou bien pour en chercher une en particulier.  
+
+Il existe plusieurs manières de parcourir un arbre.
+
+
+### 2.1 Parcours en largeur d'abord (BFS)
+*BFS : Breadth First Search*
+
+!!! note "Méthode du parcours en largeur (BFS) :heart:" 
+    Le parcours en largeur d'abord est un parcours étage par étage (de haut en bas) et de gauche à droite.
+
+![](./data/BFS.png){: .center}
+
+L'ordre des lettres parcourues est donc T-Y-O-P-H-N.
+
+Les trois parcours que nous allons voir maintenant sont des parcours en **profondeur d'abord**, ou **DFS** (*Depth First Search*). Ce qui signifie qu'un des deux sous-arbres sera totalement parcouru avant que l'exploration du deuxième ne commence. 
+
+### 2.2 Parcours préfixe
+Le parcours **préfixe** est un parcours **en profondeur d'abord**. 
+
+!!! note "Méthode du parcours préfixe :heart:"
+    (parfois aussi appelé *préordre*)
+
+    - Chaque nœud est visité **avant** que ses fils le soient.
+    - On part de la racine, puis on visite son fils gauche (et éventuellement le fils gauche de celui-ci, etc.) avant de remonter et de redescendre vers le fils droit.
+
+![](./data/prefixe.png){: .center}
+
+L'ordre des lettres parcourues est donc T-Y-P-O-H-N.
+
+### 2.3 Parcours infixe
+Le parcours **infixe** est aussi un parcours en profondeur d'abord.
+
+!!! note "Méthode du parcours infixe :heart:" 
+    (parfois aussi appelé *en ordre*)
+
+    - Chaque nœud est visité **après son fils gauche mais avant son fils droit**.
+    - On part donc de la feuille la plus à gauche et on remonte par vagues sucessives. Un nœud ne peut pas être visité si son fils gauche ne l'a pas été.
+
+![](./data/infixe.png){: .center}
+
+L'ordre des lettres parcourues est donc P-Y-T-H-O-N.
+
+### 2.4 Parcours postfixe
+Le parcours **postfixe** est aussi un parcours en profondeur d'abord.
+
+!!! note "Méthode du parcours postfixe :heart:"
+    (parfois aussi appelé **post-ordre** ou encore **suffixe**)
+
+    - Chaque nœud est visité **après** ses fils le soient.
+    - On part donc de la feuille la plus à gauche, et on ne remonte à un nœud père que si ses fils ont tous été visités. 
+
+![](./data/postfixe.png){: .center}
+
+L'ordre des lettres parcourues est donc P-Y-H-N-O-T.
+
+### 2.5 Comment ne pas se mélanger entre le pré / in / post fixe ?
+
+- *pré* veut dire *avant*
+- *in* veut dire *au milieu*
+- *post* veut dire *après*
+
+Ces trois mots-clés parlent de la place du **père** par rapport à ses fils. 
+Ensuite, il faut toujours se souvenir qu'on traite le fils gauche avant le fils droit.
+
+- préfixe : le père doit être le premier par rapport à ses fils.
+- infixe : le père doit être entre son fils gauche (traité en premier) et son fils droit.
+- postfixe : le père ne doit être traité que quand ses deux fils (gauche d'abord, droite ensuite) l'ont été.
+
+Un parcours préfixe commencera toujours par la racine, alors qu'un parcours postfixe finira toujours par la racine. Dans un parcours infixe, la racine sera «au milieu» (pas nécessairement parfaitement).
+
+
+
+!!! example "Exercice"
+    ![](./data/exo_parcours.png){: .center}
+    === "Énoncé"
+        Donner le rendu de chaque parcours :
+
+        1. Parcours en largeur 
+        2. Parcours préfixe
+        3. Parcours infixe
+        4. Parcours postfixe
+
+    === "Corr. largeur"
+        largeur : 1 2 3 4 5 6 7 8 9
+    === "Corr. préfixe"
+        préfixe : 1 2 4 5 7 8 3 6 9
+    === "Corr. infixe"
+        infixe : 4 2 7 5 8 1 3 9 6
+    === "Corr. postfixe"
+        postfixe : 4 7 8 5 2 9 6 3 1
+
+
+!!! example "Exercice"
+    ![](./data/exo_2.png){: .center}
+    === "Énoncé"
+        Donner le rendu de chaque parcours :
+
+        1. Parcours en largeur 
+        2. Parcours préfixe
+        3. Parcours infixe
+        4. Parcours postfixe
+    === "Corr. largeur"
+        largeur : 9 8 7 6 2 5 1 4 3
+    === "Corr. préfixe"
+        préfixe : 9 8 6 2 1 7 5 4 3
+    === "Corr. infixe"
+        infixe : 6 8 1 2 9 7 4 5 3
+    === "Corr. postfixe"
+        postfixe : 6 1 2 8 4 3 5 7 9
+
+
+
+
+## 3. Implémentations d'un arbre binaire
+### 3.1 En utilisant la Programmation Orientée Objet
+Le but est d'obtenir l'interface ci-dessous.
+
+Il est à remarquer que ce que nous allons appeler «Arbre» est en fait un nœud et ses deux fils gauche et droit.
+
+!!! abstract "interface souhaitée"
+    ```python
+    >>> a = Arbre(4) # pour créer l'arbre dont le nœud a pour valeur 4,
+                # et dont les sous-arbres gauche et droit sont None
+    >>> a.left = Arbre(3) # pour donner la valeur 3 au nœud du sous-arbre gauche de a
+    >>> a.right = Arbre(1) # pour donner la valeur 1 au nœud du sous-arbre droit de a
+    >>> a.right.data # pour accéder à la valeur du fils droit de a
+    ```
+
+
+??? example "exercice"
+    === "Enoncé"
+    Dessinez l'arbre créé par les instructions suivantes :
+        ```python
+        >>> a = Arbre(4)
+        >>> a.left = Arbre(3)
+        >>> a.right = Arbre(1)
+        >>> a.right.left = Arbre(2)
+        >>> a.right.right = Arbre(7)
+        >>> a.left.left = Arbre(6)
+        >>> a.right.right.left = Arbre(9)
+        ```
+    === "correction"
+        ![](./data/exo_imp.png)
         
-    def creeVide():
-        return ArbreBinaire(None)
+
+
+
+**:star: Implémentation :star:**
+
+⯈ **Principe** : nous allons créer une classe ```Arbre```, qui contiendra 3 attributs : 
+
+- ```data``` : la valeur du nœud (de type ```Int```)
+- ```left``` : le sous-arbre gauche (de type ```Arbre```)
+- ```right``` : le sous-arbre droit (de type ```Arbre```).
+
+Par défaut, les attributs ```left ``` et ```right``` seront à ```None```, qui représentera l'arbre vide (ce qui n'est pas très rigoureux, car ```None``` n'est pas de type ```Arbre```...).
+
+⯈ **Encapsulation ou pas ???** : 
+
+Afin de respecter le paradigme de la Programmation Orientée Objet, nous devrions jouer totalement le jeu de l'**encapsulation** en nous refusant d'accéder directement aux attributs.
+
+Pour cela  il faut construire des méthodes permettant d'accéder à ces attributs (avec des **getters**, ou **accesseurs** en français) ou de les modifier (avec des **setters**, ou **mutateurs** en français) .
+
+#### 3.1.1 Implémentation avec encapsulation
+
+!!! note "Classe `Arbre` avec encapsulation"
+    ```python linenums='1'
+    class Arbre:
+        def __init__(self, data):
+            self.data = data
+            self.left = None
+            self.right = None
+
+        def set_left(self, sousarbre): # mutateur
+            self.left = sousarbre
+
+        def set_right(self, sousarbre): # mutateur
+            self.right = sousarbre  
+
+        def get_left(self): # accesseur
+            return self.left
+
+        def get_right(self): # accesseur
+            return self.right
+
+        def get_data(self): # accesseur
+            return self.data
+    ```
+
+L'implémentation précédente permet d'utiliser les instructions de l'exercice précédent et de vérifier que l'arbre a bien été créé.
+
+
+```python
+>>> a = Arbre(4)
+>>> a.set_left(Arbre(3))
+>>> a.set_right(Arbre(1))
+>>> a.get_right().set_left(Arbre(2))
+>>> a.get_right().set_right(Arbre(7))
+>>> a.get_left().set_left(Arbre(6))
+>>> a.get_right().get_right().set_left(Arbre(9))
+```
+
+
+```python
+>>> a
+   <__main__.Arbre at 0x7f0100361f40>
+```
+
+
+```python
+>>> a.get_right().get_left().get_data()
+   2
+```
+
+
+#### 3.1.1 Implémentation sans encapsulation
+
+!!! note "Classe `Arbre` sans encapsulation :heart:"
+    ```python linenums='1'
+    class Arbre:
+        def __init__(self, data):
+            self.data = data
+            self.left = None
+            self.right = None
+    ```
+
+C'est déjà fini !
+
+
+```python
+a = Arbre(4)
+a.left = Arbre(3)
+a.right = Arbre(1)
+a.right.left = Arbre(2)
+a.right.right = Arbre(7)
+a.left.left = Arbre(6)
+a.right.right.left = Arbre(9)
+```
+
+
+```python
+>>> a
+   <__main__.Arbre at 0x7f0100361f40>
+```
+
+
+```python
+>>> a.right.left.data
+   2
+```
+
+
+On voit que l'implémentation avec accès direct aux attributs est beaucoup plus simple et rapide. Néanmoins, elle peut être considérée comme incorrecte dans certains langages qui obligent à passer par des accesseurs ou mutateurs pour lire ou modifier les attributs.
+
+#### 3.1.2 Représentation graphique en console
+
+La méthode ```affiche``` suivante (qui n'est pas à connaître) permet d'avoir un semblant de représentation graphique de l'arbre en console :
+
+```python linenums='1'
+def affiche(self, indent = 0):
+    val = self.data
+    s = ' '*2*indent + '|' + '_' + str(val) + '\n'
+    if self.left is not None:
+        s += self.left.affiche(indent + 1)
+    if self.left is None and self.right is not None:
+        s += ' '*(2*indent+2) + '|' + '_' + 'None' + '\n'     
+
+    if self.right is not None:
+        s += self.right.affiche(indent + 1)
+    if self.right is None and self.left is not None:
+        s += ' '*(2*indent+2) + '|' + '_' + 'None' + '\n'  
+    return s
+```
+
+La représentation de cet arbre :
+![](./data/exo_imp.png){: .center}
+donnera alors :
+
+```python
+>>> print(a.affiche())
+|_4
+  |_3
+    |_6
+    |_None
+  |_1
+    |_2
+    |_7
+      |_9
+      |_None
+```
+
+
+
+
+### 3.2 Implémentation à partir de tuples imbriqués
+
+
+
+!!! note "`Arbre` sous forme de tuples imbriqués :heart:"
+    Un arbre peut se représenter par le tuple ```(valeur, sous-arbre gauche, sous-arbre droit)```.
+    L'arbre ci-dessous :
+    ![](./data/imp_tuple.png){: .center}
+    est représenté par le tuple :
+
+
+    ```python
+    >>> a = (2, (8, (6,(),()), (9,(),())), (1, (7, (),()), ()))
+    ```
+
+Le sous-arbre gauche est alors ```a[1]``` et le sous-arbre droit est ```a[2]```.
+
+
+```python
+>>> a[1]
+(8, (6, (), ()), (9, (), ()))
+>>> a[2]
+(1, (7, (), ()), ())
+```
+
+!!! example "Exercice"
+    === "Enoncé"
+        ![](./data/carac3.png){: .center}
+
+        Écrire le tuple représentant l'arbre ci-dessous.       
+
+    === "Correction"
+        ```python
+        a = (T,(Y,(P,(),()),()),(O,(H,(),()),(N,(),())))
+        ```         
+
+
+
+
+### 3.3 Implémentation à partir d'une «simple» liste
+De manière plus surprenante, il existe une méthode pour implémenter un arbre binaire (qui est une structure hiérarchique) avec une liste (qui est une structure linéaire). 
+Ceci peut se faire par le biais d'une astuce sur les indices :
+
+**Les fils du nœud d'indice i sont placés aux indice 2i+1 et 2i+2**.
+
+Cette méthode est connue sous le nom de «méthode d'Eytzinger», et utilisée notamment en [généalogie](https://fr.wikipedia.org/wiki/Num%C3%A9rotation_de_Sosa-Stradonitz) pour numéroter facilement les individus d'un arbre généalogique.
+
+
+
+**Exemple :**
+
+![](./data/eytzinger.png){: .center}
+
+
+Pour comprendre facilement la numérotation, il suffit de s'imaginer l'arbre complet (en rajoutant les fils vides) et de faire une numérotation en largeur, niveau par niveau :
+
+![](./data/eytzinger2.png){: .center}
+
+
+
+!!! example "Exercice"
+    === "Enoncé"
+        Si on note Δ le sous-arbre vide, dessiner l'arbre représenté par la liste :
+        ```python
+        a = [3, 4, Δ, 7, 5]
+        ```       
+    === "Correction"   
+
+        ![correction](./data/corrtuple.png){: .center}        
+
+
+**Remarque :** parfois (comme dans le sujet 0...) la racine de l'arbre est placée à l'indice 1. Dans ce cas, les fils du nœud d'indice i sont placés aux indice 2i et 2i+1.
+
+## 4. Utilisation de l'implémentation : parcours, taille...
+
+Dans toute la suite, sauf mention contraire, on utilisera l'implémentation en Programmation Orientée Objet, en version sans encapsulation (la plus simple).
+Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, ou encore sa taille, sa hauteur, son nombre de feuilles... Toutes ses fonctions exploiteront la structure **récursive** d'un arbre.
+
+
+**Rappel de l'implémentation :**
+
+```python linenums='1'
+class Arbre:
+    def __init__(self, data):
+        self.data = data
+        self.left = None
+        self.right = None
+
+```
+
+### 4.1 Parcours préfixe, infixe, postfixe
+
+Dans un premier temps nous allons écrire ces parcours de manière récursive. Nous souhaitons *afficher* les sommets, donc nous utiliserons ```print```. Et deux appels récursifs... 
+
+#### 4.1.1 Parcours préfixe
+
+
+!!! note "Parcours préfixe :heart:"
+
+    ```python linenums='1'
+    def prefixe(arbre):
+        if arbre is None :
+            return None
+        print(arbre.data, end = '-')
+        prefixe(arbre.left)
+        prefixe(arbre.right)
+
+    ```
+
+
+Exemple avec l'arbre 
+![](./data/exo_2.png){: .center}
+
+
+```python linenums='1'
+a = Arbre(9)
+a.left = Arbre(8)
+a.right = Arbre(7)
+a.left.left = Arbre(6)
+a.left.right = Arbre(2)
+a.right.right = Arbre(5)
+a.left.right.left = Arbre(1)
+a.right.right.left = Arbre(4)
+a.right.right.right = Arbre(3)
+```
+
+
+```python
+>>> prefixe(a)
+9-8-6-2-1-7-5-4-3-
+```
+
+#### 4.1.2 Parcours infixe
+
+
+!!! note "Parcours infixe :heart:"
+
+    ```python
+    def infixe(arbre):
+        if arbre is None :
+            return None
+        infixe(arbre.left)
+        print(arbre.data, end = '-')
+        infixe(arbre.right)
+    ```
+
+
+
+```python
+>>> infixe(a)
+6-8-1-2-9-7-4-5-3-
+```
+
+#### 4.1.3 Parcours postfixe
+
+
+
+!!! note "Parcours postfixe :heart:"
+
+    ```python
+    def postfixe(arbre):
+        if arbre is None :
+            return None
+        postfixe(arbre.left)
+        postfixe(arbre.right)
+        print(arbre.data, end = '-')
+    ```
+
+
+
+```python
+>>> postfixe(a)
+6-1-2-8-4-3-5-7-9-
+```
+
+!!! aide "Pause vidéo" 
+    === "Vidéo"
+        - Regardez et appréciez [cette vidéo](https://youtu.be/OTfp2_SwxHk){. target="_blank"}
+        - À l'aide de la vidéo, codez le parcours infixe en itératif.  
+    === "Correction"
+
+        ```python linenums='1'
+        def infixe(arbre):
+            pile = []
+            while pile != [] or arbre is not None:
+                if arbre is not None:
+                    pile.append(arbre)
+                    arbre = arbre.left
+                else:
+                    arbre = pile.pop()
+                    print(arbre.data)
+                    arbre = arbre.right
+        ``` 
+
+        ou
+
+        ```python linenums='1'
+        def infixe_avec_liste(arbre):
+            parcours = []
+            pile = []
+
+            current = arbre
+
+            while pile != [] or current is not None:
+                if current is not None:
+                    pile.append(current)
+                    current = current.left
+                else:
+                    current = pile.pop()
+                    parcours.append(current.data)
+                    current = current.right
+
+            return parcours
+        ```        
+
+
+
+### 4.2 Calcul de la taille d'un arbre
+Rappel : la taille d'un arbre est le nombre de ses nœuds.
+
+
+!!! note "Taille d'un arbre :heart:"
+
+    ```python
+    def taille(arbre):
+        if arbre is None:
+            return 0
+        return 1 + taille(arbre.left) + taille(arbre.right)
+    ```
+
+
+
+Exemple avec l'arbre 
+![](./data/exo_2.png){: .center}
+
+
+```python linenums='1'
+a = Arbre(9)
+a.left = Arbre(8)
+a.right = Arbre(7)
+a.left.left = Arbre(6)
+a.left.right = Arbre(2)
+a.right.right = Arbre(5)
+a.left.right.left = Arbre(1)
+a.right.right.left = Arbre(4)
+a.right.right.right = Arbre(3)
+```
+
+```python
+>>> taille(a)
+9
+```
+
+### 4.3 Calcul de la hauteur d'un arbre
+Rappel : on prendra comme convention que l'arbre vide a pour hauteur 0.
+
+
+
+!!! note "Hauteur d'un arbre :heart:"
+
+    ```python
+    def hauteur(arbre):
+        if arbre is None:
+            return 0
+        else:
+            return 1 + max(hauteur(arbre.left), hauteur(arbre.right))
+    ```
+
+
+
+```python
+>>> hauteur(a)
+4
+```
+
+
+### 4.4 Calcul du nombre de feuilles d'un arbre
+Rappel : une feuille est un nœud d'arité 0, autrement dit sans fils gauche ni fils droit.
+
+
+!!! note "Nombre de feuilles d'un arbre :heart:"
+
+    ```python
+    def nb_feuilles(arbre):
+        if arbre is None:
+            return 0
+        if (arbre.left is None) and (arbre.right is None):
+            return 1
+        return nb_feuilles(arbre.left) +  nb_feuilles(arbre.right)
+    ```
+
+
+
+```python
+>>> nb_feuilles(a)
+4
+```
+
+
+
+### 4.5 Recherche d'une valeur dans un arbre
+On renverra ```True``` ou ```False``` en fonction de la présence ou non de la valeur dans l'arbre.
+
+
+!!! note "Recherche d'une valeur dans un arbre :heart:"
     
-    def creeNGD(valeur, gauche = None, droit = None):
-        return ArbreBinaire(Noeud(valeur, gauche, droit))
+    ```python
+    def recherche(arbre, valeur):
+        if arbre is None:
+            return False
+        if arbre.data ==  valeur:
+            return True
+        return recherche(arbre.left, valeur) or recherche(arbre.right, valeur)
+    ```
     
-    def estVide(self):
-        return self.r is None
+
+
+```python
+>>> recherche(a, 2)
+True
+>>> recherche(a, 45)
+False
+```
+
+### 4.6 Parcours en largeur
+Le parcours en largeur (BFS) est le plus simple à faire visuellement : mais il est plus difficile à coder que les parcours préfixe, infixe, postfixe.  
+Il est nécessaire d'utiliser une **file**  :
+
+- On place l'arbre dans la file.
+- Tant que la file n'est pas vide, on procède comme suit :
+    - On défile, donc on récupère l'arbre situé en haut de la file.  
+    - Si cet arbre n'est pas vide :
+        - On garde son étiquette.
+        - On enfile son sous-arbre gauche, puis son sous-arbre droit.
+
+![](./data/parcoursBFS.png){: .center}
+
+On importera l'objet ```Queue()``` du module ```queue``` de Python, qui permet de  :
+
+- créer une file vide avec ```file = Queue()```
+- défiler un élément par ```file.get()```
+- enfiler l'élément ```a``` par ```file.put(a)```
+- savoir si la file est vide par le booléen ```file.empty()```
+
+
+```python
+# arbre-test
+# ne pas oublier de remonter plus haut dans le document pour relancer la classe Arbre
+a = Arbre(8)
+a.left = Arbre(4)
+a.right = Arbre(5)
+a.left.left = Arbre(2)
+a.left.right = Arbre(1)
+a.right.right = Arbre(3)
+```
+
+!!! note "Parcours en largeur (BFS) "
+    ```python
+    from queue import Queue
+
+    def BFS(arbre):        
+        file = Queue()
+        file.put(arbre)
+        sol = []
+        while not file.empty():
+            a = file.get()
+            if a is not None :
+                sol.append(a.data)
+                file.put(a.left)
+                file.put(a.right)
+        return sol
+    ```
+
+
+```python
+>>> BFS(a)
+[8, 4, 5, 2, 1, 3]
+```
+
+
+## 5. Arbres binaires de recherche (ABR)
+
+!!! abstract "Définition d'un ABR :heart:"
+    Un **arbre binaire de recherche** est un arbre binaire dont les valeurs des nœuds (valeurs qu'on appelle étiquettes, ou clés) vérifient la propriété suivante :
+
+    - l'étiquette d'un nœud est **supérieure ou égale** à celle de **chaque** nœud de son **sous-arbre gauche**.
+    - l'étiquette d'un nœud est **strictement inférieure** à celle du **chaque** nœud de son **sous-arbre droit**.
+
+![](./data/exABR.png){: .center}
+
+À noter que l'arbre 3 (qui est bien un ABR) est appelé **arbre filiforme**. 
+
+L'arbre 5 n'est pas un ABR à cause de la feuille 9, qui fait partie du sous-arbre gauche de 3 sans lui être inférieure.
+
+**Remarque :** on pourrait aussi définir un ABR comme un arbre dont le parcours infixe est une suite croissante.
+
+### 5.1 Déterminer si un arbre est un ABR
+
+Employer une méthode récursive imposerait de garder en mémoire dans l'exploration des sous-arbres la valeur maximale ou minimale. Nous allons plutôt utiliser la remarque précédente, et nous servir du parcours infixe.
+
+Méthode : récupérer le parcours infixe dans une liste, et faire un test sur cette liste.
+
+
+!!! note "Être ou ne pas être un ABR"
+    ```python linenums='1'
+    def infixe(arbre, s = None):
+        if s is None:
+            s = []
+        if arbre is None :
+            return None
+        infixe(arbre.left, s)
+        s.append(arbre.data)
+        infixe(arbre.right, s)
+        return s
+
+
+    def est_ABR(arbre):
+        '''renvoie un booléen indiquant si arbre est un ABR'''
+        parcours = infixe(arbre)
+        return parcours == sorted(parcours) # on regarde si le parcours est égal au parcours trié 
+
+    ```
+
+
+```python
+# arbres-tests 
+
+#arbre n°4
+a = Arbre(5)
+a.left = Arbre(2)
+a.right = Arbre(7)
+a.left.left = Arbre(0)
+a.left.right = Arbre(3)
+a.right.left = Arbre(6)
+a.right.right = Arbre(8)
+
+#arbre n°5
+b = Arbre(3)
+b.left = Arbre(2)
+b.right = Arbre(5)
+b.left.left = Arbre(1)
+b.left.right = Arbre(9)
+b.right.left = Arbre(4)
+b.right.right = Arbre(6)
+
+
+```
+
+
+```python
+>>> est_ABR(a)
+True
+>>> est_ABR(b)
+False
+```
+
+
+### 5.2 Rechercher une clé dans un ABR
+
+Un arbre binaire de taille $n$ contient $n$ clés (pas forcément différentes). Pour savoir si une valeur particulière fait partie des clés, on peut parcourir tous les nœuds de l'arbre, jusqu'à trouver (ou pas) cette valeur dans l'arbre. Dans le pire des cas, il faut donc faire $n$ comparaisons.
+
+Mais si l'arbre est un ABR, le fait que les valeurs soient «rangées» va considérablement améliorer la vitesse de recherche de cette clé, puisque la moitié de l'arbre restant sera écartée après chaque comparaison.
+
+
+!!! note "Recherche d'une clé dans un ABR :heart:"
     
-    def racine(self):
-        assert not(self.r is None),'Arbre vide'
-        # Deuxième version
-        # if self.estVide():
-   #     Raise index error('Arbre vide')
-        # else : 
-        return self.r.n
-    
-    def filsGauche(self):
-        assert not(self.r is None),'Arbre vide'
-        return self.r.g
-    
-    def filsDroit(self):
-        assert not(self.r is None),'Arbre vide'
-        return self.r.d
+    ```python
+    def recherche_ABR(arbre, valeur):
+        if arbre is None :
+            return False
+        if arbre.data == valeur :
+            return True
+        if valeur < arbre.data :
+            return recherche_ABR(arbre.left, valeur)
+        else:
+            return recherche_ABR(arbre.right, valeur)
 
-b.	Deuxième implémentation
-Comme vu dans le notebook, la classe nœud suffit à créer un arbre, qui n’est rien d’autre qu’une suite récursive de nœuds. La classe ArbreBinaire du paragraphe précédent n’est donc pas obligatoire.
-
-3.	Algorithmes sur les arbres
-Ces algorithmes sont à comprendre plus qu’à retenir
-a.	Taille et hauteur
-Calcul de la taille : retourne le nombre de sommets de l’arbre (racine + nœuds + feuilles)
-Fonction récursive taille(arbre) :
-Si arbre est vide
-Retourner 0
-Sinon
-Retourner 1 + taille (fils gauche) + taille (fils droit)
-
-Calcul de la hauteur : retourne la hauteur de l’arbre
-Fonction récursive hauteur(arbre) :
-Si arbre est vide
-Retourner 0
-Sinon
-Retourner 1 + max( hauteur (fils gauche), hauteur(fils droit))
-b.	Parcours en profondeur
-Dans le parcours en profondeur, on parcourt d’abord la racine de l’arbre, puis récursivement les enfants gauche et droit. L’ordre dans lequel est fait ce traitement donne les trois parcours possibles :
-
-i.	Parcours préfixe : racine – gauche – droit (la racine avant les enfants, la racine précèdent)
-ii.	Parcours infixe : gauche – racine – droit (la racine est au milieu, « in »)
-iii.	Parcours suffixe : gauche – droit – racine (la racine est en dernier, la racine succède)
-
-Préfixe	Infixe	Suffixe (postfixe)
-Fonction visitePréfixe(arbre) :
-    Si arbre n’est pas vide :
-         visiter racine
-         visitePréfixe (fils gauche) 
-         visitePréfixe (fils droit)	Fonction visiteInfixe(arbre) :
-    Si arbre n’est pas vide :
-         visiteInfixe (fils gauche) 
-         visiter racine
-         visiteInfixe (fils droit)	Fonction visiteSuffixe(arbre) :
-    Si arbre n’est pas vide :
-         visiteSuffixe (fils gauche) 
-         visiteSuffixe (fils droit)
-         visiter racine
-
-
-c.	Parcours en largeur
-Principe : on parcourt tous les nœuds de hauteur 1 (la racine), puis tous les nœuds de hauteur 2, ceux de hauteur 3 etc. Le parcours se fait en général de gauche à droite.
-On utilise pour cela une file
-Étapes de l'algorithme : 
-1 .	Mettre le nœud source dans la file.
-2.	Retirer le nœud du début de la file pour le traiter.
-3.	Mettre le fils gauche et le fils droits lorsqu’ils sont non vides, non explorés, à la fin de la file.
-4.	Si la file n'est pas vide reprendre à l'étape 2.
-
-
-4.	Arbres binaires de recherche (ABR)
-a.	Définition
-Un arbre binaire de recherche, ou ABR, est un arbre binaire étiqueté possédant la propriété suivante :
-Pour tout nœud x, tous les nœuds situés dans le sous-arbre gauche de x ont une valeur inférieure ou égale à celle de x, et tous les nœuds situés dans le sous-arbre droit ont une valeur supérieure ou égale à celle de x.
-
-Les arbres binaires de recherche servent, comme leur nom l’indique, à rechercher rapidement des éléments ordonnés.
-Exemples :
- 	 
-Est un arbre binaire de recherche	N’est pas un arbre binaire de recherche
+    ```
  
-b.	Algorithmes sur les ABR
-i.	Recherche dans un ABR
-Principe : suivant la valeur à rechercher, et la valeur du nœud sur lequel on est, on cherche soit dans le sous-arbre gauche, soit dans le sous-arbre droit
 
-Fonction récursive recherche(ABR, valeur) :
-Si ABR est vide
-Retourner None			# variante : retourner Faux
-Sinon
-valeur(x)  = étiquette(ABR)		# valeur de la racine
-Si valeur < valeur(x) :
-Retourner recherche(fils_gauche , valeur)
-Sinon si valeur > valeur(x) :
-Retourner recherche(fils_droit , valeur)
-Sinon 
-Retourner ABR		# variante : retourner Vrai
+**Exemple** 
 
-Pseudo-définition (peu rigoureuse et incomplète) : un arbre est équilibré si les hauteurs entre les sous-arbres gauche et droit sont différentes de 1 au maximum. Les arbres complets ou parfaits sont équilibrés.
- 	 
-Arbre binaire de recherche équilibré (tout en étant ni parfait, ni complet)	Arbre binaire de recherche déséquilibré. Cet arbre contient les mêmes données que celui de gauche.
+L'arbre ```a``` contient la valeur 8, mais pas la valeur 12.
 
-Complexité :
-Si l’arbre binaire de recherche est équilibré, alors le coût en temps de la recherche est en  , où n est le nombre de nœuds de l’arbre.
-Dans le cas ou l’arbre binaire de recherche n’est pas équilibré, la recherche est en   . Le cas le pire étant le cas ou l’ABR est filiforme.
-Remarque : on peut écrire une version itérative de cet algorithme (exercice intéressant)
 
-ii.	Insertion dans un ABR
-Le problème de l’insertion dans un ABR correspond à celui de la construction de l’ABR. L’insertion dans un ABR commence par la recherche de l’endroit où l’on doit insérer la valeur. Si la valeur à insérer est plus petite –ou égale– que la valeur du nœud, on va à gauche, si elle est plus grande on va à droite. On arrive à un moment à un arbre vide : c’est là où on ajoute la nouvelle valeur. La gestion des arbres vides n’est cependant pas si simple dans cette approche.
 
-Fonction récursive ajoute(ABR, valeur) :
+```python
+>>> recherche_ABR(a, 8)
+True
+>>> recherche_ABR(a, 12)
+False
+```
 
-Si ABR est vide
-ABR = Arbre(valeur, None, None)
-Sinon si valeur <= étiquette_noeud(ABR)	
-ajoute(fils_gauche , valeur)
-Sinon 
-ajoute(fils_droit , valeur)
 
-Complexité : la complexité est identique à celle de la fonction de recherche. Dans le cas d’un arbre équilibré, elle est en  .
-Remarque : cette méthode ne donne pas forcément des arbres équilibrés. Pour avoir un arbre équilibré, une méthode efficace est d’insérer les éléments dans un ordre aléatoire.
+### 5.3  Coût de la recherche dans un ABR équilibré
+![](./data/rechercheABR.png){: .center}
 
-iii.	Suppression dans un ABR 
-Cette partie n’est pas au programme du bac. Elle constitue un complément enrichissant en vitamines pour les neurones.
-Le problème se décompose en trois cas, suivant le nombre de fils du nœud à supprimer.
-Si le nœud est une feuille (pas de fils), alors on supprime simplement le lien du père vers ce nœud (on décroche le nœud). Si ce lien n’existe pas, l’arbre devient l’arbre vide.
- 	 
+Imaginons un arbre équilibré de taille $n$. Combien d'étapes faudra-t-il, dans le pire des cas, pour trouver (ou pas) une clé particulière dans cet arbre ?
 
-Si le nœud a un seul fils, alors on décroche le nœud comme précédemment, et on remplace son fils dans le nœud père. Si le père n’existe pas, le nœud fils devient la racine de l’arbre.
+Après chaque nœud, le nombre de nœuds restant à explorer est divisé par 2. On retrouve là le principe de recherche dichotomique, vu en classe de Première (voir [ici](https://github.com/glassus/nsi/blob/master/Premiere/Theme05_Algorithmique/05_Dichotomie.ipynb)).
 
-  
-Si le nœud a deux fils, on cherche dans le sous-arbre gauche le nœud MaxLocal de valeur la plus grande (ou le nœud de valeur la plus petite dans le sous-arbre droit). La valeur de ce nœud va remplacer la valeur supprimée. Comme ce nœud MaxLocal a la valeur maximale dans le sous-arbre gauche, il n’a pas de fils droit. On peut donc le décrocher, comme on l’a fait dans le cas précédent.
- 	 
+S'il faut parcourir tous les étages de l'arbre avant de trouver (ou pas) la clé recherchée, le nombre de nœuds parcourus est donc égal à la hauteur $h$ de l'arbre.
+
+Pour un arbre complet, cette hauteur vérifie la relation $2^h -1= n$. et donc $2^h = n+1$.
+
+$h$ est donc le «nombre de puissance de 2» que l'on peut mettre dans $n+1$. Cette notion s'appelle le logarithme de base 2 et se note $\log_2$.
+
+Par exemple, $\log_2(64)=6$ car $2^6=64$.
+
+Le nombre maximal de nœuds à parcourir pour rechercher une clé dans un ABR équilibré de taille $n$ est donc de l'ordre de $\log_2(n)$, ce qui est très performant !
+
+Pour arbre contenant 1000 valeurs, 10 étapes suffisent.
+
+Cette **complexité logarithmique** est un atout essentiel de la structure d'arbre binaire de recherche.
+
+### 5.4  Insertion dans un ABR
+L'insertion d'une clé va se faire au niveau d'une feuille, donc au bas de l'arbre. Dans la version récursive de l'algorithme d'insertion, que nous allons implémenter, il n'est pourtant pas nécessaire de descendre manuellement dans l'arbre jusqu'au bon endroit : il suffit de distinguer dans lequel des deux sous-arbres gauche et droit doit se trouver la future clé, et d'appeler récursivement la fonction d'insertion dans le sous-arbre en question.
+
+**Algorithme :**
+
+- Si l'arbre est vide, on renvoie un nouvel objet Arbre contenant la clé.
+- Sinon, on compare la clé à la valeur du nœud sur lequel on est positionné :
+    - Si la clé est inférieure à cette valeur, on va modifier le sous-arbre gauche en le faisant pointer vers ce même sous-arbre une fois que la clé y aura été injectée, par un appel récursif.
+    - Si la clé est supérieure, on fait la même chose avec l'arbre de droite.
+    - on renvoie le nouvel arbre ainsi créé.
+
+
+!!! note "Insertion dans un ABR :heart:"
+
+    ```python
+    def insertion(arbre, cle):
+        if arbre is None :
+            return Arbre(cle)
+        else :
+            val = arbre.data
+            if cle <= val :
+                arbre.left = insertion(arbre.left, cle)
+            else:
+                arbre.right = insertion(arbre.right, cle)
+            return arbre
+    ```
+
+
+**Exemple :** Nous allons insérer la valeur 4 dans l'arbre ```a``` et vérifier par un parcours infixe (avant et après l'insertion) que la valeur 4 a bien été insérée au bon endroit.
+
+![](./data/insertionABR.png){: .center}
+
+
+```python
+a = Arbre(5)
+a.left = Arbre(2)
+a.right = Arbre(7)
+a.left.left = Arbre(0)
+a.left.right = Arbre(3)
+a.right.left = Arbre(6)
+a.right.right = Arbre(8)
+```
+
+
+```python
+>>> infixe(a)
+0-2-3-5-6-7-8-
+>>> a = insertion(a,4)
+<__main__.Arbre at 0x7f46f0507e80>
+>>> infixe(a)
+0-2-3-4-5-6-7-8-
+```
+
+
+La valeur 4 a donc bien été insérée au bon endroit.
+
+
 
 ---
-## Bibliographie
--	Cours de Frédéric Mandon ![](data/ccbysa.png "image")
--	Gilles Lassus – Enseignant NSI ![](data/ccbysa.png "image") Lycée François Mauriac --  Bordeaux 
--	NSI 24 Leçons avec exercices corrigés – Edition Ellipses
--	Prépabac NSI, Terminale, G.CONNAN, V.PETROV, G.ROZSAVOLGYI, L.SIGNAC, éditions HATIER.
-- Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
----
+
+!!! quote "Bibliographie"
+
+    - Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
+
+
+
+
+
