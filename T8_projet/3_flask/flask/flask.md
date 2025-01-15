@@ -401,13 +401,14 @@ En imaginant la répartition de fichier suivante :
 ·	static/images/tux.png
 Pour accéder à ces fichiers statiques il faut utiliser la fonction ```url_for()``` dans les templates.
 Par exemple pour ajouter la feuille de style CSS :
+
 ```html
 <link 
    rel="stylesheet" 
-   href="{{ url_for('static', filename='css/mini.css') }}" />
+   href="{{url_for('static', filename='css/mini.css') }}" />
 
 Autre exemple affichant une image :
-<img src="{{ url_for('static', filename='images/tux.png') }}" />
+<img src="{{url_for('static', filename='images/tux.png') }}" />
 ```
 
 3.2 - Hiérarchie des templates

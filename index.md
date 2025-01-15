@@ -1,6 +1,6 @@
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: En cours : [Arbres](T1_Structures_de_donnees/1.3_Arbres/cours/)
+    :arrow_forward: En cours : [Arbres](./T1_Structures_de_donnees/1.4_Arbres/cours.md)
 
     :hourglass: A venir : [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/) <br />
 
@@ -22,7 +22,7 @@
 !!! info "Entraînement"
     Vous trouverez ci dessous quelques sites pour vous entrainez <br />
 
-    - :sparkles: [Nouveau site d'entraînement NSI](https://codex.forge.apps.education.fr/)
+    - :sparkles: [Nouveau site d'entraînement NSI : Codex](https://codex.forge.apps.education.fr/)
     - [e-nsi écrit](https://e-nsi.forge.aeif.fr/ecrit/){. target="_blank"}<br />
     - [e-nsi pratique](https://ens-fr.gitlab.io/nsi-pratique/){. target="_blank"}<br />
     - Site recensant les sujets de BAC écrit : [ici](https://boiling-aletopelta-ff5.notion.site/be357c0d12cb430faa79dd890feb660b?v=56349470c9704fc2b93983c20d5b9a65){. target="_blank"}
