@@ -3362,23 +3362,27 @@ b n'est pas un arbre binaire de recherche à cause du 9 et du 4.</p>
 <p>Mais si l'arbre est un ABR, le fait que les valeurs soient «rangées» va considérablement améliorer la vitesse de recherche de cette clé, puisque la moitié de l'arbre restant sera écartée après chaque comparaison.</p>
 <div class="admonition note">
 <p class="admonition-title">Recherche d'une clé dans un ABR <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_ABR</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_ABR</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+    <span class="k">if</span> <span class="bp">self</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
         <span class="k">return</span> <span class="kc">False</span>
-    <span class="k">if</span> <span class="n">arbre</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="n">valeur</span> <span class="p">:</span>
+
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">noeud</span> <span class="o">==</span> <span class="n">valeur</span> <span class="p">:</span>
         <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">if</span> <span class="n">valeur</span> <span class="o">&lt;</span> <span class="n">arbre</span><span class="o">.</span><span class="n">data</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="n">recherche_ABR</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">gauche</span><span class="p">,</span> <span class="n">valeur</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">recherche_ABR</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">droit</span><span class="p">,</span> <span class="n">valeur</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">valeur</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">noeud</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">recherche_ABR</span><span class="p">(</span> <span class="n">valeur</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">valeur</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">noeud</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">droit</span><span class="o">.</span><span class="n">recherche_ABR</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">False</span>
 </code></pre></div>
 </div>
 <p><strong>Exemple</strong> </p>
-<p>L'arbre <code>a</code> contient la valeur 8, mais pas la valeur 12.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_ABR</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_ABR</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
-<span class="kc">False</span>
+<p>L'arbre <code>a</code> contient la valeur 8, mais pas la valeur 4.</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1">#Test de la fonction de recherche dans un arbre binaire de recherche</span>
+<span class="k">assert</span> <span class="n">a</span><span class="o">.</span><span class="n">recherche_ABR</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span> <span class="c1">#Cas ou la valeur recherchée est la racine</span>
+<span class="k">assert</span> <span class="n">a</span><span class="o">.</span><span class="n">recherche_ABR</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span> <span class="c1">#Cas ou la valeur recherchée est une feuille</span>
+<span class="k">assert</span> <span class="n">a</span><span class="o">.</span><span class="n">recherche_ABR</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span> <span class="c1">#Cas ou la valeur recherchée n&#39;est pas dans l&#39;arbre</span>
+<span class="k">assert</span> <span class="n">a</span><span class="o">.</span><span class="n">recherche_ABR</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span> <span class="c1">#Cas ou la valeur recherchée est une feuille et la plus à droite</span>
 </code></pre></div>
 <h3 id="3-cout-de-la-recherche-dans-un-abr-equilibre">3.  Coût de la recherche dans un ABR équilibré<a class="headerlink" href="#3-cout-de-la-recherche-dans-un-abr-equilibre" title="Permanent link">⚓︎</a></h3>
 <p><img alt="" class="center" src="../data/rechercheABR.png" /></p>
@@ -3405,16 +3409,20 @@ b n'est pas un arbre binaire de recherche à cause du 9 et du 4.</p>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Insertion dans un ABR <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">insertion</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">insertion</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
+    <span class="k">if</span> <span class="bp">self</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
+        <span class="c1"># si l&#39;arbre est vide, on crée un arbre avec la clé</span>
         <span class="k">return</span> <span class="n">Arbre</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
-    <span class="k">else</span> <span class="p">:</span>
-        <span class="n">val</span> <span class="o">=</span> <span class="n">arbre</span><span class="o">.</span><span class="n">data</span>
-        <span class="k">if</span> <span class="n">cle</span> <span class="o">&lt;=</span> <span class="n">val</span> <span class="p">:</span>
-            <span class="n">arbre</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="n">insertion</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">gauche</span><span class="p">,</span> <span class="n">cle</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">arbre</span><span class="o">.</span><span class="n">droit</span> <span class="o">=</span> <span class="n">insertion</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">droit</span><span class="p">,</span> <span class="n">cle</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">arbre</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">cle</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">noeud</span> <span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">cle</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">noeud</span> <span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span>
+    <span class="k">if</span> <span class="n">cle</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">noeud</span>  <span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">insertion</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
+    <span class="k">else</span> <span class="p">:</span> 
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">droit</span><span class="o">.</span><span class="n">insertion</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <p><strong>Exemple :</strong> Nous allons insérer la valeur 4 dans l'arbre <code>a</code> et vérifier par un parcours infixe (avant et après l'insertion) que la valeur 4 a bien été insérée au bon endroit.</p>
@@ -3427,14 +3435,14 @@ b n'est pas un arbre binaire de recherche à cause du 9 et du 4.</p>
 <span class="n">a</span><span class="o">.</span><span class="n">droit</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
 <span class="n">a</span><span class="o">.</span><span class="n">droit</span><span class="o">.</span><span class="n">droit</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">infixe</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">infixe</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="mi">0</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">insertion</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
 <span class="o">&lt;</span><span class="n">__main__</span><span class="o">.</span><span class="n">Arbre</span> <span class="n">at</span> <span class="mh">0x7f46f0507e80</span><span class="o">&gt;</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">infixe</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="mi">0</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span>
 </code></pre></div>
-<p>La valeur 4 a donc bien été insérée au bon endroit.</p>
+La valeur 4 a donc bien été insérée au bon endroit.</p>
 <hr />
 <h2 id="bibliographie">Bibliographie<a class="headerlink" href="#bibliographie" title="Permanent link">⚓︎</a></h2>
 <ul>

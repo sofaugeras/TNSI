@@ -135,30 +135,31 @@ Mais si l'arbre est un ABR, le fait que les valeurs soient «rangées» va consi
 !!! note "Recherche d'une clé dans un ABR :heart:"
     
     ```python
-    def recherche_ABR(arbre, valeur):
-        if arbre is None :
+    def recherche_ABR(self, valeur):
+        if self is None :
             return False
-        if arbre.data == valeur :
+        
+        if self.noeud == valeur :
             return True
-        if valeur < arbre.data :
-            return recherche_ABR(arbre.gauche, valeur)
-        else:
-            return recherche_ABR(arbre.droit, valeur)
+        
+        if valeur < self.noeud and not self.gauche is None :
+            return self.gauche.recherche_ABR( valeur)
+        elif valeur > self.noeud and not self.droit is None :
+            return self.droit.recherche_ABR(valeur)
+        return False
 
     ```
- 
 
 **Exemple** 
 
-L'arbre ```a``` contient la valeur 8, mais pas la valeur 12.
-
-
+L'arbre ```a``` contient la valeur 8, mais pas la valeur 4.
 
 ```python
->>> recherche_ABR(a, 8)
-True
->>> recherche_ABR(a, 12)
-False
+#Test de la fonction de recherche dans un arbre binaire de recherche
+assert a.recherche_ABR(5) == True #Cas ou la valeur recherchée est la racine
+assert a.recherche_ABR(0) == True #Cas ou la valeur recherchée est une feuille
+assert a.recherche_ABR(4) == False #Cas ou la valeur recherchée n'est pas dans l'arbre
+assert a.recherche_ABR(8) == True #Cas ou la valeur recherchée est une feuille et la plus à droite
 ```
 
 
@@ -198,16 +199,20 @@ L'insertion d'une clé va se faire au niveau d'une feuille, donc au bas de l'arb
 !!! note "Insertion dans un ABR :heart:"
 
     ```python
-    def insertion(arbre, cle):
-        if arbre is None :
+    def insertion(self, cle):
+        if self is None :
+            # si l'arbre est vide, on crée un arbre avec la clé
             return Arbre(cle)
-        else :
-            val = arbre.data
-            if cle <= val :
-                arbre.gauche = insertion(arbre.gauche, cle)
-            else:
-                arbre.droit = insertion(arbre.droit, cle)
-            return arbre
+        if self.gauche is None and cle <= self.noeud :
+            self.gauche = Arbre(cle)
+            return self
+        if self.droit is None and cle > self.noeud :
+            self.droit = Arbre(cle)
+            return self
+        if cle <= self.noeud  :
+            return self.gauche.insertion(cle)
+        else : 
+            return self.droit.insertion(cle)
     ```
 
 
@@ -226,7 +231,6 @@ a.droit.gauche = Arbre(6)
 a.droit.droit = Arbre(8)
 ```
 
-
 ```python
 >>> infixe(a)
 0-2-3-5-6-7-8-
@@ -235,8 +239,6 @@ a.droit.droit = Arbre(8)
 >>> infixe(a)
 0-2-3-4-5-6-7-8-
 ```
-
-
 La valeur 4 a donc bien été insérée au bon endroit.
 
 ---

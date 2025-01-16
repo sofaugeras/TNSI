@@ -1112,13 +1112,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-utilisation-de-limplementation-parcours-taille" class="md-nav__link">
+  <a href="#5-algorithme-sur-les-arbres" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Utilisation de l'implémentation : parcours, taille...
+      5. Algorithme sur les arbres
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5. Utilisation de l'implémentation : parcours, taille...">
+    <nav class="md-nav" aria-label="5. Algorithme sur les arbres">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1130,8 +1130,80 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#52-parcours-infixe" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Parcours infixe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-parcours-postfixe" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Parcours postfixe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-calcul-de-la-taille-dun-arbre" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 Calcul de la taille d'un arbre
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-calcul-de-la-hauteur-dun-arbre" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 Calcul de la hauteur d'un arbre
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-calcul-du-nombre-de-feuilles-dun-arbre" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6 Calcul du nombre de feuilles d'un arbre
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57-recherche-dune-valeur-dans-un-arbre" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.7 Recherche d'une valeur dans un arbre
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#58-parcours-en-largeur" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.8 Parcours en largeur
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliographie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bibliographie
+    </span>
+  </a>
   
 </li>
       
@@ -4065,7 +4137,7 @@ qui donnera alors :</p>
 </div>
 </div>
 </div>
-<h2 id="5-utilisation-de-limplementation-parcours-taille">5. Utilisation de l'implémentation : parcours, taille...<a class="headerlink" href="#5-utilisation-de-limplementation-parcours-taille" title="Permanent link">⚓︎</a></h2>
+<h2 id="5-algorithme-sur-les-arbres">5. Algorithme sur les arbres<a class="headerlink" href="#5-algorithme-sur-les-arbres" title="Permanent link">⚓︎</a></h2>
 <p>Dans toute la suite, sauf mention contraire, on utilisera l'implémentation en Programmation Orientée Objet, en version <strong>sans</strong> encapsulation (la plus simple).
 Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, ou encore sa taille, sa hauteur, son nombre de feuilles... Toutes ses fonctions exploiteront la structure <strong>récursive</strong> d'un arbre.</p>
 <p><strong>Rappel de l'implémentation :</strong></p>
@@ -4144,27 +4216,27 @@ Exemple avec l'arbre
 <p>Coder le parcours <strong>préfixe</strong> en utilisant le pseudo algo ci dessus et en respectant le paradigme récursif</p>
 </div>
 <div class="tabbed-block">
-<p>```python linenums=1
-def parcoursPrefixe(self):</p>
-<h1 id="condition-darret">Condition d'arrêt<a class="headerlink" href="#condition-darret" title="Permanent link">⚓︎</a></h1>
-<p>if self.noeud is None:
-    return []</p>
-<h1 id="appel-recursif-et-retourne-la-reponse">Appel récursif et retourne la réponse<a class="headerlink" href="#appel-recursif-et-retourne-la-reponse" title="Permanent link">⚓︎</a></h1>
-<h1 id="la-valeur-est-inseree-avant-les-appels">La valeur est insérée AVANT les appels<a class="headerlink" href="#la-valeur-est-inseree-avant-les-appels" title="Permanent link">⚓︎</a></h1>
-<p>liste_gauche = []
-liste_droite = []
-if not self.gauche is None:
-    liste_gauche = self.gauche.parcoursPrefixe()
-if not self.droit is None:
-    liste_droite = self.droit.parcoursPrefixe()
-return [self.noeud] + liste_gauche + liste_droite</p>
-<h1 id="autre-solution">autre solution<a class="headerlink" href="#autre-solution" title="Permanent link">⚓︎</a></h1>
-<p>def parcoursPrefixe2(self):
-    """parcours préfixe"""
-    if self.est_Vide():
-        return []
-    return [self.noeud] + self.gauche.parcoursPrefixe() + self.droit.parcoursPrefixe()
-```</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">parcoursPrefixe</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="c1"># Condition d&#39;arrêt</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">noeud</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="c1"># Appel récursif et retourne la réponse</span>
+    <span class="c1"># La valeur est insérée AVANT les appels</span>
+    <span class="n">liste_gauche</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">liste_droite</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">liste_gauche</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">parcoursPrefixe</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">liste_droite</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">droit</span><span class="o">.</span><span class="n">parcoursPrefixe</span><span class="p">()</span>
+    <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">noeud</span><span class="p">]</span> <span class="o">+</span> <span class="n">liste_gauche</span> <span class="o">+</span> <span class="n">liste_droite</span>
+
+<span class="c1">#autre solution</span>
+<span class="k">def</span> <span class="nf">parcoursPrefixe2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;parcours préfixe&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_Vide</span><span class="p">():</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">noeud</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">parcoursPrefixe</span><span class="p">()</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">droit</span><span class="o">.</span><span class="n">parcoursPrefixe</span><span class="p">()</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -4199,21 +4271,20 @@ Exemple avec l'arbre
 <p>Coder le parcours <strong>infixe</strong> en utilisant le pseudo algo ci dessus et en respectant le paradigme récursif</p>
 </div>
 <div class="tabbed-block">
-<p>```python linenums=1
-def parcoursInfixe(self):</p>
-<h1 id="condition-darret_1">Condition d'arrêt<a class="headerlink" href="#condition-darret_1" title="Permanent link">⚓︎</a></h1>
-<p>if self.noeud is None:
-    return []</p>
-<h1 id="appel-recursif-et-retourne-la-reponse_1">Appel récursif et retourne la réponse<a class="headerlink" href="#appel-recursif-et-retourne-la-reponse_1" title="Permanent link">⚓︎</a></h1>
-<h1 id="la-valeur-est-inseree-avant-les-appels_1">La valeur est insérée AVANT les appels<a class="headerlink" href="#la-valeur-est-inseree-avant-les-appels_1" title="Permanent link">⚓︎</a></h1>
-<p>liste_gauche = []
-liste_droite = []
-if not self.gauche is None:
-    liste_gauche = self.gauche.parcoursInfixe()
-if not self.droit is None:
-    liste_droite = self.droit.parcoursInfixe()
-return [] + liste_gauche + [self.noeud] + liste_droite
-```</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">parcoursInfixe</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="c1"># Condition d&#39;arrêt</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">noeud</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="c1"># Appel récursif et retourne la réponse</span>
+    <span class="c1"># La valeur est insérée AVANT les appels</span>
+    <span class="n">liste_gauche</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">liste_droite</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">liste_gauche</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">parcoursInfixe</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">liste_droite</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">droit</span><span class="o">.</span><span class="n">parcoursInfixe</span><span class="p">()</span>
+    <span class="k">return</span> <span class="p">[]</span> <span class="o">+</span> <span class="n">liste_gauche</span> <span class="o">+</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">noeud</span><span class="p">]</span> <span class="o">+</span> <span class="n">liste_droite</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -4248,32 +4319,20 @@ Exemple avec l'arbre
 <p>Coder le parcours <strong>suffixe</strong> en utilisant le pseudo algo ci dessus et en respectant le paradigme récursif</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">parcoursSuffixe</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="c1"># Condition d&#39;arrêt</span>
-<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">noeud</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="k">return</span> <span class="p">[]</span>
-<span class="c1"># Appel récursif et retourne la réponse</span>
-<span class="c1"># La valeur est insérée AVANT les appels</span>
-<span class="n">liste_gauche</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">liste_droite</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="n">liste_gauche</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">parcoursSuffixe</span><span class="p">()</span>
-<span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="n">liste_droite</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">droit</span><span class="o">.</span><span class="n">parcoursSuffixe</span><span class="p">()</span>
-<span class="k">return</span> <span class="p">[]</span> <span class="o">+</span> <span class="n">liste_gauche</span> <span class="o">+</span> <span class="n">liste_droite</span>  <span class="o">+</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">noeud</span><span class="p">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">parcoursSuffixe</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="c1"># Condition d&#39;arrêt</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">noeud</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="c1"># Appel récursif et retourne la réponse</span>
+    <span class="c1"># La valeur est insérée AVANT les appels</span>
+    <span class="n">liste_gauche</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">liste_droite</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">liste_gauche</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">parcoursSuffixe</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">liste_droite</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">droit</span><span class="o">.</span><span class="n">parcoursSuffixe</span><span class="p">()</span>
+    <span class="k">return</span> <span class="p">[]</span> <span class="o">+</span> <span class="n">liste_gauche</span> <span class="o">+</span> <span class="n">liste_droite</span>  <span class="o">+</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">noeud</span><span class="p">]</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -4553,7 +4612,7 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
 <div class="admonition success">
 <p class="admonition-title">Téléchargement</p>
 <p>lien vers les fichiers complets de la classe Arbre et de son fichier de test <br />
-<img alt="lien de téléchargement :arrow_down:" class="md-button md-button--primary" src="../data/arbre.zip" /></p>
+<a class="md-button md-button--primary" href="../data/arbre.zip">lien de téléchargement</a></p>
 </div>
 <hr />
 <h2 id="bibliographie">Bibliographie<a class="headerlink" href="#bibliographie" title="Permanent link">⚓︎</a></h2>

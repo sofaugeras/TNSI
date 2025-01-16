@@ -712,7 +712,7 @@ def affiche(self, indent = 0):
         arbre2 = ArbreB(4, arbre2_3, arbre2_1)
         ```
 
-## 5. Utilisation de l'implémentation : parcours, taille...
+## 5. Algorithme sur les arbres
 
 Dans toute la suite, sauf mention contraire, on utilisera l'implémentation en Programmation Orientée Objet, en version **sans** encapsulation (la plus simple).
 Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, ou encore sa taille, sa hauteur, son nombre de feuilles... Toutes ses fonctions exploiteront la structure **récursive** d'un arbre.
@@ -769,6 +769,7 @@ Dans un premier temps nous allons écrire ces parcours de manière récursive. N
             prefixe(arbre.droit)
 
     ```
+
 Exemple avec l'arbre 
 ![arbre exercice](./data/arbre_parfait2b.jpg){: .center}
 
@@ -787,20 +788,20 @@ Exemple avec l'arbre
         Coder le parcours **préfixe** en utilisant le pseudo algo ci dessus et en respectant le paradigme récursif
     === "Correction"
 
-        ```python linenums=1
+        ```python
         def parcoursPrefixe(self):
-        # Condition d'arrêt
-        if self.noeud is None:
-            return []
-        # Appel récursif et retourne la réponse
-        # La valeur est insérée AVANT les appels
-        liste_gauche = []
-        liste_droite = []
-        if not self.gauche is None:
-            liste_gauche = self.gauche.parcoursPrefixe()
-        if not self.droit is None:
-            liste_droite = self.droit.parcoursPrefixe()
-        return [self.noeud] + liste_gauche + liste_droite
+            # Condition d'arrêt
+            if self.noeud is None:
+                return []
+            # Appel récursif et retourne la réponse
+            # La valeur est insérée AVANT les appels
+            liste_gauche = []
+            liste_droite = []
+            if not self.gauche is None:
+                liste_gauche = self.gauche.parcoursPrefixe()
+            if not self.droit is None:
+                liste_droite = self.droit.parcoursPrefixe()
+            return [self.noeud] + liste_gauche + liste_droite
     
         #autre solution
         def parcoursPrefixe2(self):
@@ -843,20 +844,20 @@ Exemple avec l'arbre
         Coder le parcours **infixe** en utilisant le pseudo algo ci dessus et en respectant le paradigme récursif
     === "Correction"
 
-        ```python linenums=1
+        ```python
         def parcoursInfixe(self):
-        # Condition d'arrêt
-        if self.noeud is None:
-            return []
-        # Appel récursif et retourne la réponse
-        # La valeur est insérée AVANT les appels
-        liste_gauche = []
-        liste_droite = []
-        if not self.gauche is None:
-            liste_gauche = self.gauche.parcoursInfixe()
-        if not self.droit is None:
-            liste_droite = self.droit.parcoursInfixe()
-        return [] + liste_gauche + [self.noeud] + liste_droite
+            # Condition d'arrêt
+            if self.noeud is None:
+                return []
+            # Appel récursif et retourne la réponse
+            # La valeur est insérée AVANT les appels
+            liste_gauche = []
+            liste_droite = []
+            if not self.gauche is None:
+                liste_gauche = self.gauche.parcoursInfixe()
+            if not self.droit is None:
+                liste_droite = self.droit.parcoursInfixe()
+            return [] + liste_gauche + [self.noeud] + liste_droite
         ```
 
 ### 5.3 Parcours postfixe
@@ -892,20 +893,20 @@ Exemple avec l'arbre
         Coder le parcours **suffixe** en utilisant le pseudo algo ci dessus et en respectant le paradigme récursif
     === "Correction"
 
-        ```python linenums='1'
+        ```python
         def parcoursSuffixe(self):
-        # Condition d'arrêt
-        if self.noeud is None:
-            return []
-        # Appel récursif et retourne la réponse
-        # La valeur est insérée AVANT les appels
-        liste_gauche = []
-        liste_droite = []
-        if not self.gauche is None:
-            liste_gauche = self.gauche.parcoursSuffixe()
-        if not self.droit is None:
-            liste_droite = self.droit.parcoursSuffixe()
-        return [] + liste_gauche + liste_droite  + [self.noeud]
+            # Condition d'arrêt
+            if self.noeud is None:
+                return []
+            # Appel récursif et retourne la réponse
+            # La valeur est insérée AVANT les appels
+            liste_gauche = []
+            liste_droite = []
+            if not self.gauche is None:
+                liste_gauche = self.gauche.parcoursSuffixe()
+            if not self.droit is None:
+                liste_droite = self.droit.parcoursSuffixe()
+            return [] + liste_gauche + liste_droite  + [self.noeud]
         ```
 
 !!! aide "Pause vidéo" 
@@ -1164,7 +1165,7 @@ assert arbre2.parcoursLargeur() == [4, 3, 1, 6, 2, 7, 9]
 
 !!! success "Téléchargement"
     lien vers les fichiers complets de la classe Arbre et de son fichier de test <br />
-    ![lien de téléchargement :arrow_down:](./data/arbre.zip){ .md-button .md-button--primary }
+    [lien de téléchargement](./data/arbre.zip){ .md-button .md-button--primary }
 
 ---
 ## Bibliographie
