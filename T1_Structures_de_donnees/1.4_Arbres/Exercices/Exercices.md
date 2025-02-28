@@ -78,14 +78,13 @@ Par exemple, dans l’arbre ci-dessous, on a utilisé ce procédé pour numérot
 **2c**. En notant $h$ la hauteur de l’arbre, sur combien de bits seront numérotés les nœuds les plus en bas ?
 
 ??? check "Correction"
-
     Les nœuds les plus en bas sont notés sur $h$ bits.      
 
 **d**. Justifier que pour tout arbre de hauteur $h$ et de taille $n \geqslant 2$, on a : $h\leqslant n \leqslant 2^h-1$
 
 ??? check "Correction"
-        L'arbre de hauteur $h$ de taille minimale est l'arbre filiforme, qui est de taille $h$.  
-        L'arbre de hauteur $h$ de taille maximale est l'arbre complet, qui est de taille $2^h-1$. Si $n$ est la taille d'un arbre quelconque de taille $h$, on a donc bien    $h \leqslant n \leqslant 2^h-1$.
+    L'arbre de hauteur $h$ de taille minimale est l'arbre filiforme, qui est de taille $h$. <br />
+    L'arbre de hauteur $h$ de taille maximale est l'arbre complet, qui est de taille $2^h-1$. Si $n$ est la taille d'un arbre quelconque de taille $h$, on a donc bien    $h \leqslant n \leqslant 2^h-1$.
     
 **Question 3**  
 Un arbre binaire est dit complet si tous les niveaux de l’arbre sont remplis.

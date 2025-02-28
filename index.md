@@ -1,13 +1,13 @@
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: En cours : [Arbres](./T1_Structures_de_donnees/1.4_Arbres/cours.md)
+    :arrow_forward: En cours : [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)<br />
 
-    :hourglass: A venir : [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/) <br />
+    :hourglass: A venir : [Sécurisation des communications, Cryptographie](./TNSI/T5_Architecture_materielle/5.4_Cryptographie/cours/) <br />
 
 
 !!! abstract "Actualités :newspaper:" 
 
-    - 📆 Date Bac Blanc : 6 et 7 février 2025 puis 28-31 avril 2025
+    - 📆 Date Bac Blanc : 28-31 avril 2025
 
     - ✨ La page contenant les 48 sujets l'Épreuve Pratique 2024 est [ici](T6_6_Epreuve_pratique/BNS_2024/){. target="_blank"} :star: :star: :star:
 
@@ -22,7 +22,7 @@
 !!! info "Entraînement"
     Vous trouverez ci dessous quelques sites pour vous entrainez <br />
 
-    - :sparkles: [Nouveau site d'entraînement NSI : Codex](https://codex.forge.apps.education.fr/)
+    - :hearts: [Nouveau site d'entraînement NSI : Codex](https://codex.forge.apps.education.fr/)
     - [e-nsi écrit](https://e-nsi.forge.aeif.fr/ecrit/){. target="_blank"}<br />
     - [e-nsi pratique](https://ens-fr.gitlab.io/nsi-pratique/){. target="_blank"}<br />
     - Site recensant les sujets de BAC écrit : [ici](https://boiling-aletopelta-ff5.notion.site/be357c0d12cb430faa79dd890feb660b?v=56349470c9704fc2b93983c20d5b9a65){. target="_blank"}
@@ -40,17 +40,20 @@
     - [Base de données](./T4_Bases_de_donnees/sommaire.md)<br />
     - [calculabilité](./T2_Programmation/2.3_Calculabilite_Decidabilite/cours.md)<br />
     - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) <br />
+    - [Gestion des processus](./T5_Architecture_materielle/5.2_Gestion_des_processus/cours.md)<br />
     - [Retour sur les dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) <br />
+    - [Arbres](./T1_Structures_de_donnees/1.4_Arbres/cours.md)<br />
+    - ([Projet : codage de Huffman](./T8_projet/2_Huffman/cours.md))
 
     
 <!--       
 !!! note "*Thèmes traités*"
-
-    - [Cryptographie](T5_Architecture_materielle/5.4_Cryptographie/cours/)
-    - [Sécurisation des communications, Cryptographie](./TNSI/T5_Architecture_materielle/5.4_Cryptographie/cours/)
+    - tri fusion
+    - [Graphes](./T1_Structures_de_donnees/1.5_Graphes/cours/)
     - [Diviser pour régner](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
-    
     - [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/)
     - [Diviser pour régner](./T3_Algorithmique/3.1_Diviser_pour_regner/)
-    - [Graphes](./T1_Structures_de_donnees/1.5_Graphes/cours/)
+    - EP
+    - Grand oral
+    
 -->

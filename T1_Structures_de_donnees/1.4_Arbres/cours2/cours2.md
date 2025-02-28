@@ -97,9 +97,9 @@ Méthode : récupérer le parcours infixe dans une liste, et faire un test sur c
         return [] + liste_gauche + [self.noeud] + liste_droite
 
 
-    def est_ABR(arbre):
+    def est_ABR(self):
         '''renvoie un booléen indiquant si arbre est un ABR'''
-        parcours = infixe(arbre)
+        parcours = self.parcoursInfixe()
         return parcours == sorted(parcours) # on regarde si le parcours est égal au parcours trié 
 
     ```
@@ -232,11 +232,11 @@ a.droit.droit = Arbre(8)
 ```
 
 ```python
->>> infixe(a)
+>>> a.infixe()
 0-2-3-5-6-7-8-
->>> a = insertion(a,4)
+>>> a.insertion(4)
 <__main__.Arbre at 0x7f46f0507e80>
->>> infixe(a)
+>>> a.infixe()
 0-2-3-4-5-6-7-8-
 ```
 La valeur 4 a donc bien été insérée au bon endroit.

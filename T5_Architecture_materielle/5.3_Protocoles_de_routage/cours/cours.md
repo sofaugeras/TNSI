@@ -28,7 +28,7 @@
 
     Ces questions trouveront des réponses grâce à **table de routage** du routeur.
 
-    Regarder la vidéo suivante sur les notions de routage : ![ici](https://youtu.be/sT9-IcbjqzI)
+Regarder la vidéo suivante sur les notions de routage : [ici](https://youtu.be/sT9-IcbjqzI)
 
 ## 1. Tables de routage
 
@@ -111,9 +111,9 @@ Considérons le réseau suivant qui relie deux réseaux d'une entreprise :
 -	Le réseau 2 contient un serveur dans un centre de données.
 
 Image du schéma réseau : 
-![](data/rip.png)
+![schéma filius](data/rip.png)
 
-Maquette Filius  [ici](data/RIP_filus_reseau.fls){target=_blank}  [:fontawesome-solid-download:](data/RIP_filus_reseau.fls){ .md-button .md-button--primary} 
+Maquette Filius [Télécharger :arrow_down:](data/RIP_filus_reseau.fls){ .md-button .md-button--primary} 
 
 Les routeurs R1 et R6 permettent d'accéder au réseau de l'entreprise, R2, R3, R4 et R5, des routeurs internes au réseau. 
 Nous allons nous intéresser à l'évolution des tables de routage des routeurs R1 et R3 sur lesquels on a activé le protocole RIP.

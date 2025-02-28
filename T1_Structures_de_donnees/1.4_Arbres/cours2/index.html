@@ -3326,9 +3326,9 @@ b n'est pas un arbre binaire de recherche à cause du 9 et du 4.</p>
     <span class="k">return</span> <span class="p">[]</span> <span class="o">+</span> <span class="n">liste_gauche</span> <span class="o">+</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">noeud</span><span class="p">]</span> <span class="o">+</span> <span class="n">liste_droite</span>
 
 
-<span class="k">def</span> <span class="nf">est_ABR</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">est_ABR</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie un booléen indiquant si arbre est un ABR&#39;&#39;&#39;</span>
-    <span class="n">parcours</span> <span class="o">=</span> <span class="n">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">)</span>
+    <span class="n">parcours</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parcoursInfixe</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">parcours</span> <span class="o">==</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">parcours</span><span class="p">)</span> <span class="c1"># on regarde si le parcours est égal au parcours trié </span>
 </code></pre></div></td></tr></table></div>
 </div>
@@ -3435,11 +3435,11 @@ b n'est pas un arbre binaire de recherche à cause du 9 et du 4.</p>
 <span class="n">a</span><span class="o">.</span><span class="n">droit</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
 <span class="n">a</span><span class="o">.</span><span class="n">droit</span><span class="o">.</span><span class="n">droit</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
 </code></pre></div>
-<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">infixe</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">infixe</span><span class="p">()</span>
 <span class="mi">0</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">insertion</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">insertion</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="o">&lt;</span><span class="n">__main__</span><span class="o">.</span><span class="n">Arbre</span> <span class="n">at</span> <span class="mh">0x7f46f0507e80</span><span class="o">&gt;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">infixe</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">infixe</span><span class="p">()</span>
 <span class="mi">0</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span>
 </code></pre></div>
 La valeur 4 a donc bien été insérée au bon endroit.</p>
