@@ -3069,7 +3069,28 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T8_projet/3_flask/flask/" class="md-nav__link">
+      <a href="../../../T8_projet/3_expose/cours/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Consignes Exposés
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T8_projet/4_flask/flask/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3118,7 +3139,7 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Exercice 5 du sujet <a class="" href="https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_02.pdf" target="_blank">La Réunion J1 2022</a></p>
+<p>Exercice 5 du sujet <a class="" href="../data/2022_LeReunion_J1.pdf" target="_blank">La Réunion J1 2022</a></p>
 <details class="tip">
 <summary>Correction Q1.a.</summary>
 <p>Une adresse IPv4 se code à l'aide de 4 octets.</p>
@@ -3272,6 +3293,45 @@ Nouvelle table de routage de A :  </p>
 </div>
 </div>
 </div>
+</div>
+<div class="admonition abstract">
+<p>Exercice 5 du sujet <a href="../data/22-NSIJ1ME1.pdf">Métropole J1 2022</a></p>
+<details class="tip">
+<summary>Correction Q1.a.</summary>
+<p>L'écriture décimale de cette adresse ipv4 est donc b. Le dernier octet a 256 valeurs possibles (de 0 à 255), le nombre d'adresses différentes possibles du réseau A est donc 256.</p>
+<p>note : Deux adresses sont réservées dans un réseau : une pour le réseau lui-même et l'autre pour la diffusion (broadcast). Donc parmi les 256 possibilités, 254 peuvent être attribuées à un hôte du réseau.</p>
+</details>
+<details class="tip">
+<summary>Correction Q2.a.</summary>
+<p>Le routeur A est directement relié à B, C et D (métrique 1)</p>
+</details>
+<details class="tip">
+<summary>Correction Q2.b.</summary>
+<p><img alt="schéma" class="center" src="../data/MEJ1_2b.png" width="50%" /></p>
+</details>
+<details class="tip">
+<summary>Correction Q3</summary>
+<p><img alt="tab" class="center" src="../data/MEJ1_3.png" width="50%" /></p>
+</details>
+<details class="tip">
+<summary>Correction Q4.a.</summary>
+<p>Le chemin emprunté sera F - H - J - K - I pour un coût de 13. Les autres chemins ont un coût supérieur et dans le protocole ospf on minimise le coût (et pas le nombre de routeurs traversés comme dans le protocole rip)</p>
+</details>
+<details class="tip">
+<summary>Correction Q4.b.</summary>
+<p><img alt="tab" class="center" src="../data/MEJ1_4b.png" width="50%" /></p>
+</details>
+<details class="tip">
+<summary>Correction Q4.c.</summary>
+<p>Une panne du routeur H, en effet dans ce cas :</p>
+<ul>
+<li>pour transmettre de I à F le chemin serait I - K - J - G - F (coût minimal de 19),</li>
+<li>pour transmettre de K à F le chemin serait K - J - G - F (coût minimal de 14),</li>
+<li>pour transmettre de J à F le chemin serait J - G - F (coût minimal de 12)</li>
+<li>pour transmettre de L à F le chemin serait L - G - F (coût minimal de 20)</li>
+</ul>
+<p>Dans tous les cas, on transite bien par G.</p>
+</details>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice du sujet Métropole J1 2021</p>

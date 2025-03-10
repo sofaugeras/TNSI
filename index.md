@@ -1,8 +1,8 @@
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: En cours : [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)<br />
+    :arrow_forward: En cours : - [Graphes](./T1_Structures_de_donnees/1.5_Graphes/cours/)<br />
 
-    :hourglass: A venir : [Sécurisation des communications, Cryptographie](./TNSI/T5_Architecture_materielle/5.4_Cryptographie/cours/) <br />
+    :hourglass: A venir :  [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/)<br />
 
 
 !!! abstract "Actualités :newspaper:" 
@@ -43,16 +43,15 @@
     - [Gestion des processus](./T5_Architecture_materielle/5.2_Gestion_des_processus/cours.md)<br />
     - [Retour sur les dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) <br />
     - [Arbres](./T1_Structures_de_donnees/1.4_Arbres/cours.md)<br />
-    - ([Projet : codage de Huffman](./T8_projet/2_Huffman/cours.md))
-
+    - ([Projet : codage de Huffman](./T8_projet/2_Huffman/cours.md))<br />
+    - [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)<br />
+    - [Sécurisation des communications, Cryptographie](./TNSI/T5_Architecture_materielle/5.4_Cryptographie/cours/)<br />
     
 <!--       
 !!! note "*Thèmes traités*"
     - tri fusion
-    - [Graphes](./T1_Structures_de_donnees/1.5_Graphes/cours/)
     - [Diviser pour régner](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
-    - [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/)
-    - [Diviser pour régner](./T3_Algorithmique/3.1_Diviser_pour_regner/)
+    - 
     - EP
     - Grand oral
     

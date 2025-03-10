@@ -1,6 +1,6 @@
 !!! abstract "Exercice 5 du sujet La Réunion J1 2022"
     === "Énoncé"
-        Exercice 5 du sujet [La Réunion J1 2022](https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_02.pdf){. target="_blank"}
+        Exercice 5 du sujet [La Réunion J1 2022](./data/2022_LeReunion_J1.pdf){. target="_blank"}
     
         ??? tip "Correction Q1.a."
             Une adresse IPv4 se code à l'aide de 4 octets.
@@ -89,6 +89,39 @@
         |G|D|3|
         |F|D|4|
 
+!!! abstract ""
+
+    Exercice 5 du sujet [Métropole J1 2022](./data/22-NSIJ1ME1.pdf)
+
+    ??? tip "Correction Q1.a."
+        L'écriture décimale de cette adresse ipv4 est donc b. Le dernier octet a 256 valeurs possibles (de 0 à 255), le nombre d'adresses différentes possibles du réseau A est donc 256.
+
+        note : Deux adresses sont réservées dans un réseau : une pour le réseau lui-même et l'autre pour la diffusion (broadcast). Donc parmi les 256 possibilités, 254 peuvent être attribuées à un hôte du réseau.
+
+    ??? tip "Correction Q2.a."
+        Le routeur A est directement relié à B, C et D (métrique 1)
+
+    ??? tip "Correction Q2.b."
+        ![schéma](./data/MEJ1_2b.png){: .center width=50%}
+
+    ??? tip "Correction Q3"
+        ![tab](./data/MEJ1_3.png){: .center width=50%}
+
+    ??? tip "Correction Q4.a."
+         Le chemin emprunté sera F - H - J - K - I pour un coût de 13. Les autres chemins ont un coût supérieur et dans le protocole ospf on minimise le coût (et pas le nombre de routeurs traversés comme dans le protocole rip)
+
+    ??? tip "Correction Q4.b."
+        ![tab](./data/MEJ1_4b.png){: .center width=50%}
+
+    ??? tip "Correction Q4.c."
+        Une panne du routeur H, en effet dans ce cas :
+
+        - pour transmettre de I à F le chemin serait I - K - J - G - F (coût minimal de 19),
+        - pour transmettre de K à F le chemin serait K - J - G - F (coût minimal de 14),
+        - pour transmettre de J à F le chemin serait J - G - F (coût minimal de 12)
+        - pour transmettre de L à F le chemin serait L - G - F (coût minimal de 20)
+
+        Dans tous les cas, on transite bien par G.
 
 !!! abstract "Exercice du sujet Métropole J1 2021"
     === "Énoncé"

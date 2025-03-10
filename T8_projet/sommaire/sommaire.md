@@ -1,3 +1,4 @@
-1. [Projet Toussaint :jack_o_lantern:](./1_POO/cours.md)
-2. [Projet Noël :christmas_tree:](./2_Huffman/cours.md) 
-3. [Projet fin d'année :tada:](./3_flask/flask.md)
+1. [Projet Pyxel 📈](./1_POO/cours.md)
+2. [Projet Les marmottes 🐻](./2_Huffman/cours.md) 
+3. [Exposé Crypto 🔐]()
+4. [Projet fin d'année 	🔆](./4_flask/flask.md)
