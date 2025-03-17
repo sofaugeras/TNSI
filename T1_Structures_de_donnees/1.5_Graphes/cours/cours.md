@@ -311,6 +311,17 @@ La modélisation d'un graphe par sa matrice d'adjacence est loin d'être la seul
         ![image](data/ex3_Q2.png){: .center}
 
 
+!!! tips "Entraînement"
+    Page d'exercice sur l'implémentation des graphes : [ici](https://codex.forge.apps.education.fr/exercices/liste_adjacence/)
+    
+    ```mermaid 
+        graph TD
+            matrice --> dictionnaire
+            matrice --> liste
+            liste --> matrice
+            dictionnaire --> matrice
+    ```
+
 
 ## 3. Création d'une classe ```Graphe```
 
@@ -484,17 +495,6 @@ L'objet de type ```Graphe``` aura comme attributs :
                     if self.sont_voisins(self.liste_sommets[i], self.liste_sommets[j]):
                         matrice[i][j] = 1
             return matrice
-    ```
-
-!!! tips "Entraînement"
-    Page d'exercice sur l'implémentation des graphes : [ici](https://codex.forge.apps.education.fr/exercices/liste_adjacence/)
-    
-    ```mermaid 
-        graph TD
-            matrice --> dictionnaire
-            matrice --> liste
-            liste --> matrice
-            dictionnaire --> matrice
     ```
 
 
