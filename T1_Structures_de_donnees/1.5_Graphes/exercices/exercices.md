@@ -5,7 +5,7 @@
     Exercice 3 du [sujet 0 version A - 2024](./data/bac_nsi_2024_sujet0a.pdf){. target="_blank"}
 
     ??? success "Correction Q1." 
-        ![image](data/0A_Q1.png){: .center}
+        ![image](./data/0A_Q1.png){: .center}
         
     
     ??? success "Correction Q2." 
