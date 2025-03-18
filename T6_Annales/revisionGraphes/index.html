@@ -3178,9 +3178,11 @@
 
 <div class="admonition example">
 <p class="admonition-title">Crédits</p>
-<p>Crédits des corrections : 
-- Julien SALVA - Lycée Déodat de Séverac
-- Mydatalogger</p>
+<p>Crédits des corrections : </p>
+<ul>
+<li>Julien SALVA - Lycée Déodat de Séverac</li>
+<li>Mydatalogger</li>
+</ul>
 </div>
 <div class="admonition example">
 <p class="admonition-title">2024 Asie Jour 1 24-NSIJ1G11</p>
@@ -3212,23 +3214,23 @@
 </details>
 <details class="success">
 <summary>Q6</summary>
-<p><a href="../data/24-NSIJ1G11_Q6.png">image</a></p>
+<p><img alt="image" src="../data/24-NSIJ1G11_Q6.png" /></p>
 </details>
 <details class="success">
 <summary>Q7</summary>
-<p>Il est impossible de trouver un ordre car le graphe possède un cycle <span class="arithmatex">\(1-2-3\)</span>.</p>
+<p>Il est impossible de trouver un ordre car le graphe possède un cycle 1-2-3.</p>
 </details>
 <details class="success">
 <summary>Q8</summary>
-<p>la matrics M est
-<span class="arithmatex">\(\\pmatrix{
-0 &amp; 1 &amp; 0 &amp; 0 &amp; 0  \\\\
-0 &amp; 0 &amp; 1 &amp; 0 &amp; 0  \\\\ 
-0 &amp; 0 &amp; 0 &amp; 1 &amp; 0  \\\\
-0 &amp; 1 &amp; 0 &amp; 0 &amp; 1  \\\\ 
-0 &amp; 0 &amp; 0 &amp; 0 &amp; 0  \\\\
-}\)</span>  </p>
-<p><a href="../data/24-NSIJ1G11_Q7.png">image</a></p>
+<p>la matrice M est
+<span class="arithmatex">\(\begin{pmatrix}
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 0  \\
+0 &amp; 0 &amp; 1 &amp; 0 &amp; 0  \\ 
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 0  \\
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 1  \\ 
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0  \\
+\end{pmatrix}\)</span>   </p>
+<p><img alt="image" src="../data/24-NSIJ1G11_Q7.png" /></p>
 <p>La variable ok vaut <code>False</code> car le dernier appel de mystere du tableau renvoie <code>False</code> et chaque appel de la pile d’appel récursif renvoie <code>False</code>.</p>
 </details>
 <details class="success">
@@ -3252,22 +3254,22 @@ Cet exercice porte sur les graphes.</p>
 <p><strong>Partie A : Matrice d’adjacence</strong></p>
 <details class="success">
 <summary>Q1</summary>
-<p><a href="../data/24-NSIJ1AN1_Q1.png">image graphe</a></p>
+<p><img alt="image graphe" src="../data/24-NSIJ1AN1_Q1.png" /></p>
 </details>
 <details class="success">
 <summary>Q2</summary>
-<p><div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code># sommets : G, J, Y, E, N, M, A, L
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># sommets : G, J, Y, E, N, M, A, L</span>
 </code></pre></div>
-<span class="arithmatex">\(\\pmatrix{
-0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 \\\\
-1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\\\
-1 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 \\\\
-0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\\\
-1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\\\
-1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\\\
-0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\\\
-0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\\\
-}\)</span>  </p>
+<p><span class="arithmatex">\(\begin{pmatrix}
+0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
+1 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+\end{pmatrix}\)</span>    </p>
 </details>
 <details class="success">
 <summary>Q3</summary>
@@ -3345,7 +3347,7 @@ Cet exercice porte sur les graphes et les protocoles réseau</p>
 </details>
 <details class="success">
 <summary>Q3</summary>
-<p>£0011 00102 = 32 + 16 + 2 = 50$</p>
+<p><span class="arithmatex">\(0011 00102 = 32 + 16 + 2 = 50\)</span></p>
 </details>
 <details class="success">
 <summary>Q4</summary>
@@ -3384,7 +3386,7 @@ Cet exercice porte sur les graphes et les protocoles réseau</p>
 </tr>
 </tbody>
 </table>
-<p><a href="../data/24-polynesie-j1-ex1_Q5.png">image</a></p>
+<p><img alt="image" src="../data/24-polynesie-j1-ex1_Q5.png" /></p>
 </details>
 <details class="success">
 <summary>Q6</summary>
@@ -3464,7 +3466,7 @@ Cet exercice porte sur les structures de données FILE et PILE, les graphes et l
 <li>Mp → Ar → Mr → Nc</li>
 <li>Mp → Ar → Ax → Nc</li>
 </ul>
-<p><a href="../data/24-polynesie-j2-ex1_Q2.png">image</a></p>
+<p><img alt="image" src="../data/24-polynesie-j2-ex1_Q2.png" /></p>
 </details>
 <details class="success">
 <summary>Q3</summary>
@@ -3625,10 +3627,10 @@ Cet exercice porte sur la programmation orientée objet, les graphes et utilise 
 <summary>Q1</summary>
 <p>Les attributs de la classe <code>Piste</code> et leur type sont les suivants :</p>
 <ol>
-<li><strong>nom</strong> (type : str) : Le nom de la piste.
-2.<strong>denivele</strong>(type : int) : Le dénivelé de la piste en mètres.
-3.<strong>longueur</strong>(type : float) : La longueur de la piste en kilomètres.
-4.<strong>couleur</strong>(type : str) : La couleur de la piste (par exemple : verte, bleue, rouge, noire). Cet  attribut est initialisé avec une chaîne vide.
+<li><strong>nom</strong> (type : str) : Le nom de la piste.<br />
+2.<strong>denivele</strong>(type : int) : Le dénivelé de la piste en mètres.<br />
+3.<strong>longueur</strong>(type : float) : La longueur de la piste en kilomètres.<br />
+4.<strong>couleur</strong>(type : str) : La couleur de la piste (par exemple : verte, bleue, rouge, noire). Cet  attribut est initialisé avec une chaîne vide.<br />
 5.<strong>ouverte</strong>(type : bool) : Un indicateur qui précise si la piste est ouverte ou fermée. Cet attribut est initialisé avec la valeur True.</li>
 </ol>
 </details>

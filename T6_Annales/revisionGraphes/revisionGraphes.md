@@ -1,6 +1,7 @@
 !!! example "Crédits"
 
     Crédits des corrections : 
+
     - Julien SALVA - Lycée Déodat de Séverac
     - Mydatalogger
 
@@ -26,22 +27,22 @@
         Il est possible de réaliser les tâche dans l’ordre : 2, 0 puis 1 et 3 puis 5 puis 4.
 
     ??? success "Q6"
-        [image](./data/24-NSIJ1G11_Q6.png)
+        ![image](./data/24-NSIJ1G11_Q6.png)
 
     ??? success "Q7"
-         Il est impossible de trouver un ordre car le graphe possède un cycle $1-2-3$.
+         Il est impossible de trouver un ordre car le graphe possède un cycle 1-2-3.
     
     ??? success "Q8"
-        la matrics M est
-        $\\pmatrix{
-        0 & 1 & 0 & 0 & 0  \\\\
-        0 & 0 & 1 & 0 & 0  \\\\ 
-        0 & 0 & 0 & 1 & 0  \\\\
-        0 & 1 & 0 & 0 & 1  \\\\ 
-        0 & 0 & 0 & 0 & 0  \\\\
-        }$  
+        la matrice M est
+        $\begin{pmatrix}
+        0 & 1 & 0 & 0 & 0  \\
+        0 & 0 & 1 & 0 & 0  \\ 
+        0 & 0 & 0 & 1 & 0  \\
+        0 & 1 & 0 & 0 & 1  \\ 
+        0 & 0 & 0 & 0 & 0  \\
+        \end{pmatrix}$   
 
-        [image](./data/24-NSIJ1G11_Q7.png)
+        ![image](./data/24-NSIJ1G11_Q7.png)
 
         La variable ok vaut ``False`` car le dernier appel de mystere du tableau renvoie ``False`` et chaque appel de la pile d’appel récursif renvoie ``False``.
     
@@ -63,22 +64,24 @@
     **Partie A : Matrice d’adjacence**
 
     ??? success "Q1"
-        [image graphe](./data/24-NSIJ1AN1_Q1.png)
+        ![image graphe](./data/24-NSIJ1AN1_Q1.png)
     
     ??? success "Q2"
-        ```
+
+        ```python
         # sommets : G, J, Y, E, N, M, A, L
         ```
-        $\\pmatrix{
-        0 & 1 & 1 & 0 & 1 & 1 & 0 & 0 \\\\
-        1 & 0 & 1 & 1 & 0 & 0 & 0 & 1 \\\\
-        1 & 1 & 0 & 1 & 1 & 1 & 1 & 0 \\\\
-        0 & 1 & 1 & 0 & 1 & 0 & 0 & 0 \\\\
-        1 & 0 & 1 & 1 & 0 & 0 & 0 & 0 \\\\
-        1 & 0 & 1 & 0 & 0 & 0 & 1 & 0 \\\\
-        0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 \\\\
-        0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\\\
-        }$  
+
+        $\begin{pmatrix}
+        0 & 1 & 1 & 0 & 1 & 1 & 0 & 0 \\
+        1 & 0 & 1 & 1 & 0 & 0 & 0 & 1 \\
+        1 & 1 & 0 & 1 & 1 & 1 & 1 & 0 \\
+        0 & 1 & 1 & 0 & 1 & 0 & 0 & 0 \\
+        1 & 0 & 1 & 1 & 0 & 0 & 0 & 0 \\
+        1 & 0 & 1 & 0 & 0 & 0 & 1 & 0 \\
+        0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 \\
+        0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+        \end{pmatrix}$    
 
     ??? success "Q3"
         Avec ``sommets = ['G', 'J', 'Y', 'E', 'N', 'M', 'A', 'L'] :``
@@ -149,12 +152,16 @@
 
     ??? success "Q1"
         $2⁸ – 2 = 254$
+
     ??? success "Q2"
         $1101 1001$
+
     ??? success "Q3"
-        £0011 00102 = 32 + 16 + 2 = 50$
+        $0011 00102 = 32 + 16 + 2 = 50$
+
     ??? success "Q4"
         ``110.217.52.0/24`` admet une plage @ de ``110.217.52.0`` à ``110.217.52.255``
+
     ??? success "Q5"
     
         |Destination |Passerelle| Interface|
@@ -164,7 +171,7 @@
         |110.217.54.0 |on-link| 110.217.54.254|
         |110.217.56.0 ||110.217.54.253 |110.217.54.254|
 
-        [image](./data/24-polynesie-j1-ex1_Q5.png)
+        ![image](./data/24-polynesie-j1-ex1_Q5.png)
     
     ??? success "Q6"
         |Destination |Passerelle| Interface|
@@ -215,7 +222,7 @@
         - Mp → Ar → Mr → Nc
         - Mp → Ar → Ax → Nc
 
-        [image](./data/24-polynesie-j2-ex1_Q2.png)
+        ![image](./data/24-polynesie-j2-ex1_Q2.png)
 
     ??? success "Q3"
 
@@ -360,10 +367,10 @@
     ??? success "Q1"
         Les attributs de la classe ``Piste`` et leur type sont les suivants :
 
-        1. **nom** (type : str) : Le nom de la piste.
-        2.**denivele**(type : int) : Le dénivelé de la piste en mètres.
-        3.**longueur**(type : float) : La longueur de la piste en kilomètres.
-        4.**couleur**(type : str) : La couleur de la piste (par exemple : verte, bleue, rouge, noire). Cet  attribut est initialisé avec une chaîne vide.
+        1. **nom** (type : str) : Le nom de la piste.<br />
+        2.**denivele**(type : int) : Le dénivelé de la piste en mètres.<br />
+        3.**longueur**(type : float) : La longueur de la piste en kilomètres.<br />
+        4.**couleur**(type : str) : La couleur de la piste (par exemple : verte, bleue, rouge, noire). Cet  attribut est initialisé avec une chaîne vide.<br />
         5.**ouverte**(type : bool) : Un indicateur qui précise si la piste est ouverte ou fermée. Cet attribut est initialisé avec la valeur True.
 
     ??? success "Q2"
