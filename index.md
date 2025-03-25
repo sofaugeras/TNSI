@@ -10,7 +10,7 @@
 
     - 📆 Date Bac Blanc : 28-31 avril 2025
 
-    - ✨ La page contenant les 48 sujets l'Épreuve Pratique 2024 est [ici](T6_6_Epreuve_pratique/BNS_2024/){. target="_blank"} :star: :star: :star:
+    - ✨ La page contenant les 48 sujets l'Épreuve Pratique 2025 est [ici](https://sujets.examens-concours.gouv.fr/delos/public/bgt/nsi){. target="_blank"} :star: :star: :star:
 
     Les modalités du BAC 2024 ont été [annoncées](https://www.education.gouv.fr/bo/2023/Hebdo36/MENE2317750N){. target="_blank"} :
 
