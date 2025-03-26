@@ -1,9 +1,8 @@
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: En cours : [Graphes](./T1_Structures_de_donnees/1.5_Graphes/cours/)<br />
-    :arrow_forward: En cours : Exposé [cryptographie](./T8_projet/3_expose/cours.md)<br />
+    :arrow_forward: En cours : [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/)<br />
 
-    :hourglass: A venir : [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/)<br />
+    :hourglass: A venir : [Diviser pour régner](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)<br />
 
 
 !!! abstract "Actualités :newspaper:" 
@@ -47,6 +46,8 @@
     - ([Projet : codage de Huffman](./T8_projet/2_Huffman/cours.md)) ANNULE CAUSE INONDATION<br />
     - [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)<br />
     - [Sécurisation des communications, Cryptographie](./TNSI/T5_Architecture_materielle/5.4_Cryptographie/cours/)<br />
+    - [Graphes](./T1_Structures_de_donnees/1.5_Graphes/cours/)<br />
+    - [Exposé cryptographie](./T8_projet/3_expose/cours.md)<br />
     
 <!--       
 !!! note "*Thèmes traités*"
