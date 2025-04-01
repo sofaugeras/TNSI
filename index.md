@@ -1,8 +1,8 @@
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: En cours : [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/)<br />
+    :arrow_forward: En cours : [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/cours.md)<br />
 
-    :hourglass: A venir : [Diviser pour régner](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)<br />
+    :hourglass: A venir : [Diviser pour régner](./T3_Algorithmique/3.1_Diviser_pour_regner/cours.md)<br />
 
 
 !!! abstract "Actualités :newspaper:" 

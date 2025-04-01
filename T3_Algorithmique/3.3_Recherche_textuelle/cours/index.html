@@ -3371,7 +3371,9 @@
 <span class="normal">13</span>
 <span class="normal">14</span>
 <span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>    <span class="k">def</span> <span class="nf">recherche_naive</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">):</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code>    <span class="k">def</span> <span class="nf">recherche_naive</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        renvoie la liste des indices (éventuellement vide) des occurrences de</span>
 <span class="sd">        de la chaîne motif dans la chaîne texte.</span>
@@ -3379,6 +3381,8 @@
         <span class="n">indices</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">texte</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">):</span>
+            <span class="c1">#On commence la lecture du motif au debut du motif, j=0</span>
+            <span class="n">j</span><span class="o">=</span><span class="mi">0</span>
             <span class="c1">#On parcourt la fenêtre du motif</span>
             <span class="k">while</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span> <span class="ow">and</span> <span class="n">texte</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">motif</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
                 <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span> 
@@ -3450,7 +3454,7 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ol>
-<li>Testez la validité de vos réponses en comparant avec les résultats donnés par la fonctionnalité <code>find</code> proposée par :simple-python:</li>
+<li>Testez la validité de vos réponses en comparant avec les résultats donnés par la fonctionnalité <code>find</code> proposée par <img alt="🐍" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f40d.svg" title=":snake:" /></li>
 <li>Mesurez le temps d'exécution de votre algorithme à l'aide du module <code>time</code>.  </li>
 </ol>
 </div>
@@ -3511,6 +3515,7 @@ Nigel Horspool  est né en Grande-Bretagne mais citoyen canadien. Il est profess
 <span class="n">aDroite</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span> <span class="c1">#idem</span>
 <span class="n">aDroite</span><span class="p">[</span><span class="s1">&#39;m&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">2</span> <span class="c1">#on a trouvé un &#39;m&#39; plus à droite donc on change la valeur pour &#39;m&#39;</span>
 <span class="n">aDroite</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">3</span> <span class="c1">#idem : on vient de trouver un &#39;a&#39; plus à droite que le précédent</span>
+<span class="n">aDroite</span><span class="p">[</span><span class="s1">&#39;n&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">4</span> <span class="c1">#On termine avec la dernière lettre du motif</span>
 <span class="c1">#fini !</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;dico résultat : &quot;</span><span class="p">,</span> <span class="n">aDroite</span><span class="p">)</span>
 </code></pre></div>

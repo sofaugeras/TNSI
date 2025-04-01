@@ -59,6 +59,8 @@ Donc décalage de la fenêtre d’un cran vers la droite
             indices = []
             i = 0
             while i <= len(texte) - len(motif):
+                #On commence la lecture du motif au debut du motif, j=0
+                j=0
                 #On parcourt la fenêtre du motif
                 while j < len(motif) and texte[i+j] == motif[j]:
                     j += 1 
@@ -116,7 +118,7 @@ with open("stendhals.txt") as f:
 
 !!! abstract "Exercice 2"
     === "Énoncé"
-        1. Testez la validité de vos réponses en comparant avec les résultats donnés par la fonctionnalité `find` proposée par :simple-python:
+        1. Testez la validité de vos réponses en comparant avec les résultats donnés par la fonctionnalité `find` proposée par :snake:
         2. Mesurez le temps d'exécution de votre algorithme à l'aide du module `time`.  
 
     === "Correction"
@@ -196,6 +198,7 @@ aDroite['m']=0 #car c'est le premier qu'on a trouvé
 aDroite['a']=1 #idem
 aDroite['m']=2 #on a trouvé un 'm' plus à droite donc on change la valeur pour 'm'
 aDroite['a']=3 #idem : on vient de trouver un 'a' plus à droite que le précédent
+aDroite['n']=4 #On termine avec la dernière lettre du motif
 #fini !
 print("dico résultat : ", aDroite)
 ```

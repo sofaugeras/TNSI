@@ -1,20 +1,38 @@
 # Annales des Épreuves Écrites
 
 !!! warning "Corrigés"
-    Vous pouvez retrouver les corrigés des épreuves pratiques et écrites sur le site de Fabrice Nativel [ici](https://fabricenativel.github.io/index_annales/)
+    Vous pouvez retrouver les corrigés des épreuves pratiques et écrites sur :
+
+    - site de Fabrice Nativel [ici](https://fabricenativel.github.io/index_annales/)<br />
+    - Site de raitine, classement par thème [ici](https://raisintine.fr/chocolatine/cours.php?titre=T-bac-ecrit)<br />
+    - ou encore [ici](https://projet.eu.org/pedago/sin/NSI/sujets/)
 
 ## 2024
-- [Sujet 0 - version A](./data/2024/bac_nsi_2024_sujet0a.pdf)
-- [Sujet 0 - version B](./data/2024/bac_nsi_2024_sujet0b.pdf)
-- [Eléments de correction sujets 2024 - ici](https://pixees.fr/informatiquelycee/term/index.html#suj_bac)
+- [Septembre Métropole J1](data/2024/24-NSIJ1ME3.pdf)
+- [Septembre Métropole J2](data/2024/24-NSIJ2ME3.pdf)
+- [Métropole J1](data/2024/24-NSIJ1ME.pdf)
+- [Métropole J2](data/2024/24-NSIJ2ME1.pdf)
+- [Asie J1](data/2024/24-NSIJ1JA1.pdf)
+- [Asie J2](data/2024/24-NSIJ2JA1.pdf)
+- [Centres Étrangers J1](data/2024/24-NSIJ1G1.pdf)
+- [Centres Étrangers J2](data/2024/24-NSIJ2G1.pdf)
+- [Amérique du Nord J1](data/2024/24-NSIJ1AN1.pdf)
+- [Amérique du Nord J2](data/2024/24-NSIJ2AN1.pdf)
+- [Sujet 0 - version A](data/2024/bac_nsi_2024_sujet0a.pdf)
+- [Sujet 0 - version B](data/2024/bac_nsi_2024_sujet0b.pdf)
 
 ## 2023
-
+- [Liban J2](data/2023/2023_Liban_J2.pdf)
+- [Liban J1](data/2023/2023_Liban_J1.pdf)
+- [Métropole J2](data/2023/2023_Metropole_J2.pdf)
+- [Métropole J1](data/2023/2023_Metropole_J1.pdf)
+- [Centres Étrangers J2](data/2023/2023_Centres_Etrangers_J2.pdf)
+- [Centres Étrangers J1](data/2023/2023_Centres_Etrangers_J1.pdf)
+- [Polynésie J2](data/2023/2023_Polynesie_J2.pdf)
+- [Polynésie J1](data/2023/2023_Polynesie_J1.pdf)
 - [Sujet 0 - version A](data/2023/2023-sujet_0-a.pdf)
-- [Sujet 0 - version B](data/2023/2023-sujet_0-b.pdf)
-- [Centres Étrangers J2](data/2023/NSI_J2-4.pdf)
-- [Centres Étrangers J1](data/2023/NSI_J1-1.pdf)
-- [Polynésie](data/2023/nsi23poj1.pdf)
+- [Sujet 0 - version B](data/2023/2023-sujet_0-b.pdf) 
+
 
 ## 2022
 
