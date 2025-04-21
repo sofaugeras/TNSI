@@ -1,8 +1,8 @@
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: En cours : [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/cours.md)<br />
+    :arrow_forward: En cours : [Diviser pour régner](./T3_Algorithmique/3.1_Diviser_pour_regner/cours.md)<br />
 
-    :hourglass: A venir : [Diviser pour régner](./T3_Algorithmique/3.1_Diviser_pour_regner/cours.md)<br />
+    :hourglass: A venir : [Programmation dynamique](./T3_Algorithmique/3.2_Programmation_dynamique/cours.md)
 
 
 !!! abstract "Actualités :newspaper:" 
@@ -48,13 +48,13 @@
     - [Sécurisation des communications, Cryptographie](./TNSI/T5_Architecture_materielle/5.4_Cryptographie/cours/)<br />
     - [Graphes](./T1_Structures_de_donnees/1.5_Graphes/cours/)<br />
     - [Exposé cryptographie](./T8_projet/3_expose/cours.md)<br />
+    - [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/cours.md)<br />
     
 <!--       
 !!! note "*Thèmes traités*"
 
-    - [Diviser pour régner](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
     - tri fusion
-    - Programmation dynamique
+    
     - programmation fonctionnelle
     - EP
     - Grand oral
