@@ -120,21 +120,22 @@ def liste_parcours(pyr):
 ### 2.3 Somme maximale par force brute
 
 !!! warning "Révision : max"
+
     === "enoncé"
-    Ecrire la fonction ```maxi``` qui prend en paramètre une liste non vide d'entier et qui renvoie un tuple correspondant à au maximum de cette liste et son indice
+        Ecrire la fonction ```maxi``` qui prend en paramètre une liste non vide d'entier et qui renvoie un tuple correspondant à au maximum de cette liste et son indice
 
     === "Correction"
 
-    ```python linenums='1'
-    def maxi(li):
-    max = li[0]
-    imaxi = 0
-    for k in range(len(li)):
-        if li[k] > max:
-            max = li[k]
-            imaxi = k
-    return (max,imaxi)
-    ```
+        ```python linenums='1'
+        def maxi(li):
+        max = li[0]
+        imaxi = 0
+        for k in range(len(li)):
+            if li[k] > max:
+                max = li[k]
+                imaxi = k
+        return (max,imaxi)
+        ```
 
 !!! example "exercice 4.1"
 

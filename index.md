@@ -1,8 +1,8 @@
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: En cours : [Diviser pour régner](./T3_Algorithmique/3.1_Diviser_pour_regner/cours.md)<br />
+    :arrow_forward: En cours : [Programmation dynamique](./T3_Algorithmique/3.2_Programmation_dynamique/cours.md)<br />
 
-    :hourglass: A venir : [Programmation dynamique](./T3_Algorithmique/3.2_Programmation_dynamique/cours.md)
+    :hourglass: A venir : révision épreuve écrite, épreuve pratique, Grand Oral
 
 
 !!! abstract "Actualités :newspaper:" 
@@ -49,6 +49,7 @@
     - [Graphes](./T1_Structures_de_donnees/1.5_Graphes/cours/)<br />
     - [Exposé cryptographie](./T8_projet/3_expose/cours.md)<br />
     - [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/cours.md)<br />
+    - [Diviser pour régner](./T3_Algorithmique/3.1_Diviser_pour_regner/cours.md)
     
 <!--       
 !!! note "*Thèmes traités*"
