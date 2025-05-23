@@ -2966,6 +2966,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Révision Récursivité
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2975,6 +2986,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2023-sujet-0b-exercice-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2023 Sujet 0.b Exercice 2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2024-metropole-jour-2-exercice-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2024 Métropole Jour 2 Exercice 1
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3276,9 +3324,10 @@
 <p class="admonition-title">Crédits</p>
 <ul>
 <li>2023, Sujet 0.b Ex2 Mise en page et correction par <a href="https://e-nsi.gitlab.io/ecrit/">Franck Chambon</a></li>
+<li>Exercice 1 du [2024 Métropole Septembre Jour 2] correction proposée par rchap sur le forum NSI</li>
 </ul>
 </div>
-<h1 id="fonctions-recursives">Fonctions récursives<a class="headerlink" href="#fonctions-recursives" title="Permanent link">⚓︎</a></h1>
+<h2 id="2023-sujet-0b-exercice-2">2023 Sujet 0.b Exercice 2<a class="headerlink" href="#2023-sujet-0b-exercice-2" title="Permanent link">⚓︎</a></h2>
 <blockquote>
 <p>D'après 2023, Sujet 0.b, Ex. 2</p>
 </blockquote>
@@ -3408,6 +3457,68 @@ Expliquer pourquoi le programme s'arrête après l'affichage du nombre <code>0</
     <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
 </code></pre></div>
 </details>
+<h2 id="2024-metropole-jour-2-exercice-1">2024 Métropole Jour 2 Exercice 1<a class="headerlink" href="#2024-metropole-jour-2-exercice-1" title="Permanent link">⚓︎</a></h2>
+<div class="admonition exercice">
+<p class="admonition-title">2024 Métropole Jour 2</p>
+<p>Exercice 1 du <a href="../data/2024/24-NSIJ1AN1.pdf">2024 Métropole Septembre Jour 2</a></p>
+<p><a class="md-button md-button--primary" href="https://pratique.forge.apps.education.fr/ecrit/recursif/24-ME3-J2-ex1/">Problème de l'arrêt</a></p>
+<p><strong>extrait :</strong> <br /></p>
+<p>Dans cet exercice, si <code>f</code> est une fonction Python prenant un argument et si <code>x</code> est une valeur, on dira qu'un appel <code>f(x)</code> termine lorsque l'évaluation de <code>f(x)</code> renvoie toujours une valeur au bout d'un nombre fini d'étapes. À l'opposé, un tel appel ne termine pas s'il est possible qu'il effectue des instructions à l'infini.<br /></p>
+<p><strong>Partie A : boucle while</strong><br /></p>
+<details class="success">
+<summary>Q1</summary>
+<p>Lors de l'exécution de <code>f1(7)</code>, la variable i prend scessivement les valeurs <code>7, 8, 9, 10</code>, la fontion termine
+et renvoie <code>10</code>.</p>
+</details>
+<details class="success">
+<summary>Q2</summary>
+<p>Lors de l'exécution de <code>f1(-2)</code>, la variable <code>i</code> prend sucessivement les valeurs <code>-2, -1, ..., 7, 8, 9, 10</code>, la fonction termine et renvoie <code>10</code>.</p>
+</details>
+<details class="success">
+<summary>Q3</summary>
+<p>Lors de l'exécution de <code>f1(12)</code>, la variable <code>i</code> prend sucessivement les valeurs <code>12, 13, 14, 15, 16</code> ... <br />
+la fonction ne termine pas.</p>
+</details>
+<details class="success">
+<summary>Q4</summary>
+<p>La fonction <code>f1</code> termine lorsque son paramètre est un entier inférieur ou égal à <code>10</code>.</p>
+</details>
+<p><strong>Partie B : fonction récursive</strong><br /></p>
+<details class="success">
+<summary>Q5</summary>
+<p>L'appel <code>f2(4)</code> termine et renvoie <code>6</code>.</p>
+</details>
+<details class="success">
+<summary>Q6</summary>
+<p>L'appel <code>f2(5)</code> ne termine pas car dans les appels sucessifs la variable <code>n</code> va rester impaire et ne sera donc  jamais nulle.</p>
+</details>
+<details class="success">
+<summary>Q7</summary>
+<p>L'appel <code>f2(n)</code> termine si son paramètre est un entier naturel pair.</p>
+</details>
+<details class="success">
+<summary>Q8</summary>
+<p>La fonction récursive ci-dessous ne termina pour aucun entier <code>n</code>.</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">infini</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">infini</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<p><strong>Partie C : le problème de l'arrêt</strong><br/></p>
+<details class="success">
+<summary>Q9</summary>
+<p>Dans le cas où <code>arret(code_paradoxe,code_paradoxe)</code> renvoie <code>True</code>, alors l'instruction <code>infini(42)</code> est     exécutée, et elle ne termine pas, donc <code>paradoxe(code_paradoxe)</code> ne termine pas.</p>
+</details>
+<details class="success">
+<summary>Q10</summary>
+<p>Dans le cas où <code>arret(code_paradoxe, code_paradoxe)</code> renvoie <code>False</code>, alors l'instruction return <code>0</code> est exécutée, donc <code>paradoxe(code_paradoxe)</code> termine.</p>
+</details>
+<details class="success">
+<summary>Q11</summary>
+<p>Par conséquent, l'appel <code>paradoxe(code_paradoxe)</code> ne termine pas si <code>arret(code_paradoxe, code_paradoxe)</code>    renvoie <code>True</code> et termine si <code>arret(code_paradoxe, code_paradoxe)</code> renvoie <code>False</code>, ce qui est contradictoire avec la définition de la fonction <code>arrêt</code>.<br />
+On en déduit, par l'absurde, qu'une fonction <code>arret</code> possédant la propriété souhaitée ne peut exister.</p>
+</details>
+<p><a href="../data/2024/24NSIJ2ME3_corr.pdf">Corrigé complet du sujet 2024 Métropole Septembre Jour 2</a></p>
+</div>
 
 
 

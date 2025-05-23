@@ -3,9 +3,8 @@
 !!! info "Crédits"
     - Crédit de la mise en pages des exercices  : [@Gilles Lassus](https://glassus.github.io)
     - Exercice 2 basé sur le travail de G.Viateau (Bayonne)
-    - Exercice 0 basé sur le travail de J. Le Coupanec (Académie de Rennes)
     - Exercice 1 d'après Prépabac NSI, Terminale, G.CONNAN, V.PETROV, G.ROZSAVOLGYI, L.SIGNAC, éditions HATIER.
-
+<!--
 ## Exercice en console
 
 !!! abstract "exercice 0"
@@ -20,6 +19,7 @@
     1. Répondez à ces [12 questions](https://colbert.bzh/sql/tp.html?html=soccer_1&db=soccer){. target="_blank"} générales.
     2. Répondez à ces [11 questions](https://colbert.bzh/sql/tp.html?html=soccer_2&db=soccer){. target="_blank"} sur l'équipe de Lorient.
 
+-->
 ## Exercices SQL débranchés
 
 ### Prépabac NSI

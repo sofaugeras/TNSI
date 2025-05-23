@@ -1,9 +1,12 @@
 # Révision sur la Récursivité
 
 !!! info "Crédits"
-    - 2023, Sujet 0.b Ex2 Mise en page et correction par [Franck Chambon](https://e-nsi.gitlab.io/ecrit/)
 
-# Fonctions récursives
+    - 2023, Sujet 0.b Ex2 Mise en page et correction par [Franck Chambon](https://e-nsi.gitlab.io/ecrit/)
+    - Exercice 1 du [2024 Métropole Septembre Jour 2] correction proposée par rchap sur le forum NSI
+
+
+## 2023 Sujet 0.b Exercice 2
 
 > D'après 2023, Sujet 0.b, Ex. 2
 
@@ -153,3 +156,62 @@ Exemple : `#!py somme_entiers(4)` renvoie `10`.
         return sum(range(n + 1))
     ```
 
+## 2024 Métropole Jour 2 Exercice 1
+
+!!! exercice "2024 Métropole Jour 2"
+
+    Exercice 1 du [2024 Métropole Septembre Jour 2](./data/2024/24-NSIJ1AN1.pdf)
+    
+    [Problème de l'arrêt](https://pratique.forge.apps.education.fr/ecrit/recursif/24-ME3-J2-ex1/){ .md-button .md-button--primary }
+
+    **extrait :** <br />
+
+    Dans cet exercice, si `f` est une fonction Python prenant un argument et si `x` est une valeur, on dira qu'un appel `f(x)` termine lorsque l'évaluation de `f(x)` renvoie toujours une valeur au bout d'un nombre fini d'étapes. À l'opposé, un tel appel ne termine pas s'il est possible qu'il effectue des instructions à l'infini.<br />
+
+    **Partie A : boucle while**<br />
+
+    ??? success "Q1"
+        Lors de l'exécution de ``f1(7)``, la variable i prend scessivement les valeurs ``7, 8, 9, 10``, la fontion termine
+        et renvoie ``10``.
+
+    ??? success "Q2"
+        Lors de l'exécution de ``f1(-2)``, la variable ``i`` prend sucessivement les valeurs ``-2, -1, ..., 7, 8, 9, 10``, la fonction termine et renvoie ``10``.
+
+    ??? success "Q3"  
+        Lors de l'exécution de ``f1(12)``, la variable ``i`` prend sucessivement les valeurs ``12, 13, 14, 15, 16`` ... <br />
+        la fonction ne termine pas.
+
+    ??? success "Q4"  
+        La fonction ``f1`` termine lorsque son paramètre est un entier inférieur ou égal à ``10``.
+
+    **Partie B : fonction récursive**<br />
+
+    ??? success "Q5" 
+        L'appel ``f2(4)`` termine et renvoie ``6``.
+
+    ??? success "Q6" 
+        L'appel ``f2(5)`` ne termine pas car dans les appels sucessifs la variable ``n`` va rester impaire et ne sera donc  jamais nulle.
+
+    ??? success "Q7" 
+        L'appel ``f2(n)`` termine si son paramètre est un entier naturel pair.
+
+    ??? success "Q8" 
+        La fonction récursive ci-dessous ne termina pour aucun entier ``n``.
+
+        ```python
+        def infini(n):
+            return infini(n-1)
+        ```
+    **Partie C : le problème de l'arrêt**<br/>
+
+    ??? success "Q9" 
+        Dans le cas où ``arret(code_paradoxe,code_paradoxe)`` renvoie ``True``, alors l'instruction ``infini(42)`` est     exécutée, et elle ne termine pas, donc ``paradoxe(code_paradoxe)`` ne termine pas.
+
+    ??? success "Q10" 
+        Dans le cas où ``arret(code_paradoxe, code_paradoxe)`` renvoie ``False``, alors l'instruction return ``0`` est exécutée, donc ``paradoxe(code_paradoxe)`` termine.
+
+    ??? success "Q11" 
+        Par conséquent, l'appel ``paradoxe(code_paradoxe)`` ne termine pas si ``arret(code_paradoxe, code_paradoxe)``    renvoie ``True`` et termine si ``arret(code_paradoxe, code_paradoxe)`` renvoie ``False``, ce qui est contradictoire avec la définition de la fonction ``arrêt``.<br />
+        On en déduit, par l'absurde, qu'une fonction ``arret`` possédant la propriété souhaitée ne peut exister.
+
+    [Corrigé complet du sujet 2024 Métropole Septembre Jour 2](./data/2024/24NSIJ2ME3_corr.pdf)

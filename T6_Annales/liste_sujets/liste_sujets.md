@@ -7,21 +7,29 @@
     - Site de raitine, classement par thème [ici](https://raisintine.fr/chocolatine/cours.php?titre=T-bac-ecrit)<br />
     - ou encore [ici](https://projet.eu.org/pedago/sin/NSI/sujets/)
 
+## 2025
+
+- [Amérique du Nord J1](./data/2025/25_NSIJ1AN1.pdf)
+- [Amérique du Nord J2](./data/2025/25_NSIJ2AN1.pdf)
+- [Sujet de secours Amérique du Nord](./data/2025/25_NSIPE2.pdf)
+
 ## 2024
-- [Septembre Métropole J1](data/2024/24-NSIJ1ME3.pdf)
-- [Septembre Métropole J2](data/2024/24-NSIJ2ME3.pdf)
-- [Métropole J1](data/2024/24-NSIJ1ME.pdf)
-- [Métropole J2](data/2024/24-NSIJ2ME1.pdf)
-- [Asie J1](data/2024/24-NSIJ1JA1.pdf)
-- [Asie J2](data/2024/24-NSIJ2JA1.pdf)
-- [Centres Étrangers J1](data/2024/24-NSIJ1G1.pdf)
-- [Centres Étrangers J2](data/2024/24-NSIJ2G1.pdf)
-- [Amérique du Nord J1](data/2024/24-NSIJ1AN1.pdf)
-- [Amérique du Nord J2](data/2024/24-NSIJ2AN1.pdf)
+
+- [Septembre Métropole J1](./data/2024/24-NSIJ1ME3.pdf)
+- [Septembre Métropole J2](./data/2024/24-NSIJ2ME3.pdf) [Corrigé](./data/2024/24NSIJ2ME3_corr.pdf)
+- [Métropole J1](./data/2024/24-NSIJ1ME.pdf)
+- [Métropole J2](./data/2024/24-NSIJ2ME1.pdf)
+- [Asie J1](./data/2024/24-NSIJ1JA1.pdf)
+- [Asie J2](./data/2024/24-NSIJ2JA1.pdf)
+- [Centres Étrangers J1](./data/2024/24-NSIJ1G1.pdf)
+- [Centres Étrangers J2](./data/2024/24-NSIJ2G1.pdf)
+- [Amérique du Nord J1](./data/2024/24-NSIJ1AN1.pdf)
+- [Amérique du Nord J2](./data/2024/24-NSIJ2AN1.pdf)
 - [Sujet 0 - version A](data/2024/bac_nsi_2024_sujet0a.pdf)
 - [Sujet 0 - version B](data/2024/bac_nsi_2024_sujet0b.pdf)
 
 ## 2023
+
 - [Liban J2](data/2023/2023_Liban_J2.pdf)
 - [Liban J1](data/2023/2023_Liban_J1.pdf)
 - [Métropole J2](data/2023/2023_Metropole_J2.pdf)
