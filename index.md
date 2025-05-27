@@ -1,13 +1,13 @@
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: En cours : [Programmation dynamique](./T3_Algorithmique/3.2_Programmation_dynamique/cours.md)<br />
+    :arrow_forward: En cours : révision épreuve écrite, épreuve pratique, Grand Oral <br />
 
-    :hourglass: A venir : révision épreuve écrite, épreuve pratique, Grand Oral
+    :hourglass: A venir : 
 
 
 !!! abstract "Actualités :newspaper:" 
 
-    - 📆 Date Bac Blanc : 28-31 avril 2025
+    - 📆 Date Bac : Mardi 17 juin de 14h à 18h
 
     - ✨ La page contenant les 48 sujets l'Épreuve Pratique 2025 est [ici](https://sujets.examens-concours.gouv.fr/delos/public/bgt/nsi){. target="_blank"} :star: :star: :star:
 
@@ -50,14 +50,32 @@
     - [Exposé cryptographie](./T8_projet/3_expose/cours.md)<br />
     - [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/cours.md)<br />
     - [Diviser pour régner](./T3_Algorithmique/3.1_Diviser_pour_regner/cours.md)
+    - [Programmation dynamique](./T3_Algorithmique/3.2_Programmation_dynamique/cours.md)
     
 <!--       
 !!! note "*Thèmes traités*"
 
-    - tri fusion
-    
+    - Révision : [Codex](https://codex.forge.apps.education.fr/) <br />
+    - [Récursivité](./T2_Programmation/2.1_Recursivite/cours.md) <br />
+    - [Programmation orienté objet](./T2_Programmation/2.2_Programmation_Orientee_Objet/cours.md)<br />
+    - [piles / files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md)<br />
+    - [Listes chaînées](./T1_Structures_de_donnees/1.2_Listes/cours.md)<br />
+    - [Mise au point de programme](./T2_Programmation/2.4_Mise_au_point_de_programme/cours.md)  <br />
+    - [Base de données](./T4_Bases_de_donnees/sommaire.md)<br />
+    - [calculabilité](./T2_Programmation/2.3_Calculabilite_Decidabilite/cours.md)<br />
+    - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) <br />
+    - [Gestion des processus](./T5_Architecture_materielle/5.2_Gestion_des_processus/cours.md)<br />
+    - [Retour sur les dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) <br />
+    - [Arbres](./T1_Structures_de_donnees/1.4_Arbres/cours.md)<br />
+    - ([Projet : codage de Huffman](./T8_projet/2_Huffman/cours.md)) ANNULE CAUSE INONDATION<br />
+    - [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)<br />
+    - [Sécurisation des communications, Cryptographie](./TNSI/T5_Architecture_materielle/5.4_Cryptographie/cours/)<br />
+    - [Graphes](./T1_Structures_de_donnees/1.5_Graphes/cours/)<br />
+    - [Exposé cryptographie](./T8_projet/3_expose/cours.md)<br />
+    - [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/cours.md)<br />
+    - [Diviser pour régner](./T3_Algorithmique/3.1_Diviser_pour_regner/cours.md)
+    - [Programmation dynamique](./T3_Algorithmique/3.2_Programmation_dynamique/cours.md)
     - programmation fonctionnelle
     - EP
-    - Grand oral
-    
+    - Grand oral 
 -->

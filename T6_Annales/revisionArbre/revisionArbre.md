@@ -145,8 +145,7 @@ Une fois la fonction complétée, que renvoie l'appel `recherche_auteur(A2, 'SIM
         elif valeur(abr) == nom:
             return True
         else:
-            return recherche_auteur(fils_gauche(abr), nom) or\
-                   recherche_auteur(fils_droit(abr), nom)
+            return recherche_auteur(fils_gauche(abr), nom) or recherche_auteur(fils_droit(abr), nom)
     ```
 
     L'appel renvoie `True`. En effet, au premier appel, l'arbre n'est pas vide et la valeur de l'arbre ('KAFKA') n'est pas égale à la valeur recherchée. Il y a donc le premier appel récursif sur le sous-arbre gauche et la valeur 'SIMENON'. Cet appel va finir par renvoyer `False` (puisque 'SIMENON' n'est pas dans ce sous-arbre). Puisqu'on est sur l'évaluation d'un OU, le deuxième appel récursif est lancé, et finira par renvoyer `True`.

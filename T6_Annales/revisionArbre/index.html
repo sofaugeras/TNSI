@@ -1348,8 +1348,7 @@ reste équilibré.</p>
     <span class="k">elif</span> <span class="n">valeur</span><span class="p">(</span><span class="n">abr</span><span class="p">)</span> <span class="o">==</span> <span class="n">nom</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">True</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">recherche_auteur</span><span class="p">(</span><span class="n">fils_gauche</span><span class="p">(</span><span class="n">abr</span><span class="p">),</span> <span class="n">nom</span><span class="p">)</span> <span class="ow">or</span>\
-               <span class="n">recherche_auteur</span><span class="p">(</span><span class="n">fils_droit</span><span class="p">(</span><span class="n">abr</span><span class="p">),</span> <span class="n">nom</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">recherche_auteur</span><span class="p">(</span><span class="n">fils_gauche</span><span class="p">(</span><span class="n">abr</span><span class="p">),</span> <span class="n">nom</span><span class="p">)</span> <span class="ow">or</span> <span class="n">recherche_auteur</span><span class="p">(</span><span class="n">fils_droit</span><span class="p">(</span><span class="n">abr</span><span class="p">),</span> <span class="n">nom</span><span class="p">)</span>
 </code></pre></div>
 <p>L'appel renvoie <code>True</code>. En effet, au premier appel, l'arbre n'est pas vide et la valeur de l'arbre ('KAFKA') n'est pas égale à la valeur recherchée. Il y a donc le premier appel récursif sur le sous-arbre gauche et la valeur 'SIMENON'. Cet appel va finir par renvoyer <code>False</code> (puisque 'SIMENON' n'est pas dans ce sous-arbre). Puisqu'on est sur l'évaluation d'un OU, le deuxième appel récursif est lancé, et finira par renvoyer <code>True</code>.</p>
 </details>

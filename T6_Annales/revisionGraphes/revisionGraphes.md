@@ -6,7 +6,7 @@
     - Mydatalogger
 
 !!! example "2024 Asie Jour 1 24-NSIJ1G11"
-    Exercice 2 du [2024 Asie Jour 1](./data/Sujet 24-asie-j1-ex2.pdf)
+    Exercice 2 du [2024 Asie Jour 1](./data/24-asie-j1-ex2.pdf)
 
     ??? success "Q1"
         C’est un graphe orienté.
