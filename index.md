@@ -1,10 +1,10 @@
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: En cours : révision épreuve écrite, épreuve pratique, Grand Oral <br />
+    :arrow_forward: En cours :  <br />
 
     :hourglass: A venir : 
 
-
+<!--   
 !!! abstract "Actualités :newspaper:" 
 
     - 📆 Date Bac : Mardi 17 juin de 14h à 18h
@@ -18,6 +18,7 @@
     - Le poids de l'écrit sera de 3/4 et le poids de la pratique de 1/4
 
     -💥 Organisez-vous avec (par exemple) [Notion](https://www.notion.so/fr-fr){. target="_blank"} ou [Zenkit](https://zenkit.com/){. target="_blank"}
+-->
 
 !!! info "Entraînement"
     Vous trouverez ci dessous quelques sites pour vous entrainez <br />
@@ -31,26 +32,6 @@
 
     🚨 Liste des thèmes à traiter dans le programme : [pdf](./data/programmeTNSI.pdf)
 
-    - Révision : [Codex](https://codex.forge.apps.education.fr/) <br />
-    - [Récursivité](./T2_Programmation/2.1_Recursivite/cours.md) <br />
-    - [Programmation orienté objet](./T2_Programmation/2.2_Programmation_Orientee_Objet/cours.md)<br />
-    - [piles / files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md)<br />
-    - [Listes chaînées](./T1_Structures_de_donnees/1.2_Listes/cours.md)<br />
-    - [Mise au point de programme](./T2_Programmation/2.4_Mise_au_point_de_programme/cours.md)  <br />
-    - [Base de données](./T4_Bases_de_donnees/sommaire.md)<br />
-    - [calculabilité](./T2_Programmation/2.3_Calculabilite_Decidabilite/cours.md)<br />
-    - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) <br />
-    - [Gestion des processus](./T5_Architecture_materielle/5.2_Gestion_des_processus/cours.md)<br />
-    - [Retour sur les dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) <br />
-    - [Arbres](./T1_Structures_de_donnees/1.4_Arbres/cours.md)<br />
-    - ([Projet : codage de Huffman](./T8_projet/2_Huffman/cours.md)) ANNULE CAUSE INONDATION<br />
-    - [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)<br />
-    - [Sécurisation des communications, Cryptographie](./TNSI/T5_Architecture_materielle/5.4_Cryptographie/cours/)<br />
-    - [Graphes](./T1_Structures_de_donnees/1.5_Graphes/cours/)<br />
-    - [Exposé cryptographie](./T8_projet/3_expose/cours.md)<br />
-    - [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/cours.md)<br />
-    - [Diviser pour régner](./T3_Algorithmique/3.1_Diviser_pour_regner/cours.md)
-    - [Programmation dynamique](./T3_Algorithmique/3.2_Programmation_dynamique/cours.md)
     
 <!--       
 !!! note "*Thèmes traités*"

@@ -3548,12 +3548,13 @@ Au début, chaque routeur ne connaît que les réseaux auquel il est directement
 <li>Le réseau 2 contient un serveur dans un centre de données.</li>
 </ul>
 <p>Image du schéma réseau : 
-<img alt="schéma filius" src="../data/rip.png" /></p>
+<img alt="schéma filius" class="center" src="../data/rip2.jpg" width="70%" /></p>
 <p>Maquette Filius <a class="md-button md-button--primary" href="../data/RIP_filus_reseau.fls">Télécharger <img alt="⬇️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2b07.svg" title=":arrow_down:" /></a> </p>
 <p>Les routeurs R1 et R6 permettent d'accéder au réseau de l'entreprise, R2, R3, R4 et R5, des routeurs internes au réseau. 
 Nous allons nous intéresser à l'évolution des tables de routage des routeurs R1 et R3 sur lesquels on a activé le protocole RIP.</p>
 <h3 id="etape-0">Étape 0<a class="headerlink" href="#etape-0" title="Permanent link">⚓︎</a></h3>
-<p>Au démarrage, les routeurs R1 et R3 ne connaissent que leurs voisins proches. Leurs tables peuvent donc ressembler à ceci :</p>
+<p>Au démarrage, les routeurs R1 et R3 ne connaissent que leurs voisins proches. Leurs tables peuvent donc ressembler à ceci :<br />
+Pour <strong>R1</strong> :</p>
 <table>
 <thead>
 <tr>
@@ -3573,7 +3574,7 @@ Nous allons nous intéresser à l'évolution des tables de routage des routeurs 
 <td>==&gt; vers les postes de travail</td>
 </tr>
 <tr>
-<td style="text-align: center;">172.16.0.0</td>
+<td style="text-align: center;">192.168.14.0</td>
 <td></td>
 <td>eth0</td>
 <td>1</td>
@@ -3583,6 +3584,7 @@ Nous allons nous intéresser à l'évolution des tables de routage des routeurs 
 </table>
 <p>Au départ, R1 ne peut atteindre que ses voisins immédiats (nb Sauts vaut 1). Aucune passerelle n'est nécessaire puisque la communication est directe. Chaque sous réseau utilise une interface spécifique. Le réseau local 1 contenant les postes de travail est accessible en wifi.
 En ce qui concerne le routeur 3, celui-ci possède 4 interfaces réseau filaires, que nous nommerons eth0-3 qui permettent d'atteindre les routeurs immédiats (R1, R2, R4 et R5). Voici à quoi peut ressembler sa table de routage au démarrage :</p>
+<p>Pour <strong>R3</strong> :</p>
 <table>
 <thead>
 <tr>
@@ -3595,28 +3597,28 @@ En ce qui concerne le routeur 3, celui-ci possède 4 interfaces réseau filaires
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">172.16.0.0</td>
+<td style="text-align: center;">192.168.14.0</td>
 <td></td>
 <td>eth0</td>
 <td>1</td>
 <td>==&gt; vers R1</td>
 </tr>
 <tr>
-<td style="text-align: center;">172.16.1.0</td>
+<td style="text-align: center;">192.168.17.0</td>
 <td></td>
 <td>eth1</td>
 <td>1</td>
 <td>==&gt; vers R2</td>
 </tr>
 <tr>
-<td style="text-align: center;">172.16.6.0</td>
+<td style="text-align: center;">192.168.15.0</td>
 <td></td>
 <td>eth2</td>
 <td>1</td>
 <td>==&gt; vers R5</td>
 </tr>
 <tr>
-<td style="text-align: center;">172.16.3.0</td>
+<td style="text-align: center;">192.168.16.0</td>
 <td></td>
 <td>eth3</td>
 <td>1</td>
@@ -3638,7 +3640,7 @@ Lorsqu'un routeur reçoit une nouvelle route de la part d'un voisin, 4 cas sont 
 <li>Il reçoit une route vers un réseau <strong>connu</strong> en provenance d'un routeur <strong>déjà existant dans sa table</strong> 
     &gt; Il met à jour sa table car la topologie du réseau a été modifiée.</li>
 </ul>
-<p>En appliquant ces règles, voici la table de routage de R1 après une étape :</p>
+<p>En appliquant ces règles, voici la table de routage de <strong>R1</strong> après une étape :</p>
 <table>
 <thead>
 <tr>
@@ -3658,38 +3660,38 @@ Lorsqu'un routeur reçoit une nouvelle route de la part d'un voisin, 4 cas sont 
 <td>==&gt; vers les postes de travail</td>
 </tr>
 <tr>
-<td style="text-align: center;">172.16.0.0</td>
+<td style="text-align: center;">192.168.14.0</td>
 <td></td>
 <td>eth0</td>
 <td>1</td>
 <td>==&gt; vers R3</td>
 </tr>
 <tr>
-<td style="text-align: center;">172.16.1.0</td>
-<td>172.16.0.3</td>
+<td style="text-align: center;">192.168.17.0</td>
+<td>192.168.14.2</td>
 <td>eth0</td>
 <td>2</td>
 <td>Ces 3 routes</td>
 </tr>
 <tr>
-<td style="text-align: center;">172.16.6.0</td>
-<td>172.16.0.3</td>
+<td style="text-align: center;">192.168.15.0</td>
+<td>192.168.14.2</td>
 <td>eth0</td>
 <td>2</td>
 <td>proviennent</td>
 </tr>
 <tr>
-<td style="text-align: center;">172.16.3.0</td>
-<td>172.16.0.3</td>
+<td style="text-align: center;">192.168.16.0</td>
+<td>192.168.14.2</td>
 <td>eth0</td>
 <td>2</td>
 <td>de R3</td>
 </tr>
 </tbody>
 </table>
-<p>172.16.0.3 est l'adresse IP du routeur R3. On ajoute à la table précédente les réseaux atteignables par R3. On pense cependant à ajouter 1 au nombre de sauts ! Si R1 veut atteindre le réseau 172.16.3.0, il s'adressera à R3 et atteindra le réseau cible en 2 sauts.
- 
-Voici la table de R3 qui s'enrichit des informations envoyées par R1 afin d'atteindre le réseau local, mais aussi des informations en provenance de R2, R4 et R5. Il découvre ainsi 4 nouveaux réseaux.</p>
+<p>192.168.14.2 est l'adresse de la passerelle de sortie du routeur R3. On ajoute à la table précédente les réseaux atteignables par R3. On pense cependant à ajouter 1 au nombre de sauts ! Si R1 veut atteindre le réseau 192.168.16.0, il s'adressera à R3 et atteindra le réseau cible en 2 sauts.
+ </p>
+<p>Voici la table de <strong>R3</strong> qui s'enrichit des informations envoyées par R1 afin d'atteindre le réseau local, mais aussi des informations en provenance de R2, R4 et R5. Il découvre ainsi 4 nouveaux réseaux.</p>
 <table>
 <thead>
 <tr>
@@ -3702,57 +3704,57 @@ Voici la table de R3 qui s'enrichit des informations envoyées par R1 afin d'att
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">172.16.0.0</td>
+<td style="text-align: center;">192.168.14.0</td>
 <td></td>
 <td>eth0</td>
 <td>1</td>
-<td></td>
+<td>==&gt; vers R1</td>
 </tr>
 <tr>
-<td style="text-align: center;">172.16.1.0</td>
+<td style="text-align: center;">192.168.17.0</td>
 <td></td>
 <td>eth1</td>
 <td>1</td>
-<td></td>
+<td>==&gt; vers R2</td>
 </tr>
 <tr>
-<td style="text-align: center;">172.16.6.0</td>
+<td style="text-align: center;">192.168.15.0</td>
 <td></td>
 <td>eth2</td>
 <td>1</td>
-<td></td>
+<td>==&gt; vers R5</td>
 </tr>
 <tr>
-<td style="text-align: center;">172.16.3.0</td>
+<td style="text-align: center;">192.168.16.0</td>
 <td></td>
 <td>eth3</td>
 <td>1</td>
-<td></td>
+<td>==&gt; vers R4</td>
 </tr>
 <tr>
-<td style="text-align: center;">192.168.1.0</td>
-<td>172.16.0.1</td>
+<td style="text-align: center;">111.222.66.0</td>
+<td>192.168.14.2</td>
 <td>eth0</td>
 <td>2</td>
 <td>reçu de R1</td>
 </tr>
 <tr>
-<td style="text-align: center;">172.16.2.0</td>
-<td>172.16.1.2</td>
+<td style="text-align: center;">192.168.17.0</td>
+<td>192.168.17.2</td>
 <td>eth1</td>
 <td>2</td>
 <td>reçu de R2</td>
 </tr>
 <tr>
-<td style="text-align: center;">172.16.5.0</td>
-<td>172.16.6.5</td>
+<td style="text-align: center;">192.168.15.0</td>
+<td>192.168.15.2</td>
 <td>eth2</td>
 <td>2</td>
 <td>reçu de R5</td>
 </tr>
 <tr>
-<td style="text-align: center;">172.16.4.0</td>
-<td>172.16.3.4</td>
+<td style="text-align: center;">192.168.21.0</td>
+<td>192.168.16.2</td>
 <td>eth3</td>
 <td>2</td>
 <td>reçu de R4</td>
@@ -3781,43 +3783,43 @@ Voici la table de R3 qui s'enrichit des informations envoyées par R1 afin d'att
 <td>==&gt; vers les postes de travail</td>
 </tr>
 <tr>
-<td style="text-align: center;">172.16.0.0</td>
+<td style="text-align: center;">192.168.14.0</td>
 <td></td>
 <td>eth0</td>
 <td>1</td>
 <td>==&gt; vers R3</td>
 </tr>
 <tr>
-<td style="text-align: center;">172.16.1.0</td>
-<td>172.16.0.3</td>
+<td style="text-align: center;">192.168.17.0</td>
+<td>192.168.14.2</td>
 <td>eth0</td>
 <td>2</td>
-<td></td>
+<td>Ces 3 routes</td>
 </tr>
 <tr>
-<td style="text-align: center;">172.16.6.0</td>
-<td>172.16.0.3</td>
+<td style="text-align: center;">192.168.15.0</td>
+<td>192.168.14.2</td>
 <td>eth0</td>
 <td>2</td>
-<td></td>
+<td>proviennent</td>
 </tr>
 <tr>
-<td style="text-align: center;">172.16.3.0</td>
-<td>172.16.0.3</td>
+<td style="text-align: center;">192.168.16.0</td>
+<td>192.168.14.2</td>
 <td>eth0</td>
 <td>2</td>
-<td></td>
+<td>de R3</td>
 </tr>
 <tr>
-<td style="text-align: center;">172.16.5.0</td>
-<td>172.16.0.3</td>
+<td style="text-align: center;">192.168.30.0</td>
+<td>192.168.14.2</td>
 <td>eth0</td>
 <td>3</td>
 <td>obtenu à l'étape 2</td>
 </tr>
 <tr>
-<td style="text-align: center;">192.168.2.0</td>
-<td>172.16.0.3</td>
+<td style="text-align: center;">192.168.33.0</td>
+<td>192.168.14.2</td>
 <td>eth0</td>
 <td>4</td>
 <td>obtenu à l'étape 3</td>
@@ -3841,6 +3843,41 @@ RIP implémente d'autres mécanismes pour empêcher que se forment des boucles d
 Élaborez au fil du temps la table de routage du routeur R4 de manière similaire à ce que l'on vient de faire.</p>
 </blockquote>
 </blockquote>
+<div class="admonition abstract">
+<p class="admonition-title">Exercice type BAC</p>
+<p>Exercice 1 Partie A du sujet <a class="" href="../data/24-polynesie-j1-ex1.pdf" target="_blank">Polynésie J1 2024</a></p>
+<details class="question">
+<summary>Q1</summary>
+<p>Il reste un octet soit 8 bits pour l’adresse réseau (1re adresse), les machines et l’adresse de broadcast (dernière adresse). Ainsi le réseau peut accueillir : <span class="arithmatex">\(2^8 – 2 = 254\)</span> machines.</p>
+</details>
+<details class="question">
+<summary>Q2</summary>
+<p>Conversion décimal – binaire : <br />
+<span class="arithmatex">\(217_{(10)} = 128 +64+16+8+1 = 1101 1001_{(2)}\)</span></p>
+</details>
+<details class="question">
+<summary>Q3</summary>
+<p>Conversion binaire – décimal : <br />
+$110010_{(2)} = 32 + 16 + 2 = 50_{(10)}</p>
+</details>
+<details class="question">
+<summary>Q4</summary>
+<p>L’adresse du sous-réseau de la machine 110.217.53.22/24 est 110.217.53.0 donc cette machine n’appartient pas au réseau pédagogique 2.<br />
+[Le réseau pédagogique 2 (110.217.52.0/24) admet une plage d’adresse de 110.217.52.0 à 110.217.52.255.]</p>
+</details>
+<details class="question">
+<summary>Q5</summary>
+<p><img alt="rep" class="center" src="../data/24_polynesie_J1_ex1_Q5.png" width="70%" /></p>
+</details>
+<details class="question">
+<summary>Q6</summary>
+<p><img alt="rep" class="center" src="../data/24_polynesie_J1_ex1_Q6.png" width="40%" /></p>
+</details>
+<details class="question">
+<summary>Q7</summary>
+<p>Le nombre de saut étant identique, aucune modification n’est nécessaire dans la table de routage du routeur R2.</p>
+</details>
+</div>
 <h2 id="3-le-protocole-ospf">3. Le protocole OSPF<a class="headerlink" href="#3-le-protocole-ospf" title="Permanent link">⚓︎</a></h2>
 <p>OSPF : <em>Open Shortest Path First</em></p>
 <p>Un inconvénient majeur du protocole précédent est la non-prise en compte de la bande passante reliant les routeurs.</p>

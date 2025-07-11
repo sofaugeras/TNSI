@@ -89,7 +89,7 @@
         |G|D|3|
         |F|D|4|
 
-!!! abstract ""
+!!! abstract "Exercice 5 du sujet Métropole J1 2022"
 
     Exercice 5 du sujet [Métropole J1 2022](./data/22-NSIJ1ME1.pdf)
 
@@ -293,3 +293,304 @@
         ![image](data/graphAN_corr.png){: .center}
     
 
+!!! abstract "Exercice 3 du sujet Métropole J1 2025 (8 points)"
+
+    Exercice 3 du sujet [Métropole J1 2025](../../T6_Annales/data/2025/25_NSIJ1ME1.pdf){. target="_blank"}
+
+    *Cet exercice porte sur l'architecture matérielle (réseau), les arbres binaires de recherche et la programmation Python*
+
+    L'entreprise CaféNet possède plusieurs cafés répartis dans différentes villes. Le réseau de la chaîne de cafés est représenté en Figure 1.
+
+    <img src="https://i.ibb.co/Wv0nm12R/ex3-1.png">
+    <p style="text-align:center">Figure 1. Schéma d'une partie du réseau</p>
+    </figure>
+
+    Sur le schéma sont représentés 4 routeurs, le réseau du siège social, le réseau du café 1, le rése.au du café 2. Dans les réseaux du café 1 et du café 2, des bornes de commandes sont connectées à des switchs (ce sont des boitiers de connexion qui n'ont pas eux-mêmes d'adresse IP). Les 4 routeurs représentés sont composés d'au moins 3 interfaces réseau capables de relier des réseaux ensemble. Chaque interface possède donc une adresse IPv4 sur le réseau auquel elle est reliée.
+
+    Les masques des sous-réseaux sont tous 255.255.255.0. Avec ce masque, les trois premiers octets des adresses IP codent l'adresse réseau. Le dernier octet, c'est-à-dire les 8 derniers bits, code l'adresse des machines à l'intérieur de chaque sous-réseau.
+
+    **Partie A**
+
+    Le gérant veut faire installer une troisième borne de commande dans le café 1.
+
+    1_ Indiquer les deux seules adresses IP valides pour cette nouvelle borne, parmi les quatre adresses IP proposées.
+    a. 192.168.20.2
+    b. 192.168.20.157
+    c. 192.168.20.261
+    d. 192.168.24.10
+    ??? tip "Correction"
+        Ce sont les IP a. et b.
+
+    L'adresse de diffusion, appelée aussi adresse de *broadcast*, est la dernière adresse disponible à l'intérieur d'un réseau local.
+
+    2_ Déterminer l'adresse de diffusion du réseau du café 1.
+    ??? tip "Correction"
+        Il s'agit de l'IP 192.168.20.255.
+
+    3_ Déterminer compbien de machines informatiques il est encore possible de connecter au réseau du café 1 après l'installation de la troisième borne de commande.
+
+    ??? tip "Correction"
+
+        Sur un octet, il est possible d’obtenir 256 valeurs. Il existe donc 256 adresses machines au sein 
+        du réseau du café 1. En décomptant les deux adresses IP réservées (réseau et diffusion), les trois 
+        bornes de commandes et l’interface du routeur, il reste 250 adresses IP disponibles.
+
+
+    Le réseau local du café 1 n'a pas besoin de plus de 8 adresses IP différentes. Ce décompte d'adresses IP inclut les adresses IP réservées (à savoir l'adresse de diffusion et l'adresse du réseau). Il est rappelé que la longueur du masque de sous-réseau est actuellement de 24 bits (c'est-à-dire 3 octets).
+
+    4_ Expliquer quelle est la longueur maximale du masque de sous-réseau que l'on pourrait choisir pour le réseau local du café 1.
+    ??? tip "Correction"
+
+        Il faut exactement 3 bits pour coder 8 adresses différentes. Le masque pourrait donc aller jusqu’à compter 29 bits (32 bits - 3 bits).
+
+    **Partie B**
+
+    **RIP** (Routing Information Protocol) est un protocole de routage utilisé dans les réseaux IP. Il est conçu pour réduire le nombre de sauts entre deux réseaux. Un « saut » correspond au transfert des données d'un routeur à un autre. Le protocole RIP utilise le nombre de sauts comme critère principal pour évaluer le coût d'un chemin. Autrement dir, il considère que le chemin le plus optimal est celui qui traverse le moins de routeurs.
+
+    La table de routage du routeur 2 de la Figure 1 est représentée ci-dessous
+
+    | Réseau de destination | Interface de sortie | Prochain routeur | Nombre de sauts |
+    | --------------------- | ------------------- | ---------------- | --------------- |
+    | 192.168.20.0          | 192.168.20.1        | aucun            | 0               |
+    | 172.16.3.0            | 172.16.3.1          | aucun            | 0               |
+    | 172.16.4.0            | 172.16.4.1          | aucun            | 0               |
+    | 192.168.10.0          | 172.16.3.1          | 172.16.3.2       | 2               |
+    | 172.16.0.0            | 172.16.4.1          | 172.16.4.2       | 1               |
+    | 172.16.2.0            | 172.16.4.1          | 172.12.4.2       | 1               |
+    | 192.168.20.0          | ...                 | ...              | ...             |
+    | 172.16.1.0            | ...                 | ...              | ...             |
+
+    5_ Recopier et compléter les deux dernières lignes de la table de routage du routeur 2.
+    ??? tip "Correction"
+
+        | Réseau de destination | Interface de sortie | Prochain routeur | Nombre de sauts |
+        | --------------------- | ------------------- | ---------------- | --------------- |
+        | 192.168.30.0          | 172.16.4.1                 | 172.16.4.2              | 1             |
+        | 172.16.1.0            | 172.16.3.1                | 172.16.3.2              | 1            |
+
+
+    La table de routage du routeur 2 contient un réseau de destination pour lequel deux routes différentes sont possibles. La ligne conrrespondante dans la table de routage aurait donc pu être remplie différemment tout en respectant le protocole RIP.
+
+    6_ Identifier, dans la table de routage du routeur 2, le réseau de destination que l'on peut atteindre d'une autre façon et indiquer comment cette ligne de la table de routage pourrait être modifiée.
+    ??? tip "Correction"
+
+        On peut choisir, pour le réseau 192.168.10.0, la route qui sort par l’interface 172.16.4.1 vers le prochain routeur 172.16.4.2. On obtient encore une route à 2 sauts.
+
+    Une adresse IP qui n’est pas référencée dans la table de routage doit être routée par défaut vers Internet.
+
+    7_ Recopier et compléter la ligne à ajouter à la table de routage du routeur 2.
+    
+    | Réseau destination | Interface de sortie | Prochain routeur |
+    | ------------------ | ------------------- | ---------------- |
+    | autre              | ...                 | ...              |
+
+    ??? tip "Correction"
+
+        | Réseau destination | Interface de sortie | Prochain routeur |
+        | ------------------ | ------------------- | ---------------- | 
+        | autre              | 172.16.3.1          | 172.16.3.2       |
+
+
+    **Partie C**
+
+    **OSPF** est également un protocole d’échanges de données entre les routeurs qui prend en compte le coût des routes. Le coût est lié au débit des liaisons entre les routeurs par la formule suivante :
+    $cout=\dfrac{10^9}{debit}$ avec le débit en $bit.s^{-1}$.
+
+    8_ Recopier et compléter la dernière colonne du tableau ci-dessous :
+
+    | Type de connexion | Débit en $bit.s^{-1}$.          | coût |
+    | ----------------- | ------------------------------- | ---- |
+    | Ethernet          | 10 $Mbit.s^{-1}=10^7\ bit.s-1$  | 100  |
+    | Fast Ethernet     | 100 $Mbit.s^{-1}=10^8\ bit.s-1$ | ...  |
+    | Fibre optique     | 1 $Gbit.s^{-1}=10^9\ bit.s-1$   | ...  |
+
+    ??? tip "Correction"
+
+        Le coût de la liaison Fast Ethernet est 10 et celui de la fibre optique est 1.
+
+    Le schéma ci-dessous met en évidence les types de connexion qui relient les routeurs.
+
+    <img src="https://i.ibb.co/Q1q95rL/ex3-2.png">
+    <p style="text-align:center">Figure 2. Schéma des types de connexion</p>
+
+    9_ Déterminer la route dont le coût est minimal pour aller du routeur 1 jusqu’au routeur 4 et calculer son coût au sens du protocole OSPF.
+
+    ??? tip "Correction"
+
+        1→2→3→4 est la route à choisir pour respecter le protocole OSPF. Son coût est de 21.
+
+
+    **Partie D** 
+
+    *les arbres binaires de recherche et la programmation Python*
+    
+    Le but de cette partie est de classer les adresses IP des différents réseaux afin de faciliter leur recherche.
+    La fonction `ip_bin` prend en argument une chaîne de caractères décrivant une adresse IP en notation décimale, et renvoie une chaîne de caractères, de longueur 35 (32 bits et les 3 points), décrivant l’adresse IP en notation binaire.
+
+    Exemple :
+    ```python
+    >>> ip_bin('192.168.10.1')
+    '11000000.10101000.00001010.00000001'
+    ```
+    10_ Donner la chaîne de caractères renvoyée par ip_bin('192.168.20.12').
+    ??? tip "Correction"
+
+        Les conversions en binaire des nombres 192 et 168 sont donnés dans l’exemple. Il reste à convertir 20 et 12 en binaire.<br />
+        `11000000.10101000.00010100.00001100`
+
+    La fonction `precede` prend en paramètres deux adresses IP en notation binaire, sous forme de chaînes de caractères identiques à celles renvoyées par la fonction `ip_bin`. La fonction `precede` renvoie un booléen qui vaut `True` si la première adresse IP en paramètre précède la seconde adresse IP.
+
+    Exemple :
+    ```python
+    >>> a = '11000000.10101000.00001010.00000001' 
+    >>> b = '11000000.10101000.00001111.00000001' 
+    >>> precede(a, b) 
+    True
+    ```
+
+    L’algorithme compare bit à bit les deux chaînes binaires, en lisant les chaînes de caractères dans le sens usuel (de gauche à droite). Dans l’exemple ci-dessus, tous les caractères sont identiques jusqu’au sixième caractère du troisième octet. Comme le bit de l’adresse `a` est inférieur à celui de l’adresse `b`, on en déduit que l’adresse IP `a` précède l’adresse IP `b`.
+
+    Si la première adresse IP ne précède pas la seconde, la fonction doit renvoyer `False`.
+    L’algorithme de comparaison est traduit dans le langage Python sous la forme suivante :
+
+    ```python
+    def precede(ip_1, ip_2):
+        for i in range(35):
+            if ip_1[i] < ip_2[i]:
+                return ...
+            elif ip_1[i] > ip_2[i]:
+                return ...
+        return ...
+    ```
+
+    11_ Expliquer dans quel cas la fonction `precede` exécutera la dernière instruction `return` de la ligne 7.
+
+    ??? tip "Correction"
+
+        Il faut que tous les caractères soient identiques, c’est-à-dire que les adresses IP passées en paramètre soient les mêmes.
+
+    12_ Recopier et compléter les lignes 4, 6 et 7 du code de la fonction `precede`.
+
+    ??? tip "Correction"
+
+        ```python
+        4 return True
+        6 return False
+        7 return False
+        ```
+
+    Les tables de routage de chaque routeur sont implémentées sous la forme d’arbre binaire de recherche avec la classe Abr.
+
+    ```python
+    class Abr:
+        def __init__(self, adresse_ip, 
+                    interface, passerelle,
+                    cout):
+            self.adresse_ip = adresse_ip
+            self.interface = interface
+            self.passerelle = passerelle
+            self.cout = cout  
+            if adresse_ip != '': 
+                self.gauche = Abr('', '', '', 0) 
+                self.droite = Abr('', '', '', 0) 
+                
+    def est_vide(self):
+        return ...
+    ```
+    Dans cette représentation :
+    - `adresse_ip` désigne l’adresse IP de la destination ;
+    - `interface` désigne l’interface réseau ;
+    - `passerelle` désigne l’adresse IP du prochain routeur ;
+    - `cout` désigne le nombre de sauts pour atteindre la destination.
+    - par convention, l’arbre binaire vide est une instance de `Abr` pour laquelle `adresse_ip` est une chaîne de caractères vide ;
+    - un arbre binaire de recherche non vide possède nécessairement un sous-arbre gauche et un sous-arbre droit, éventuellement vides, qui sont tous les deux des arbres binaires de recherche. Ces sous-arbres sont désignés par gauche et droite dans la classe `Abr` ;
+    - si elle n’est pas vide, l’adresse IP du sous-arbre gauche précède l’adresse IP de l’instance parent ;
+    - si le sous-arbre droit n’est pas vide, alors l’adresse IP de l’instance parent précède l’adresse IP du sous-arbre droit.
+
+
+    13_ Citer un attribut et citer une méthode de la classe `Abr`.
+
+    ??? tip "Correction"
+
+        `adresse_ip` est un attribut. `est_vide` est une méthode.
+
+    14_ Recopier et compléter la ligne 14 du code de la classe `Abr`.
+
+    ??? tip "Correction"
+
+        ```python
+        14    return self.adresse_ip == ''
+        ```
+
+    15_ Justifier, en mobilisant des connaissances de cours, l’intérêt qu’il peut y avoir à représenter la table de routage par un arbre binaire de recherche.
+    
+    ??? tip "Correction"
+
+        Le coût de l’algorithme de recherche peut être logarithmique, alors que le coût de la recherche dans un tableau est linéaire.
+
+    16_ La section de code qui définit `modifie` est incluse dans la classe `Abr`.
+
+    ```python=16
+    def modifie(self, adresse_ip,
+                interface, passerelle,
+                cout):
+        if self.est_vide():
+            self.adresse_ip = adresse_ip 
+            self.interface = interface 
+            self.passerelle = passerelle 
+            self.cout = cout 
+            self.gauche = Abr('', '', '', 0) 
+            self.droite = Abr('', '', '', 0) 
+        else: 
+            self.adresse_ip = adresse_ip 
+            self.interface = interface 
+            self.passerelle = passerelle 
+            self.cout = cout
+    ```
+    Les lignes 20 à 23 sont exactement les mêmes que les lignes 27 à 30.
+
+    16_ Réécrire le code de la fonction modifie en évitant cette répétition.
+
+    ??? tip "Correction"
+
+        ```python=16
+        def modifie(self, adresse_ip, 
+                    interface, passerelle, 
+                    cout):
+            if self.est_vide():
+                self.gauche = Abr('','','',0) 
+                self.droite = Abr('','','',0) 
+            self.adresse_ip = adresse_ip 
+            self.interface = interface 
+            self.passerelle = passerelle 
+            self.cout = cout
+        ```
+    
+    La classe `Abr` est complétée afin de permettre l’ajout de nouvelles lignes à la table de routage, tout en conservant les propriétés que doit posséder un arbre binaire de recherche.
+    ```python=32
+    def rechercher(self, adresse_ip): 
+        if self.est_vide() or adresse_ip==self.adresse_ip: 
+            return self 
+        elif precede(...): 
+            return self.gauche.rechercher(adresse_ip) 
+        else: 
+            return self.droite.rechercher(adresse_ip) 
+        
+    def inserer(self, adresse_ip, 
+                interface, passerelle, 
+                cout): 
+        destination = self.rechercher(adresse_ip)
+        destination.modifie(adresse_ip, 
+                            interface, passerelle, 
+                            cout)
+    ```
+    On rappelle que la fonction `precede` prend en arguments des adresses IP écrites sous forme binaire.
+
+    17_
+     Recopier et compléter la ligne 35 du code de la fonction `rechercher`.
+
+    ??? tip "Correction"
+
+        ```python
+        precede(ip_bin(adresse_ip),ip_bin(self.adresse_ip))
+        ```       

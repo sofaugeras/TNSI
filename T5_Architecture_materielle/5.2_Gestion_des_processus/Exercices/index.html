@@ -2369,6 +2369,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#exercice-2-du-sujet-metropole-j1-2025-6-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2 du sujet Métropole J1 2025 (6 points)
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3333,8 +3342,6 @@
   
 
 
-  <h1>Exercices</h1>
-
 <h2 id="exercice-1">Exercice 1<a class="headerlink" href="#exercice-1" title="Permanent link">⚓︎</a></h2>
 <p><em>2021, sujet Amérique du Nord</em></p>
 <p>Un constructeur automobile utilise des ordinateurs pour la conception de ses véhicules.
@@ -3486,20 +3493,16 @@ Chaque programme, lorsqu’il s’exécute, demande l’allocation des ressource
 nécessaires. Lorsqu’il a fini de s’exécuter, il libère ses ressources.</p>
 <p><img alt="image" class="center" src="../data/ex3_1.png" /></p>
 <p>On appelle p1, p2 et p3 les processus associés respectivement aux programmes 1, 2 et 3</p>
-<ol>
-<li>Les processus s'exécutent de manière concurrente.
-Justifier qu'une situation d'interblocage peut se produire.</li>
-<li>Modifier l'ordre des instructions du programme 3 pour qu'une telle situation ne puisse pas se produire. Aucune justification n'est attendue.</li>
-<li>Supposons que le processus p1 demande la table traçante alors qu'elle est en cours
+<p><strong>Q1.</strong> Les processus s'exécutent de manière concurrente.
+Justifier qu'une situation d'interblocage peut se produire.
+<strong>Q2.</strong> Modifier l'ordre des instructions du programme 3 pour qu'une telle situation ne puisse pas se produire. Aucune justification n'est attendue.
+<strong>Q3.</strong> Supposons que le processus p1 demande la table traçante alors qu'elle est en cours
 d'utilisation par le processus p3. Parmi les états suivants, quel sera l'état du processus p1
-tant que la table traçante n'est pas disponible :<ul>
-<li>a. élu</li>
-<li>b. bloqué</li>
-<li>c. prêt</li>
-<li>d. terminé</li>
-</ul>
-</li>
-</ol>
+tant que la table traçante n'est pas disponible :
+    - a. élu
+    - b. bloqué
+    - c. prêt
+    - d. terminé</p>
 <p><strong>Partie B</strong></p>
 <p>Avec une ligne de commande dans un terminal sous Linux, on obtient l'affichage suivant :</p>
 <p><img alt="image" class="center" src="../data/ex3_2.png" /></p>
@@ -3578,6 +3581,297 @@ processus C₁, C₃ et C₄.</p>
 <details class="check">
 <summary>correction</summary>
 <p><img alt="image" class="center" src="../data/ex4_frise_corr.png" /></p>
+</details>
+<h1 id="exercice-2-du-sujet-metropole-j1-2025-6-points">Exercice 2 du sujet Métropole J1 2025 (6 points)<a class="headerlink" href="#exercice-2-du-sujet-metropole-j1-2025-6-points" title="Permanent link">⚓︎</a></h1>
+<p>Exercice 2 du sujet <a class="" href="../../../T6_Annales/data/2025/25_NSIJ1ME1.pdf" target="_blank">Métropole J1 2025</a></p>
+<p><em>Cet exercice porte sur l'algorithmique, les structures de données, et la gestion de processus.</em></p>
+<p>On cherche à créer une application de type <em>liste des tâches à faire</em> pour aider Alice à planifier sa journée. Pour cela Alice saisit les informations concernant chacune des tâches qu'elle doit effectuer : elle indique un nom pour la tâche, ainsi que la durée qu'elle estime nécessaire afin de la réaliser. On représente une tâche saisie par Alice à l'aide d'un objet de type <code>Tache</code>, muni de quatre attributs :</p>
+<ul>
+<li>le <code>numero</code> de la tâche, saisi par Alice ;</li>
+<li>le <code>nom</code> de la tâche, saisi par Alice ;</li>
+<li>la <code>duree</code> (un entier exprimé en minute) nécessaire à la réalisation de la tâche saisie par Alice ;</li>
+<li>la <code>duree_restante</code> (un entier exprimé en minute) avan la fin de la tâche. Cet attribut sera initialisé avec la durée totale nécessaire à la réalisation de la tâche.</li>
+</ul>
+<p>Avancer de <code>n</code> minutes (<code>n</code> entier positif) dans une tâche consiste à diminuer de <code>n</code> la durée restante de cette tâche. Une tâche est terminée si la durée restante est négative ou nulle.</p>
+<p>Lors de la phase de planification des tâches (aucune d'entre elles n'est commencée), Alice liste les tâches suivantes qui doivent être effectuées</p>
+<table>
+<thead>
+<tr>
+<th>Numéro</th>
+<th>Nome</th>
+<th>Durée</th>
+<th>Durée restante</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Répondre aux e-mails</td>
+<td>45</td>
+<td>45</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ranger ma chambre</td>
+<td>60</td>
+<td>60</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Réviser la NSI</td>
+<td>90</td>
+<td>90</td>
+</tr>
+<tr>
+<td>4</td>
+<td>S'entraîner aux échecs</td>
+<td>30</td>
+<td>30</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Apprendre le vocabulaire de chinois</td>
+<td>30</td>
+<td>30</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Lire Fondation</td>
+<td>60</td>
+<td>60</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Écrire ma lettre au Père Noël</td>
+<td>20</td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
+<p>On dispose de la classe <code>Tache</code> ci-dessous pour représenter les tâches :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Tache</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">numero</span><span class="p">,</span> <span class="n">nom</span><span class="p">,</span> <span class="n">duree</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">numero</span> <span class="o">=</span> <span class="n">numero</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nom</span> <span class="o">=</span> <span class="n">nom</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">duree_initiale</span> <span class="o">=</span> <span class="n">duree</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">duree_restante</span> <span class="o">=</span> <span class="n">duree</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;t&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">numero</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&gt;&#39;</span>
+</code></pre></div>
+<p>1_ Donner le code Python qui permet d'instancier deux variables <code>tache1</code> et <code>tache2</code> représentant les tâches : 
+- tâche numéro 1 : Répondre aux e-mails. Durée estimée : 45 minutes.
+- tâche numéro 2 : Ranger ma chambre. Durée estimée : 60 minutes.</p>
+<details class="check">
+<summary>correction</summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">tache1</span> <span class="o">=</span> <span class="n">Tache</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Répondre aux e-mails&quot;</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
+<span class="n">tache2</span> <span class="o">=</span> <span class="n">Tache</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Ranger ma chambre&quot;</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<p>On supposera dans la suite que les variables <code>tache1</code>, <code>tache2</code>, ..., <code>tache7</code> représentent les tâches établies par Alice lors de la phase de planification.</p>
+<p>La méthode <code>__repr__</code> reenvoie une représentation de l'instance sous forme d'une chaîne de caractères. La fonction <code>print</code> utilise cette méthode. Ainsi on a : </p>
+<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">tache1</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">t1</span><span class="o">&gt;</span>
+</code></pre></div>
+2_ Recopier et compléter le code de la méthode <code>avancer</code> de la classe <code>Tache</code> qui permet d'avancer la tâche <code>self</code> de <code>n</code> minutes.
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">avancer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="o">...</span>
+</code></pre></div></p>
+<details class="check">
+<summary>correction</summary>
+<p>```python
+def avancer(self, n):
+    self.duree_restante -= n</p>
+</details>
+<p>```</p>
+<p>3_ Recopier et compléter le code de la méthode <code>est_terminee</code> de la classe <code>Tache</code> qui renvoie <code>True</code> si la tâche est terminée, ou <code>False</code> sinon.
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">est_terminee</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="o">...</span>
+</code></pre></div></p>
+<details class="check">
+<summary>correction</summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">est_terminee</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">duree_restante</span> <span class="o">&lt;=</span> <span class="mi">0</span>
+</code></pre></div>
+</details>
+<p>Afin d'aider Alice à planifier sa journée, on lui propose d'associer à chacune des tâches une priorité. La priorité d'une tâche est représentée par un entier de la manière suivante : 1 est la priorité minimale et, plus le nombre est grand, plus la tâche associée est prioritaire.</p>
+<p>Pour stocker toutes les tâches à effectuer, on utilise une file, dans laquelle les éléments sont des tuples <code>(tache, priorite)</code>. Les éléments stockés dans la file doivent respecter les deux conditions ci-après.
+- <strong>Condition 1 :</strong> les éléments sont rangés par ordre décroissant de priorité. L'élément de priorité maximale se trouve au début de la file, l'élément le moins prioritaire se trouve à la fin de la file.
+- <strong>Condition 2 :</strong> parmi les éléments de même priorité, les éléments sont rangées dans l'ordre dans lequel ils ont été insériées dans la file. Ainsi le premier élémùent de priorité <span class="arithmatex">\(p\)</span> insréré se trouve devant les éléments de même priorité <span class="arithmatex">\(p\)</span> insérées plus tard.</p>
+<p>Par exemple, si la file de tâches <code>f</code> est la file : 
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>[début] (&lt;t3&gt;, 4) (&lt;t1&gt;, 3) (&lt;t2&gt;, 3) (&lt;t4&gt;, 1) (&lt;t5&gt;, 1) [fin]
+</code></pre></div>
+Cela signifie que :
+- la tâche de priorité maximale est la tâche numéro 3 ;
+- les deux tâches à exécuter en priorité après la tâche numéro 3 sont les tâches numéro 1 et numéro 2. La tâche numéro 1 a été ajoutée à la file des tâches à traiter avant la tâche numéro 2 ;
+- il n'y a pas de tâche de priorité 2 ;
+- les tâches les moins prioritaires de la file sont les tâches numéro 4 et numéro 5. la tâche numéro 4 a été ajoutée avant la tâche numéro 5.</p>
+<p>4_ Représenter l'état de la file <code>f</code> lorsqu'on lui ajoute successivement la tâche numéro 6 avec la priorité 2, puis la tâche numéro 7 avec la priorité 4 en respectant les conditions 1 et 2 décrites ci-dessus.</p>
+<details class="check">
+<summary>correction</summary>
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>[début] (&lt;t3&gt;, 4) (&lt;t7&gt;, 4) (&lt;t1&gt;, 3) (&lt;t2&gt;, 3) (&lt;t6&gt;, 2) (&lt;t4&gt;, 1) (&lt;t5&gt;, 1) [fin]
+</code></pre></div>
+</details>
+<p>On suppose déjà définies les méthodes suivantes pour la classe <code>File</code> :
+- <code>File()</code> crée et renvoie un objet de type <code>File</code>, vide. 
+- <code>enfiler(self, e)</code> : ajoute l'élément <code>e</code>à la fin de la file <code>f</code>.
+- <code>defiler(self)</code> : renvoie, en le supprimant de la file, le premier élément de la file si cela est possible.
+- <code>examiner(self)</code> : renvoie, sans le supprimer de la file, le premier élément de la file si cela est possible.
+- <code>est_vide(self)</code> : renvoie <code>True</code> si la file est vide, ou <code>False</code> sinon.</p>
+<p>5_ En repartant de la file <code>f</code> suivante :
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>[début] (&lt;t3&gt;, 4) (&lt;t1&gt;, 3) (&lt;t2&gt;, 3) (&lt;t4&gt;, 1) (&lt;t5&gt;, 1) [fin]
+</code></pre></div>
+donner la valeur de <code>f.defiler()[0]</code>, et représenter le contenu de la file <code>f</code> après l'exécution de cette instruction.</p>
+<details class="check">
+<summary>correction</summary>
+<p><code>f.defiler()</code> vaut <code>(tache3, 4)</code>, ainsi <code>f.defiler()[0]</code> vaut <code>tache3</code>... donc évalué par <code>__repr__</code> en <code>&lt;t3&gt;</code>.
+Après exécution de cette instruction <code>f</code> vaut 
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>[début] (&lt;t1&gt;, 3) (&lt;t2&gt;, 3) (&lt;t4&gt;, 1) (&lt;t5&gt;, 1) [fin]
+</code></pre></div></p>
+</details>
+<p>6_ En repartant de la file <code>f</code> suivante :
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>[début] (&lt;t3&gt;, 4) (&lt;t1&gt;, 3) (&lt;t2&gt;, 3) (&lt;t4&gt;, 1) (&lt;t5&gt;, 1) [fin]
+</code></pre></div>
+donner la valeur de <code>f.examiner()[1]</code>, et représenter le contenu de la file <code>f</code> après l'exécution de cette instruction.</p>
+<details class="check">
+<summary>correction</summary>
+<p><code>f.examiner()</code> vaut <code>(tache3, 4)</code>, ainsi <code>f.examiner()[1]</code> vaut <code>4</code>.
+Après exécution de cette instruction <code>f</code> ne change pas et vaut 
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>[début] (&lt;t3&gt;, 4) (&lt;t1&gt;, 3) (&lt;t2&gt;, 3) (&lt;t4&gt;, 1) (&lt;t5&gt;, 1) [fin]
+</code></pre></div></p>
+</details>
+<p>On souhaite écrire une fonction <code>ajouter_file_prio</code> qui prend en paramètres : </p>
+<ul>
+<li>une file <code>f</code> dont les éléments sont des tuples <code>(tache, priorite)</code> respectant les deux conditions de l'énoncé ;</li>
+<li>une tâche <code>t</code> ;</li>
+<li>la priorité <code>p</code> de la tâche <code>t</code> ;
+et qui ajoute le tuple <code>(t, p)</code>à la bonne position dans la file <code>f</code>.</li>
+</ul>
+<p>On utilise une file auxilliaire <code>f_aux</code> que l'on remplit en défilant les éléments en début de file <code>f</code>tant que la priorité du premier élément de la file est supérieure ou égale à <code>p</code>. Puis on enfile l'élément <code>(t, p)</code>dans la file auxilliaire. on défile ensuite tous les éléments restants de <code>f</code> dans <code>f_aux</code> et enfin on enfile dans <code>f</code> tous les éléments de <code>f_aux</code>.</p>
+<p>7_ Recopier et compléter le code de la fonction <code>ajouter_file_prio</code>.
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">ajouter_file_prio</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+    <span class="n">f_aux</span> <span class="o">=</span> <span class="n">File</span><span class="p">()</span>
+    <span class="k">while</span> <span class="o">...</span><span class="p">:</span>
+        <span class="o">...</span>
+    <span class="o">...</span><span class="n">enfiler</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="o">...</span><span class="p">:</span>
+        <span class="o">...</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="o">...</span><span class="p">:</span>
+        <span class="o">...</span>
+</code></pre></div></p>
+<details class="check">
+<summary>correction</summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">ajouter_file_prio</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+    <span class="n">f_aux</span> <span class="o">=</span> <span class="n">File</span><span class="p">()</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">f</span><span class="o">.</span><span class="n">est_vide</span> <span class="ow">and</span> <span class="n">f</span><span class="o">.</span><span class="n">examiner</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">p</span><span class="p">:</span>
+        <span class="n">f_aux</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">defiler</span><span class="p">())</span>
+    <span class="n">f_aux</span><span class="o">.</span><span class="n">enfiler</span><span class="p">((</span><span class="n">t</span><span class="p">,</span><span class="n">p</span><span class="p">))</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">f</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="n">f_aux</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">defiler</span><span class="p">())</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">f_aux</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">f_aux</span><span class="o">.</span><span class="n">depiler</span><span class="p">())</span>
+</code></pre></div>
+</details>
+<p>8_ Donner le coût d'exécution temporel dans le pire des cas de la fonction <code>ajouter_file_prio</code>, en fonction du nombre d'éléments <code>m</code> de la file <code>f</code>.</p>
+<details class="check">
+<summary>correction</summary>
+<p>Le coût est linéaire.</p>
+</details>
+<p>Une fois qu'Alice a entré toutes les tâches qu'elle doit effectuer, leur durée estimée, ainsi que la priorité à laquelle elle doit les effectuer, l'application lui propose un planning en utilisant la technique dite Pomodoro :</p>
+<ul>
+<li>la tâche à effectuer est la tâche qui se trouve en tête de file ;</li>
+<li>on défile cette tâche de la file des tâches à effectuer ;</li>
+<li>on avance cette tâche de 25 minutes ;</li>
+<li>si cette tâche n'est pas terminée, on rajoute cette tâche dans la file des tâches à effectuer, avec la même priorité qu'initialement (en utilisant la fonction <code>ajouter_file_prio</code>) ; </li>
+<li>si cette tâche se termine au cours des 25 minutes, alors Alice attend la fin des 25 minutes en se reposant ;</li>
+<li>on continue ces étapes tant que la file des tâches à effectuer n'est pas vide.</li>
+</ul>
+<p>On rappelle les tâches à effectuer ci-dessous, classées par ordre de priorité. On considérera que les tâches sont ajoutées à la file de priorité dans l'ordre du tableau ci-dessous : </p>
+<table>
+<thead>
+<tr>
+<th>Numéro</th>
+<th>Nome</th>
+<th>Durée</th>
+<th>Durée restante</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>Réviser la NSI</td>
+<td>90</td>
+<td>90</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Écrire ma lettre au Père Noël</td>
+<td>20</td>
+<td>20</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Répondre aux e-mails</td>
+<td>45</td>
+<td>45</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ranger ma chambre</td>
+<td>60</td>
+<td>60</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Lire Fondation</td>
+<td>60</td>
+<td>60</td>
+</tr>
+<tr>
+<td>4</td>
+<td>S'entraîner aux échecs</td>
+<td>30</td>
+<td>30</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Apprendre le vocabulaire de chinois</td>
+<td>30</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
+<p>9_ Indiquer pour chaque bloc de 25 minutes la tâche qui avance, en suivant le modèle proposé, jusqu'à la fin de toutes les tâches.
+On fera particulièrement attention au cas où la tâche n'est pas terminée : celle-ci est rajoutée à la file des tâches à effectuer (dont elle avait été supprimée) avec la même priorité qu'initialement, en respectant les conditions 1 et 2 de l'énoncé.</p>
+<details class="check">
+<summary>correction</summary>
+<p>L'ordre d'exécution est le suivant :
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>t3, t7, t3, t3, t3, t1, t2, t1, t2, t2, t6, t6, t6, t4, t5, t4, t5
+</code></pre></div></p>
+</details>
+<p>10_ Écrire le code d'une fonction <code>planning</code> qui prend en paramètre une file de priorité <code>f</code>donbc les éléments sont des tuples <code>(tache, prio)</code>, et qui renvoie une liste de tâches, dans l'ordre dans lequel elles vont être effectuées par tranche de 25 minutes avec la méthode Pomodoro.</p>
+<p>Par exemple, si <code>tache1</code>, <code>tachg2</code> et <code>tache3</code> soint les tâches numéro 1, numéro 2 et numéro 3, alors le programme suivant :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">file</span> <span class="o">=</span> <span class="n">File</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">t</span><span class="p">,</span><span class="n">p</span> <span class="ow">in</span> <span class="p">[(</span><span class="n">tache1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="n">tache2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="n">tache3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)]:</span>
+    <span class="n">ajouter_file_prio</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">planning</span><span class="p">(</span><span class="n">file</span><span class="p">))</span>
+</code></pre></div>
+<p>produit l'affichage :
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>[&lt;t3&gt;, &lt;t3&gt;, &lt;t3&gt;, &lt;t3&gt;, &lt;t1&gt;, &lt;t2&gt;, &lt;t1&gt;, &lt;t2&gt;, &lt;t2&gt;]
+</code></pre></div></p>
+<details class="check">
+<summary>correction</summary>
+<p>L'ordre d'exécution est le suivant :
+<code>python=
+def planning(f):
+    ordre = []
+    while not f.est_vide():
+        tache, prio = f.defiler()
+        ordre.append(tache)
+        tache.avancer(25)
+        if not tache.est_terminee():
+            ajouter_file_prio(file, tache, prio)
+    return ordre</code></p>
 </details>
 
 

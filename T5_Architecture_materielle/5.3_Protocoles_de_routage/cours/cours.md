@@ -111,7 +111,7 @@ Considérons le réseau suivant qui relie deux réseaux d'une entreprise :
 -	Le réseau 2 contient un serveur dans un centre de données.
 
 Image du schéma réseau : 
-![schéma filius](data/rip.png)
+![schéma filius](./data/rip2.jpg){: width=70% .center}
 
 Maquette Filius [Télécharger :arrow_down:](data/RIP_filus_reseau.fls){ .md-button .md-button--primary} 
 
@@ -119,22 +119,25 @@ Les routeurs R1 et R6 permettent d'accéder au réseau de l'entreprise, R2, R3, 
 Nous allons nous intéresser à l'évolution des tables de routage des routeurs R1 et R3 sur lesquels on a activé le protocole RIP.
 
 ### Étape 0
-Au démarrage, les routeurs R1 et R3 ne connaissent que leurs voisins proches. Leurs tables peuvent donc ressembler à ceci :
+Au démarrage, les routeurs R1 et R3 ne connaissent que leurs voisins proches. Leurs tables peuvent donc ressembler à ceci :<br />
+Pour **R1** :
 
 | destination | passerelle | interface | Nb sauts | remarques |
 |:-:|-|-|-|-|
 | 192.168.1.0 | | wifi0 | 1 | ==> vers les postes de travail |
-| 172.16.0.0 | | eth0 | 1 | ==> vers R3 |
+| 192.168.14.0| | eth0 | 1 | ==> vers R3 |
 
 Au départ, R1 ne peut atteindre que ses voisins immédiats (nb Sauts vaut 1). Aucune passerelle n'est nécessaire puisque la communication est directe. Chaque sous réseau utilise une interface spécifique. Le réseau local 1 contenant les postes de travail est accessible en wifi.
 En ce qui concerne le routeur 3, celui-ci possède 4 interfaces réseau filaires, que nous nommerons eth0-3 qui permettent d'atteindre les routeurs immédiats (R1, R2, R4 et R5). Voici à quoi peut ressembler sa table de routage au démarrage :
 
+Pour **R3** :
+
 | destination|	passerelle|	interface|	Nb sauts|	remarques|
 |:-:|-|-|-|-|
-| 172.16.0.0	|	|eth0	|1	|==> vers R1|
-| 172.16.1.0	|	|eth1	|1|	==> vers R2|
-| 172.16.6.0	|	|eth2	|1|	==> vers R5|
-| 172.16.3.0	|	|eth3	|1|	==> vers R4|
+| 192.168.14.0	|	|eth0	|1	|==> vers R1|
+| 192.168.17.0	|	|eth1	|1|	==> vers R2|
+| 192.168.15.0	|	|eth2	|1|	==> vers R5|
+| 192.168.16.0	|	|eth3	|1|	==> vers R4|
 
 ### Étape 1
 Au bout de 30 secondes, un premier échange intervient avec les voisins immédiats de chacun des routeurs.
@@ -150,45 +153,46 @@ Lorsqu'un routeur reçoit une nouvelle route de la part d'un voisin, 4 cas sont 
 -	Il reçoit une route vers un réseau **connu** en provenance d'un routeur **déjà existant dans sa table** 
     > Il met à jour sa table car la topologie du réseau a été modifiée.
 
-En appliquant ces règles, voici la table de routage de R1 après une étape :
+En appliquant ces règles, voici la table de routage de **R1** après une étape :
 
 | destination|	passerelle|	interface|	Nb sauts|	remarques|
 |:-:|-|-|-|-|
 | 192.168.1.0| |wifi0|	1	|==> vers les postes de travail|
-| 172.16.0.0| |eth0|	1	|==> vers R3|
-| 172.16.1.0| 172.16.0.3	|eth0|	2	|Ces 3 routes|
-| 172.16.6.0| 172.16.0.3|	eth0|	2	|proviennent|
-| 172.16.3.0| 172.16.0.3	|eth0|	2	|de R3|
+| 192.168.14.0| |eth0|	1	|==> vers R3|
+| 192.168.17.0	| 192.168.14.2	|eth0	|2|	Ces 3 routes|
+| 192.168.15.0	|192.168.14.2	|eth0	|2|	proviennent|
+| 192.168.16.0	|	192.168.14.2|eth0	|2|	de R3|
 
-172.16.0.3 est l'adresse IP du routeur R3. On ajoute à la table précédente les réseaux atteignables par R3. On pense cependant à ajouter 1 au nombre de sauts ! Si R1 veut atteindre le réseau 172.16.3.0, il s'adressera à R3 et atteindra le réseau cible en 2 sauts.
+192.168.14.2 est l'adresse de la passerelle de sortie du routeur R3. On ajoute à la table précédente les réseaux atteignables par R3. On pense cependant à ajouter 1 au nombre de sauts ! Si R1 veut atteindre le réseau 192.168.16.0, il s'adressera à R3 et atteindra le réseau cible en 2 sauts.
  
-Voici la table de R3 qui s'enrichit des informations envoyées par R1 afin d'atteindre le réseau local, mais aussi des informations en provenance de R2, R4 et R5. Il découvre ainsi 4 nouveaux réseaux.
 
-| destination| passerelle	| interface| Nb sauts	| remarques|
+Voici la table de **R3** qui s'enrichit des informations envoyées par R1 afin d'atteindre le réseau local, mais aussi des informations en provenance de R2, R4 et R5. Il découvre ainsi 4 nouveaux réseaux.
+
+| destination|	passerelle|	interface|	Nb sauts|	remarques|
 |:-:|-|-|-|-|
-| 172.16.0.0|		|eth0|	1|	|
-| 172.16.1.0|		|eth1|	1	||
-| 172.16.6.0|		|eth2|	1	||
-| 172.16.3.0|		|eth3|	1	||
-| 192.168.1.0|	172.16.0.1|	eth0|	2|	reçu de R1|
-| 172.16.2.0|	172.16.1.2|	eth1|	2	|reçu de R2|
-| 172.16.5.0|	172.16.6.5	|eth2|	2	|reçu de R5|
-| 172.16.4.0|	172.16.3.4|	eth3|	2	|reçu de R4|
+| 192.168.14.0	|	|eth0	|1	|==> vers R1|
+| 192.168.17.0	|	|eth1	|1|	==> vers R2|
+| 192.168.15.0	|	|eth2	|1|	==> vers R5|
+| 192.168.16.0	|	|eth3	|1|	==> vers R4|
+| 111.222.66.0|	192.168.14.2|	eth0|	2|	reçu de R1|
+| 192.168.17.0|	192.168.17.2|	eth1|	2	|reçu de R2|
+| 192.168.15.0|	192.168.15.2	|eth2|	2	|reçu de R5|
+| 192.168.21.0|	192.168.16.2|	eth3|	2	|reçu de R4|
 
 ### Étape 3
 Comme vous le voyez, les tables deviennent vite longues et énumérer dans le détail chacune d'elle est trop long. On va donc passer directement à l'étape finale : l'étape 3. 
 
 Voici ce que contient la table de routage de R1 :
 
-| destination	|passerelle	|interface|	Nb sauts|	remarques|
+| destination|	passerelle|	interface|	Nb sauts|	remarques|
 |:-:|-|-|-|-|
-| 192.168.1.0||		wifi0|	1|	==> vers les postes de travail|
-| 172.16.0.0	||	eth0|	1|	==> vers R3|
-| 172.16.1.0|	172.16.0.3|	eth0|	2||	
-| 172.16.6.0	|172.16.0.3	|eth0|	2||	
-| 172.16.3.0|	172.16.0.3|	eth0|	2||	
-| 172.16.5.0|	172.16.0.3|	eth0|	3|	obtenu à l'étape 2|
-| 192.168.2.0|	172.16.0.3|	eth0|	4|	obtenu à l'étape 3|
+| 192.168.1.0| |wifi0|	1	|==> vers les postes de travail|
+| 192.168.14.0| |eth0|	1	|==> vers R3|
+| 192.168.17.0	| 192.168.14.2	|eth0	|2|	Ces 3 routes|
+| 192.168.15.0	|192.168.14.2	|eth0	|2|	proviennent|
+| 192.168.16.0	|	192.168.14.2|eth0	|2|	de R3|
+| 192.168.30.0|	192.168.14.2|	eth0|	3|	obtenu à l'étape 2|
+| 192.168.33.0|	192.168.14.2|	eth0|	4|	obtenu à l'étape 3|
 
 Comme vous le voyez, le routeur R1 est à présent en capacité d'acheminer un paquet du poste de travail du réseau 1 vers le serveur se trouvant dans le réseau 2.
 
@@ -206,6 +210,33 @@ RIP implémente d'autres mécanismes pour empêcher que se forment des boucles d
 >> A vous de jouer : 
 >> Élaborez au fil du temps la table de routage du routeur R4 de manière similaire à ce que l'on vient de faire.
 
+!!! abstract "Exercice type BAC"
+    Exercice 1 Partie A du sujet [Polynésie J1 2024](./data/24-polynesie-j1-ex1.pdf){. target="_blank"}
+
+    ??? question "Q1"
+         Il reste un octet soit 8 bits pour l’adresse réseau (1re adresse), les machines et l’adresse de broadcast (dernière adresse). Ainsi le réseau peut accueillir : $2^8 – 2 = 254$ machines.
+
+    ??? question "Q2"
+        Conversion décimal – binaire : <br />
+        $217_{(10)} = 128 +64+16+8+1 = 1101 1001_{(2)}$
+
+    ??? question "Q3"
+        Conversion binaire – décimal : <br />
+        $110010_{(2)} = 32 + 16 + 2 = 50_{(10)}
+
+    ??? question "Q4"
+        L’adresse du sous-réseau de la machine 110.217.53.22/24 est 110.217.53.0 donc cette machine n’appartient pas au réseau pédagogique 2.<br />
+        [Le réseau pédagogique 2 (110.217.52.0/24) admet une plage d’adresse de 110.217.52.0 à 110.217.52.255.]
+
+    ??? question "Q5"
+        ![rep](./data/24_polynesie_J1_ex1_Q5.png){: width=70% .center}
+
+    ??? question "Q6"
+        ![rep](./data/24_polynesie_J1_ex1_Q6.png){: width=40% .center}
+
+    ??? question "Q7"
+        Le nombre de saut étant identique, aucune modification n’est nécessaire dans la table de routage du routeur R2.
+    
 
 ## 3. Le protocole OSPF
 
@@ -215,7 +246,6 @@ OSPF : *Open Shortest Path First*
 Un inconvénient majeur du protocole précédent est la non-prise en compte de la bande passante reliant les routeurs.
 
 ![image](data/matrix.jpeg){: .center width=30%}
-
 
 
 !!! abstract "principe fondamental du protocole OSPF :heart:"

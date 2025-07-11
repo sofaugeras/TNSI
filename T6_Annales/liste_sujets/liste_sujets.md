@@ -9,6 +9,14 @@
 
 ## 2025
 
+- [Polynésie J2](./data/2025/25-NSIJ2PO1.pdf)
+- [Polynésie J1](./data/2025/25-NSIJ1PO1.pdf)
+- [Métropole J2](./data/2025/25_NSIJ2ME1.pdf)
+- [Métropole J1](./data/2025/25_NSIJ1ME1.pdf)
+- [Centres Étrangers J1](./data/2025/25_NSIJ1G11.pdf)
+- [Centres Étrangers J2](./data/2025/25_NSIJ2G11.pdf)
+- [Asie J2](./data/2025/25-NSIJ2JA1.pdf)
+- [Asie J1](./data/2025/25-NSIJ1JA1.pdf)  
 - [Amérique du Nord J1](./data/2025/25_NSIJ1AN1.pdf)
 - [Amérique du Nord J2](./data/2025/25_NSIJ2AN1.pdf)
 - [Sujet de secours Amérique du Nord](./data/2025/25_NSIPE2.pdf)
