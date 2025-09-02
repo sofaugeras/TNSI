@@ -1,24 +1,22 @@
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: En cours :  <br />
+    :arrow_forward: En cours : Révision : [Codex](https://codex.forge.apps.education.fr/) <br />
 
-    :hourglass: A venir : 
+    :hourglass: A venir : [Récursivité](./T2_Programmation/2.1_Recursivite/cours.md) <br />
 
-<!--   
 !!! abstract "Actualités :newspaper:" 
 
-    - 📆 Date Bac : Mardi 17 juin de 14h à 18h
+    - 📆 Date Bac : Juin 2026
 
-    - ✨ La page contenant les 48 sujets l'Épreuve Pratique 2025 est [ici](https://sujets.examens-concours.gouv.fr/delos/public/bgt/nsi){. target="_blank"} :star: :star: :star:
-
-    Les modalités du BAC 2024 ont été [annoncées](https://www.education.gouv.fr/bo/2023/Hebdo36/MENE2317750N){. target="_blank"} :
+    Les modalités du BAC 2026 on'ont pas évolués pour la partie écrite :
 
     - le sujet écrit comportera 3 exercices noté sur 20
     - l'épreuve pratique sera composé de 2 exercices notés sur 20
     - Le poids de l'écrit sera de 3/4 et le poids de la pratique de 1/4
 
-    -💥 Organisez-vous avec (par exemple) [Notion](https://www.notion.so/fr-fr){. target="_blank"} ou [Zenkit](https://zenkit.com/){. target="_blank"}
--->
+    Pour la partie pratique, les modalités évoluent ([source(https://www.education.gouv.fr/bo/2025/Hebdo31/MENE2516123N)]) : <br />
+    "La partie pratique [note SF : notée sur 20] consiste à programmer sur ordinateur une application informatique à partir d’un document fourni au candidat. L’épreuve a pour objectif d’évaluer le niveau de maîtrise des compétences pratiques du candidat."
+
 
 !!! info "Entraînement"
     Vous trouverez ci dessous quelques sites pour vous entrainez <br />
@@ -35,9 +33,8 @@
     
 <!--       
 !!! note "*Thèmes traités*"
-
-    - Révision : [Codex](https://codex.forge.apps.education.fr/) <br />
-    - [Récursivité](./T2_Programmation/2.1_Recursivite/cours.md) <br />
+    
+    - 
     - [Programmation orienté objet](./T2_Programmation/2.2_Programmation_Orientee_Objet/cours.md)<br />
     - [piles / files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md)<br />
     - [Listes chaînées](./T1_Structures_de_donnees/1.2_Listes/cours.md)<br />
