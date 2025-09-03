@@ -8,14 +8,14 @@
 
     - 📆 Date Bac : Juin 2026
 
-    Les modalités du BAC 2026 on'ont pas évolués pour la partie écrite :
+    Les modalités du BAC 2026 n'ont pas évolués pour la partie écrite :
 
     - le sujet écrit comportera 3 exercices noté sur 20
-    - l'épreuve pratique sera composé de 2 exercices notés sur 20
     - Le poids de l'écrit sera de 3/4 et le poids de la pratique de 1/4
 
     Pour la partie pratique, les modalités évoluent ([source(https://www.education.gouv.fr/bo/2025/Hebdo31/MENE2516123N)]) : <br />
-    "La partie pratique [note SF : notée sur 20] consiste à programmer sur ordinateur une application informatique à partir d’un document fourni au candidat. L’épreuve a pour objectif d’évaluer le niveau de maîtrise des compétences pratiques du candidat."
+    "La partie pratique [note : notée sur 20] consiste à programmer sur ordinateur une application informatique à partir d’un document fourni au candidat. L’épreuve a pour objectif d’évaluer le niveau de maîtrise des compétences pratiques du candidat."<br />
+    Nous sommes dans l'attente des sujets blancs pour vous apporter des précisions.
 
 
 !!! info "Entraînement"
