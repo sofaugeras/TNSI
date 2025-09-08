@@ -10,7 +10,8 @@
 
 En mathématiques, vous êtes nombreux à avoir vu les suites en spécialité de 1ère. Une suite définie par récurrence simple  s'écrit sous la forme $u_{n + 1} = f(u_n)$.  
 Si on "descend" d'un rang, on obtient $u_{n + 1} = f(f(u_{n-1}))$ , et plus généralement 
-$u_{n + 1} = \underbrace{f(f(f(\dots f(u_0))))}_{\text{$n$ fois.}}$.  
+
+![un+1](./data/u_n+1.png){: .center}
 
 ### 1.1. Définition informatique
 
