@@ -25,7 +25,7 @@
     - Labyrinthe
     - Jeu de la vie
 
-📆 Restitution attendue : Pour le **Vendredi 15 novembre 2024**
+📆 Restitution attendue : Pour le **Jeudi 6 novembre 2025**
 
 **A rendre :**
 

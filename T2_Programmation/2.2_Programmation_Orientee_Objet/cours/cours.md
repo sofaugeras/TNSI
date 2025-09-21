@@ -182,7 +182,7 @@ Carte.__doc__     # lecture des spécifications
 roiCarreau = Carte('carreau','roi',13)    # création d'une carte
 print(roiCarreau.hauteur, roiCarreau.couleur)     # lecture de la hauteur et de la couleur de l'objet roiCarreau
 print()
-roiCarreau.couleur = 'fenetre'   # modification de la hauteur par un individu mal intentionné 
+roiCarreau.couleur = 'fenetre'   # modification de la couleur par un individu mal intentionné 
 print(roiCarreau.hauteur, roiCarreau.couleur)     # et voilà le résultat !
 ```
 
@@ -193,7 +193,7 @@ print(roiCarreau.hauteur, roiCarreau.couleur)     # et voilà le résultat !
 Les attributs **privés** ne sont plus accessible de l'extérieur de la classe. Il suffit de les écrire avec `_` devant. 
 
 :warning: ^^Une remarque importante :^^ en Python, c'est juste une **convention**, qui signale que l'accès (respectivement la modification) à/de cet attribut doit se faire par des getters/accesseurs (respectivement setters/mutateurs). On peut quand même accéder à l'attribut malgré la présence du `_`. D'autres méthodes existent en Python pour éviter les manipulations délictueuses (on ne les verra pas).<br />
-En java, parr exemple, l'attribute sera explicitement privé ` private int valeur`.
+En java, parr exemple, l'attribut sera explicitement privé ` private int valeur`.
 
 ```python
 class Carte:
@@ -233,10 +233,10 @@ class Carte:
     def setHauteur(self,nouvHauteur):
         self._hauteur = nouvHauteur
     def setValeur(self,nouvValeur):
-        if type(nouvValeur) == int :
-            self._valeur = nouvValeur
+        if isinstance(valeur, int) and valeur >= 21 :
+            raise ValueError("La valeur doit être un entier supérieur ou égal à 21.")
         else:
-            raise TypeError('la valeur doit être un entier')
+            self._valeur = valeur
        
     
 roiCarreau = Carte('carreau','roi',13)
@@ -520,13 +520,13 @@ class PaquetCartes:
                 for j in range(len(self._couleurs)):
                     self._paquet.append(Carte(self.couleurs[j],hauteurs[i],i + 1)) 
             for j in range(len(self._couleurs)):
-                self._paquet.append(Carte(self._couleurs[j],self._hauteurs[0],14))
+                self._paquet.append(Carte(self._couleurs[j],self._hauteurs[0],13))
         else:
             for i in range(1,len(self._hauteurs)):
                 for j in range(len(self._couleurs)):
                     self._paquet.append(Carte(self._couleurs[j],self._hauteurs[i],i+1))
             for j in range(len(self._couleurs)):
-                self._paquet.append(Carte(self._couleurs[j],self._hauteurs[0],14))
+                self._paquet.append(Carte(self._couleurs[j],self._hauteurs[0],13))
     
     def getPaquet(self):
         return self._paquet
@@ -601,8 +601,18 @@ for i in range(10):
 :question: Suivant que vous avez ou non défini la méthode `__repr__` dans la classe `Carte`, que constatez-vous ?  
   
 !!! question "A faire"
-    modifiez le code des classes `Carte`et `PaquetCartes`, pour afficher les attributs de chaque carte et du paquet (utilisez `__repr__(self)`).  Vérifiez également que la valeur des as est correcte et qu'un paquet de 32 cartes contient bien toutes les cartes nécessaires.
+    === "A faire"
+        modifiez le code des classes `Carte`et `PaquetCartes`, pour afficher les attributs de chaque carte et du paquet (utilisez `__repr__(self)`).  Vérifiez également que la valeur des as est correcte et qu'un paquet de 32 cartes contient bien toutes les cartes nécessaires.
+    === "Code corrigé"
 
+        ```python
+        def __str__(self):
+        """Affichage du paquet de cartes"""
+        chaine = "Paquet de cartes : " + self._nom + "\n"
+        for carte in self._paquet:
+            chaine += carte.getHauteur() + " de " + carte.getCouleur() + " valeur " + str(carte.getValeur()) + "\n"
+        return chaine   
+        ```
 :trophy: Challenge :trophy:: le constructeur est mal conçu et non générique. Repensez le constructeur pour la génération du ``paquetCarte`` quelque soit le nombre de cartes.
 
 ??? question "Correction Constructeur"
@@ -615,13 +625,13 @@ for i in range(10):
         self._paquet = []
         for i in range((len(self._hauteurs)-(self._nbCartes // 4)),len(self._hauteurs)):
             for j in range(len(self._couleurs)):
-                self._paquet.append(Carte(self._couleurs[j],self._hauteurs[i],i + 2)) 
+                self._paquet.append(Carte(self._couleurs[j],self._hauteurs[i],i + 1)) 
         #Si le nombre de cartes n'est pas un multiple de 4, il faut ajouter les cartes restantes
         if (len(self._hauteurs)-(self._nbCartes // 4)) % 2 != 0:
             #Il faut ajouter le reste de (len(self._hauteurs)-(self._nbCartes // 4)) à la fin du paquet
             for i in range((len(self._hauteurs)-(self._nbCartes // 4))-1,(len(self._hauteurs)-(self._nbCartes // 4))):
                 for j in range((self._nbCartes % 4)):
-                    self._paquet.append(Carte(self._couleurs[j],self._hauteurs[i],i + 2))
+                    self._paquet.append(Carte(self._couleurs[j],self._hauteurs[i],i + 1))
 
         #Exemple d'appel du constructeur dans la classe de test
         paquetBataille = PaquetCartes("bataille", 10) ;

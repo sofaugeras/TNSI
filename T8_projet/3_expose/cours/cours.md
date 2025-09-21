@@ -1,18 +1,18 @@
 # Consignes Exposés
 
+📅 16 octobre 2025
+
 !!! danger "Consignes"
-    Préparer un exposé individuellement pour une durée de 10 minutes sur un algorithme de cryptographie.<br/>
-    La présentation se fera avec une démonstration de l'algorithme et une contextualisation de celui ci dans une diaporama léger. <br/>
-    Une séance de question/réponse aura lieu en fin d’exposé.<br/>
-    Une liste des sources devra être fournie en fin d’exposé.<br/>
-
-- 🔒 21/03 : Yann : Vigenère
-- 🔒 21/03 : Axel : Kid RSA
-- 🔒 21/03 :  Thomas : AtBash 
-- 🔒 24/03 : Gwendal : Hashling
-- 🔒 24/03 : Nathan : Transposition rectangulaire
-- 🔒 24/03 : Timéo : AES
-- 🔒 24/03 : Clément : XOR
-
+    Préparer un exposé en binôme pour une durée de 10 minutes sur le thème donné. La présentation se fera avec le soutien d’un diaporama soigné. Une séance de Kahoot sur 3 questions aura lieu en fin d’exposé.
+    Une liste des sources devra être fournie en fin d’exposé.
 
 ![Grille d'évaluation](data/evaluation.jpg)
+
+➰ les deux premiers items de notation seront individualisés.
+
+- :trollface: Nataël / Simon : L'algorithme de la racine carré inverse rapide
+- 🌕 Yaniss : Première approche de L'IA
+- 🐎Baptiste / Mouslim : Les impacts de l'IA sur le monde des échecs
+- 🈹 Diwann / Maxime : L'informatique quantique
+- 🐝 Mathias / Andres : Histoire de Bugs
+- 👩 Nadége / Morgann : Enigma et la cryptographie

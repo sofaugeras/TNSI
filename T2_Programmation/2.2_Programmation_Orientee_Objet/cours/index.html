@@ -3419,28 +3419,7 @@
         
   
   <span class="md-ellipsis">
-    Consignes Exposés
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../T8_projet/4_flask/flask/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Projet Flask
+    consignes
   </span>
   
 
@@ -3635,14 +3614,14 @@ On est donc en présence d'objets ayant à la fois des <strong>caractéritiques<
 <span class="n">roiCarreau</span> <span class="o">=</span> <span class="n">Carte</span><span class="p">(</span><span class="s1">&#39;carreau&#39;</span><span class="p">,</span><span class="s1">&#39;roi&#39;</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span>    <span class="c1"># création d&#39;une carte</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">roiCarreau</span><span class="o">.</span><span class="n">hauteur</span><span class="p">,</span> <span class="n">roiCarreau</span><span class="o">.</span><span class="n">couleur</span><span class="p">)</span>     <span class="c1"># lecture de la hauteur et de la couleur de l&#39;objet roiCarreau</span>
 <span class="nb">print</span><span class="p">()</span>
-<span class="n">roiCarreau</span><span class="o">.</span><span class="n">couleur</span> <span class="o">=</span> <span class="s1">&#39;fenetre&#39;</span>   <span class="c1"># modification de la hauteur par un individu mal intentionné </span>
+<span class="n">roiCarreau</span><span class="o">.</span><span class="n">couleur</span> <span class="o">=</span> <span class="s1">&#39;fenetre&#39;</span>   <span class="c1"># modification de la couleur par un individu mal intentionné </span>
 <span class="nb">print</span><span class="p">(</span><span class="n">roiCarreau</span><span class="o">.</span><span class="n">hauteur</span><span class="p">,</span> <span class="n">roiCarreau</span><span class="o">.</span><span class="n">couleur</span><span class="p">)</span>     <span class="c1"># et voilà le résultat !</span>
 </code></pre></div>
 <h3 id="13-deuxieme-ebauche">1.3 Deuxième ébauche<a class="headerlink" href="#13-deuxieme-ebauche" title="Permanent link">⚓︎</a></h3>
 <p><img alt="📍" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4cd.svg" title=":round_pushpin:" /> Rendons les attributs privés pour respecter le principe d'encapsulation.<br />
 Les attributs <strong>privés</strong> ne sont plus accessible de l'extérieur de la classe. Il suffit de les écrire avec <code>_</code> devant. </p>
 <p><img alt="⚠️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/26a0.svg" title=":warning:" /> <ins>Une remarque importante :</ins> en Python, c'est juste une <strong>convention</strong>, qui signale que l'accès (respectivement la modification) à/de cet attribut doit se faire par des getters/accesseurs (respectivement setters/mutateurs). On peut quand même accéder à l'attribut malgré la présence du <code>_</code>. D'autres méthodes existent en Python pour éviter les manipulations délictueuses (on ne les verra pas).<br />
-En java, parr exemple, l'attribute sera explicitement privé <code>private int valeur</code>.</p>
+En java, parr exemple, l'attribut sera explicitement privé <code>private int valeur</code>.</p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Carte</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Carte d&#39;un jeu</span>
@@ -3675,10 +3654,10 @@ En java, parr exemple, l'attribute sera explicitement privé <code>private int v
     <span class="k">def</span> <span class="nf">setHauteur</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">nouvHauteur</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_hauteur</span> <span class="o">=</span> <span class="n">nouvHauteur</span>
     <span class="k">def</span> <span class="nf">setValeur</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">nouvValeur</span><span class="p">):</span>
-        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">nouvValeur</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span> <span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_valeur</span> <span class="o">=</span> <span class="n">nouvValeur</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">valeur</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">and</span> <span class="n">valeur</span> <span class="o">&gt;=</span> <span class="mi">21</span> <span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;La valeur doit être un entier supérieur ou égal à 21.&quot;</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;la valeur doit être un entier&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_valeur</span> <span class="o">=</span> <span class="n">valeur</span>
 
 
 <span class="n">roiCarreau</span> <span class="o">=</span> <span class="n">Carte</span><span class="p">(</span><span class="s1">&#39;carreau&#39;</span><span class="p">,</span><span class="s1">&#39;roi&#39;</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span>
@@ -3938,13 +3917,13 @@ Si aucun des deux n'est défini, Python renverra une représentation par défaut
                 <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_couleurs</span><span class="p">)):</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">_paquet</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Carte</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">couleurs</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="n">hauteurs</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> 
             <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_couleurs</span><span class="p">)):</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">_paquet</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Carte</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_couleurs</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="bp">self</span><span class="o">.</span><span class="n">_hauteurs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">14</span><span class="p">))</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_paquet</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Carte</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_couleurs</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="bp">self</span><span class="o">.</span><span class="n">_hauteurs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">13</span><span class="p">))</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_hauteurs</span><span class="p">)):</span>
                 <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_couleurs</span><span class="p">)):</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">_paquet</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Carte</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_couleurs</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="bp">self</span><span class="o">.</span><span class="n">_hauteurs</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
             <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_couleurs</span><span class="p">)):</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">_paquet</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Carte</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_couleurs</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="bp">self</span><span class="o">.</span><span class="n">_hauteurs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">14</span><span class="p">))</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_paquet</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Carte</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_couleurs</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="bp">self</span><span class="o">.</span><span class="n">_hauteurs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">13</span><span class="p">))</span>
 
     <span class="k">def</span> <span class="nf">getPaquet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_paquet</span>
@@ -4012,7 +3991,22 @@ Les variables de classes sont intéressantes pour définir des constantes comme 
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> Suivant que vous avez ou non défini la méthode <code>__repr__</code> dans la classe <code>Carte</code>, que constatez-vous ?  </p>
 <div class="admonition question">
 <p class="admonition-title">A faire</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">A faire</label><label for="__tabbed_3_2">Code corrigé</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>modifiez le code des classes <code>Carte</code>et <code>PaquetCartes</code>, pour afficher les attributs de chaque carte et du paquet (utilisez <code>__repr__(self)</code>).  Vérifiez également que la valeur des as est correcte et qu'un paquet de 32 cartes contient bien toutes les cartes nécessaires.</p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="sd">&quot;&quot;&quot;Affichage du paquet de cartes&quot;&quot;&quot;</span>
+<span class="n">chaine</span> <span class="o">=</span> <span class="s2">&quot;Paquet de cartes : &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nom</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="k">for</span> <span class="n">carte</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_paquet</span><span class="p">:</span>
+    <span class="n">chaine</span> <span class="o">+=</span> <span class="n">carte</span><span class="o">.</span><span class="n">getHauteur</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; de &quot;</span> <span class="o">+</span> <span class="n">carte</span><span class="o">.</span><span class="n">getCouleur</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; valeur &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">carte</span><span class="o">.</span><span class="n">getValeur</span><span class="p">())</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="k">return</span> <span class="n">chaine</span>   
+</code></pre></div>
+</div>
+</div>
+</div>
 </div>
 <p><img alt="🏆" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f3c6.svg" title=":trophy:" /> Challenge <img alt="🏆" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f3c6.svg" title=":trophy:" />: le constructeur est mal conçu et non générique. Repensez le constructeur pour la génération du <code>paquetCarte</code> quelque soit le nombre de cartes.</p>
 <details class="question">
@@ -4024,13 +4018,13 @@ Les variables de classes sont intéressantes pour définir des constantes comme 
     <span class="bp">self</span><span class="o">.</span><span class="n">_paquet</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_hauteurs</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nbCartes</span> <span class="o">//</span> <span class="mi">4</span><span class="p">)),</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_hauteurs</span><span class="p">)):</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_couleurs</span><span class="p">)):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_paquet</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Carte</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_couleurs</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="bp">self</span><span class="o">.</span><span class="n">_hauteurs</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">))</span> 
+            <span class="bp">self</span><span class="o">.</span><span class="n">_paquet</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Carte</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_couleurs</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="bp">self</span><span class="o">.</span><span class="n">_hauteurs</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> 
     <span class="c1">#Si le nombre de cartes n&#39;est pas un multiple de 4, il faut ajouter les cartes restantes</span>
     <span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_hauteurs</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nbCartes</span> <span class="o">//</span> <span class="mi">4</span><span class="p">))</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
         <span class="c1">#Il faut ajouter le reste de (len(self._hauteurs)-(self._nbCartes // 4)) à la fin du paquet</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_hauteurs</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nbCartes</span> <span class="o">//</span> <span class="mi">4</span><span class="p">))</span><span class="o">-</span><span class="mi">1</span><span class="p">,(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_hauteurs</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nbCartes</span> <span class="o">//</span> <span class="mi">4</span><span class="p">))):</span>
             <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">_nbCartes</span> <span class="o">%</span> <span class="mi">4</span><span class="p">)):</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">_paquet</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Carte</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_couleurs</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="bp">self</span><span class="o">.</span><span class="n">_hauteurs</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">))</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_paquet</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Carte</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_couleurs</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="bp">self</span><span class="o">.</span><span class="n">_hauteurs</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
 
     <span class="c1">#Exemple d&#39;appel du constructeur dans la classe de test</span>
     <span class="n">paquetBataille</span> <span class="o">=</span> <span class="n">PaquetCartes</span><span class="p">(</span><span class="s2">&quot;bataille&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="p">;</span>
@@ -4046,7 +4040,7 @@ Quand tu parles d'<strong>enchaînement de méthodes</strong>, il s'agit génér
 <p>Pour pouvoir jouer, il nous manque encore quelques méthodes dans notre classe PaquetCartes. </p>
 <div class="admonition question">
 <p class="admonition-title">Application</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">A faire</label><label for="__tabbed_3_2">Correction</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">A faire</label><label for="__tabbed_4_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Créer :<br />
@@ -4211,7 +4205,7 @@ Quand tu parles d'<strong>enchaînement de méthodes</strong>, il s'agit génér
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Jeu de la bataille</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Trame du jeu</label><label for="__tabbed_4_2">Correction</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Trame du jeu</label><label for="__tabbed_5_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">JeuBataille</span><span class="p">:</span>
