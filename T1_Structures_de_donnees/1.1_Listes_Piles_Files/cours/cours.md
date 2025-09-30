@@ -39,7 +39,7 @@ Si une liste de courses est subdivisée en "rayon frais / bricolage / papeterie"
 
 Enfin, si nos données à étudier sont les relations sur les réseaux sociaux des élèves d'une classe, alors la structure de **graphe** s'imposera d'elle-même. Cette structure sera elle-aussi étudiée plus tard cette année. 
 
-### 1.2 Comment seront traitées ces données linéaires ? Listes, piles et files
+### 1.2 Comment seront traitées ces données linéaires ? piles et files
 
 La nature des données ne fait pas tout. Il faut aussi s'intéresser à la manière dont on voudra les traiter : à quelle position les faire entrer dans notre structure ? À quel moment devront-elles en éventuellement en sortir ?
 
@@ -92,7 +92,7 @@ Cette problématique est universelle : voir par exemple [ce site](https://www.me
 
 Arrêtons-nous maintenant en détail sur les interfaces et implémentations possibles des listes, des piles et des files.
 
-
+<!--
 ## 2. Les listes
 
 ### 2.1 Définition générale
@@ -216,9 +216,9 @@ Imaginons que nous possédons une interface offrant les fonctionnalités suivant
         10. lst.renvoie_tete()# lst = None valeur renvoyée : 3
         11. lst.est_vide()    #  valeur renvoyée : True
         ```
+-->
 
-
-## 3. Les piles
+## 2. Les piles
 
 ![](data/gifpile.webp){: .center}
 
@@ -230,7 +230,7 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :<br />
 
 
 
-### 3.1 Utilisation d'une interface de pile
+### 2.1 Utilisation d'une interface de pile
 
 !!! abstract "**Exercice :** "
     === "Entraînement"
@@ -268,7 +268,7 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :<br />
         11. p.est_vide() # True
         ```
 
-### 3.2 Implémentation(s) d'une pile
+### 2.2 Implémentation(s) d'une pile
 
 L'objectif est de créer une classe `Pile`. L'instruction  `Pile()`  créera une pile vide. Chaque objet `Pile` disposera des méthodes suivantes :
 
@@ -277,7 +277,7 @@ L'objectif est de créer une classe `Pile`. L'instruction  `Pile()`  créera une
 - `depile()` : renvoie la valeur de l'élément en haut de la pile ET le supprime de la pile.<br />
 - `__str__()` : permet d'afficher la pile sous forme agréable (par ex : `|3|6|2|5|`) par `print()`
 
-#### 3.2.1 À l'aide du type `list` de Python 
+#### 2.2.1 À l'aide du type `list` de Python 
 
 !!! abstract "Exercice"
     === "Enoncé"
@@ -338,7 +338,7 @@ L'objectif est de créer une classe `Pile`. L'instruction  `Pile()`  créera une
                 self.data.insert(0,x)
 
             def depile(self):
-                if self.est_vide() == True :
+                if self.est_vide() :
                     raise IndexError("Vous avez essayé de dépiler une pile vide !")
                 else :
                     return self.data.pop(0) 
@@ -366,112 +366,8 @@ L'objectif est de créer une classe `Pile`. L'instruction  `Pile()`  créera une
         p.depile() # 7 3 5
         print(p)
         ```
-    
-#### 3.2.2 À l'aide d'une liste chaînée et de la classe  `Cellule` créée au 2.3
 
-Au **2.3** nous avons créé la classe  `Cellule` :
-
-```python
-class Cellule :
-    
-    def __init__(self, contenu, suivante):
-        self.contenu = contenu
-        self.suivante = suivante
-```
-
-!!! abstract "Exercice"
-    === "Enoncé"
-        à l'aide cette classe, re-créer une classe `Pile` disposant exactement de la même interface que dans l'exercice précédent.
-
-        ```python
-        class Cellule :
-    
-            def __init__(self, contenu, suivante):
-                self.contenu = contenu
-                self.suivante = suivante
-
-        class Pile:
-            def __init__(self):
-                self.data = None
-            
-            def est_vide(self):
-                return self.data == None
-            
-            def empile(self, x):
-                pass
-            
-            def depile(self):
-                #on récupère la valeur à renvoyer
-                # on supprime la 1ère cellule  
-                return 
-            
-            def __str__(self):
-                s = "|"
-                c = self.data
-                while c != None :
-                    s += str(c.contenu)+"|"
-                    c = c.suivante
-                return s
-
-        p = Pile()
-        print(p.est_vide()) #True
-        p.empile(5) #5
-        print(p.est_vide()) #False
-        p.empile(3) # 3 5
-        p.empile(7) # 7 3 5
-        p.empile(2) # 2 7 3 5
-        print(p)
-        p.depile() # 7 3 5
-        print(p)
-        ```
-    === "Correction"
-
-        ```python
-        class Cellule :
-    
-            def __init__(self, contenu, suivante):
-                self.contenu = contenu
-                self.suivante = suivante
-        class Pile:
-            def __init__(self):
-                self.data = None
-            
-            def est_vide(self):
-                return self.data == None
-            
-            def empile(self, x):
-                self.data = Cellule(x,self.data)
-            
-            def depile(self):
-                v = self.data.contenu #on récupère la valeur à renvoyer
-                self.data = self.data.suivante  # on supprime la 1ère cellule  
-                return v
-            
-            def __str__(self):
-                s = "|"
-                c = self.data
-                while c != None :
-                    s += str(c.contenu)+"|"
-                    c = c.suivante
-                return s
-        p = Pile()
-        print(p.est_vide()) #True
-        p.empile(5) #5
-        print(p.est_vide()) #False
-        p.empile(3) # 3 5
-        p.empile(7) # 7 3 5
-        p.empile(2) # 2 7 3 5
-        print(p)
-        p.depile() # 7 3 5
-        print(p)
-        ```
-
-
-!!! warning "À retenir"
-    pour l'utilisateur, les interfaces du 3.2.1 et 3.2.2 sont strictement identiques. Il ne peut pas savoir, en les utilisant, l'implémentation qui est derrière. <br />
-    ![](data/xkcd.png){: .center}
-
-### 3.3 Application des piles
+### 2.3 Application des piles
 
 !!! abstract "Navigation web"
     === "Enoncé"
@@ -518,7 +414,7 @@ class Cellule :
             adresse_courante = adresses.data.contenu
         ```
 
-## 4. Les files
+## 3. Les files
 
 ![](data/giffile.webp){: .center}
 
@@ -529,7 +425,7 @@ Pour être utilisée, une file doit permettre a minima :<br />
 - le retrait d'un élément de la file (qui sera forcément celui du **dessus**) et le renvoi de sa valeur. On dira qu'on **défile**.<br />
 
 
-### 4.1 Utilisation d'une interface de file
+### 3.1 Utilisation d'une interface de file
 
 !!! abstract "Exercice"
     === "Enoncé"
@@ -564,7 +460,7 @@ Pour être utilisée, une file doit permettre a minima :<br />
         10. f.est_vide() # True
         ```
 
-### 4.2 Implémentation d'une file
+### 3.2 Implémentation d'une file
 
 L'objectif est de créer une classe `File`, disposant des méthodes suivantes :<br />
 - `File()` : crée une file vide.<br />
@@ -648,47 +544,34 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie. <br
 
 
 ```python
-# il est impératif de comprendre qu'on peut choisir l'implémentation
-# de la classe Pile qu'on préfère parmi les deux traitées plus haut.
-# Comme elles ont la MÊME INTERFACE et qu'on ne va se servir que
-# de cette interface, leur mécanisme interne n'a aucune influence
-# sur le code de la classe File que nous ferons ensuite.
+        class Pile:
+            def __init__(self):
+                self.data = []
 
-# au hasard, on choisit celle avec la liste chaînée :
+            def est_vide(self):
+                return len(self.data) == 0 
 
-class Pile:
-    def __init__(self):
-        self.data = None
-    
-    def est_vide(self):
-        return self.data == None
-    
-    def empile(self, x):
-        self.data = Cellule(x,self.data)
-    
-    def depile(self):
-        v = self.data.contenu #on récupère la valeur à renvoyer
-        self.data = self.data.suivante  # on supprime la 1ère cellule  
-        return v
-    
-    def __str__(self):
-        s = "|"
-        c = self.data
-        while c != None :
-            s += str(c.contenu)+"|"
-            c = c.suivante
-        return s
 
-    
-# il ne faut pas oublier de remettre la classe Cellule qui intervient
-# dans notre classe Pile :
+            def empile(self,x):
+                self.data.insert(0,x)
 
-class Cellule :
-    
-    def __init__(self, contenu, suivante):
-        self.contenu = contenu
-        self.suivante = suivante
-    
+            def depile(self):
+                if self.est_vide() :
+                    raise IndexError("Vous avez essayé de dépiler une pile vide !")
+                else :
+                    return self.data.pop(0) 
+
+            def __str__(self):       # Hors-Programme : pour afficher 
+                s = "|"              # convenablement la pile avec print(p)
+                for k in self.data :
+                    s = s + str(k) + "|"
+                return s
+
+            def __repr__(self):       # Hors-Programme : pour afficher 
+                s = "|"              # convenablement la pile avec p
+                for k in self.data :
+                    s = s + str(k) + "|"
+                return s  
 
 ```
 

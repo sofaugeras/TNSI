@@ -1,9 +1,9 @@
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: En cours :  [Programmation orienté objet](./T2_Programmation/2.2_Programmation_Orientee_Objet/cours.md)  <br />
+    :arrow_forward: En cours : [piles / files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md)  <br />
     👽 : [projet Pyxel](./T8_projet/1_POO/cours.md)<br />
 
-    :hourglass: A venir : [piles / files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md) <br />
+    :hourglass: A venir :  [Listes chaînées](./T1_Structures_de_donnees/1.2_Listes/cours.md)<br />
 
 !!! abstract "Actualités :newspaper:" 
 
@@ -32,12 +32,12 @@
     🚨 Liste des thèmes à traiter dans le programme : [pdf](./data/programmeTNSI.pdf)
 
     - Révision : [Codex](https://codex.forge.apps.education.fr/) <br />
+    - [Programmation orienté objet](./T2_Programmation/2.2_Programmation_Orientee_Objet/cours.md)
 
     
 <!--       
 !!! note "*Thèmes traités*"
 
-    - [Listes chaînées](./T1_Structures_de_donnees/1.2_Listes/cours.md)<br />
     - [Mise au point de programme](./T2_Programmation/2.4_Mise_au_point_de_programme/cours.md)  <br />
     - [Base de données](./T4_Bases_de_donnees/sommaire.md)<br />
     - [calculabilité](./T2_Programmation/2.3_Calculabilite_Decidabilite/cours.md)<br />

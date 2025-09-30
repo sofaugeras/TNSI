@@ -59,7 +59,6 @@ Les attributs de la classe `CelluleL` sont :<br />
 
 les méthodes sont celles données par les primitives ci-dessus(`estVide(liste)`,`longueur(liste)`,`lire(liste , k)`,`supprimer(liste , k)`,`inserer(liste , k)`).  
 
-
 ```python
 class CelluleL:
     def __init__(self , donnee = None , suivant = None) :
@@ -110,32 +109,34 @@ class CelluleL:
             return CelluleL(element, CelluleL())
         else :
             return CelluleL(self.donnee, self.suivant.inserer(element, k-1))
-            
-
-"""
-# quelques tests
-liste_vide = CelluleL()
-print("test liste vide : ", liste_vide, "est vide : ", liste_vide.estVide(), " et de longueur ",
-      liste_vide.longueur)
-maliste = CelluleL(5,liste_vide)
-for i in range(4 , -1 , -1) :
-    maliste = CelluleL(i,maliste)
-
-print("La liste : ",maliste, "a pour longueur ",maliste.longueur)
-print("lecture des éléments d'indices 1 et 5 :",maliste.lire(1),maliste.lire(5))
-print()
-
-i = 5
-print("Suppression puis ajout de l'élément d'indice ",i)
-maliste = maliste.supprimer(i)
-print("Après suppression : ",maliste, "de longueur ",maliste.longueur)
-maliste = maliste.inserer(i,i)
-print("Après insertion : ",maliste, "de longueur ",maliste.longueur)
-
-"""
-print()
+        
 ```
 
+👉 Appropriez vous la classe `CelluleL` en réalisant quelques tests (dans un fichier de test ...) : construteur, test de vacuité, ajouter l'élément, test de vacuité, Avec une boucle ajouter les élements de 1 à 4, test de la longeur, affichage de la liste, insérer, supprimer.
+
+??? question "Quelques Tests"
+
+    ```python
+    # quelques tests
+    liste_vide = CelluleL()
+    print("test liste vide : ", liste_vide, "est vide : ", liste_vide.estVide(), " et de longueur ",
+        liste_vide.longueur)
+    maliste = CelluleL(5,liste_vide)
+    for i in range(4 , -1 , -1) :
+        maliste = CelluleL(i,maliste)
+
+    print("La liste : ",maliste, "a pour longueur ",maliste.longueur)
+    print("lecture des éléments d'indices 1 et 5 :",maliste.lire(1),maliste.lire(5))
+    print()
+
+    i = 5
+    print("Suppression puis ajout de l'élément d'indice ",i)
+    maliste = maliste.supprimer(i)
+    print("Après suppression : ",maliste, "de longueur ",maliste.longueur)
+    maliste = maliste.inserer(i,i)
+    print("Après insertion : ",maliste, "de longueur ",maliste.longueur)
+
+    ```
 
 ## 3. Application au problème de Josèphe
 
@@ -396,9 +397,11 @@ print("10 survivants pour 1234 soldats, avec 1 sur 7  :", tset)
 
     ```
 
-## 6. S'il vous reste du temps
+## 6. Bonus
 
-1. Construire un jeu de tests aussi complet que possible pour la classe `ListeCirc`.<br />
+### 6.1 Construire un jeu de tests
+
+Construire un jeu de tests aussi complet que possible pour la classe `ListeCirc`.
 
 ??? question "Correction"
 
@@ -436,7 +439,7 @@ print("10 survivants pour 1234 soldats, avec 1 sur 7  :", tset)
     # print("Après insertion : ",maliste, "de longueur ",maliste.longueur)
     ```
 
-2. Coder la méthode `longueur` pour la classe `ListeCirc`.<br />
+### 6.2 Coder la méthode `longueur` pour la classe `ListeCirc`
 
 ??? question "Correction"
 
@@ -452,7 +455,9 @@ print("10 survivants pour 1234 soldats, avec 1 sur 7  :", tset)
                 lg += 1
         return lg
     ```
-3. Coder des méthodes `lire(liste , k)`, `supprimer(liste , k)` et `inserer(liste , k)` pour la classe `ListeCirc`.<br />
+### 6.3 Coder des méthodes 
+
+Coder les méthodes suivantes : `lire(liste , k)`, `supprimer(liste , k)` et `inserer(liste , k)` pour la classe `ListeCirc`.<br />
 
 ??? question "Correction"
 
@@ -480,4 +485,5 @@ print("10 survivants pour 1234 soldats, avec 1 sur 7  :", tset)
             precedent.suivant = courant.suivant
     ```
 
-4. Le fin du fin serait d'avoir la même interface pour les deux classes `listeCir` et `listeChainee` (mêmes méthodes avec les mêmes spécifications), afin de pouvoir les utiliser indifféremment. L'optique de ce TP était de montrer deux types d'implémentation différents. Mais si vous en avez le courage, vous pouvez écrire la classe `listeChainee`, y mettre toutes les méthodes auparavant dans `CelluleL`, et compléter les deux classes afin que leur interface soit identique...<br />
+!!! note "Encore plus"
+    ⭐ Le fin du fin serait d'avoir la même interface pour les deux classes `listeCir` et `listeChainee` (mêmes méthodes avec les mêmes spécifications), afin de pouvoir les utiliser indifféremment. L'optique de ce TP était de montrer deux types d'implémentation différents. Mais si vous en avez le courage, vous pouvez écrire la classe `listeChainee`, y mettre toutes les méthodes auparavant dans `CelluleL`, et compléter les deux classes afin que leur interface soit identique...<br />

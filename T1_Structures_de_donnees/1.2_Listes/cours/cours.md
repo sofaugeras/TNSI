@@ -79,7 +79,7 @@ L'**interface** minimale d'une liste chainée comporte les opérations  (_les pr
 
 Supposez que l'on vous demande la longueur d'une liste chainée `maListeChainée` qui a une queue (`tail(maListeChainée)`) de longueur 7 : vous répondrez sans hésitation que la longueur vaut 1+7= 8.
 
-![](data/longueurListe.png){: .center width=60%}
+![](data/longueurListe.png){: .center width=50%}
 
 Cette "structure imbriquée", cette disposition en "poupée russe" d'une liste chainée permet de définir une **fonction récursive** de calcul de longueur d'une liste chainée :
 
@@ -121,9 +121,9 @@ La variable qui désigne la liste chainée est alors simplement celle du premier
 
     Voici le contenu visuel du _tuple_ `Bourbons` (le `0` indique le contenu de la case d'indice 0 du tuple et le `1` le contenu de la case d'indice 1).
 
-    ![](data/schema_chaine_bourbons.png)
+    ![](data/schema_chaine_bourbons.png){: .center width=100%}
 
-Avec ce choix d'implémentation d'une liste chainée à l'aide de _tuples_, voici des codes possibles pour les fonctions  `creer_liste_vide()`, `inserer_en_tete(lst, donnée)`,  `head(lst)`,  `tail(lst)` et `est_vide(lst) ` spécifiées par l'interface :
+Avec ce choix d'implémentation d'une liste chainée à l'aide de _tuples_, voici l'implémentation de la classe `Liste` pavec les primitivés suivantes  `creer_liste_vide()`, `inserer_en_tete(lst, donnée)`,  `head(lst)`,  `tail(lst)` et `est_vide(lst)` :
 
 ```python
 class Liste :
@@ -135,10 +135,10 @@ class Liste :
         return (donnée, lst) # c'est le nouveau premier maillon de la chaine
 
     def head( self ) :
-        return lst[0] # c'est ce qu'il y a en position 0 du couple L
+        return lst[0] # c'est ce qu'il y a en position 0 du couple L et donc la tête
 
     def tail( self ) :
-        return lst[1] # c'est ce qu'il y a en position 1 du couple L
+        return lst[1] # c'est ce qu'il y a en position 1 du couple L et donc la queue
 
     def est_vide( self ) :
         return len( lst ) == 0
@@ -237,7 +237,6 @@ On peut noter que cette classe `Maillon` n'a pas de _méthodes_ dédiées.
     
     On verra en exercice comment se conformer rigoureusement à l'interface demandée.
 
-
 !!! question "Exercice  : la chaine alimentaire en version POO"
 
     Reprendre les questions de l'exercice "une chaine alimentaire" en utilisant cette fois l'implémentation en version POO.
@@ -253,14 +252,25 @@ On peut noter que cette classe `Maillon` n'a pas de _méthodes_ dédiées.
     chaineAlimentaire = Maillon("corn",souris)
     ```
 
-## 6. Exercices et TP
+## 6. Et les listes de Python ???
 
-* Généralités : télécharger le [carnet Jupyter](data/TP_Exos_ListesChainees.ipynb), à ouvrir sous [Basthon](https://notebook.basthon.fr/){target="_blank"}.
+Nous connaissons déjà les listes de Python :
 
-* Exercice type Bac :
+```python
+maliste = [3,1,-1,42]
+```
 
-    - [énoncé](data/Structures_ListesChainees_SujetBac_22NSIJ2AN1.pdf) à faire d'abord sur feuille,
-    - puis codage dans un [carnet Jupyter](data/Structures_ListesChainees_SujetBac_22NSIJ2AN1.ipynb).
-    - en cas de blocage : éléments de correction [ici](https://pixees.fr/informatiquelycee/term/suj_bac/index.html) (année 2022, sujet 5).
+Et nous connaissons aussi (un peu) l'interface de ce type ```list```, notamment avec les méthodes ```append()``` ou ```reverse()```.  
+Néanmoins, l'implémentation qui a été choisie par les concepteurs de Python de ce type ```list``` fait que le celui-ci se rapproche plus d'un **tableau dynamique**. 
 
+**Dans un tableau dynamique :**
 
+- le temps d'accès à n'importe quel élément est rapide. Ce temps d'accès est constant quelque soit l'élément : on dit que l'accès est en $O(1)$.
+- l'insertion d'un élément au début ou au milieu de la liste est lente : cela oblige à décaler tous les éléments à droite de celui-ci. Le temps pris par l'insertion est proportionnel au nombre d'éléments à déplacer : on dit que l'insertion est en $O(n)$.
+
+**Dans une liste chaînée :**
+
+- le temps d'accès à n'importe quel élément peut être lent (proportionnel à la position de l'élément dans la liste). Le temps d'accès est en $O(n)$.<br />
+- l'insertion d'un élément à l'intérieur de la liste est rapide : il y a simplement à modifier la valeur du lien de la cellule à gauche de l'endroit d'insertion. L'action d'insérer est donc en $O(1)$. Toutefois, avant d'arriver à l'endroit d'insertion, il faut avoir parcouru toutes les cellules précédentes ! Le temps total d'insertion est donc lui aussi linéaire, en $O(n)$.
+
+Nous nous servirons parfois du type `list` de Python dans la suite de ce cours, mais il ne faut pas oublier qu'il n'est pas un «vrai» type `list`.

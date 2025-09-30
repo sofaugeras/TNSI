@@ -1,26 +1,34 @@
 # Exercices Listes Chainées ⛓️
 
-## 🖊️ Exercice : utilisation de l'interface d'une liste chainée
+## Exo 1 : utilisation de l'interface d'une liste chainée 🖊️
 
 Dans cet exercice, on considère que l'on dispose d'une ***liste chainée*** nommée `chaineGrades` qui représente différents grades militaires dans l'armée française (la _chaine de commandement_), en partant du grade le plus bas (simple _Soldat_) et en allant vers le plus élevé (_Général_) :
 
 > chaineGrades : Soldat → Sergent → Lieutenant → Capitaine → Colonel → Géneral
 
-<img src="" >
+![grade](./data/grade.png){: .center width=100%}
+
 
 1. Indiquer quel est le contenu des variables `g1` et `c1` définies par 
 ```python
 g1 = head(chaineGrades)
 c1 = tail(chaineGrades)
 ```
+??? question "🙋 correction"
+    g1 renvoie `soldat`
+    c1 renvoie `Sergent → Lieutenant → Capitaine → Colonel → Géneral`
 
-🙋 Réponse :
 2. Même question avec les variables `g2` et `c2`, avec 
+
 ```python
 g2 = head(tail(chaineGrades))
 c2 = tail(tail(chaineGrades))
 ```
-🙋 Réponse :
+
+??? question "🙋 correction"
+    g2 renvoie `Sergent`
+    c2 renvoie `Lieutenant → Capitaine → Colonel → Géneral`
+
 3. On définit la fonction `mystere` ainsi :
 
 ```python 
@@ -39,136 +47,137 @@ def mystere(maListeChainée, n) :
 
 Quelle est la valeur retournée par l'appel `mystere(chaineGrades, 3)` ? Et par l'appel `mystere(chaineGrades, 7)` ? 
 
+??? question "🙋 correction"
+    `mystere(chaineGrades, 3)` renvoie Lieutenant <br />
+    `mystere(chaineGrades, 7)` renvoie `None`
+
 Quel est le rôle de cette fonction ?
-🙋 Réponse :
+
+??? question "🙋 correction"
+    La fonction mystere retourne le n-ième élément d’une liste chaînée (si n est valide), ou None sinon
 
 
-## 🖊️ Exercice : Visualisation d'une liste chainée
-
-_Remarque_ : pour que la visualisation fonctionne, il faut installer le module `lolviz` de Python.
-
-Sous Linux 
-```bash
-$ sudo apt-get install graphviz 
-```
-puis
-
-```bash
-$ pip3 install lolviz
-```
+## Exo 2 : Visualisation d'une liste chainée 🖊️
 
 Dans le cours, nous avons défini une classe `Maillon` et, à titre d'exemple, nous l'avons utilisée pour définir la **liste chainéee** des rois de France. Voici une visualisation graphique de cette structure :
 
-
 ```python
-from lolviz import *
-
 class Maillon :
     def __init__(self, data = None, suivant = None)  :
         self.head= data
         self.tail = suivant
-        
+    
+    def __str__() :
+        return ""
 roi5 = Maillon("Louis XVI") # pas besoin de préciser le 2ème argument, c'est None par défaut
 roi4 = Maillon("Louis XV", roi5)
 roi3 = Maillon("Louis XIV", roi4)
 roi2 = Maillon("Louis XIII", roi3)
 roi1 = Maillon("Henri IV", roi2)
-
-objviz(roi1)
+print(roi1)
 ```
+👉 Complétez la redéfinition de la fonction print pour afficher une liste chainée <br />
+exemple : Henri IV → Louis XIII → Louis XIV → Louis XV → Louis XVI
 
-## 🖊️ Exercice : Renverser une liste chainée
-
+## Exo 3 : Renverser une liste chainée
 
 L'objectif de l'exercice est d'écrire le code d'une fonction `renverserListeChainée(maListe)` qui prend en paramètre une ***liste chainée*** et qui renvoie une autre liste chainée correspondant au parcours dans le sens inverse de `maListe`.
 
 Par exemple, en reprenant la liste chainée des grades de l'armée de l'exercice précédent, on veut que l'appel `renverserListeChainée(chaineGrades)` renvoie la liste chainée représentant `Général → Colonel → Capitaine → Lieutenant → Sergent → Soldat`.
 
-Le code de la fonction utilisera les _primitives_ de l'interface des listes chainées (`creer_liste_vide`, `inserer_en_tete`, etc) dans la version impérative de l'implémentation vue en cours (à l'aide de _tuples_) et redonnée ici.
+Pour cela on va compléter la définition de la classe Maillon et écrire les _primitives_ de l'interface des listes chainées (`creer_liste_vide`, `inserer_en_tete`, etc).
 
+??? question "Correction"
 
-```python
-def creer_liste_vide() :
-    return () # tuple vide
+    ```python
 
-def inserer_en_tete(lst, donnée) :
-    return (donnée, lst) # c'est le nouveau premier maillon de la chaine
+    class Maillon :
+        def __init__(self, data=None, suivant=None):
+            self.head = data
+            self.tail = suivant
 
-def head(lst) :
-    assert not est_vide(lst), "Pas de tête à une liste chainée vide !"
-    return lst[0] # c'est ce qu'il y a en position 0 du couple L
+        def __str__(self):
+            """Affiche la liste chaînée depuis ce maillon"""
+            courant = self
+            chaine = ""
+            while courant is not None:
+                chaine += str(courant.head)
+                if courant.tail is not None:
+                    chaine += " → "
+                courant = courant.tail
+            return chaine
+        
+        def insere(self, data):
+            """Insère un nouveau maillon avec la donnée data au début de la liste chaînée"""
+            return Maillon(data, self) s
 
-def tail(lst) :
-    assert not est_vide(lst), "Pas de queue à une liste chainée vide !"
-    return lst[1] # c'est ce qu'il y a en position 1 du couple L
-
-def est_vide(lst) :
-    return len(lst) == 0
-
-# un test
-chaineGrades = creer_liste_vide()
-chaineGrades = inserer_en_tete(chaineGrades, "Général") ; chaineGrades = inserer_en_tete(chaineGrades, "Colonel") ; chaineGrades = inserer_en_tete(chaineGrades, "Capitaine")
-chaineGrades = inserer_en_tete(chaineGrades, "Lieutenant") ; chaineGrades = inserer_en_tete(chaineGrades, "Sergent") ; chaineGrades = inserer_en_tete(chaineGrades, "Soldat")
-objviz(chaineGrades)
-```
-
-
-```python
-def renverserListeChainée(maListe) :
-    """ Renvoie la liste chainée parcourue dans l'autre sens
-    Entrée : une liste chainée
-    Sortie : une liste chainée"""
-    # compléter votre code
-    newChaine = creer_liste_vide()
-    ... # plusieurs lignes à compléter
-    return newChaine
-
-```
-
+        def head(self):
+            """Renvoie la donnée du maillon courant"""
+            return self.head
+        
+        def tail(self):
+            """Renvoie le maillon suivant"""
+            return self.tail
+        
+        def est_vide(self):
+            """Renvoie True si la liste chaînée est vide, False sinon"""
+            return self.head is None and self.tail is None
+    ```
+👉 Ecrire le code d'une fonction `renverserListeChainée(maListe)` qui prend en paramètre une ***liste chainée*** et qui renvoie une autre liste chainée correspondant au parcours dans le sens inverse de `maListe`.
 
 ```python
-# un test
-gradesInversés = renverserListeChainée(chaineGrades)
-objviz(gradesInversés)
+# Quelques tests 
+#Création de la chaine Grade : `Général → Colonel → Capitaine → Lieutenant → Sergent → Soldat`.
+soldat = Maillon("Soldat")
+sergent = Maillon("Sergent", soldat)
+lieutenant = Maillon("Lieutenant", sergent)
+capitaine = Maillon("Capitaine", lieutenant)
+colonel = Maillon("Colonel", capitaine)
+general = Maillon("Général", colonel)
+print(general)  # Affiche : Général → Colonel → Capitaine → Lieutenant → Sergent → Soldat
+#Insertion d'un nouveau maillon au début de la liste chaînée
+Maréchal = general.insere("Maréchal")
+print(Maréchal)  # Affiche : Maréchal → Général → Colonel → Capitaine → Lieutenant → Sergent → Soldat
+
+#ou autrement avec la méthode insere
+soldat = Maillon("Soldat")
+sergent = soldat.insere("Sergent")
+lieutenant = sergent.insere("Lieutenant")
+capitaine = lieutenant.insere("Capitaine")
+colonel = capitaine.insere("Colonel")
+general = colonel.insere("Général")
+print(general)  # Affiche : Général → Colonel → Capitaine → Lieutenant → Sergent → Soldat
+
+general_renverse = general.renverse()
+print(general_renverse)  # Affiche : Soldat → Sergent → Lieutenant → Capitaine → Colonel → Général
 ```
 
-## 🖊️ Exercice : longueur d'une liste chainée
+??? question "Correction"
 
-Il peut être utile de connaître la longueur d'une liste chainée.
+    ```python
+        def renverse(self):
+        """Renvoie une nouvelle liste chaînée qui est l'inverse de la liste courante"""
+        courant = self
+        # On crée une nouvelle liste chaînée vide pour y ajouter les maillons dans l'ordre inverse
+        chaineRenversee = None
+        #On parcourt la liste chaînée courante et on ajoute chaque maillon au début de la nouvelle liste
+        while courant is not None:
+            # On sauvegarde le maillon suivant avant de modifier le maillon courant
+            next_maillon = courant.tail
+            # On insère le maillon courant au début de la nouvelle liste
+            courant.tail = chaineRenversee
+            # On met à jour la nouvelle liste renversée pour qu'elle commence par le maillon courant
+            chaineRenversee = courant
+            # On passe au maillon suivant dans la liste courante
+            courant = next_maillon
+        return chaineRenversee
+    ```
 
-**1.** Avec l'implémentation d'une liste chainée à l'aide de _tuples_, l'appel `len(maListeChainée)` ne va pas renvoyer la bonne valeur : essayez pour voir ! 
+## Exo 4 : longueur d'une liste chainée
 
+Il peut être utile de connaître la longueur d'une liste chainée.La définition ***récursive*** ("en poupée russe") d'une liste chainée permet d'envisager un **code récursif** pour la fonction `longueurListeChainée(lst)`.
 
-
-```python
-print(len(chaineGrades))
-```
-
-En effet, si la liste chainée n'est pas vide, alors elle est codée par un _couple_ de **deux** éléments : la valeur du premier maillon et le _tuple_ représentant le maillon suivant.
-
-Par contre, la définition ***récursive*** ("en poupée russe") d'une liste chainée permet d'envisager un **code récursif** pour la fonction `longueurListeChainée(lst)`.
-
-Compléter le code de cette fonction, dans le cas où la liste chainée passée en argument est codée par un _tuple_ .
-
-
-```python
-def longueurListeChainée(lst) :
-    """ renvoie la longueur d'une liste chainée, avec une implémentation à l'aide de tuples"""
-    if est_vide(lst): # cas de base
-        return ...
-    else :
-        return ... + longueurListeChainée(...)
-    
-# un test
-chaineGrades = ("Soldat",("Sergent", ("Lieutenant",("Capitaine", ("Colonel", ("Général",() ))))))
-L = longueurListeChainée(chaineGrades)
-print("Longueur de cette liste chainée =", L)
-assert L == 6 , "problème avec le code"
-```
-
-**2.** On choisit maintenant d'utiliser la version Orientée Objet pour manipuler des listes chainées (on donne ci-dessous le code vu en cours).
-
-Compléter le code de la fonction `longueur_recur_POO`.
+Compléter le code de la fonction `longueur_rec`.
 
 
 ```python
@@ -177,30 +186,38 @@ class Maillon :
         self.head = data
         self.tail = suivant
 
-def longueur_recur_POO(lst) :
-    if ... is None : # cas de base
-        return ...
-    else :
-        return ... + longueur_recur_POO(...)
-        
-# un test
-m6 = Maillon("Général")  # pas besoin de préciser le 2ème argument, c'est None par défaut
-m5 = Maillon("Colonel", m6) 
-m4 = Maillon("Capitaine", m5)
-m3 = Maillon("Lieutenant", m4)
-m2 = Maillon("Sergent", m3)
-m1 = Maillon("Soldat", m2)
-
-chaineGradesPOO = m1 # on tient la chaine par son premier maillon
-objviz(chaineGradesPOO) # visualisation
-
-L = longueur_recur_POO(chaineGradesPOO)
-print("La longueur de cette liste chainée est ", L)
-assert  L == 6 , "problème de code"
-
+    def longueur_rec(self) :
+        if ... is None : # cas de base
+            return ...
+        else :
+            return ... + longueur_recur_POO(...)
 ```
 
-## 🖊️ Exercice : insérer une donnée dans une liste chainée
+et quelques test ...
+
+```python
+#Test de la méthode longueur_rec
+print("Tests de la méthode longueur_rec :")
+print(general.longueur_rec())  # Affiche : 6
+print(Maréchal.longueur_rec())  # Affiche : 7
+
+#Test sur une chaine vide
+print("Tests sur une chaîne vide :")
+chaine_vide = Maillon()
+print(chaine_vide.est_vide())  # Affiche : True
+print(chaine_vide.longueur_rec())  # Affiche : 0
+```
+??? question "Correction"
+
+    ```python
+        def longueur_rec(self) :
+        if self.tail is None : # cas de base
+            return 1
+        else :
+            return 1 + self.tail.longueur_rec()
+    ```
+
+## Exo 5 : Insérer une donnée dans une liste chainée 
 
 On veut écrire une fonction `inserer(val, chaine, n)` qui va insérer la valeur `val` dans la liste chainée `chaine` après le `n`-ième maillon, où `n` est un entier supérieur ou égal à 1.
 
@@ -215,33 +232,53 @@ class Maillon :
         self.head = data
         self.tail = suivant
         
-def inserer(val, chaine, n) :
-    """ insére la donnée dans la chaine après le n-ième maillon"""
-    if n == 1 :
-        newMaillon = Maillon(...) # compléter ici
-        chaine.tail = newMaillon
-    else :
-        inserer(..., chaine.tail, ...)  # compléter ici
-        
-# un test
-m6 = Maillon("Général")  # pas besoin de préciser le 2ème argument, c'est None par défaut
-m5 = Maillon("Colonel", m6) 
-m4 = Maillon("Capitaine", m5)
-m3 = Maillon("Lieutenant", m4)
-m2 = Maillon("Sergent", m3)
-m1 = Maillon("Soldat", m2)
-
-objviz(m1)
+    def inserer(val, chaine, n) :
+        """ insére la donnée dans la chaine après le n-ième maillon"""
+        if n == 0 :
+            return 
+        else :
+            # compléter ici
 ```
 
-
-```python
-inserer("Adjudant", m1, 2)
-print("Après insertion de l'adjudant")
-objviz(m1)
+Et quelques Tests ...
+```python    
+#Test de la méthode inserer
+print("Tests de la méthode inserer :")
+nouvelle_chaine = general_renverse.inserer("Adjudant", 2)
+print(nouvelle_chaine)  # Affiche : Soldat → Sergent → Adjudant → Lieutenant → Capitaine → Colonel → Général
+#Test du cas limite ou l'on insere à la fin de la chaine
+nouvelle_chaine2 = general_renverse.inserer("Général d'armée", 7)
+print(nouvelle_chaine2)  # Affiche : Soldat → Sergent → Adjudant → Lieutenant → Capitaine → Colonel → Général → Général d'armée
 ```
 
-## 🖊️ Exercice : Chaine de désintégration ⚛️
+??? question "Correction"
+
+    ```python
+    def inserer(self, val, n) :
+        """"
+        insére la donnée dans la chaine après le n-ième maillon
+        On utiliser une approche récursive.
+        @param val : la valeur à insérer
+        @param n : la position après laquelle insérer (1 pour insérer en tête)
+        @return : None : on modifie la liste en place
+        """
+        # Cas de base : on insère en tête
+        if n == 0 :
+            return Maillon(val, self)
+            # newMaillon = Maillon(val, self.tail)
+            # self.tail = newMaillon
+        else :
+            #Cas récursif : on délègue l'insertion au maillon suivant
+            #Cas particulier : si on est en fin de liste, on ajoute un nouveau maillon
+            if self.tail is None :
+                self.tail = Maillon(val)
+            #cas général : on ajoute à la queue de la liste à la position n-1
+            elif self.tail is not None :
+                self.tail = self.tail.inserer(val, n-1)
+            return self
+    ```
+
+## Exo 6 : Chaine de désintégration ⚛️
 
 En Enseignement Scientifique de Première, vous avez étudié la désintégration par radioactivité du noyau des atomes. 
 
@@ -253,7 +290,7 @@ Le Radon 222 peut lui-même se désintégrer en Polonium 218, et ainsi de suite 
 
 On a donc une chaine de désintégration :
 
-<img src="" >
+![desintégration](./data/desintegration.png){: .center width=50%}
 
 Pour manipuler en Python une chaine de désintégration, on utilise une classe `Chaine` qui implémente la structure de données abstraite de ***liste chainée*** dans une version ***moins simpliste*** que celle utilisée précédemment.
 
@@ -285,6 +322,20 @@ class Chaine :
     def ajout_en_tete(self, data) :
         nouveau_maillon = Maillon(data, self.premier_maillon)
         self.premier_maillon = nouveau_maillon
+
+    def __repr__(self):
+        if self.est_vide():
+            return "[]"
+        courant = self.premier_maillon
+        elements = []
+        while courant is not None:
+            nom, masse, demi_vie = courant.head
+            if demi_vie >= 1e99:   # élément stable
+                elements.append(f"{nom}{masse} (stable)")
+            else:
+                elements.append(f"{nom}{masse}")
+            courant = courant.tail
+        return " → ".join(elements)
 ```
 
 La chaine de désintégration du Radon est donc instanciée par le code suivant :
@@ -303,18 +354,17 @@ desintegrationRa.ajout_en_tete(('Po', 218, 5.7e-6))
 desintegrationRa.ajout_en_tete(('Rn', 222, 0.01))
 desintegrationRa.ajout_en_tete(('Ra', 226, 1600))
 
-objviz(desintegrationRa)
+print(desintegrationRa)
 ```
 
 La chaine de désintégration du Césium est plus courte et elle est instanciée par le code suivant :
-
 
 ```python
 desintegrationCs = Chaine()
 desintegrationCs.ajout_en_tete(('Ba', 137, 1e100))
 desintegrationCs.ajout_en_tete(('Cs', 137, 30.2))
 
-objviz(desintegrationCs)
+print(desintegrationCs)
 ```
 
 **1.** Un élément stable est un élément qui se situe en bout de chaine de desintégration.
@@ -330,15 +380,19 @@ def estStable(chaine) :
 
 # test 1
 estStable(desintegrationRa)
-```
-
-
-```python
 # test 2
 desintegrationPb = Chaine()
 desintegrationPb.ajout_en_tete(('Pb', 206, 1e100))
 estStable(desintegrationPb)
 ```
+
+??? question "Correction"
+
+    ```python
+    def estStable(chaine):
+    # stable ↔ il n'y a pas de maillon suivant
+    return chaine.queue() is None or chaine.queue().est_vide()
+    ```
 
 **2.** L'élément le plus instable d'une chaine de desintégration est celui qui a la demi-vie la plus faible.
 
@@ -362,6 +416,22 @@ def lePlusInstable(chaine) :
 lePlusInstable(desintegrationRa)
 ```
 
+??? question "Correction"
+
+    ```python
+    def lePlusInstable(chaine):
+        duree_mini = chaine.tete()[2]
+        atome_instable = (chaine.tete()[0], chaine.tete()[1])
+        chaine = chaine.queue()
+        while not chaine.est_vide():
+            duree = chaine.tete()[2]
+            if duree < duree_mini:
+                duree_mini = duree
+                atome_instable = (chaine.tete()[0], chaine.tete()[1])
+            chaine = chaine.queue()
+        return atome_instable
+    ```
+
 **3)** Dans la chaine de désintégration du radon, on trouve trois fois l'isotope `Po` (${}^{218}Po$, ${}^{214}Po$ et ${}^{210}Po$) et une seule fois l'isotope `Rn`.
 
 On veut écrire une fonction **récursive** `nbIsotopes(chaine, nom_atome)` qui renvoie le nombre de fois où `nom_atome`apparaît dans la chaine de désintégration `chaine`.
@@ -370,23 +440,30 @@ Par exemple, on veut que l'appel `nbIsotopes(desintegrationRa, 'Po')` renvoie le
 
 Compléter le code suivant :
 
-
 ```python
 def nbIsotopes(chaine, nom_atome) :
     if chaine.est_vide() :
         return ...
     else :
-        occurence = int(chaine.tete()[0] == nom_atome) # conversion d'un booléen en entier avec la régle : True -> 1 et False -> 0
+        # conversion d'un booléen en entier avec la régle : True -> 1 et False -> 0
+        occurence = int(chaine.tete()[0] == nom_atome)
         return occurence + nbIsotopes(...)
     
 # quelques tests
 nbIsotopes(desintegrationRa, 'Po')
-```
-
-
-```python
 nbIsotopes(desintegrationRa, 'Rn')
 ```
+
+??? question "Correction"
+
+    ```python
+    def nbIsotopes(chaine, nom_atome):
+        if chaine.est_vide():
+            return 0
+        else:
+            occurence = int(chaine.tete()[0] == nom_atome)
+            return occurence + nbIsotopes(chaine.queue(), nom_atome)
+    ```
 
 **4.** La masse atomique d'un atome correspond au nombre de protons et de neutrons qui composent le noyau de l'atome. On constate que, au cours d'une suite de désintégration, il y a une baisse de la masse atomique.
 
@@ -395,7 +472,6 @@ On veut écrire une fonction **récursive** `perte_atomique(chaine)` qui prend e
 Par exemple, on veut que l'appel `perte_atomique(desintegrationRa)` renvoie le nombre 20 (car 226 - 206 = 20).
 
 Compléter le code suivant :
-
 
 ```python
 def perte_atomique(chaine) :
@@ -409,6 +485,18 @@ def perte_atomique(chaine) :
 # test
 perte_atomique(desintegrationRa)
 ```
+
+??? question "Correction"
+
+    ```python
+    def perte_atomique(chaine):
+        if chaine.queue() is None or chaine.queue().est_vide():
+            return 0
+        else:
+            masse1 = chaine.tete()[1]
+            masse2 = chaine.queue().tete()[1]
+            return (masse1 - masse2) + perte_atomique(chaine.queue())
+    ```
 
 **5.** On veut comparer la perte atomique de différentes chaines de désintégration et identifier celle qui a la perte atomique la plus importante.
 
@@ -428,7 +516,189 @@ def maxi_perte_atomique(tab_chaine) :
 maxi_perte_atomique([desintegrationRa, desintegrationCs, desintegrationPb])
 ```
 
+??? question "Correction"
+
+    ```python
+    def maxi_perte_atomique(tab_chaine):
+        tab_perte_atomique = [perte_atomique(chaine) for chaine in tab_chaine]
+        maxi_perte = tab_perte_atomique[0]
+        for v in tab_perte_atomique[1:]:
+            if v > maxi_perte:
+                maxi_perte = v
+        return maxi_perte
+
+    ```
+
+## Exo 7 : Compétition de Kayak 🛶
+
+!!! note "source"
+    Correction issue de [pixees : 2022 s5](https://pixees.fr/informatiquelycee/term/suj_bac/index.html)
+
+👉 Ouvrir l'énoncé [Exercice 1 du sujet Amérique du Nord J2 2022 ](./data/Structures_ListesChainees_SujetBac_22NSIJ2AN1.pdf){. target="blank"}
+
+Lors d’une compétition de kayak, chaque concurrent doit descendre le même cours d’eau en passant dans des portes en un minimum de temps. Si le concurrent touche une porte, il se voit octroyé une pénalité en secondes. Son résultat final est le temps qu’il a mis pour descendre le cours d’eau auquel est ajouté l’ensemble des pénalités qu’il a subies.<br />
+Un gestionnaire de course de kayak développe un programme Python pour gérer les résultats lors d’une compétition.
+
+Dans ce programme, pour modéliser les concurrents et leurs résultats, une classe Concurrent est définie avec les attributs suivants :
+
+* `nom` de type `str` qui représente le pseudonyme du compétiteur ;
+* `temps` de type `float` qui est le temps mis pour réaliser le parcours (_en secondes_) ;
+* `penalite` de type `int` qui est le nombre de secondes de pénalité cumulées octroyées au compétiteur ;
+* `temps_tot` de type `float` qui correspond au temps total, c'est-à-dire au temps mis pour réaliser le parcours auquel on a ajouté les secondes de pénalité.
+
+On suppose que tous les concurrents ont des temps différents dans cet exercice.
+
+Le code Python incomplet de la classe `Concurrent` est donné ci-dessous.
 
 ```python
-
+class Concurrent :
+    def __init__(self, pseudo, temps, penalite) :
+        self.nom = pseudo
+        self.temps = temps
+        self.penalite = ...
+        self.temps_tot = ...
 ```
+
+#### Question 1
+
+**1a.** Compléter le code du ***constructeur*** de la classe `Concurrent`.
+
+??? question "Correction"
+
+    ```python
+    class Concurrent:
+        def __init__(self, pseudo, temps, penalite):
+        self.nom = pseudo
+        self.temps = temps
+        self.penalite = penalite
+        self.temps_tot = temps + penalite
+    ```
+
+**1b.** On exécute l'instruction suivante `c1 = Concurrent("Mosquito", 87.67, 12)`
+
+* Donner la valeur de l'attribut `temps_tot` de `c1`
+
+??? question "Correction"
+    Pour c1, temps_tot est égal à $99,67$ (87,67 + 12)
+
+* Écrire l'instruction qui permet d'accéder à la valeur `temps_tot` de `c1`
+
+??? question "Correction"
+    `c1.temps_tot`
+
+#### Question 2
+
+Le code ci-dessous permet de créer la classe `Liste` décrite par l'énoncé : ceci implémente la structure de données abstraite de **liste chainée**, avec l'interface décrite dans l'énoncé.
+
+```python
+class Maillon :
+    def __init__(self, data = None, suivant = None)  :
+        self.head = data
+        self.tail = suivant
+
+class Liste :
+    def __init__(self, first = None) :
+        self.premier_maillon = first
+    
+    def est_vide(self) :
+        return self.premier_maillon == None
+    
+    def tete(self) :
+        return self.premier_maillon.head
+    
+    def queue(self) :
+        if not (self.est_vide()):
+            return Liste(self.premier_maillon.tail)
+    
+    def ajout(self, data) :
+        nouveau_maillon = Maillon(data, self.premier_maillon)
+        self.premier_maillon = nouveau_maillon
+    
+```
+
+Pour reprendre l'exemple de l'énoncé :
+
+```python
+c1 = Concurrent("Mosquito", 87.67, 12)
+c2 = Concurrent("Python Fute", 89.73, 4)
+c3 = Concurrent("Piranha Vorace", 90.54, 0)
+c4 = Concurrent("Truite Agile", 84.32, 52)
+c5 = Concurrent("Tortue Rapide", 92.12, 2)
+c6 = Concurrent("Lievre Tranquille", 93.45, 0)
+
+resultats = Liste()
+resultats.ajout(c1)
+resultats.ajout(c2)
+resultats.ajout(c3)
+resultats.ajout(c4)
+resultats.ajout(c5)
+resultats.ajout(c6)
+```
+
+Après exécution, ce script génère une liste que l'on peut représenter par : `<c6, c5, c4, c3, c2, c1>`
+
+**2.a** Écrire la (ou les) instruction(s) qui permet(tent) d'accéder à `c4` _uniquement avec les méthodes de la classe `Liste`_ :
+
+??? question "Correction"
+
+    ```python
+    L1 = resultats.queue()
+    L2 = L1.queue()
+    c1 = L2.tete()
+    ou bien directement : c1 = resultats.queue().queue().tete()
+    ```
+
+**2.b** Écrire la (ou les) instruction(s) qui permet(tent) d'accéder au temps total du concurrent stocké en tête de la liste `resultats` :
+
+```python
+# compléter ici
+val = ...
+assert val == 93.45, "problème de code"
+```
+
+??? question "Correction"
+
+    `temps_total = resultats.tete().temps_tot`
+
+#### Question 3
+
+On veut créer une fonction `meilleur_concurrent` 
+
+* qui prend en paramètre une liste `L` de concurrents (de la classe `Liste` ci-dessus)
+* et qui renvoie l'objet `Concurrent` correspondant au concurrent le plus rapide.
+
+_On suppose que la liste est non vide_.
+
+Compléter le code de cette fonction :
+
+```python
+def meilleur_concurrent(L) :
+    conc_mini = L. ... 
+    mini = conc_mini.temps_tot
+    Q = L.queue()
+    while not(Q.est_vide()) :
+        elt = Q.tete()
+        if elt.temps_tot ... mini :
+            conc_mini = elt
+            mini = elt.temps_tot
+        Q = Q. ...
+    return ...
+
+# un test
+assert meilleur_concurrent(resultats).nom == 'Piranha Vorace', "problème de code"
+```
+??? question "Correction"
+
+    ```python
+    def meilleur_conccurent(L):
+        conc_mini = L.tete()
+        mini = conc_mini.temps_tot
+        Q = L.queue()
+        while not(Q.est_vide()):
+        elt = Q.tete()
+        if elt.temps_tot < mini :
+        conc_mini = elt
+        mini = elt.temps_tot
+        Q = Q.queue()
+        return conc_mini
+    ```

@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://github.com/sofaugeras/TNSI/T1_Structures_de_donnees/1.2_Listes/TD_FlaviusJoseph/">
       
       
-        <link rel="prev" href="../cours/">
+        <link rel="prev" href="../retourPile/">
       
       
         <link rel="next" href="../../1.3_Dictionnaires/cours/">
@@ -727,6 +727,48 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../exercices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../retourPile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Le retour de la pile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -821,11 +863,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-sil-vous-reste-du-temps" class="md-nav__link">
+  <a href="#6-bonus" class="md-nav__link">
     <span class="md-ellipsis">
-      6. S'il vous reste du temps
+      6. Bonus
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="6. Bonus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-construire-un-jeu-de-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Construire un jeu de tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-coder-la-methode-longueur-pour-la-classe-listecirc" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Coder la méthode longueur pour la classe ListeCirc
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-coder-des-methodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Coder des méthodes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3436,31 +3511,30 @@ Il y a deux sous-problèmes :<br /></p>
             <span class="k">return</span> <span class="n">CelluleL</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">CelluleL</span><span class="p">())</span>
         <span class="k">else</span> <span class="p">:</span>
             <span class="k">return</span> <span class="n">CelluleL</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">donnee</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">suivant</span><span class="o">.</span><span class="n">inserer</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
-
-
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd"># quelques tests</span>
-<span class="sd">liste_vide = CelluleL()</span>
-<span class="sd">print(&quot;test liste vide : &quot;, liste_vide, &quot;est vide : &quot;, liste_vide.estVide(), &quot; et de longueur &quot;,</span>
-<span class="sd">      liste_vide.longueur)</span>
-<span class="sd">maliste = CelluleL(5,liste_vide)</span>
-<span class="sd">for i in range(4 , -1 , -1) :</span>
-<span class="sd">    maliste = CelluleL(i,maliste)</span>
-
-<span class="sd">print(&quot;La liste : &quot;,maliste, &quot;a pour longueur &quot;,maliste.longueur)</span>
-<span class="sd">print(&quot;lecture des éléments d&#39;indices 1 et 5 :&quot;,maliste.lire(1),maliste.lire(5))</span>
-<span class="sd">print()</span>
-
-<span class="sd">i = 5</span>
-<span class="sd">print(&quot;Suppression puis ajout de l&#39;élément d&#39;indice &quot;,i)</span>
-<span class="sd">maliste = maliste.supprimer(i)</span>
-<span class="sd">print(&quot;Après suppression : &quot;,maliste, &quot;de longueur &quot;,maliste.longueur)</span>
-<span class="sd">maliste = maliste.inserer(i,i)</span>
-<span class="sd">print(&quot;Après insertion : &quot;,maliste, &quot;de longueur &quot;,maliste.longueur)</span>
-
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="nb">print</span><span class="p">()</span>
 </code></pre></div>
+<p>👉 Appropriez vous la classe <code>CelluleL</code> en réalisant quelques tests (dans un fichier de test ...) : construteur, test de vacuité, ajouter l'élément, test de vacuité, Avec une boucle ajouter les élements de 1 à 4, test de la longeur, affichage de la liste, insérer, supprimer.</p>
+<details class="question">
+<summary>Quelques Tests</summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># quelques tests</span>
+<span class="n">liste_vide</span> <span class="o">=</span> <span class="n">CelluleL</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;test liste vide : &quot;</span><span class="p">,</span> <span class="n">liste_vide</span><span class="p">,</span> <span class="s2">&quot;est vide : &quot;</span><span class="p">,</span> <span class="n">liste_vide</span><span class="o">.</span><span class="n">estVide</span><span class="p">(),</span> <span class="s2">&quot; et de longueur &quot;</span><span class="p">,</span>
+    <span class="n">liste_vide</span><span class="o">.</span><span class="n">longueur</span><span class="p">)</span>
+<span class="n">maliste</span> <span class="o">=</span> <span class="n">CelluleL</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="n">liste_vide</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span> <span class="p">,</span> <span class="o">-</span><span class="mi">1</span> <span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">maliste</span> <span class="o">=</span> <span class="n">CelluleL</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">maliste</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La liste : &quot;</span><span class="p">,</span><span class="n">maliste</span><span class="p">,</span> <span class="s2">&quot;a pour longueur &quot;</span><span class="p">,</span><span class="n">maliste</span><span class="o">.</span><span class="n">longueur</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;lecture des éléments d&#39;indices 1 et 5 :&quot;</span><span class="p">,</span><span class="n">maliste</span><span class="o">.</span><span class="n">lire</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="n">maliste</span><span class="o">.</span><span class="n">lire</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Suppression puis ajout de l&#39;élément d&#39;indice &quot;</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+<span class="n">maliste</span> <span class="o">=</span> <span class="n">maliste</span><span class="o">.</span><span class="n">supprimer</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Après suppression : &quot;</span><span class="p">,</span><span class="n">maliste</span><span class="p">,</span> <span class="s2">&quot;de longueur &quot;</span><span class="p">,</span><span class="n">maliste</span><span class="o">.</span><span class="n">longueur</span><span class="p">)</span>
+<span class="n">maliste</span> <span class="o">=</span> <span class="n">maliste</span><span class="o">.</span><span class="n">inserer</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Après insertion : &quot;</span><span class="p">,</span><span class="n">maliste</span><span class="p">,</span> <span class="s2">&quot;de longueur &quot;</span><span class="p">,</span><span class="n">maliste</span><span class="o">.</span><span class="n">longueur</span><span class="p">)</span>
+</code></pre></div>
+</details>
 <h2 id="3-application-au-probleme-de-josephe">3. Application au problème de Josèphe<a class="headerlink" href="#3-application-au-probleme-de-josephe" title="Permanent link">⚓︎</a></h2>
 <p>On rappelle le terrible problème de Josèphe. Un nombre <em>n</em> de soldats juifs sont positionnés en cercle. Les soldats romains tuent le 1er soldat, puis tuent un soldat sur <em>k</em> jusqu'à ce qu'il n'y ait plus que <em>s</em> survivants. On demande le(s) numéro(s) du(des) survivants.<br />
 Résoudre ce problème en utilisant une liste chainée.</p>
@@ -3700,10 +3774,9 @@ Les attributs de <code>Noeud</code> sont:  <br /></p>
 <span class="c1"># print(&quot;10 survivants pour 1234 soldats, avec 1 sur 7  :&quot;, tset)</span>
 </code></pre></div>
 </details>
-<h2 id="6-sil-vous-reste-du-temps">6. S'il vous reste du temps<a class="headerlink" href="#6-sil-vous-reste-du-temps" title="Permanent link">⚓︎</a></h2>
-<ol>
-<li>Construire un jeu de tests aussi complet que possible pour la classe <code>ListeCirc</code>.<br /></li>
-</ol>
+<h2 id="6-bonus">6. Bonus<a class="headerlink" href="#6-bonus" title="Permanent link">⚓︎</a></h2>
+<h3 id="61-construire-un-jeu-de-tests">6.1 Construire un jeu de tests<a class="headerlink" href="#61-construire-un-jeu-de-tests" title="Permanent link">⚓︎</a></h3>
+<p>Construire un jeu de tests aussi complet que possible pour la classe <code>ListeCirc</code>.</p>
 <details class="question">
 <summary>Correction</summary>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># quelques tests</span>
@@ -3739,9 +3812,7 @@ Les attributs de <code>Noeud</code> sont:  <br /></p>
 <span class="c1"># print(&quot;Après insertion : &quot;,maliste, &quot;de longueur &quot;,maliste.longueur)</span>
 </code></pre></div>
 </details>
-<ol>
-<li>Coder la méthode <code>longueur</code> pour la classe <code>ListeCirc</code>.<br /></li>
-</ol>
+<h3 id="62-coder-la-methode-longueur-pour-la-classe-listecirc">6.2 Coder la méthode <code>longueur</code> pour la classe <code>ListeCirc</code><a class="headerlink" href="#62-coder-la-methode-longueur-pour-la-classe-listecirc" title="Permanent link">⚓︎</a></h3>
 <details class="question">
 <summary>Correction</summary>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code>    <span class="k">def</span> <span class="nf">longueur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -3756,9 +3827,8 @@ Les attributs de <code>Noeud</code> sont:  <br /></p>
     <span class="k">return</span> <span class="n">lg</span>
 </code></pre></div>
 </details>
-<ol>
-<li>Coder des méthodes <code>lire(liste , k)</code>, <code>supprimer(liste , k)</code> et <code>inserer(liste , k)</code> pour la classe <code>ListeCirc</code>.<br /></li>
-</ol>
+<h3 id="63-coder-des-methodes">6.3 Coder des méthodes<a class="headerlink" href="#63-coder-des-methodes" title="Permanent link">⚓︎</a></h3>
+<p>Coder les méthodes suivantes : <code>lire(liste , k)</code>, <code>supprimer(liste , k)</code> et <code>inserer(liste , k)</code> pour la classe <code>ListeCirc</code>.<br /></p>
 <details class="question">
 <summary>Correction</summary>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">lire</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
@@ -3784,9 +3854,10 @@ Les attributs de <code>Noeud</code> sont:  <br /></p>
         <span class="n">precedent</span><span class="o">.</span><span class="n">suivant</span> <span class="o">=</span> <span class="n">courant</span><span class="o">.</span><span class="n">suivant</span>
 </code></pre></div>
 </details>
-<ol>
-<li>Le fin du fin serait d'avoir la même interface pour les deux classes <code>listeCir</code> et <code>listeChainee</code> (mêmes méthodes avec les mêmes spécifications), afin de pouvoir les utiliser indifféremment. L'optique de ce TP était de montrer deux types d'implémentation différents. Mais si vous en avez le courage, vous pouvez écrire la classe <code>listeChainee</code>, y mettre toutes les méthodes auparavant dans <code>CelluleL</code>, et compléter les deux classes afin que leur interface soit identique...<br /></li>
-</ol>
+<div class="admonition note">
+<p class="admonition-title">Encore plus</p>
+<p>⭐ Le fin du fin serait d'avoir la même interface pour les deux classes <code>listeCir</code> et <code>listeChainee</code> (mêmes méthodes avec les mêmes spécifications), afin de pouvoir les utiliser indifféremment. L'optique de ce TP était de montrer deux types d'implémentation différents. Mais si vous en avez le courage, vous pouvez écrire la classe <code>listeChainee</code>, y mettre toutes les méthodes auparavant dans <code>CelluleL</code>, et compléter les deux classes afin que leur interface soit identique...<br /></p>
+</div>
 
 
 

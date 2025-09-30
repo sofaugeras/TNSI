@@ -18,7 +18,7 @@
         <link rel="prev" href="../../1.1_Listes_Piles_Files/Exercices/">
       
       
-        <link rel="next" href="../TD_FlaviusJoseph/">
+        <link rel="next" href="../exercices/">
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
@@ -800,9 +800,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-exercices-et-tp" class="md-nav__link">
+  <a href="#6-et-les-listes-de-python" class="md-nav__link">
     <span class="md-ellipsis">
-      6. Exercices et TP
+      6. Et les listes de Python ???
     </span>
   </a>
   
@@ -812,6 +812,48 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exercices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../retourPile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Le retour de la pile
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -3430,7 +3472,7 @@
 </div>
 <h2 id="3-longueur-dune-liste-chainee">3. Longueur d'une liste chainée<a class="headerlink" href="#3-longueur-dune-liste-chainee" title="Permanent link">⚓︎</a></h2>
 <p>Supposez que l'on vous demande la longueur d'une liste chainée <code>maListeChainée</code> qui a une queue (<code>tail(maListeChainée)</code>) de longueur 7 : vous répondrez sans hésitation que la longueur vaut 1+7= 8.</p>
-<p><img alt="" class="center" src="../data/longueurListe.png" width="60%" /></p>
+<p><img alt="" class="center" src="../data/longueurListe.png" width="50%" /></p>
 <p>Cette "structure imbriquée", cette disposition en "poupée russe" d'une liste chainée permet de définir une <strong>fonction récursive</strong> de calcul de longueur d'une liste chainée :</p>
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>FONCTION LongueurListeChainée(lst)
 
@@ -3458,9 +3500,9 @@
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">Bourbons</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Henri IV&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;Louis XIII&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;Louis XIV&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;Louis XV&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;Louis XVI&#39;</span><span class="p">,</span> <span class="p">())))))</span>
 </code></pre></div>
 <p>Voici le contenu visuel du <em>tuple</em> <code>Bourbons</code> (le <code>0</code> indique le contenu de la case d'indice 0 du tuple et le <code>1</code> le contenu de la case d'indice 1).</p>
-<p><img alt="" src="../data/schema_chaine_bourbons.png" /></p>
+<p><img alt="" class="center" src="../data/schema_chaine_bourbons.png" width="100%" /></p>
 </div>
-<p>Avec ce choix d'implémentation d'une liste chainée à l'aide de <em>tuples</em>, voici des codes possibles pour les fonctions  <code>creer_liste_vide()</code>, <code>inserer_en_tete(lst, donnée)</code>,  <code>head(lst)</code>,  <code>tail(lst)</code> et <code>est_vide(lst)</code> spécifiées par l'interface :</p>
+<p>Avec ce choix d'implémentation d'une liste chainée à l'aide de <em>tuples</em>, voici l'implémentation de la classe <code>Liste</code> pavec les primitivés suivantes  <code>creer_liste_vide()</code>, <code>inserer_en_tete(lst, donnée)</code>,  <code>head(lst)</code>,  <code>tail(lst)</code> et <code>est_vide(lst)</code> :</p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Liste</span> <span class="p">:</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
@@ -3470,10 +3512,10 @@
         <span class="k">return</span> <span class="p">(</span><span class="n">donnée</span><span class="p">,</span> <span class="n">lst</span><span class="p">)</span> <span class="c1"># c&#39;est le nouveau premier maillon de la chaine</span>
 
     <span class="k">def</span> <span class="nf">head</span><span class="p">(</span> <span class="bp">self</span> <span class="p">)</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># c&#39;est ce qu&#39;il y a en position 0 du couple L</span>
+        <span class="k">return</span> <span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># c&#39;est ce qu&#39;il y a en position 0 du couple L et donc la tête</span>
 
     <span class="k">def</span> <span class="nf">tail</span><span class="p">(</span> <span class="bp">self</span> <span class="p">)</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="n">lst</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># c&#39;est ce qu&#39;il y a en position 1 du couple L</span>
+        <span class="k">return</span> <span class="n">lst</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># c&#39;est ce qu&#39;il y a en position 1 du couple L et donc la queue</span>
 
     <span class="k">def</span> <span class="nf">est_vide</span><span class="p">(</span> <span class="bp">self</span> <span class="p">)</span> <span class="p">:</span>
         <span class="k">return</span> <span class="nb">len</span><span class="p">(</span> <span class="n">lst</span> <span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
@@ -3576,20 +3618,23 @@
 <span class="n">chaineAlimentaire</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;corn&quot;</span><span class="p">,</span><span class="n">souris</span><span class="p">)</span>
 </code></pre></div>
 </details>
-<h2 id="6-exercices-et-tp">6. Exercices et TP<a class="headerlink" href="#6-exercices-et-tp" title="Permanent link">⚓︎</a></h2>
+<h2 id="6-et-les-listes-de-python">6. Et les listes de Python ???<a class="headerlink" href="#6-et-les-listes-de-python" title="Permanent link">⚓︎</a></h2>
+<p>Nous connaissons déjà les listes de Python :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">maliste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">42</span><span class="p">]</span>
+</code></pre></div>
+<p>Et nous connaissons aussi (un peu) l'interface de ce type <code>list</code>, notamment avec les méthodes <code>append()</code> ou <code>reverse()</code>.<br />
+Néanmoins, l'implémentation qui a été choisie par les concepteurs de Python de ce type <code>list</code> fait que le celui-ci se rapproche plus d'un <strong>tableau dynamique</strong>. </p>
+<p><strong>Dans un tableau dynamique :</strong></p>
 <ul>
-<li>
-<p>Généralités : télécharger le <a href="../data/TP_Exos_ListesChainees/">carnet Jupyter</a>, à ouvrir sous <a href="https://notebook.basthon.fr/" target="_blank">Basthon</a>.</p>
-</li>
-<li>
-<p>Exercice type Bac :</p>
+<li>le temps d'accès à n'importe quel élément est rapide. Ce temps d'accès est constant quelque soit l'élément : on dit que l'accès est en <span class="arithmatex">\(O(1)\)</span>.</li>
+<li>l'insertion d'un élément au début ou au milieu de la liste est lente : cela oblige à décaler tous les éléments à droite de celui-ci. Le temps pris par l'insertion est proportionnel au nombre d'éléments à déplacer : on dit que l'insertion est en <span class="arithmatex">\(O(n)\)</span>.</li>
+</ul>
+<p><strong>Dans une liste chaînée :</strong></p>
 <ul>
-<li><a href="../data/Structures_ListesChainees_SujetBac_22NSIJ2AN1.pdf">énoncé</a> à faire d'abord sur feuille,</li>
-<li>puis codage dans un <a href="../data/Structures_ListesChainees_SujetBac_22NSIJ2AN1/">carnet Jupyter</a>.</li>
-<li>en cas de blocage : éléments de correction <a href="https://pixees.fr/informatiquelycee/term/suj_bac/index.html">ici</a> (année 2022, sujet 5).</li>
+<li>le temps d'accès à n'importe quel élément peut être lent (proportionnel à la position de l'élément dans la liste). Le temps d'accès est en <span class="arithmatex">\(O(n)\)</span>.<br /></li>
+<li>l'insertion d'un élément à l'intérieur de la liste est rapide : il y a simplement à modifier la valeur du lien de la cellule à gauche de l'endroit d'insertion. L'action d'insérer est donc en <span class="arithmatex">\(O(1)\)</span>. Toutefois, avant d'arriver à l'endroit d'insertion, il faut avoir parcouru toutes les cellules précédentes ! Le temps total d'insertion est donc lui aussi linéaire, en <span class="arithmatex">\(O(n)\)</span>.</li>
 </ul>
-</li>
-</ul>
+<p>Nous nous servirons parfois du type <code>list</code> de Python dans la suite de ce cours, mais il ne faut pas oublier qu'il n'est pas un «vrai» type <code>list</code>.</p>
 
 
 
