@@ -92,7 +92,7 @@ Cette "structure imbriquée", cette disposition en "poupée russe" d'une liste c
 
 En exercice, vous devrez coder en Python cette fonction pour chacun des deux modes de représentation (_pour chaque implémentation_) d'une liste chainée que l'on va proposer ci-dessous.
 
-## 4. Implémentation d'une liste chainée : version impérative, à l'aide de ***tuples***
+## 4. Implémentation d'une liste chainée : version à l'aide de ***tuples***
 
 On peut choisir de représenter un maillon par un couple (type `tuple`) de la forme : `maillon = (valeur, maillon_suivant)`.
 
@@ -105,18 +105,21 @@ La variable qui désigne la liste chainée est alors simplement celle du premier
     Avec cette implémentation d'une liste chainée sous forme de couples, on pourra donc écrire :
 
     ```python 
-    roi5 = ("Louis XVI", ()) # on commence par la fin de la liste chainée
-    roi4 = ("Louis XV", roi5)
-    roi3 = ("Louis XIV", roi4)
-    roi2 = ("Louis XIII", roi3)
-    roi1 = ("Henri IV", roi2)
-    Bourbons = roi1 # on tient la liste chainée par son premier maillon
-    ```
-
-    ou bien de façon plus condensée, mais moins lisible :
-
-    ```python
-    Bourbons = ('Henri IV', ('Louis XIII', ('Louis XIV', ('Louis XV', ('Louis XVI', ())))))
+    Bourbons = ListeChainee()
+    print("La liste chainée des rois de la dynastie des Bourbons est vide au départ : ", Bourbons)  
+    Bourbons = Bourbons.inserer_en_tete("Louis XVI")  
+    print("La liste chainée des rois de la dynastie des Bourbons au premier ajout : ", Bourbons)  
+    Bourbons = Bourbons.inserer_en_tete("Louis XV")
+    Bourbons = Bourbons.inserer_en_tete("Louis XIV")
+    Bourbons = Bourbons.inserer_en_tete("Louis XIII")
+    Bourbons = Bourbons.inserer_en_tete("Henri IV")
+    print("La liste chainée des rois de la dynastie des Bourbons : ", Bourbons)
+    roi = Bourbons.head()
+    print("La tête de la liste chaine : ", roi)
+    queLesLouis = Bourbons.tail()
+    print("Après la tête de la liste chainée, il y a ", queLesLouis)
+    Bourbons = Bourbons.inserer_en_tete("Henri III")
+    print("On a rajouté un roi en tête de la chaine  : ", Bourbons)
     ```
 
     Voici le contenu visuel du _tuple_ `Bourbons` (le `0` indique le contenu de la case d'indice 0 du tuple et le `1` le contenu de la case d'indice 1).
@@ -126,34 +129,28 @@ La variable qui désigne la liste chainée est alors simplement celle du premier
 Avec ce choix d'implémentation d'une liste chainée à l'aide de _tuples_, voici l'implémentation de la classe `Liste` pavec les primitivés suivantes  `creer_liste_vide()`, `inserer_en_tete(lst, donnée)`,  `head(lst)`,  `tail(lst)` et `est_vide(lst)` :
 
 ```python
-class Liste :
+class ListeChainee :
 
-    def __init__(self) :
-        lst = () # tuple vide
+    def __init__(self, data = ()) :
+        # une liste chaînée est représentée par un couple (tête, queue)
+        # où tête est la donnée du premier maillon et queue est la liste chaînée    
+        self.lst = data
 
     def inserer_en_tete(self, donnée ) :
-        return (donnée, lst) # c'est le nouveau premier maillon de la chaine
-
+        # on crée un nouveau couple (donnée, L) et on le renvoie sous forme d'une nouvelle liste chaînée
+        return ListeChainee( (donnée, self.lst) ) 
+    
     def head( self ) :
-        return lst[0] # c'est ce qu'il y a en position 0 du couple L et donc la tête
+        return self.lst[0] # c'est ce qu'il y a en position 0 du couple L et donc la tête
 
     def tail( self ) :
-        return lst[1] # c'est ce qu'il y a en position 1 du couple L et donc la queue
+        return self.lst[1] # c'est ce qu'il y a en position 1 du couple L et donc la queue
 
     def est_vide( self ) :
-        return len( lst ) == 0
-```
-
-Une façon d'utiliser cette implémentation est alors :
-```python
-# exemple d'utilisation (a reprendre POO)
-Bourbons = ('Henri IV', ('Louis XIII', ('Louis XIV', ('Louis XV', ('Louis XVI', ())))))
-roi = head(Bourbons)
-print("La tête de la liste chaine : ", roi)
-queLesLouis = tail(Bourbons)
-print("Après la tête de la liste chainée, il y a ", queLesLouis)
-Bourbons = inserer_en_tete(Bourbons, "Henri III")
-print("On a rajouté un roi en tête de la chaine  : ", Bourbons)
+        return len( self.lst ) == 0
+    
+    def __str__(self) :
+        return str( self.lst )  # pour afficher la liste chainée avec print(L)
 ```
 
 !!! question "Exercice  : une chaine alimentaire"

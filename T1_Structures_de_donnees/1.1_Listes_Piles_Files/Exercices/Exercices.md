@@ -246,7 +246,7 @@
             return prio
         ```
 
-!!! example "Exercice 5 - File"
+!!! example "Exercice 6 - File"
     === "Énoncé"
          Exercice 5 du sujet [Amérique du Nord J1- 2022](./data/22-amerique-nord-j1-ex5.pdf){. target="blank"}
         Relévé de Températures

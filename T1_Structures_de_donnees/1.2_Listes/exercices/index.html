@@ -376,7 +376,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T6_6_Epreuve_pratique/BNS_2025/" class="md-tabs__link">
+        <a href="../../../T6_6_Epreuve_pratique/BNS_2026/" class="md-tabs__link">
           
   
   EP 💻
@@ -2824,95 +2824,32 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../T6_6_Epreuve_pratique/BNS_2026/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sujets 2026
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../T6_6_Epreuve_pratique/BNS_2025/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     BNS 2025
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../T6_6_Epreuve_pratique/BNS_2024/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    (!!! old !!!) BNS 2024
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../T6_6_Epreuve_pratique/BNS_2023/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    (!!! old !!!) BNS 2023
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../T6_6_Epreuve_pratique/BNS_2022/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    (!!! old !!!) BNS 2022
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../T6_6_Epreuve_pratique/BNS_2021/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    (!!! old !!!) BNS 2021
   </span>
   
 
@@ -3418,16 +3355,16 @@ c2 renvoie <code>Lieutenant → Capitaine → Colonel → Géneral</code></p>
 <li>On définit la fonction <code>mystere</code> ainsi :</li>
 </ol>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">mystere</span><span class="p">(</span><span class="n">maListeChainée</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot; Entrée : n est un entier supérieur ou égal à 1 &quot;&quot;&quot;</span>
+    <span class="c1">#Entrée : n est un entier supérieur ou égal à 1</span>
     <span class="n">compteur</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="n">listeProvisoire</span> <span class="o">=</span> <span class="n">maListeChainée</span>
-    <span class="k">while</span> <span class="n">compteur</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">listeProvisoire</span><span class="p">)</span> <span class="p">:</span>
-        <span class="n">listeProvisoire</span> <span class="o">=</span> <span class="n">tail</span><span class="p">(</span><span class="n">listeProvisoire</span><span class="p">)</span>
+    <span class="n">listeProvisoire</span> <span class="o">=</span> <span class="bp">self</span>
+    <span class="k">while</span> <span class="n">compteur</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">listeProvisoire</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="p">:</span>
+        <span class="n">listeProvisoire</span> <span class="o">=</span> <span class="n">listeProvisoire</span><span class="o">.</span><span class="n">tail</span>
         <span class="n">compteur</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">listeProvisoire</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">head</span><span class="p">(</span><span class="n">listeProvisoire</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">listeProvisoire</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="k">return</span> <span class="n">listeProvisoire</span><span class="o">.</span><span class="n">head</span>
     <span class="k">else</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="kc">None</span> 
 </code></pre></div>
 <p>Quelle est la valeur retournée par l'appel <code>mystere(chaineGrades, 3)</code> ? Et par l'appel <code>mystere(chaineGrades, 7)</code> ? </p>
 <details class="question">

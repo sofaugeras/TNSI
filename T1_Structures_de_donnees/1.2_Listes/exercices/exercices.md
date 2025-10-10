@@ -33,16 +33,16 @@ c2 = tail(tail(chaineGrades))
 
 ```python 
 def mystere(maListeChainée, n) :
-    """ Entrée : n est un entier supérieur ou égal à 1 """
+    #Entrée : n est un entier supérieur ou égal à 1
     compteur = 1
-    listeProvisoire = maListeChainée
-    while compteur < n and not est_vide(listeProvisoire) :
-        listeProvisoire = tail(listeProvisoire)
+    listeProvisoire = self
+    while compteur < n and not listeProvisoire.est_vide() :
+        listeProvisoire = listeProvisoire.tail
         compteur += 1
-    if not est_vide(listeProvisoire):
-        return head(listeProvisoire)
+    if not listeProvisoire.est_vide():
+        return listeProvisoire.head
     else :
-        return None
+        return None 
 ```
 
 Quelle est la valeur retournée par l'appel `mystere(chaineGrades, 3)` ? Et par l'appel `mystere(chaineGrades, 7)` ? 

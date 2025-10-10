@@ -436,13 +436,13 @@ Pour être utilisée, une file doit permettre a minima :<br />
         2. f.enfile(3) # f =
         3. f.enfile(5) # f  = 
         4. f.est_vide() # 
-        4. f.enfile(1) # f  = 
-        5. f.defile() # 
+        5. f.enfile(1) # f  = 
         6. f.defile() # 
-        7. f.enfile(9) # 
-        8. f.defile() # 
-        9. f.defile()# 
-        10. f.est_vide() # 
+        7. f.defile() # 
+        8. f.enfile(9) # 
+        9. f.defile() # 
+        10. f.defile()# 
+        11. f.est_vide() # 
         ```
     === "Correction"
 
@@ -451,13 +451,13 @@ Pour être utilisée, une file doit permettre a minima :<br />
         2. f.enfile(3) # f = 3
         3. f.enfile(5) # f  = 5 3
         4. f.est_vide() # False
-        4. f.enfile(1) # f  = 1 5 3
-        5. f.defile() # val renvoyée : 3 , f =  1 5
-        6. f.defile() # val renvoyée : 5 , f =  1 
-        7. f.enfile(9) # f = 9 1
-        8. f.defile() # val renvoyée : 1 , f =  9 
-        9. f.defile()# val renvoyée : 9 , f =  
-        10. f.est_vide() # True
+        5. f.enfile(1) # f  = 1 5 3
+        6. f.defile() # val renvoyée : 3 , f =  1 5
+        7. f.defile() # val renvoyée : 5 , f =  1 
+        8. f.enfile(9) # f = 9 1
+        9. f.defile() # val renvoyée : 1 , f =  9 
+        10. f.defile()# val renvoyée : 9 , f =  
+        11. f.est_vide() # True
         ```
 
 ### 3.2 Implémentation d'une file

@@ -376,7 +376,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T6_6_Epreuve_pratique/BNS_2025/" class="md-tabs__link">
+        <a href="../../../T6_6_Epreuve_pratique/BNS_2026/" class="md-tabs__link">
           
   
   EP 💻
@@ -782,9 +782,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-implementation-dune-liste-chainee-version-imperative-a-laide-de-tuples" class="md-nav__link">
+  <a href="#4-implementation-dune-liste-chainee-version-a-laide-de-tuples" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Implémentation d'une liste chainée : version impérative, à l'aide de tuples
+      4. Implémentation d'une liste chainée : version à l'aide de tuples
     </span>
   </a>
   
@@ -2815,95 +2815,32 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../T6_6_Epreuve_pratique/BNS_2026/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sujets 2026
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../T6_6_Epreuve_pratique/BNS_2025/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     BNS 2025
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../T6_6_Epreuve_pratique/BNS_2024/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    (!!! old !!!) BNS 2024
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../T6_6_Epreuve_pratique/BNS_2023/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    (!!! old !!!) BNS 2023
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../T6_6_Epreuve_pratique/BNS_2022/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    (!!! old !!!) BNS 2022
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../T6_6_Epreuve_pratique/BNS_2021/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    (!!! old !!!) BNS 2021
   </span>
   
 
@@ -3482,54 +3419,56 @@
         RENVOYER 1 + LongueurListeChainée(tail(lst))
 </code></pre></div>
 <p>En exercice, vous devrez coder en Python cette fonction pour chacun des deux modes de représentation (<em>pour chaque implémentation</em>) d'une liste chainée que l'on va proposer ci-dessous.</p>
-<h2 id="4-implementation-dune-liste-chainee-version-imperative-a-laide-de-tuples">4. Implémentation d'une liste chainée : version impérative, à l'aide de <strong><em>tuples</em></strong><a class="headerlink" href="#4-implementation-dune-liste-chainee-version-imperative-a-laide-de-tuples" title="Permanent link">⚓︎</a></h2>
+<h2 id="4-implementation-dune-liste-chainee-version-a-laide-de-tuples">4. Implémentation d'une liste chainée : version à l'aide de <strong><em>tuples</em></strong><a class="headerlink" href="#4-implementation-dune-liste-chainee-version-a-laide-de-tuples" title="Permanent link">⚓︎</a></h2>
 <p>On peut choisir de représenter un maillon par un couple (type <code>tuple</code>) de la forme : <code>maillon = (valeur, maillon_suivant)</code>.</p>
 <p>Quand il n'y a pas de maillon suivant, on indique le couple vide <code>()</code> à la place. </p>
 <p>La variable qui désigne la liste chainée est alors simplement celle du premier maillon : souvenez-vous de l'idée de base "<strong>on tient toute la chaine grâce au premier maillon" !</strong></p>
 <div class="admonition done">
 <p class="admonition-title">Une implémentation de la liste chainée des rois de France</p>
 <p>Avec cette implémentation d'une liste chainée sous forme de couples, on pourra donc écrire :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">roi5</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Louis XVI&quot;</span><span class="p">,</span> <span class="p">())</span> <span class="c1"># on commence par la fin de la liste chainée</span>
-<span class="n">roi4</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Louis XV&quot;</span><span class="p">,</span> <span class="n">roi5</span><span class="p">)</span>
-<span class="n">roi3</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Louis XIV&quot;</span><span class="p">,</span> <span class="n">roi4</span><span class="p">)</span>
-<span class="n">roi2</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Louis XIII&quot;</span><span class="p">,</span> <span class="n">roi3</span><span class="p">)</span>
-<span class="n">roi1</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Henri IV&quot;</span><span class="p">,</span> <span class="n">roi2</span><span class="p">)</span>
-<span class="n">Bourbons</span> <span class="o">=</span> <span class="n">roi1</span> <span class="c1"># on tient la liste chainée par son premier maillon</span>
-</code></pre></div>
-<p>ou bien de façon plus condensée, mais moins lisible :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">Bourbons</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Henri IV&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;Louis XIII&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;Louis XIV&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;Louis XV&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;Louis XVI&#39;</span><span class="p">,</span> <span class="p">())))))</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">Bourbons</span> <span class="o">=</span> <span class="n">ListeChainee</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La liste chainée des rois de la dynastie des Bourbons est vide au départ : &quot;</span><span class="p">,</span> <span class="n">Bourbons</span><span class="p">)</span>  
+<span class="n">Bourbons</span> <span class="o">=</span> <span class="n">Bourbons</span><span class="o">.</span><span class="n">inserer_en_tete</span><span class="p">(</span><span class="s2">&quot;Louis XVI&quot;</span><span class="p">)</span>  
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La liste chainée des rois de la dynastie des Bourbons au premier ajout : &quot;</span><span class="p">,</span> <span class="n">Bourbons</span><span class="p">)</span>  
+<span class="n">Bourbons</span> <span class="o">=</span> <span class="n">Bourbons</span><span class="o">.</span><span class="n">inserer_en_tete</span><span class="p">(</span><span class="s2">&quot;Louis XV&quot;</span><span class="p">)</span>
+<span class="n">Bourbons</span> <span class="o">=</span> <span class="n">Bourbons</span><span class="o">.</span><span class="n">inserer_en_tete</span><span class="p">(</span><span class="s2">&quot;Louis XIV&quot;</span><span class="p">)</span>
+<span class="n">Bourbons</span> <span class="o">=</span> <span class="n">Bourbons</span><span class="o">.</span><span class="n">inserer_en_tete</span><span class="p">(</span><span class="s2">&quot;Louis XIII&quot;</span><span class="p">)</span>
+<span class="n">Bourbons</span> <span class="o">=</span> <span class="n">Bourbons</span><span class="o">.</span><span class="n">inserer_en_tete</span><span class="p">(</span><span class="s2">&quot;Henri IV&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La liste chainée des rois de la dynastie des Bourbons : &quot;</span><span class="p">,</span> <span class="n">Bourbons</span><span class="p">)</span>
+<span class="n">roi</span> <span class="o">=</span> <span class="n">Bourbons</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La tête de la liste chaine : &quot;</span><span class="p">,</span> <span class="n">roi</span><span class="p">)</span>
+<span class="n">queLesLouis</span> <span class="o">=</span> <span class="n">Bourbons</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Après la tête de la liste chainée, il y a &quot;</span><span class="p">,</span> <span class="n">queLesLouis</span><span class="p">)</span>
+<span class="n">Bourbons</span> <span class="o">=</span> <span class="n">Bourbons</span><span class="o">.</span><span class="n">inserer_en_tete</span><span class="p">(</span><span class="s2">&quot;Henri III&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;On a rajouté un roi en tête de la chaine  : &quot;</span><span class="p">,</span> <span class="n">Bourbons</span><span class="p">)</span>
 </code></pre></div>
 <p>Voici le contenu visuel du <em>tuple</em> <code>Bourbons</code> (le <code>0</code> indique le contenu de la case d'indice 0 du tuple et le <code>1</code> le contenu de la case d'indice 1).</p>
 <p><img alt="" class="center" src="../data/schema_chaine_bourbons.png" width="100%" /></p>
 </div>
 <p>Avec ce choix d'implémentation d'une liste chainée à l'aide de <em>tuples</em>, voici l'implémentation de la classe <code>Liste</code> pavec les primitivés suivantes  <code>creer_liste_vide()</code>, <code>inserer_en_tete(lst, donnée)</code>,  <code>head(lst)</code>,  <code>tail(lst)</code> et <code>est_vide(lst)</code> :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Liste</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">ListeChainee</span> <span class="p">:</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="n">lst</span> <span class="o">=</span> <span class="p">()</span> <span class="c1"># tuple vide</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="p">())</span> <span class="p">:</span>
+        <span class="c1"># une liste chaînée est représentée par un couple (tête, queue)</span>
+        <span class="c1"># où tête est la donnée du premier maillon et queue est la liste chaînée    </span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lst</span> <span class="o">=</span> <span class="n">data</span>
 
     <span class="k">def</span> <span class="nf">inserer_en_tete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">donnée</span> <span class="p">)</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="p">(</span><span class="n">donnée</span><span class="p">,</span> <span class="n">lst</span><span class="p">)</span> <span class="c1"># c&#39;est le nouveau premier maillon de la chaine</span>
+        <span class="c1"># on crée un nouveau couple (donnée, L) et on le renvoie sous forme d&#39;une nouvelle liste chaînée</span>
+        <span class="k">return</span> <span class="n">ListeChainee</span><span class="p">(</span> <span class="p">(</span><span class="n">donnée</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">)</span> <span class="p">)</span> 
 
     <span class="k">def</span> <span class="nf">head</span><span class="p">(</span> <span class="bp">self</span> <span class="p">)</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># c&#39;est ce qu&#39;il y a en position 0 du couple L et donc la tête</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># c&#39;est ce qu&#39;il y a en position 0 du couple L et donc la tête</span>
 
     <span class="k">def</span> <span class="nf">tail</span><span class="p">(</span> <span class="bp">self</span> <span class="p">)</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="n">lst</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># c&#39;est ce qu&#39;il y a en position 1 du couple L et donc la queue</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># c&#39;est ce qu&#39;il y a en position 1 du couple L et donc la queue</span>
 
     <span class="k">def</span> <span class="nf">est_vide</span><span class="p">(</span> <span class="bp">self</span> <span class="p">)</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span> <span class="n">lst</span> <span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">lst</span> <span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">lst</span> <span class="p">)</span>  <span class="c1"># pour afficher la liste chainée avec print(L)</span>
 </code></pre></div>
-<p>Une façon d'utiliser cette implémentation est alors :
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># exemple d&#39;utilisation (a reprendre POO)</span>
-<span class="n">Bourbons</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Henri IV&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;Louis XIII&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;Louis XIV&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;Louis XV&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;Louis XVI&#39;</span><span class="p">,</span> <span class="p">())))))</span>
-<span class="n">roi</span> <span class="o">=</span> <span class="n">head</span><span class="p">(</span><span class="n">Bourbons</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La tête de la liste chaine : &quot;</span><span class="p">,</span> <span class="n">roi</span><span class="p">)</span>
-<span class="n">queLesLouis</span> <span class="o">=</span> <span class="n">tail</span><span class="p">(</span><span class="n">Bourbons</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Après la tête de la liste chainée, il y a &quot;</span><span class="p">,</span> <span class="n">queLesLouis</span><span class="p">)</span>
-<span class="n">Bourbons</span> <span class="o">=</span> <span class="n">inserer_en_tete</span><span class="p">(</span><span class="n">Bourbons</span><span class="p">,</span> <span class="s2">&quot;Henri III&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;On a rajouté un roi en tête de la chaine  : &quot;</span><span class="p">,</span> <span class="n">Bourbons</span><span class="p">)</span>
-</code></pre></div></p>
 <div class="admonition question">
 <p class="admonition-title">Exercice  : une chaine alimentaire</p>
 <p>On veut créer en Python la liste chainée qui représente la chaine alimentaire suivante :</p>
