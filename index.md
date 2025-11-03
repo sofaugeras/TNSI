@@ -1,11 +1,11 @@
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: En cours : [Listes chaînées](./T1_Structures_de_donnees/1.2_Listes/cours.md) <br />
+    :arrow_forward: En cours : [Mise au point de programme](./T2_Programmation/2.4_Mise_au_point_de_programme/cours.md)<br />
     👽 : [projet Pyxel](./T8_projet/1_POO/cours.md) 📆 Restitution attendue : Pour le Jeudi 6 novembre 2025<br />
     📆 : Exposé : Mardi 14 octobre de 8h à 10h<br />
     📆 : DS de spécialité : Jeudi 16 octobre 2025 de 10h à 12h en grande permanence.
 
-    :hourglass: A venir : [Mise au point de programme](./T2_Programmation/2.4_Mise_au_point_de_programme/cours.md) <br />
+    :hourglass: A venir : [Base de données](./T4_Bases_de_donnees/sommaire.md) <br />
 
 !!! abstract "Actualités :newspaper:" 
 
@@ -34,14 +34,15 @@
     🚨 Liste des thèmes à traiter dans le programme : [pdf](./data/programmeTNSI.pdf)
 
     - Révision : [Codex](https://codex.forge.apps.education.fr/) <br />
+    - [Récursivité](./T2_Programmation/2.1_Recursivite/cours.md)<br />
     - [Programmation orienté objet](./T2_Programmation/2.2_Programmation_Orientee_Objet/cours.md)<br />
     - [piles / files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md) <br />
+    - [Listes chaînées](./T1_Structures_de_donnees/1.2_Listes/cours.md) 
 
     
 <!--       
 !!! note "*Thèmes traités*"
 
-    - [Base de données](./T4_Bases_de_donnees/sommaire.md)<br />
     - [calculabilité](./T2_Programmation/2.3_Calculabilite_Decidabilite/cours.md)<br />
     - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) <br />
     - [Gestion des processus](./T5_Architecture_materielle/5.2_Gestion_des_processus/cours.md)<br />

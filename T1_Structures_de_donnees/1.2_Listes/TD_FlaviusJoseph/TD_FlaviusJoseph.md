@@ -151,7 +151,7 @@ def josephe(n, k, s):
     @param n : entier >= 1, nombre initial de soldats
     @param k : entier >= 2, saut entre deux meurtres de soldats
     @param s: entier >=0, nombre de soldats survivants
-    @return survivor : liste d'entiers, numéros des sopldats survivants
+    @return survivor : liste d'entiers, numéros des soldats survivants
     """
     #Construction de la liste vide initiale.
     survivor = CelluleL()
