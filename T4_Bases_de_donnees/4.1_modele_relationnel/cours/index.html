@@ -18,7 +18,7 @@
         <link rel="prev" href="../../sommaire/">
       
       
-        <link rel="next" href="../../4.2_mise_en_pratique/tnsi_BD_1/">
+        <link rel="next" href="../exercices/">
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>4.1 Le modèle relationnel - Saint Sauveur TNSI</title>
+        <title>4.1.1 Le modèle relationnel - Saint Sauveur TNSI</title>
       
     
     
@@ -140,7 +140,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              4.1 Le modèle relationnel
+              4.1.1 Le modèle relationnel
             
           </span>
         </div>
@@ -2011,6 +2011,46 @@
   
   
   
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    4.1 modele relationnel
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            4.1 modele relationnel
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
@@ -2023,7 +2063,7 @@
           
   
   <span class="md-ellipsis">
-    4.1 Le modèle relationnel
+    4.1.1 Le modèle relationnel
   </span>
   
 
@@ -2034,7 +2074,7 @@
         
   
   <span class="md-ellipsis">
-    4.1 Le modèle relationnel
+    4.1.1 Le modèle relationnel
   </span>
   
 
@@ -2118,6 +2158,35 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exercices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.1.2 Exercices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -3329,6 +3398,16 @@
 <li>Cours de Olivier Lecluse (licence by SA 2020)</li>
 </ul>
 </div>
+<p>👉 Une petite video pour commencer sur l'histoire des bases de données :</p>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"> <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/x71hy5c?autoplay=1" width="100%" height="100%" allowfullscreen title="Dailymotion Video Player" allow="autoplay"> </iframe> </div>
+
+<!-- lien privé 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iu8z5QtDQhY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+-->
+
+<p>👉 Une autre vidéo importante pour introduire la notion de base de données :</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pqoIBiM2AvE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <h2 id="1-introduction">1. Introduction<a class="headerlink" href="#1-introduction" title="Permanent link">⚓︎</a></h2>
 <p>Le développement des traitements informatiques nécessite la manipulation de données de plus en plus nombreuses. Leur organisation et leur stockage constituent un enjeu essentiel de performance.<br /></p>
 <p>Vous avez vu l'an dernier une manière de stocker et manipuler des données structurées à l'aide de différents formats (dictionnaire, CSV). Ces formats basés essentiellement sur du texte sont faciles à mettre en oeuvre et à utiliser mais ne sont pas adaptés au traitement d'un grand nombre d'informations, en particulier lorsque celles-ci se trouvent réparties dans plusieurs tables ou fichiers : Imaginez une compagnie chargée de l'organisation de la circulation des trains sur le territoire national gérant les réservations et l'exploitation des trains avec des fichiers CSV !<br /></p>
@@ -3356,6 +3435,18 @@
 <p>Comment faire pour construire un bon modèle pour une base de données ? <br />
 Modéliser, c’est définir un monde abstrait qui coïncide avec une partie de l’apparence du réel. <br />
 Bien modéliser, c’est faire que ce monde abstrait soit structuré, performant, et accessible facilement. Dans ce paragraphe, on va se concentrer sur le niveau logique de la représentation des données : le modèle relationnel.</p>
+<div class="admonition info">
+<p class="admonition-title">Bases de données relationnelles</p>
+<p>Les bases de données relationnelles ont été mises au point en 1970 par Edgar Franck Codd, informaticien britannique (1923-2003). Ces bases de données sont basées sur la théorie mathématique des ensembles.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Définition</p>
+<p>Une base de données est un ensemble structuré d'informations.</p>
+<ul>
+<li>Dans le langage courant, elle peut désigner n'importe quelle source importante d'informations (dictionnaires, encyclopédies, etc.)</li>
+<li>En informatique, il s'agit d'informations stockées sous forme de fichiers et organisées de façon à être facilement manipulées.</li>
+</ul>
+</div>
 <h4 id="131-un-exemple">1.3.1 Un exemple<a class="headerlink" href="#131-un-exemple" title="Permanent link">⚓︎</a></h4>
 <p>Un club de sports dispose des données suivantes :</p>
 <table>

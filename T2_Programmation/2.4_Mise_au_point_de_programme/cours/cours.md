@@ -54,10 +54,10 @@ En préambule de ce sujet, quelques éléments de réflexion avec les vidéos su
 
 Ce document présente quelques notions autours de la mise au point des programmes :
 
-·	gestion des erreurs/exceptions
-·	gestion des bugs
-·	tests unitaires
-·	analyse des performances
+- gestion des erreurs/exceptions
+- gestion des bugs
+- tests unitaires
+- analyse des performances
 
 Débutons par un slogan en informatique !
 

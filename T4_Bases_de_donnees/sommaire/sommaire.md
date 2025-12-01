@@ -1,6 +1,5 @@
 !!! note "Crédit"
     @crédits du cours : olivier lécluse, lycée Salvador Allende<br />
-    Exercices de révision de type BAC : [forge NSI](https://e-nsi.forge.aeif.fr/ecrit/tags/#sql)
     
 
 1. [Cours Modéle relationnel](./4.1_modele_relationnel/cours.md)

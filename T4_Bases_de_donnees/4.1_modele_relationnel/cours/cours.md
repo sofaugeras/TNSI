@@ -6,6 +6,18 @@
     - Cours de Frédéric Mandon sous [licence Creative Commons BY NC SA](http://creativecommons.org/licenses/by-nc-sa/3.0/fr/)
     - Cours de Olivier Lecluse (licence by SA 2020)
 
+👉 Une petite video pour commencer sur l'histoire des bases de données :
+
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"> <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/x71hy5c?autoplay=1" width="100%" height="100%" allowfullscreen title="Dailymotion Video Player" allow="autoplay"> </iframe> </div>
+
+ <!-- lien privé 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iu8z5QtDQhY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+-->
+
+👉 Une autre vidéo importante pour introduire la notion de base de données :
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pqoIBiM2AvE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 
 ## 1. Introduction
 
@@ -50,6 +62,17 @@ Les informations et les données sont collectées depuis longtemps par les état
 Comment faire pour construire un bon modèle pour une base de données ? <br />
 Modéliser, c’est définir un monde abstrait qui coïncide avec une partie de l’apparence du réel. <br />
 Bien modéliser, c’est faire que ce monde abstrait soit structuré, performant, et accessible facilement. Dans ce paragraphe, on va se concentrer sur le niveau logique de la représentation des données : le modèle relationnel.
+
+!!! info "Bases de données relationnelles"
+
+    Les bases de données relationnelles ont été mises au point en 1970 par Edgar Franck Codd, informaticien britannique (1923-2003). Ces bases de données sont basées sur la théorie mathématique des ensembles.
+
+!!! info "Définition"
+
+	Une base de données est un ensemble structuré d'informations.
+
+	* Dans le langage courant, elle peut désigner n'importe quelle source importante d'informations (dictionnaires, encyclopédies, etc.)
+	* En informatique, il s'agit d'informations stockées sous forme de fichiers et organisées de façon à être facilement manipulées.
 
  
 ####  1.3.1	Un exemple

@@ -234,7 +234,7 @@ Vous utiliserez la méthode simple avec le mot clef ``assert``, puis la librairi
 ### 3.1 - Classe Rectangle
 
 L’entreprise GEOFORME développe des logiciels et outils de dessin industriel.
-Le développeur avant vous dans le service a commencé à développer une classe Rectangle disponible sur Moodle dans le fichier rectangle.py. Il a principalement défini l’API de la classe et positionné des TODO comme ci-dessous dans chaque méthode :
+Le développeur avant vous dans le service a commencé à développer une classe Rectangle dans le fichier rectangle.py. Il a principalement défini l’API de la classe et positionné des TODO comme ci-dessous dans chaque méthode :
  
 [Télécharger rectangle.py :arrow_down:](./data/rectangle.py){ .md-button .md-button--primary }
 
@@ -248,7 +248,7 @@ Si vous détectez des problèmes potentiels, vous pourrez les signaler en levant
 ```python
 #Un problème potentiel
 if probleme == True :
-    raise Exception("Un problém est survenu")
+    raise Exception("Un probléme est survenu")
 ```
  
 Le responsable du service vous demande de finir de coder cette classe et d’écrire les tests unitaires qui permettront de la valider et de l’intégrer dans le reste du logiciel de dessin industriel.
@@ -257,7 +257,7 @@ Concernant les tests unitaires, vous créerez 2 versions et donc 2 fichiers  :
 -	``tests_rectangle_assert.py ``: version avec le mot-clef **assert**
 -	``tests_rectangle_unittest.py`` : version avec la librairie **unittest**
 
-### 4.2 - Classes du projet Bataille
+### 4.2 - Classes du projet Bataille [facultatif]
 
 Appliquer les tests unitaires sur les classes du projet carte, Jeu de carte, Pile, File.
 

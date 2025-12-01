@@ -1637,9 +1637,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#42-classes-du-projet-bataille" class="md-nav__link">
+  <a href="#42-classes-du-projet-bataille-facultatif" class="md-nav__link">
     <span class="md-ellipsis">
-      4.2 - Classes du projet Bataille
+      4.2 - Classes du projet Bataille [facultatif]
     </span>
   </a>
   
@@ -2151,16 +2151,85 @@
   
   
   
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    4.1 modele relationnel
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            4.1 modele relationnel
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../../T4_Bases_de_donnees/4.1_modele_relationnel/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    4.1 Le modèle relationnel
+    4.1.1 Le modèle relationnel
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T4_Bases_de_donnees/4.1_modele_relationnel/exercices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.1.2 Exercices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3555,7 +3624,7 @@ Mieux vaudrait écrire la fonction verifier() ainsi :</p>
 <p>Vous utiliserez la méthode simple avec le mot clef <code>assert</code>, puis la librairie <code>unittest</code> dans un second temps.</p>
 <h3 id="31-classe-rectangle">3.1 - Classe Rectangle<a class="headerlink" href="#31-classe-rectangle" title="Permanent link">⚓︎</a></h3>
 <p>L’entreprise GEOFORME développe des logiciels et outils de dessin industriel.
-Le développeur avant vous dans le service a commencé à développer une classe Rectangle disponible sur Moodle dans le fichier rectangle.py. Il a principalement défini l’API de la classe et positionné des TODO comme ci-dessous dans chaque méthode :</p>
+Le développeur avant vous dans le service a commencé à développer une classe Rectangle dans le fichier rectangle.py. Il a principalement défini l’API de la classe et positionné des TODO comme ci-dessous dans chaque méthode :</p>
 <p><a class="md-button md-button--primary" href="../data/rectangle/">Télécharger rectangle.py <img alt="⬇️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2b07.svg" title=":arrow_down:" /></a></p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># TODO : compléter le code de la méthode</span>
 <span class="k">pass</span>
@@ -3563,7 +3632,7 @@ Le développeur avant vous dans le service a commencé à développer une classe
 <p>Si vous détectez des problèmes potentiels, vous pourrez les signaler en levant une Exception comme ci-dessous :</p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1">#Un problème potentiel</span>
 <span class="k">if</span> <span class="n">probleme</span> <span class="o">==</span> <span class="kc">True</span> <span class="p">:</span>
-    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Un problém est survenu&quot;</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Un probléme est survenu&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>Le responsable du service vous demande de finir de coder cette classe et d’écrire les tests unitaires qui permettront de la valider et de l’intégrer dans le reste du logiciel de dessin industriel.
 Concernant les tests unitaires, vous créerez 2 versions et donc 2 fichiers  :</p>
@@ -3571,7 +3640,7 @@ Concernant les tests unitaires, vous créerez 2 versions et donc 2 fichiers  :</
 <li><code>tests_rectangle_assert.py</code>: version avec le mot-clef <strong>assert</strong></li>
 <li><code>tests_rectangle_unittest.py</code> : version avec la librairie <strong>unittest</strong></li>
 </ul>
-<h3 id="42-classes-du-projet-bataille">4.2 - Classes du projet Bataille<a class="headerlink" href="#42-classes-du-projet-bataille" title="Permanent link">⚓︎</a></h3>
+<h3 id="42-classes-du-projet-bataille-facultatif">4.2 - Classes du projet Bataille [facultatif]<a class="headerlink" href="#42-classes-du-projet-bataille-facultatif" title="Permanent link">⚓︎</a></h3>
 <p>Appliquer les tests unitaires sur les classes du projet carte, Jeu de carte, Pile, File.</p>
 <h2 id="4-optimisation-et-performances">4 - Optimisation et performances<a class="headerlink" href="#4-optimisation-et-performances" title="Permanent link">⚓︎</a></h2>
 <p>Johnny BEGOOD participe en ce moment à un challenge algorithmique sur une plate-forme en ligne. Pour le problème n°10, il doit écrire un programme qui affiche le 2000ième nombre premier. Il a écrit un code qui fonctionne parfaitement bien (le résultat est 17389), mais la plate-forme a fixé une limite de temps d’exécution (&lt;100ms) pour valider le challenge et son programme est trop lent.</p>
