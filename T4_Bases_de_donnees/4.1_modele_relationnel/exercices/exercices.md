@@ -239,3 +239,67 @@ _D'après un exercice de Frédéric Junier publié sous licence CC BY SA_
     ??? note "Q9"
         On peut chiffrer la clé C avec la clé publique de bob présente sur le serveur. Seul bob pourra dechiffrer avec sa clé privée. La clé C sera alors lisible et utilisable par bob.
     
+## 2024 Métropole Septembre Sujet J1
+
+!!! abstract "2024 Métropole Septembre Sujet J1"
+
+    Exercice 1 du sujet [Métropole septembre J1 2024](./data/24-metropole-sept-j1-ex1.pdf)
+
+    ??? note "Q1"
+        CP peut e4être de type entier ou texte. 
+
+    ??? note "Q2"
+        Le requête renvoie $5$
+
+    ??? note "Q3"
+        L'attribut `téléphone` pourrait servir de clé primaire en cas d'unicité du téléphone sur toutes les occurrences de la table. Ce qui est le cas ici dans l'extrait de la table `Agences`
+
+    ??? note "Q4"
+        **couple_voitures_agences**(^^#id_agence, #id_voiture^^)
+
+    ??? note "Q5"
+        
+        ```sql
+        INSERT INTO couple_voitures_agences(id_agence, id_voiture)
+        VALUES (5,2) ;
+        ```
+
+    ??? note "Q6"
+        
+        ```sql
+        UPDATE couple_voitures_agences
+        SET id_agence = 2
+        WHERE id_voiture = 2 ;
+        ```
+        *Remarque :* dans la clause WHERE on ne pourra pas indiqué WHERE id_agence=5. En effet, une agence peut avoir plusieurs voitures. 
+
+    ??? note "Q7"
+
+        ```sql
+        SELECT Agence, marque, type
+        FROM voitures INNER JOIN couple_voitures_agences
+            ON voitures.id_voiture = couple_voitures_agences.id_voiture
+        INNER JOIN Agences
+            ON couple_voitures_agences.id_agence = agence.id_agence ;
+        ```
+
+    ??? note "Q8"
+        *Note :* On ne peut pas créer une telle fonction car il faut l’id_voiture de la voiture et rien ne nous permet de le récupérer...
+
+        ```python
+        def insert_voiture(liste_attribut, id_agence):
+            requete1 = "INSERT INTO Voitures
+            (marque, modele, kilometrage, nombre_places, type, carburant)
+            VALUES ("+liste_attribut[0]+","+liste_attribut[1]+","+liste_attribut[2]+","+liste_attribut[3]+","+liste_attribut[4]+","+liste_attribut[5]+");"
+            # On suppose que l'id_voiture est renvoyé sinon c'est impossible
+            id_voiture = execute_requete_insert(requete1)
+            requete2 = "INSERT INTO couple_voitures_agences
+            VALUES ("+id_agence+","+id_voiture+");"
+            reponse = execute_requete_insert(requete2)
+            return reponse
+        ```
+
+    ??? note "Q9"
+        ``liste_attribut`` doit voir autant de paramètres que de colonnes de la table ``voiture`` moins une (la clé primaire est auto_incrémenté, elle n'apparait donc pas dans la requete d'INSERT) et id_agence doit exister dans la table ``Agences``
+
+
