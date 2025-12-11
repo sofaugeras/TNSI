@@ -2,7 +2,8 @@
 
 ![image](data/BO.png){: .center}
 
-*préambule : [cours de Première sur l'architecture Von Neumann](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.2_Architecture_Von_Neumann/cours/){. target="_blank"}*
+!!!- info "Crédits"
+    - [Gilles Lassus](https://glassus.github.io/)
 
 ## 1. Loi de Moore et miniaturisation progressive
 
@@ -146,6 +147,14 @@ L'orientation actuelle de l'électronique est donc à la fois :
 
         Citer deux avantages à utiliser ces systèmes sur puces plutôt qu'une architecture classique d'ordinateur.
     === "Correction"
+        @Généré par ChatGPT
+        L'utilisation de systèmes sur puces (SoC) plutôt que des architectures classiques d'ordinateurs présente plusieurs avantages dans le contexte des dispositifs embarqués, tels que ceux intégrés dans les véhicules automobiles. Voici deux avantages majeurs :<br />
+
+        **Taille et Intégration :** Les SoC intègrent plusieurs composants sur une seule puce, ce qui réduit considérablement la taille physique du système. Cette intégration inclut généralement le processeur central, la mémoire, les interfaces d'E/S (Entrées/Sorties) et d'autres composants nécessaires. La compacité résultante est cruciale pour les applications embarquées, où l'espace est souvent limité.<br />
+
+        **Consommation d'Énergie :** Les SoC sont conçus pour être économes en énergie, adaptés aux contraintes d'alimentation des dispositifs embarqués. En intégrant uniquement les composants nécessaires et en optimisant leur fonctionnement, les SoC peuvent fournir des performances adéquates tout en conservant une consommation d'énergie relativement faible. Cela est particulièrement important dans le domaine automobile, où l'efficacité énergétique contribue à la durée de vie de la batterie et à la réduction de la consommation de carburant.<br />
+
+        En résumé, l'utilisation de SoC offre des avantages tels que la **compacité**, **l'intégration de plusieurs composants sur une seule puce**, et une **consommation d'énergie optimisée**, ce qui en fait un choix efficace pour les systèmes embarqués dans les véhicules et d'autres applications similaires.
          
 
 

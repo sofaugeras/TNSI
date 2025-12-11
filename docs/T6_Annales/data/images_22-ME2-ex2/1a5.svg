@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="80" height="320" viewBox="0 -320 80 320">
+<defs>
+</defs>
+<rect x="20" y="-280" width="40" height="240" fill="#ddd" />
+<path d="M20,-40 L20,-280" stroke="#000" stroke-width="2" />
+<path d="M20,-40 L60,-40" stroke="#000" stroke-width="2" />
+<path d="M60,-40 L60,-280" stroke="#000" stroke-width="2" />
+<text x="40.0" y="-44.0" font-size="30" fill="#00f" text-anchor="middle" font-family="Consolas" dy="0em">2</text>
+<text x="40.0" y="-84.0" font-size="30" fill="#f00" text-anchor="middle" font-family="Consolas" dy="0em">4</text>
+<text x="40.0" y="-124.0" font-size="30" fill="#00f" text-anchor="middle" font-family="Consolas" dy="0em">4</text>
+<text x="40.0" y="-164.0" font-size="30" fill="#000" text-anchor="middle" font-family="Consolas" dy="0em"> </text>
+<text x="40.0" y="-204.0" font-size="30" fill="#000" text-anchor="middle" font-family="Consolas" dy="0em"> </text>
+<text x="40.0" y="-244.0" font-size="30" fill="#000" text-anchor="middle" font-family="Consolas" dy="0em"> </text>
+</svg>

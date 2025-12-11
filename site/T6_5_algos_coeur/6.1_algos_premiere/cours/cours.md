@@ -1,10 +1,13 @@
-# Algos de première :brain:
+# algos de première 1️⃣
+
+## Minimum
 
 ??? note "Minimun"
     Fonction qui renvoie le minimum d'une liste de nombres ou None si vide.
 
     ===  "solution itérative 1"
         Parcours élément par élément
+
         ```python
         def minimum(liste):
         if liste != []:
@@ -14,8 +17,10 @@
                     minimum = element
             return minimum
         ```
+
     ===  "solution itérative 2"
         Parcours à l'aide des indices
+
         ```python
             def minimum(liste):
                 if liste != []:
@@ -28,6 +33,7 @@
         ```
     ===  "solution récursive"
         Informatiom : "liste.pop()" supprime le dernier élément de la liste et le renvoie. La liste est, ici, supposée non vide.
+
             ```python
             def minimum(liste):
                 """Renvoie le minimum de la liste d'entiers, supposée non vide
@@ -59,10 +65,13 @@
                         return min1
                     else:
                         return min2
-     
             ```
+
+## Maximum
+
 ??? note "Maximum"
     Fonction qui renvoie le maximum d'une liste de nombres ou None si vide.
+
     ```python
     def maximum(liste):
         if liste != []:
@@ -73,8 +82,11 @@
             return maximum
     ```
 
+## Indice du minimum et du maximum
+
 ??? note "Indice du minimum et du maximum"
     Fonction qui renvoie un tuple (indice du minimum, indice du maximum) d'une liste de nombres ou None si la liste est vide.
+
     ```python
     def indice_mini_maxi(liste):
         if liste != []:
@@ -87,8 +99,11 @@
             return (indicice_minimum, indice_maximum)
     ```
 
+## Chaîne à l'envers
+
 ??? note "A l'envers"
     Fonction qui renvoie une chaîne de caractère à l'envers.
+
     ```python
     def renverse(chaine):
         """Renvoie la chaîne de caractère renversée, le dernier caractère devient le premier, l'avant dernier
@@ -111,8 +126,11 @@
             renverse = caractere + renverse
         return renverse
     ```
+## Nombre d'occurrence
+
 ??? note "Compter le nombre d'occurrences"
     Fonction qui compte le nombre d'occurrences d'un caractère dans une chaîne.
+
     ```python
     def nombre_occurrences(chaine, carac):
         '''Renvoie le nombre d'occurrences de carac dans chaine
@@ -136,10 +154,13 @@
         return compteur
     ```
 
+## Indice de la première occurrence
+
 ??? note "Indice de la première occurrence"
     Fonction qui renvoie l'indice de la première occurrence d'un caractère dans une chaîne. Retourne -1 si la valeur n'est pas dans la chaîne.
     === "solution 1"
         Avec une boucle  ```for```
+
             ```python
             def indice(car, string):
             """Renvoie l'indice de la première occurrence du caractère car dans la chaine string. 
@@ -165,6 +186,7 @@
             ```
     === "solution 2"
         Avec une boucle ```while```
+
             ```python
             def indice(car, string):
                 """Renvoie l'indice de la première occurrence du caractère car dans la chaine string. Renvoie -1 si car n'est pas dans string.
@@ -190,171 +212,11 @@
                 return -1
             ```
 
-??? note "Tri par insertion"
-    Fonction qui prend comme paramètre une liste et trie cette liste en place (c'est-à-dire que la liste initiale est modifiée) en utilisant l'algorithme de tri par insertion. Plusieurs versions proposées .
-    === "Version1"
-        Tri en place, itératif
-            ```python
-            def insere(donnees, indice):
-                """insere la donnee d'indice indice à sa bonne place dans la liste formée des
-                éléments d'indice inférieur ou égaux à indice.
-                Le début de la liste est sensé être trié.
-                LA MODIFICATION SE FAIT EN PLACE
-                
-                param :
-                    donnees : list
-                    indice : int
-                    
-                exemple :
-                >>> a = [3, 9, 5, 6, 4, 1]
-                >>> insere(a, 2)
-                >>> a
-                [3, 5, 9, 6, 4, 1]
-                
-                """
-                while indice>0 and donnees[indice]<donnees[indice-1]:
-                    donnees[indice-1], donnees[indice] = donnees[indice], donnees[indice-1]
-                    indice = indice -1
-
-            def tri_insertion(donnees):
-                """tri la liste données en place, avec l'algorithme de tri par insertion
-                LE TRI SE FAIT EN PLACE.
-                
-                param :
-                    donnees : list
-                    
-                exemple :
-                >>> liste3 = [ "ruby", "python", "logo", "elan", "rust"]
-                >>> tri_insertion(liste3)
-                >>> liste3
-                ['elan', 'logo', 'python', 'ruby', 'rust']
-                
-                """
-                for ind in range(len(donnees)):
-                    insere(donnees,ind)
-            ```
-    === "Version 2"
-        Tri itératif qui renvoie une nouvelle liste
-        ```python
-        def insere2(liste, valeur):
-            """Insère la valeur dans la liste, supposée triée. la modification est en place
-
-            param :
-                liste : list : liste de nombres
-                valeur : float/int
-                return :
-                    list : nouvelle liste avec la valeur insérée
-
-            Exemple:
-                >>> liste1 = [3,5.2,6]
-                >>> insere2(liste1, 4)
-                >>> liste1
-                [3, 4, 5.2, 6]
-                """
-            liste.append(valeur)
-            indice = len(liste)-1
-            while indice>0 and liste[indice-1] > liste[indice]:
-                liste[indice],liste[indice-1] = liste[indice-1],liste[indice]
-                indice = indice - 1
-                
-
-        def tri_insertion2(liste):
-            """renvoie une nouvelle liste qui est une version triée de liste
-
-             param :
-                    liste : list
-            return :
-                    liste
-
-            Exemple :
-                >>> tri_insertion2([8,2,6,5])
-                [2, 5, 6, 8]
-                """
-            liste_triee = []
-            for element in liste:
-                insere2(liste_triee, element)
-            return liste_triee
-        ```
-
-    === "Version 3"
-        Tri récursif qui renvoie une nouvelle liste
-        ```python
-        def insere3(liste, valeur):
-        """Insère la valeur dans la liste, supposée triée
-
-            param :
-                liste : list : liste de nombres
-                   valeur : float/int
-            return :
-                 list : nouvelle liste avec la valeur insérée
-
-            Exemple:
-                >>> liste1 = [3,5.2,6]
-                >>> liste2 = insere3(liste1, 4)
-                >>> liste2
-                [3, 4, 5.2, 6]
-        """
-            if liste == []:
-                return [valeur]
-            elif liste[-1]>valeur:
-                return insere3(liste[:-1],valeur) + [liste[-1]]
-            else:
-                return liste + [valeur]
-
-         def tri_recursif_insertion3(liste):
-        """renvoie une nouvelle liste qui est une version triée de liste. Méthode récursive.
-
-            param :
-                liste : list
-            return :
-                liste
-
-            Exemple :
-            >>> tri_recursif_insertion3([8,2,6,5])
-                [2, 5, 6, 8]
-         """
-            if liste == []:
-                return []
-            else:
-                return insere3(tri_recursif_insertion3(liste[:-1]),liste[-1])
-
-        ```
-??? note "Tri par sélection"
-    Fonction qui renvoie la liste triée par ordre croissant.
-    ```python
-    def index_min(donnees, indice):
-            """retourne l'indice du plus petit élément d'une liste, à partir d'un indice donné
-
-            Exemple:
-            
-            >>> index_min(["curl", "bash", "python", "cilk", "nesl"], 0)
-            1
-            >>> index_min(["curl", "bash", "python", "cilk", "nesl"], 2)
-            3
-            
-            """
-        pos = indice
-        for i in range(indice, len(donnees)):
-            if donnees[i]<donnees[pos] :
-                pos = i
-        return pos
-
-    def tri_selection(donnees):
-            """tri la liste donnees en place, avec l'algorithme de tri par sélection
-
-            >>> liste3 = [ "ruby", "python", "logo", "elan", "rust"]
-            >>> tri_selection(liste3)
-            >>> liste3
-            ['elan', 'logo', 'python', 'ruby', 'rust']
-            
-            """
-        for i in range(len(donnees)-1):
-            j = index_min(donnees,i)
-            donnees[i], donnees[j] = donnees[j], donnees[i]
-    ```
+## Recherche dichotomique
 
 ??? note "Recherche dichotomique"
     Fonction qui renvoie la position d'un élément dans une liste, ou False si l'élément ne s'y trouve pas. Le principe de dichotomie est utilisé.
+
     ```python
     def recherche_dicho(val, table):
         '''
@@ -386,10 +248,14 @@
                 f = m -1
         return False
     ```
+
+## Conversion décimal vers binaire
+
 ??? note "Conversion décimal vers binaire"
     Fonction qui à partir d'un entier sous la forme décimal renvoie sa version binaire
 
     === "version 1"
+
         ```python
         def conv_dec_bin(entier):
             """ cette fonction permet de convertir un nombre entier en binaire
@@ -423,6 +289,7 @@
         ```
 
     === "version 2"
+
         ```python
         def conv_dec_bin(entier):
             """ cette fonction permet de convertir un nombre entier en binaire
@@ -460,10 +327,13 @@
             return reponse
         ```
 
+## Conversion binaire vers décimal
+
 ??? note "Conversion binaire vers décimal"
     Fonction qui à partir d'un nombre écrit sous forme binaire renvoie sa forme décimal
 
     === "version 1"
+
         ```python
         def conv_bin_dec(binaire):
             """ cette fonction permet de convertir un nombre en binaire en décimal.
@@ -491,6 +361,7 @@
             return resultat
         ```
     === "version 2"
+
         ```python
         def conv_bin_dec(binaire):
             """ cette fonction permet de convertir un nombre en binaire en décimal.
@@ -518,8 +389,12 @@
                 resultat = resultat + int(binaire[indice])*2**(longueur - 1- indice)
             return resultat
         ```
+
+## Moyenne d'une liste de nombres
+
 ??? note "Moyenne d'une liste de nombres"
     Fonction qui renvoie la moyenne d'une liste de nombres et None si la liste est vide
+    
     ```python
     def moyenne(liste):
         """renvoie la valeur moyenne d'une liste de nombres et None en cas de liste vide.

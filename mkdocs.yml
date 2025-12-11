@@ -7,17 +7,10 @@ site_description: Site de cours Terminale NSI
 site_author: "Sophie FAUGERAS" 
 docs_dir: docs
 
-### Structure de navigation 
-#nav:
-#    - Accueil: index.md
-#    - ressources: aide-mémoire.md
-#    - T1 Structure de données: Consignes.md
-#    - Prérequis: prérequis.md
-
-   
+  
 theme:
   name: material
-  
+  #custom_dir: docs/my_theme_customizations
   custom_dir: docs/overrides #
   font: false
   language: fr
@@ -27,7 +20,6 @@ theme:
     repo : fontawesome/brands/github
     admonition:
       note: fontawesome/solid/pen-to-square
-
   features:
     - navigation.instant
     - navigation.tabs
@@ -35,7 +27,8 @@ theme:
     - navigation.top
     - toc.integrate
     - header.autohide
-    - content.code.annotate 
+    - content.code.annotate
+    - content.code.copy
 
   palette:
     # Light mode
@@ -62,6 +55,9 @@ markdown_extensions:
   - abbr
   - admonition
   - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: false
+      clickable_checkbox: true    #   et cliquables.    
   - attr_list
   - footnotes
   - pymdownx.caret
@@ -69,25 +65,42 @@ markdown_extensions:
   - pymdownx.tilde
   - pymdownx.snippets
   - pymdownx.details
-  - pymdownx.highlight:
-      linenums: None
-  - pymdownx.tasklist:
-      custom_checkbox: false
+  - pymdownx.highlight:           # Coloration syntaxique du code
+        linenums: None
+        auto_title: true
+        auto_title_map:
+              - pymdownx.highlight:           # Coloration syntaxique du code
+        linenums: None
+        auto_title: true
+        pygments_lang_class: true
+        auto_title_map:
+            "Text Only": "📋 Texte"
+            "Python": "🐍 Python"
+            "Python Console Session": "🐍 Python"
+            "JavaScript": "🍵 JavaScript"
+            "SQL": "🐬 SQL"
+            "PHP": "🐘 PHP"
+            "Prompt": "💻 Console"
+            "Bash": "💻 Console"
+            "E-mail": "📥 Entrée"
+            "Text Output": "📤 Sortie"
+            "mermaid": "🧜‍♂️ Diagramme"
   - pymdownx.inlinehilite
-  - pymdownx.superfences          # Imbrication de blocs
+  - pymdownx.superfences:
+      custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:mermaid2.fence_mermaid
   - pymdownx.keys
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
   - pymdownx.arithmatex:
       generic: true
-  - pymdownx.tasklist:
-      custom_checkbox:    false   #   avec cases d'origine
-      clickable_checkbox: true    #   et cliquables.
+  
   - toc:
       permalink: ⚓︎
       toc_depth: 3
@@ -103,19 +116,24 @@ markdown_extensions:
       edge_color: 789ABC       # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
       edge_fontcolor: 789ABC
 
-
-
 plugins:
   - search
-  - git-revision-date-localized:
-      enable_creation_date: false
-      locale: fr
-  - awesome-pages:
-      collapse_single_pages: false
-  #- macros
+#  - git-revision-date-localized:
+#      enable_creation_date: false
+#      locale: fr
+  - mermaid2:
+      javascript: https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs
   - mkdocs-jupyter:
       include_source: True
   #- page-to-pdf
+  # - exclude-search:           # exclusion de pages de la recherche
+  #     exclude:
+  #       - T*/*/*/*.ipynb         # les notebooks
+  #       # - N*/*/*/*.py         # Les corrigés
+  #       # - xtra/*.md           # inutile de chercher cela
+  - awesome-pages:
+        collapse_single_pages: true
+  - macros
 
 extra:
   analytics: 
@@ -127,6 +145,14 @@ extra:
       link: mailto:sophie.faugeras@ac-rennes.fr
       name: Écrire à l'auteur
 
+    - icon : fontawesome/brands/linkedin
+      link : https://www.linkedin.com/in/sophie-faugeras-77b4b6124/
+      name : profil Linkedln
+
+    - icon : fontawesome/brands/twitter
+      link : https://twitter.com/sfaugeras_info
+      name : Mon twitter
+
     - icon: fontawesome/brands/github
       link: https://github.com/sofaugeras/TNSI
       name: Dépôt git
@@ -136,13 +162,13 @@ extra:
       name: Lycée Saint Sauveur - Redon
 
 extra_javascript:
-  - xtra/javascripts/interpreter.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js
   - https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js
-  - https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js
-  - xtra/javascripts/mermaid.js
+  - javascript/mathjax.js
+  - javascript/interpreter.js
+#  - javascript/ide.js
 
 
 extra_css:
@@ -150,4 +176,8 @@ extra_css:
   - xtra/stylesheets/pyoditeur.css
 
 
-copyright:  CC BY-SA / S.Faugeras
+copyright:  CC BY-SA / S.Faugeras avec l'apport majeur de Gilles Lassus (CC BY-SA)
+
+validation:
+  absolute_links: ignore
+  unrecognized_links: ignore

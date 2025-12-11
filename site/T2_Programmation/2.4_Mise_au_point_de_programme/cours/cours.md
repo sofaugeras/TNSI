@@ -1,465 +1,538 @@
-# Bonnes pratiques 
+# tests & bugs
+
+!!! note "Source"
+
+    Date : 15/10/2020 - Ensemble Scolaire Niort<br />
+    - Antoine MAROT <br />
+    - David SALLÉ <br />
+    - Julien SIMONNEAU 
+
+    Ce document est mis à disposition selon les termes de la licence ``Creative Commons BY-NC-SA 4.0``
  
-![](data/pep8.webp){: .center width=70%}
+??? question "Table des matières"
 
-*extrait du site https://realpython.com/python-pep8/*
+    Table des matières
+    ```text
+    1 - Introduction	3
+        1.1 - Plan	3
+        1.2 - Un peu d’histoire	4
+        1.3 - Vue d’ensemble	5
+        1.4 - Conseils	5
+        1.5 - Erreur avec l’interpréteur Python	6
+    2 - Les exceptions	7
+        2.1 - Utiliser try/except	8
+        2.2 - Différenciation	8
+        2.3 - Et quoi qu’il arrive...	9
+        2.4 - Lever soi même une Exception	9
+    3 - Bogues et débogueur	10
+        3.1 - Causes des bogues	10
+        3.2 - Outil de débogage	10
+        3.3 - Source d’information	11
+    4 - Tests unitaires	12
+        4.1 - Introduction 	12
+            4.1.1 - Avantages/inconvénients	12
+            4.1.2 - Outils	12
+        4.2 - Mise en œuvre	13
+            4.2.1 - Fonctionnement 	13
+            4.2.2 - Module calculs.py 	13
+            4.2.3 - Tests unitaires avec les assertions	14
+            4.2.4 - Tests unitaires avec la librairie unittest	15
+    5 - Optimisation des performances	18
+        5.1 - Principe	18
+        5.2 - Chronométrage simple	18
+        5.3 - Profilage	18
+    ```
 
-## 1. Conventions syntaxiques
-La programmation est un art délicat : un simple caractère en trop peut provoquer une erreur pour le code tout entier (penser à un innocent caractère d'espace en début de ligne dans un code Python).
+## 1 - Introduction
 
-![image](data/extraspace.jpg){: .center width=40%}
+En préambule de ce sujet, quelques éléments de réflexion avec les vidéos suivantes.
 
-Mais même lorsqu'un code s'exécute sans erreur, il ne faut pas négliger l'aspect purement «esthétique» de celui-ci : il est nécessaire de respecter autant que possible des conventions typographiques, qui vont standardiser le code et le rendre ainsi plus lisible.
+- [Les bugs en informatique | Gérard Berry](https://www.youtube.com/watch?v=qE0QFxNiQLI)
+- [Comment rendre l'informatique plus sûre](https://www.youtube.com/watch?v=PZLvXESq82c)
 
-Ainsi pour chaque langage, il existe une «bible» de bonnes pratiques de présentation du code, qui visent à l'uniformiser. Pour Python, cette référence s'appelle la Python Enhancement Proposal 8, plus connue sous le nom de PEP8. 
+### 1.1 - Plan
 
-En voici quelques extraits :
+Ce document présente quelques notions autours de la mise au point des programmes :
 
-### Les espaces
+- gestion des erreurs/exceptions
+- gestion des bugs
+- tests unitaires
+- analyse des performances
 
-![image](data/standards.jpg){: .center width=40%}
+Débutons par un slogan en informatique !
+
+![feature](./data/itsnotabug.jpg){: width=20% .center}
+
+### 1.2 - Un peu d’histoire
+
+L’histoire de l’informatique est truffée d’inventions et de grandes réalisations, mais aussi parfois de désastres industriels. Les conséquences peuvent aller de simples erreurs au plantage complet du système en passant par les failles de sécurité.
+
+Quelques exemples de bugs ou bogues tristement connus :
+
+|Quand	|Quoi	|Conséquence|
+|:--:|:--:|:--:|
+|1947	|Un insecte (bug in english) est venu créer un faux contact entre 2 relais électromécaniques de l’ordinateur Harvard Mark II. ![](./data/1947.jpg){: width=20% .center}|Une simple erreur|
+|1991|	Une erreur d’arrondi pour passer d’un entier à un réel sur 24 bits a engendré une erreur de 600m dans les calculs de trajectoire du système anti-missile Patriot.![](./data/1991.png){: width=20% .center}|	Mort de 28 soldats américains|
+|1996|	Un dépassement d’entier dans le programme d’Ariane5 qui avait été en partie copié/collé d’Ariane4. Mais les variables utilisées ne convenaient plus en taille pour la puissance d’Ariane 5	![](./data/1996.jpg){: width=20% .center}|Explosion de la fusée|
+|1997	|Quelques jours après son arrivée sur Mars, le robot Sojourner de la mission Pathfinder se bloque à cause d’une inversion de priorité dans ses tâches. Le problème sera corrigé à distance depuis la Terre![](./data/1997.jpg){: width=20% .center}|Retard dans la mission|
+|2014	|Le célèbre clip Gangnam Style provoque un débordement d’entier dans le compteur de vue de la plateforme Youtube![](./data/2014.png){: width=30% .center} |	Rien de particulier|
+|2038	|Un dépassement d’entier dans la gestion de la date. Y2038 en écho à Y2000 (bug de l’an 2000) appaîtra peut-être dans les systèmes 32 bits qui compte les secondes à partir du 1er janvier 1970 pour gérer la date du système. ![](./data/2038.png){: width=30% .center}  |	L’année deviendra 1901 au lieu de 2038|
+
+D’autres exemples ici : [Wikipedia List_of_software_bugs](https://en.wikipedia.org/wiki/List_of_software_bugs)
+
+### 1.3 - Vue d’ensemble
+
+Lorsqu’on programme en Python (et dans les autres langages également), on est rapidement confronté à 3 types d’erreurs.
+
+|Type d’erreur|	Description|	Difficulté à résoudre|
+|:--:|:--:|:--:|
+|Syntaxe liée au langage	|Le code source comporte des erreurs et l’interpréteur n’arrive pas à l’exécuter. Il vous indique en général l'emplacement de l'erreur. <br /> <font color='green'>*Solution : se référer au message de l’interpréteur Python et vérifier la syntaxe*</font>	|Facile|
+|Valeur ou action inappropriée|	Le programme se lance bien, mais dans certaines conditions “plante”.<br /> <font color='green'>*Solution : se référer au message d’erreur de l’interpréteur Python et vérifier les valeurs notamment à l’aide d’un débogueur*</font>|	Difficile|
+|Conception de l’algorithme|	Le programme se lance bien, ne plante pas, mais ne produit pas le résultat escompté <br /><font color='green'> *Solution : revoir l’algorithme utilisé et les étapes de l’exécution du programme avec un débogueur*	</font>|Très difficile|
 
 
-▶ Il faut mettre une espace (oui, en typographie, on dit «une» espace et non pas «un» espace) avant et après chaque opérateur de comparaison, d'affectation, ou mathématique  (```=, ==, >, +, *, ...``` )
+### 1.4 - Conseils
+
+Conseils lorsqu’on créé un script Python :
+
+-	corriger les erreurs de syntaxe
+-	anticiper les erreurs de saisie de l’utilisateur, imaginer le pire
+-	tester unitairement (entrées => sorties, cas limite avec 0, “”, tous les cas de figure if/else)
+-	vérifier les boucles while et leurs conditions de sortie (invariant)
+-	contrôler les erreurs avec try/except
+-	se méfier des calculs et comparaisons avec les nombres flottants
+
+### 1.5 - Erreur avec l’interpréteur Python
+
+
+Anatomie d’un message d’erreur de l’interpréteur Python :
+
+![interpréeteur](./data/interpréteur.png){: width=80% .center}
+
+A noter que quand on utilise des fonctions qui appellent d’autres fonctions, le message d’erreur retrace tout le parcours et il faut commencer à lire par la fin.
+
+Quelques erreurs courantes liées au langage Python :
+
+|Type|	Description|exemple|
+|:--:|:--|:--|
+|**SyntaxError**|Erreur de syntaxe | -	confusion entre ``=`` et ``==``<br/> -	oubli d’une parenthèse ``(`` ou ``)``<br/>-	oubli d’un délimiteur de string ``“`` ou ``‘`` ou ``“””``<br/>-	oubli du ``:`` annonçant un bloc|
+|**NameError**|Erreur sur le nom d’une variable ou fonction|- mauvais nom<br/>- déclaration au mauvais endroit<br/>- oubli d’import d’un module|
+|**IndentationError**|Erreur d’indentation|- mauvais alignement<br/>- mélange d’espaces et tabulations (Python3)|
+|**TypeError**|	Erreur sur les types|- addition impossible entre ``int`` et ``string``<br/>- arrondi d’un ``string``|
+|**AssertionError**	|Erreur issue d’un test unitaire||
+|**ZeroDivisionError**	|Erreur de division par 0||
+|**KeyError**	|Erreur sur un dictionnaire||
+|**IOError**|	Erreur lors d’un entrée/sortie (fichier...)||
+
+## 2 - Les exceptions
+
+Toutes les erreurs du tableau précédent sont en fait des exceptions qui héritent de la même classe mère ``Exception``.
+
+![arbre des exceptions](./data/pileException.jpg){: width=80% .center}
+ 
+Lorsque Python lève une exception telle que celles présentes dans le tableau, le programme est stoppé immédiatement et un message d’erreur est affiché pour prévenir l’utilisateur de la cause du problème.
+
+Prenons l’exemple de ce programme qui saisit un nombre et calcule son inverse :
+```python
+#version normale
+x = int(input("Saisir x : "))
+print("1/x =", 1/x)
+```
+Selon ce que va saisir l’utilisateur, le résultat sera très différent. En cas de mauvaise saisie, le programme stoppe.
+
+|Saisie d’un entier<br />``x=4``	|Saisie d’un string<br />``x=”2”``|Saisie d’un entier<br />``x = 0``|
+||||
+|Saisir x : 4<br />1/x = 0.25|Traceback (...):  File "test.py", line 1...<br />ValueError: invalid literal for int() with base 10: '"2"'|Traceback (...):  File "/test.py", line 2...<br />ZeroDivisionError: division by zero|
+
+### 2.1 - Utiliser try/except
+
+Cependant parfois, il est plus intéressant de **capturer**/**trapper**  cette exception de manière à informer l’utilisateur du problème et lui proposer une alternative, plutôt que de stopper brutalement le programme.
+
+Pour cela on utilisera les mot-clefs ``try`` et ``except`` :
+
+-	``try`` va débuter un bloc d’instructions à risque, susceptible de générer une erreur
+-	``except`` va intercepter l’erreur pour éviter l’arrêt brutal du programme et proposer un traitement du problème, souvent un affichage
+
+Le modèle est celui-ci :
 
 ```python
-# PAS BIEN 
-a=3
+try:
+    # Code à risque
+except Exception as erreur:
+    # Traitement de l'erreur (affichage...)
+```
+Pour le programme qui calcule l’inverse cela donnerait :
+```python
+# Version avec capture simple et affichage de l'erreur
+try:
+    x = int(input("Saisir x : "))
+    print("1/x =", 1 / x)
+except Exception as erreur:
+    print("Erreur :", erreur)
+```
+### 2.2 - Différenciation
 
-# BIEN 
-a = 3
+Si l’on souhaite différencier le traitement des erreurs, il faudra ajouter plusieurs blocs except, typiquement un par type d’erreur
+```python
+# Version avec capture et traitement différenciés
+try:
+    x = int(input("Saisir x : "))
+    print("1/x =", 1 / x)
+except ValueError as erreur:
+    print("Erreur de saisie :", erreur)
+except ZeroDivisionError as erreur:
+    print("Impossible de diviser par zéro :", erreur)
+```
+### 2.3 - Et quoi qu’il arrive...
+
+On peut également ajouter un bloc d’instructions qui sera exécuté quoiqu’il arrive : erreur ou comportement normal. Pour cela on ajoutera à la fin le mot clef ``finally`` :
+```python
+# Version avec capture et traitement différenciés et
+# quoiqu'il arrive un message de fin
+try:
+    x = int(input("Saisir x : "))
+    print("1/x =", 1 / x)
+except ValueError as erreur:
+    print("Erreur de saisie :", erreur)
+except ZeroDivisionError as erreur:
+    print("Impossible de diviser par zéro :", erreur)
+finally:
+    print("Merci d'avoir utiliser ce calculateur")
 ```
 
-```python
-# PAS BIEN
-if x>3:
-    print("ok")
+### 2.4 - Lever soi même une Exception
 
-# BIEN
-if x > 3:
-    print("ok")
+Quand on écrit son propre module Python avec ses fonctions, ses classes, ses méthodes, on a souvent besoin de lever nous même des exceptions sans attendre l’interpréteur Python.
+
+A l’aide du mot-clef ``raise``, on peut lever une exception à tout moment.
+```python
+# Levée d'exception
+x = int(input("Saisir x : "))
+if x == 13:
+    raise ValueError("Désolé, je suis superstitieux")
+print("1/x =", 1/x)
+```
+Celle-ci sera interceptée par un bloc ``try/except ``ou pas. Il est également possible de définir ses propres exceptions personnalisées en la rattachant à la classe ``Exception`` via l’héritage.
+
+```python
+# Définition d'une Exception personnalisée
+class SuperstitionError(Exception):
+    """Classe représentation l'erreur liée au nombre 13"""
+    pass
+
+# Levée d'une exception personnalisée
+x = int(input("Saisir x : "))
+if x == 13:
+    raise SuperstitionError("Désolé, je suis superstitieux")
+print("1/x =", 1/x)
 ```
 
-▶ Pour les opérateurs mathématiques, on essaie de reconstituer les groupes de priorité (lorsqu'il y en a) :
+## 3 - Bogues et débogueur
 
+### 3.1 - Causes des bogues
+
+Dans la suite de ce chapitre, on tentera de présenter sommairement les causes les plus courantes des bogues dans les programmes.
+
+-	Problème de typage
+-	Effet de bord non désiré
+-	Débordement dans un tableau
+-	Instruction conditionnelle non exhaustive
+-	Mauvais choix d’inégalité
+-	Calcul/comparaison de nombres flottants
+-	Débordement d’entier
+-	Mauvaise indentation
+
+### 3.2 - Outil de débogage
+
+Le **débogueur** est un outil intégré dans la majorité des IDE (++control+arrow-up+y++ dans VSCode). Il permet de fixer des points d’arrêt (breakpoints) et de consulter l’état des variables (watches). On peut ensuite avancer pas à pas en mode :
+
+- ++f9++ : Ajouter/Supprimer un point d'arrêt (breakpoint)
+- ++f5++ : Démarrer/Continuer le débogage
+- ++f11++ : Entrer dans une fonction (Step Into)
+- ++arrow-up+f11++ : Sortir d'une fonction (Step Out)
+- ++f10++ : Passer à la ligne suivante (Step Over)
+- ++arrow-up+f5++ : Arrêter le débogage
+- ++control+arrow-up+f5++ : Redémarrer le débogage
+
+#### Exemple d’utilisation dans VSCode
+
+**Etape 1 :** on fixe un point d’arrêt dans le programme dans la zone à déboguer (Affichage > Console de débogage ou icone à gauche)
+![etape 1](./data/E1.png){: width=50% .center}
+**Etape 2 :** on lance l’exécution du programme en mode debug (++f5++) et on visualise l’état des variables
+ Soit dans la zone “watches”, Soit directement dans le code (survol des variables avec la souris)
+![Etape 2](./data/E2.png){: width=50% .center}
+**Etape 3 :** on avance pas à pas avec la touche ++f10++
+![Etape 3](./data/E3.png){: width=50% .center}
+**Etape 4 :** on reboucle à l’étape 4 jusqu’à trouver l’origine du bogue
+
+### 3.3 - Source d’information
+
+Où trouver de l’aide quand on a un bogue :
+
+-	[https://stackoverflow.com/](https://stackoverflow.com/)
+-	[https://github.com/](https://github.com/)
+
+Les types de vulnérabilités les plus courantes liées à des bogues :
+
+-	[https://www.cvedetails.com/vulnerabilities-by-types.php](https://www.cvedetails.com/vulnerabilities-by-types.php)
+-	[https://owasp.org/www-project-top-ten/](https://owasp.org/www-project-top-ten/)
+
+
+##  4 - Tests unitaires
+
+### 4.1 - Introduction
+
+Les tests unitaires consistent à vérifier le bon fonctionnement d’une portion de code informatique, typiquement une fonction.
+Ils s’inscrivent dans une démarche plus générale de tests qui consiste à valider qu’un produit répond bien au besoin exprimé en amont. Pyramide des tests :
+![pyramide des tests](./data/test.png){: width=50% .center}
+
+Certaines méthodes de développement comme **TDD** (Test Driven Development) propose même d’écrire les tests avant le code source.
+
+![TDD](./data/TDD.png){: width=50% .center}
+
+#### 4.1.1 - Avantages/inconvénients
+
+**:white_check_mark: Avantages :**  
+
+-	s’assurer du bon fonctionnement
+-	trouver des bugs le plus tôt possible
+-	garantir la non régression du code après la correction d’un bug
+-	servir de documentation et d’exemple en complément de l’API
+
+**:x: Inconvénients :**	cela peut être long et fastidieux à réaliser
+
+#### 4.1.2 - Outils
+
+Plusieurs outils sont disponibles dont certains seront présentés en détails dans la suite du document :
+
+-	``assert`` : mot clef Python
+-	``unittest`` : librairie standard de tests unitaires
+-	``doctest`` : librairie standard utilisant les tests unitaires dans les docstring
+-	``pytest``  : libraire de tests unitaires
+
+### 4.2 - Mise en œuvre
+
+#### 4.2.1 - Fonctionnement
+
+Imaginons que vous avez écrit un module Python nommé ``calculs.py`` contenant différentes fonctions.<br />
+Pour réaliser des tests unitaires sur votre module, vous allez devoir créer un nouveau fichier ``test_calculs.py`` dont le rôle sera de valider le bon fonctionnement de votre module ``rectangle.py``.
+
+Cela se fera en 3 étapes :
+
+1.	**initialisation** (setUp) : préparation d’un environnement pour exécuter le test (fixture)
+2.	**vérification** (test_xxx) : comparaison du résultat obtenu avec le résultat escompté
+3.	**désactivation** (tearDown) : désinstallation de l’environnement de test afin de le pas polluer les tests suivants
+
+Les tests doivent être indépendants et reproductibles, c’est ce qui explique les étapes 1 et 3.
+
+#### 4.2.2 - Module calculs.py
+
+Soit le module ``calculs.py ``ci-dessous à tester.
 ```python
-# PAS BIEN
-x = 3*2
+def additionner(a, b):
+    """Calcule et retourne la somme de a et b"""
+    return a * b
 
-# BIEN
-x = 3 * 2
+def etre_pair(n):
+    """Test la parité d'un nombre"""
+    if n % 2 == 0:
+        return True
+    else:
+        return False
 ```
 
-mais 
+Vous aurez noter que le développeur a fait une faute de frappe dans la fonction ``additionner()`` en remplaçant le signe ``+`` par ``*``.
+Tout l’intérêt des tests unitaires va être de repérer cette erreur suffisamment tôt, idéalement avant l’intégration du module ``calcul.py`` dans un autre projet. Car une fois intégré, l’erreur peut s’avérer beaucoup plus longue et complexe à trouver et corriger.
+
+
+#### 4.2.3 - Tests unitaires avec les assertions
+
+Afin de tester ce module ``calculs.py``, il va falloir créer un fichier test_calculs.py contenant nos tests unitaires.
+Ce fichier va utiliser le mot clef Python ``assert`` pour vérifier que le résultat produit par une fonction et bien conforme aux attentes. Si ce n’est pas le cas une erreur ``AssertionError`` stoppe le programme.
 
 ```python
-# PAS BIEN
-x = 3 * 2 + 5
+# Assertion vraie, ne produisant pas d'erreur
+assert 1 == 1, "1 doit être égal à 1"
 
-# BIEN
-x = 3*2 + 5
-```
+# Assertion fausse, produisant une AssertionError
+assert 1 == 0, "1 = 0 devrait lever une erreur"
 
-▶ On ne met pas d'espace à intérieur des parenthèses, des crochets ou des accolades :
-
-```python
-# PAS BIEN
-for x in range( 5 ):
-    print( 'bonjour' )
-
-# BIEN
-for x in range(5):
-    print('bonjour')
-```
-
-▶ Pour les virgules, et les deux points : 
-pas d'espace avant mais une espace après.
-
-```python
-# PAS BIEN
-if color == (0,255,0) :
-    print('vert')
-
-# BIEN
-if color == (0, 255, 0):
-    print('vert')
-```
-
-On peut contrôler si son code vérifie les standards de la PEP8 sur ce site [http://pep8online.com/](http://pep8online.com/)
-
-### Les conventions de nommage
-
-▶ Les variables à une lettre (comme ```i```, ```j```, ```k``` ) sont réservées aux indices (notamment dans les boucles).
-
-▶ Les autres variables doivent avoir des noms explicites, éventuellement écrits en ```snake_case``` si plusieurs mots doivent être reliés.
-
-```python
-# PAS BIEN
-if d == 1:
-    cep += vm
-
-# BIEN
-if date == 1:
-    compte_epargne += versement_mensuel
-```
-
-
-Rappel des différents types de casse :
-
-- ```snake_case``` : les mots sont séparés par des underscores. Conseillé en Python.
-- ```camelCase``` : les mots sont séparés par des majuscules mais la 1ère lettre est minuscule. Conseillé en Javascript.
-- ```PascalCase``` : les mots sont séparés par des majuscules et la 1ère lettre est majuscule. Conseillé en C.
-- ```kebab-case``` : les mots sont séparés par des tirets courts. Conseillé en HTML - CSS.
-
-▶ Cas particulier des classes en Programmation Orientée Objet : leur nom doit commencer par une majuscule.
-
-```python
-# PAS BIEN
-class voiture:
-    def __init__(self, annee, marque, modele):
-       #pass
-
-# BIEN
-class Voiture:
-    def __init__(self, annee, marque, modele):
-       #pass
-```
-
-## 2. Commentaires et docstrings
-
-### 2.1 Commenter son code ? (ou pas)
-
-![image](data/comment.jpg){: .center width=40%}
-
-
-La nécessité de commenter son code est assez controversée.  
-Il est d'usage de dire qu'un code doit être assez **explicite** pour que le lecteur puisse le comprendre sans avoir à lire un commentaire. 
-
-De fait, les commentaires sont parfois (souvent) superflus :
-
-![image](data/cat.png){: .center width=40%}
-
-
-Et s'ils sont réellement nécessaires, il faut se poser la question : est-ce que ce code n'aurait pas pu être plus simple ? (attention, la réponse n'est pas toujours oui)
-
-
-![image](data/smart.jpeg){: .center width=40%}
-
-
-**Exemple :**
-
-Considérons la fonction suivante.
-```python
-def f(c, t, n):
-    # c est le capital de départ, t le taux annuel et n le nombre d'années
-    return c * (1 + t)**n  #renvoie le capital après n années
-```
-Elle est bien commentée. Mais si on croise la fonction ```f()``` ailleurs dans le code, se souviendra-t-on de son rôle ?
-
-Il aurait mieux valu écrire :
-```python
-def capital_apres_n_annees(capital, taux, nombre_annees) :
-    return capital * (1 + taux)**nombre_annees
-```
-Ce code est plus long, mais assez explicite pour se passer de commentaires.
-
-### 2.2 Le cas particulier des ```docstrings```
-
-#### 2.2.1 Que sont les ```docstrings```?
-
-Les ```docstrings``` sont des commentaires *normalisés* pour les fonctions, qui peuvent être consultés en console.
-
-**Exemples :**
-
-Nous connaissons la fonction ```len()``` qui permet par exemple de connaître la longueur d'une liste passée en paramètre.
-
-Si nous tapons en console la commande ```print(len.__doc__)```, nous aurons la description de cette fonction. 
-
-```python
->>> len.__doc__
-'Return the number of items in a container.'
-```
-Il est aussi possible d'accéder à la docstring d'une fonction ```f```  par la commande ```help(f)``` :
-
-```python
->>> help(len)
-Help on built-in function len in module builtins:
-
-len(obj, /)
-    Return the number of items in a container.
-
-
-```
-
-![image](data/help.jpeg){: .center}
-
-
-De même pour la fonction ```range``` :
-```python
->>> print(range.__doc__)
-range(stop) -> range object
-range(start, stop[, step]) -> range object
-
-Return an object that produces a sequence of integers from start (inclusive)
-to stop (exclusive) by step.  range(i, j) produces i, i+1, i+2, ..., j-1.
-start defaults to 0, and stop is omitted!  range(4) produces 0, 1, 2, 3.
-These are exactly the valid indices for a list of 4 elements.
-When step is given, it specifies the increment (or decrement).
-```
-
-Le résultat de la commande ```help(range)``` est trop long pour être repris ici, mais on y retrouve bien la docstring de la fonction ```range```.
-
-
-#### 2.2.2 Créer ses propres docstrings
-
-Il suffit pour cela de commencer la fonction à documenter par une ou plusieurs phrases entre triples quotes :
-
-```python
-def capital_apres_n_annees(capital, taux, nombre_annees) :
-    """
-    Renvoie le capital après n années.
-    capital : valeur initiale
-    taux : taux d'intérêt exprimé en nombre décimal (ex: 0.02 pour un taux de 2 %)
-    nombre_annees : nombre d'années de placement du capital
-    """
-    return capital * (1 + taux)**nombre_annees
-```
-Ainsi, un utilisateur pourra trouver en console le mode d'emploi de notre fonction :
-
-```python
->>> help(capital_apres_n_annees)
-Help on function capital_apres_n_annees in module __main__:
-
-capital_apres_n_annees(capital, taux, nombre_annees)
-    Renvoie le capital après n années.
-    capital : valeur initiale
-    taux : taux d'intérêt exprimé en nombre décimal (ex: 0.02 pour un taux de 2 %)
-    nombre_annees : nombre d'années de placement du capital
-```
-
-Comme on le voit, tout cela est très «verbeux». Cela peut nous paraître largement superflu puisque nos codes dépassent rarement quelques dizaines de lignes et sont lus par rarement plus de 2 personnes. Mais dans la vraie vie des développeurs, il est primordial qu'un code soit clair et documenté.
-
-## 3. La programmation défensive : des ```assert``` pour sécuriser le code 
-
-La programmation défensive est l'art de prévoir le pire et d'essayer de le détecter avant qu'il ne soit trop tard.  
-De manière bien plus concrète, il est d'usage d'essayer de répérer si des données (souvent des paramètres d'une fonction) sont susceptibles de créer des problèmes, ou sont hors spécification.
-
-**Un exemple :**
-
-La fonction :
-
-```python
-def racine_carree(x):
-    assert x >= 0, 'un nombre positif ou nul est requis'
-    return x ** 0.5
-```
-donnera, lors de l'appel à ```racine_carree(-2)```, le message suivant :
-
-```python
->>> racine_carree(-2)
 Traceback (most recent call last):
-  File "<pyshell>", line 1, in <module>
-  File "/home/gilles/Bureau/exemples_assert.py", line 2, in racine_carree
-    assert x >= 0, 'un nombre positif ou nul est requis'
-AssertionError: un nombre positif ou nul est requis
+  File "tests_assert.py", line 4, in <module>
+    assert 1 == 0, "1 = 0 devrait lever une erreur"
+AssertionError
 ```
 
-**Un autre exemple :**
+Pour les tests unitaires du module ``calculs.py``, on pourrait écrire les assertions suivantes :
 
 ```python
-def moyenne_trimestrielle(liste_notes):
-    """
-    calcule la moyenne des nombres de la liste liste_notes
-    """
-    assert liste_notes != [] , 'liste vide'
-    assert max(liste_notes) <= 20, 'au moins une note dépasse 20'
-    assert min(liste_notes) >=0, 'au moins une note est en dessous de 0'
-    
-    return sum(liste_notes) / len(liste_notes)
+# Importation du module à tester et ses fonctions
+from calculs import additionner, etre_pair
+
+# Tests unitaires de la fonction additionner()
+assert additionner(2, 2) == 4, "2 + 2 = 4"
+assert additionner(0, 0) == 0, "0 + 0 = 0"
+assert additionner(11, 5) == 16, "11 + 5 = 16"
+
+# Tests unitaires de la fonction etre_pair()
+assert etre_pair(5) == False, "5 n’est pas pair"
+assert etre_pair(4) == True, "4 est pair"
+assert etre_pair(0) == True, "0 est pair"
 ```
 
-À ce stade, les ```assert``` sont donc pour nous juste un moyen rapide de remplacer un test ```if ... then ... else``` pour détecter des erreurs potentielles.  
-Ils sont en réalité plus utiles que cela : lors de la conception d'un programme, des ```assert``` sont posés pour vérifier l'intégrité du code, mais peuvent être désactivés à tout moment pour en faire un code optimisé (par la commande ```-O``` à l'exécution). Tout ceci dépasse largement le cadre de notre cours.
+Le lancement de test_calculs.py produira alors l’erreur suivante :
+```python
+Traceback (most recent call last):
+  File "tests_calculs.py", line 7, in <module>
+    assert additionner(11, 5) == 16, "11 + 5 = 16"
+AssertionError
+```
 
-Il est à noter aussi que les erreurs peuvent être gérées par le mécanisme ```try ... except```, qui permet de «lever des exceptions». Pour les curieux, plus de renseignements [ici](http://perso.univ-lemans.fr/~berger/CoursPython/co/try_except.html).
+Notre script de tests unitaires a bien repéré une erreur sur la fonction ``additionner()`` qu’il devrait être aisé de corriger.<br/>
+A noter que les 2 premiers tests sont passés malgré l’erreur de codage, d’où l’importance d’être le plus exhaustif possible dans l’écriture des tests.
 
+Cependant on pourra remarquer quelques faiblesses avec cette méthode ``assert`` :
 
+-	le script s’est arrêté à la première erreur, donc on ne sait pas si la fonction ``etre_pair()`` est correcte
+-	quand tous les tests passeront avec succès, le script ne produira rien
+-	certains tests sont plus difficiles à réaliser avec ``assert`` (chaînes de caractères, sortie affichage, plusieurs fonctions...)
+-	si chaque test demandait une initialisation avant de s’exécuter (ouverture fichier, base de données, réseaux...) il faudrait le faire avant chaque assert => très lourd car de nombreux copier/coller
 
-## 4. Les tests
-### 4.1 Pourquoi des tests ?
+Nous allons voir une librairie dédiée aux tests unitaires, plus puissante mais aussi plus lourde d’utilisation.
 
+#### 4.2.4 - Tests unitaires avec la librairie unittest
 
-![image](data/tester.jpg){: .center width=40%}
-
-
-
-Tester une fonction est la première chose que l'on fait (normalement...) lorsqu'on vient de finir de l'écrire. 
-
-Par exemple, si on vient de construire la fonction ```valeur_absolue(n)```, il est fort probable qu'on aille taper ceci dans la console :
+Avec la librairie ``unittest`` les mêmes tests qu’avec assert pourraient ressembler à :
 
 ```python
->>> valeur_absolue(-3)
-3
->>> valeur_absolue(0)
-0
->>> valeur_absolue(7)
-7
+# Librairies utilisées
+import unittest
+from calculs import additionner, etre_pair
+
+class TestCalculs(unittest.TestCase):
+    """Classe gérant les tests unitaires du module calculs"""
+
+    def test_additionner(self):
+        """Tests unitaires de la fonction additionner()"""
+        self.assertEqual(additionner(2, 2), 4, "2 + 2 => 4")
+        self.assertEqual(additionner(0, 0), 0, "0 + 0 => 0")
+        self.assertEqual(additionner(11, 5), 16, "11 + 5 => 16")
+
+    def test_etre_pair(self):
+        """Tests unitaires de la fonction etre_pair()"""
+        self.assertEqual(etre_pair(5), False, "5 est impair")
+        self.assertEqual(etre_pair(4), True, "4 est pair")
+        self.assertEqual(etre_pair(0), True, "0 est pair")
+
+# Lancement des tests
+if __name__ == '__main__':
+    unittest.main()
+
 ```
+On retrouve dans ce code :<br />
 
-- On peut regrouper tous ces tests au sein d'une même fonction ```test_valeur_absolue()```.
-- On peut écrire cette fonction ```test_valeur_absolue()``` avant même de commencer à écrire la fonction ```valeur_absolue(n)```.
+|Code python|	Description|
+|:--|:--|
+|``import unittest``|	Importation de la librairie unittest qui fait partie de la librairie standard Python, donc pas d’installation|
+|``class TestCalculs(unittest.TestCase):``|	Création d’un classe regroupant les tests unitaires et héritant de TestCase|
+|``def test_additionner(self):``	|Fonction débutant par test_xxx signifiant qu’elle embarque des tests unitaires|
+|``self.assertEqual(additionner(2, 2), 4, "2 + 2 => 4")``|	Assertion vérifiant le résultat retourné par une fonction accompagnée d’un message|
+|``if __name__ == '__main__': unittest.main()``|Lancement des tests, la librairie va rechercher seul les tests à effectuer (méthodes débutant par test_xxx et les exécuter)|
 
-> Remarque : 
-> la méthode de développement logiciel TDD (Test Driven Developement) est basée en partie sur ce principe  : 
-
-> 1. On commence par écrire le test de la fonction.
-> 2. Le test échoue (forcément, la fonction n'est pas encore codée !)
- > 3. On écrit le code de la fonction pour que le test soit validé.
- > 4. On améliore (si possible) ce code tout en vérifiant que le test continue à être valide.
-
-
-![image](data/TDD.png){: .center width=40%}
-
-
-
-
-Revenons à nos tests sur la fonction ```valeur_absolue(n)```
-
+Le lancement de ce script de test produira le résultat suivant :
 ```python
-def test_valeur_absolue():
-    if valeur_absolue(-3) == 3 :
-        print("ok")
-    else:
-        print("erreur")
-        
-    if valeur_absolue(0) == 0 :
-        print("ok")
-    else:
-        print("erreur")
-        
-    if valeur_absolue(7) == 7 :
-        print("ok")
-    else:
-        print("erreur")
+$ python3 -m unittest
+======================================================================
+FAIL: test_additionner (test_calculs_unittest.TestCalculs)
+Tests unitaires de la fonction additionner()
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_calculs.py", line 21, in test_additionner
+    self.assertEqual(additionner(11, 5), 16, "11 + 5 => 16")
+AssertionError: 55 != 16 : 11 + 5 => 16
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (failures=1, errors=1)
 ```
 
-En console, il suffit maintenant d'appeler la fonction ```test_valeur_absolue()``` :
+Par rapport à la méthode ``assert``, on peut remarquer que :
 
+-	tous les tests ont été lancés, le script ne s’est pas arrêté à la première erreur
+-	d’autres méthodes de tests que assertEqual() existent :
+    -	assertTrue() : teste si égal à True
+    -	assertIsNone() : teste si vaut None
+    -	assertAlmostEqual() : teste si égal avec une marge d’erreur
+    -	assertRaises() : teste si une exception est levée
+    -	assertRegex() : teste une chaîne de caractères
+    -	assertLogs() : teste si un log a bien été produit
+
+La librairie ``unittest`` permet également d’initialiser (``setUp``) l’environnement (``fixture``) avant l’exécution de chaque test et aussi de le désactiver (``tearDown``) pour le prochain. Dans cet exemple on ouvre et ferme un fichier de données :
 ```python
->>> test_valeur_absolue()
-ok
-ok
-ok
+class TestCalculs(unittest.TestCase):
+    """Classe gérant les tests unitaires du module calculs"""
+
+    def setUp(self):
+        """Initialisation des tests"""
+        # Ouverture du fichier contenant le jeu de test
+        self.fichier = open("data.json", "r")
+
+    def tearDown(self):
+        """Désactivation des tests"""
+        # Fermeture du fichier contenant le jeu de test
+        self.fichier.close()
+
+    # ...suite de la classe tronquée
 ```
 
+## 5 - Optimisation des performances
 
-### 4.2 Revoilà les ```assert```
+Les gains d’optimisation sont souvent liés :
 
-Utiliser des ```assert``` permet d'écrire très simplement les tests précédents.
+-	à l’algorithme utilisé
+-	au langage lui même et sa machinerie interne
 
-Reprenons notre fonction ```valeur_absolue()```. Sa fonction test  ```test_valeur_absolue()``` peut s'écrire :
+### 5.1 - Chronométrage simple
 
+Le chronométrage d’une portion de code ou d’une fonction peut s’effectuer avec la fonction ``perf_counter() ``du module **time** comme ci-dessous :
 ```python
-def test_valeur_absolue():
-    assert valeur_absolue(-3) == 3
-    assert valeur_absolue(0) == 0
-    assert valeur_absolue(7) == 7
+# Importation des outils pour mesurer le temps
+import time
 
+# Fonction qu'on souhaite chronométrer
+def additionner(limite):
+    somme = 0
+    for i in range(0, limite+1):
+        somme += i
+    return somme
+
+#  Lancement et chronométrage de la fonction
+debut = time.perf_counter()
+resultat = additionner(1000000)
+fin = time.perf_counter()
+
+# Affichage du résultat et de la durée d'exécution
+print(f"La somme jusqu’à 1000000 est {resultat}")
+delai = fin - debut
+print(f"Durée d'exécution = {delai} s")
 ```
 
-**Exercice :**  
-Écrire une fonction ```maxi(liste)``` qui renvoie le plus grand élément de la liste ```liste``` passée en paramètre (de préférence sans utiliser la fonction ```max()``` ...).  
-Vous écrirez **d'abord** une fonction ```test_maxi()``` avant d'écrire la fonction ```maxi(liste)``` 
+### 5.2 - Profilage
+
+Le profilage d’un code donne des résultats beaucoup plus complet avec pour chaque fonction :
+
+-	le temps total d’exécution
+-	le nombre d’appels
+-	la durée moyenne d’un appel
+-	...
 
 
-### 4.3 Le module ```doctest```
+Le module ``cProfile`` présent dans la distribution standard de Python permet de réaliser facilement ce profilage. Il suffit de lancer l’exécution d’un script depuis un terminal comme ci-dessous :
 
-Le module ```doctest```  permet d'écrire les tests **à l'intérieur** de la docstring d'une fonction. 
-
-Considérons une fonction dont le but est de compter les voyelles du mot passé en paramètre.
-
-```python
-def compte_voyelles(mot):
-    """
-    renvoie le nombre de voyelles du mot donné en paramètre.
-    >>> compte_voyelles("python")
-    2
-    >>> compte_voyelles("HTTP")
-    0
-    >>> compte_voyelles("eau")
-    3
-    """
-    voyelles = "aeiou"
-    total = 0
-    for lettre in mot:
-        if lettre in voyelles:
-            total += 1
-    return total
+```prompt
+C:\Users\corte>python -m cProfile D:\NSI\Premiere\eratosthene.py
 ```
+![profilage](./data/profilage.png){: width=80% .center}
 
-Observez bien la docstring : elle contient explicitement ce qu'on veut que renvoie le terminal lorsqu'on appellera la fonction.
-On écrit donc les trois chevrons ```>>>``` suivi de l'appel à la fonction, et à la ligne en dessous ce que nous espérons que la fonction nous renvoie.
-On peut écrire autant de tests que l'on veut.
-
-Ensuite, en console :
-```python
->>> import doctest
->>> doctest.testmod()
-```
-Dans notre cas, le retour sera celui-ci :
-
-```python
->>> import doctest
->>> doctest.testmod()
-**********************************************************************
-File "voyelles.py", line 4, in __main__.compte_voyelles
-Failed example:
-    compte_voyelles("python")
-Expected:
-    2
-Got:
-    1
-**********************************************************************
-1 items had failures:
-   1 of   3 in __main__.compte_voyelles
-***Test Failed*** 1 failures.
-TestResults(failed=1, attempted=3)
-```
-
-On voit que le test ```compte_voyelles("python")``` a renvoyé la valeur 1 alors qu'on attendait 2. En regardant notre fonction, on s'aperçoit donc qu'on avait oublié le ```y``` dans la liste des voyelles. 
-
-En corrigeant ceci, le test devient :
-```python
->>> import doctest
->>> doctest.testmod()
-TestResults(failed=0, attempted=3)
-```
-Ce qui est beaucoup plus satisfaisant.
-
-
-### 4.3 À propos des tests
-Le comportement face aux tests en programmation doit être le même qu'en mathématiques : _un test qui ne marche pas est plus riche d'enseignements qu'un test qui marche_.
-
-En mathématiques, seule la notion de contre-exemple est fertile : si quelqu'un vous affirme que _«tous les nombres impairs sont premiers»_, il vous suffit d'exhiber le nombre 9 pour lui prouver qu'il a tort et achever la discussion.
-
-Par contre, il aurait pu essayer de vous convaincre avec les nombres 3, 5 et 13, qui sont bien impairs et premiers.
-
-De la même manière, voir qu'une fonction passe les tests que vous avez écrits ne vous assurera pas que cette fonction aura _toujours_ le bon comportement souhaité. Elle l'aura pour les valeurs de test, mais pas forcément pour les autres.
-
-En revanche, si une fonction ne passe pas un des tests, vous avez la certitude qu'il y a un problème à régler quelque part.
-
-Tout ceci en admettant, bien sûr, que vos tests _eux-mêmes_ ne comportent pas d'erreurs...
-
-![image](data/bug.jpg){: .center width=40%}
-
-![image](data/tests_couvrants.jpeg){: .center}
-
-
-
-
----
-## Bibliographie
-- [https://www.reddit.com/r/ProgrammerHumor/](https://www.reddit.com/r/ProgrammerHumor/)
-- [https://fr.wikipedia.org/wiki/Test_driven_development](https://fr.wikipedia.org/wiki/Test_driven_development)
-- [https://www.fil.univ-lille1.fr/~L1S2API/CoursTP/tp_doctest.html](https://www.fil.univ-lille1.fr/~L1S2API/CoursTP/tp_doctest.html)
----
+On peut noter par exemple que la fonction ``eratosthene() ``a été appelée 1000000 de fois pour un temps total d’exécution de 0 s. Pas de problèmes d'optimisation pour cette fonction.

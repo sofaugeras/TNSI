@@ -1,1 +1,10 @@
 title: Bac 🖊️
+nav:
+    - Epreuve du BAC : epreuve_bac.md
+    - Liste des sujets Ecrit : liste_sujets.md
+    - Grand Oral : grandoral.md
+    - Révision Base de données : revisionBD.md
+    - Révision Structure de données : revisionTAD.md
+    - Révision Arbres : revisionArbre.md
+    - Révision Récursivité : revisionRecurisivite.md
+    - Révision Graphes : revisionGraphes.md

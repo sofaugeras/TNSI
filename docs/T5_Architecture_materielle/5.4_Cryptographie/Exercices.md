@@ -144,33 +144,85 @@ En vous servant du code précédent, déchiffrez le message ```58152918114477529
     print(long_to_bytes(res))
     ```
 
+??? info "**module RSA** dans les règles de l'art"
+
+    ```python
+    from Crypto.PublicKey import RSA
+    from Crypto.Cipher import PKCS1_OAEP
+    import binascii
+
+    keyPair = RSA.generate(1024)
+
+    pubKey = keyPair.publickey()
+
+    pubKeyPEM = pubKey.exportKey()
+
+    privKeyPEM = keyPair.exportKey()
+
+
+    msg = b'vive la crypto en NSI !'
+    encryptor = PKCS1_OAEP.new(pubKey)
+    encrypted = encryptor.encrypt(msg)
+    print("Encrypted:", binascii.hexlify(encrypted))
+
+
+    decryptor = PKCS1_OAEP.new(keyPair)
+    decrypted = decryptor.decrypt(encrypted)
+    print('Decrypted:', decrypted)
+    ```
 
 ### Exercice 5
-**module RSA** dans les règles de l'art
 
+^^Source :^^ Edition Ellipses : NSI 24 leçons avec exercices corrigés.
 
+On se place dans le contexte de la figure ci-dessous. Le client est un navigateur web classique (par exemple Firefox). Le serveur web est configuré sur une machine dont le nom de domaine est [www.monsite.fr](www.monsite.fr) . 
 
-```python
-from Crypto.PublicKey import RSA
-from Crypto.Cipher import PKCS1_OAEP
-import binascii
+:arrow_right: Dans chacune des situations suivantes, dire quelle étape de la poignée de main TLS échoue.<br />
 
-keyPair = RSA.generate(1024)
+![protocole HTTPS](./data/protocoleHTTP.jpg){ .center width=50%}
 
-pubKey = keyPair.publickey()
+Les questions sont indépendantes.
 
-pubKeyPEM = pubKey.exportKey()
+1.	Le serveur web n’est pas configuré pour supporter le protocole HTTPS et ne sert que des pages en http
+2.	Le fichier contenant le certificat côté serveur est périmé
+3.	L’utilisateur du navigateur pointe ce dernier vers l’URL http://www.monsite.fr:443
+4.	L’administrateur du serveur a créé une paire de clé publique et privée, a signé le certificat que le serveur envoie aux clients et effacés les clés
+5.	Le navigateur commence à afficher la page de garde du site. La câble connectant le serveur au réseau est coupé
 
-privKeyPEM = keyPair.exportKey()
+??? tip "correction"
 
+    1.	Le serveur web n’est pas configuré pour supporter le protocole HTTPS et ne sert que des pages en http.<br />
+    L’étape 1 échoue immédiatement, le navigateur ne trouve aucun serveur en écoute sur le port 443, la connexion TCP ne peut pas se mettre en place
 
-msg = b'vive la crypto en NSI !'
-encryptor = PKCS1_OAEP.new(pubKey)
-encrypted = encryptor.encrypt(msg)
-print("Encrypted:", binascii.hexlify(encrypted))
+    2.	Le fichier contenant le certificat côté serveur est périmé<br />
+    L’étape 3 échoue, le client ne procède pas à la validation du certificat
 
+    3.	L’utilisateur du navigateur pointe ce dernier vers l’URL http://www.monsite.fr:443<br />
+    L’étape 2 échoue car le client navigue vers le port HTTPS en http, il n’envoie pas les bons paquets et le serveur ne peut donc pas répondre ou répond un message d’erreur
 
-decryptor = PKCS1_OAEP.new(keyPair)
-decrypted = decryptor.decrypt(encrypted)
-print('Decrypted:', decrypted)
-```
+    4.	L’administrateur du serveur a créé une paire de clé publique et privée, a signé le certificat que le serveur envoie aux clients et effacés les clés<br />
+    L’étape 3 échoue et le navigateur affiche un message d’alerte de sécurité. En effet, le navigateur ne pourra pas trouver une clé publique d’AC lui permettant de vérifier la signature
+
+    5.	Le navigateur commence à afficher la page de garde du site. La câble connectant le serveur au réseau est coupé<br />
+    Si la page de garde du site s’affiche, c’est que la requête http récupérant la page a reçu une réponse du serveur. On est après l’étape 5, la connexion TCP est interrompue (car tous les paquets sont perdus)
+
+### Exercice 6 
+
+^^Source :^^  Edition Ellipses, Spécialité NSI, serge Bays 
+
+Consulter la page d’accueil du site de la société informatique de France [https://www.societe-informatique-de-france.fr/](https://www.societe-informatique-de-france.fr/) 
+
+:arrow_right: Préciser les informations disponibles sur le certificat de sécurité, quels sont les chiffrements utilisés, synmétrique et asymétrique.
+
+??? tip "correction"
+
+    ![SIF](./data/SIF.png){ .center width=50%}
+
+    Lorsque la page est affichée, on clique sur le cadenas figurant devant l’adresse. On obtient les informations suivantes :
+    Certificat vérifié par l’organisation Let’s Encrypt Authority X3
+    Protocole TLS 1.2
+    Clés : voir détails techniques
+    Clé publique : voir Afficher le certificat
+    Algorithme RSA
+    Avec une taille de clé de 256 octets (2048 bits).
+    AES, Advanced Encryption Standart, algorithme de chiffrement symétrique
