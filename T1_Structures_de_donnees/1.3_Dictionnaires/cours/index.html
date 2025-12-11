@@ -2911,7 +2911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_6_Epreuve_pratique/BNS_2025/" class="md-nav__link">
+      <a href="../../../BNS_2025.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3287,7 +3287,7 @@
         
   
   <span class="md-ellipsis">
-    Sommaire
+    sommaire
   </span>
   
 
@@ -3308,7 +3308,7 @@
         
   
   <span class="md-ellipsis">
-    Projet Toussaint 🎃
+    Projet Pyxel 👾
   </span>
   
 
@@ -3317,6 +3317,46 @@
   
 
               
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_3" id="__nav_11_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2 Huffman
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_3">
+            <span class="md-nav__icon md-icon"></span>
+            2 Huffman
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -3329,7 +3369,7 @@
         
   
   <span class="md-ellipsis">
-    Projet Noël 🎄
+    Projet Les marmottes 🐹
   </span>
   
 
@@ -3346,15 +3386,113 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T8_projet/3_expose/cours/" class="md-nav__link">
+      <a href="../../../T8_projet/2_Huffman/tp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    consignes
+    TP Compression de données
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_4" id="__nav_11_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3 expose
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_4">
+            <span class="md-nav__icon md-icon"></span>
+            3 expose
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T8_projet/3_expose/cours/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exposé façon GO📢
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T8_projet/3_expose/cours_crypto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exposé Crypto 🔐
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3410,14 +3548,14 @@
 <div class="admonition aide">
 <p class="admonition-title">TP : protocole de test pour comparer les temps d'accès aux données.</p>
 <p><strong>Indication :</strong> on utilisera la fonction <code>time.time()</code> (après avoir importé le module <code>time</code>) qui donne le nombre de secondes (à <span class="arithmatex">\(10^{-7}\)</span> près) écoulées depuis le 01 janvier 1970 à 00h00 (appelée <a href="https://fr.wikipedia.org/wiki/Heure_Unix">Heure Unix</a> ou <a href="https://fr.wikipedia.org/wiki/Heure_Unix">Temps Posix</a>).
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">time</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">time</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span>
 <span class="mi">2400</span>
 </code></pre></div></p>
 </div>
 <h3 id="11-preparation-des-mesures">1.1 Préparation des mesures<a class="headerlink" href="#11-preparation-des-mesures" title="Permanent link">⚓︎</a></h3>
 <p>Considérons deux fonctions <code>fabrique_liste()</code> et <code>fabrique_dict()</code> capables de fabriquer respectivement des listes et des dictionnaires de taille donnée en paramètre.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">fabrique_liste</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">fabrique_liste</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
     <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb</span><span class="p">)]</span>
     <span class="k">return</span> <span class="n">lst</span>
 
@@ -3427,7 +3565,7 @@
         <span class="n">dct</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="mi">42</span>
     <span class="k">return</span> <span class="n">dct</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">lst</span> <span class="o">=</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">lst</span> <span class="o">=</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">dct</span> <span class="o">=</span> <span class="n">fabrique_dict</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">lst</span>
 <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">81</span><span class="p">]</span>
@@ -3440,40 +3578,40 @@
 <ul>
 <li>avec 10 valeurs :</li>
 </ul>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span>
 <span class="n">boo</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>2500
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>2500
 </code></pre></div>
 <p>Nous sommes donc à l'ordre de grandeur <span class="arithmatex">\(100 \times 10^{-9}\)</span>, soit <span class="arithmatex">\(10^{-7}\)</span> secondes.</p>
 <ul>
 <li>avec 100 valeurs :</li>
 </ul>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span>
 <span class="n">boo</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>11300
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>11300
 </code></pre></div>
 <p>Nous sommes donc à l'ordre de grandeur <span class="arithmatex">\(1 \times 10^{-6}\)</span>, soit <span class="arithmatex">\(10^{-6}\)</span> secondes.</p>
 <ul>
 <li>avec 1000 valeurs :</li>
 </ul>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span>
 <span class="n">boo</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
 <span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>99200
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>99200
 </code></pre></div>
 <p>Nous sommes donc à l'ordre de grandeur <span class="arithmatex">\(10 \times 10^{-6}\)</span>, soit <span class="arithmatex">\(10^{-5}\)</span> secondes.</p>
 <p><strong>Conclusion</strong> : le temps de recherche d'une valeur dans une <strong>liste</strong> est directement <strong>proportionnel</strong> à la longueur de cette liste. On dit qu'il est linéaire, ou bien qu'il est en <span class="arithmatex">\(O(n)\)</span>.</p>
@@ -3482,31 +3620,31 @@
 <ul>
 <li>avec 10 valeurs :</li>
 </ul>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">dct</span> <span class="o">=</span> <span class="n">fabrique_dict</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">dct</span> <span class="o">=</span> <span class="n">fabrique_dict</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">dct</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">dct</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>31.2 ns ± 0.221 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>31.2 ns ± 0.221 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
 </code></pre></div>
 <p>Nous sommes donc à l'ordre de grandeur <span class="arithmatex">\(10 \times 10^{-9}\)</span>, soit <span class="arithmatex">\(10^{-8}\)</span> secondes.</p>
 <ul>
 <li>avec 100 valeurs :</li>
 </ul>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">dct</span> <span class="o">=</span> <span class="n">fabrique_dict</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">dct</span> <span class="o">=</span> <span class="n">fabrique_dict</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">dct</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">dct</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>31.2 ns ± 0.233 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>31.2 ns ± 0.233 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
 </code></pre></div>
 <p>Nous sommes donc toujours à l'ordre de grandeur <span class="arithmatex">\(10 \times 10^{-9}\)</span>, soit <span class="arithmatex">\(10^{-8}\)</span> secondes.</p>
 <ul>
 <li>avec 10000 valeurs :</li>
 </ul>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">dct</span> <span class="o">=</span> <span class="n">fabrique_dict</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">dct</span> <span class="o">=</span> <span class="n">fabrique_dict</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">dct</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">dct</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>33.9 ns ± 0.168 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>33.9 ns ± 0.168 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
 </code></pre></div>
 <p>On retrouve avec 10000 valeurs le même temps de recherche qu'avec 10 valeurs.</p>
 <p>On remarque donc que le temps moyen est remarquablement <strong>constant</strong>. Il ne dépend pas du nombre d'éléments du dictionnaire dans lequel on cherche. On dit qu'il est en <span class="arithmatex">\(O(1)\)</span>.</p>
@@ -3560,7 +3698,7 @@ Re-essayons alors avec l'empreinte  <code>e74fb2f94c052bbf16cea4a795145e35</code
 <p>En quoi les fonctions de hachage ont-elles un rôle à jouer dans l'implémentation d'un dictionnaire ?  </p>
 <p>L'idée essentielle est que chaque clé est hachée pour donner une empreinte unique, qui est ensuite transformée en un indice de positionnement dans un tableau.</p>
 <p>Le dictionnaire :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;pommes&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;poires&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;bananes&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">}</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;pommes&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;poires&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;bananes&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">}</span>
 </code></pre></div>
 <p>serait donc par exemple implémenté dans un tableau comme celui-ci :</p>
 <p><img alt="" class="center" src="../data/hashdico.png" /></p>
@@ -3578,7 +3716,7 @@ Re-essayons alors avec l'empreinte  <code>e74fb2f94c052bbf16cea4a795145e35</code
 <p>En résumé, Python sait toujours où aller chercher un élément de son dictionnaire : soit il le trouve à l'endroit calculé, soit il n'y a rien à cet endroit calculé, ce qui veut dire que l'élément ne fait pas partie du dictionnaire. </p>
 <p>Par ce mécanisme, l'accès à un élément du dictionnaire se fait toujours en temps <strong>constant</strong>.</p>
 <p>Il existe une manière de «voir» que Python utilise une fonction de hachage pour implémenter un dictionnaire :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">mondico</span> <span class="o">=</span> <span class="p">{}</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">mondico</span> <span class="o">=</span> <span class="p">{}</span>
 
 <span class="c1"># un nombre peut-il être une clé?</span>
 <span class="n">mondico</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;foo&quot;</span>
@@ -3589,7 +3727,7 @@ Re-essayons alors avec l'empreinte  <code>e74fb2f94c052bbf16cea4a795145e35</code
 <span class="c1"># une liste peut-elle être une clé ?</span>
 <span class="n">mondico</span><span class="p">[[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">]]</span> <span class="o">=</span> <span class="s2">&quot;loulou&quot;</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>---------------------------------------------------------------------------
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>---------------------------------------------------------------------------
 
 TypeError                                 Traceback (most recent call last)
 
@@ -3602,22 +3740,22 @@ TypeError                                 Traceback (most recent call last)
 TypeError: unhashable type: &#39;list&#39;
 </code></pre></div>
 <p>Le message d'erreur est explicite : le type <code>list</code> que nous avons voulu utiliser comme clé n'est pas hachable, car c'est un type d'objet pouvant être modifié a posteriori tout en gardant la même référence (on dit que c'est un objet <strong>mutable</strong>):</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
 <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>139646950377032
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>139646950377032
 139646950377032
 </code></pre></div>
 <p>Ce changement de valeur tout en gardant la même référence détruirait le principe associant à une clé unique une position unique dans le tableau implémentant le dictionnaire.</p>
 <p>Ce problème ne se pose pas si la variable désigne une chaîne de caractères, ou un nombre :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">2020</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">2020</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
 <span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>139646916523440
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>139646916523440
 139646916523504
 </code></pre></div>
 <p>Un variable contenant un entier est donc un objet <strong>immuable</strong> car si on modifie la valeur de l'entier, la référence de la variable changera aussi. Comme un dictionnaire a besoin d'avoir des clés dont les références soient définitives, seuls les objets <strong>immuables</strong> peuvent donc servir de clés dans les dictionnaires.</p>

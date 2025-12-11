@@ -3010,7 +3010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_6_Epreuve_pratique/BNS_2025/" class="md-nav__link">
+      <a href="../../../BNS_2025.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3386,7 +3386,7 @@
         
   
   <span class="md-ellipsis">
-    Sommaire
+    sommaire
   </span>
   
 
@@ -3407,7 +3407,7 @@
         
   
   <span class="md-ellipsis">
-    Projet Toussaint 🎃
+    Projet Pyxel 👾
   </span>
   
 
@@ -3416,6 +3416,46 @@
   
 
               
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_3" id="__nav_11_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2 Huffman
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_3">
+            <span class="md-nav__icon md-icon"></span>
+            2 Huffman
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -3428,7 +3468,7 @@
         
   
   <span class="md-ellipsis">
-    Projet Noël 🎄
+    Projet Les marmottes 🐹
   </span>
   
 
@@ -3445,15 +3485,113 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T8_projet/3_expose/cours/" class="md-nav__link">
+      <a href="../../../T8_projet/2_Huffman/tp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    consignes
+    TP Compression de données
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_4" id="__nav_11_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3 expose
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_4">
+            <span class="md-nav__icon md-icon"></span>
+            3 expose
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T8_projet/3_expose/cours/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exposé façon GO📢
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T8_projet/3_expose/cours_crypto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exposé Crypto 🔐
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3502,13 +3640,13 @@ Si on "descend" d'un rang, on obtient <span class="arithmatex">\(u_{n + 1} = f(f
 </div>
 <h3 id="12-un-tres-tres-mauvais-exemple">1.2 Un très très mauvais exemple<a class="headerlink" href="#12-un-tres-tres-mauvais-exemple" title="Permanent link">⚓︎</a></h3>
 <p>C'est déjà une première chose à comprendre : un programme <strong>peut</strong> être appelé par lui-même, à l'intérieur de sa propre définition.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">prems</span><span class="p">():</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">prems</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;un très mauvais exemple&quot;</span><span class="p">)</span>
     <span class="n">prems</span><span class="p">()</span>
 
 <span class="n">prems</span><span class="p">()</span>
 </code></pre></div>
-<p><div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>un très mauvais exemple
+<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>un très mauvais exemple
 un très mauvais exemple
 un très mauvais exemple
 un très mauvais exemple
@@ -3551,7 +3689,7 @@ Le cas de base est ici l'étage 0. Il empêche une descente infinie.</p>
 <h3 id="22-enfin-un-bon-exemple">2.2 Enfin un bon exemple<a class="headerlink" href="#22-enfin-un-bon-exemple" title="Permanent link">⚓︎</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Exemple fondateur n°1 <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -3569,7 +3707,7 @@ Le cas de base est ici l'étage 0. Il empêche une descente infinie.</p>
 <li><code>ligne 5</code> : la décrémentation du paramètre d'appel</li>
 </ul>
 <p><strong>Utilisation de la fonction <code>mystere</code></strong> </p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">mystere</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">mystere</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="mi">0</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">mystere</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="mi">10</span>
@@ -3605,7 +3743,7 @@ Il venait pour cela d'inventer la formule :
 <p>Coder la fonction <code>prix(etage)</code> de la BD présentée plus haut. </p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -3635,7 +3773,7 @@ Il venait pour cela d'inventer la formule :
 <p>Quelle paradigme de programmation vous a semblé le plus naturel ?</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3672,9 +3810,9 @@ Il venait pour cela d'inventer la formule :
 
 <h3 id="32-limitation-de-la-taille-de-la-pile">3.2 Limitation de la taille de la pile<a class="headerlink" href="#32-limitation-de-la-taille-de-la-pile" title="Permanent link">⚓︎</a></h3>
 <p>Nous venons de voir que notre appel à <code>mystere(5)</code> générait une pile de hauteur 6 (on parlera plutôt de <em>profondeur</em> 6). Cette profondeur est-elle limitée ?</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">mystere</span><span class="p">(</span><span class="mi">2962</span><span class="p">)</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">mystere</span><span class="p">(</span><span class="mi">2962</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>---------------------------------------------------------------------------
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>---------------------------------------------------------------------------
 
 RecursionError                            Traceback (most recent call last)
 
@@ -3719,7 +3857,7 @@ RecursionError: maximum recursion depth exceeded in comparison
 <p>Implémenter de façon récursive la suite de Fibonnaci.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -3763,7 +3901,7 @@ RecursionError: maximum recursion depth exceeded in comparison
 <p>Écrire une fonction <code>fibo_imperatif(n)</code> qui calcule de façon directe (<em>impérative</em>) le n-ième terme de la suite de Fibonnaci.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -3784,13 +3922,13 @@ RecursionError: maximum recursion depth exceeded in comparison
 </div>
 </div>
 <p>Observons grâce au module <code>timeit</code> le temps moyen pris pour calculer <span class="arithmatex">\(F(20)\)</span> avec les deux fonctions <code>fibo_imperatif()</code> et <code>fibo_recursif()</code>.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="n">fibo_imperatif</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="n">fibo_imperatif</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>1.02 µs ± 14 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>1.02 µs ± 14 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="n">fibo_recursif</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="n">fibo_recursif</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>2.35 ms ± 10.8 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>2.35 ms ± 10.8 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 </code></pre></div>
 <p>La programmation récursive apparait donc comme quasiment 1000 fois plus lente que l'impérative.</p>
 <p><img alt="⚠️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/26a0.svg" title=":warning:" /> <strong>Attention :</strong> cette comparaison des vitesses d'éxécution peut être critiquée car les deux programmes n'ont pas la même <em>complexité</em>. Nous étudierons la complexité au moment des algorithmes de tri. </p>
@@ -3798,7 +3936,7 @@ RecursionError: maximum recursion depth exceeded in comparison
 <p>Peut-on résumer la récursivité à une méthode élégante mais inefficace ? Ce serait réducteur : l'efficacité c'est <em>aussi</em> avoir un code lisible et intuitif. Nous en reparlerons lors du parcours des arbres et des graphes. (cf aussi l'exercice sur les Tours de Hanoï)</p>
 <h2 id="5-annexe-dessins-recursifs-grace-au-module-turtle">5. Annexe : dessins récursifs grâce au module <code>turtle</code><a class="headerlink" href="#5-annexe-dessins-recursifs-grace-au-module-turtle" title="Permanent link">⚓︎</a></h2>
 <p>Le module <code>turtle</code> permet de faire des tracés basiques. Mais dès l'instant où on met de la récursivité dans le code, les résultats peuvent devenir très surprenants, et aboutir à des structures <a href="https://fr.wikipedia.org/wiki/Fractale">fractales</a>.</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>

@@ -2992,7 +2992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_6_Epreuve_pratique/BNS_2025/" class="md-nav__link">
+      <a href="../../../BNS_2025.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3368,7 +3368,7 @@
         
   
   <span class="md-ellipsis">
-    Sommaire
+    sommaire
   </span>
   
 
@@ -3389,7 +3389,7 @@
         
   
   <span class="md-ellipsis">
-    Projet Toussaint 🎃
+    Projet Pyxel 👾
   </span>
   
 
@@ -3398,6 +3398,46 @@
   
 
               
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_3" id="__nav_11_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2 Huffman
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_3">
+            <span class="md-nav__icon md-icon"></span>
+            2 Huffman
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -3410,7 +3450,7 @@
         
   
   <span class="md-ellipsis">
-    Projet Noël 🎄
+    Projet Les marmottes 🐹
   </span>
   
 
@@ -3427,15 +3467,113 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T8_projet/3_expose/cours/" class="md-nav__link">
+      <a href="../../../T8_projet/2_Huffman/tp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    consignes
+    TP Compression de données
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_4" id="__nav_11_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3 expose
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_4">
+            <span class="md-nav__icon md-icon"></span>
+            3 expose
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T8_projet/3_expose/cours/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exposé façon GO📢
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T8_projet/3_expose/cours_crypto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exposé Crypto 🔐
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3483,7 +3621,7 @@ effectuer des requêtes sur une base de données relationnelles. Nous apprendron
 <p>```Python Console Session
 pip install jupyter-sql
 pip install ipython-sql
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>puis relancer jupyter.
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>puis relancer jupyter.
 
 On charge le module SQL avec la commande suivante
 
@@ -3492,7 +3630,7 @@ On charge le module SQL avec la commande suivante
 </code></pre></div></p>
 <h2 id="creer-la-base-de-donnees">Créer la base de données<a class="headerlink" href="#creer-la-base-de-donnees" title="Permanent link">⚓︎</a></h2>
 <p>Nous allons commencer par créer une base vide dans laquelle nous allons travailler :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">%</span><span class="n">sql</span> <span class="n">sqlite</span><span class="p">:</span><span class="o">///</span><span class="n">livres_db</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">%</span><span class="n">sql</span> <span class="n">sqlite</span><span class="p">:</span><span class="o">///</span><span class="n">livres_db</span>
 </code></pre></div>
 <p>La base s'appelle <strong>livres_db</strong> et est au format <em>sqlite</em> qui est un gestionnaire de base de données relationnelles léger et facile à prendre en main.<br /></p>
 <p>Les données seront inscrites dans le fichier <strong>livres_db</strong> qui vient d'être créé à côté de ce classeur et que vous pourrez retrouver dans votre travail de travail quand vous aurez fini ce chapitre.<br /></p>
@@ -3505,7 +3643,7 @@ LIVRE (<u>idLivre</u> int, titre str, #idAuteur int, #idTheme int)
 </code></p>
 <h2 id="creer-une-table">Créer une table<a class="headerlink" href="#creer-une-table" title="Permanent link">⚓︎</a></h2>
 <p>Il est temps de commencer à peupler notre base de données. Nous allons commencer par créer la table <strong>Langues</strong> en saisissant notre première requête :</p>
-<div class="highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="o">%%</span><span class="k">sql</span><span class="w"> </span>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="o">%%</span><span class="k">sql</span><span class="w"> </span>
 <span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Langues</span><span class="w"> </span>
 <span class="p">(</span>
 <span class="n">IdLangue</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w">  </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
@@ -3524,7 +3662,7 @@ LIVRE (<u>idLivre</u> int, titre str, #idAuteur int, #idTheme int)
 <p>L'attribut <strong>IdLangue</strong> est la <img alt="🔑" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f511.svg" title=":key:" /> <strong>clé primaire</strong> de la table. C'est un entier qui commence à 1 et qui sera automatiquement incrémenté au fur à mesure que l'on insère des données dans la table. C'est en indiquant <code>PRIMARY KEY</code> après le type dans la déclaration de l'attribut <strong>IdLangue</strong> que <em>sqlite</em> se comporte ainsi.</p>
 <h2 id="inserer-des-enregistrements-dans-la-table">Insérer des enregistrements dans la table<a class="headerlink" href="#inserer-des-enregistrements-dans-la-table" title="Permanent link">⚓︎</a></h2>
 <p>Maintenant que nous avons une table vide, il nous faut la remplir avec les données sur les auteurs. Nous utiliserons pour cela la requête <strong>INSERT</strong>. Voici son utilisation :</p>
-<div class="highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="o">%%</span><span class="k">sql</span>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="o">%%</span><span class="k">sql</span>
 <span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Langues</span><span class="w"> </span>
 <span class="w">    </span><span class="p">(</span><span class="n">Langue</span><span class="p">)</span>
 <span class="k">VALUES</span>
@@ -3533,7 +3671,7 @@ LIVRE (<u>idLivre</u> int, titre str, #idAuteur int, #idTheme int)
 </code></pre></div>
 <h3 id="quelques-explications_1">Quelques explications :<a class="headerlink" href="#quelques-explications_1" title="Permanent link">⚓︎</a></h3>
 <p>La requête <strong>INSERT</strong> s'utilise ainsi :</p>
-<div class="highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="o">##</span><span class="k">TABLE</span><span class="o">##</span>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="o">##</span><span class="k">TABLE</span><span class="o">##</span>
 <span class="w">    </span><span class="p">(</span><span class="o">##</span><span class="w"> </span><span class="n">attributs</span><span class="w"> </span><span class="n">dont</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">donne</span><span class="w"> </span><span class="n">les</span><span class="w"> </span><span class="n">valeurs</span><span class="o">##</span><span class="p">)</span>
 <span class="k">VALUES</span>
 <span class="w">    </span><span class="p">(</span><span class="o">##</span><span class="w"> </span><span class="n">enregistrement</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">##</span><span class="p">),</span>
@@ -3546,11 +3684,11 @@ LIVRE (<u>idLivre</u> int, titre str, #idAuteur int, #idTheme int)
 <p>A l'issue de la requête, sqlite nous informe que 2 lignes ont été créées.</p>
 <h2 id="lire-le-contenu-dune-table">Lire le contenu d'une table<a class="headerlink" href="#lire-le-contenu-dune-table" title="Permanent link">⚓︎</a></h2>
 <p>Nous allons à présent utiliser une requête <strong>SELECT</strong> afin de récupérer le contenu de la table. Ces requêtes peuvent être très sophistiquées comme on va le voir en fin de TP. Pour le moment, nous nous contenterons de la forme la plus simple :</p>
-<div class="highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="o">%%</span><span class="k">sql</span>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="o">%%</span><span class="k">sql</span>
 
 <span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Langues</span><span class="p">;</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>     * sqlite:///livres_db
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>     * sqlite:///livres_db
     Done.
 </code></pre></div>
 <table>
@@ -3570,7 +3708,7 @@ LIVRE (<u>idLivre</u> int, titre str, #idAuteur int, #idTheme int)
 
 <p>Vous voyez donc appraître le contenu de la table. Vous constatez que la clé primaire <strong>IdLangue</strong> a bien été générée correctement.</p>
 <p>Il est possible de stocker le résultat de cette requête dans une variable pour l'exploiter plus facilement dans jupyter. Voici comment procéder en modifiant légèrement la première ligne :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">resultat</span> <span class="o">=</span> <span class="o">%</span><span class="n">sql</span> <span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">Langues</span><span class="p">;</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">resultat</span> <span class="o">=</span> <span class="o">%</span><span class="n">sql</span> <span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">Langues</span><span class="p">;</span>
 </code></pre></div>
 <p>Vous voyez au passage la syntaxe concise permettant de récupérer le résultat d'une requête dans une variable. Cette variable résultat est exploitable dans ce classeur, y compris par python !!</p>
 <div class="admonition example">
@@ -3656,7 +3794,7 @@ LIVRE (<u>idLivre</u> int, titre str, #idAuteur int, #idTheme int)
 </tbody>
 </table>
 <p>Pour cela, vous utiliserez la commande suivante pour créer la table et vous adapterez les données à cette structure.</p>
-<div class="highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="o">%%</span><span class="k">sql</span><span class="w"> </span>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="o">%%</span><span class="k">sql</span><span class="w"> </span>
 <span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Auteurs</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">IdAuteur</span><span class="w">       </span><span class="nb">INTEGER</span><span class="w">  </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
 <span class="w">    </span><span class="n">NomAuteur</span><span class="w">      </span><span class="nb">TEXT</span><span class="p">,</span>
@@ -3675,7 +3813,7 @@ LIVRE (<u>idLivre</u> int, titre str, #idAuteur int, #idTheme int)
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Ajoutez les occurrences d'auteur à la la table Auteurs afin que celle-ci reflète les informations ci dessus :</p>
-<div class="highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="o">%%</span><span class="k">sql</span><span class="w"> </span>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="o">%%</span><span class="k">sql</span><span class="w"> </span>
 
 <span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Auteurs</span><span class="w"> </span><span class="p">(</span><span class="n">idAuteur</span><span class="p">,</span><span class="w"> </span><span class="n">NomAuteur</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span>
 <span class="k">VALUES</span>
@@ -3894,7 +4032,7 @@ LIVRE (<u>idLivre</u> int, titre str, #idAuteur int, #idTheme int)
 <div class="tabbed-block">
 <p>saisissez la requête pour créer la table <strong>Livres</strong> puis insérer les données dans la table </p>
 <p>Vérifiez votre travail en listant tous les enregistrements de la table <strong>LIVRES</strong> dans la variable <code>resultat</code></p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">assert</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;1984&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1949</span><span class="p">)</span> <span class="ow">in</span> <span class="n">resultat</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">assert</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;1984&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1949</span><span class="p">)</span> <span class="ow">in</span> <span class="n">resultat</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block"></div>
@@ -3931,7 +4069,7 @@ LIVRE (<u>idLivre</u> int, titre str, #idAuteur int, #idTheme int)
 - Une pour créer la table Themes<br />
 - Une pour insérer les données dans la table.</p>
 <p>Vérifiez votre travail en lisant tous les enregistrements de la table <strong>Themes</strong> dans la variable <code>resultat</code></p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">assert</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Science-fiction&quot;</span><span class="p">)</span> <span class="ow">in</span> <span class="n">resultat</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">assert</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Science-fiction&quot;</span><span class="p">)</span> <span class="ow">in</span> <span class="n">resultat</span>
 </code></pre></div>
 </div>
 <h3 id="une-table-manquante">Une table manquante !<a class="headerlink" href="#une-table-manquante" title="Permanent link">⚓︎</a></h3>
@@ -3941,7 +4079,7 @@ LIVRE (<u>idLivre</u> int, titre str, #idAuteur int, #idTheme int)
 <p class="admonition-title">A faire</p>
 <p>Créer une table <strong>RelationsLivreTheme</strong> mettant en relation les livres et les thèmes associés. Saisir le contenu de cette table.</p>
 </div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">resultat</span> <span class="o">=</span> <span class="o">%</span><span class="n">sql</span> <span class="n">SELECT</span> <span class="n">IdLivre</span><span class="p">,</span> <span class="n">IdTheme</span> <span class="n">FROM</span> <span class="n">RelationsLivreTheme</span><span class="p">;</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">resultat</span> <span class="o">=</span> <span class="o">%</span><span class="n">sql</span> <span class="n">SELECT</span> <span class="n">IdLivre</span><span class="p">,</span> <span class="n">IdTheme</span> <span class="n">FROM</span> <span class="n">RelationsLivreTheme</span><span class="p">;</span>
 <span class="k">assert</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">in</span> <span class="n">resultat</span>
 </code></pre></div>
 <h2 id="cardinalite">Cardinalité<a class="headerlink" href="#cardinalite" title="Permanent link">⚓︎</a></h2>

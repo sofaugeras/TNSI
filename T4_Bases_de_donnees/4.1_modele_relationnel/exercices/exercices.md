@@ -175,7 +175,7 @@ _D'après un exercice de Frédéric Junier publié sous licence CC BY SA_
 
 !!! abstract "2024 Métropole Sujet J2"
 
-    Exercice 1 du sujet [Métropole J2 2024](./data/24-metropole-sept-j1-ex1.pdf)
+    Exercice 1 du sujet [Métropole J2 2024](./data/24_NSIJ2ME.pdf)
 
     ![schéma relationnel](./data/24_NSIMEJ2_1.png)
 

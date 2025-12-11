@@ -1,4 +1,4 @@
-# Projet Toussaint 🎃
+# Projet Pyxel 👾
 
 ![NdC 2025](./data/ndc2025.png){: width=50% .center}
 

@@ -1185,7 +1185,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../T6_6_Epreuve_pratique/BNS_2025/">
+<a class="md-nav__link" href="../../../BNS_2025.md">
 <span class="md-ellipsis">
     BNS 2025
   </span>
@@ -1315,30 +1315,78 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../T8_projet/sommaire/">
 <span class="md-ellipsis">
-    Sommaire
+    sommaire
   </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../T8_projet/1_POO/cours/">
 <span class="md-ellipsis">
-    Projet Toussaint 🎃
+    Projet Pyxel 👾
   </span>
 </a>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_11_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11_3" id="__nav_11_3_label" tabindex="0">
+<span class="md-ellipsis">
+    2 Huffman
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_11_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_11_3">
+<span class="md-nav__icon md-icon"></span>
+            2 Huffman
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../T8_projet/2_Huffman/cours/">
 <span class="md-ellipsis">
-    Projet Noël 🎄
+    Projet Les marmottes 🐹
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../T8_projet/3_expose/cours/">
+<a class="md-nav__link" href="../../../T8_projet/2_Huffman/tp/">
 <span class="md-ellipsis">
-    consignes
+    TP Compression de données
   </span>
 </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_11_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11_4" id="__nav_11_4_label" tabindex="0">
+<span class="md-ellipsis">
+    3 expose
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_11_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_11_4">
+<span class="md-nav__icon md-icon"></span>
+            3 expose
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../T8_projet/3_expose/cours/">
+<span class="md-ellipsis">
+    Exposé façon GO📢
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../T8_projet/3_expose/cours_crypto/">
+<span class="md-ellipsis">
+    Exposé Crypto 🔐
+  </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1523,7 +1571,7 @@ La matrice <span class="arithmatex">\(M_1 =\pmatrix{
     1&amp;0&amp;0&amp;1&amp;0\\
     }\)</span>, associée au graphe <img alt="image" class="center" src="../data/ex2_Q1.png"/></p>
 <p>sera représentée par la variable <code>G</code> suivante :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">G</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">G</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
       <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
       <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
       <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
@@ -1552,7 +1600,7 @@ La matrice <span class="arithmatex">\(M_1 =\pmatrix{
 </li>
 </ul>
 <p>Par exemple, le graphe <img alt="image" class="center" src="../data/ex2_Q1.png"/> sera représenté par le dictionnaire :</p>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -1579,7 +1627,7 @@ La matrice <span class="arithmatex">\(M_1 =\pmatrix{
 <p class="admonition-title">Exercice 3</p>
 <p>Construire les graphes correspondants aux listes d'adjacence suivantes.</p>
 <p><strong>Q1.</strong>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">G1</span> <span class="o">=</span> <span class="p">{</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">G1</span> <span class="o">=</span> <span class="p">{</span>
 <span class="s1">'A'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'B'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">],</span>
 <span class="s1">'B'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'A'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">,</span> <span class="s1">'E'</span><span class="p">,</span> <span class="s1">'F'</span><span class="p">],</span>
 <span class="s1">'C'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'A'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">],</span>
@@ -1593,7 +1641,7 @@ La matrice <span class="arithmatex">\(M_1 =\pmatrix{
 <p><img alt="image" class="center" src="../data/ex3_Q1.png"/></p>
 </details>
 <p><strong>Q2.</strong>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">G2</span> <span class="o">=</span> <span class="p">{</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">G2</span> <span class="o">=</span> <span class="p">{</span>
 <span class="s1">'A'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'B'</span><span class="p">],</span>
 <span class="s1">'B'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'C'</span><span class="p">,</span> <span class="s1">'E'</span><span class="p">],</span>
 <span class="s1">'C'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'B'</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">],</span>
@@ -1620,7 +1668,7 @@ La matrice <span class="arithmatex">\(M_1 =\pmatrix{
 <p>Dans cette partie, nous ne traiterons que des graphes <strong>non-orientés</strong>.</p>
 <h3 id="31-interface-souhaitee">3.1 Interface souhaitée<a class="headerlink" href="#31-interface-souhaitee" title="Permanent link">⚓︎</a></h3>
 <p>Nous voulons que le graphe <img alt="image" class="center" src="../data/ex2_Q1.png"/> puisse être créé grâce aux instructions suivantes :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">g</span> <span class="o">=</span> <span class="n">Graphe</span><span class="p">([</span><span class="s1">'A'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">,</span> <span class="s1">'E'</span><span class="p">])</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">g</span> <span class="o">=</span> <span class="n">Graphe</span><span class="p">([</span><span class="s1">'A'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">,</span> <span class="s1">'E'</span><span class="p">])</span>
 <span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">'A'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">)</span>
 <span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">'A'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">)</span>
 <span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">'A'</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">)</span>
@@ -1630,13 +1678,13 @@ La matrice <span class="arithmatex">\(M_1 =\pmatrix{
 <span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">'D'</span><span class="p">,</span> <span class="s1">'E'</span><span class="p">)</span>
 </code></pre></div>
 <p>Nous souhaitons aussi pouvoir tester si deux sommets sont voisins avec la méthode <code>sont_voisins</code> :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">sont_voisins</span><span class="p">(</span><span class="s1">'E'</span><span class="p">,</span> <span class="s1">'A'</span><span class="p">)</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">sont_voisins</span><span class="p">(</span><span class="s1">'E'</span><span class="p">,</span> <span class="s1">'A'</span><span class="p">)</span>
 <span class="kc">True</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">sont_voisins</span><span class="p">(</span><span class="s1">'E'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">)</span>
 <span class="kc">False</span>
 </code></pre></div>
 <p>Enfin, nous voulons pouvoir obtenir facilement la liste de tous les voisins d'un sommet avec la méthode <code>voisins</code>:
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">voisins</span><span class="p">(</span><span class="s1">'C'</span><span class="p">)</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">voisins</span><span class="p">(</span><span class="s1">'C'</span><span class="p">)</span>
 <span class="p">[</span><span class="s1">'A'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">]</span>
 </code></pre></div></p>
 <h3 id="32-conseils-dimplementation">3.2 Conseils d'implémentation<a class="headerlink" href="#32-conseils-dimplementation" title="Permanent link">⚓︎</a></h3>
@@ -1648,7 +1696,7 @@ La matrice <span class="arithmatex">\(M_1 =\pmatrix{
 <h3 id="33-implementation">3.3 Implémentation<a class="headerlink" href="#33-implementation" title="Permanent link">⚓︎</a></h3>
 <div class="admonition abstract">
 <p class="admonition-title">Implémentation d'une classe <code>Graphe</code> <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:"/> <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:"/> <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:"/></p>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -1692,7 +1740,7 @@ La matrice <span class="arithmatex">\(M_1 =\pmatrix{
 </div>
 <details class="abstract">
 <summary>Implémentation d'une classe <code>Graphe</code> <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:"/> <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:"/> <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:"/></summary>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -1935,14 +1983,14 @@ parcours de graphe. <img alt="⚠️" class="emojione" src="https://cdnjs.cloudf
 <h4 id="412-algorithme-bfs">4.1.2 Algorithme BFS<a class="headerlink" href="#412-algorithme-bfs" title="Permanent link">⚓︎</a></h4>
 <p>On utilise :</p>
 <ul>
-<li>une liste <code class="highlight"><span class="n">traites</span></code> qui recueille les sommets visités (c'est-à-dire qu'on a fini de traiter, après avoir ajouté ses voisins dans la file d'attente) et qui sera renvoyée à la fin de l'algorithme;</li>
-<li>une liste <code class="highlight"><span class="n">decouverts</span></code> qui contient les sommets découverts au fur et à mesure du parcours;</li>
-<li>une <strong>file</strong> <code class="highlight"><span class="n">en_attente</span></code> qui contient les sommets découverts mais non encore visités. On utilisera au choix une classe <code>File</code> écrite plus tôt dans l'année ou tout simplement une <code class="highlight"><span class="nb">list</span></code> en utilisant <code class="highlight"><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span></code> (pour défiler) et <code class="highlight"><span class="n">append</span><span class="p">()</span></code> (pour enfiler).</li>
+<li>une liste <code class="language-py highlight"><span class="n">traites</span></code> qui recueille les sommets visités (c'est-à-dire qu'on a fini de traiter, après avoir ajouté ses voisins dans la file d'attente) et qui sera renvoyée à la fin de l'algorithme;</li>
+<li>une liste <code class="language-py highlight"><span class="n">decouverts</span></code> qui contient les sommets découverts au fur et à mesure du parcours;</li>
+<li>une <strong>file</strong> <code class="language-py highlight"><span class="n">en_attente</span></code> qui contient les sommets découverts mais non encore visités. On utilisera au choix une classe <code>File</code> écrite plus tôt dans l'année ou tout simplement une <code class="language-py highlight"><span class="nb">list</span></code> en utilisant <code class="language-py highlight"><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span></code> (pour défiler) et <code class="language-py highlight"><span class="n">append</span><span class="p">()</span></code> (pour enfiler).</li>
 </ul>
-<p>En début d'algorithme, seul le sommet de départ <code class="highlight"><span class="n">depart</span></code> donné en paramètre est découvert. La fonction <code>BFS</code> renvoie la liste des sommets dans l'ordre de visite lors du parcours en largeur.</p>
+<p>En début d'algorithme, seul le sommet de départ <code class="language-py highlight"><span class="n">depart</span></code> donné en paramètre est découvert. La fonction <code>BFS</code> renvoie la liste des sommets dans l'ordre de visite lors du parcours en largeur.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Parcours en largeur - BFS </p>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -1984,7 +2032,7 @@ parcours de graphe. <img alt="⚠️" class="emojione" src="https://cdnjs.cloudf
 <li>soit traités (auquel cas ils sont dans la liste <code>traites</code>)</li>
 <li>soit en attente (auquel cas ils sont dans la liste <code>en_attente</code>)</li>
 </ul>
-<p>Le test de la ligne 13  <code class="highlight"><span class="k">if</span> <span class="n">voisin</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">decouverts</span><span class="p">:</span></code> permet donc de ne pas mettre en file d'attente un voisin qui est (ou a été) déjà en file d'attente. </p>
+<p>Le test de la ligne 13  <code class="language-py highlight"><span class="k">if</span> <span class="n">voisin</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">decouverts</span><span class="p">:</span></code> permet donc de ne pas mettre en file d'attente un voisin qui est (ou a été) déjà en file d'attente. </p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Que contient la file <code>en_attente</code> ?</p>
@@ -1995,7 +2043,7 @@ parcours de graphe. <img alt="⚠️" class="emojione" src="https://cdnjs.cloudf
 <p class="admonition-title">Exercice 4</p>
 <p><img alt="image" class="center" src="../data/BFS_ex1.png"/></p>
 <p>Grâce à la classe <code>Graphe</code> du 3.3, ce graphe s'implémente par :</p>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -2020,14 +2068,14 @@ parcours de graphe. <img alt="⚠️" class="emojione" src="https://cdnjs.cloudf
 <p><strong>Q1.</strong> Donner le parcours en largeur de <code>g</code>  grâce à l'algorithme BFS, si le sommet de départ est B. Cela correspond au parcours présenté par le gif de début de paragraphe.</p>
 <details class="tip">
 <summary>correction Q1</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">BFS</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">)</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">BFS</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">)</span>
 <span class="p">[</span><span class="s1">'B'</span><span class="p">,</span> <span class="s1">'A'</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">,</span> <span class="s1">'E'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">,</span> <span class="s1">'F'</span><span class="p">,</span> <span class="s1">'G'</span><span class="p">,</span> <span class="s1">'H'</span><span class="p">]</span>
 </code></pre></div>
 </details>
 <p><strong>Q2.</strong> Deviner le parcours en largeur de départ D, puis de départ G. Vérifier grâce à votre algorithme.</p>
 <details class="tip">
 <summary>Correction Q2</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">BFS</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">)</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">BFS</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">)</span>
 <span class="p">[</span><span class="s1">'D'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">,</span> <span class="s1">'E'</span><span class="p">,</span> <span class="s1">'A'</span><span class="p">,</span> <span class="s1">'F'</span><span class="p">,</span> <span class="s1">'G'</span><span class="p">,</span> <span class="s1">'H'</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">BFS</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="s1">'G'</span><span class="p">)</span>
 <span class="p">[</span><span class="s1">'G'</span><span class="p">,</span> <span class="s1">'E'</span><span class="p">,</span> <span class="s1">'F'</span><span class="p">,</span> <span class="s1">'H'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">,</span> <span class="s1">'A'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">]</span>
@@ -2054,7 +2102,7 @@ parcours de graphe. <img alt="⚠️" class="emojione" src="https://cdnjs.cloudf
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Recherche du plus court chemin </p>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -2129,7 +2177,7 @@ Tester le code précédent pour trouver le plus court chemin entre A et G, entre
 <p>C'est un parcours qui s'écrit naturellement de manière <strong>récursive</strong> :</p>
 <div class="admonition abstract">
 <p class="admonition-title">Parcours en profondeur - DFS <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:"/> <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:"/> <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:"/></p>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -2150,7 +2198,7 @@ Rappel : les voisins sont donnés par ordre alphabétique. Le premier voisin de 
 <p><strong>Q2.</strong> Vérifier avec le code précédent. </p>
 <details class="tip">
 <summary>Correction Q2</summary>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -2220,7 +2268,7 @@ Rappel : les voisins sont donnés par ordre alphabétique. Le premier voisin de 
             <span class="n">DFSrec</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">traites</span><span class="p">,</span> <span class="n">voisin</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">traites</span>
 </code></pre></div></td></tr></table></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">DFSrec</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="p">[],</span> <span class="s1">'A'</span><span class="p">)</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">DFSrec</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="p">[],</span> <span class="s1">'A'</span><span class="p">)</span>
 <span class="p">[</span><span class="s1">'A'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">,</span> <span class="s1">'E'</span><span class="p">,</span> <span class="s1">'F'</span><span class="p">,</span> <span class="s1">'G'</span><span class="p">,</span> <span class="s1">'H'</span><span class="p">]</span>
 </code></pre></div>
 </details>
@@ -2230,7 +2278,7 @@ Rappel : les voisins sont donnés par ordre alphabétique. Le premier voisin de 
 <p>Il «suffit» de remplacer la file du parcours BFS par une <strong>pile</strong>. Ainsi, on partira visiter le voisin tout juste ajouté à la <em>file d'attente</em> (qui porte maintenant mal son nom, puisque c'est devenu une pile).</p>
 <div class="admonition abstract">
 <p class="admonition-title">Parcours en profondeur itératif - DFS </p>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>

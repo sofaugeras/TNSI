@@ -1038,7 +1038,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../T6_6_Epreuve_pratique/BNS_2025/">
+<a class="md-nav__link" href="../../BNS_2025.md">
 <span class="md-ellipsis">
     BNS 2025
   </span>
@@ -1229,30 +1229,78 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../T8_projet/sommaire/">
 <span class="md-ellipsis">
-    Sommaire
+    sommaire
   </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../T8_projet/1_POO/cours/">
 <span class="md-ellipsis">
-    Projet Toussaint 🎃
+    Projet Pyxel 👾
   </span>
 </a>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_11_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11_3" id="__nav_11_3_label" tabindex="0">
+<span class="md-ellipsis">
+    2 Huffman
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_11_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_11_3">
+<span class="md-nav__icon md-icon"></span>
+            2 Huffman
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../T8_projet/2_Huffman/cours/">
 <span class="md-ellipsis">
-    Projet Noël 🎄
+    Projet Les marmottes 🐹
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../T8_projet/3_expose/cours/">
+<a class="md-nav__link" href="../../T8_projet/2_Huffman/tp/">
 <span class="md-ellipsis">
-    consignes
+    TP Compression de données
   </span>
 </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_11_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11_4" id="__nav_11_4_label" tabindex="0">
+<span class="md-ellipsis">
+    3 expose
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_11_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_11_4">
+<span class="md-nav__icon md-icon"></span>
+            3 expose
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../T8_projet/3_expose/cours/">
+<span class="md-ellipsis">
+    Exposé façon GO📢
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../T8_projet/3_expose/cours_crypto/">
+<span class="md-ellipsis">
+    Exposé Crypto 🔐
+  </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1282,7 +1330,7 @@
 <p>Un supermarché met en place un système de passage automatique en caisse. Un client scanne les articles à l'aide d'un scanner de code-barres au fur et à mesure qu'il les ajoute dans son panier.</p>
 <p>Les articles s'enregistrent alors dans une structure de données. La structure de données utilisée est une file définie par la classe <code>Panier</code>, avec les primitives habituelles sur la structure de file.</p>
 <p>Pour faciliter la lecture, le code de la classe <code>Panier</code> n'est pas écrit.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Panier</span><span class="p">():</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Panier</span><span class="p">():</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="s2">"Initialise la file comme une file vide."</span>
 
@@ -1307,17 +1355,17 @@
 <p>Écrire le code utilisant une des quatre méthodes ci-dessus permettant d'ajouter l'article à l'objet de classe <code>Panier</code> appelé <code>panier_1</code>.</p>
 <details class="success">
 <summary>Réponse</summary>
-<p><code class="highlight"><span class="n">panier_1</span><span class="o">.</span><span class="n">enfile</span><span class="p">((</span><span class="mi">31002</span><span class="p">,</span> <span class="s2">"café noir"</span><span class="p">,</span> <span class="mf">1.50</span><span class="p">,</span> <span class="mi">50525</span><span class="p">))</span></code></p>
+<p><code class="language-py highlight"><span class="n">panier_1</span><span class="o">.</span><span class="n">enfile</span><span class="p">((</span><span class="mi">31002</span><span class="p">,</span> <span class="s2">"café noir"</span><span class="p">,</span> <span class="mf">1.50</span><span class="p">,</span> <span class="mi">50525</span><span class="p">))</span></code></p>
 </details>
 <p><strong>2.</strong> On souhaite définir une méthode <code>remplir</code> de paramètre <code>panier_temp</code> dans la classe <code>Panier</code> permettant de transférer vers la file tout le contenu d'un autre panier <code>panier_temp</code> qui est aussi un objet de type <code>Panier</code>. Recopier et compléter le code de la méthode <code>remplir</code>.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">remplir</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">panier_temp</span><span class="p">):</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">remplir</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">panier_temp</span><span class="p">):</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">panier_temp</span><span class="o">.</span> <span class="o">...</span> <span class="p">:</span>
         <span class="n">article</span> <span class="o">=</span> <span class="n">panier_temp</span><span class="o">.</span> <span class="o">...</span>
         <span class="bp">self</span><span class="o">.</span> <span class="o">...</span> <span class="p">(</span><span class="n">article</span><span class="p">)</span>
 </code></pre></div>
 <details class="success">
 <summary>Réponse</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">remplir</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">panier_temp</span><span class="p">):</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">remplir</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">panier_temp</span><span class="p">):</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">panier_temp</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
         <span class="n">article</span> <span class="o">=</span> <span class="n">panier_temp</span><span class="o">.</span><span class="n">defile</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">enfile</span><span class="p">(</span><span class="n">article</span><span class="p">)</span>
@@ -1328,7 +1376,7 @@
 <p><img alt="⚠️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/26a0.svg" title=":warning:"/> Attention, après l'appel de cette méthode, le panier devra toujours contenir ses articles.</p>
 <details class="success">
 <summary>Réponse</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">prix_total</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">prix_total</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="n">cumul</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">panier_temp</span> <span class="o">=</span> <span class="n">Panier</span><span class="p">()</span>
 
@@ -1350,7 +1398,7 @@
 <p>Écrire une méthode <code>duree_passage_en_caisse</code> de la classe <code>Panier</code> qui renvoie cette durée.</p>
 <details class="success">
 <summary>Réponse</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">duree_passage_en_caisse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">duree_passage_en_caisse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
         <span class="k">return</span> <span class="kc">None</span>
     <span class="k">else</span><span class="p">:</span>
@@ -1369,7 +1417,7 @@
     <span class="k">return</span> <span class="n">h_maxi</span> <span class="o">-</span> <span class="n">h_mini</span>
 </code></pre></div>
 <p>Si on est certain que la file est dans l'ordre croissant des horaires de scan, on peut proposer le code plus simple</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">duree_passage_en_caisse</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">duree_passage_en_caisse</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="p">:</span>
         <span class="k">return</span> <span class="kc">None</span>
     <span class="k">else</span> <span class="p">:</span>
@@ -1442,7 +1490,7 @@
 <p><strong>3.</strong> L'expression simplifiée B précédente est mal parenthésée (parenthèses fermantes manquantes) car le <code>controleur</code> est différent de zéro en fin d'analyse.<br/>
 L'expression simplifiée C précédente est également mal parenthésée (parenthèse fermante sans parenthèse ouvrante) car le <code>controleur</code> prend une valeur strictement négative pendant l'analyse.</p>
 <p>Recopier et compléter uniquement les lignes 13 et 16 du code ci-dessous pour que la fonction <code>parenthesage_correct</code> réponde à sa description.</p>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -1483,15 +1531,15 @@ L'expression simplifiée C précédente est également mal parenthésée (parent
 <details class="success">
 <summary>Réponse</summary>
 <ul>
-<li>ligne 13: <code class="highlight"><span class="p">(</span><span class="n">controleur</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span></code></li>
-<li>ligne 16: <code class="highlight"><span class="p">(</span><span class="n">controleur</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span></code></li>
+<li>ligne 13: <code class="language-py highlight"><span class="p">(</span><span class="n">controleur</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span></code></li>
+<li>ligne 16: <code class="language-py highlight"><span class="p">(</span><span class="n">controleur</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span></code></li>
 </ul>
 <p>Les parenthèses sont inutiles.</p>
 </details>
 <h3 id="partie-b-texte-correctement-balise">Partie B : Texte correctement balisé<a class="headerlink" href="#partie-b-texte-correctement-balise" title="Permanent link">⚓︎</a></h3>
-<p>On peut faire l'analogie entre le texte simplifié des fichiers HTML (uniquement constitué de balises ouvrantes <code class="highlight"><span class="p">&lt;</span><span class="nt">nom</span><span class="p">&gt;</span></code> et fermantes <code class="highlight"><span class="p">&lt;/</span><span class="nt">nom</span><span class="p">&gt;</span></code>) et les expressions parenthésées.</p>
-<p>Par exemple, l'expression HTML simplifiée : <code class="highlight">"<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>"</code> est correctement balisée.</p>
-<p>On ne tiendra pas compte dans cette partie des balises ne comportant pas de fermeture comme <code class="highlight"><span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span></code> ou <code class="highlight"><span class="p">&lt;</span><span class="nt">img</span> <span class="err">...</span><span class="p">&gt;</span></code>.</p>
+<p>On peut faire l'analogie entre le texte simplifié des fichiers HTML (uniquement constitué de balises ouvrantes <code class="language-html highlight"><span class="p">&lt;</span><span class="nt">nom</span><span class="p">&gt;</span></code> et fermantes <code class="language-html highlight"><span class="p">&lt;/</span><span class="nt">nom</span><span class="p">&gt;</span></code>) et les expressions parenthésées.</p>
+<p>Par exemple, l'expression HTML simplifiée : <code class="language-html highlight">"<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>"</code> est correctement balisée.</p>
+<p>On ne tiendra pas compte dans cette partie des balises ne comportant pas de fermeture comme <code class="language-html highlight"><span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span></code> ou <code class="language-html highlight"><span class="p">&lt;</span><span class="nt">img</span> <span class="err">...</span><span class="p">&gt;</span></code>.</p>
 <p>Afin de vérifier qu'une expression HTML simplifiée est correctement balisée, on peut utiliser une pile (initialement vide) selon l'algorithme suivant :</p>
 <ul>
 <li>
@@ -1510,17 +1558,17 @@ L'expression simplifiée C précédente est également mal parenthésée (parent
 <table markdown="">
 <tr>
 <td>
-<div class="highlight"><span class="filename">Étape 1</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>
+<div class="language-html highlight"><span class="filename">Étape 1</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>
  ↑
 </code></pre></div>
 </td>
 <td>
-<div class="highlight"><span class="filename">Étape 2</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>
+<div class="language-html highlight"><span class="filename">Étape 2</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>
      ↑
 </code></pre></div>
 </td>
 <td>
-<div class="highlight"><span class="filename">Étape 3</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>
+<div class="language-html highlight"><span class="filename">Étape 3</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>
          ↑
 </code></pre></div>
 </td>
@@ -1541,21 +1589,21 @@ Balise `#!html ` fermante,  on dépile, mais...
 </tr>
 <tr>
 <td>
-<div class="highlight"><span class="filename">Pile</span><pre><span></span><code>.
+<div class="language-html highlight"><span class="filename">Pile</span><pre><span></span><code>.
 .         ↙
 .
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
 </code></pre></div>
 </td>
 <td>
-<div class="highlight"><span class="filename">Pile</span><pre><span></span><code>.
+<div class="language-html highlight"><span class="filename">Pile</span><pre><span></span><code>.
 .         ↙
 <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
 </code></pre></div>
 </td>
 <td>
-<div class="highlight"><span class="filename">Pile</span><pre><span></span><code>.          <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>
+<div class="language-html highlight"><span class="filename">Pile</span><pre><span></span><code>.          <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>
 .         ↗
 .
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -1563,7 +1611,7 @@ Balise `#!html ` fermante,  on dépile, mais...
 </td>
 </tr>
 </table>
-<p><code class="highlight"><span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span></code> et <code class="highlight"><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code> ne correspondent pas !
+<p><code class="language-html highlight"><span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span></code> et <code class="language-html highlight"><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code> ne correspondent pas !
 Donc le balisage est incorrect.</p>
 <p><strong>4.</strong> Cette question traite de l'état de la pile lors du déroulement de l'algorithme.</p>
 <p><strong>4.a.</strong> Représenter la pile à chaque étape du déroulement de cet algorithme pour l'expression <code>"&lt;p&gt;&lt;em&gt;&lt;/em&gt;&lt;/p&gt;"</code> (balisage correct).</p>
@@ -1572,7 +1620,7 @@ Donc le balisage est incorrect.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:6"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><input id="__tabbed_1_5" name="__tabbed_1" type="radio"><input id="__tabbed_1_6" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Départ</label><label for="__tabbed_1_2">Étape 1</label><label for="__tabbed_1_3">Étape 2</label><label for="__tabbed_1_4">Étape 3</label><label for="__tabbed_1_5">Étape 4</label><label for="__tabbed_1_6">Fin</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">Parcours de l'expression</span><pre><span></span><code>"<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>"
+<div class="language-html highlight"><span class="filename">Parcours de l'expression</span><pre><span></span><code>"<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>"
 ↑
 </code></pre></div>
 <div class="mermaid">flowchart TD
@@ -1580,7 +1628,7 @@ Donc le balisage est incorrect.</p>
 </div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">Parcours de l'expression</span><pre><span></span><code>"<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>"
+<div class="language-html highlight"><span class="filename">Parcours de l'expression</span><pre><span></span><code>"<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>"
   ↑                  Balise  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>  ouvrante, on empile
 </code></pre></div>
 <div class="mermaid">flowchart TD
@@ -1588,7 +1636,7 @@ Donc le balisage est incorrect.</p>
 </div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">Parcours de l'expression</span><pre><span></span><code>"<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>"
+<div class="language-html highlight"><span class="filename">Parcours de l'expression</span><pre><span></span><code>"<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>"
       ↑              Balise  <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span> ouvrante, on empile
 </code></pre></div>
 <div class="mermaid">flowchart TD
@@ -1596,25 +1644,25 @@ Donc le balisage est incorrect.</p>
 </div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">Parcours de l'expression</span><pre><span></span><code>"<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>"
+<div class="language-html highlight"><span class="filename">Parcours de l'expression</span><pre><span></span><code>"<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>"
           ↑          Balise <span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> fermante, on dépile
 </code></pre></div>
 <div class="mermaid">flowchart TD
     A[" <br/> <br/> <br/>&lt;p&gt;<br/>=====<br/>Pile"]
 </div>
-<p><code>&lt;#!html em&gt;</code> et <code class="highlight"><span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span></code> se correspondent.</p>
+<p><code>&lt;#!html em&gt;</code> et <code class="language-html highlight"><span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span></code> se correspondent.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">Parcours de l'expression</span><pre><span></span><code>"<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>"
+<div class="language-html highlight"><span class="filename">Parcours de l'expression</span><pre><span></span><code>"<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>"
                ↑     Balise <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>  fermante, on dépile
 </code></pre></div>
 <div class="mermaid">flowchart TD
     A[" <br/> <br/> <br/> <br/>=====<br/>Pile"]
 </div>
-<p><code class="highlight"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span></code> et <code class="highlight"><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code> se correspondent.</p>
+<p><code class="language-html highlight"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span></code> et <code class="language-html highlight"><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code> se correspondent.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">Parcours de l'expression</span><pre><span></span><code>"<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>"
+<div class="language-html highlight"><span class="filename">Parcours de l'expression</span><pre><span></span><code>"<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>"
                  ↑
 </code></pre></div>
 <div class="mermaid">flowchart TD
@@ -1650,7 +1698,7 @@ son analyse.</p>
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Exemples :</p>
-<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">ma_pile</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+<div class="language-pycon highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">ma_pile</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ma_pile</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ma_pile</span>
 <span class="go">[2]</span>
@@ -1665,7 +1713,7 @@ son analyse.</p>
 </code></pre></div>
 </div>
 <p>La méthode <code>est_triee</code> ci-dessous renvoie <code>True</code> si, en dépilant tous les éléments, ils sont traités dans l'ordre croissant, et <code>False</code> sinon.</p>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -1686,7 +1734,7 @@ son analyse.</p>
 <p><strong>1.</strong> Recopier sur la copie les lignes 6 et 8 en complétant les points de suspension.</p>
 <details class="success">
 <summary>Réponse</summary>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -1718,7 +1766,7 @@ son analyse.</p>
 </details>
 <p>On souhaite maintenant écrire le code d'une méthode <code>depile_max</code> d'une pile non vide ne contenant que des nombres entiers et renvoyant le plus grand élément de cette pile en le retirant de la pile.</p>
 <p>Après l'exécution de <code>p.depile_max()</code>, le nombre d'éléments de la pile <code>p</code> diminue donc de 1.</p>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -1749,7 +1797,7 @@ son analyse.</p>
 <p><strong>3.</strong> Recopier sur la copie les lignes 9 et 11 en complétant les points de suspension.</p>
 <details class="success">
 <summary>Réponse</summary>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -1779,7 +1827,7 @@ son analyse.</p>
 </code></pre></div></td></tr></table></div>
 </details>
 <p>On crée la pile <code>B</code> représentée par <code>[9, -7, 8, 12, 4]</code> et on effectue l'appel <code>B.depile_max()</code>.</p>
-<p><strong>4.a.</strong> Donner le contenu des piles <code>B</code> et <code>q</code> à la fin de chaque itération de la boucle <code class="highlight"><span class="k">while</span></code> de la ligne 5.</p>
+<p><strong>4.a.</strong> Donner le contenu des piles <code>B</code> et <code>q</code> à la fin de chaque itération de la boucle <code class="language-py highlight"><span class="k">while</span></code> de la ligne 5.</p>
 <details class="success">
 <summary>Réponse</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:5"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><input id="__tabbed_2_4" name="__tabbed_2" type="radio"><input id="__tabbed_2_5" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Initialisation</label><label for="__tabbed_2_2">Fin du tour 1</label><label for="__tabbed_2_3">Fin du tour 2</label><label for="__tabbed_2_4">Fin du tour 3</label><label for="__tabbed_2_5">Fin du tour 4</label></div>
@@ -1871,7 +1919,7 @@ son analyse.</p>
 <p>On a ainsi un exemple où l'ordre des éléments restants n'est pas préservé après l'exécution de <code>depile_max</code>.</p>
 </details>
 <p>On donne le code de la fonction <code>traite</code> :</p>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -2049,7 +2097,7 @@ son analyse.</p>
 <p><strong>2.</strong> La fonction <code>reduit_triplet_au_sommet</code> permet de supprimer l'élément central des trois premiers éléments en partant du haut de la pile, si l'élément du bas et du haut sont de même parité. Les éléments dépilés et non supprimés sont replacés dans le bon ordre dans la pile.</p>
 <p>Recopier et compléter sur la copie le code de la fonction <code>reduit_triplet_au_sommet</code> prenant une pile <code>p</code> en paramètre et la
 modifiant en place. Cette fonction renvoie le booléen <code>est_reduit</code> indiquant si le triplet du sommet a été réduit ou non.</p>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -2071,7 +2119,7 @@ modifiant en place. Cette fonction renvoie le booléen <code>est_reduit</code> i
 </code></pre></div></td></tr></table></div>
 <details class="success">
 <summary>Réponse</summary>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -2102,7 +2150,7 @@ modifiant en place. Cette fonction renvoie le booléen <code>est_reduit</code> i
 <p>Si une pile est réductible, alors sa taille est supérieure ou égale à 3.</p>
 </details>
 <p><strong>3.b.</strong> Recopier et compléter sur la copie :</p>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -2128,7 +2176,7 @@ modifiant en place. Cette fonction renvoie le booléen <code>est_reduit</code> i
 </code></pre></div></td></tr></table></div>
 <details class="success">
 <summary>Résultat</summary>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -2156,7 +2204,7 @@ modifiant en place. Cette fonction renvoie le booléen <code>est_reduit</code> i
 <p><strong>4.</strong> Partant d'une pile d'entiers <code>p</code>, on propose ici d'implémenter une fonction récursive <code>joue</code> jouant une partie complète sur la pile <code>p</code>.</p>
 <p>On effectue donc autant de parcours que nécessaire.</p>
 <p>Une fois la pile parcourue de haut en bas, on effectue un nouveau parcours à condition que le parcours précédent ait modifié la pile. Si à l'inverse, la pile n'a pas été modifiée, on ne fait rien, car la partie est terminée.</p>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">joue</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">parcourt_pile_en_reduisant</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
@@ -2164,7 +2212,7 @@ modifiant en place. Cette fonction renvoie le booléen <code>est_reduit</code> i
 </code></pre></div></td></tr></table></div>
 <details class="success">
 <summary>Résultat</summary>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">joue</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">parcourt_pile_en_reduisant</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>

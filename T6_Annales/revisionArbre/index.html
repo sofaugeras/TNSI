@@ -1038,7 +1038,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../T6_6_Epreuve_pratique/BNS_2025/">
+<a class="md-nav__link" href="../../BNS_2025.md">
 <span class="md-ellipsis">
     BNS 2025
   </span>
@@ -1197,30 +1197,78 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../T8_projet/sommaire/">
 <span class="md-ellipsis">
-    Sommaire
+    sommaire
   </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../T8_projet/1_POO/cours/">
 <span class="md-ellipsis">
-    Projet Toussaint 🎃
+    Projet Pyxel 👾
   </span>
 </a>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_11_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11_3" id="__nav_11_3_label" tabindex="0">
+<span class="md-ellipsis">
+    2 Huffman
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_11_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_11_3">
+<span class="md-nav__icon md-icon"></span>
+            2 Huffman
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../T8_projet/2_Huffman/cours/">
 <span class="md-ellipsis">
-    Projet Noël 🎄
+    Projet Les marmottes 🐹
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../T8_projet/3_expose/cours/">
+<a class="md-nav__link" href="../../T8_projet/2_Huffman/tp/">
 <span class="md-ellipsis">
-    consignes
+    TP Compression de données
   </span>
 </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_11_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11_4" id="__nav_11_4_label" tabindex="0">
+<span class="md-ellipsis">
+    3 expose
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_11_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_11_4">
+<span class="md-nav__icon md-icon"></span>
+            3 expose
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../T8_projet/3_expose/cours/">
+<span class="md-ellipsis">
+    Exposé façon GO📢
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../T8_projet/3_expose/cours_crypto/">
+<span class="md-ellipsis">
+    Exposé Crypto 🔐
+  </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1341,7 +1389,7 @@ reste équilibré.</p>
 </details>
 <p><strong>3.</strong> L'éditeur souhaite utiliser une fonction récursive <code>recherche_auteur</code> qui prend en paramètres <code>abr</code> un arbre binaire de recherche et <code>nom</code> un nom d'auteur. La fonction renvoie <code>True</code> si <code>nom</code> est une étiquette de l'arbre <code>abr</code> et <code>False</code> dans le cas contraire.</p>
 <p>On donne le début de cette fonction ci-dessous, recopier la et compléter la dernière ligne :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_auteur</span><span class="p">(</span><span class="n">abr</span><span class="p">,</span> <span class="n">nom</span><span class="p">):</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_auteur</span><span class="p">(</span><span class="n">abr</span><span class="p">,</span> <span class="n">nom</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">abr</span><span class="p">):</span>
         <span class="k">return</span> <span class="kc">False</span>
     <span class="k">elif</span> <span class="n">valeur</span><span class="p">(</span><span class="n">abr</span><span class="p">)</span> <span class="o">==</span> <span class="n">nom</span><span class="p">:</span>
@@ -1352,7 +1400,7 @@ reste équilibré.</p>
 <p>Une fois la fonction complétée, que renvoie l'appel <code>recherche_auteur(A2, 'SIMENON')</code> ? Justifier la réponse.</p>
 <details class="success">
 <summary>Réponse</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_auteur</span><span class="p">(</span><span class="n">abr</span><span class="p">,</span> <span class="n">nom</span><span class="p">):</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_auteur</span><span class="p">(</span><span class="n">abr</span><span class="p">,</span> <span class="n">nom</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">abr</span><span class="p">):</span>
         <span class="k">return</span> <span class="kc">False</span>
     <span class="k">elif</span> <span class="n">valeur</span><span class="p">(</span><span class="n">abr</span><span class="p">)</span> <span class="o">==</span> <span class="n">nom</span><span class="p">:</span>
@@ -1369,7 +1417,7 @@ un arbre binaire de recherche et renvoie sa hauteur. On pourra avoir recours
 aux appels de fonctions prédéfinies <code>min(val1, val2)</code> et <code>max(val1, val2)</code> qui renvoient respectivement la plus petite et la plus grande valeur entre <code>val1</code> et <code>val2</code>. </p>
 <details class="success">
 <summary>Réponse</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">hauteur</span><span class="p">(</span><span class="n">abr</span><span class="p">):</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">hauteur</span><span class="p">(</span><span class="n">abr</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">abr</span><span class="p">):</span>
         <span class="k">return</span> <span class="mi">0</span>
     <span class="k">else</span><span class="p">:</span>
@@ -1393,7 +1441,7 @@ aux appels de fonctions prédéfinies <code>min(val1, val2)</code> et <code>max(
 <p>On munit la structure de données <code>ArbreBinaire</code> des opérations suivantes :</p>
 <div class="admonition note">
 <p class="admonition-title">Interface de la structure <code>ArbreBinaire</code></p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">est_vide</span><span class="p">(</span><span class="n">arbre</span><span class="p">:</span> <span class="n">ArbreBinaire</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">est_vide</span><span class="p">(</span><span class="n">arbre</span><span class="p">:</span> <span class="n">ArbreBinaire</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""renvoie True si arbre est vide, False sinon"""</span>
 
 <span class="k">def</span> <span class="nf">racine</span><span class="p">(</span><span class="n">arbre</span><span class="p">:</span> <span class="n">ArbreBinaire</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
@@ -1413,7 +1461,7 @@ aux appels de fonctions prédéfinies <code>min(val1, val2)</code> et <code>max(
 <p>L'arbre binaire <span class="arithmatex">\(P\)</span> a une hauteur de <span class="arithmatex">\(4\)</span> (par exemple en considérant le chemin qui va de la racine <code>'AnneB'</code> jusqu'à la feuille <code>'Marc'</code>, on dénombre bien <span class="arithmatex">\(4\)</span> nœuds, aucun autre chemin en dénombre plus).</p>
 </details>
 <p><strong>1.b)</strong> Recopier et compléter la définition de la fonction récursive <code>hauteur</code> qui prend un <code>arbre</code> binaire en paramètre et renvoie la hauteur de cet <code>arbre</code>. On pourra utiliser la fonction <code>max</code> renvoyant la valeur maximale entre deux valeurs.</p>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">hauteur</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">hauteur</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -1429,7 +1477,7 @@ aux appels de fonctions prédéfinies <code>min(val1, val2)</code> et <code>max(
 </code></pre></div></td></tr></table></div>
 <details class="success">
 <summary>Réponse</summary>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">hauteur</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">hauteur</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -1450,7 +1498,7 @@ aux appels de fonctions prédéfinies <code>min(val1, val2)</code> et <code>max(
 <p>Il s'agit d'un entier (type <code>int</code>)</p>
 </details>
 <p><strong>2)</strong> La fonction <code>membres</code> ci-dessous prend un <code>arbre</code> binaire et une <code>liste_membres</code> en paramètres et ajoute, dans un certain ordre, les étiquettes de l'<code>arbre</code> à la <code>liste_membres</code>.</p>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">membres</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">membres</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -1463,7 +1511,7 @@ aux appels de fonctions prédéfinies <code>min(val1, val2)</code> et <code>max(
 <p><strong>2.a)</strong> En supposant la liste <code>membres_p</code> initialement vide, écrire la valeur de cette liste après l'appel <code>membres(arbre_p, membres_p)</code> où <code>arbre_p</code> référence l'arbre <span class="arithmatex">\(P\)</span>.</p>
 <details class="success">
 <summary>Réponse</summary>
-<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">membres_p</span>
+<div class="language-pycon highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">membres_p</span>
 <span class="go">['AnneB', 'Pedro', 'FredB', 'Sophia', 'Malik2', 'Marc', 'AstridM', 'KevinH', 'Nico']</span>
 </code></pre></div>
 </details>
@@ -1492,7 +1540,7 @@ aux appels de fonctions prédéfinies <code>min(val1, val2)</code> et <code>max(
 <p><strong>3.c)</strong> Écrire la fonction <code>profil</code> qui prend un <code>arbre</code> binaire non vide en paramètre et renvoie le profil du membre dont le pseudonyme est l'étiquette de la racine de l'<code>arbre</code> sous la forme d'une chaine de caractères : <code>'or'</code>, <code>'argent'</code> ou <code>'bronze'</code>. Par exemple, l'appel <code>profil(arbre_p)</code> doit renvoyer <code>'or'</code>qui correspond au profil du membre <code>'AnneB'</code>, racine de <span class="arithmatex">\(P\)</span>.</p>
 <details class="success">
 <summary>Réponse</summary>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">profil</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">profil</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -1511,7 +1559,7 @@ aux appels de fonctions prédéfinies <code>min(val1, val2)</code> et <code>max(
         <span class="k">return</span> <span class="s1">'or'</span>
 </code></pre></div></td></tr></table></div>
 <p>Autre solution, consistant à compter le nombre de sous-arbres non vides qui correspond au nombre de personnes parrainées. On en déduit le profil :</p>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">profil version 2</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">profil version 2</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -1529,7 +1577,7 @@ aux appels de fonctions prédéfinies <code>min(val1, val2)</code> et <code>max(
 </code></pre></div></td></tr></table></div>
 </details>
 <p><strong>4)</strong> Afin d'obtenir un tableau dont chaque élément est un <em>tuple</em> contenant le pseudonyme d'un membre et son profil, on propose la fonction <code>membres_profils</code> définie ci-dessous :</p>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">membres_profils</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">membres_profils</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -1540,7 +1588,7 @@ aux appels de fonctions prédéfinies <code>min(val1, val2)</code> et <code>max(
         <span class="n">membres_profils</span><span class="p">(</span><span class="n">droite</span><span class="p">(</span><span class="n">arbre</span><span class="p">),</span> <span class="n">liste_membres_profils</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>On appelle cette fonction sur un arbre <code>arbre_2</code> et on obtient ceci :</p>
-<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">liste_2</span> <span class="o">=</span> <span class="p">[]</span>
+<div class="language-pycon highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">liste_2</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">membres_profils</span><span class="p">(</span><span class="n">arbre_2</span><span class="p">,</span> <span class="n">liste_2</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">liste_2</span>
 <span class="go">[('LeaC', 'or'), ('Ali', 'bronze'), ('Tom45', 'argent'), ('Vero', 'bronze')]</span>
@@ -1561,9 +1609,9 @@ aux appels de fonctions prédéfinies <code>min(val1, val2)</code> et <code>max(
 <details class="success">
 <summary>Réponse</summary>
 <p>On commence par définir un dictionnaire des tarifs de cotisations :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">tarifs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'or'</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">'argent'</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">'bronze'</span><span class="p">:</span> <span class="mi">40</span><span class="p">}</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">tarifs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'or'</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">'argent'</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">'bronze'</span><span class="p">:</span> <span class="mi">40</span><span class="p">}</span>
 </code></pre></div>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">cotisations</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">cotisations</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -1578,7 +1626,7 @@ aux appels de fonctions prédéfinies <code>min(val1, val2)</code> et <code>max(
     <span class="k">return</span> <span class="n">total</span>
 </code></pre></div></td></tr></table></div>
 <p>On peut aussi faire sans la fonction <code>membres_profils</code> :</p>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">cotisations version 2</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">cotisations version 2</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>

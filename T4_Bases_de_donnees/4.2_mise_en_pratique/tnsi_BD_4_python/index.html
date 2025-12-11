@@ -2935,7 +2935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_6_Epreuve_pratique/BNS_2025/" class="md-nav__link">
+      <a href="../../../BNS_2025.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3311,7 +3311,7 @@
         
   
   <span class="md-ellipsis">
-    Sommaire
+    sommaire
   </span>
   
 
@@ -3332,7 +3332,7 @@
         
   
   <span class="md-ellipsis">
-    Projet Toussaint 🎃
+    Projet Pyxel 👾
   </span>
   
 
@@ -3341,6 +3341,46 @@
   
 
               
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_3" id="__nav_11_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2 Huffman
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_3">
+            <span class="md-nav__icon md-icon"></span>
+            2 Huffman
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -3353,7 +3393,7 @@
         
   
   <span class="md-ellipsis">
-    Projet Noël 🎄
+    Projet Les marmottes 🐹
   </span>
   
 
@@ -3370,15 +3410,113 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T8_projet/3_expose/cours/" class="md-nav__link">
+      <a href="../../../T8_projet/2_Huffman/tp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    consignes
+    TP Compression de données
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_4" id="__nav_11_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3 expose
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_4">
+            <span class="md-nav__icon md-icon"></span>
+            3 expose
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T8_projet/3_expose/cours/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exposé façon GO📢
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T8_projet/3_expose/cours_crypto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exposé Crypto 🔐
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3415,43 +3553,43 @@
 <h1 id="exploiter-une-base-de-donnees-avec-python">Exploiter une base de données avec Python<a class="headerlink" href="#exploiter-une-base-de-donnees-avec-python" title="Permanent link">⚓︎</a></h1>
 <p>Dans ce TP, nous allons reprendre notre base de données d'exemples sur les livres, mais nous allons utiliser Python pour exécuter et exploiter les requêtes SQL. </p>
 <p>Notre SGBD sera toujours SQLite : le module python que nous utiliserons se nomme <strong>sqlite3</strong>.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">sqlite3</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">sqlite3</span>
 </code></pre></div>
 <p>Le module étant importé, nous devons réaliser deux actions pour pouvoir commencer à utiliser notre base :
 - ouvrir le fichier de base de données
 - créer un curseur</p>
 <p>Le <em>curseur</em> est un objet python offrant des méthodes pour exécuter des requêtes et récupérer le ou les résultats de ces requêtes.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">bdd</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;livres_db&quot;</span><span class="p">)</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">bdd</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;livres_db&quot;</span><span class="p">)</span>
 <span class="n">curseur</span> <span class="o">=</span> <span class="n">bdd</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
 </code></pre></div>
 <p><em>livres_db</em> est le nom du fichier contenant la base de donnéees SQLite que nous allons exploiter. Si le fichier n'existe pas, une nouvelle base de données sera créée.</p>
 <h2 id="executer-des-requetes-de-selection">Exécuter des requêtes de sélection<a class="headerlink" href="#executer-des-requetes-de-selection" title="Permanent link">⚓︎</a></h2>
 <h3 id="le-principe">Le principe<a class="headerlink" href="#le-principe" title="Permanent link">⚓︎</a></h3>
 <p>Reste ensuite à exécuter notre première requête. Pour cela, nous utiliserons la méthode <strong>execute()</strong> du curseur, la requête étant une chaîne de caractères passée en paramètre.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">requete</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM Livres;&quot;</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">requete</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM Livres;&quot;</span>
 <span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">requete</span><span class="p">)</span>
 </code></pre></div>
 <p>Pour visualiser le résultat de notre requête, nous utiliserons encore notre curseur. Deux méthodes permettent principalement de le faire :
 - <strong>fetchone()</strong> pour récupérer un résultat puis avancer le curseur d'un cran
 - <strong>fetchall()</strong> pour récupérer d'un coup tous les résultats. </p>
 <p>Regardez les exemples ci-dessous pour mieux comprendre comment fonctionne le curseur : il s'agit littéralement d'un curseur que l'on déplace de résultat en résultat. Vous vous en rendrez compte en exécutant plusieurs fois la cellule ci-dessous.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">curseur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">curseur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
 </code></pre></div>
 <p>Vous constatez que le résultat est un <em>tuple</em>  dont les éléments correspondent aux attributs sélectionnés : ici c'est *. Il n'est pas facile de se rappeler de l'ordre des attributs. Pour cela vous pouvez faire appel à la propriété :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">curseur</span><span class="o">.</span><span class="n">description</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">curseur</span><span class="o">.</span><span class="n">description</span>
 </code></pre></div>
 <p>et pour rendre la réponse plus lisible, une petite liste en compréhension ;). Et voilà les attributs de colonne en clair dans l'ordre ou ils apparaissent dans le résultat de la requête !</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="p">[</span><span class="n">d</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">curseur</span><span class="o">.</span><span class="n">description</span><span class="p">]</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="p">[</span><span class="n">d</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">curseur</span><span class="o">.</span><span class="n">description</span><span class="p">]</span>
 </code></pre></div>
 <p>A présent, le fonctionnement de <strong>fetchall()</strong> ne devrait pas vous étonner : on récupère logiquement un tuple avec tous les résultats.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">curseur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">curseur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 </code></pre></div>
 <p>Si vous avez suivi les instructions précédentes, vous devriez constater qu'il manque des enregistrements. Pourquoi ?
 Un indice : si vous réexécutez une nouvelle fois la méthode <strong>fetchall()</strong> du curseur, celle-ci ne renverra rien !</p>
 <p>Et oui, c'est la notion de curseur qui se déplace au fur à mesure qu'unb résultat est donné : les précédents appels de <strong>fetchone()</strong> ont fait avancer le curseur, et de même, <strong>fetchall()</strong> positionne le curseur à la toute fin.</p>
 <p>Pour retrouver tous les résultats à nouveau, il faut réexécuter la requête. Evitez donc de mélanger <strong>fetchone()</strong> et <strong>fetchall()</strong> sous peine de ne plus trop savoir ou en est le curseur et ce que vous récupérez.</p>
 <p>Voici donc le moyen le plus simple de récupérer tous les résultats d'une requête d'un coup.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">requete</span><span class="p">)</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">requete</span><span class="p">)</span>
 <span class="n">resultats</span> <span class="o">=</span> <span class="n">curseur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 <span class="n">resultats</span>
 </code></pre></div>
@@ -3460,7 +3598,7 @@ Un indice : si vous réexécutez une nouvelle fois la méthode <strong>fetchall(
 - qui prend en paramètre un curseur et un nom d'auteur
 - qui renvoie son prénom</p>
 <p>Si le nom de l'auteur ne figure pas dans la table <em>Auteurs</em>, la fonction renverra <strong>None</strong>.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">prenom</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">nom</span><span class="p">):</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">prenom</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">nom</span><span class="p">):</span>
     <span class="n">requete</span> <span class="o">=</span> <span class="s2">&quot;SELECT PrenomAuteur FROM Auteurs WHERE NomAuteur = ?&quot;</span>
     <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">requete</span><span class="p">,</span> <span class="p">[</span><span class="n">nom</span><span class="p">])</span>
     <span class="n">r</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
@@ -3469,7 +3607,7 @@ Un indice : si vous réexécutez une nouvelle fois la méthode <strong>fetchall(
     <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">prenom</span><span class="p">(</span><span class="n">curseur</span><span class="p">,</span> <span class="s2">&quot;Verne&quot;</span><span class="p">)</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">prenom</span><span class="p">(</span><span class="n">curseur</span><span class="p">,</span> <span class="s2">&quot;Verne&quot;</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="explications">Explications<a class="headerlink" href="#explications" title="Permanent link">⚓︎</a></h3>
 <p>Dans cet exemple, nous construisons une requête à partir d'une variable Python. SQLite propose un mécanisme de substitution sécurisé permettant d'injecter une ou plusieurs variables à l'intérieur d'une requête. <strong>C'est ce mécanisme que vous devez utiliser</strong> : ne construisez pas vous même la chaîne de caractère contenant la requête complète, c'est une mauvaise pratique qui vous conduira inévitablement à des problèmes.</p>
@@ -3482,16 +3620,16 @@ Un indice : si vous réexécutez une nouvelle fois la méthode <strong>fetchall(
 - qui prend en paramètre un curseur et un nom d'auteur
 - qui renvoie une liste de <em>Titres</em> de romans écrits par cet auteur</p>
 <p>Si le nom de l'auteur ne figure pas dans la table <em>Auteurs</em>, la fonction renverra <strong>None</strong>.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">romans</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">nom</span><span class="p">):</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">romans</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">nom</span><span class="p">):</span>
     <span class="c1"># YOUR CODE HERE</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">assert</span> <span class="n">romans</span><span class="p">(</span><span class="n">curseur</span><span class="p">,</span> <span class="s2">&quot;Asimov&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;Fondation&#39;</span><span class="p">,</span> <span class="s1">&#39;Les Robots&#39;</span><span class="p">,</span> <span class="s1">&#39;La Fin de l’éternité&#39;</span><span class="p">]</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">assert</span> <span class="n">romans</span><span class="p">(</span><span class="n">curseur</span><span class="p">,</span> <span class="s2">&quot;Asimov&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;Fondation&#39;</span><span class="p">,</span> <span class="s1">&#39;Les Robots&#39;</span><span class="p">,</span> <span class="s1">&#39;La Fin de l’éternité&#39;</span><span class="p">]</span>
 <span class="k">assert</span> <span class="n">romans</span><span class="p">(</span><span class="n">curseur</span><span class="p">,</span> <span class="s2">&quot;Verne&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;De la Terre à la Lune&#39;</span><span class="p">]</span>
 </code></pre></div>
 <h2 id="inserer-de-nouveaux-enregistrements">Insérer de nouveaux enregistrements<a class="headerlink" href="#inserer-de-nouveaux-enregistrements" title="Permanent link">⚓︎</a></h2>
 <p>Les requêtes de modification sur la base se font de la même manière que les requêtes de sélection, à une petite subtilité près : après exécution de la requête, il faudra faire appel à la méthode <strong>commit()</strong> de l'objet <em>bdd</em> (issu de la connexion) afin que les modifications soient prises en compte dans le fichier de base de données. </p>
 <p><strong>Attention</strong> : Si vous oubliez l'appel à commit, vos modifications seront perdues lorsque vous quitterez votre programme car elles ne seront pas inscrites dans le fichier de la base de données.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">requete</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">requete</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">INSERT INTO Auteurs </span>
 <span class="s2">  (NomAuteur, PrenomAuteur, IdLangue, AnneeNaissance)</span>
 <span class="s2">VALUES</span>
@@ -3502,32 +3640,32 @@ Un indice : si vous réexécutez une nouvelle fois la méthode <strong>fetchall(
 <span class="n">bdd</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
 </code></pre></div>
 <p>la propriété <strong>lastrowid</strong> peut être intéressante car elle donne accès à la clé primaire créée automatiquement pour notre nouvel enregistrement. En voici une utilisation :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">last_id</span> <span class="o">=</span> <span class="n">curseur</span><span class="o">.</span><span class="n">lastrowid</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">last_id</span> <span class="o">=</span> <span class="n">curseur</span><span class="o">.</span><span class="n">lastrowid</span>
 <span class="n">last_id</span> 
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">requete</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM Auteurs WHERE IdAuteur = ?&quot;</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">requete</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM Auteurs WHERE IdAuteur = ?&quot;</span>
 <span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">requete</span><span class="p">,</span> <span class="p">[</span><span class="n">last_id</span><span class="p">])</span>
 <span class="n">curseur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
 </code></pre></div>
 <h3 id="a-vous-de-jouer_1">A vous de jouer<a class="headerlink" href="#a-vous-de-jouer_1" title="Permanent link">⚓︎</a></h3>
 <p>Effacez de la table auteur ce dernier enregistrement que nous avons créé.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># YOUR CODE HERE</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># YOUR CODE HERE</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">requete</span> <span class="o">=</span> <span class="s2">&quot;SELECT COUNT(*) from Auteurs&quot;</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">requete</span> <span class="o">=</span> <span class="s2">&quot;SELECT COUNT(*) from Auteurs&quot;</span>
 <span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">requete</span><span class="p">)</span>
 <span class="k">assert</span> <span class="n">curseur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">10</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM Auteurs&quot;</span><span class="p">)</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM Auteurs&quot;</span><span class="p">)</span>
 <span class="n">curseur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 </code></pre></div>
 <h2 id="pour-finir">Pour Finir<a class="headerlink" href="#pour-finir" title="Permanent link">⚓︎</a></h2>
 <p>Notre travail sur la BDD exemple est à présent terminé. Afin de fermer le fichier proprement et de s'assurer que les données saisies seront bien inscrites dans le fichier, il faut <em>impérativement</em> appeler la méthode <strong>close()</strong> sur l'objet <em>bdd</em> :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">bdd</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">bdd</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">curseur</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">curseur</span>
 </code></pre></div>
 <p>A partir de ce moment là, plus acune opération n'est possible sur la base de données comme le montre la cellule suivante :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">requete</span> <span class="o">=</span> <span class="s2">&quot;SELECT COUNT(*) from Auteurs&quot;</span>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">requete</span> <span class="o">=</span> <span class="s2">&quot;SELECT COUNT(*) from Auteurs&quot;</span>
 <span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">requete</span><span class="p">)</span>
 </code></pre></div>
 
