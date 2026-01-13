@@ -1,10 +1,9 @@
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: En cours : [Base de données](./T4_Bases_de_donnees/sommaire.md)<br /> 
+    📌  En cours : [Arbres](./T1_Structures_de_donnees/1.4_Arbres/cours.md)<br /> 
     
-    :hourglass: A venir :  <br />
-    - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) <br />
-    - [Gestion des processus](./T5_Architecture_materielle/5.2_Gestion_des_processus/cours.md)<br /><br />
+    ⌛️ A venir : 🐹 [Projet : codage de Huffman](./T8_projet/2_Huffman/cours.md) <br />
+    <br />
 
 !!! abstract "Actualités :newspaper:" 
 
@@ -40,16 +39,17 @@
     - 📆 : DS de spécialité : Jeudi 16 octobre 2025 de 10h à 12h en grande permanence.
     - [Listes chaînées](./T1_Structures_de_donnees/1.2_Listes/cours.md) 
     - 👽 : [projet Pyxel](./T8_projet/1_POO/cours.md) 📆 Restitution attendue : Pour le Jeudi 6 novembre 2025<br />
-    - [Mise au point de programme](./T2_Programmation/2.4_Mise_au_point_de_programme/cours.md)
+    - [Mise au point de programme](./T2_Programmation/2.4_Mise_au_point_de_programme/cours.md)<br />
+    - [Base de données](./T4_Bases_de_donnees/sommaire.md)<br />
+    - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) <br />
+    - [calculabilité](./T2_Programmation/2.3_Calculabilite_Decidabilite/cours.md) en distanciel <br />
+    - [Retour sur les dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) en distanciel <br />
+    - [Gestion des processus](./T5_Architecture_materielle/5.2_Gestion_des_processus/cours.md)<br />
 
     
 <!--       
 !!! note "*Thèmes traités*"
 
-    - [calculabilité](./T2_Programmation/2.3_Calculabilite_Decidabilite/cours.md)<br />
-    - [Retour sur les dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) <br />
-    - [Arbres](./T1_Structures_de_donnees/1.4_Arbres/cours.md)<br />
-    - ([Projet : codage de Huffman](./T8_projet/2_Huffman/cours.md)) ANNULE CAUSE INONDATION<br />
     - [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)<br />
     - [Sécurisation des communications, Cryptographie](./TNSI/T5_Architecture_materielle/5.4_Cryptographie/cours/)<br />
     - [Graphes](./T1_Structures_de_donnees/1.5_Graphes/cours/)<br />

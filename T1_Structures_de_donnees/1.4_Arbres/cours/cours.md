@@ -250,7 +250,7 @@ Pour comprendre facilement la numérotation, il suffit de s'imaginer l'arbre com
 !!! example "Exercice"
     === "Enoncé"
 
-        1.	Représenter l'arbre défini par la liste `[5, 2, 6, 1, 4, A, 7]`.
+        1.	Représenter l'arbre défini par la liste $[5, 2, 6, 1, 4, \Delta, 7]$.
         2.  Quelle liste représente cet arbre ?
         ![eytzinger](./data/eytzingerExo.png){: .center}
 
