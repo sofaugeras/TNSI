@@ -4114,11 +4114,10 @@ pour lesquels le parcours <strong>infixe</strong> affiche à chaque fois <strong
 <div class="tabbed-set tabbed-alternate" data-tabs="8:4"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><input id="__tabbed_8_3" name="__tabbed_8" type="radio" /><input id="__tabbed_8_4" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Enoncé</label><label for="__tabbed_8_2">Correction 1.</label><label for="__tabbed_8_3">Correction 2.</label><label for="__tabbed_8_4">Correction 3.</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<ol>
-<li>Recopier et compléter l'arbre ci-dessous pour que son parcours <strong>suffixe</strong> affiche dans l'ordre les lettres INGENIEUR.</li>
-<li>Reprenez cet arbre et compléter l'arbre ci-dessous pour que son parcours <strong>préfixe</strong> affiche dans l'ordre les lettres EPERVIER.</li>
-<li>Reprenez cet arbre et compléter l'arbre ci-dessous pour que son parcours <strong>infixe</strong> affiche dans l'ordre les lettres GAUFFRE.</li>
-</ol>
+<p><img alt="arbre vide" class="center" src="../data/IngenieurVide.png" />
+1.  Recopier et compléter l'arbre ci-dessous pour que son parcours <strong>suffixe</strong> affiche dans l'ordre les lettres INGENIEUR.
+2. Construire un arbre pour que son parcours <strong>préfixe</strong> affiche dans l'ordre les lettres EPERVIER.
+3. Construire un arbre pour que son parcours <strong>infixe</strong> affiche dans l'ordre les lettres GAUFFRE.</p>
 </div>
 <div class="tabbed-block">
 <p><img alt="ingenieur" class="center" src="../data/ingenieur.png" /></p>
@@ -4146,7 +4145,7 @@ Les deux autres affichages correspondent à la notation polonaise et à la notat
 <div class="tabbed-block">
 <p>parcours infixe : <span class="arithmatex">\(5 + 7 * 5 + 25 - 7 / 3\)</span> <br/>
 parcours préfixe : <span class="arithmatex">\(+ * 5 7 5 / - 25 7 3\)</span> (notation polonaise)<br/>
-parcours suffixe : $ 5 7 + 5 * 25 7 - 3 7$ (notation polonaise inversée)</p>
+parcours suffixe : <span class="arithmatex">\(5 7 + 5 * 25 7 - 3 7\)</span> (notation polonaise inversée)</p>
 </div>
 </div>
 </div>
@@ -4432,14 +4431,14 @@ N'oubliez pas d'installer les modules <code>matplotlib</code> et <code>networkx<
 qui donnera alors :</p>
 <div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">affiche</span><span class="p">())</span>
 <span class="o">|</span><span class="n">_4</span>
-<span class="o">|</span><span class="n">_3</span>
-    <span class="o">|</span><span class="n">_6</span>
-    <span class="o">|</span><span class="n">_None</span>
-<span class="o">|</span><span class="n">_1</span>
-    <span class="o">|</span><span class="n">_2</span>
-    <span class="o">|</span><span class="n">_7</span>
-        <span class="o">|</span><span class="n">_9</span>
+    <span class="o">|</span><span class="n">_3</span>
+        <span class="o">|</span><span class="n">_6</span>
         <span class="o">|</span><span class="n">_None</span>
+    <span class="o">|</span><span class="n">_1</span>
+        <span class="o">|</span><span class="n">_2</span>
+        <span class="o">|</span><span class="n">_7</span>
+            <span class="o">|</span><span class="n">_9</span>
+            <span class="o">|</span><span class="n">_None</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -4567,10 +4566,10 @@ Exemple avec l'arbre
         return None
     # appel récursif de chaque fils
     Si l&#39;arbre gauche n&#39;est pas vide :
-        prefixe(arbre.gauche)
+        infixe(arbre.gauche)
     afficher le noeud courant en chaine de caractère ou dans une liste
     Si l&#39;arbre droit n&#39;est pas vide
-        prefixe(arbre.droit)
+        infixe(arbre.droit)
 </code></pre></div>
 </div>
 <p>Exemple avec l'arbre 
@@ -4615,9 +4614,9 @@ Exemple avec l'arbre
         return None
     # appel récursif de chaque fils
     Si l&#39;arbre gauche n&#39;est pas vide :
-        prefixe(arbre.gauche)
+        suffixe(arbre.gauche)
     Si l&#39;arbre droit n&#39;est pas vide
-        prefixe(arbre.droit)
+        su*ffixe(arbre.droit)
     afficher le noeud courant en chaine de caractère ou dans une liste
 </code></pre></div>
 </div>

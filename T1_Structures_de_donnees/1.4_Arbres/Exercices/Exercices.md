@@ -1,6 +1,6 @@
 ## 2022, Nouvelle Caledonie J2
 
-Exercice 2 du sujet [Nouvelle-Calédonie J2 2022](http://projet.eu.org/pedago/sin/NSI/sujets/NSI-2022-caledonie-2-sujet-officiel.pdf){. target="_blank"}  
+Exercice 2 du sujet [Nouvelle-Calédonie J2 2022](./data/22-NSIJ2NC1.pdf){. target="_blank"}  
 
 ??? check "Correction 1"
     C'est un arbre binaire car chaque nœud possède au maximum deux fils.
