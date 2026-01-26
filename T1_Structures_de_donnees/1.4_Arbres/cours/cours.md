@@ -873,7 +873,7 @@ Exemple avec l'arbre
         Si l'arbre gauche n'est pas vide :
             suffixe(arbre.gauche)
         Si l'arbre droit n'est pas vide
-            su*ffixe(arbre.droit)
+            suffixe(arbre.droit)
         afficher le noeud courant en chaine de caractère ou dans une liste
     ```
 Exemple avec l'arbre 
