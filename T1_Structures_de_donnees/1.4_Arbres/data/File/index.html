@@ -7,17 +7,17 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Site de cours Terminale NSI" name="description"/>
 <meta content="Sophie FAUGERAS" name="author"/>
-<link href="https://github.com/sofaugeras/TNSI/T2_Programmation/2.4_Mise_au_point_de_programme/data/bogues/bogue05/" rel="canonical"/>
-<link href="../bogue04/" rel="prev"/>
-<link href="../bogue06/" rel="next"/>
-<link href="../../../../../xtra/favTNSI.png" rel="icon"/>
+<link href="https://github.com/sofaugeras/TNSI/T1_Structures_de_donnees/1.4_Arbres/data/File/" rel="canonical"/>
+<link href="../../tnsi_arbres/" rel="prev"/>
+<link href="../../../1.5_Graphes/TP_Labyrinthe/" rel="next"/>
+<link href="../../../../xtra/favTNSI.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.5.34" name="generator"/>
-<title>Bogue05 - Saint Sauveur TNSI</title>
-<link href="../../../../../assets/stylesheets/main.35f28582.min.css" rel="stylesheet"/>
-<link href="../../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<title>File - Saint Sauveur TNSI</title>
+<link href="../../../../assets/stylesheets/main.35f28582.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0l-30.1 30 97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5l167.3-167.4-98-98zM96 64c-53 0-96 43-96 96v256c0 53 43 96 96 96h256c53 0 96-43 96-96v-96c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32z"/></svg>');}</style>
-<script src="../../../../../xtra/webcomponentsjs/webcomponents-loader.js"></script>
-<script async="" defer="" src="../../../../../xtra/gifplayer/gif-player.es6.js"></script>
+<script src="../../../../xtra/webcomponentsjs/webcomponents-loader.js"></script>
+<script async="" defer="" src="../../../../xtra/gifplayer/gif-player.es6.js"></script>
 <!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
 <script charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" type="text/javascript"></script>
 <script charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.min.js" type="text/javascript"></script>
@@ -26,9 +26,9 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.23.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.23.0/css/jquery.terminal.min.css" rel="stylesheet"/>
-<link href="../../../../../stylesheets/extra.css" rel="stylesheet"/>
-<link href="../../../../../xtra/stylesheets/pyoditeur.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../../../stylesheets/extra.css" rel="stylesheet"/>
+<link href="../../../../xtra/stylesheets/pyoditeur.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-NXDLLVVQEB"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-NXDLLVVQEB",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-NXDLLVVQEB",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
 </head>
@@ -42,7 +42,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="En-tête" class="md-header__inner md-grid">
-<a aria-label="Saint Sauveur TNSI" class="md-header__button md-logo" data-md-component="logo" href="../../../../.." title="Saint Sauveur TNSI">
+<a aria-label="Saint Sauveur TNSI" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="Saint Sauveur TNSI">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -58,7 +58,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Bogue05
+              File
             
           </span>
 </div>
@@ -122,7 +122,7 @@
 <div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../..">
+<a class="md-tabs__link" href="../../../..">
         
   
     
@@ -131,16 +131,16 @@
 
       </a>
 </li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../../T1_Structures_de_donnees/sommaire/">
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../../../sommaire/">
           
   
   T1 Structures de données
 
         </a>
 </li>
-<li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="../../../../sommaire/">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../T2_Programmation/sommaire/">
           
   
   T2 Programmation
@@ -148,7 +148,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../../T3_Algorithmique/sommaire/">
+<a class="md-tabs__link" href="../../../../T3_Algorithmique/sommaire/">
           
   
   T3 Algorithmique
@@ -156,7 +156,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../../T4_Bases_de_donnees/sommaire/">
+<a class="md-tabs__link" href="../../../../T4_Bases_de_donnees/sommaire/">
           
   
   T4 Base de données
@@ -164,7 +164,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../../T5_Architecture_materielle/sommaire/">
+<a class="md-tabs__link" href="../../../../T5_Architecture_materielle/sommaire/">
           
   
   T5 Archi. matérielle
@@ -172,7 +172,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../../T6_5_algos_coeur/sommaire/">
+<a class="md-tabs__link" href="../../../../T6_5_algos_coeur/sommaire/">
           
   
   Algos ❤
@@ -180,7 +180,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../../T6_6_Epreuve_pratique/BNS_2026/">
+<a class="md-tabs__link" href="../../../../T6_6_Epreuve_pratique/BNS_2026/">
           
   
   EP 💻
@@ -188,7 +188,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../../T6_Annales/epreuve_bac/">
+<a class="md-tabs__link" href="../../../../T6_Annales/epreuve_bac/">
           
   
   Bac 🖊️
@@ -196,7 +196,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../../T7_Divers/conseils/">
+<a class="md-tabs__link" href="../../../../T7_Divers/conseils/">
           
   
   Ressources 🔦
@@ -204,7 +204,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../../T8_projet/sommaire/">
+<a class="md-tabs__link" href="../../../../T8_projet/sommaire/">
           
   
   Projet 💡
@@ -221,7 +221,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Saint Sauveur TNSI" class="md-nav__button md-logo" data-md-component="logo" href="../../../../.." title="Saint Sauveur TNSI">
+<a aria-label="Saint Sauveur TNSI" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="Saint Sauveur TNSI">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"></path></svg>
 </a>
     Saint Sauveur TNSI
@@ -238,28 +238,28 @@
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../..">
+<a class="md-nav__link" href="../../../..">
 <span class="md-ellipsis">
     Home
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
 <span class="md-ellipsis">
     T1 Structures de données
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
             T1 Structures de données
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T1_Structures_de_donnees/sommaire/">
+<a class="md-nav__link" href="../../../sommaire/">
 <span class="md-ellipsis">
     Sommaire
   </span>
@@ -280,14 +280,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/">
+<a class="md-nav__link" href="../../../1.1_Listes_Piles_Files/cours/">
 <span class="md-ellipsis">
     Cours
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/">
+<a class="md-nav__link" href="../../../1.1_Listes_Piles_Files/Exercices/">
 <span class="md-ellipsis">
     Exercices
   </span>
@@ -311,28 +311,28 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T1_Structures_de_donnees/1.2_Listes/cours/">
+<a class="md-nav__link" href="../../../1.2_Listes/cours/">
 <span class="md-ellipsis">
     Cours
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T1_Structures_de_donnees/1.2_Listes/exercices/">
+<a class="md-nav__link" href="../../../1.2_Listes/exercices/">
 <span class="md-ellipsis">
     Exercices
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T1_Structures_de_donnees/1.2_Listes/retourPile/">
+<a class="md-nav__link" href="../../../1.2_Listes/retourPile/">
 <span class="md-ellipsis">
     Le retour de la pile
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T1_Structures_de_donnees/1.2_Listes/TD_FlaviusJoseph/">
+<a class="md-nav__link" href="../../../1.2_Listes/TD_FlaviusJoseph/">
 <span class="md-ellipsis">
     TD Flavius Josephe
   </span>
@@ -356,14 +356,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T1_Structures_de_donnees/1.3_Dictionnaires/cours/">
+<a class="md-nav__link" href="../../../1.3_Dictionnaires/cours/">
 <span class="md-ellipsis">
     Cours
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T1_Structures_de_donnees/1.3_Dictionnaires/exercices/">
+<a class="md-nav__link" href="../../../1.3_Dictionnaires/exercices/">
 <span class="md-ellipsis">
     Exercices
   </span>
@@ -372,36 +372,36 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_5" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
 <span class="md-ellipsis">
     1.4 Arbres
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_5_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_2_5_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_5">
 <span class="md-nav__icon md-icon"></span>
             1.4 Arbres
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T1_Structures_de_donnees/1.4_Arbres/cours/">
+<a class="md-nav__link" href="../../cours/">
 <span class="md-ellipsis">
     Les arbres
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T1_Structures_de_donnees/1.4_Arbres/cours2/">
+<a class="md-nav__link" href="../../cours2/">
 <span class="md-ellipsis">
     Les arbres binaires de recherche
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T1_Structures_de_donnees/1.4_Arbres/Exercices/">
+<a class="md-nav__link" href="../../Exercices/">
 <span class="md-ellipsis">
     Exercices
   </span>
@@ -425,21 +425,21 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T1_Structures_de_donnees/1.5_Graphes/cours/">
+<a class="md-nav__link" href="../../../1.5_Graphes/cours/">
 <span class="md-ellipsis">
     Cours
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T1_Structures_de_donnees/1.5_Graphes/exercices/">
+<a class="md-nav__link" href="../../../1.5_Graphes/exercices/">
 <span class="md-ellipsis">
     Exercices
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T1_Structures_de_donnees/1.5_Graphes/TP_Labyrinthe/">
+<a class="md-nav__link" href="../../../1.5_Graphes/TP_Labyrinthe/">
 <span class="md-ellipsis">
     TP Labyrinthe
   </span>
@@ -451,22 +451,22 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
 <span class="md-ellipsis">
     T2 Programmation
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
             T2 Programmation
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../sommaire/">
+<a class="md-nav__link" href="../../../../T2_Programmation/sommaire/">
 <span class="md-ellipsis">
     Sommaire
   </span>
@@ -487,14 +487,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../2.1_Recursivite/cours/">
+<a class="md-nav__link" href="../../../../T2_Programmation/2.1_Recursivite/cours/">
 <span class="md-ellipsis">
     Cours
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../2.1_Recursivite/exercices/">
+<a class="md-nav__link" href="../../../../T2_Programmation/2.1_Recursivite/exercices/">
 <span class="md-ellipsis">
     Exercices
   </span>
@@ -518,21 +518,21 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../2.2_Programmation_Orientee_Objet/cours/">
+<a class="md-nav__link" href="../../../../T2_Programmation/2.2_Programmation_Orientee_Objet/cours/">
 <span class="md-ellipsis">
     Cours
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../2.2_Programmation_Orientee_Objet/exercices/">
+<a class="md-nav__link" href="../../../../T2_Programmation/2.2_Programmation_Orientee_Objet/exercices/">
 <span class="md-ellipsis">
     Exercices
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../2.2_Programmation_Orientee_Objet/resume/">
+<a class="md-nav__link" href="../../../../T2_Programmation/2.2_Programmation_Orientee_Objet/resume/">
 <span class="md-ellipsis">
     Résumé
   </span>
@@ -556,14 +556,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../2.3_Calculabilite_Decidabilite/cours/">
+<a class="md-nav__link" href="../../../../T2_Programmation/2.3_Calculabilite_Decidabilite/cours/">
 <span class="md-ellipsis">
     Cours
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../2.3_Calculabilite_Decidabilite/exo/">
+<a class="md-nav__link" href="../../../../T2_Programmation/2.3_Calculabilite_Decidabilite/exo/">
 <span class="md-ellipsis">
     Documentation
   </span>
@@ -572,36 +572,36 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_5" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
 <span class="md-ellipsis">
     2.4 Mise au point de programme
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_3_5_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_3_5_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_5">
 <span class="md-nav__icon md-icon"></span>
             2.4 Mise au point de programme
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cours/">
+<a class="md-nav__link" href="../../../../T2_Programmation/2.4_Mise_au_point_de_programme/cours/">
 <span class="md-ellipsis">
     Cours
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../bonnesPratiques/">
+<a class="md-nav__link" href="../../../../T2_Programmation/2.4_Mise_au_point_de_programme/bonnesPratiques/">
 <span class="md-ellipsis">
     Bonnes pratiques
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../TP/">
+<a class="md-nav__link" href="../../../../T2_Programmation/2.4_Mise_au_point_de_programme/TP/">
 <span class="md-ellipsis">
     TP mise en application
   </span>
@@ -628,7 +628,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T3_Algorithmique/sommaire/">
+<a class="md-nav__link" href="../../../../T3_Algorithmique/sommaire/">
 <span class="md-ellipsis">
     Sommaire
   </span>
@@ -649,14 +649,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T3_Algorithmique/3.1_Diviser_pour_regner/cours/">
+<a class="md-nav__link" href="../../../../T3_Algorithmique/3.1_Diviser_pour_regner/cours/">
 <span class="md-ellipsis">
     Cours
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T3_Algorithmique/3.1_Diviser_pour_regner/exercices/">
+<a class="md-nav__link" href="../../../../T3_Algorithmique/3.1_Diviser_pour_regner/exercices/">
 <span class="md-ellipsis">
     Exercices
   </span>
@@ -680,21 +680,21 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T3_Algorithmique/3.2_Programmation_dynamique/cours/">
+<a class="md-nav__link" href="../../../../T3_Algorithmique/3.2_Programmation_dynamique/cours/">
 <span class="md-ellipsis">
     Cours
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T3_Algorithmique/3.2_Programmation_dynamique/TP_pyramides/">
+<a class="md-nav__link" href="../../../../T3_Algorithmique/3.2_Programmation_dynamique/TP_pyramides/">
 <span class="md-ellipsis">
     TP Pyramides
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T3_Algorithmique/3.2_Programmation_dynamique/TP_rendu_monnaie/">
+<a class="md-nav__link" href="../../../../T3_Algorithmique/3.2_Programmation_dynamique/TP_rendu_monnaie/">
 <span class="md-ellipsis">
     TP Rendu de monnaie
   </span>
@@ -718,14 +718,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T3_Algorithmique/3.3_Recherche_textuelle/cours/">
+<a class="md-nav__link" href="../../../../T3_Algorithmique/3.3_Recherche_textuelle/cours/">
 <span class="md-ellipsis">
     Recherche textuelle
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T3_Algorithmique/3.3_Recherche_textuelle/vers_BMH/">
+<a class="md-nav__link" href="../../../../T3_Algorithmique/3.3_Recherche_textuelle/vers_BMH/">
 <span class="md-ellipsis">
     Vers Boyer-Moore-Horspool
   </span>
@@ -752,7 +752,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T4_Bases_de_donnees/sommaire/">
+<a class="md-nav__link" href="../../../../T4_Bases_de_donnees/sommaire/">
 <span class="md-ellipsis">
     Sommaire
   </span>
@@ -773,14 +773,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T4_Bases_de_donnees/4.1_modele_relationnel/cours/">
+<a class="md-nav__link" href="../../../../T4_Bases_de_donnees/4.1_modele_relationnel/cours/">
 <span class="md-ellipsis">
     4.1.1 Le modèle relationnel
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T4_Bases_de_donnees/4.1_modele_relationnel/exercices/">
+<a class="md-nav__link" href="../../../../T4_Bases_de_donnees/4.1_modele_relationnel/exercices/">
 <span class="md-ellipsis">
     4.1.2 Exercices
   </span>
@@ -804,35 +804,35 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T4_Bases_de_donnees/4.2_mise_en_pratique/tnsi_BD_1/">
+<a class="md-nav__link" href="../../../../T4_Bases_de_donnees/4.2_mise_en_pratique/tnsi_BD_1/">
 <span class="md-ellipsis">
     TP 1 création
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T4_Bases_de_donnees/4.2_mise_en_pratique/tnsi_BD_2/">
+<a class="md-nav__link" href="../../../../T4_Bases_de_donnees/4.2_mise_en_pratique/tnsi_BD_2/">
 <span class="md-ellipsis">
     TP 2 interrogation
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T4_Bases_de_donnees/4.2_mise_en_pratique/tnsi_BD_3/">
+<a class="md-nav__link" href="../../../../T4_Bases_de_donnees/4.2_mise_en_pratique/tnsi_BD_3/">
 <span class="md-ellipsis">
     TP 3 manipulation
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T4_Bases_de_donnees/4.2_mise_en_pratique/tnsi_BD_4_python/">
+<a class="md-nav__link" href="../../../../T4_Bases_de_donnees/4.2_mise_en_pratique/tnsi_BD_4_python/">
 <span class="md-ellipsis">
     TP 4 python
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T4_Bases_de_donnees/4.2_mise_en_pratique/tnsi_BD_5_baseDataGouv/">
+<a class="md-nav__link" href="../../../../T4_Bases_de_donnees/4.2_mise_en_pratique/tnsi_BD_5_baseDataGouv/">
 <span class="md-ellipsis">
     TP 5 Data
   </span>
@@ -859,14 +859,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T5_Architecture_materielle/sommaire/">
+<a class="md-nav__link" href="../../../../T5_Architecture_materielle/sommaire/">
 <span class="md-ellipsis">
     Sommaire
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/">
+<a class="md-nav__link" href="../../../../T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/">
 <span class="md-ellipsis">
     5.1 Système sur puce
   </span>
@@ -887,14 +887,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T5_Architecture_materielle/5.2_Gestion_des_processus/cours/">
+<a class="md-nav__link" href="../../../../T5_Architecture_materielle/5.2_Gestion_des_processus/cours/">
 <span class="md-ellipsis">
     Cours
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T5_Architecture_materielle/5.2_Gestion_des_processus/Exercices/">
+<a class="md-nav__link" href="../../../../T5_Architecture_materielle/5.2_Gestion_des_processus/Exercices/">
 <span class="md-ellipsis">
     Exercices
   </span>
@@ -918,14 +918,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/">
+<a class="md-nav__link" href="../../../../T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/">
 <span class="md-ellipsis">
     Cours
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T5_Architecture_materielle/5.3_Protocoles_de_routage/Exercices/">
+<a class="md-nav__link" href="../../../../T5_Architecture_materielle/5.3_Protocoles_de_routage/Exercices/">
 <span class="md-ellipsis">
     Exercices
   </span>
@@ -949,14 +949,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T5_Architecture_materielle/5.4_Cryptographie/cours/">
+<a class="md-nav__link" href="../../../../T5_Architecture_materielle/5.4_Cryptographie/cours/">
 <span class="md-ellipsis">
     Cours
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T5_Architecture_materielle/5.4_Cryptographie/Exercices/">
+<a class="md-nav__link" href="../../../../T5_Architecture_materielle/5.4_Cryptographie/Exercices/">
 <span class="md-ellipsis">
     Exercices
   </span>
@@ -983,28 +983,28 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T6_5_algos_coeur/sommaire/">
+<a class="md-nav__link" href="../../../../T6_5_algos_coeur/sommaire/">
 <span class="md-ellipsis">
     Sommaire
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T6_5_algos_coeur/6.1_algos_premiere/cours/">
+<a class="md-nav__link" href="../../../../T6_5_algos_coeur/6.1_algos_premiere/cours/">
 <span class="md-ellipsis">
     algos de première 1️⃣
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T6_5_algos_coeur/6.2_recursivite/cours/">
+<a class="md-nav__link" href="../../../../T6_5_algos_coeur/6.2_recursivite/cours/">
 <span class="md-ellipsis">
     Algos récursif 🔂
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T6_5_algos_coeur/6.3_Tri/cours/">
+<a class="md-nav__link" href="../../../../T6_5_algos_coeur/6.3_Tri/cours/">
 <span class="md-ellipsis">
     Algos de tris ♻️
   </span>
@@ -1028,14 +1028,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T6_6_Epreuve_pratique/BNS_2026/">
+<a class="md-nav__link" href="../../../../T6_6_Epreuve_pratique/BNS_2026/">
 <span class="md-ellipsis">
     Sujets 2026
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../BNS_2025.md">
+<a class="md-nav__link" href="../../../../BNS_2025.md">
 <span class="md-ellipsis">
     BNS 2025
   </span>
@@ -1059,56 +1059,56 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T6_Annales/epreuve_bac/">
+<a class="md-nav__link" href="../../../../T6_Annales/epreuve_bac/">
 <span class="md-ellipsis">
     Epreuve du BAC
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T6_Annales/liste_sujets/">
+<a class="md-nav__link" href="../../../../T6_Annales/liste_sujets/">
 <span class="md-ellipsis">
     Liste des sujets Ecrit
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T6_Annales/grandoral/">
+<a class="md-nav__link" href="../../../../T6_Annales/grandoral/">
 <span class="md-ellipsis">
     Grand Oral
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T6_Annales/revisionBD/">
+<a class="md-nav__link" href="../../../../T6_Annales/revisionBD/">
 <span class="md-ellipsis">
     Révision Base de données
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T6_Annales/revisionTAD/">
+<a class="md-nav__link" href="../../../../T6_Annales/revisionTAD/">
 <span class="md-ellipsis">
     Révision Structure de données
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T6_Annales/revisionArbre/">
+<a class="md-nav__link" href="../../../../T6_Annales/revisionArbre/">
 <span class="md-ellipsis">
     Révision Arbres
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T6_Annales/revisionRecurisivite/">
+<a class="md-nav__link" href="../../../../T6_Annales/revisionRecurisivite/">
 <span class="md-ellipsis">
     Révision Récursivité
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T6_Annales/revisionGraphes/">
+<a class="md-nav__link" href="../../../../T6_Annales/revisionGraphes/">
 <span class="md-ellipsis">
     Révision Graphes
   </span>
@@ -1132,14 +1132,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T7_Divers/conseils/">
+<a class="md-nav__link" href="../../../../T7_Divers/conseils/">
 <span class="md-ellipsis">
     Quelques conseils
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T7_Divers/orientation/">
+<a class="md-nav__link" href="../../../../T7_Divers/orientation/">
 <span class="md-ellipsis">
     Orientation
   </span>
@@ -1163,14 +1163,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T8_projet/sommaire/">
+<a class="md-nav__link" href="../../../../T8_projet/sommaire/">
 <span class="md-ellipsis">
     sommaire
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T8_projet/1_POO/cours/">
+<a class="md-nav__link" href="../../../../T8_projet/1_POO/cours/">
 <span class="md-ellipsis">
     Projet Pyxel 👾
   </span>
@@ -1191,14 +1191,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T8_projet/2_Huffman/cours/">
+<a class="md-nav__link" href="../../../../T8_projet/2_Huffman/cours/">
 <span class="md-ellipsis">
     Projet Les marmottes 🐹
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T8_projet/2_Huffman/tp/">
+<a class="md-nav__link" href="../../../../T8_projet/2_Huffman/tp/">
 <span class="md-ellipsis">
     TP Compression de données
   </span>
@@ -1222,14 +1222,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T8_projet/3_expose/cours/">
+<a class="md-nav__link" href="../../../../T8_projet/3_expose/cours/">
 <span class="md-ellipsis">
     Exposé façon GO📢
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../T8_projet/3_expose/cours_crypto/">
+<a class="md-nav__link" href="../../../../T8_projet/3_expose/cours_crypto/">
 <span class="md-ellipsis">
     Exposé Crypto 🔐
   </span>
@@ -1248,10 +1248,10 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="/sofaugeras/TNSI/T2_Programmation/2.4_Mise_au_point_de_programme/data/bogues/bogue05/bogue05.py" title="Download">
+<a class="md-content__button md-icon" href="/sofaugeras/TNSI/T1_Structures_de_donnees/1.4_Arbres/data/File/File.py" title="Download">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"></path></svg>
 </a>
-<h1>Bogue05</h1>
+<h1>File</h1>
 <script>
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
@@ -1688,7 +1688,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <!-- End of mermaid configuration --><div class="jupyter-wrapper">
 <div class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d81ed667">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a3803e98">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -1706,233 +1706,53 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="sd">"""Code Python contenant un bogue</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">class</span> <span class="nc">File</span><span class="p">:</span>
 
-<span class="sd">Contexte :</span>
-<span class="sd">  =&gt; un programme qui informe un utilisateur de ses droits selon son âge</span>
+	<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">valeurs</span> <span class="o">=</span> <span class="p">[]</span>
+  
+	<span class="k">def</span> <span class="nf">estFileVide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">valeurs</span> <span class="o">==</span> <span class="p">[]</span>
+	
+	<span class="k">def</span> <span class="nf">enfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">valeurs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
 
-<span class="sd">Ce qu'on attend du script :</span>
-<span class="sd">  =&gt; qu'il affiche les bonnes informations à savoir</span>
-<span class="sd">    si age &gt;= 18, alors voter + parier</span>
-<span class="sd">    si age &lt; 18, alors attendre d'être adulte</span>
+	<span class="k">def</span> <span class="nf">defile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">valeurs</span><span class="p">:</span>
+			<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">valeurs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+	<span class="nd">@property</span>
+	<span class="k">def</span> <span class="nf">longueur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">valeurs</span><span class="p">)</span>
 
-<span class="sd">Ce qui se produit vraiment :</span>
-<span class="sd">  =&gt; un enfant de 8 ans peut parier /!\</span>
-<span class="sd">"""</span>
+	<span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="n">ch</span> <span class="o">=</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">Etat de la file:</span><span class="se">\n</span><span class="s2">"</span>
+		<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">valeurs</span><span class="p">:</span>
+			<span class="n">ch</span> <span class="o">+=</span>  <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" "</span>
+		<span class="k">return</span> <span class="n">ch</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-1">"""Code Python contenant un bogue
+<div class="clipboard-copy-txt" id="cell-1">class File:
 
-Contexte :
-  =&gt; un programme qui informe un utilisateur de ses droits selon son âge
+	def __init__(self):
+		self.valeurs = []
+  
+	def estFileVide(self):
+		return self.valeurs == []
+	
+	def enfile(self, valeur):
+		self.valeurs.append(valeur)
 
-Ce qu'on attend du script :
-  =&gt; qu'il affiche les bonnes informations à savoir
-    si age &gt;= 18, alors voter + parier
-    si age &lt; 18, alors attendre d'être adulte
+	def defile(self):
+		if self.valeurs:
+			return self.valeurs.pop(0)
+	@property
+	def longueur(self):
+		return len(self.valeurs)
 
-Ce qui se produit vraiment :
-  =&gt; un enfant de 8 ans peut parier /!\
-"""</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8b595822">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-2">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Les variables utilisées</span>
-<span class="n">age</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">pouvoir_voter</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="n">pouvoir_parier</span> <span class="o">=</span> <span class="kc">False</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-2"># Les variables utilisées
-age = 0
-pouvoir_voter = False
-pouvoir_parier = False</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a15581d6">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-3">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Bannière du programme</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"************************"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"*** Verificator v0.1 ***"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"************************"</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-3"># Bannière du programme
-print("************************")
-print("*** Verificator v0.1 ***")
-print("************************")</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8a24c4e3">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-4">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># L'utilisateur entre son âge</span>
-<span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Entrez votre âge : "</span><span class="p">))</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-4"># L'utilisateur entre son âge
-age = int(input("Entrez votre âge : "))</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=20cbc992">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-5">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Application des vérifications selon son âge</span>
-<span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>
-    <span class="n">pouvoir_voter</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">pouvoir_voter</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">pouvoir_parier</span> <span class="o">=</span> <span class="kc">True</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-5"># Application des vérifications selon son âge
-if age &lt; 18:
-    pouvoir_voter = False
-else:
-    pouvoir_voter = True
-pouvoir_parier = True</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=63a7d12c">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-6">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Affichage des informations selon l'âge de la personne</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Comme vous avez </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> ans, vous pouvez :"</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">pouvoir_voter</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">" - voter"</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">pouvoir_parier</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">" - parier"</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">pouvoir_voter</span> <span class="o">==</span> <span class="kc">False</span> <span class="ow">and</span> <span class="n">pouvoir_parier</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">" - attendre"</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-6"># Affichage des informations selon l'âge de la personne
-print(f"Comme vous avez {age} ans, vous pouvez :")
-if pouvoir_voter == True:
-    print(" - voter")
-if pouvoir_parier == True:
-    print(" - parier")
-if pouvoir_voter == False and pouvoir_parier == False:
-    print(" - attendre")</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=33c5351f">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-7">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-7"></div>
+	def __str__(self):
+		ch = "\nEtat de la file:\n"
+		for x in self.valeurs:
+			ch +=  str(x) + " "
+		return ch</div>
 </div>
 </div>
 </div>
@@ -1941,7 +1761,7 @@ if pouvoir_voter == False and pouvoir_parier == False:
 </div>
 </div> <!-- jp-Notebook -->
 </div> <!-- jupyter-wrapper -->
-<script src="../../../../../js/ide.js"></script>
+<script src="../../../../js/ide.js"></script>
 <style>
     .jp-RenderedHTMLCommon p {
         font-size: 0.8rem;
@@ -2024,13 +1844,13 @@ if pouvoir_voter == False and pouvoir_parier == False:
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
-<script src="../../../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+<script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+<script src="../../../../assets/javascripts/bundle.56dfad97.min.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
-<script src="../../../../../javascript/mathjax.js"></script>
-<script src="../../../../../javascript/interpreter.js"></script>
+<script src="../../../../javascript/mathjax.js"></script>
+<script src="../../../../javascript/interpreter.js"></script>
 </body>
 </html>

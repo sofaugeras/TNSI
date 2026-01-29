@@ -1,9 +1,8 @@
    
 !!! note ":star: Thèmes en cours d'étude :star: "
-    📌  En cours : [Arbres](./T1_Structures_de_donnees/1.4_Arbres/cours.md)<br /> 
+    📌  En cours : 🐹 [Projet : codage de Huffman](./T8_projet/2_Huffman/cours.md) <br />
     
-    ⌛️ A venir : 🐹 [Projet : codage de Huffman](./T8_projet/2_Huffman/cours.md) <br />
-    <br />
+    ⌛️ A venir : [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)<br />
 
 !!! abstract "Actualités :newspaper:" 
 
@@ -43,14 +42,15 @@
     - [Base de données](./T4_Bases_de_donnees/sommaire.md)<br />
     - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) <br />
     - [calculabilité](./T2_Programmation/2.3_Calculabilite_Decidabilite/cours.md) en distanciel <br />
+    - 📆 : Bac Blanc : Mardi 20 janvier <br />
     - [Retour sur les dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) en distanciel <br />
     - [Gestion des processus](./T5_Architecture_materielle/5.2_Gestion_des_processus/cours.md)<br />
+    - [Arbre et arbre binaire de recherche](./T1_Structures_de_donnees/1.4_Arbres/cours.md)<br /> 
 
     
 <!--       
 !!! note "*Thèmes traités*"
 
-    - [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)<br />
     - [Sécurisation des communications, Cryptographie](./TNSI/T5_Architecture_materielle/5.4_Cryptographie/cours/)<br />
     - [Graphes](./T1_Structures_de_donnees/1.5_Graphes/cours/)<br />
     - [Exposé cryptographie](./T8_projet/3_expose/cours.md)<br />

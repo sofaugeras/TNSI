@@ -530,7 +530,7 @@
 
     16_ La section de code qui définit `modifie` est incluse dans la classe `Abr`.
 
-    ```python=16
+    ```python
     def modifie(self, adresse_ip,
                 interface, passerelle,
                 cout):
@@ -553,7 +553,7 @@
 
     ??? tip "Correction"
 
-        ```python=16
+        ```python
         def modifie(self, adresse_ip, 
                     interface, passerelle, 
                     cout):
@@ -567,7 +567,8 @@
         ```
     
     La classe `Abr` est complétée afin de permettre l’ajout de nouvelles lignes à la table de routage, tout en conservant les propriétés que doit posséder un arbre binaire de recherche.
-    ```python=32
+    
+    ```python
     def rechercher(self, adresse_ip): 
         if self.est_vide() or adresse_ip==self.adresse_ip: 
             return self 

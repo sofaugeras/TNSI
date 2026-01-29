@@ -4135,60 +4135,56 @@ Dans cette représentation :
 <p>Le coût de l’algorithme de recherche peut être logarithmique, alors que le coût de la recherche dans un tableau est linéaire.</p>
 </details>
 <p>16_ La section de code qui définit <code>modifie</code> est incluse dans la classe <code>Abr</code>.</p>
-<p><code>``python=16
-def modifie(self, adresse_ip,
-            interface, passerelle,
-            cout):
-    if self.est_vide():
-        self.adresse_ip = adresse_ip 
-        self.interface = interface 
-        self.passerelle = passerelle 
-        self.cout = cout 
-        self.gauche = Abr('', '', '', 0) 
-        self.droite = Abr('', '', '', 0) 
-    else: 
-        self.adresse_ip = adresse_ip 
-        self.interface = interface 
-        self.passerelle = passerelle 
-        self.cout = cout
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Les lignes 20 à 23 sont exactement les mêmes que les lignes 27 à 30.
-
-16_ Réécrire le code de la fonction modifie en évitant cette répétition.
-
-??? tip &quot;Correction&quot;
-
-    ```python=16
-    def modifie(self, adresse_ip, 
-                interface, passerelle, 
-                cout):
-        if self.est_vide():
-            self.gauche = Abr(&#39;&#39;,&#39;&#39;,&#39;&#39;,0) 
-            self.droite = Abr(&#39;&#39;,&#39;&#39;,&#39;&#39;,0) 
-        self.adresse_ip = adresse_ip 
-        self.interface = interface 
-        self.passerelle = passerelle 
-        self.cout = cout
-    ```
-
-La classe `Abr` est complétée afin de permettre l’ajout de nouvelles lignes à la table de routage, tout en conservant les propriétés que doit posséder un arbre binaire de recherche.
-```python=32
-def rechercher(self, adresse_ip): 
-    if self.est_vide() or adresse_ip==self.adresse_ip: 
-        return self 
-    elif precede(...): 
-        return self.gauche.rechercher(adresse_ip) 
-    else: 
-        return self.droite.rechercher(adresse_ip) 
-
-def inserer(self, adresse_ip, 
-            interface, passerelle, 
-            cout): 
-    destination = self.rechercher(adresse_ip)
-    destination.modifie(adresse_ip, 
-                        interface, passerelle, 
-                        cout)
+<p><div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">modifie</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">adresse_ip</span><span class="p">,</span>
+            <span class="n">interface</span><span class="p">,</span> <span class="n">passerelle</span><span class="p">,</span>
+            <span class="n">cout</span><span class="p">):</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">adresse_ip</span> <span class="o">=</span> <span class="n">adresse_ip</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">interface</span> <span class="o">=</span> <span class="n">interface</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">passerelle</span> <span class="o">=</span> <span class="n">passerelle</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">cout</span> <span class="o">=</span> <span class="n">cout</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="n">Abr</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">droite</span> <span class="o">=</span> <span class="n">Abr</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> 
+    <span class="k">else</span><span class="p">:</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">adresse_ip</span> <span class="o">=</span> <span class="n">adresse_ip</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">interface</span> <span class="o">=</span> <span class="n">interface</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">passerelle</span> <span class="o">=</span> <span class="n">passerelle</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">cout</span> <span class="o">=</span> <span class="n">cout</span>
 </code></pre></div>
-On rappelle que la fonction</code>precede` prend en arguments des adresses IP écrites sous forme binaire.</p>
+Les lignes 20 à 23 sont exactement les mêmes que les lignes 27 à 30.</p>
+<p>16_ Réécrire le code de la fonction modifie en évitant cette répétition.</p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">modifie</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">adresse_ip</span><span class="p">,</span> 
+            <span class="n">interface</span><span class="p">,</span> <span class="n">passerelle</span><span class="p">,</span> 
+            <span class="n">cout</span><span class="p">):</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="n">Abr</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">droite</span> <span class="o">=</span> <span class="n">Abr</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> 
+    <span class="bp">self</span><span class="o">.</span><span class="n">adresse_ip</span> <span class="o">=</span> <span class="n">adresse_ip</span> 
+    <span class="bp">self</span><span class="o">.</span><span class="n">interface</span> <span class="o">=</span> <span class="n">interface</span> 
+    <span class="bp">self</span><span class="o">.</span><span class="n">passerelle</span> <span class="o">=</span> <span class="n">passerelle</span> 
+    <span class="bp">self</span><span class="o">.</span><span class="n">cout</span> <span class="o">=</span> <span class="n">cout</span>
+</code></pre></div>
+</details>
+<p>La classe <code>Abr</code> est complétée afin de permettre l’ajout de nouvelles lignes à la table de routage, tout en conservant les propriétés que doit posséder un arbre binaire de recherche.</p>
+<p><div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">rechercher</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">adresse_ip</span><span class="p">):</span> 
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="ow">or</span> <span class="n">adresse_ip</span><span class="o">==</span><span class="bp">self</span><span class="o">.</span><span class="n">adresse_ip</span><span class="p">:</span> 
+        <span class="k">return</span> <span class="bp">self</span> 
+    <span class="k">elif</span> <span class="n">precede</span><span class="p">(</span><span class="o">...</span><span class="p">):</span> 
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">rechercher</span><span class="p">(</span><span class="n">adresse_ip</span><span class="p">)</span> 
+    <span class="k">else</span><span class="p">:</span> 
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">droite</span><span class="o">.</span><span class="n">rechercher</span><span class="p">(</span><span class="n">adresse_ip</span><span class="p">)</span> 
+
+<span class="k">def</span> <span class="nf">inserer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">adresse_ip</span><span class="p">,</span> 
+            <span class="n">interface</span><span class="p">,</span> <span class="n">passerelle</span><span class="p">,</span> 
+            <span class="n">cout</span><span class="p">):</span> 
+    <span class="n">destination</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rechercher</span><span class="p">(</span><span class="n">adresse_ip</span><span class="p">)</span>
+    <span class="n">destination</span><span class="o">.</span><span class="n">modifie</span><span class="p">(</span><span class="n">adresse_ip</span><span class="p">,</span> 
+                        <span class="n">interface</span><span class="p">,</span> <span class="n">passerelle</span><span class="p">,</span> 
+                        <span class="n">cout</span><span class="p">)</span>
+</code></pre></div>
+On rappelle que la fonction <code>precede</code> prend en arguments des adresses IP écrites sous forme binaire.</p>
 <p>17_
  Recopier et compléter la ligne 35 du code de la fonction <code>rechercher</code>.</p>
 <details class="tip">
