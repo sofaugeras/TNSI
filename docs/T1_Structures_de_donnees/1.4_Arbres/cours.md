@@ -250,7 +250,7 @@ Pour comprendre facilement la numérotation, il suffit de s'imaginer l'arbre com
 !!! example "Exercice"
     === "Enoncé"
 
-        1.	Représenter l'arbre défini par la liste `[5, 2, 6, 1, 4, A, 7]`.
+        1.	Représenter l'arbre défini par la liste $[5, 2, 6, 1, 4, \Delta, 7]$.
         2.  Quelle liste représente cet arbre ?
         ![eytzinger](./data/eytzingerExo.png){: .center}
 
@@ -396,9 +396,10 @@ Un parcours préfixe commencera toujours par la racine, alors qu'un parcours pos
 
 !!! example "Exercice"
     === "Enoncé"
+        ![arbre vide](./data/IngenieurVide.png){: .center}
         1.	Recopier et compléter l'arbre ci-dessous pour que son parcours **suffixe** affiche dans l'ordre les lettres INGENIEUR.
-        2. Reprenez cet arbre et compléter l'arbre ci-dessous pour que son parcours **préfixe** affiche dans l'ordre les lettres EPERVIER.
-        3. Reprenez cet arbre et compléter l'arbre ci-dessous pour que son parcours **infixe** affiche dans l'ordre les lettres GAUFFRE.
+        2. Construire un arbre pour que son parcours **préfixe** affiche dans l'ordre les lettres EPERVIER.
+        3. Construire un arbre pour que son parcours **infixe** affiche dans l'ordre les lettres GAUFFRE.
     === "Correction 1."
         ![ingenieur](./data/ingenieur.png){: .center}
     === "Correction 2."
@@ -418,7 +419,7 @@ Un parcours préfixe commencera toujours par la racine, alors qu'un parcours pos
 
         parcours infixe : $5 + 7 * 5 + 25 - 7 / 3$ <br/>
         parcours préfixe : $+ * 5 7 5 / - 25 7 3$ (notation polonaise)<br/>
-        parcours suffixe : $ 5 7 + 5 * 25 7 - 3 7$ (notation polonaise inversée)
+        parcours suffixe : $5 7 + 5 * 25 7 - 3 7$ (notation polonaise inversée)
         
 ## 4. Implémentations d'un arbre binaire
 
@@ -692,14 +693,14 @@ def affiche(self, indent = 0):
         ```python
         >>> print(a.affiche())
         |_4
-        |_3
-            |_6
-            |_None
-        |_1
-            |_2
-            |_7
-                |_9
+            |_3
+                |_6
                 |_None
+            |_1
+                |_2
+                |_7
+                    |_9
+                    |_None
         ```
     === "correction"
         ```python
@@ -821,10 +822,10 @@ Exemple avec l'arbre
             return None
         # appel récursif de chaque fils
         Si l'arbre gauche n'est pas vide :
-            prefixe(arbre.gauche)
+            infixe(arbre.gauche)
         afficher le noeud courant en chaine de caractère ou dans une liste
         Si l'arbre droit n'est pas vide
-            prefixe(arbre.droit)
+            infixe(arbre.droit)
     ```
 Exemple avec l'arbre 
 ![arbre exercice](./data/arbre_parfait2b.jpg){: .center}
@@ -870,9 +871,9 @@ Exemple avec l'arbre
             return None
         # appel récursif de chaque fils
         Si l'arbre gauche n'est pas vide :
-            prefixe(arbre.gauche)
+            suffixe(arbre.gauche)
         Si l'arbre droit n'est pas vide
-            prefixe(arbre.droit)
+            suffixe(arbre.droit)
         afficher le noeud courant en chaine de caractère ou dans une liste
     ```
 Exemple avec l'arbre 

@@ -10,7 +10,7 @@ docs_dir: docs
   
 theme:
   name: material
-  #custom_dir: docs/my_theme_customizations
+  custom_dir: docs/my_theme_customizations
   custom_dir: docs/overrides #
   font: false
   language: fr
@@ -84,13 +84,13 @@ markdown_extensions:
             "Bash": "💻 Console"
             "E-mail": "📥 Entrée"
             "Text Output": "📤 Sortie"
-            "mermaid": "🧜‍♂️ Diagramme"
+            # "mermaid": "🧜‍♂️ Diagramme"
   - pymdownx.inlinehilite
-  - pymdownx.superfences:
-      custom_fences:
-          - name: mermaid
-            class: mermaid
-            format: !!python/name:mermaid2.fence_mermaid
+  # - pymdownx.superfences:
+  #     custom_fences:
+  #         - name: mermaid
+  #           class: mermaid
+  #           format: !!python/name:mermaid2.fence_mermaid
   - pymdownx.keys
   - pymdownx.tabbed:
       alternate_style: true
@@ -121,10 +121,10 @@ plugins:
 #  - git-revision-date-localized:
 #      enable_creation_date: false
 #      locale: fr
-  - mermaid2:
-      javascript: https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs
-  - mkdocs-jupyter:
-      include_source: True
+  # - mermaid2:
+  #     javascript: https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs
+  # - mkdocs-jupyter:
+  #     include_source: True
   #- page-to-pdf
   # - exclude-search:           # exclusion de pages de la recherche
   #     exclude:

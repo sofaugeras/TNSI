@@ -1,0 +1,148 @@
+site_name: Saint Sauveur TNSI
+site_url: https://github.com/sofaugeras/TNSI
+repo_url: https://github.com/sofaugeras/TNSI
+repo_name: 'Cours Terminale NSI Saint Sauveur'
+edit_uri: edit/main/docs/
+site_description: Site de cours Terminale NSI
+site_author: "Sophie FAUGERAS" 
+docs_dir: docs
+
+theme:
+    name: pyodide-mkdocs-theme
+
+    # features:
+    # - navigation.instant
+    # - navigation.tabs
+    # - navigation.expand
+    # - navigation.top
+    # - toc.integrate
+    # - header.autohide
+    # - content.code.annotate
+    # - content.code.copy
+
+
+markdown_extensions:
+  - meta
+  - abbr
+  - admonition
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: false
+      clickable_checkbox: true    #   et cliquables.    
+  - attr_list
+  - footnotes
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.highlight:           # Coloration syntaxique du code
+        linenums: None
+        auto_title: true
+        auto_title_map:
+              - pymdownx.highlight:           # Coloration syntaxique du code
+        linenums: None
+        auto_title: true
+        pygments_lang_class: true
+        auto_title_map:
+            "Text Only": "📋 Texte"
+            "Python": "🐍 Python"
+            "Python Console Session": "🐍 Python"
+            "JavaScript": "🍵 JavaScript"
+            "SQL": "🐬 SQL"
+            "PHP": "🐘 PHP"
+            "Prompt": "💻 Console"
+            "Bash": "💻 Console"
+            "E-mail": "📥 Entrée"
+            "Text Output": "📤 Sortie"
+            "mermaid": "🧜‍♂️ Diagramme"
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      # custom_fences:
+      #     - name: mermaid
+      #       class: mermaid
+      #       format: !!python/name:mermaid2.fence_mermaid
+  - pymdownx.keys
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      permalink: ⚓︎
+      toc_depth: 3
+  # - mkdocs_graphviz:
+  #     light_theme: 000010      # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
+  #     dark_theme: FFFFFF       # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
+  #     color: 789ABC            # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
+  #     bgcolor: none            # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
+  #     graph_color: 789ABC      # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
+  #     graph_fontcolor: 789ABC  # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
+  #     node_color: 789ABC       # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
+  #     node_fontcolor: 789ABC   # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
+  #     edge_color: 789ABC       # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
+  #     edge_fontcolor: 789ABC
+
+
+plugins:
+    - search
+    - pyodide_macros:
+        # Vous pouvez ajouter ici tout réglage que vous auriez ajouté concernant les macros.
+        on_error_fail: true # Il est conseillé d'ajouter celui-ci si vous ne l'utilisez pas.
+
+# En remplacement de mkdocs-exclude. Tous les fichiers correspondant aux patterns indiqués
+# seront exclus du site final, et donc également de l'indexation de la recherche.
+# Nota: ne pas mettre de commentaires dans ces lignes !
+exclude_docs: |
+    **/*_REM.md
+    **/*.py
+
+pyodide_macros:
+  project:
+    id: tnsi
+
+extra:
+  analytics: 
+    provider: google
+    property: G-NXDLLVVQEB
+
+  social:
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:sophie.faugeras@ac-rennes.fr
+      name: Écrire à l'auteur
+
+    - icon : fontawesome/brands/linkedin
+      link : https://www.linkedin.com/in/sophie-faugeras-77b4b6124/
+      name : profil Linkedln
+
+    - icon : fontawesome/brands/twitter
+      link : https://twitter.com/sfaugeras_info
+      name : Mon twitter
+
+    - icon: fontawesome/brands/github
+      link: https://github.com/sofaugeras/TNSI
+      name: Dépôt git
+
+    - icon: fontawesome/solid/school
+      link: https://www.lycee-saint-sauveur-redon.eu/
+      name: Lycée Saint Sauveur - Redon
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js
+  - https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js
+
+
+extra_css:
+  - stylesheets/extra.css
+
+
+copyright:  CC BY-SA / S.Faugeras avec l'apport majeur de Gilles Lassus (CC BY-SA)
+
+validation:
+  absolute_links: ignore
+  unrecognized_links: ignore

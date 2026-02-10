@@ -66,7 +66,7 @@ L'arbre 5 n'est pas un ABR à cause de la feuille 9, qui fait partie du sous-arb
         b.droit.droit = Arbre(6)
         ```
         a est bien un arbre binaire de recherche. <br />
-        b n'est pas un arbre binaire de recherche à cause du 9 et du 4.
+        b n'est pas un arbre binaire de recherche à cause du 9.
 
 ### 1. Déterminer si un arbre est un ABR
 

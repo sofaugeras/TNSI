@@ -19,7 +19,7 @@ L'épreuve se partage en :
 
 Pour la partie pratique, les modalités évoluent ([source(https://www.education.gouv.fr/bo/2025/Hebdo31/MENE2516123N)]) : <br />
 "La partie pratique [note : notée sur 20] consiste à programmer sur ordinateur une application informatique à partir d’un document fourni au candidat. L’épreuve a pour objectif d’évaluer le niveau de maîtrise des compétences pratiques du candidat."<br />
-Les sujets "zéro" ont été publiés le **8/10/2025** et sont visible [ici](./T6_6_Epreuve_pratique/BNS_2026.md){. target="_blank"}.
+Les sujets "zéro" ont été publiés le **8/10/2025** et sont visible [ici](../T6_6_Epreuve_pratique/BNS_2026.md){. target="_blank"}.
 
 ### Banque d'exercices
 

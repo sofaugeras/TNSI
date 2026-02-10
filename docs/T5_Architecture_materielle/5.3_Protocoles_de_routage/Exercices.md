@@ -295,7 +295,7 @@
 
 !!! abstract "Exercice 3 du sujet Métropole J1 2025 (8 points)"
 
-    Exercice 3 du sujet [Métropole J1 2025](../../T6_Annales/data/2025/25_NSIJ1ME1.pdf){. target="_blank"}
+    Exercice 3 du sujet [Métropole J1 2025](./data/25_NSIJ1ME1.pdf){. target="_blank"}
 
     *Cet exercice porte sur l'architecture matérielle (réseau), les arbres binaires de recherche et la programmation Python*
 
@@ -327,7 +327,7 @@
     ??? tip "Correction"
         Il s'agit de l'IP 192.168.20.255.
 
-    3_ Déterminer compbien de machines informatiques il est encore possible de connecter au réseau du café 1 après l'installation de la troisième borne de commande.
+    3_ Déterminer combien de machines informatiques il est encore possible de connecter au réseau du café 1 après l'installation de la troisième borne de commande.
 
     ??? tip "Correction"
 
@@ -345,7 +345,7 @@
 
     **Partie B**
 
-    **RIP** (Routing Information Protocol) est un protocole de routage utilisé dans les réseaux IP. Il est conçu pour réduire le nombre de sauts entre deux réseaux. Un « saut » correspond au transfert des données d'un routeur à un autre. Le protocole RIP utilise le nombre de sauts comme critère principal pour évaluer le coût d'un chemin. Autrement dir, il considère que le chemin le plus optimal est celui qui traverse le moins de routeurs.
+    **RIP** (Routing Information Protocol) est un protocole de routage utilisé dans les réseaux IP. Il est conçu pour réduire le nombre de sauts entre deux réseaux. Un « saut » correspond au transfert des données d'un routeur à un autre. Le protocole RIP utilise le nombre de sauts comme critère principal pour évaluer le coût d'un chemin. Autrement dit, il considère que le chemin le plus optimal est celui qui traverse le moins de routeurs.
 
     La table de routage du routeur 2 de la Figure 1 est représentée ci-dessous
 
@@ -357,7 +357,7 @@
     | 192.168.10.0          | 172.16.3.1          | 172.16.3.2       | 2               |
     | 172.16.0.0            | 172.16.4.1          | 172.16.4.2       | 1               |
     | 172.16.2.0            | 172.16.4.1          | 172.12.4.2       | 1               |
-    | 192.168.20.0          | ...                 | ...              | ...             |
+    | 192.168.30.0          | ...                 | ...              | ...             |
     | 172.16.1.0            | ...                 | ...              | ...             |
 
     5_ Recopier et compléter les deux dernières lignes de la table de routage du routeur 2.
@@ -530,7 +530,7 @@
 
     16_ La section de code qui définit `modifie` est incluse dans la classe `Abr`.
 
-    ```python=16
+    ```python
     def modifie(self, adresse_ip,
                 interface, passerelle,
                 cout):
@@ -553,7 +553,7 @@
 
     ??? tip "Correction"
 
-        ```python=16
+        ```python
         def modifie(self, adresse_ip, 
                     interface, passerelle, 
                     cout):
@@ -567,7 +567,8 @@
         ```
     
     La classe `Abr` est complétée afin de permettre l’ajout de nouvelles lignes à la table de routage, tout en conservant les propriétés que doit posséder un arbre binaire de recherche.
-    ```python=32
+    
+    ```python
     def rechercher(self, adresse_ip): 
         if self.est_vide() or adresse_ip==self.adresse_ip: 
             return self 

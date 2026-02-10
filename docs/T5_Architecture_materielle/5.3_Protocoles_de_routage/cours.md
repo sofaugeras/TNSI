@@ -124,7 +124,7 @@ Pour **R1** :
 
 | destination | passerelle | interface | Nb sauts | remarques |
 |:-:|-|-|-|-|
-| 192.168.1.0 | | wifi0 | 1 | ==> vers les postes de travail |
+| 111.222.66.0 | | wifi0 | 1 | ==> vers les postes de travail |
 | 192.168.14.0| | eth0 | 1 | ==> vers R3 |
 
 Au départ, R1 ne peut atteindre que ses voisins immédiats (nb Sauts vaut 1). Aucune passerelle n'est nécessaire puisque la communication est directe. Chaque sous réseau utilise une interface spécifique. Le réseau local 1 contenant les postes de travail est accessible en wifi.
@@ -157,7 +157,7 @@ En appliquant ces règles, voici la table de routage de **R1** après une étape
 
 | destination|	passerelle|	interface|	Nb sauts|	remarques|
 |:-:|-|-|-|-|
-| 192.168.1.0| |wifi0|	1	|==> vers les postes de travail|
+| 111.222.66.0| |wifi0|	1	|==> vers les postes de travail|
 | 192.168.14.0| |eth0|	1	|==> vers R3|
 | 192.168.17.0	| 192.168.14.2	|eth0	|2|	Ces 3 routes|
 | 192.168.15.0	|192.168.14.2	|eth0	|2|	proviennent|

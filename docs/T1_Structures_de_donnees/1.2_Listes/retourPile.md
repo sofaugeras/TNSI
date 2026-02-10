@@ -6,7 +6,7 @@ Où comment coder une interface de Pile à l'aide d'une liste chaînée et de la
 
 Lorsque l'implémentation de la liste fait apparaître une chaîne de valeurs, chacune pointant vers la suivante, on dit que la liste est une liste **chaînée**.
 
-![](data/listechainee.png){: .center}
+![](./data/liste_chainee.jpg){: .center}
 
 **Implémentation choisie :**
 
@@ -150,4 +150,4 @@ class Cellule :
 
 !!! warning "À retenir"
     pour l'utilisateur, les 2 interfaces de Pile sont strictement identiques. Il ne peut pas savoir, en les utilisant, l'implémentation qui est derrière. <br />
-    ![](data/xkcd.png){: .center}
+    ![](data/xkcd.svg){: .center}

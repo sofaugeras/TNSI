@@ -175,7 +175,7 @@
 
     Par exemple, le graphe suivant :
 
-    ![image](../../T6_6_Epreuve_pratique/data2024/graph2.png){: .center}
+    ![image](./data/graph2.png){: .center}
 
     est représenté par la liste d’adjacence suivante :
 
@@ -213,7 +213,7 @@
 
     Ainsi, le graphe suivant:
 
-    ![image](../../T6_6_Epreuve_pratique/data2024/graph1.png){: .center}
+    ![image](./data/graph1.png){: .center}
 
 
     sera représenté par la liste d’adjacence suivante:
@@ -277,7 +277,7 @@
 
 
 !!! example "GEIPI 2024"
-    Exercice 2 du [sujet Concours GEIPI 2024](data/GEIPI_2024.pdf){. target="_blank"}.
+    Exercice 2 du [sujet Concours GEIPI 2024](./data/GEIPI_2024.pdf){. target="_blank"}.
 
     Codes du sujet :
     

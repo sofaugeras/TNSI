@@ -1,6 +1,6 @@
 ## 2022, Nouvelle Caledonie J2
 
-Exercice 2 du sujet [Nouvelle-Calédonie J2 2022](http://projet.eu.org/pedago/sin/NSI/sujets/NSI-2022-caledonie-2-sujet-officiel.pdf){. target="_blank"}  
+Exercice 2 du sujet [Nouvelle-Calédonie J2 2022](./data/22-NSIJ2NC1.pdf){. target="_blank"}  
 
 ??? check "Correction 1"
     C'est un arbre binaire car chaque nœud possède au maximum deux fils.
@@ -598,7 +598,7 @@ Parcours(A)  # A est un arbre binaire de recherche
 
 ## Exercice 3 du sujet [Centres Etrangers J2 - 2023]
 
-[sujet 2023 Centre étrangers J2 exo3](https://eduscol.education.fr/sti/sites/eduscol.education.fr.sti/files/concours-examens/16774/16774-baccalaur-at-g-n-ral-2023-num-rique-et-sciences-informatiques-133631.pdf){. target="blank"}
+[sujet 2023 Centre étrangers J2 exo3](./data/16774-baccalaur-at-g-n-ral-2023-num-rique-et-sciences-informatiques-133631.pdf){. target="blank"}
 
 
 ??? check "Correction Q1.a.\" 

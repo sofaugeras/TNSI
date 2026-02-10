@@ -175,7 +175,7 @@ En vous servant du code précédent, déchiffrez le message ```58152918114477529
 
 ^^Source :^^ Edition Ellipses : NSI 24 leçons avec exercices corrigés.
 
-On se place dans le contexte de la figure ci-dessous. Le client est un navigateur web classique (par exemple Firefox). Le serveur web est configuré sur une machine dont le nom de domaine est [www.monsite.fr](www.monsite.fr) . 
+On se place dans le contexte de la figure ci-dessous. Le client est un navigateur web classique (par exemple Firefox). Le serveur web est configuré sur une machine dont le nom de domaine est [www.monsite.fr]. 
 
 :arrow_right: Dans chacune des situations suivantes, dire quelle étape de la poignée de main TLS échoue.<br />
 
