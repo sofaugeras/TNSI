@@ -10,7 +10,7 @@ docs_dir: docs
   
 theme:
   name: material
-  custom_dir: docs/my_theme_customizations
+
   custom_dir: docs/overrides #
   font: false
   language: fr
@@ -20,6 +20,7 @@ theme:
     repo : fontawesome/brands/github
     admonition:
       note: fontawesome/solid/pen-to-square
+      
   features:
     - navigation.instant
     - navigation.tabs
@@ -27,7 +28,7 @@ theme:
     - navigation.top
     - toc.integrate
     - header.autohide
-    - content.code.annotate
+    - content.code.annotate 
     - content.code.copy
 
   palette:
@@ -49,15 +50,11 @@ theme:
         icon: material/toggle-switch
         name: Mode clair
 
-
 markdown_extensions:
   - meta
   - abbr
   - admonition
   - def_list
-  - pymdownx.tasklist:
-      custom_checkbox: false
-      clickable_checkbox: true    #   et cliquables.    
   - attr_list
   - footnotes
   - pymdownx.caret
@@ -69,38 +66,34 @@ markdown_extensions:
         linenums: None
         auto_title: true
         auto_title_map:
-              - pymdownx.highlight:           # Coloration syntaxique du code
-        linenums: None
-        auto_title: true
-        pygments_lang_class: true
-        auto_title_map:
-            "Text Only": "📋 Texte"
-            "Python": "🐍 Python"
-            "Python Console Session": "🐍 Python"
-            "JavaScript": "🍵 JavaScript"
-            "SQL": "🐬 SQL"
-            "PHP": "🐘 PHP"
-            "Prompt": "💻 Console"
-            "Bash": "💻 Console"
-            "E-mail": "📥 Entrée"
-            "Text Output": "📤 Sortie"
-            # "mermaid": "🧜‍♂️ Diagramme"
+             "Text Only": "📋 Texte"
+             "Python": "🐍 Python"
+             "Python Console Session": "🐍 Python"
+             "JavaScript": "🍵 JavaScript"
+             "SQL": "🐬 SQL"
+             "PHP": "🐘 PHP"
+             "Prompt": "💻 Console"
+             "Bash": "💻 Console"
+             "E-mail": "📥 Entrée"
+             "Text Output": "📤 Sortie"
+             "mermaid": "🧜‍♂️ Diagramme"
+  - pymdownx.tasklist:
+      custom_checkbox: false
   - pymdownx.inlinehilite
-  # - pymdownx.superfences:
-  #     custom_fences:
-  #         - name: mermaid
-  #           class: mermaid
-  #           format: !!python/name:mermaid2.fence_mermaid
+  - pymdownx.superfences          # Imbrication de blocs
   - pymdownx.keys
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.arithmatex:
       generic: true
-  
+  - pymdownx.tasklist:
+      custom_checkbox:    false   #   avec cases d'origine
+      clickable_checkbox: true    #   et cliquables.
   - toc:
       permalink: ⚓︎
       toc_depth: 3
@@ -118,22 +111,15 @@ markdown_extensions:
 
 plugins:
   - search
-#  - git-revision-date-localized:
-#      enable_creation_date: false
-#      locale: fr
-  # - mermaid2:
-  #     javascript: https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs
+ # - git-revision-date-localized:
+ #     enable_creation_date: false
+ #     locale: fr
+  - awesome-pages:
+      collapse_single_pages: false
+  #- macros
   # - mkdocs-jupyter:
   #     include_source: True
   #- page-to-pdf
-  # - exclude-search:           # exclusion de pages de la recherche
-  #     exclude:
-  #       - T*/*/*/*.ipynb         # les notebooks
-  #       # - N*/*/*/*.py         # Les corrigés
-  #       # - xtra/*.md           # inutile de chercher cela
-  - awesome-pages:
-        collapse_single_pages: true
-  - macros
 
 extra:
   analytics: 
@@ -166,13 +152,13 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js
   - https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js
-  - javascript/mathjax.js
-  - javascript/interpreter.js
-#  - javascript/ide.js
-
+  - https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js
+  - xtra/javascript/mermaid.js
+  - xtra/javascript/mathjax.js
+  - xtra/javascript/interpreter.js
 
 extra_css:
-  - stylesheets/extra.css
+  - xtra/stylesheets/extra.css
   - xtra/stylesheets/pyoditeur.css
 
 

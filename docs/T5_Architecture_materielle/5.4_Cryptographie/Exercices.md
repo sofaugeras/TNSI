@@ -1,7 +1,8 @@
-## Exercice 1
+# Exercices
+
+## Exercice 1  
 
 **Utilisation des biblitohèques cryptographiques du module ```sympy```.**
-
 
 Documentation : [https://docs.sympy.org/latest/modules/crypto.html](https://docs.sympy.org/latest/modules/crypto.html){target="_blank"}
 
@@ -19,9 +20,7 @@ Décoder la phrase ```RYTVJKGCLJWRTZCVRMVTLEDFULCVHLZWRZKKFLKRMFKIVGCRTV```, sac
         print(phrase)
     ```
 
-
-### Exercice 2
-**Chiffrage affine**
+## Exercice 2 : Chiffrage affine
 
 Principe du chiffrage affine :
 
@@ -62,38 +61,32 @@ où $a$ et $b$ sont deux nombres entiers. Attention, *a* doit être premier avec
                     print(p)
     ```
 
+## Exercice 3 : Cryptographie RSA presque à la main
 
-### Exercice 3
-**Cryptographie RSA** presque à la main
+```python
+    import Crypto
+    import libnum
+    from Crypto.Util.number import bytes_to_long, long_to_bytes
+    from Crypto.Random import get_random_bytes 
 
+    bits = 256
+    msg = "en NSI on fait de la crypto"
 
+    p = Crypto.Util.number.getPrime(bits, randfunc=get_random_bytes)
+    q = Crypto.Util.number.getPrime(bits, randfunc=get_random_bytes)
 
-```python linenums='1'
-import Crypto
-import libnum
-from Crypto.Util.number import bytes_to_long, long_to_bytes
-from Crypto.Random import get_random_bytes 
+    n = p * q
+    phi = (p - 1) * (q - 1)
 
-bits = 256
-msg = "en NSI on fait de la crypto"
+    e = 65537  # 65537 est un nombre premier, donc forcément premier avec phi
+    d = libnum.invmod(e, phi)  # on calcule l'inverse de e modulo phi
 
-p = Crypto.Util.number.getPrime(bits, randfunc=get_random_bytes)
-q = Crypto.Util.number.getPrime(bits, randfunc=get_random_bytes)
+    M = bytes_to_long(msg.encode('utf-8'))
 
-n = p * q
-phi = (p - 1) * (q - 1)
+    c = pow(M, e, n) # M puissance e modulo n
+    res = pow(c, d, n)
 
-e = 65537  # 65537 est un nombre premier, donc forcément premier avec phi
-d = libnum.invmod(e, phi)  # on calcule l'inverse de e modulo phi
-
-M = bytes_to_long(msg.encode('utf-8'))
-
-c = pow(M, e, n) # M puissance e modulo n
-res = pow(c, d, n)
-
-print(long_to_bytes(res))
-
-
+    print(long_to_bytes(res))
 ```
 
 1. Analysez le programme ci-dessous pour y retrouver chaque étape du chiffrement RSA.
@@ -104,13 +97,12 @@ print(long_to_bytes(res))
 ??? tip "correction"
     Q3. Il suffit d'inverser ```e``` et ```d```  dans les lignes 20 et 21.
 
-### Exercice 4
+## Exercice 4
 
 En vous servant du code précédent, déchiffrez le message ```58152918114477529438769495136495430966050302170947748011925859233600631318929939319619808279389222131229963717435870597641010567365311762267359794338657867540621133550787677728203831932548041236152866441194127191404729294628415184239755221703677388875259927092794165578604353985011899152968982365630138088486380827379488939561996226754182```  sachant que :
 
 - $e$ vaut 65537.
 - $p$ et $q$ sont respectivement les 13èmes et 14èmes nombres de Mersenne.
-
 
 ??? tip "correction"
     ```python linenums='1'
@@ -171,7 +163,7 @@ En vous servant du code précédent, déchiffrez le message ```58152918114477529
     print('Decrypted:', decrypted)
     ```
 
-### Exercice 5
+## Exercice 5
 
 ^^Source :^^ Edition Ellipses : NSI 24 leçons avec exercices corrigés.
 
@@ -206,7 +198,7 @@ Les questions sont indépendantes.
     5.	Le navigateur commence à afficher la page de garde du site. La câble connectant le serveur au réseau est coupé<br />
     Si la page de garde du site s’affiche, c’est que la requête http récupérant la page a reçu une réponse du serveur. On est après l’étape 5, la connexion TCP est interrompue (car tous les paquets sont perdus)
 
-### Exercice 6 
+## Exercice 6
 
 ^^Source :^^  Edition Ellipses, Spécialité NSI, serge Bays 
 

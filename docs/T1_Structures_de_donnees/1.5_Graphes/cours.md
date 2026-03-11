@@ -19,7 +19,7 @@ selon l'idée de Fabrice Nativel
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aE3MtaDDk5U?si=w5MD2TyZzq49bFWa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
-Voici une illustration du problème des septs points de Königsberg extrait de la vidéo précédente :
+Voici une illustration du problème des septs ponts de Königsberg extrait de la vidéo précédente :
 ![Konigsberg](./data/konigsberg.png){: .center width=50%}
 
 On rappelle que le but du problème est de trouver un chemin qui permet de passer une seule et unique fois par chaque pont de la ville.
@@ -783,36 +783,29 @@ Le parcours en profondeur est un parcours où on va aller «le plus loin possibl
 
 Dans un labyrinthe, ce parcours s'explique très bien : on prend tous les chemins sur la droite jusqu'à rencontrer un mur, auquel cas on revient au dernier embranchement et on prend un autre chemin, puis on repart à droite, etc.
 
-
-
 C'est un parcours qui s'écrit naturellement de manière **récursive** :
 
-{#
 !!! abstract "Parcours en profondeur - DFS :heart: :heart: :heart:"
-    ```python linenums='1'
-    def DFSrec(g, traites, actuel):
-        traites.append(...)
-        for voisin in ...:
-            if voisin not in ...:
-                ...
-        return traites
-    ```
-#}
+   === "A trou"
 
+        ```python linenums='1'
+        def DFSrec(g, traites, actuel):
+            traites.append(...)
+            for voisin in ...:
+                if voisin not in ...:
+                    ...
+            return traites
+        ```
+    === "Parcours en profondeur - DFS :heart: :heart: :heart:"
 
-
-
-!!! abstract "Parcours en profondeur - DFS :heart: :heart: :heart:"
-    ```python linenums='1'
-    def DFSrec(g, traites, actuel):
-        traites.append(actuel)
-        for voisin in g.voisins(actuel):
-            if voisin not in traites:
-                DFSrec(g, traites, voisin)
-        return traites
-    ```
-
-
+        ```python linenums='1'
+        def DFSrec(g, traites, actuel):
+            traites.append(actuel)
+            for voisin in g.voisins(actuel):
+                if voisin not in traites:
+                    DFSrec(g, traites, voisin)
+            return traites
+        ```
 
 !!! example "Exercice 6"
     ![image](data/BFS_ex1.png){: .center}
@@ -821,7 +814,9 @@ C'est un parcours qui s'écrit naturellement de manière **récursive** :
     Rappel : les voisins sont donnés par ordre alphabétique. Le premier voisin de A est donc B.
 
     **Q2.** Vérifier avec le code précédent. 
+
     ??? tip "Correction Q2"
+    
         ```python linenums='1'
         class Graphe:
             def __init__(self, liste_sommets):
@@ -868,15 +863,13 @@ C'est un parcours qui s'écrit naturellement de manière **récursive** :
 
     **Q3.** Reprendre les questions précédentes en changeant le sommet de départ.
 
-
-
 #### 4.2.2 Parcours DFS itératif
 
 Il «suffit» de remplacer la file du parcours BFS par une **pile**. Ainsi, on partira visiter le voisin tout juste ajouté à la *file d'attente* (qui porte maintenant mal son nom, puisque c'est devenu une pile).
 
 !!! abstract "Parcours en profondeur itératif - DFS "
     ```python linenums='1'
-    def DFS_iteratif(graphe, start):
+    def DFS_iteratif(g, start):
         traites = []
         en_attente = [start]
         while en_attente != []:

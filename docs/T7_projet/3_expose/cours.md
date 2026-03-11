@@ -15,6 +15,3 @@
 
 ➰ les deux premiers items de notation seront individualisés.
 ![Grille d'évaluation](data/evaluation.jpg)
-
-
-
