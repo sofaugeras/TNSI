@@ -2397,6 +2397,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercices
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2413,6 +2431,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-1-ep25_sujet-31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice 1 - EP25_sujet 31
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice 2
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4655,6 +4714,7 @@
 
 
 <h1 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">⚓︎</a></h1>
+<h2 id="exercice-1-ep25_sujet-31">Exercice 1 - EP25_sujet 31<a class="headerlink" href="#exercice-1-ep25_sujet-31" title="Permanent link">⚓︎</a></h2>
 <div class="admonition example">
 <p class="admonition-title">Exercice 1 - EP25_sujet 31</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Enoncé</label><label for="__tabbed_1_2">Correction</label></div>
@@ -4662,20 +4722,15 @@
 <div class="tabbed-block">
 <p>Écrire une fonction recherche_motif qui prend en paramètre une chaîne de caractères motif non vide et une chaîne de caractères texte et qui renvoie la liste des positions de motif dans texte. Si motif n’apparaît pas, la fonction renvoie une liste vide.
 Exemples:</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>recherche_motif("ab", "")
-[]
-recherche_motif("ab", "cdcdcdcd")
-[]
-recherche_motif("ab", "abracadabra")
-[0, 7]
-recherche_motif("ab", "abracadabraab")
-[0, 7, 11]</p>
-</blockquote>
-</blockquote>
-</blockquote>
+<div class="highlight"><span class="filename">💻 Console</span><pre><span></span><code>&gt;&gt;&gt;<span class="w"> </span>recherche_motif<span class="o">(</span><span class="s2">&quot;ab&quot;</span>,<span class="w"> </span><span class="s2">&quot;&quot;</span><span class="o">)</span>
+<span class="o">[]</span>
+&gt;&gt;&gt;<span class="w"> </span>recherche_motif<span class="o">(</span><span class="s2">&quot;ab&quot;</span>,<span class="w"> </span><span class="s2">&quot;cdcdcdcd&quot;</span><span class="o">)</span>
+<span class="o">[]</span>
+&gt;&gt;&gt;<span class="w"> </span>recherche_motif<span class="o">(</span><span class="s2">&quot;ab&quot;</span>,<span class="w"> </span><span class="s2">&quot;abracadabra&quot;</span><span class="o">)</span>
+<span class="o">[</span><span class="m">0</span>,<span class="w"> </span><span class="m">7</span><span class="o">]</span>
+&gt;&gt;&gt;<span class="w"> </span>recherche_motif<span class="o">(</span><span class="s2">&quot;ab&quot;</span>,<span class="w"> </span><span class="s2">&quot;abracadabraab&quot;</span><span class="o">)</span>
+<span class="o">[</span><span class="m">0</span>,<span class="w"> </span><span class="m">7</span>,<span class="w"> </span><span class="m">11</span><span class="o">]</span>
+</code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -4704,6 +4759,7 @@ recherche_motif("ab", "abracadabraab")
 </div>
 </div>
 </div>
+<h2 id="exercice-2">Exercice 2<a class="headerlink" href="#exercice-2" title="Permanent link">⚓︎</a></h2>
 <div class="admonition example">
 <p class="admonition-title">exercice 2</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Enoncé</label><label for="__tabbed_2_2">Correction Q14</label><label for="__tabbed_2_3">Correction Q15</label></div>
