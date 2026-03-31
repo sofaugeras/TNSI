@@ -18,7 +18,7 @@
         <link rel="prev" href="../../3.2_Programmation_dynamique/TP_rendu_monnaie/">
       
       
-        <link rel="next" href="../2_vers_BMH/">
+        <link rel="next" href="../2_exercices/">
       
       
         
@@ -2518,35 +2518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2_vers_BMH/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Vers Boyer-Moore-Horspool
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../3_exercices/" class="md-nav__link">
+      <a href="../2_exercices/" class="md-nav__link">
         
   
   
@@ -5122,6 +5094,169 @@ Nigel Horspool  est né en Grande-Bretagne mais citoyen canadien. Il est profess
 </div>
 </div>
 </div>
+<h4 id="224-boyer-moore-horspool">2.2.4 Boyer-Moore-horspool<a class="headerlink" href="#224-boyer-moore-horspool" title="Permanent link">⚓︎</a></h4>
+<p>Faire évoluer votre fonction <code>recherche()</code> en <code>BMH()</code> pour qu'elle renvoie à présent la liste de toutes les occurrences de notre motif.</p>
+<p><em>Exemple d'utilisation de la fonction <code>BMH</code> :</em></p>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">BMH</span><span class="p">(</span><span class="s2">&quot;une magnifique maison bleue&quot;</span><span class="p">,</span> <span class="s2">&quot;maison&quot;</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">15</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">BMH</span><span class="p">(</span><span class="s2">&quot;une magnifique maison bleue&quot;</span><span class="p">,</span> <span class="s2">&quot;nsi&quot;</span><span class="p">)</span>
+<span class="p">[]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">BMH</span><span class="p">(</span><span class="s2">&quot;une magnifique maison bleue&quot;</span><span class="p">,</span> <span class="s2">&quot;ma&quot;</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
+</code></pre></div>
+<details class="note">
+<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2b50.svg" title=":star:" /> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25m0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.75.75 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.75.75 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41z"/></svg></span> </summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">dico_lettres</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">d</span><span class="p">[</span><span class="n">mot</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">d</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">BMH</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">):</span>
+    <span class="n">dico</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="n">indices</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">while</span> <span class="o">...</span><span class="p">:</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="k">while</span> <span class="o">...</span><span class="p">:</span> 
+            <span class="o">...</span>
+        <span class="k">if</span> <span class="o">...</span><span class="p">:</span> 
+            <span class="o">...</span>
+            <span class="o">...</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="o">...</span><span class="p">:</span> 
+                <span class="o">...</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="o">...</span> 
+
+    <span class="k">return</span> <span class="o">...</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="note">
+<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2b50.svg" title=":star:" /> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25m0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.75.75 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.75.75 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25m0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.75.75 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.75.75 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41z"/></svg></span></summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">dico_lettres</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">d</span><span class="p">[</span><span class="n">mot</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">d</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">BMH</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">):</span>
+    <span class="n">dico</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="n">indices</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="o">...</span> <span class="p">:</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="k">while</span> <span class="o">...</span> <span class="ow">and</span> <span class="o">...</span><span class="p">:</span> 
+            <span class="o">...</span>
+        <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="o">...</span><span class="p">:</span> 
+            <span class="o">...</span>
+            <span class="o">...</span> 
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="o">...</span> <span class="ow">in</span> <span class="n">dico</span><span class="p">:</span> 
+                <span class="o">...</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="o">...</span> 
+
+    <span class="k">return</span> <span class="o">...</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="note">
+<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2b50.svg" title=":star:" /> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25m0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.75.75 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.75.75 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25m0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.75.75 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.75.75 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25m0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.75.75 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.75.75 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41z"/></svg></span></summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">dico_lettres</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">d</span><span class="p">[</span><span class="n">mot</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">d</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">BMH</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">):</span>
+    <span class="n">dico</span> <span class="o">=</span> <span class="n">dico_lettres</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span>
+    <span class="n">indices</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="o">...</span> <span class="o">-</span> <span class="o">...</span><span class="p">:</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="k">while</span> <span class="n">k</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">texte</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">==</span> <span class="n">motif</span><span class="p">[</span><span class="o">...</span><span class="p">]:</span> 
+            <span class="n">k</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="o">...</span><span class="p">:</span> 
+            <span class="n">indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+            <span class="n">i</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="o">...</span> <span class="ow">in</span> <span class="n">dico</span><span class="p">:</span> 
+                <span class="n">i</span> <span class="o">+=</span> <span class="o">...</span> <span class="o">-</span> <span class="o">...</span> <span class="o">-</span> <span class="mi">1</span> 
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">i</span> <span class="o">+=</span> <span class="o">...</span>
+
+    <span class="k">return</span> <span class="o">...</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <h2 id="3-bonus-comparaison-des-temps-de-calcul">3. Bonus : comparaison des temps de calcul<a class="headerlink" href="#3-bonus-comparaison-des-temps-de-calcul" title="Permanent link">⚓︎</a></h2>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">texte_pire</span> <span class="o">=</span> <span class="s1">&#39;A&#39;</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span>
 <span class="n">motif_pire</span> <span class="o">=</span> <span class="s1">&#39;A&#39;</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="s1">&#39;B&#39;</span>
