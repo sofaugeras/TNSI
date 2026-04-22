@@ -12,31 +12,31 @@
         <meta name="author" content="Sophie FAUGERAS">
       
       
-        <link rel="canonical" href="https://github.com/sofaugeras/TNSI/T5_Architecture_materielle/5.2_Gestion_des_processus/cours/">
+        <link rel="canonical" href="https://github.com/sofaugeras/TNSI/T8_Divers/thonny/">
       
       
-        <link rel="prev" href="../../5.1_Systemes_sur_puce/cours/">
+        <link rel="prev" href="../../T7_projet/3_expose/cours_crypto/">
       
       
-        <link rel="next" href="../Exercices/">
+        <link rel="next" href="../conseils/">
       
       
         
       
       
-      <link rel="icon" href="../../../xtra/favTNSI.png">
+      <link rel="icon" href="../../xtra/favTNSI.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Cours - Saint Sauveur TNSI</title>
+        <title>Utilisation Thonny - Saint Sauveur TNSI</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
   
@@ -56,8 +56,8 @@
     
       
     
-    <script src="../../../xtra/webcomponentsjs/webcomponents-loader.js"></script>
-    <script src="../../../xtra/gifplayer/gif-player.es6.js" defer async></script>
+    <script src="../../xtra/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../../xtra/gifplayer/gif-player.es6.js" defer async></script>
     <!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
@@ -71,11 +71,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../xtra/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../xtra/stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../xtra/stylesheets/pyoditeur.css">
+      <link rel="stylesheet" href="../../xtra/stylesheets/pyoditeur.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -110,7 +110,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gestion-des-processus" class="md-skip">
+        <a href="#decouverte-de-thonny" class="md-skip">
           Aller au contenu
         </a>
       
@@ -124,7 +124,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="../../.." title="Saint Sauveur TNSI" class="md-header__button md-logo" aria-label="Saint Sauveur TNSI" data-md-component="logo">
+    <a href="../.." title="Saint Sauveur TNSI" class="md-header__button md-logo" aria-label="Saint Sauveur TNSI" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/></svg>
@@ -144,7 +144,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cours
+              Utilisation Thonny
             
           </span>
         </div>
@@ -255,7 +255,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -276,7 +276,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T1_Structures_de_donnees/sommaire/" class="md-tabs__link">
+        <a href="../../T1_Structures_de_donnees/sommaire/" class="md-tabs__link">
           
   
   
@@ -296,7 +296,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T2_Programmation/sommaire/" class="md-tabs__link">
+        <a href="../../T2_Programmation/sommaire/" class="md-tabs__link">
           
   
   
@@ -316,7 +316,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T3_Algorithmique/sommaire/" class="md-tabs__link">
+        <a href="../../T3_Algorithmique/sommaire/" class="md-tabs__link">
           
   
   
@@ -336,7 +336,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T4_Bases_de_donnees/sommaire/" class="md-tabs__link">
+        <a href="../../T4_Bases_de_donnees/sommaire/" class="md-tabs__link">
           
   
   
@@ -352,13 +352,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../sommaire/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../T5_Architecture_materielle/sommaire/" class="md-tabs__link">
           
   
   
@@ -378,7 +376,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T6_5_algos_coeur/sommaire/" class="md-tabs__link">
+        <a href="../../T6_5_algos_coeur/sommaire/" class="md-tabs__link">
           
   
   
@@ -398,7 +396,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T6_6_Epreuve_pratique/BNS_2026/" class="md-tabs__link">
+        <a href="../../T6_6_Epreuve_pratique/BNS_2026/" class="md-tabs__link">
           
   
   
@@ -418,7 +416,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T6_Annales/epreuve_bac/" class="md-tabs__link">
+        <a href="../../T6_Annales/epreuve_bac/" class="md-tabs__link">
           
   
   
@@ -438,7 +436,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T7_projet/sommaire/" class="md-tabs__link">
+        <a href="../../T7_projet/sommaire/" class="md-tabs__link">
           
   
   
@@ -454,11 +452,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../T8_Divers/thonny/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -494,7 +494,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Saint Sauveur TNSI" class="md-nav__button md-logo" aria-label="Saint Sauveur TNSI" data-md-component="logo">
+    <a href="../.." title="Saint Sauveur TNSI" class="md-nav__button md-logo" aria-label="Saint Sauveur TNSI" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/></svg>
@@ -524,7 +524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -603,7 +603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/sommaire/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/sommaire/" class="md-nav__link">
         
   
   
@@ -683,7 +683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/" class="md-nav__link">
         
   
   
@@ -711,7 +711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/" class="md-nav__link">
         
   
   
@@ -799,7 +799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.2_Listes/cours/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.2_Listes/cours/" class="md-nav__link">
         
   
   
@@ -827,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.2_Listes/exercices/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.2_Listes/exercices/" class="md-nav__link">
         
   
   
@@ -855,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.2_Listes/retourPile/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.2_Listes/retourPile/" class="md-nav__link">
         
   
   
@@ -883,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.2_Listes/TD_FlaviusJoseph/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.2_Listes/TD_FlaviusJoseph/" class="md-nav__link">
         
   
   
@@ -971,7 +971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.3_Dictionnaires/cours/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.3_Dictionnaires/cours/" class="md-nav__link">
         
   
   
@@ -999,7 +999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.3_Dictionnaires/exercices/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.3_Dictionnaires/exercices/" class="md-nav__link">
         
   
   
@@ -1087,7 +1087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.4_Arbres/cours/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.4_Arbres/cours/" class="md-nav__link">
         
   
   
@@ -1115,7 +1115,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.4_Arbres/cours2/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.4_Arbres/cours2/" class="md-nav__link">
         
   
   
@@ -1143,7 +1143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.4_Arbres/Exercices/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.4_Arbres/Exercices/" class="md-nav__link">
         
   
   
@@ -1231,7 +1231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.5_Graphes/cours/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.5_Graphes/cours/" class="md-nav__link">
         
   
   
@@ -1259,7 +1259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.5_Graphes/exercices/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.5_Graphes/exercices/" class="md-nav__link">
         
   
   
@@ -1287,7 +1287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.5_Graphes/TP_Labyrinthe/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.5_Graphes/TP_Labyrinthe/" class="md-nav__link">
         
   
   
@@ -1382,7 +1382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Programmation/sommaire/" class="md-nav__link">
+      <a href="../../T2_Programmation/sommaire/" class="md-nav__link">
         
   
   
@@ -1462,7 +1462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Programmation/2.1_Recursivite/cours/" class="md-nav__link">
+      <a href="../../T2_Programmation/2.1_Recursivite/cours/" class="md-nav__link">
         
   
   
@@ -1490,7 +1490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Programmation/2.1_Recursivite/exercices/" class="md-nav__link">
+      <a href="../../T2_Programmation/2.1_Recursivite/exercices/" class="md-nav__link">
         
   
   
@@ -1578,7 +1578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Programmation/2.2_Programmation_Orientee_Objet/cours/" class="md-nav__link">
+      <a href="../../T2_Programmation/2.2_Programmation_Orientee_Objet/cours/" class="md-nav__link">
         
   
   
@@ -1606,7 +1606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Programmation/2.2_Programmation_Orientee_Objet/exercices/" class="md-nav__link">
+      <a href="../../T2_Programmation/2.2_Programmation_Orientee_Objet/exercices/" class="md-nav__link">
         
   
   
@@ -1634,7 +1634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Programmation/2.2_Programmation_Orientee_Objet/resume/" class="md-nav__link">
+      <a href="../../T2_Programmation/2.2_Programmation_Orientee_Objet/resume/" class="md-nav__link">
         
   
   
@@ -1722,7 +1722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Programmation/2.3_Calculabilite_Decidabilite/cours/" class="md-nav__link">
+      <a href="../../T2_Programmation/2.3_Calculabilite_Decidabilite/cours/" class="md-nav__link">
         
   
   
@@ -1750,7 +1750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Programmation/2.3_Calculabilite_Decidabilite/exo/" class="md-nav__link">
+      <a href="../../T2_Programmation/2.3_Calculabilite_Decidabilite/exo/" class="md-nav__link">
         
   
   
@@ -1838,7 +1838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Programmation/2.4_Mise_au_point_de_programme/cours/" class="md-nav__link">
+      <a href="../../T2_Programmation/2.4_Mise_au_point_de_programme/cours/" class="md-nav__link">
         
   
   
@@ -1866,7 +1866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Programmation/2.4_Mise_au_point_de_programme/bonnesPratiques/" class="md-nav__link">
+      <a href="../../T2_Programmation/2.4_Mise_au_point_de_programme/bonnesPratiques/" class="md-nav__link">
         
   
   
@@ -1894,7 +1894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Programmation/2.4_Mise_au_point_de_programme/TP/" class="md-nav__link">
+      <a href="../../T2_Programmation/2.4_Mise_au_point_de_programme/TP/" class="md-nav__link">
         
   
   
@@ -1989,7 +1989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T3_Algorithmique/sommaire/" class="md-nav__link">
+      <a href="../../T3_Algorithmique/sommaire/" class="md-nav__link">
         
   
   
@@ -2069,7 +2069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T3_Algorithmique/3.1_Diviser_pour_regner/cours/" class="md-nav__link">
+      <a href="../../T3_Algorithmique/3.1_Diviser_pour_regner/cours/" class="md-nav__link">
         
   
   
@@ -2097,7 +2097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T3_Algorithmique/3.1_Diviser_pour_regner/exercices/" class="md-nav__link">
+      <a href="../../T3_Algorithmique/3.1_Diviser_pour_regner/exercices/" class="md-nav__link">
         
   
   
@@ -2185,7 +2185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T3_Algorithmique/3.2_Programmation_dynamique/cours/" class="md-nav__link">
+      <a href="../../T3_Algorithmique/3.2_Programmation_dynamique/cours/" class="md-nav__link">
         
   
   
@@ -2213,7 +2213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T3_Algorithmique/3.2_Programmation_dynamique/TP_pyramides/" class="md-nav__link">
+      <a href="../../T3_Algorithmique/3.2_Programmation_dynamique/TP_pyramides/" class="md-nav__link">
         
   
   
@@ -2241,7 +2241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T3_Algorithmique/3.2_Programmation_dynamique/TP_rendu_monnaie/" class="md-nav__link">
+      <a href="../../T3_Algorithmique/3.2_Programmation_dynamique/TP_rendu_monnaie/" class="md-nav__link">
         
   
   
@@ -2329,7 +2329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T3_Algorithmique/3.3_Recherche_textuelle/1_cours/" class="md-nav__link">
+      <a href="../../T3_Algorithmique/3.3_Recherche_textuelle/1_cours/" class="md-nav__link">
         
   
   
@@ -2357,7 +2357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T3_Algorithmique/3.3_Recherche_textuelle/2_exercices/" class="md-nav__link">
+      <a href="../../T3_Algorithmique/3.3_Recherche_textuelle/2_exercices/" class="md-nav__link">
         
   
   
@@ -2452,7 +2452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T4_Bases_de_donnees/sommaire/" class="md-nav__link">
+      <a href="../../T4_Bases_de_donnees/sommaire/" class="md-nav__link">
         
   
   
@@ -2532,7 +2532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T4_Bases_de_donnees/4.1_modele_relationnel/cours/" class="md-nav__link">
+      <a href="../../T4_Bases_de_donnees/4.1_modele_relationnel/cours/" class="md-nav__link">
         
   
   
@@ -2560,7 +2560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T4_Bases_de_donnees/4.1_modele_relationnel/exercices/" class="md-nav__link">
+      <a href="../../T4_Bases_de_donnees/4.1_modele_relationnel/exercices/" class="md-nav__link">
         
   
   
@@ -2648,7 +2648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T4_Bases_de_donnees/4.2_mise_en_pratique/tnsi_BD_1/" class="md-nav__link">
+      <a href="../../T4_Bases_de_donnees/4.2_mise_en_pratique/tnsi_BD_1/" class="md-nav__link">
         
   
   
@@ -2676,7 +2676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T4_Bases_de_donnees/4.2_mise_en_pratique/tnsi_BD_2/" class="md-nav__link">
+      <a href="../../T4_Bases_de_donnees/4.2_mise_en_pratique/tnsi_BD_2/" class="md-nav__link">
         
   
   
@@ -2704,7 +2704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T4_Bases_de_donnees/4.2_mise_en_pratique/tnsi_BD_3/" class="md-nav__link">
+      <a href="../../T4_Bases_de_donnees/4.2_mise_en_pratique/tnsi_BD_3/" class="md-nav__link">
         
   
   
@@ -2732,7 +2732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T4_Bases_de_donnees/4.2_mise_en_pratique/tnsi_BD_4_python/" class="md-nav__link">
+      <a href="../../T4_Bases_de_donnees/4.2_mise_en_pratique/tnsi_BD_4_python/" class="md-nav__link">
         
   
   
@@ -2760,7 +2760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T4_Bases_de_donnees/4.2_mise_en_pratique/tnsi_BD_5_baseDataGouv/" class="md-nav__link">
+      <a href="../../T4_Bases_de_donnees/4.2_mise_en_pratique/tnsi_BD_5_baseDataGouv/" class="md-nav__link">
         
   
   
@@ -2800,29 +2800,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
@@ -2840,7 +2837,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2858,7 +2855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sommaire/" class="md-nav__link">
+      <a href="../../T5_Architecture_materielle/sommaire/" class="md-nav__link">
         
   
   
@@ -2938,7 +2935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5.1_Systemes_sur_puce/cours/" class="md-nav__link">
+      <a href="../../T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/" class="md-nav__link">
         
   
   
@@ -2971,8 +2968,6 @@
                 
   
   
-    
-  
   
   
     
@@ -2983,11 +2978,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_3" >
         
           
           <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
@@ -3008,7 +3005,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -3023,37 +3020,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Cours
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../T5_Architecture_materielle/5.2_Gestion_des_processus/cours/" class="md-nav__link">
         
   
   
@@ -3069,237 +3039,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-notion-de-processus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Notion de processus
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Notion de processus">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-definition-dun-processus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.1 Définition d'un processus
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-observation-des-processus-sous-linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.2 Observation des processus sous Linux
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#121-la-commande-ps" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.2.1 La commande ps
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#122-la-commande-pstree" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.2.2 La commande pstree
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#123-la-commande-top" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.2.3 La commande top
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#124-la-commande-kill" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.2.4 La commande kill
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-ordonnancement" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Ordonnancement
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Ordonnancement">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-experience-les-processus-fonctionnent-simultanement-a-tour-de-role" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.1 Expérience : les processus fonctionnent simultanément à tour de rôle.
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#22-lordonnancement-des-processus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.2 L'ordonnancement des processus
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2.2 L&#39;ordonnancement des processus">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#221-differents-types-dordonnancement" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.2.1 Différents types d'ordonnancement
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#222-les-differents-etats-dun-processus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.2.2 Les différents états d'un processus
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-interblocage" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Interblocage
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. Interblocage">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-definition-et-exemple" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.1 Définition et exemple
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33-representation-schematique" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.3 Représentation schématique
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#34-comment-sen-premunir-hp" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.4 Comment s'en prémunir ? (HP)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#35-le-deadlock-dans-la-vie-courante" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.5 Le deadlock dans la vie courante
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -3312,7 +3051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Exercices/" class="md-nav__link">
+      <a href="../../T5_Architecture_materielle/5.2_Gestion_des_processus/Exercices/" class="md-nav__link">
         
   
   
@@ -3400,7 +3139,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5.3_Protocoles_de_routage/cours/" class="md-nav__link">
+      <a href="../../T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/" class="md-nav__link">
         
   
   
@@ -3428,7 +3167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5.3_Protocoles_de_routage/Exercices/" class="md-nav__link">
+      <a href="../../T5_Architecture_materielle/5.3_Protocoles_de_routage/Exercices/" class="md-nav__link">
         
   
   
@@ -3516,7 +3255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5.4_Cryptographie/cours/" class="md-nav__link">
+      <a href="../../T5_Architecture_materielle/5.4_Cryptographie/cours/" class="md-nav__link">
         
   
   
@@ -3544,7 +3283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5.4_Cryptographie/Exercices/" class="md-nav__link">
+      <a href="../../T5_Architecture_materielle/5.4_Cryptographie/Exercices/" class="md-nav__link">
         
   
   
@@ -3639,7 +3378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_5_algos_coeur/sommaire/" class="md-nav__link">
+      <a href="../../T6_5_algos_coeur/sommaire/" class="md-nav__link">
         
   
   
@@ -3719,7 +3458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_5_algos_coeur/6.1_algos_premiere/cours/" class="md-nav__link">
+      <a href="../../T6_5_algos_coeur/6.1_algos_premiere/cours/" class="md-nav__link">
         
   
   
@@ -3807,7 +3546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_5_algos_coeur/6.2_recursivite/cours/" class="md-nav__link">
+      <a href="../../T6_5_algos_coeur/6.2_recursivite/cours/" class="md-nav__link">
         
   
   
@@ -3895,7 +3634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_5_algos_coeur/6.3_Tri/cours/" class="md-nav__link">
+      <a href="../../T6_5_algos_coeur/6.3_Tri/cours/" class="md-nav__link">
         
   
   
@@ -3990,7 +3729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_6_Epreuve_pratique/BNS_2026/" class="md-nav__link">
+      <a href="../../T6_6_Epreuve_pratique/BNS_2026/" class="md-nav__link">
         
   
   
@@ -4018,7 +3757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../BNS_2025.md" class="md-nav__link">
+      <a href="../../BNS_2025.md" class="md-nav__link">
         
   
   
@@ -4105,7 +3844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Annales/epreuve_bac/" class="md-nav__link">
+      <a href="../../T6_Annales/epreuve_bac/" class="md-nav__link">
         
   
   
@@ -4133,7 +3872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Annales/liste_sujets/" class="md-nav__link">
+      <a href="../../T6_Annales/liste_sujets/" class="md-nav__link">
         
   
   
@@ -4161,7 +3900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Annales/grandoral/" class="md-nav__link">
+      <a href="../../T6_Annales/grandoral/" class="md-nav__link">
         
   
   
@@ -4189,7 +3928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Annales/revisionBD/" class="md-nav__link">
+      <a href="../../T6_Annales/revisionBD/" class="md-nav__link">
         
   
   
@@ -4217,7 +3956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Annales/revisionTAD/" class="md-nav__link">
+      <a href="../../T6_Annales/revisionTAD/" class="md-nav__link">
         
   
   
@@ -4245,7 +3984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Annales/revisionArbre/" class="md-nav__link">
+      <a href="../../T6_Annales/revisionArbre/" class="md-nav__link">
         
   
   
@@ -4273,7 +4012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Annales/revisionRecurisivite/" class="md-nav__link">
+      <a href="../../T6_Annales/revisionRecurisivite/" class="md-nav__link">
         
   
   
@@ -4301,7 +4040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Annales/revisionGraphes/" class="md-nav__link">
+      <a href="../../T6_Annales/revisionGraphes/" class="md-nav__link">
         
   
   
@@ -4388,7 +4127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_projet/sommaire/" class="md-nav__link">
+      <a href="../../T7_projet/sommaire/" class="md-nav__link">
         
   
   
@@ -4468,7 +4207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_projet/1_POO/cours/" class="md-nav__link">
+      <a href="../../T7_projet/1_POO/cours/" class="md-nav__link">
         
   
   
@@ -4556,7 +4295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_projet/2_Huffman/cours/" class="md-nav__link">
+      <a href="../../T7_projet/2_Huffman/cours/" class="md-nav__link">
         
   
   
@@ -4584,7 +4323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_projet/2_Huffman/tp/" class="md-nav__link">
+      <a href="../../T7_projet/2_Huffman/tp/" class="md-nav__link">
         
   
   
@@ -4672,7 +4411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_projet/3_expose/cours/" class="md-nav__link">
+      <a href="../../T7_projet/3_expose/cours/" class="md-nav__link">
         
   
   
@@ -4700,7 +4439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_projet/3_expose/cours_crypto/" class="md-nav__link">
+      <a href="../../T7_projet/3_expose/cours_crypto/" class="md-nav__link">
         
   
   
@@ -4740,26 +4479,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
-        
-          
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
             
   
   
@@ -4777,7 +4519,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4792,10 +4534,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../T8_Divers/thonny/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Utilisation Thonny
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -4811,6 +4580,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#les-zones-et-boutons-de-thonny" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les zones et boutons de Thonny
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installer-une-bibliotheque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installer une bibliothèque
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4823,7 +4634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T8_Divers/conseils/" class="md-nav__link">
+      <a href="../conseils/" class="md-nav__link">
         
   
   
@@ -4851,7 +4662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T8_Divers/orientation/" class="md-nav__link">
+      <a href="../orientation/" class="md-nav__link">
         
   
   
@@ -4902,193 +4713,26 @@
   
 
 
-<h1 id="gestion-des-processus">Gestion des processus<a class="headerlink" href="#gestion-des-processus" title="Permanent link">⚓︎</a></h1>
-<p><img alt="image" class="center" src="../data/BO.png" /></p>
-<p><img alt="image" class="center" src="../data/meme_deadlock.jpeg" width="40%" /></p>
-<div class="admonition - info">
-<p class="admonition-title">Crédits</p>
-<ul>
-<li><a href="https://glassus.github.io/">Gilles Lassus</a></li>
-</ul>
+<h1 id="decouverte-de-thonny">Découverte de Thonny<a class="headerlink" href="#decouverte-de-thonny" title="Permanent link">⚓︎</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Crédit</p>
+<p>document source : Didier Berhault, Lycée Marcellin Berthelot, Questembert</p>
 </div>
-<h2 id="1-notion-de-processus">1. Notion de processus<a class="headerlink" href="#1-notion-de-processus" title="Permanent link">⚓︎</a></h2>
-<h3 id="11-definition-dun-processus">1.1 Définition d'un processus<a class="headerlink" href="#11-definition-dun-processus" title="Permanent link">⚓︎</a></h3>
-<p>Lorsqu'un programme est exécuté sur un ordinateur, celui-ci va créer un (ou plusieurs) <strong>processus</strong>.</p>
-<p>On dit que ce processus est une <strong>instance d'exécution</strong> de ce programme.</p>
-<p>Un processus est caractérisé par :</p>
-<ul>
-<li>l'ensemble des instructions qu'il va devoir accomplir (écrites dans le fichier exécutable obtenu par la compilation du code-source du programme)</li>
-<li>les ressources que le programme va mobiliser (fichier en ouverture, carte son...)</li>
-<li>l'état des registres du processeur </li>
-</ul>
-<h3 id="12-observation-des-processus-sous-linux">1.2 Observation des processus sous Linux<a class="headerlink" href="#12-observation-des-processus-sous-linux" title="Permanent link">⚓︎</a></h3>
-<h3 id="121-la-commande-ps">1.2.1 La commande <code>ps</code><a class="headerlink" href="#121-la-commande-ps" title="Permanent link">⚓︎</a></h3>
-<p>Dans un terminal, la commande <code>ps</code> va permettre d'afficher la liste des processus actifs. </p>
-<blockquote>
-<p>Plus précisément, nous allons utiliser la commande <code>ps -lu nom_user</code>. L'option <code>l</code> permet d'afficher un grand nombre de renseignements et l'option <code>u</code> permet de spécifier l'utilisateur propriétaire des processus.</p>
-</blockquote>
-<p><img alt="image" class="center" src="../data/term1.png" /></p>
-<p>On retrouve notamment dans ce tableau les colonnes :</p>
-<ul>
-<li>
-<p><code>CMD</code>  (Command) : le nom de la commande qui a créé le processus. Vous pouvez y retrouver par ordre chronologique le nom de tous les programmes actifs. Certains sont ceux que vous avez ouverts volontairement (navigateur...) mais on y trouve surtout tous les programmes nécessaires au bon fonctionnement du système d'exploitation. Le dernier processus en bas de la liste est forcément <code>ps</code>, puisque vous venez de l'appeler.</p>
-</li>
-<li>
-<p><code>PID</code> (Process Identifier) : le numéro unique d'identification, affecté chronologiquement par le système d'exploitation. Le processus de PID égal à 1 est <code>systemd</code>, qui est le <a class="" href="https://doc.ubuntu-fr.org/systemd" target="_blank">tout premier programme</a> lancé par le noyau Linux au démarrage. </p>
-</li>
-<li>
-<p><code>PPID</code> (Parent PID) : certains processus vont <em>eux-mêmes</em> lancer plusieurs processus-fils, qui porteront le même nom. C'est ainsi qu'on peut retrouver de multiples processus s'appelant <code>chrome</code> :</p>
-</li>
-</ul>
-<p><img alt="image" class="center" src="../data/term_montage.png" /></p>
-<p>Ici, l'instance «principale» de Chrome (<code>PID</code> 1453) a généré 6 autres instances de <code>PID</code> différents, dont le <code>PPID</code> vaut 1453.</p>
-<blockquote>
-<p>Dans Chrome/Chromium, vous pouvez comprendre le rôle de chaque processus en le retrouvant dans le gestionnaire des tâches (clic-droit sur une zone vide de la barre d'onglets)</p>
-</blockquote>
-<h3 id="122-la-commande-pstree">1.2.2 La commande <code>pstree</code><a class="headerlink" href="#122-la-commande-pstree" title="Permanent link">⚓︎</a></h3>
-<p>À noter que la commande <code>pstree</code> permet d'afficher les processus sous forme d'arborescence : </p>
-<p><img alt="image" class="center" src="../data/pstree.png" /></p>
-<h3 id="123-la-commande-top">1.2.3 La commande <code>top</code><a class="headerlink" href="#123-la-commande-top" title="Permanent link">⚓︎</a></h3>
-<p>La commande <code>top</code> permet de connaître en temps réel la liste des processus, classés par ordre décroissant de consommation de CPU. </p>
-<p>On ferme <code>top</code> par la combinaison de touches <code>Ctrl-C</code>.</p>
-<p>Si on repère alors un processus qui consomme beaucoup trop de ressources, on peut utiliser...</p>
-<h3 id="124-la-commande-kill">1.2.4 La commande <code>kill</code><a class="headerlink" href="#124-la-commande-kill" title="Permanent link">⚓︎</a></h3>
-<p>La commande <code>kill</code> permet de fermer un processus, en donnant son <code>PID</code>  en argument.</p>
-<p>Exemple : <code>kill 1453</code> tuera Chrome (voir la capture du 1.2.1)</p>
-<p><img alt="image" class="center" src="../data/kill.jpg" width="50%" /></p>
-<h2 id="2-ordonnancement">2. Ordonnancement<a class="headerlink" href="#2-ordonnancement" title="Permanent link">⚓︎</a></h2>
-<h3 id="21-experience-les-processus-fonctionnent-simultanement-a-tour-de-role">2.1 Expérience : les processus fonctionnent <del>simultanément</del> à tour de rôle.<a class="headerlink" href="#21-experience-les-processus-fonctionnent-simultanement-a-tour-de-role" title="Permanent link">⚓︎</a></h3>
-<p>Un ordinateur donne l'illusion de réaliser plusieurs tâches simultanément. Hormis pour les processeurs fonctionnant avec plusieurs cœurs, il n'en est rien.</p>
-<p>Comme nous l'avons vu, ces processus sont lancés séquentiellement par le système d'exploitation, et sont ensuite en apparence tous «actifs en même temps» (les guillemets sont importants) : on parle de <strong>programmation concurrente</strong>.</p>
-<p>Revenons sur l'expression «actifs en même temps», car elle véhicule une fausse idée : ces processus sont bien vivants dans un même laps de temps, mais ils s'exécutent <strong>LES UNS APRÈS LES AUTRES</strong>, le processeur ne pouvant en traiter qu'<strong>un seul à la fois</strong>.</p>
-<p>Un cadencement extrêmement rapide et efficace donne l'<em>apparence</em> d'une (fausse) simultanéité. Nous allons la mettre en évidence :</p>
-<p>Considérons les fichiers <code>progA.py</code> et <code>progB.py</code> ci-dessous :</p>
-<div class="highlight"><span class="filename">progA.py</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;programme A en cours, itération&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.02</span><span class="p">)</span>  
-</code></pre></div>
-<div class="highlight"><span class="filename">progB.py</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
-<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;programme B en cours, itération&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.02</span><span class="p">)</span>  
-</code></pre></div>
-<p>Le programme <code>progB.py</code> est légèrement retardé au démarrage par le <code>time.sleep(0.01)</code>.
-Il devrait donc en résulter un entrelacement entre les phrases <code>programme A en cours</code> et <code>programme B en cours</code>.  </p>
-<p>L'exécution «d'apparence simultanée» de ces deux programmes peut se faire dans un Terminal via la commande <code>python3 progA.py &amp; python3 progB.py</code>.</p>
-<p>Il en résulte ceci :</p>
-<p><img alt="image" class="center" src="../data/simul1.png" /></p>
-<p>Nous retrouvons bien l'alternance prévue à la lecture du code.<br />
-Tout se passe donc comme si les deux processus avaient été lancés et traités simultanément.</p>
-<p>Réduisons maintenant les temporisations (en passant du centième de seconde à la milliseconde): </p>
-<div class="highlight"><span class="filename">progA.py</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;programme A en cours, itération&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.002</span><span class="p">)</span>  
-</code></pre></div>
-<div class="highlight"><span class="filename">progB.py</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
-<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.001</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;programme B en cours, itération&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.002</span><span class="p">)</span>  
-</code></pre></div>
-<p>Il en résulte maintenant ceci :</p>
-<p><img alt="image" class="center" src="../data/simul2.png" /></p>
-<p>L'alternance prévue n'est plus respectée (et les résultats deviennent non-reproductibles).</p>
-<p>Si la gestion des processus était réellement simultanée, même en considérant des ralentissements du processeur par des sollicitations extérieures, chaque processus serait ralenti de la même manière : l'entrelacement des phrases serait toujours le même. </p>
-<p>En réalité, le processeur passe son temps à alterner entre les divers processus qu'il a à gérer, et les met en attente quand il ne peut pas s'occuper d'eux. Il obéit pour cela aux instructions de son <strong>ordonnanceur</strong>.</p>
-<h2 id="22-lordonnancement-des-processus">2.2 L'ordonnancement des processus<a class="headerlink" href="#22-lordonnancement-des-processus" title="Permanent link">⚓︎</a></h2>
-<h3 id="221-differents-types-dordonnancement">2.2.1 Différents types d'ordonnancement<a class="headerlink" href="#221-differents-types-dordonnancement" title="Permanent link">⚓︎</a></h3>
-<p>Si on vous donne 4 tâches A, B, C et D à accomplir, vous pouvez décider :</p>
-<ul>
-<li>de faire la tâche prioritaire d'abord ;</li>
-<li>de faire la tâche la plus rapide d'abord ;</li>
-<li>de faire la tâche la plus longue d'abord ;</li>
-<li>de les faire dans l'ordre où elles vous ont été données ;</li>
-<li>de faire à tour de rôle chaque tâche pendant un temps fixe jusqu'à ce qu'elles soient toutes terminées;</li>
-<li>...</li>
-</ul>
-<p>Un processeur est confronté aux mêmes choix : comment déterminer quel processus doit être traité à quel moment ?</p>
-<p>Le schéma ci-dessous (issu de <a class="" href="https://medium.com/@sheenam.mca17.du/process-scheduling-b86975413079" target="_blank">ce site</a>) présente quelques politiques d'ordonnancement :</p>
-<p><img alt="image" class="center" src="../data/schedule.png" width="80%" /></p>
-<p>Sous Linux, l'ordonnancement est effectué par un système hybride où les processus sont exécutés à tour de rôle (on parle de <em>tourniquet</em> ou de <em>Round Robin</em>) suivant un ordre de priorité dynamique.</p>
-<blockquote>
-<p>Dans le cas (très fréquent maintenant) d'un processeur <em>multi-cœurs</em>, le problème reste identique. Certes, sur 4 cœurs, 4 processus pourront être traités simultanément (une <strong>réelle</strong> simultanéité) mais il reste toujours beaucoup plus de processus à traiter que de cœurs dans le processeur... et un ordonnancement est donc toujours nécessaire.</p>
-</blockquote>
-<h3 id="222-les-differents-etats-dun-processus">2.2.2 Les différents états d'un processus<a class="headerlink" href="#222-les-differents-etats-dun-processus" title="Permanent link">⚓︎</a></h3>
-<p>Selon que l'ordonnanceur aura décidé de le confier ou non au processeur pour son exécution, un processus peut donc se trouver dans 3 états :</p>
-<ul>
-<li><strong>Prêt</strong> : il attend qu'arrive le moment de son exécution.</li>
-<li><strong>Élu</strong> : il est en cours d'exécution par le processeur.</li>
-<li><strong>Bloqué</strong> : pendant son exécution (état <strong>Élu</strong>), le processus réclame une ressource qui n'est pas immédiatement disponible. Son exécution s'interrompt. Lorsque la ressource sera disponible, le processus repassera par l'état <strong>Prêt</strong> et attendra à nouveau son tour. </li>
-</ul>
-<p><img alt="image" class="center" src="../data/cycle.png" /></p>
-<p>On peut utiliser la métaphore suivante :</p>
-<blockquote>
-<p>Sur le bureau d'un professeur, il y a 3 paquets de copies, correspondant aux classes A, B, et C. Ces paquets sont <strong>Prêts</strong> à être corrigés. Si le professeur ramène devant lui le paquet A, celui-ci devient <strong>Élu</strong>, et le professeur peut commencer à le corriger. Pour se changer les idées, il peut interrompre la correction du paquet A (qui va passer à l'état <strong>Bloqué</strong>) et ramener vers lui le paquet C. Il pourra ensuite prendre le paquet B, puis à nouveau le C, puis le A, ainsi de suite jusqu'à ce que tous les paquets soient totalement corrigés. Ces paquets seront alors <strong>Terminés</strong>.  <br />
-Au cours de cette procédure, le professeur n'a toujours eu devant lui qu'<strong>un seul paquet de copies</strong> (soit A, soit B, soit C).</p>
-</blockquote>
-<p><strong>Pourquoi l'accès à une ressource peut bloquer un processus ?</strong></p>
-<p>Pendant son exécution, un processus peut avoir besoin d'accéder à une ressource déjà occupée (un fichier déjà ouvert, par exemple) ou être en attente d'une entrée-utilisateur (un <code>input()</code> dans un code <code>Python</code> par exemple). Dans ce cas-là, le processeur va passer ce processus à l'état <strong>Bloqué</strong>, pour pouvoir ainsi se consacrer à un autre processus.</p>
-<p>Une fois débloqué, le processus va repasser à l'état <strong>Prêt</strong> et rejoindre (par exemple) la file d'attente des processus avant d'être à nouveau <strong>Élu</strong> et donc exécuté.</p>
-<h2 id="3-interblocage">3. Interblocage<a class="headerlink" href="#3-interblocage" title="Permanent link">⚓︎</a></h2>
-<h3 id="31-definition-et-exemple">3.1 Définition et exemple<a class="headerlink" href="#31-definition-et-exemple" title="Permanent link">⚓︎</a></h3>
-<p>Comme nous venons de le voir, un processus peut être dans l'état bloqué dans l'attente de la libération d'une ressource. </p>
-<p>Ces ressources (l'accès en écriture à un fichier, à un registre de la mémoire...) ne peuvent être données à deux processus à la fois. Des processus souhaitant accéder à cette ressource sont donc en concurrence sur cette ressource. Un processus peut donc devoir attendre qu'une ressource se libère avant de pouvoir y accéder (et ainsi passer de l'état Bloqué à l'état Prêt).</p>
-<p><strong>Problème :</strong> Et si deux processus se bloquent mutuellement la ressource dont ils ont besoin ?</p>
-<p><strong>Exemple :</strong> Considérons 2 processus A et B, et deux ressources R et S. L'action des processus A et B est décrite ci-dessous :</p>
-<p><img alt="image" class="center" src="../data/tab_proc.png" /></p>
-<p><strong>Déroulement des processus A et B :</strong></p>
-<ul>
-<li>A et B sont créés et passent à l'état <strong>Prêt</strong>.</li>
-<li>L'ordonnanceur déclare <strong>Élu</strong> le processus A (ou bien B, cela ne change rien).</li>
-<li>L'étape A1 de A est réalisée : la ressource R est donc affectée à A.</li>
-<li>L'ordonnanceur déclare maintenant <strong>Élu</strong> le processus B. A est donc passé à <strong>Bloqué</strong> en attendant que son tour revienne.</li>
-<li>L'étape B1 de B est réalisée : la ressource S est donc affectée à B.</li>
-<li>L'ordonnanceur déclare à nouveau <strong>Élu</strong> le processus A. B est donc passé à <strong>Bloqué</strong> en attendant que son tour revienne.</li>
-<li>L'étape A2 de A est donc enclenchée : problème, il faut pour cela pouvoir accèder à la ressource S, qui n'est pas disponible. L'ordonnanceur va donc passer A à <strong>Bloqué</strong> et va revenir au processus B qui redevient <strong>Élu</strong>.</li>
-<li>L'étape B2 de B est donc enclenchée : problème, il faut pour cela pouvoir accèder à la ressource R, qui n'est pas disponible. L'ordonnanceur va donc passer B à <strong>Bloqué</strong>.</li>
-</ul>
-<p>Les deux processus A et B sont donc dans l'état <strong>Bloqué</strong>, chacun en attente de la libération d'une ressource bloquée par l'autre : ils se bloquent mutuellement.</p>
-<p>Cette situation (critique) est appelée <strong>interblocage</strong> ou <strong>deadlock</strong>.</p>
-<h3 id="33-representation-schematique">3.3 Représentation schématique<a class="headerlink" href="#33-representation-schematique" title="Permanent link">⚓︎</a></h3>
-<ul>
-<li>les processus seront représentés par des <strong>cercles</strong>, les ressources par des <strong>carrés</strong>.</li>
-<li>Si à l'étape A1 le processus A a demandé et <strong>reçu</strong> la ressource R, la représentation sera :
-<img alt="image" class="center" src="../data/A1.png" /></li>
-<li>Si à l'étape A2 le processus A est <strong>en attente</strong> de la ressource S, la représentation sera :
-<img alt="image" class="center" src="../data/A2.png" /></li>
-</ul>
-<p>Avec ces conventions, la situation précédente peut donc se schématiser par :</p>
-<p><img alt="image" class="center" src="../data/schema.png" /></p>
-<p>Ce type de schéma fait apparaître un <strong>cycle d'interdépendance</strong>, qui caractérise ici la situation de deadlock.</p>
-<h3 id="34-comment-sen-premunir-hp">3.4 Comment s'en prémunir ? <em>(HP)</em><a class="headerlink" href="#34-comment-sen-premunir-hp" title="Permanent link">⚓︎</a></h3>
-<p>Il existe trois stratégies pour éviter les interblocages :</p>
-<ul>
-<li><strong>la prévention</strong> : on oblige le processus à déclarer à l'avance la liste de toutes les ressources auxquelles il va accéder.</li>
-<li><strong>l'évitement</strong> : on fait en sorte qu'à chaque étape il reste une possibilité d'attribution de ressources qui évite le deadlock.</li>
-<li><strong>la détection/résolution</strong> : on laisse la situation arriver jusqu'au deadlock, puis un algorithme de résolution détermine quelle ressource libérer pour mettre fin à l'interblocage.</li>
-</ul>
-<h3 id="35-le-deadlock-dans-la-vie-courante">3.5 Le deadlock dans la vie courante<a class="headerlink" href="#35-le-deadlock-dans-la-vie-courante" title="Permanent link">⚓︎</a></h3>
-<h4 id="351-lemballage-diabolique">3.5.1 L'emballage diabolique<a class="headerlink" href="#351-lemballage-diabolique" title="Permanent link">⚓︎</a></h4>
-<p><img alt="image" class="center" src="../data/ciseaux.png" width="30%" /></p>
-<h4 id="352-le-carrefour-maudit">3.5.2 Le carrefour maudit<a class="headerlink" href="#352-le-carrefour-maudit" title="Permanent link">⚓︎</a></h4>
-<p><img alt="image" class="center" src="../data/stop.png" width="40%" /></p>
-<h4 id="353-le-chomage-eternel">3.5.3 Le chômage éternel<a class="headerlink" href="#353-le-chomage-eternel" title="Permanent link">⚓︎</a></h4>
-<p><img alt="image" class="center" src="../data/job.png" width="30%" /></p>
-<details class="tip">
-<summary>Sources</summary>
-<ul>
-<li><a href="http://info-mounier.fr/terminale_nsi/archi_se_reseaux/processus.php">http://info-mounier.fr/terminale_nsi/archi_se_reseaux/processus.php</a></li>
-<li><a href="http://lycee.educinfo.org/index.php?page=creation_thread&amp;activite=processus">http://lycee.educinfo.org/index.php?page=creation_thread&amp;activite=processus</a></li>
-<li><a href="https://www.lecluse.fr/nsi/NSI_T/archi/process/">https://www.lecluse.fr/nsi/NSI_T/archi/process/</a></li>
-<li><a href="http://www.uqac.ca/pguerin/8INF341/Cours9_Interblocage.html">http://www.uqac.ca/pguerin/8INF341/Cours9_Interblocage.html}</a></li>
-<li><a href="http://www-inf.it-sudparis.eu/cours/AlgoRep/Web/8.25.html">http://www-inf.it-sudparis.eu/cours/AlgoRep/Web/8.25.html</a></li>
-</ul>
-</details>
+<p>Pour aborder les bases de Python, vous utiliserez cet IDE au style épuré et aux fonctions très pédagogiques.
+Thonny est déjà installé sur les ordinateurs du lycée.</p>
+<p>Source officielle du téléchargement : <a href="https://thonny.org">https://thonny.org</a></p>
+<p><img alt="illustrtaion" class="center" src="../data/install_thonny.png" width="50%" /></p>
+<div class="admonition note">
+<p class="admonition-title">Affichage personnalisé</p>
+<p>Affichage personnalisable : menu « affichage »</p>
+<p>Les fenêtres à activer une fois Thonny installé et ouvert : Assistant, Console, Structure, Variables</p>
+</div>
+<h2 id="les-zones-et-boutons-de-thonny">Les zones et boutons de Thonny<a class="headerlink" href="#les-zones-et-boutons-de-thonny" title="Permanent link">⚓︎</a></h2>
+<p><img alt="illustration" class="center" src="../data/thonny_zone.png" width="80%" /></p>
+<h2 id="installer-une-bibliotheque">Installer une bibliothèque<a class="headerlink" href="#installer-une-bibliotheque" title="Permanent link">⚓︎</a></h2>
+<p>Dans le menu Outils &gt; Gérer les paquets, Taper le nom de la bibliothèque (exemple ici : networkx), Cliquer sur « Rechercher sur PyPi » puis Cliquer sur le premier lien proposé  <strong>networkx</strong>, Cliquer sur le bouton « Installer »</p>
+<p><img alt="illustration" class="center" src="../data/thonny_lib.png" width="100%" /></p>
+<p>Si la bibliothèque existe déjà, vous pouvez « mettre à jour » (fortement conseillé) ou « désinstaller »</p>
 
 
 
@@ -5104,7 +4748,7 @@ Au cours de cette procédure, le professeur n'a toujours eu devant lui qu'<stron
 
 
                 
-<script src="../../../js/ide.js"></script>
+<script src="../../js/ide.js"></script>
 <style>
     .jp-RenderedHTMLCommon p {
         font-size: 0.8rem;
@@ -5232,10 +4876,10 @@ Au cours de cette procédure, le professeur n'a toujours eu devant lui qu'<stron
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
@@ -5247,11 +4891,11 @@ Au cours de cette procédure, le professeur n'a toujours eu devant lui qu'<stron
       
         <script src="https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js"></script>
       
-        <script src="../../../xtra/javascript/mermaid.js"></script>
+        <script src="../../xtra/javascript/mermaid.js"></script>
       
-        <script src="../../../xtra/javascript/mathjax.js"></script>
+        <script src="../../xtra/javascript/mathjax.js"></script>
       
-        <script src="../../../xtra/javascript/interpreter.js"></script>
+        <script src="../../xtra/javascript/interpreter.js"></script>
       
     
   </body>
