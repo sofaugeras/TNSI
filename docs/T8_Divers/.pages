@@ -1,6 +1,5 @@
 title: Utile 🔦
 nav:
-    - Orientation : orientation.md
+    - Utilisation Thonny : thonny.md
     - Quelques conseils : conseils.md
-    
-    
+    - Orientation : orientation.md

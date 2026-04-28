@@ -497,7 +497,6 @@ L'objet de type ```Graphe``` aura comme attributs :
             return matrice
     ```
 
-
 ## 4. :star: :star: :star: Parcours de graphes :star: :star: :star: 
 
 ![](data/toutgraphe.jpeg){: .center width=40%} 
@@ -523,12 +522,10 @@ L'objet de type ```Graphe``` aura comme attributs :
         - on visite ```s```
         - on ajoute à ```S``` tous les voisins de ```s``` **pas encore visités**
 
-
 !!! warning "Sommets visités"
     Contrairement à un parcours d'arbre, où les fils d'un nœud ne peuvent pas avoir été visités avant le nœud, un voisin d'un sommet peut avoir déjà été visité en tant que voisin d'un sommet précédent...
 
     Il est donc nécessaire de mémoriser les sommets déja visités ou découverts (on dira qu'un sommet est découvert lorsqu'on l'ajoute à ```S```).
-
 
 Le choix de la structure de l'ensemble ```S``` est prépondérant:
 
@@ -564,54 +561,51 @@ On utilise :
 
 En début d'algorithme, seul le sommet de départ `#!py depart` donné en paramètre est découvert. La fonction `BFS` renvoie la liste des sommets dans l'ordre de visite lors du parcours en largeur.
 
-
-{#
 !!! abstract "Parcours en largeur - BFS :heart: :heart: :heart:"
-    ```python linenums='1'
-    def BFS(g, depart):
-        '''
-        Effectue un parcours en largeur du graphe g en partant du sommet depart,
-        et renvoie la liste des sommets visités dans l'ordre du parcours.
-        '''
-        traites = []
-        decouverts = [...]
-        en_attente = [...]
-        while ... != [] :
-            sommet = ....pop(0)
-            voisins = g.voisins(...)
-            for voisin in ...:
-                if voisin not in decouverts:
-                    decouverts.append(voisin)
-                    en_attente.append(voisin)
-            traites.append(...)
-        return traites
+    === "BFS"
 
-    ```
-#}
+        ```python linenums='1'
+        def BFS(g, depart):
+            '''
+            Effectue un parcours en largeur du graphe g en partant du sommet depart,
+            et renvoie la liste des sommets visités dans l'ordre du parcours.
+            '''
+            traites = []
+            decouverts = [...]
+            en_attente = [...]
+            while ... != [] :
+                sommet = ....pop(0)
+                voisins = g.voisins(...)
+                for voisin in ...:
+                    if voisin not in decouverts:
+                        decouverts.append(voisin)
+                        en_attente.append(voisin)
+                traites.append(...)
+            return traites
 
+        ```
+    === "Correction"
 
-!!! abstract "Parcours en largeur - BFS "
-    ```python linenums='1'
-    def BFS(g, depart):
-        '''
-        Effectue un parcours en largeur du graphe g en partant du sommet depart,
-        et renvoie la liste des sommets visités dans l'ordre du parcours.
-        '''
-        traites = []
-        decouverts = [depart]
-        en_attente = [depart]
-        while en_attente != [] :
-            sommet = en_attente.pop(0)
-            voisins = g.voisins(sommet)
-            for voisin in voisins:
-                if voisin not in decouverts:
-                    decouverts.append(voisin)
-                    en_attente.append(voisin)
-            traites.append(sommet)
-        return traites
+        ```python linenums='1'
+        def BFS(g, depart):
+            '''
+            Effectue un parcours en largeur du graphe g en partant du sommet depart,
+            et renvoie la liste des sommets visités dans l'ordre du parcours.
+            '''
+            traites = []
+            decouverts = [depart]
+            en_attente = [depart]
+            while en_attente != [] :
+                sommet = en_attente.pop(0)
+                voisins = g.voisins(sommet)
+                for voisin in voisins:
+                    if voisin not in decouverts:
+                        decouverts.append(voisin)
+                        en_attente.append(voisin)
+                traites.append(sommet)
+            return traites
 
-    ```
-
+        ```
 
 !!! warning "Intérêt de la liste ```decouverts```"
     La liste ```decouverts``` contient tous les sommets qui ont été :
@@ -626,10 +620,6 @@ En début d'algorithme, seul le sommet de départ `#!py depart` donné en param�
 
     ![image](data/en_attente.png){: .center}
      
-
-
-
-
 !!! example "Exercice 4"
     ![image](data/BFS_ex1.png){: .center}
 
@@ -668,7 +658,7 @@ En début d'algorithme, seul le sommet de départ `#!py depart` donné en param�
         ```
     
 
-### 4.1.3 Application du BFS : recherche du plus court chemin
+#### 4.1.3 Application du BFS : recherche du plus court chemin
 
 L'algorithme BFS découvre les sommets «par cercles concentriques» autour du point de départ (ainsi que le montre la structure de la file d'attente). On découvre d'abord tous les sommets à la distance 1 du point de départ, puis à la distance 2, puis 3, etc.
 
@@ -679,7 +669,6 @@ On comprend donc que si on arrive à se souvenir du sommet «parent» de chaque 
 Nous allons pour cela nous servir d'une structure de dictionnaire pour associer à chaque sommet son sommet-parent.
 
 Il faudra ensuite une fonction pour recréer le chemin.
-
 
 !!! warning "Pourquoi le plus court chemin ?"
 
@@ -693,91 +682,85 @@ Il faudra ensuite une fonction pour recréer le chemin.
     
     Lorsqu'on remontera de B vers A en passant par les sommets parents successifs, il ne peut y avoir qu'un seul sommet par «couche» : le chemin sera donc exactement de longueur ```k```, il sera donc minimal. 
 
-
 !!! abstract "Recherche du plus court chemin "
+    === "Plus court chemin"
 
-    {#
-    ```python linenums='1'
-    def recherche_chemin(g, depart, arrivee):
-        '''
-        Parcours en largeur du graphe g en partant du sommet depart,
-        qui s'arrête dès que le sommet arrivee est atteint.
-        Renvoie alors le chemin du depart vers arrivee.
-        '''
-        traites = []
-        decouverts = [depart]
-        en_attente = [depart]
-        parent = {}
-        while en_attente != [] :
-            sommet = en_attente.pop(0)
-            voisins = g.voisins(sommet)
-            for voisin in voisins:
-                if voisin not in decouverts:
-                    decouverts.append(voisin)
-                    en_attente.append(voisin)
-                    parent[voisin] = sommet
-                    if voisin == arrivee:
-                        return remonte_chemin(depart, arrivee, parent)
-            traites.append(sommet)
-        return "non trouvé"  
-
-
-    def remonte_chemin(depart, arrivee, parent):
-        sommet = arrivee
-        chemin = arrivee
-        while sommet != ...:
-            sommet = parent[...]
-            chemin = ... + chemin
-        return chemin
-    ```
-    #}
+        ```python linenums='1'
+        def recherche_chemin(g, depart, arrivee):
+            '''
+            Parcours en largeur du graphe g en partant du sommet depart,
+            qui s'arrête dès que le sommet arrivee est atteint.
+            Renvoie alors le chemin du depart vers arrivee.
+            '''
+            traites = []
+            decouverts = [depart]
+            en_attente = [depart]
+            parent = {}
+            while en_attente != [] :
+                sommet = en_attente.pop(0)
+                voisins = g.voisins(sommet)
+                for voisin in voisins:
+                    if voisin not in decouverts:
+                        decouverts.append(voisin)
+                        en_attente.append(voisin)
+                        parent[voisin] = sommet
+                        if voisin == arrivee:
+                            return remonte_chemin(depart, arrivee, parent)
+                traites.append(sommet)
+            return "non trouvé"  
 
 
-    ```python linenums='1'
-    def recherche_chemin(g, depart, arrivee):
-        '''
-        Parcours en largeur du graphe g en partant du sommet depart,
-        qui s'arrête dès que le sommet arrivee est atteint.
-        Renvoie alors le chemin du depart vers arrivee.
-        '''
-        traites = []
-        decouverts = [depart]
-        en_attente = [depart]
-        parent = {}
-        while en_attente != [] :
-            sommet = en_attente.pop(0)
-            voisins = g.voisins(sommet)
-            for voisin in voisins:
-                if voisin not in decouverts:
-                    decouverts.append(voisin)
-                    en_attente.append(voisin)
-                    parent[voisin] = sommet
-                    if voisin == arrivee:
-                        return remonte_chemin(depart, arrivee, parent)
-            traites.append(sommet)
-        return "non trouvé"  
+        def remonte_chemin(depart, arrivee, parent):
+            sommet = arrivee
+            chemin = arrivee
+            while sommet != ...:
+                sommet = parent[...]
+                chemin = ... + chemin
+            return chemin
+        ```
 
+    === "Plus court chemin"
 
-    def remonte_chemin(depart, arrivee, parent):
-        sommet = arrivee
-        chemin = arrivee
-        while sommet != depart:
-            sommet = parent[sommet]
-            chemin = sommet + chemin
-        return chemin
-    ```
+        ```python linenums='1'
+        def recherche_chemin(g, depart, arrivee):
+            '''
+            Parcours en largeur du graphe g en partant du sommet depart,
+            qui s'arrête dès que le sommet arrivee est atteint.
+            Renvoie alors le chemin du depart vers arrivee.
+            '''
+            traites = []
+            decouverts = [depart]
+            en_attente = [depart]
+            parent = {}
+            while en_attente != [] :
+                sommet = en_attente.pop(0)
+                voisins = g.voisins(sommet)
+                for voisin in voisins:
+                    if voisin not in decouverts:
+                        decouverts.append(voisin)
+                        en_attente.append(voisin)
+                        parent[voisin] = sommet
+                        if voisin == arrivee:
+                            return remonte_chemin(depart, arrivee, parent)
+                traites.append(sommet)
+            return "non trouvé"  
 
-
+        def remonte_chemin(depart, arrivee, parent):
+            sommet = arrivee
+            chemin = arrivee
+            while sommet != depart:
+                sommet = parent[sommet]
+                chemin = sommet + chemin
+            return chemin
+        ```
 
 !!! example "Exercice 5"
     ![image](data/BFS_ex1.png){: .center}
     Tester le code précédent pour trouver le plus court chemin entre A et G, entre H et C, entre B et G...
 
-
 ### 4.2 Le parcours en profondeur (DFS, Depth First Search)
 
 #### 4.2.1 Parcours DFS récursif
-
 
 Le parcours en profondeur est un parcours où on va aller «le plus loin possible» sans se préoccuper des autres voisins non visités : on va visiter le premier de ses voisins non traités, qui va faire de même, etc. Lorsqu'il n'y a plus de voisin, on revient en arrière pour aller voir le dernier voisin non visité.
 
@@ -786,7 +769,7 @@ Dans un labyrinthe, ce parcours s'explique très bien : on prend tous les chemin
 C'est un parcours qui s'écrit naturellement de manière **récursive** :
 
 !!! abstract "Parcours en profondeur - DFS :heart: :heart: :heart:"
-   === "A trou"
+    === "Parcours en profondeur"
 
         ```python linenums='1'
         def DFSrec(g, traites, actuel):
@@ -796,7 +779,7 @@ C'est un parcours qui s'écrit naturellement de manière **récursive** :
                     ...
             return traites
         ```
-    === "Parcours en profondeur - DFS :heart: :heart: :heart:"
+    === "Parcours en profondeur"
 
         ```python linenums='1'
         def DFSrec(g, traites, actuel):

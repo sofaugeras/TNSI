@@ -1,12 +1,9 @@
 # Terminale NSI
 
 !!! note ":star: Thèmes en cours d'étude :star: "
-    📌  En cours : [Graphes](./T1_Structures_de_donnees/1.5_Graphes/cours.md) <br />
-    ⌛️ A venir : [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/cours.md) <br />
+    📌  En cours :  [Diviser pour régner](./T3_Algorithmique/3.1_Diviser_pour_regner/cours.md)  <br />
+    ⌛️ A venir : [Programmation dynamique](./T3_Algorithmique/3.2_Programmation_dynamique/cours.md) <br />
 
-    📣 [Exposé cryptographie](./T7_projet/3_expose/cours.md) pour le 23 et 24 mars <br />
-
-    📆 bac blanc du 7 au 9 avril <br />
     📆 Grand Oral Blanc : mercredi 13 mai <br />
 
 !!! abstract "Actualités :newspaper:" 
@@ -34,32 +31,33 @@
 
 !!! note "*Thèmes traités*"
 
-    - Révision : [Codex](https://codex.forge.apps.education.fr/) <br />
-    - [Récursivité](./T2_Programmation/2.1_Recursivite/cours.md)<br />
-    - [Programmation orienté objet](./T2_Programmation/2.2_Programmation_Orientee_Objet/cours.md)<br />
-    - 📆 : Exposé : Mardi 14 octobre de 8h à 10h<br />
-    - [piles / files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md) <br />
+    - Révision : [Codex](https://codex.forge.apps.education.fr/) 
+    - [Récursivité](./T2_Programmation/2.1_Recursivite/cours.md)
+    - [Programmation orienté objet](./T2_Programmation/2.2_Programmation_Orientee_Objet/cours.md)
+    - 📆 : Exposé : Mardi 14 octobre de 8h à 10h
+    - [piles / files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md) 
     - 📆 : DS de spécialité : Jeudi 16 octobre 2025 de 10h à 12h en grande permanence.
     - [Listes chaînées](./T1_Structures_de_donnees/1.2_Listes/cours.md) 
-    - 👽 : [projet Pyxel](./T7_projet/1_POO/cours.md) 📆 Restitution attendue : Pour le Jeudi 6 novembre 2025<br />
-    - [Mise au point de programme](./T2_Programmation/2.4_Mise_au_point_de_programme/cours.md)<br />
-    - [Base de données](./T4_Bases_de_donnees/sommaire.md)<br />
-    - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) <br />
-    - [calculabilité](./T2_Programmation/2.3_Calculabilite_Decidabilite/cours.md) en distanciel <br />
-    - 📆 : Bac Blanc : Mardi 20 janvier <br />
+    - 👽 : [projet Pyxel](./T7_projet/1_POO/cours.md) 📆 Restitution attendue : Pour le Jeudi 6 novembre 2025
+    - [Mise au point de programme](./T2_Programmation/2.4_Mise_au_point_de_programme/cours.md)
+    - [Base de données](./T4_Bases_de_donnees/sommaire.md)
+    - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) 
+    - [calculabilité](./T2_Programmation/2.3_Calculabilite_Decidabilite/cours.md) en distanciel 
+    - 📆 : Bac Blanc : Mardi 20 janvier 
     - [Retour sur les dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) en distanciel <br />
     - [Gestion des processus](./T5_Architecture_materielle/5.2_Gestion_des_processus/cours.md)<br />
     - [Arbre et arbre binaire de recherche](./T1_Structures_de_donnees/1.4_Arbres/cours.md)<br /> 
     - 🐹 [Projet : codage de Huffman](./T7_projet/2_Huffman/cours.md) <br /> 
     - [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)<br />
     - [Sécurisation des communications, Cryptographie](./T5_Architecture_materielle/5.4_Cryptographie/cours.md)<br/>
-
+    - [Graphes](./T1_Structures_de_donnees/1.5_Graphes/cours.md) 
+    - 📣 [Exposé cryptographie](./T7_projet/3_expose/cours.md) 
+    - 📆 bac blanc : jeudi 9 avril
+    - [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/1_cours.md) 
     
 <!--       
 !!! note "*Thèmes traités*"
 
-    - [Diviser pour régner](./T3_Algorithmique/3.1_Diviser_pour_regner/cours.md)
-    - [Programmation dynamique](./T3_Algorithmique/3.2_Programmation_dynamique/cours.md)
     - programmation fonctionnelle
     - EP
     - Grand oral 

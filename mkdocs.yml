@@ -30,6 +30,7 @@ theme:
     - header.autohide
     - content.code.annotate 
     - content.code.copy
+    - content.tooltips
 
   palette:
     # Light mode

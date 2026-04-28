@@ -24,7 +24,6 @@ Il est conseillé de travailler avec 3 espaces:
 
 ![image](data/cahier.jpeg){: .center width=50%}
 
-
 ## Script ou console ???
 
 VS Code, comme la grande majorité des IDE Python, est composé de deux zones distinctes :
@@ -73,7 +72,6 @@ Cette année en NSI nous allons manipuler un certain nombre de fichiers. Il est 
     - Un nom de fichier doit être parlant (un peu comme une variable en fait). On évitera de nommer ses codes Python `python1.py`, `python2.py`, `python3.py`, etc. Mais plutôt `1NSI_T4_tri_selection.py` par exemple pour un exercice de programmation sur le tri par selection au thème 4.
     - Lorsqu'on travaille sur un projet ou un programme conséquent, il peut être utile de conserver des archives du travail à plusieurs étapes de l'élaboration, plutôt que de ne conserver que la dernière version. À cet effet on pourra numéroter : `1NSI_projet_morpion_v1.py`, puis `1NSI_projet_morpion_v2.py`, `1NSI_projet_morpion_v3.py`, etc.
 
-
 ## Usage du clavier
 
 Utiliser le clavier est souvent bien plus pratique et surtout plus rapide qu'utiliser la souris. Encore faut-il apprendre à l'apprivoiser...
@@ -86,7 +84,6 @@ Utiliser le clavier est souvent bien plus pratique et surtout plus rapide qu'uti
     - aux touches `MAJ` **et** `CTRL`: elles permettent de sélectionner une mot.
 
     De même, en se plaçant en début d'une ligne et en combinant la touche `MAJ` et `FIN`, on sélectionne la ligne entière.
-
 
 !!! tip "Les raccourcis clavier"
     Il existe de très nombreux raccourcis clavier qui permettent d'exécuter des tâches courantes sans passer par les menus du logiciel. Certains sont (quasi-)universels, c'est-à-dire que ce sont les mêmes sur tous les logiciels, d'autres sont spécifiques à chaque logiciel. Il est important d'en connaître quelques-uns pour être plus efficace.
