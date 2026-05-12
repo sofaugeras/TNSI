@@ -4921,18 +4921,28 @@
 </div>
 <details class="success">
 <summary>Correction</summary>
-<p><code>python linenums='1'
-memo_rendu = {}
-def rendu_recursif_memoise(pieces, somme):
-    nb_pieces = somme
-    if somme == 0:
-        return 0
-    for p in pieces:
-        if p &lt;= somme:
-            if somme-p not in memo_rendu:
-                memo_rendu[somme-p] = rendu_recursif_memoise(pieces, somme-p)
-            nb_pieces = min(nb_pieces, 1 + memo_rendu[somme-p])
-    return nb_pieces</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">memo_rendu</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">rendu_recursif_memoise</span><span class="p">(</span><span class="n">pieces</span><span class="p">,</span> <span class="n">somme</span><span class="p">):</span>
+    <span class="n">nb_pieces</span> <span class="o">=</span> <span class="n">somme</span>
+    <span class="k">if</span> <span class="n">somme</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pieces</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">p</span> <span class="o">&lt;=</span> <span class="n">somme</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">somme</span><span class="o">-</span><span class="n">p</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">memo_rendu</span><span class="p">:</span>
+                <span class="n">memo_rendu</span><span class="p">[</span><span class="n">somme</span><span class="o">-</span><span class="n">p</span><span class="p">]</span> <span class="o">=</span> <span class="n">rendu_recursif_memoise</span><span class="p">(</span><span class="n">pieces</span><span class="p">,</span> <span class="n">somme</span><span class="o">-</span><span class="n">p</span><span class="p">)</span>
+            <span class="n">nb_pieces</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">nb_pieces</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">memo_rendu</span><span class="p">[</span><span class="n">somme</span><span class="o">-</span><span class="n">p</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">nb_pieces</span>        
+</code></pre></div></td></tr></table></div>
 </details>
 <p>Notre algorithme est maintenant beaucoup (beaucoup) plus efficace :</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">rendu_recursif_memoise</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="mi">107</span><span class="p">)</span>
