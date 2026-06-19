@@ -1034,17 +1034,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#0-notion-de-tableau-associatif" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        0. Notion de tableau associatif
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#1-dictionnaire-et-temps-dacces-aux-donnees" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4766,22 +4755,49 @@
 <h1 id="dictionnaires">Dictionnaires<a class="headerlink" href="#dictionnaires" title="Permanent link">⚓︎</a></h1>
 <p><img alt="image" class="center" src="../data/BO.png" /></p>
 <p>Préambule : retour sur <a href="https://sofaugeras.github.io/1NSI/T3_Type_construit/3.3_Dictionnaires/cours/">le cours de Première</a>.</p>
-<h2 id="0-notion-de-tableau-associatif">0. Notion de tableau associatif<a class="headerlink" href="#0-notion-de-tableau-associatif" title="Permanent link">⚓︎</a></h2>
-<p>Un <strong>tableau associatif</strong> est un type abstrait de données (au même titre que les listes, piles, files, vues précédemment). Ce type abstrait de données a la particularité de ne pas être totalement linéaire (ou «plat») puisqu'il associe des <strong>valeurs</strong> à des <strong>clés</strong>.  </p>
-<p>Il est habituellement muni des opérations suivantes :</p>
-<ul>
-<li>ajout d'une nouvelle valeur associée à une nouvelle clé (on parlera de nouveau couple clé-valeur)</li>
-<li>modification d'une valeur associée à une clé existante</li>
-<li>suppression d'un couple clé-valeur</li>
-<li>récupération de la valeur associée à une clé donnée.</li>
-</ul>
-<p>Un répertoire téléphonique est un exemple de tableau associatif :</p>
-<ul>
-<li>les clés sont les noms</li>
-<li>les valeurs sont les numéros de téléphone</li>
-</ul>
-<p>En Python, le <strong>dictionnaire</strong> est une structure native de tableau associatif.</p>
+<details class="info">
+<summary>🧠 Mémo – Dictionnaires Python</summary>
+<div class="admonition abstract">
+<p class="admonition-title">En bref</p>
+<p>Structure <code>clé : valeur</code>, non ordonnée, délimitée par <code>{ }</code>.</p>
+</div>
+<p><strong>Opérations essentielles</strong></p>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># Créer</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Alice&quot;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span> <span class="s2">&quot;Bob&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;Clara&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">}</span>
+
+<span class="c1"># Accéder</span>
+<span class="n">scores</span><span class="p">[</span><span class="s2">&quot;Alice&quot;</span><span class="p">]</span>          <span class="c1"># → 17</span>
+
+<span class="c1"># Ajouter / Modifier</span>
+<span class="n">scores</span><span class="p">[</span><span class="s2">&quot;Dylan&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span>
+<span class="n">scores</span><span class="p">[</span><span class="s2">&quot;Bob&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">13</span>
+
+<span class="c1"># Supprimer</span>
+<span class="k">del</span> <span class="n">scores</span><span class="p">[</span><span class="s2">&quot;Clara&quot;</span><span class="p">]</span>
+
+<span class="c1"># Tester l&#39;appartenance</span>
+<span class="s2">&quot;Alice&quot;</span> <span class="ow">in</span> <span class="n">scores</span>        <span class="c1"># → True</span>
+
+<span class="c1"># Parcourir</span>
+<span class="k">for</span> <span class="n">eleve</span> <span class="ow">in</span> <span class="n">scores</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">eleve</span><span class="p">,</span> <span class="n">scores</span><span class="p">[</span><span class="n">eleve</span><span class="p">])</span>
+
+<span class="c1"># Clés / Valeurs</span>
+<span class="n">scores</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>            <span class="c1"># dict_keys([...])</span>
+<span class="n">scores</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>          <span class="c1"># dict_values([...])</span>
+</code></pre></div>
+<p><strong>Piège classique</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">KeyError</p>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">scores</span><span class="p">[</span><span class="s2">&quot;Eva&quot;</span><span class="p">]</span>        <span class="c1"># → KeyError si la clé n&#39;existe pas !</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">if</span> <span class="s2">&quot;Eva&quot;</span> <span class="ow">in</span> <span class="n">scores</span><span class="p">:</span>  <span class="c1"># ✅ toujours tester avant d&#39;accéder</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">scores</span><span class="p">[</span><span class="s2">&quot;Eva&quot;</span><span class="p">])</span>
+</code></pre></div></p>
+</div>
+</details>
 <h2 id="1-dictionnaire-et-temps-dacces-aux-donnees">1. Dictionnaire et temps d'accès aux données<a class="headerlink" href="#1-dictionnaire-et-temps-dacces-aux-donnees" title="Permanent link">⚓︎</a></h2>
+<p>Rappel : En Python, le <strong>dictionnaire</strong> est une structure native de tableau associatif. Un <strong>tableau associatif</strong> est un type abstrait de données (au même titre que les listes, piles, files, vues précédemment). Ce type abstrait de données a la particularité de ne pas être totalement linéaire (ou «plat») puisqu'il associe des <strong>valeurs</strong> à des <strong>clés</strong>.  </p>
 <div class="admonition aide">
 <p class="admonition-title">TP : protocole de test pour comparer les temps d'accès aux données.</p>
 <p><strong>Indication :</strong> on utilisera la fonction <code>time.time()</code> (après avoir importé le module <code>time</code>) qui donne le nombre de secondes (à <span class="arithmatex">\(10^{-7}\)</span> près) écoulées depuis le 01 janvier 1970 à 00h00 (appelée <a href="https://fr.wikipedia.org/wiki/Heure_Unix">Heure Unix</a> ou <a href="https://fr.wikipedia.org/wiki/Heure_Unix">Temps Posix</a>).
@@ -5143,8 +5159,6 @@ TypeError: unhashable type: &#39;list&#39;
     
     
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
-      
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
