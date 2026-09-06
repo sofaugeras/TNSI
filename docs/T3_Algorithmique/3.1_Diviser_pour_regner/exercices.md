@@ -63,7 +63,7 @@
         print(indice(19, premiers))
         >> 7 
         print(indice(51, premiers))
-        >> 1
+        >> -1
         ```
         De quel algorithme s'agit-il ? <br />
         En quoi cet algorithme relève-t-il du paradigme diviser-pour-régner ?<br />

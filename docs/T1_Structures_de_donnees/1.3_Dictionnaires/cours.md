@@ -4,25 +4,53 @@
 
 Préambule : retour sur [le cours de Première](https://sofaugeras.github.io/1NSI/T3_Type_construit/3.3_Dictionnaires/cours/).
 
+??? info "🧠 Mémo – Dictionnaires Python"
 
-## 0. Notion de tableau associatif
-Un **tableau associatif** est un type abstrait de données (au même titre que les listes, piles, files, vues précédemment). Ce type abstrait de données a la particularité de ne pas être totalement linéaire (ou «plat») puisqu'il associe des **valeurs** à des **clés**.  
+    !!! abstract "En bref"
+        Structure `clé : valeur`, non ordonnée, délimitée par `{ }`.
 
-Il est habituellement muni des opérations suivantes :
+    **Opérations essentielles**
 
-- ajout d'une nouvelle valeur associée à une nouvelle clé (on parlera de nouveau couple clé-valeur)
-- modification d'une valeur associée à une clé existante
-- suppression d'un couple clé-valeur
-- récupération de la valeur associée à une clé donnée.
+    ```python
+    # Créer
+    scores = {"Alice": 17, "Bob": 12, "Clara": 15}
 
-Un répertoire téléphonique est un exemple de tableau associatif :
+    # Accéder
+    scores["Alice"]          # → 17
 
-- les clés sont les noms
-- les valeurs sont les numéros de téléphone
+    # Ajouter / Modifier
+    scores["Dylan"] = 14
+    scores["Bob"] = 13
 
-En Python, le **dictionnaire** est une structure native de tableau associatif.
+    # Supprimer
+    del scores["Clara"]
+
+    # Tester l'appartenance
+    "Alice" in scores        # → True
+
+    # Parcourir
+    for eleve in scores:
+        print(eleve, scores[eleve])
+
+    # Clés / Valeurs
+    scores.keys()            # dict_keys([...])
+    scores.values()          # dict_values([...])
+    ```
+
+    **Piège classique**
+
+    !!! warning "KeyError"
+        ```python
+        scores["Eva"]        # → KeyError si la clé n'existe pas !
+        ```
+        ```python
+        if "Eva" in scores:  # ✅ toujours tester avant d'accéder
+            print(scores["Eva"])
+        ```
 
 ## 1. Dictionnaire et temps d'accès aux données 
+
+Rappel : En Python, le **dictionnaire** est une structure native de tableau associatif. Un **tableau associatif** est un type abstrait de données (au même titre que les listes, piles, files, vues précédemment). Ce type abstrait de données a la particularité de ne pas être totalement linéaire (ou «plat») puisqu'il associe des **valeurs** à des **clés**.  
 
 !!! aide "TP : protocole de test pour comparer les temps d'accès aux données."
     **Indication :** on utilisera la fonction ```time.time()``` (après avoir importé le module ```time```) qui donne le nombre de secondes (à $10^{-7}$ près) écoulées depuis le 01 janvier 1970 à 00h00 (appelée [Heure Unix](https://fr.wikipedia.org/wiki/Heure_Unix) ou [Temps Posix](https://fr.wikipedia.org/wiki/Heure_Unix)).

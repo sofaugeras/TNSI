@@ -81,7 +81,13 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: false
   - pymdownx.inlinehilite
-  - pymdownx.superfences          # Imbrication de blocs
+  # - pymdownx.superfences          # Imbrication de blocs
+  - pymdownx.superfences:
+        # make exceptions to highlighting of code:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.keys
   - pymdownx.tabbed:
       alternate_style: true
@@ -98,29 +104,22 @@ markdown_extensions:
   - toc:
       permalink: ⚓︎
       toc_depth: 3
-  - mkdocs_graphviz:
-      light_theme: 000010      # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
-      dark_theme: FFFFFF       # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
-      color: 789ABC            # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
-      bgcolor: none            # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
-      graph_color: 789ABC      # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
-      graph_fontcolor: 789ABC  # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
-      node_color: 789ABC       # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
-      node_fontcolor: 789ABC   # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
-      edge_color: 789ABC       # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
-      edge_fontcolor: 789ABC
+  # - mkdocs_graphviz:
+  #     light_theme: 000010      # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
+  #     dark_theme: FFFFFF       # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
+  #     color: 789ABC            # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
+  #     bgcolor: none            # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
+  #     graph_color: 789ABC      # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
+  #     graph_fontcolor: 789ABC  # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
+  #     node_color: 789ABC       # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
+  #     node_fontcolor: 789ABC   # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
+  #     edge_color: 789ABC       # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
+  #     edge_fontcolor: 789ABC
 
 plugins:
   - search
- # - git-revision-date-localized:
- #     enable_creation_date: false
- #     locale: fr
   - awesome-pages:
       collapse_single_pages: false
-  #- macros
-  # - mkdocs-jupyter:
-  #     include_source: True
-  #- page-to-pdf
 
 extra:
   analytics: 
@@ -149,12 +148,9 @@ extra:
       name: Lycée Saint Sauveur - Redon
 
 extra_javascript:
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js
-  - https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js
-  - https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js
-  - xtra/javascript/mermaid.js
+  - https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js
   - xtra/javascript/mathjax.js
   - xtra/javascript/interpreter.js
 

@@ -72,7 +72,6 @@ Mais si le système n'est pas canonique, l'algorithme glouton peut ne pas donner
 
 Notre algorithme va trouver que $12 = 10 + 1 + 1$ et donc rendre 3 pièces, alors qu'il est possible de faire $12 = 6+6$ et ne rendre que 2 pièces.
 
-
 ## 2. Algorithme récursif
 
 Il est possible de construire un algorithme optimal de manière récursive.
@@ -104,7 +103,6 @@ On va donc passer en revue toutes les pièces ```p``` et mettre à jour à chaqu
     1. Nombre de pièces dans le pire des cas
     2. Cas de base
     3. Peut-on rendre la pièce ```p``` ? 
-
 
 ??? success "Correction" 
 
@@ -144,7 +142,6 @@ Ces appels récursifs ont lieu sur un nombre limité de valeurs : par constructi
 
 On peut donc légitimement penser à **mémoïser** notre algorithme, en stockant les valeurs pour éviter de les recalculer.
 
-
 ## 3. Algorithme récursif memoïsé
 
 !!! example "exercice 3"
@@ -166,8 +163,8 @@ On peut donc légitimement penser à **mémoïser** notre algorithme, en stockan
         return nb_pieces        
     ```
 
-??? success "Correction" 
-    
+??? success "Correction"
+
     ```python linenums='1'
     memo_rendu = {}
     def rendu_recursif_memoise(pieces, somme):
@@ -180,7 +177,7 @@ On peut donc légitimement penser à **mémoïser** notre algorithme, en stockan
                     memo_rendu[somme-p] = rendu_recursif_memoise(pieces, somme-p)
                 nb_pieces = min(nb_pieces, 1 + memo_rendu[somme-p])
         return nb_pieces        
-        ```
+    ```
 
 Notre algorithme est maintenant beaucoup (beaucoup) plus efficace :
 
@@ -189,13 +186,11 @@ Notre algorithme est maintenant beaucoup (beaucoup) plus efficace :
 12
 ```
 
-
 ## 4. Algorithme *bottom-up*
 
 Nous avions calculé le $F_n$, n-ième terme de la suite de Fibonacci en calculant d'abord $F_0$, $F_1$, $F_2$, ..., jusqu'à $F_{n-1}$ puis $F_n$.
 
 En s'inspirant de cette méthode (*bottom-up*) nous allons ici calculer successivement tous les rendus minimaux jusqu'à ```somme``` avant de calculer le rendu minimal de ```somme```.
-
 
 !!! example "exercice 4"
 
@@ -217,7 +212,7 @@ En s'inspirant de cette méthode (*bottom-up*) nous allons ici calculer successi
     1. Attention, il faut aller jusqu'à la valeur ```somme```. 
     2. Nombre de pièces dans le pire des cas.
 
-??? success "Correction" 
+??? success "Correction"
 
     ```python linenums='1'
     def rendu_bottom_up(pieces, somme):
@@ -236,7 +231,6 @@ En s'inspirant de cette méthode (*bottom-up*) nous allons ici calculer successi
 ```
 
 Notre algorithme itératif est de complexité linéaire (par rapport à la variable ```somme```).
-
 
 ## 5. Bonus : construction d'une solution
 

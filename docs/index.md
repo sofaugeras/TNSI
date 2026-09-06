@@ -1,25 +1,11 @@
 # Terminale NSI
 
 !!! note ":star: Thèmes en cours d'étude :star: "
-    📌  En cours :  [Diviser pour régner](./T3_Algorithmique/3.1_Diviser_pour_regner/cours.md)  <br />
-    ⌛️ A venir : [Programmation dynamique](./T3_Algorithmique/3.2_Programmation_dynamique/cours.md) <br />
-
-    📆 Grand Oral Blanc : mercredi 13 mai <br />
-
-!!! abstract "Actualités :newspaper:" 
-
-    - 📆 Date Bac (écrit) : 16 au 18 Juin 2026
-    - 📆 Date Bac (Pratique) : 3 au 5 Juin 2026
-
-    Les modalités du BAC 2026 n'ont pas évolués pour la partie écrite :
-
-    - le sujet écrit comportera 3 exercices noté sur 20
-    - Le poids de l'écrit sera de 3/4 et le poids de la pratique de 1/4
-
-    Pour la partie pratique, les modalités évoluent ([source(https://www.education.gouv.fr/bo/2025/Hebdo31/MENE2516123N)]) : <br />
-    "La partie pratique [note : notée sur 20] consiste à programmer sur ordinateur une application informatique à partir d’un document fourni au candidat. L’épreuve a pour objectif d’évaluer le niveau de maîtrise des compétences pratiques du candidat."<br />
-    Les sujets "zéro" ont été publiés le **8/10/2025** et sont visible [ici](./T6_6_Epreuve_pratique/BNS_2026.md){. target="_blank"}.
-
+    📌 Révision : [Codex](https://codex.forge.apps.education.fr/)  <br />
+    ⌛️ A venir : [Récursivité](./T2_Programmation/2.1_Recursivite/cours.md) <br />
+    <br />
+    📆 Evaluation écrite Récursivité + POO le 24/09<br />
+    📆 Exposé : Jeudi 15 octobre de 10h à 12h
 
 !!! info "Entraînement"
     Vous trouverez ci dessous quelques sites pour vous entrainez <br />
@@ -31,19 +17,22 @@
 
 !!! note "*Thèmes traités*"
 
-    - Révision : [Codex](https://codex.forge.apps.education.fr/) 
-    - [Récursivité](./T2_Programmation/2.1_Recursivite/cours.md)
+   
+    
+<!--       
+!!! note "*Thèmes traités*"
+ 
     - [Programmation orienté objet](./T2_Programmation/2.2_Programmation_Orientee_Objet/cours.md)
-    - 📆 : Exposé : Mardi 14 octobre de 8h à 10h
+    - 📆 Exposé : Mardi 14 octobre de 8h à 10h
     - [piles / files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md) 
-    - 📆 : DS de spécialité : Jeudi 16 octobre 2025 de 10h à 12h en grande permanence.
+    - 📆 DS de spécialité : Jeudi 16 octobre 2025 de 10h à 12h en grande permanence.
     - [Listes chaînées](./T1_Structures_de_donnees/1.2_Listes/cours.md) 
-    - 👽 : [projet Pyxel](./T7_projet/1_POO/cours.md) 📆 Restitution attendue : Pour le Jeudi 6 novembre 2025
+    - 👽 [projet Pyxel](./T7_projet/1_POO/cours.md) 📆 Restitution attendue : Pour le Jeudi 6 novembre 2025
     - [Mise au point de programme](./T2_Programmation/2.4_Mise_au_point_de_programme/cours.md)
     - [Base de données](./T4_Bases_de_donnees/sommaire.md)
     - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) 
     - [calculabilité](./T2_Programmation/2.3_Calculabilite_Decidabilite/cours.md) en distanciel 
-    - 📆 : Bac Blanc : Mardi 20 janvier 
+    - 📆 Bac Blanc : Mardi 20 janvier 
     - [Retour sur les dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) en distanciel <br />
     - [Gestion des processus](./T5_Architecture_materielle/5.2_Gestion_des_processus/cours.md)<br />
     - [Arbre et arbre binaire de recherche](./T1_Structures_de_donnees/1.4_Arbres/cours.md)<br /> 
@@ -54,11 +43,15 @@
     - 📣 [Exposé cryptographie](./T7_projet/3_expose/cours.md) 
     - 📆 bac blanc : jeudi 9 avril
     - [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/1_cours.md) 
-    
-<!--       
-!!! note "*Thèmes traités*"
-
+    - [Diviser pour régner](./T3_Algorithmique/3.1_Diviser_pour_regner/cours.md) 
+    - [Programmation dynamique](./T3_Algorithmique/3.2_Programmation_dynamique/cours.md)
+    - Préparation EP sur Capytale
+    - Préparation Grand Oral
+    - 📆 Grand Oral Blanc : mercredi 13 mai 
     - programmation fonctionnelle
-    - EP
-    - Grand oral 
+
+   !!! abstract "Actualités :newspaper:"
+
+    - 📆 Date Bac (Pratique) : Vendredi 5 Juin 2026
+    - 📆 Date Bac (écrit) Spécialités : Mardi 16 et Mercredi 17 Juin 2026 
 -->

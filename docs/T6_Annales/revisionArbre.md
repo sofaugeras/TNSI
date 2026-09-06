@@ -26,12 +26,11 @@ Ainsi, pour tout nœud `A`, si `fils_gauche(A)` et `fils_droit(A)` ne sont pas `
     L'arbre binaire `A1` suivant est un arbre binaire de recherche : 
 
     ```mermaid
-        %%{init: {'themeVariables': {'fontFamily': 'monospace'}}}%%
-        flowchart TB
-            n0(ELUARD) --> n1(ARAGON)
-            n1 --> n3(APOLLINAIRE)
-            n1 --> n4[Null]
-            n0 --> n2(VOLTAIRE)
+    flowchart TB
+        n0(ELUARD) --> n1(ARAGON)
+        n1 --> n3(APOLLINAIRE)
+        n1 --> n4[Null]
+        n0 --> n2(VOLTAIRE)
     ```
 
 **1.**
