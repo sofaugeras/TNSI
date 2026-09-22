@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -4700,7 +4700,7 @@ Il en faut 4 + 3 + 2 + 1 = 10.<br /></p>
 <div class="tabbed-block">
 <p>On considère la fonction <code>rechercher(x,T,debut,fin)</code> de recherche, entre debut et fin inclus, de l'indice d'un élément <code>x</code> dans un tableau <code>T</code> trié suivant l'ordre croissant.</p>
 <p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">rechercher</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">debut</span><span class="p">,</span> <span class="n">fin</span><span class="p">):</span>
-<span class="sd">&quot;&quot;&quot; Renvoie l&#39;indice de x, entre debut et fin, dans le tableau trié dans l&#39;ordre croissant T, et -1 sinon. &quot;&quot;&quot;</span>
+<span class="sd">""" Renvoie l'indice de x, entre debut et fin, dans le tableau trié dans l'ordre croissant T, et -1 sinon. """</span>
     <span class="k">while</span> <span class="n">debut</span> <span class="o">&lt;=</span> <span class="n">fin</span><span class="p">:</span>
         <span class="n">milieu</span> <span class="o">=</span> <span class="p">(</span><span class="n">debut</span> <span class="o">+</span> <span class="n">fin</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
         <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">T</span><span class="p">[</span><span class="n">milieu</span><span class="p">]:</span>
@@ -4821,15 +4821,15 @@ résultat.<br /></p>
 <span class="nb">print</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">triRapide</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    fonction qui initialise la fonction récursive de tri rapide d&#39;une liste.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    fonction qui initialise la fonction récursive de tri rapide d'une liste.</span>
+<span class="sd">    """</span>
     <span class="n">trier</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">trier</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">indiceDebut</span><span class="p">,</span> <span class="n">indiceFin</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    fonction récursive qui trie une liste en utilisant la méthode trie rapide.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">indiceFin</span> <span class="o">&lt;=</span> <span class="n">indiceDebut</span><span class="p">):</span>
         <span class="k">return</span> 
     <span class="n">indicePivot</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="n">indiceDebut</span><span class="p">,</span> <span class="n">indiceFin</span><span class="p">)</span>
@@ -4839,12 +4839,12 @@ résultat.<br /></p>
     <span class="n">trier</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">indicePivot</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">indiceFin</span><span class="p">)</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">partitionner</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">pivot</span><span class="p">,</span> <span class="n">indiceDebut</span><span class="p">,</span> <span class="n">indicePivot</span><span class="p">,</span> <span class="n">indiceFin</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    fonction qui partitionne une liste en fonction d&#39;un pivot en mettant à gauche</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    fonction qui partitionne une liste en fonction d'un pivot en mettant à gauche</span>
 <span class="sd">    du pivot les éléments plus petits que le pivot et à droite les éléments plus</span>
-<span class="sd">    grand. L&#39;indice du pivot est susceptible d&#39;être modifié au cours du traitement ;</span>
+<span class="sd">    grand. L'indice du pivot est susceptible d'être modifié au cours du traitement ;</span>
 <span class="sd">    il est donc renvoyé par cette fonction.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">termine</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="n">indiceCourant</span> <span class="o">=</span> <span class="n">indiceDebut</span>
     <span class="k">while</span> <span class="n">indiceCourant</span> <span class="o">&lt;=</span> <span class="n">indiceFin</span><span class="p">:</span>
@@ -5015,13 +5015,15 @@ résultat.<br /></p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="../../../xtra/javascript/mathjax.js"></script>
       

@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -4739,7 +4739,7 @@
 <h2 id="inserer-un-enregistrement-dans-une-table">Insérer un enregistrement dans une table<a class="headerlink" href="#inserer-un-enregistrement-dans-une-table" title="Permanent link">⚓︎</a></h2>
 <p>Nous avons déjà rencontré cerre requète <strong>INSERT</strong>. Elle s'applique que la table soit vide ou nom. </p>
 <p><img alt="⌛" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/231b.svg" title=":hourglass:" /> On peut très bien ajouter par exemple une troisième langue dans notre table <strong>Langues</strong></p>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">%</span><span class="n">sql</span> <span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">Langues</span> <span class="p">(</span><span class="n">Langue</span><span class="p">)</span> <span class="n">VALUES</span><span class="p">(</span><span class="s1">&#39;Klingon&#39;</span><span class="p">);</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">%</span><span class="n">sql</span> <span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">Langues</span> <span class="p">(</span><span class="n">Langue</span><span class="p">)</span> <span class="n">VALUES</span><span class="p">(</span><span class="s1">'Klingon'</span><span class="p">);</span>
 </code></pre></div>
 <h2 id="mise-a-jour-effacement-update-et-delete">Mise a jour, effacement : UPDATE et DELETE<a class="headerlink" href="#mise-a-jour-effacement-update-et-delete" title="Permanent link">⚓︎</a></h2>
 <p>Les requêtes <strong>UPDATE</strong> et <strong>DELETE</strong> fonctionnent sur le même modèle que les requêtes <strong>SELECT</strong>.  Attention, on a vite fait d'effacer toutes ses données si on ne configure pas bien sa requête. Une bonne habitude à prendre est de tester d'abord ses critères à l'aide d'un <strong>SELECT</strong>.</p>
@@ -4754,7 +4754,7 @@
 <div class="highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="o">%%</span><span class="k">sql</span><span class="w"> </span>
 
 <span class="k">UPDATE</span><span class="w"> </span><span class="n">Auteurs</span><span class="w"> </span>
-<span class="k">SET</span><span class="w"> </span><span class="n">NomAuteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Ze Djloule&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">PrenomAuteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Juju&quot;</span>
+<span class="k">SET</span><span class="w"> </span><span class="n">NomAuteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Ze Djloule"</span><span class="p">,</span><span class="w"> </span><span class="n">PrenomAuteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Juju"</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">IdAuteur</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
 
 <span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Auteurs</span><span class="w"> </span><span class="p">;</span>
@@ -4775,7 +4775,7 @@
 <span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Auteurs</span><span class="w"> </span>
 <span class="w">    </span><span class="p">(</span><span class="n">NomAuteur</span><span class="p">,</span><span class="w"> </span><span class="n">PrenomAuteur</span><span class="p">,</span><span class="w"> </span><span class="n">IdLangue</span><span class="p">,</span><span class="w"> </span><span class="n">AnneeNaissance</span><span class="p">)</span><span class="w"> </span>
 <span class="k">VALUES</span>
-<span class="w">    </span><span class="p">(</span><span class="ss">&quot;DUPONT&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Olivier&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1850</span><span class="p">);</span>
+<span class="w">    </span><span class="p">(</span><span class="ss">"DUPONT"</span><span class="p">,</span><span class="w"> </span><span class="ss">"Olivier"</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1850</span><span class="p">);</span>
 
 <span class="k">SELECT</span><span class="w"> </span><span class="n">Titre</span><span class="p">,</span><span class="w"> </span><span class="n">NomAuteur</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">Livres</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">Auteurs</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="p">(</span><span class="n">IdAuteur</span><span class="p">);</span>
 </code></pre></div>
@@ -4939,13 +4939,15 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="../../../xtra/javascript/mathjax.js"></script>
       

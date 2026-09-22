@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -4923,8 +4923,8 @@ On est donc en présence d'objets ayant à la fois des <strong>caractéritiques<
 <span class="nb">print</span><span class="p">(</span><span class="n">inspect</span><span class="o">.</span><span class="n">getsource</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">))</span> 
 </code></pre></div>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">randint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return random integer in range [a, b], including both end points.</span>
-<span class="sd">            &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Return random integer in range [a, b], including both end points.</span>
+<span class="sd">            """</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div></p>
 <p>Excepté la présence d'un <strong>self</strong> surprenant (randint n'ayant besoin que de 2 paramètres a et b), rien de nouveau, on voit la définition d'une fonction très courte...<br /></p>
@@ -4933,7 +4933,7 @@ On est donc en présence d'objets ayant à la fois des <strong>caractéritiques<
 <summary>classe random</summary>
 <p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">inspect</span><span class="o">.</span><span class="n">getsource</span><span class="p">(</span><span class="n">random</span><span class="p">))</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="w">    </span><span class="sd">&quot;&quot;&quot;Random variable generators.</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="w">    </span><span class="sd">"""Random variable generators.</span>
 
 <span class="sd">        integers</span>
 <span class="sd">        --------</span>
@@ -4970,7 +4970,7 @@ On est donc en présence d'objets ayant à la fois des <strong>caractéritiques<
 <span class="sd">    * The random() method is implemented in C, executes in a single Python step,</span>
 <span class="sd">    and is, therefore, threadsafe.</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="kn">from</span><span class="w"> </span><span class="nn">warnings</span><span class="w"> </span><span class="kn">import</span> <span class="n">warn</span> <span class="k">as</span> <span class="n">_warn</span>
     <span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">log</span> <span class="k">as</span> <span class="n">_log</span><span class="p">,</span> <span class="n">exp</span> <span class="k">as</span> <span class="n">_exp</span><span class="p">,</span> <span class="n">pi</span> <span class="k">as</span> <span class="n">_pi</span><span class="p">,</span> <span class="n">e</span> <span class="k">as</span> <span class="n">_e</span><span class="p">,</span> <span class="n">ceil</span> <span class="k">as</span> <span class="n">_ceil</span>
@@ -4989,16 +4989,16 @@ On est donc en présence d'objets ayant à la fois des <strong>caractéritiques<
         <span class="kn">from</span><span class="w"> </span><span class="nn">hashlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">sha512</span> <span class="k">as</span> <span class="n">_sha512</span>
 
 
-    <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Random&quot;</span><span class="p">,</span><span class="s2">&quot;seed&quot;</span><span class="p">,</span><span class="s2">&quot;random&quot;</span><span class="p">,</span><span class="s2">&quot;uniform&quot;</span><span class="p">,</span><span class="s2">&quot;randint&quot;</span><span class="p">,</span><span class="s2">&quot;choice&quot;</span><span class="p">,</span><span class="s2">&quot;sample&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;randrange&quot;</span><span class="p">,</span><span class="s2">&quot;shuffle&quot;</span><span class="p">,</span><span class="s2">&quot;normalvariate&quot;</span><span class="p">,</span><span class="s2">&quot;lognormvariate&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;expovariate&quot;</span><span class="p">,</span><span class="s2">&quot;vonmisesvariate&quot;</span><span class="p">,</span><span class="s2">&quot;gammavariate&quot;</span><span class="p">,</span><span class="s2">&quot;triangular&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;gauss&quot;</span><span class="p">,</span><span class="s2">&quot;betavariate&quot;</span><span class="p">,</span><span class="s2">&quot;paretovariate&quot;</span><span class="p">,</span><span class="s2">&quot;weibullvariate&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;getstate&quot;</span><span class="p">,</span><span class="s2">&quot;setstate&quot;</span><span class="p">,</span> <span class="s2">&quot;getrandbits&quot;</span><span class="p">,</span> <span class="s2">&quot;choices&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;SystemRandom&quot;</span><span class="p">]</span>
+    <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Random"</span><span class="p">,</span><span class="s2">"seed"</span><span class="p">,</span><span class="s2">"random"</span><span class="p">,</span><span class="s2">"uniform"</span><span class="p">,</span><span class="s2">"randint"</span><span class="p">,</span><span class="s2">"choice"</span><span class="p">,</span><span class="s2">"sample"</span><span class="p">,</span>
+            <span class="s2">"randrange"</span><span class="p">,</span><span class="s2">"shuffle"</span><span class="p">,</span><span class="s2">"normalvariate"</span><span class="p">,</span><span class="s2">"lognormvariate"</span><span class="p">,</span>
+            <span class="s2">"expovariate"</span><span class="p">,</span><span class="s2">"vonmisesvariate"</span><span class="p">,</span><span class="s2">"gammavariate"</span><span class="p">,</span><span class="s2">"triangular"</span><span class="p">,</span>
+            <span class="s2">"gauss"</span><span class="p">,</span><span class="s2">"betavariate"</span><span class="p">,</span><span class="s2">"paretovariate"</span><span class="p">,</span><span class="s2">"weibullvariate"</span><span class="p">,</span>
+            <span class="s2">"getstate"</span><span class="p">,</span><span class="s2">"setstate"</span><span class="p">,</span> <span class="s2">"getrandbits"</span><span class="p">,</span> <span class="s2">"choices"</span><span class="p">,</span>
+            <span class="s2">"SystemRandom"</span><span class="p">]</span>
 
 <span class="p">[</span><span class="o">...</span><span class="p">]</span>
 
-    <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
         <span class="n">_test</span><span class="p">()</span>
 </code></pre></div></p>
 </details>
@@ -5039,9 +5039,9 @@ On est donc en présence d'objets ayant à la fois des <strong>caractéritiques<
 <h3 id="12-premiere-ebauche">1.2 Première ébauche<a class="headerlink" href="#12-premiere-ebauche" title="Permanent link">⚓︎</a></h3>
 <p>Cette première version donne une classe dans laquelle les attributs sont publics. Comme on va le voir ci-après, les attributs publics sont accessibles à tout le monde. Et comme on l'a dit ci-dessus, on souhaite des attributs privés et non publics ; il est néanmoins intéressant de voir comment cela fonctionne.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Carte</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Carte d&#39;un jeu</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Carte d'un jeu</span>
+<span class="sd">    """</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">couleur</span><span class="p">,</span><span class="n">hauteur</span><span class="p">,</span><span class="n">valeur</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span> <span class="c1"># (1)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">couleur</span> <span class="o">=</span> <span class="n">couleur</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">hauteur</span> <span class="o">=</span> <span class="n">hauteur</span>
@@ -5056,10 +5056,10 @@ On est donc en présence d'objets ayant à la fois des <strong>caractéritiques<
 <img alt="▶" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/25b6.svg" title=":arrow_forward:" /> récupérer un attribut <code>roiCarreau.couleur</code><br />
 <img alt="▶" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/25b6.svg" title=":arrow_forward:" /> modifier un attribut <code>roiCarreau.couleur =</code>  <br /></p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">Carte</span><span class="o">.</span><span class="vm">__doc__</span>     <span class="c1"># lecture des spécifications</span>
-<span class="n">roiCarreau</span> <span class="o">=</span> <span class="n">Carte</span><span class="p">(</span><span class="s1">&#39;carreau&#39;</span><span class="p">,</span><span class="s1">&#39;roi&#39;</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span>    <span class="c1"># création d&#39;une carte</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">roiCarreau</span><span class="o">.</span><span class="n">hauteur</span><span class="p">,</span> <span class="n">roiCarreau</span><span class="o">.</span><span class="n">couleur</span><span class="p">)</span>     <span class="c1"># lecture de la hauteur et de la couleur de l&#39;objet roiCarreau</span>
+<span class="n">roiCarreau</span> <span class="o">=</span> <span class="n">Carte</span><span class="p">(</span><span class="s1">'carreau'</span><span class="p">,</span><span class="s1">'roi'</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span>    <span class="c1"># création d'une carte</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">roiCarreau</span><span class="o">.</span><span class="n">hauteur</span><span class="p">,</span> <span class="n">roiCarreau</span><span class="o">.</span><span class="n">couleur</span><span class="p">)</span>     <span class="c1"># lecture de la hauteur et de la couleur de l'objet roiCarreau</span>
 <span class="nb">print</span><span class="p">()</span>
-<span class="n">roiCarreau</span><span class="o">.</span><span class="n">couleur</span> <span class="o">=</span> <span class="s1">&#39;fenetre&#39;</span>   <span class="c1"># modification de la couleur par un individu mal intentionné </span>
+<span class="n">roiCarreau</span><span class="o">.</span><span class="n">couleur</span> <span class="o">=</span> <span class="s1">'fenetre'</span>   <span class="c1"># modification de la couleur par un individu mal intentionné </span>
 <span class="nb">print</span><span class="p">(</span><span class="n">roiCarreau</span><span class="o">.</span><span class="n">hauteur</span><span class="p">,</span> <span class="n">roiCarreau</span><span class="o">.</span><span class="n">couleur</span><span class="p">)</span>     <span class="c1"># et voilà le résultat !</span>
 </code></pre></div>
 <h3 id="13-deuxieme-ebauche">1.3 Deuxième ébauche<a class="headerlink" href="#13-deuxieme-ebauche" title="Permanent link">⚓︎</a></h3>
@@ -5068,9 +5068,9 @@ Les attributs <strong>privés</strong> ne sont plus accessible de l'extérieur d
 <p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> <ins>Une remarque importante :</ins> en Python, c'est juste une <strong>convention</strong>, qui signale que l'accès (respectivement la modification) à/de cet attribut doit se faire par des getters/accesseurs (respectivement setters/mutateurs). On peut quand même accéder à l'attribut malgré la présence du <code>_</code>. D'autres méthodes existent en Python pour éviter les manipulations délictueuses (on ne les verra pas).<br />
 En java, parr exemple, l'attribut sera explicitement privé <code>private int valeur</code>.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Carte</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Carte d&#39;un jeu</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Carte d'un jeu</span>
+<span class="sd">    """</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">couleur</span><span class="p">,</span><span class="n">hauteur</span><span class="p">,</span><span class="n">valeur</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_couleur</span> <span class="o">=</span> <span class="n">couleur</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_hauteur</span> <span class="o">=</span> <span class="n">hauteur</span>
@@ -5079,9 +5079,9 @@ En java, parr exemple, l'attribut sera explicitement privé <code>private int va
 <h3 id="14-troisieme-ebauche-getters-et-setters">1.4 troisième ébauche : getters et setters<a class="headerlink" href="#14-troisieme-ebauche-getters-et-setters" title="Permanent link">⚓︎</a></h3>
 <p>L'avantage des attributs privés, c'est qu'ils ne sont modifiables que par l'utilisation de méthodes publiques. Ces méthodes, puisqu'elles sont publiques, sont accessibles par n'importe quel objet. Mais leur définition étant interne à la classe, elles sont cohérentes avec celle-ci. Lorsqu'un attribut est signalé comme privé avec le tiret bas <code>_</code>, on evite donc d'y accéder comme précédememnt (<code>roiCarreau._hauteur</code>). On utilise à la place des <strong>accesseurs</strong> (<em>getters</em> en anglais) et des <strong>mutateurs</strong> (<em>setters</em> en anglais), comme ci-dessous :</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Carte</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Carte d&#39;un jeu</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Carte d'un jeu</span>
+<span class="sd">    """</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">couleur</span><span class="p">,</span><span class="n">hauteur</span><span class="p">,</span><span class="n">valeur</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_couleur</span> <span class="o">=</span> <span class="n">couleur</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_hauteur</span> <span class="o">=</span> <span class="n">hauteur</span>
@@ -5100,14 +5100,14 @@ En java, parr exemple, l'attribut sera explicitement privé <code>private int va
         <span class="bp">self</span><span class="o">.</span><span class="n">_hauteur</span> <span class="o">=</span> <span class="n">nouvHauteur</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">setValeur</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">nouvValeur</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">valeur</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">and</span> <span class="n">valeur</span> <span class="o">&gt;=</span> <span class="mi">21</span> <span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;La valeur doit être un entier supérieur ou égal à 21.&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"La valeur doit être un entier supérieur ou égal à 21."</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_valeur</span> <span class="o">=</span> <span class="n">valeur</span>
 
 
-<span class="n">roiCarreau</span> <span class="o">=</span> <span class="n">Carte</span><span class="p">(</span><span class="s1">&#39;carreau&#39;</span><span class="p">,</span><span class="s1">&#39;roi&#39;</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">roiCarreau</span><span class="o">.</span><span class="n">getCouleur</span><span class="p">())</span>      <span class="c1"># l&#39;appel d&#39;une méthode doit vous rappeler &quot;liste.sort()&quot;</span>
-<span class="n">roiCarreau</span><span class="o">.</span><span class="n">setCouleur</span><span class="p">(</span><span class="s1">&#39;fenetre&#39;</span><span class="p">)</span>
+<span class="n">roiCarreau</span> <span class="o">=</span> <span class="n">Carte</span><span class="p">(</span><span class="s1">'carreau'</span><span class="p">,</span><span class="s1">'roi'</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">roiCarreau</span><span class="o">.</span><span class="n">getCouleur</span><span class="p">())</span>      <span class="c1"># l'appel d'une méthode doit vous rappeler "liste.sort()"</span>
+<span class="n">roiCarreau</span><span class="o">.</span><span class="n">setCouleur</span><span class="p">(</span><span class="s1">'fenetre'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">roiCarreau</span><span class="o">.</span><span class="n">getCouleur</span><span class="p">())</span>
 <span class="n">roiCarreau</span><span class="o">.</span><span class="n">setValeur</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">)</span>         <span class="c1"># faire différents tests</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">roiCarreau</span><span class="o">.</span><span class="n">getValeur</span><span class="p">())</span>
@@ -5127,15 +5127,15 @@ En java, parr exemple, l'attribut sera explicitement privé <code>private int va
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Carte</span><span class="p">:</span>
-<span class="sd">&quot;&quot;&quot;Carte d&#39;un paquet de cartes, pour jouer à différents jeux. On reste dans les paquets 32/52/54 cartes ou tarot</span>
+<span class="sd">"""Carte d'un paquet de cartes, pour jouer à différents jeux. On reste dans les paquets 32/52/54 cartes ou tarot</span>
 
 <span class="sd">Attributs : </span>
 <span class="sd">    - couleur : chaine de caractères, en général coeur/carreau/pique/trèfle, mais peut</span>
-<span class="sd">        aussi être plus exotique batons/coupes/deniers/épées. On peut aussi avoir &quot;atout&quot; ou &quot;joker&quot;</span>
-<span class="sd">    - hauteur : chaine de caractères, en général de &quot;as&quot; à &quot;roi&quot;, </span>
-<span class="sd">        variantes &quot;un&quot; à &quot;vingt et un&quot; popur les atouts, &quot;aucune&quot; pour les jokers</span>
+<span class="sd">        aussi être plus exotique batons/coupes/deniers/épées. On peut aussi avoir "atout" ou "joker"</span>
+<span class="sd">    - hauteur : chaine de caractères, en général de "as" à "roi", </span>
+<span class="sd">        variantes "un" à "vingt et un" popur les atouts, "aucune" pour les jokers</span>
 <span class="sd">    - valeur : entier (en général), dépend du jeu. </span>
-<span class="sd">        Dans un langage fortement typé c&#39;est un flottant (valeurs 0.5 au tarot)</span>
+<span class="sd">        Dans un langage fortement typé c'est un flottant (valeurs 0.5 au tarot)</span>
 
 <span class="sd">Méthodes :</span>
 <span class="sd">    init()</span>
@@ -5143,62 +5143,62 @@ En java, parr exemple, l'attribut sera explicitement privé <code>private int va
 <span class="sd">    getHauteur()</span>
 <span class="sd">    getValeur()</span>
 <span class="sd">    setValeur()</span>
-<span class="sd">    estSuperieure(autre)  : renvoie un booléen vrai si l&#39;objet Carte est de valeur supérieure à celle</span>
-<span class="sd">        d&#39;un autre objet Carte</span>
+<span class="sd">    estSuperieure(autre)  : renvoie un booléen vrai si l'objet Carte est de valeur supérieure à celle</span>
+<span class="sd">        d'un autre objet Carte</span>
 <span class="sd">    estEgale(autre)</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 
 <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">couleur</span><span class="p">,</span><span class="n">hauteur</span><span class="p">,</span><span class="n">valeur</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Constructeur de la classe Carte</span>
 <span class="sd">    @param:   </span>
 <span class="sd">        - couleur : chaine de caractères, en général coeur/carreau/pique/trèfle, mais peut</span>
-<span class="sd">        aussi être plus exotique batons/coupes/deniers/épées. On peut aussi avoir &quot;atout&quot; ou &quot;joker&quot;</span>
-<span class="sd">        - hauteur : chaine de caractères, en général de &quot;as&quot; à &quot;roi&quot;, </span>
-<span class="sd">        variantes &quot;un&quot; à &quot;vingt et un&quot; popur les atouts, &quot;aucune&quot; pour les jokers</span>
+<span class="sd">        aussi être plus exotique batons/coupes/deniers/épées. On peut aussi avoir "atout" ou "joker"</span>
+<span class="sd">        - hauteur : chaine de caractères, en général de "as" à "roi", </span>
+<span class="sd">        variantes "un" à "vingt et un" popur les atouts, "aucune" pour les jokers</span>
 <span class="sd">        - valeur : entier (en général), dépend du jeu. </span>
-<span class="sd">        Dans un langage fortement typé c&#39;est un flottant (valeurs 0.5 au tarot)</span>
+<span class="sd">        Dans un langage fortement typé c'est un flottant (valeurs 0.5 au tarot)</span>
 <span class="sd">    Résultat : </span>
 <span class="sd">        ne retourne rien, crée une nouvelle Carte</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_couleur</span> <span class="o">=</span> <span class="n">couleur</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_hauteur</span> <span class="o">=</span> <span class="n">hauteur</span>
     <span class="k">if</span> <span class="n">valeur</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">valeur</span> <span class="o">&lt;=</span> <span class="mi">13</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_valeur</span> <span class="o">=</span> <span class="n">valeur</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;La valeur de la carte doit être comprise entre 1 et 13&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"La valeur de la carte doit être comprise entre 1 et 13"</span><span class="p">)</span>
 
 <span class="c1"># méthodes getters/setters</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">getCouleur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    @param : pas de parametre dans cette méthode</span>
-<span class="sd">    @result : renvoie la couleur de l&#39;objet carte</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    @result : renvoie la couleur de l'objet carte</span>
+<span class="sd">    """</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_couleur</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">getHauteur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    D@param : pas de parametre dans cette méthode</span>
-<span class="sd">    @result : renvoie la hauteur de l&#39;objet carte</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    @result : renvoie la hauteur de l'objet carte</span>
+<span class="sd">    """</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hauteur</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">getValeur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    @param : pas de parametre dans cette méthode</span>
-<span class="sd">    @result : revoie la valeur de l&#39;objet carte</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    @result : revoie la valeur de l'objet carte</span>
+<span class="sd">    """</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_valeur</span>   
 <span class="k">def</span><span class="w"> </span><span class="nf">setValeur</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">nouvValeur</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    @param : entier (en général) ou flottant, nouvelle valeur de la carte</span>
-<span class="sd">    @result : ne renvoie rien, mais modifie la valeur de l&#39;objet Carte</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    @result : ne renvoie rien, mais modifie la valeur de l'objet Carte</span>
+<span class="sd">    """</span>
     <span class="k">if</span> <span class="n">nouvValeur</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">nouvValeur</span> <span class="o">&lt;=</span> <span class="mi">13</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_valeur</span> <span class="o">=</span> <span class="n">nouvValeur</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;La valeur de la carte doit être comprise entre 1 et 13&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"La valeur de la carte doit être comprise entre 1 et 13"</span><span class="p">)</span>
 
 <span class="c1">#def __repr__(self):</span>
-    <span class="c1">#return f&#39;{self._hauteur} de {self._couleur}, valeur {self._valeur}&#39;</span>
+    <span class="c1">#return f'{self._hauteur} de {self._couleur}, valeur {self._valeur}'</span>
 </code></pre></div>
 </div>
 </div>
@@ -5207,28 +5207,28 @@ En java, parr exemple, l'attribut sera explicitement privé <code>private int va
 <h3 id="3-objets-et-reference-memoire">3. Objets et référence mémoire<a class="headerlink" href="#3-objets-et-reference-memoire" title="Permanent link">⚓︎</a></h3>
 <p>Une variable à laquelle on affecte un objet ne contient pas l'objet, mais l'<strong>adresse mémoire</strong> de l'objet. On peut donc avoir plusieurs variables qui référencent le <strong>même</strong> objet, et ainsi modifier l'objet à l'aide de ces différentes variables. C'est une source d'erreurs potentielles.   </p>
 <p><ins>Exemple :</ins>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">roiCarreau</span> <span class="o">=</span> <span class="n">Carte</span><span class="p">(</span><span class="s1">&#39;carreau&#39;</span><span class="p">,</span><span class="s1">&#39;roi&#39;</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span>
-<span class="n">roiCarreauBis</span> <span class="o">=</span> <span class="n">Carte</span><span class="p">(</span><span class="s1">&#39;carreau&#39;</span><span class="p">,</span><span class="s1">&#39;roi&#39;</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">roiCarreau</span> <span class="o">=</span> <span class="n">Carte</span><span class="p">(</span><span class="s1">'carreau'</span><span class="p">,</span><span class="s1">'roi'</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">roiCarreauBis</span> <span class="o">=</span> <span class="n">Carte</span><span class="p">(</span><span class="s1">'carreau'</span><span class="p">,</span><span class="s1">'roi'</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span>
 <span class="n">roiCarreauTer</span> <span class="o">=</span> <span class="n">roiCarreau</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">roiCarreau</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">roiCarreau</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">roiCarreauBis</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">roiCarreauTer</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Classe Carte à l&#39;adresse :&quot;</span><span class="p">,</span><span class="nb">hex</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">Carte</span><span class="p">)))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;roiCarreau à l&#39;adresse :&quot;</span><span class="p">,</span><span class="nb">hex</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">roiCarreau</span><span class="p">)))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;roiCarreauBis à l&#39;adresse :&quot;</span><span class="p">,</span><span class="nb">hex</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">roiCarreauBis</span><span class="p">)))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;roiCarreauTer à l&#39;adresse :&quot;</span><span class="p">,</span><span class="nb">hex</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">roiCarreauTer</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Classe Carte à l'adresse :"</span><span class="p">,</span><span class="nb">hex</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">Carte</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"roiCarreau à l'adresse :"</span><span class="p">,</span><span class="nb">hex</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">roiCarreau</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"roiCarreauBis à l'adresse :"</span><span class="p">,</span><span class="nb">hex</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">roiCarreauBis</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"roiCarreauTer à l'adresse :"</span><span class="p">,</span><span class="nb">hex</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">roiCarreauTer</span><span class="p">)))</span>
 
 <span class="c1">#Sortie Console </span>
 
-<span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="err">&#39;</span><span class="nc">__main__</span><span class="o">.</span><span class="n">Carte</span><span class="s1">&#39;&gt;</span>
+<span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="err">'</span><span class="nc">__main__</span><span class="o">.</span><span class="n">Carte</span><span class="s1">'&gt;</span>
 <span class="o">&lt;</span><span class="n">__main__</span><span class="o">.</span><span class="n">Carte</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x0000023D91E855B0</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="n">__main__</span><span class="o">.</span><span class="n">Carte</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x0000023D91E85550</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="n">__main__</span><span class="o">.</span><span class="n">Carte</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x0000023D91E855B0</span><span class="o">&gt;</span>
-<span class="n">Classe</span> <span class="n">Carte</span> <span class="n">à</span> <span class="n">l</span><span class="s1">&#39;adresse : 0x23d9138ca50</span>
-<span class="n">roiCarreau</span> <span class="n">à</span> <span class="n">l</span><span class="s1">&#39;adresse : 0x23d91e855b0</span>
-<span class="n">roiCarreauBis</span> <span class="n">à</span> <span class="n">l</span><span class="s1">&#39;adresse : 0x23d91e85550</span>
-<span class="n">roiCarreauTer</span> <span class="n">à</span> <span class="n">l</span><span class="s1">&#39;adresse : 0x23d91e855b0</span>
+<span class="n">Classe</span> <span class="n">Carte</span> <span class="n">à</span> <span class="n">l</span><span class="s1">'adresse : 0x23d9138ca50</span>
+<span class="n">roiCarreau</span> <span class="n">à</span> <span class="n">l</span><span class="s1">'adresse : 0x23d91e855b0</span>
+<span class="n">roiCarreauBis</span> <span class="n">à</span> <span class="n">l</span><span class="s1">'adresse : 0x23d91e85550</span>
+<span class="n">roiCarreauTer</span> <span class="n">à</span> <span class="n">l</span><span class="s1">'adresse : 0x23d91e855b0</span>
 </code></pre></div></p>
 <h2 id="4-resume-graphique">4.  Résumé graphique<a class="headerlink" href="#4-resume-graphique" title="Permanent link">⚓︎</a></h2>
 <h3 id="en-memoire">En mémoire<a class="headerlink" href="#en-memoire" title="Permanent link">⚓︎</a></h3>
@@ -5257,11 +5257,11 @@ En java, parr exemple, l'attribut sera explicitement privé <code>private int va
 <p>Compléter le code des méthodes <code>estSuperieure</code> et <code>estEgale</code> en respectant les signatures suivantes</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code>    <span class="c1"># méthodes</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">estSuperieure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">autre</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Compare les valeurs de deux objets Carte</span>
 <span class="sd">    @param : autre, objet de classe Carte</span>
 <span class="sd">    @result : booléen Vrai si la valeur de la Carte self est supérieure à la valeur de la Carte autre</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="k">pass</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">estEgale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">autre</span><span class="p">):</span>
@@ -5271,20 +5271,20 @@ En java, parr exemple, l'attribut sera explicitement privé <code>private int va
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># méthodes</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">estSuperieure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">autre</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Compare les valeurs de deux objets Carte</span>
 <span class="sd">    @param : autre, objet de classe Carte</span>
 <span class="sd">    @result : booléen Vrai si la valeur de la Carte self est supérieure à la valeur de la Carte autre</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_valeur</span> <span class="o">&gt;</span> <span class="n">autre</span><span class="o">.</span><span class="n">getValeur</span><span class="p">()</span>
 
 <span class="c1">#Correction</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">estEgale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">autre</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Compare les valeurs de deux objets Carte</span>
 <span class="sd">    @param : autre, objet de classe Carte</span>
 <span class="sd">    @result : booléen Vrai si la valeur de la Carte self est égale à la valeur de la Carte autre</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_valeur</span> <span class="o">==</span> <span class="n">autre</span><span class="o">.</span><span class="n">getValeur</span><span class="p">()</span> 
 </code></pre></div>
 </div>
@@ -5293,8 +5293,8 @@ En java, parr exemple, l'attribut sera explicitement privé <code>private int va
 </div>
 <h3 id="52-gestion-de-laffichage">5.2 Gestion de l'affichage<a class="headerlink" href="#52-gestion-de-laffichage" title="Permanent link">⚓︎</a></h3>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1">#Quelques Tests</span>
-<span class="n">roiCarreau</span> <span class="o">=</span> <span class="n">Carte</span><span class="p">(</span><span class="s1">&#39;carreau&#39;</span><span class="p">,</span><span class="s1">&#39;roi&#39;</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span>
-<span class="n">septPique</span> <span class="o">=</span>  <span class="n">Carte</span><span class="p">(</span><span class="s1">&#39;pique&#39;</span><span class="p">,</span><span class="s1">&#39;sept&#39;</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">roiCarreau</span> <span class="o">=</span> <span class="n">Carte</span><span class="p">(</span><span class="s1">'carreau'</span><span class="p">,</span><span class="s1">'roi'</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">septPique</span> <span class="o">=</span>  <span class="n">Carte</span><span class="p">(</span><span class="s1">'pique'</span><span class="p">,</span><span class="s1">'sept'</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">roiCarreau</span><span class="o">.</span><span class="n">estSuperieure</span><span class="p">(</span><span class="n">septPique</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">septPique</span><span class="o">.</span><span class="n">estSuperieure</span><span class="p">(</span><span class="n">roiCarreau</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">roiCarreau</span><span class="p">)</span>
@@ -5327,33 +5327,33 @@ Si aucun des deux n'est défini, Python renverra une représentation par défaut
         <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Personne(nom=&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nom</span><span class="si">}</span><span class="s2">&#39;, age=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">}</span><span class="s2">)&quot;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">"Personne(nom='</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nom</span><span class="si">}</span><span class="s2">', age=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">}</span><span class="s2">)"</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nom</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">}</span><span class="s2"> ans&quot;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nom</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">}</span><span class="s2"> ans"</span>
 
-<span class="n">personne</span> <span class="o">=</span> <span class="n">Personne</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">personne</span> <span class="o">=</span> <span class="n">Personne</span><span class="p">(</span><span class="s2">"Alice"</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">personne</span><span class="p">))</span>  <span class="c1"># Personne(nom=&#39;Alice&#39;, age=30) -&gt; Développeur</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">personne</span><span class="p">))</span>  <span class="c1"># Personne(nom='Alice', age=30) -&gt; Développeur</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">personne</span><span class="p">))</span>   <span class="c1"># Alice, 30 ans -&gt; Utilisateur final</span>
 </code></pre></div>
 </details>
 <h3 id="53-objet-compose-dobjets">5.3 Objet composé d'objets<a class="headerlink" href="#53-objet-compose-dobjets" title="Permanent link">⚓︎</a></h3>
 <p>Dans un paquet de cartes, il y a plusieurs cartes. On va créer donc la classe <strong>Paquet</strong>. <br /></p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">PaquetCartes</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Paquet de cartes</span>
 <span class="sd">    Attributs:</span>
 <span class="sd">        - nom : nom du paquet, de préférence correspondant au nom du jeu pour</span>
 <span class="sd">            lequel il va être utilisé</span>
 <span class="sd">        - paquet : liste des cartes</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">_hauteurs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;as&quot;</span><span class="p">,</span><span class="s2">&quot;deux&quot;</span><span class="p">,</span><span class="s2">&quot;trois&quot;</span><span class="p">,</span><span class="s2">&quot;quatre&quot;</span><span class="p">,</span><span class="s2">&quot;cinq&quot;</span><span class="p">,</span><span class="s2">&quot;six&quot;</span><span class="p">,</span><span class="s2">&quot;sept&quot;</span><span class="p">,</span><span class="s2">&quot;huit&quot;</span><span class="p">,</span><span class="s2">&quot;neuf&quot;</span><span class="p">,</span><span class="s2">&quot;dix&quot;</span><span class="p">,</span>
-              <span class="s2">&quot;valet&quot;</span><span class="p">,</span><span class="s2">&quot;dame&quot;</span><span class="p">,</span><span class="s2">&quot;roi&quot;</span><span class="p">]</span>
-    <span class="n">_couleurs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;coeur&quot;</span><span class="p">,</span><span class="s2">&quot;pique&quot;</span><span class="p">,</span><span class="s2">&quot;carreau&quot;</span><span class="p">,</span><span class="s2">&quot;trèfle&quot;</span><span class="p">]</span>
+<span class="sd">    """</span>
+    <span class="n">_hauteurs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"as"</span><span class="p">,</span><span class="s2">"deux"</span><span class="p">,</span><span class="s2">"trois"</span><span class="p">,</span><span class="s2">"quatre"</span><span class="p">,</span><span class="s2">"cinq"</span><span class="p">,</span><span class="s2">"six"</span><span class="p">,</span><span class="s2">"sept"</span><span class="p">,</span><span class="s2">"huit"</span><span class="p">,</span><span class="s2">"neuf"</span><span class="p">,</span><span class="s2">"dix"</span><span class="p">,</span>
+              <span class="s2">"valet"</span><span class="p">,</span><span class="s2">"dame"</span><span class="p">,</span><span class="s2">"roi"</span><span class="p">]</span>
+    <span class="n">_couleurs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"coeur"</span><span class="p">,</span><span class="s2">"pique"</span><span class="p">,</span><span class="s2">"carreau"</span><span class="p">,</span><span class="s2">"trèfle"</span><span class="p">]</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">nom</span><span class="p">,</span><span class="n">nbCartes</span> <span class="o">=</span> <span class="mi">32</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Constructeur du paquet de cartes&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Constructeur du paquet de cartes"""</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_nom</span> <span class="o">=</span> <span class="n">nom</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_nbCartes</span> <span class="o">=</span> <span class="n">nbCartes</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_paquet</span> <span class="o">=</span> <span class="p">[]</span>
@@ -5373,7 +5373,7 @@ Si aucun des deux n'est défini, Python renverra une représentation par défaut
     <span class="k">def</span><span class="w"> </span><span class="nf">getPaquet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_paquet</span>
 
-<span class="n">paquetBataille</span> <span class="o">=</span> <span class="n">PaquetCartes</span><span class="p">(</span><span class="s1">&#39;bataille&#39;</span><span class="p">,</span> <span class="mi">52</span><span class="p">)</span>
+<span class="n">paquetBataille</span> <span class="o">=</span> <span class="n">PaquetCartes</span><span class="p">(</span><span class="s1">'bataille'</span><span class="p">,</span> <span class="mi">52</span><span class="p">)</span>
 </code></pre></div>
 <h4 id="531-notion-de-variable-de-classe">5.3.1 Notion de variable de classe<a class="headerlink" href="#531-notion-de-variable-de-classe" title="Permanent link">⚓︎</a></h4>
 <p>On remarque que les listes des valeurs et des hauteurs possibles sont définies avant le constructeur. Ces variables sont <strong>partagées</strong> par toutes les instances de la classe : il n'y a qu'une seule copie de ces variables, créee lors du chargement de la classe.</p>
@@ -5382,16 +5382,16 @@ Si aucun des deux n'est défini, Python renverra une représentation par défaut
 <p>Une variable de classe est une variable qui est <strong>partagée</strong> par toutes les instances d'une classe. Contrairement aux <strong>variables d'instance</strong>, qui sont propres à chaque objet, les <strong>variables de classe</strong> sont <mark>communes</mark> à toutes les instances d'une même classe. Elles sont définies directement dans la classe, en dehors des méthodes, et leur valeur est partagée et accessible par chaque instance de cette classe.</p>
 </div>
 <p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">PaquetCartes</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Paquet de cartes</span>
 <span class="sd">    Attributs:</span>
 <span class="sd">        - nom : nom du paquet, de préférence correspondant au nom du jeu pour</span>
 <span class="sd">            lequel il va être utilisé</span>
 <span class="sd">        - paquet : liste des cartes</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">_hauteurs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;as&quot;</span><span class="p">,</span><span class="s2">&quot;deux&quot;</span><span class="p">,</span><span class="s2">&quot;trois&quot;</span><span class="p">,</span><span class="s2">&quot;quatre&quot;</span><span class="p">,</span><span class="s2">&quot;cinq&quot;</span><span class="p">,</span><span class="s2">&quot;six&quot;</span><span class="p">,</span><span class="s2">&quot;sept&quot;</span><span class="p">,</span><span class="s2">&quot;huit&quot;</span><span class="p">,</span><span class="s2">&quot;neuf&quot;</span><span class="p">,</span><span class="s2">&quot;dix&quot;</span><span class="p">,</span>
-              <span class="s2">&quot;valet&quot;</span><span class="p">,</span><span class="s2">&quot;dame&quot;</span><span class="p">,</span><span class="s2">&quot;roi&quot;</span><span class="p">]</span>
-    <span class="n">_couleurs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;coeur&quot;</span><span class="p">,</span><span class="s2">&quot;pique&quot;</span><span class="p">,</span><span class="s2">&quot;carreau&quot;</span><span class="p">,</span><span class="s2">&quot;trèfle&quot;</span><span class="p">]</span>
+<span class="sd">    """</span>
+    <span class="n">_hauteurs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"as"</span><span class="p">,</span><span class="s2">"deux"</span><span class="p">,</span><span class="s2">"trois"</span><span class="p">,</span><span class="s2">"quatre"</span><span class="p">,</span><span class="s2">"cinq"</span><span class="p">,</span><span class="s2">"six"</span><span class="p">,</span><span class="s2">"sept"</span><span class="p">,</span><span class="s2">"huit"</span><span class="p">,</span><span class="s2">"neuf"</span><span class="p">,</span><span class="s2">"dix"</span><span class="p">,</span>
+              <span class="s2">"valet"</span><span class="p">,</span><span class="s2">"dame"</span><span class="p">,</span><span class="s2">"roi"</span><span class="p">]</span>
+    <span class="n">_couleurs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"coeur"</span><span class="p">,</span><span class="s2">"pique"</span><span class="p">,</span><span class="s2">"carreau"</span><span class="p">,</span><span class="s2">"trèfle"</span><span class="p">]</span>
 </code></pre></div>
 Les variables de classes sont intéressantes pour définir des constantes comme dans notre exemple, mais aussi de pouvoir disposer d'une variable unique commune à toutes les instances d'une même classe. L'exemple classique en POO est celui de la population.</p>
 <details class="example">
@@ -5400,26 +5400,26 @@ Les variables de classes sont intéressantes pour définir des constantes comme 
     <span class="n">population</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Variable de classe</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">nom</span> <span class="o">=</span> <span class="n">nom</span>  <span class="c1"># Variable d&#39;instance</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>  <span class="c1"># Variable d&#39;instance</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nom</span> <span class="o">=</span> <span class="n">nom</span>  <span class="c1"># Variable d'instance</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>  <span class="c1"># Variable d'instance</span>
         <span class="n">Personne</span><span class="o">.</span><span class="n">population</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># Accès à la variable de classe pour incrémenter la population</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">afficher_details</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Nom: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nom</span><span class="si">}</span><span class="s2">, Âge: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Nom: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nom</span><span class="si">}</span><span class="s2">, Âge: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
 <span class="c1"># Création de deux instances</span>
-<span class="n">personne1</span> <span class="o">=</span> <span class="n">Personne</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
-<span class="n">personne2</span> <span class="o">=</span> <span class="n">Personne</span><span class="p">(</span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">personne1</span> <span class="o">=</span> <span class="n">Personne</span><span class="p">(</span><span class="s2">"Alice"</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">personne2</span> <span class="o">=</span> <span class="n">Personne</span><span class="p">(</span><span class="s2">"Bob"</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
 
 <span class="c1"># Affichage des détails des instances</span>
 <span class="n">personne1</span><span class="o">.</span><span class="n">afficher_details</span><span class="p">()</span>  <span class="c1"># Affiche : Nom: Alice, Âge: 30</span>
 <span class="n">personne2</span><span class="o">.</span><span class="n">afficher_details</span><span class="p">()</span>  <span class="c1"># Affiche : Nom: Bob, Âge: 25</span>
 
 <span class="c1"># Accès à la variable de classe via la classe</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Population actuelle : </span><span class="si">{</span><span class="n">Personne</span><span class="o">.</span><span class="n">population</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Affiche : Population actuelle : 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Population actuelle : </span><span class="si">{</span><span class="n">Personne</span><span class="o">.</span><span class="n">population</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>  <span class="c1"># Affiche : Population actuelle : 2</span>
 
 <span class="c1"># Accès à la variable de classe via une instance (possible mais pas recommandé)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Population via personne1 : </span><span class="si">{</span><span class="n">personne1</span><span class="o">.</span><span class="n">population</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Affiche : Population via personne1 : 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Population via personne1 : </span><span class="si">{</span><span class="n">personne1</span><span class="o">.</span><span class="n">population</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>  <span class="c1"># Affiche : Population via personne1 : 2</span>
 </code></pre></div>
 </details>
 <div class="admonition question">
@@ -5443,10 +5443,10 @@ Les variables de classes sont intéressantes pour définir des constantes comme 
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="sd">&quot;&quot;&quot;Affichage du paquet de cartes&quot;&quot;&quot;</span>
-<span class="n">chaine</span> <span class="o">=</span> <span class="s2">&quot;Paquet de cartes : &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nom</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="sd">"""Affichage du paquet de cartes"""</span>
+<span class="n">chaine</span> <span class="o">=</span> <span class="s2">"Paquet de cartes : "</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nom</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span>
 <span class="k">for</span> <span class="n">carte</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_paquet</span><span class="p">:</span>
-    <span class="n">chaine</span> <span class="o">+=</span> <span class="n">carte</span><span class="o">.</span><span class="n">getHauteur</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; de &quot;</span> <span class="o">+</span> <span class="n">carte</span><span class="o">.</span><span class="n">getCouleur</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; valeur &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">carte</span><span class="o">.</span><span class="n">getValeur</span><span class="p">())</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="n">chaine</span> <span class="o">+=</span> <span class="n">carte</span><span class="o">.</span><span class="n">getHauteur</span><span class="p">()</span> <span class="o">+</span> <span class="s2">" de "</span> <span class="o">+</span> <span class="n">carte</span><span class="o">.</span><span class="n">getCouleur</span><span class="p">()</span> <span class="o">+</span> <span class="s2">" valeur "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">carte</span><span class="o">.</span><span class="n">getValeur</span><span class="p">())</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span>
 <span class="k">return</span> <span class="n">chaine</span>   
 </code></pre></div>
 </div>
@@ -5457,22 +5457,22 @@ Les variables de classes sont intéressantes pour définir des constantes comme 
 <details class="question">
 <summary>Correction Constructeur</summary>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code>   <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">nom</span><span class="p">,</span><span class="n">nbCartes</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Constructeur du paquet de cartes&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Constructeur du paquet de cartes"""</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_nom</span> <span class="o">=</span> <span class="n">nom</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_nbCartes</span> <span class="o">=</span> <span class="n">nbCartes</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_paquet</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_hauteurs</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nbCartes</span> <span class="o">//</span> <span class="mi">4</span><span class="p">)),</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_hauteurs</span><span class="p">)):</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_couleurs</span><span class="p">)):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_paquet</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Carte</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_couleurs</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="bp">self</span><span class="o">.</span><span class="n">_hauteurs</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> 
-    <span class="c1">#Si le nombre de cartes n&#39;est pas un multiple de 4, il faut ajouter les cartes restantes</span>
+    <span class="c1">#Si le nombre de cartes n'est pas un multiple de 4, il faut ajouter les cartes restantes</span>
     <span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_hauteurs</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nbCartes</span> <span class="o">//</span> <span class="mi">4</span><span class="p">))</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
         <span class="c1">#Il faut ajouter le reste de (len(self._hauteurs)-(self._nbCartes // 4)) à la fin du paquet</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_hauteurs</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nbCartes</span> <span class="o">//</span> <span class="mi">4</span><span class="p">))</span><span class="o">-</span><span class="mi">1</span><span class="p">,(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_hauteurs</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nbCartes</span> <span class="o">//</span> <span class="mi">4</span><span class="p">))):</span>
             <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">_nbCartes</span> <span class="o">%</span> <span class="mi">4</span><span class="p">)):</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">_paquet</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Carte</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_couleurs</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="bp">self</span><span class="o">.</span><span class="n">_hauteurs</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
 
-    <span class="c1">#Exemple d&#39;appel du constructeur dans la classe de test</span>
-    <span class="n">paquetBataille</span> <span class="o">=</span> <span class="n">PaquetCartes</span><span class="p">(</span><span class="s2">&quot;bataille&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="p">;</span>
+    <span class="c1">#Exemple d'appel du constructeur dans la classe de test</span>
+    <span class="n">paquetBataille</span> <span class="o">=</span> <span class="n">PaquetCartes</span><span class="p">(</span><span class="s2">"bataille"</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="p">;</span>
 </code></pre></div>
 </details>
 <h4 id="533-avec-les-objets-composes-dobjets-les-methodes-enchainees">5.3.3 Avec les objets composés d'objets, les méthodes "enchainées"<a class="headerlink" href="#533-avec-les-objets-composes-dobjets-les-methodes-enchainees" title="Permanent link">⚓︎</a></h4>
@@ -5495,42 +5495,42 @@ Quand tu parles d'<strong>enchaînement de méthodes</strong>, il s'agit génér
 <p><em>Remarque</em> : l'affichage des donnes de chaque joueur relève plutôt de la classe gérant le jeu. En effet dans certains jeux les cartes sont inconnues du joueur.  </p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">la méthode melange(self)qui mélange le paquet comme son nom l&#39;indique. </span>
-<span class="sd">Cette méthode renvoie self, elle modifie l&#39;attribut __paquet. </span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="sd">"""</span>
+<span class="sd">la méthode melange(self)qui mélange le paquet comme son nom l'indique. </span>
+<span class="sd">Cette méthode renvoie self, elle modifie l'attribut __paquet. </span>
 <span class="sd">On utilisera la méthode shuffle(tableau_à_mélanger)de la bibliothèque random</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">melange</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    D@param : pas de parametre dans cette méthode</span>
 <span class="sd">    @result : procédure qui mélange sur place le paquet de carte</span>
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
 <span class="sd">    None.</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_paquet</span><span class="p">)</span>
 
 
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    la méthode distribution(nbJoueurs,nbADistribuer = 0)qui renvoie une donne, </span>
 <span class="sd">    une liste de listes de Cartes. Il y a autant de listes que de joueurs. </span>
 <span class="sd">    Si nbADistribuer = 0, on distribue tout le paquet de manière équitable. </span>
 <span class="sd">    Sinon, on donne le nombre de cartes indiquées à chaque joueur. </span>
 <span class="sd">    Le nombre de cartes à distribuer et le nombre de joueurs doivent être </span>
 <span class="sd">    compatibles avec la taille du paquet de cartes. </span>
-<span class="sd">    S&#39;il reste des cartes après distribution, une dernière liste sera ajoutée avec celles-ci</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    S'il reste des cartes après distribution, une dernière liste sera ajoutée avec celles-ci</span>
+<span class="sd">    """</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">distribution</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">nbJoueurs</span><span class="p">,</span><span class="n">nbADistribuer</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>     
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    D@param : nbJoueurs : entier, détermine le nb de joueurs à servir</span>
 <span class="sd">            nbADistribuer : entier, indique le nb de cartes à distribuer.</span>
 <span class="sd">    @result : renvoie une liste de liste des cartes distribuées en fonction du nombre de joueurs</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="c1"># Gestion des paramètres entrants</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">nbJoueurs</span><span class="o">*</span><span class="n">nbADistribuer</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_paquet</span><span class="p">))</span> <span class="ow">or</span> <span class="p">(</span><span class="n">nbJoueurs</span><span class="o">&gt;</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_paquet</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;nombre de cartes à distribuer et le nombre de joueurs doivent être compatibles avec la taille du paquet de cartes&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">'nombre de cartes à distribuer et le nombre de joueurs doivent être compatibles avec la taille du paquet de cartes'</span><span class="p">)</span>
         <span class="k">return</span> <span class="kc">None</span>
 
     <span class="c1">#Initialisation de la liste des cartes à renvoyer</span>
@@ -5543,14 +5543,14 @@ Quand tu parles d'<strong>enchaînement de méthodes</strong>, il s'agit génér
 
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbJoueurs</span><span class="p">):</span>
         <span class="n">main</span><span class="o">=</span><span class="p">[]</span>
-        <span class="c1">#tant que l&#39;on a pas atteint le nb de cartes à distribuer</span>
+        <span class="c1">#tant que l'on a pas atteint le nb de cartes à distribuer</span>
         <span class="c1"># while len(main) &lt; n:</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
             <span class="c1">#petite astuce de programmation :</span>
             <span class="c1">#On tire un élément de la liste jeu au hasard et en l’y supprimme avec </span>
             <span class="c1">#cette instruction à tiroirs :main.append(jeu.pop(randrange(len(jeu))))</span>
             <span class="n">main</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_paquet</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_paquet</span><span class="p">))))</span>
-        <span class="c1">#Une fois la main du joueur constitué, on l&#39;ajoute à la distribution</span>
+        <span class="c1">#Une fois la main du joueur constitué, on l'ajoute à la distribution</span>
         <span class="n">dist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">main</span><span class="p">)</span>
     <span class="c1">#Traitement du cas : il reste des cartes à distribuer </span>
     <span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_paquet</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">):</span>
@@ -5584,27 +5584,27 @@ Quand tu parles d'<strong>enchaînement de méthodes</strong>, il s'agit génér
 </ul>
 <p>Cette structure mérite amplement sa classe. Créez-là en suivant les spécifications ci-dessous, vous l'utiliserez dans "JeuBataille". Quelques tests sont proposés, vous pouvez en rajouter (essayez d'utiliser des <code>assert</code>).</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">File</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Gère les files FIFO</span>
 <span class="sd">    Attributs :</span>
-<span class="sd">        - file : liste d&#39;éléments à priori du même type</span>
+<span class="sd">        - file : liste d'éléments à priori du même type</span>
 <span class="sd">        - nb_elements : taille de la file</span>
 <span class="sd">        - premier : premier élément de la file</span>
 <span class="sd">        - dernier : dernier élément de la file</span>
 <span class="sd">    Méthodes :</span>
-<span class="sd">        - __init__(liste = []) : constructeur, renvoie une file vide si liste n&#39;est pas renseigné.</span>
+<span class="sd">        - __init__(liste = []) : constructeur, renvoie une file vide si liste n'est pas renseigné.</span>
 <span class="sd">            Sinon renvoie une file constituée des éléments de la liste</span>
-<span class="sd">        - tete : renvoie l&#39;élément en tête de la file, la file étant non vide</span>
+<span class="sd">        - tete : renvoie l'élément en tête de la file, la file étant non vide</span>
 <span class="sd">        - enfiler(element) : insère element en fin de file </span>
-<span class="sd">        - defiler : supprime l&#39;élément en tête de la file. On peut le renvoyer éventuellement.</span>
+<span class="sd">        - defiler : supprime l'élément en tête de la file. On peut le renvoyer éventuellement.</span>
 <span class="sd">            Si la file est vide, renvoie None</span>
 <span class="sd">        - estFileVide : teste si la file est vide</span>
 <span class="sd">        - getters pour nb_elements, premier et dernier</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">liste</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Constructeur de la file</span>
-<span class="sd">        Remarque : écrire self._file = liste copie l&#39;adresse de liste dans self._file. Ceci peut poser</span>
-<span class="sd">        des problèmes. En effet, si par la suite on modifie liste, alors on modifiera aussi self._file&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Constructeur de la file</span>
+<span class="sd">        Remarque : écrire self._file = liste copie l'adresse de liste dans self._file. Ceci peut poser</span>
+<span class="sd">        des problèmes. En effet, si par la suite on modifie liste, alors on modifiera aussi self._file"""</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_file</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">if</span> <span class="n">liste</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">pass</span>
@@ -5628,14 +5628,14 @@ Quand tu parles d'<strong>enchaînement de méthodes</strong>, il s'agit génér
     <span class="k">def</span><span class="w"> </span><span class="nf">getNb_elements</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nb_elements</span>
 
-    <span class="c1"># une petite méthode d&#39;instrumentation ça peut parfois aider :-)</span>
+    <span class="c1"># une petite méthode d'instrumentation ça peut parfois aider :-)</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">printFile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Contenu de la file : &quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Contenu de la file : "</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_file</span><span class="p">:</span>
-            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">element</span><span class="p">,</span><span class="n">Carte</span><span class="p">):</span>   <span class="c1"># on teste si &quot;element&quot; est une instance de la classe Carte...</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">element</span><span class="p">,</span><span class="n">Carte</span><span class="p">):</span>   <span class="c1"># on teste si "element" est une instance de la classe Carte...</span>
                 <span class="nb">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>        <span class="c1"># ...dans le cadre particulier de ce notebook uniquement</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="s2">&quot;n&#39;est pas une carte&quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="s2">"n'est pas une carte"</span><span class="p">)</span>
 
 <span class="n">ma_file</span> <span class="o">=</span> <span class="n">File</span><span class="p">([</span><span class="mi">11</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span><span class="mi">44</span><span class="p">,</span><span class="mi">55</span><span class="p">])</span>
 <span class="n">ma_file</span><span class="o">.</span><span class="n">printFile</span><span class="p">()</span>
@@ -5654,7 +5654,7 @@ Quand tu parles d'<strong>enchaînement de méthodes</strong>, il s'agit génér
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">JeuBataille</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Jeu de bataille</span>
 <span class="sd">    Attributs:</span>
 <span class="sd">        - nom_joueur1 : chaine</span>
@@ -5664,16 +5664,16 @@ Quand tu parles d'<strong>enchaînement de méthodes</strong>, il s'agit génér
 <span class="sd">        - cartes_j2 : pile des cartes du joueur 2</span>
 <span class="sd">        - defausse : pile des cartes de la défausse</span>
 <span class="sd">        - nb_tours : entier, nombre de tours de jeu</span>
-<span class="sd">        - nb_batailles : entier, nombre de cas d&#39;égalité lors des tirages simultanés</span>
+<span class="sd">        - nb_batailles : entier, nombre de cas d'égalité lors des tirages simultanés</span>
 
 <span class="sd">        Remarque : certains de ces attributs auraient peut-être plutôt leur place en tant que variable </span>
 <span class="sd">        dans la méthode jouer, et vice-versa (?).</span>
-<span class="sd">        Dans la version proposée ici, le jeu étant automatique, c&#39;est même certain. Mais si on veut</span>
+<span class="sd">        Dans la version proposée ici, le jeu étant automatique, c'est même certain. Mais si on veut</span>
 <span class="sd">        plus visualiser/intervenir lors du jeu, il vaut mieux avoir les attributs ci-dessus.</span>
 
 <span class="sd">    Méthodes :</span>
 <span class="sd">        - __init__</span>
-<span class="sd">        - jouer : jeu de l&#39;oridnateur contre lui-même. Il est conseillé:</span>
+<span class="sd">        - jouer : jeu de l'oridnateur contre lui-même. Il est conseillé:</span>
 <span class="sd">            soit de mettre très peu de cartes (8 au total max)</span>
 <span class="sd">            soit de préciser un nombre maximal de tours de jeu</span>
 <span class="sd">            Renvoie :</span>
@@ -5681,22 +5681,22 @@ Quand tu parles d'<strong>enchaînement de méthodes</strong>, il s'agit génér
 <span class="sd">                gagnant : chaîne de caractères</span>
 <span class="sd">                self.nb_batailles</span>
 <span class="sd">                self.nb_tours</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom_joueur1</span> <span class="o">=</span> <span class="s1">&#39;ordi1&#39;</span><span class="p">,</span> <span class="n">nom_joueur2</span> <span class="o">=</span> <span class="s1">&#39;ordi2&#39;</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Constructeur du jeu&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom_joueur1</span> <span class="o">=</span> <span class="s1">'ordi1'</span><span class="p">,</span> <span class="n">nom_joueur2</span> <span class="o">=</span> <span class="s1">'ordi2'</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""Constructeur du jeu"""</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_nomjoueur1</span> <span class="o">=</span> <span class="n">nom_joueur1</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_nomjoueur2</span> <span class="o">=</span> <span class="n">nom_joueur2</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_paquetBataille</span> <span class="o">=</span> <span class="n">PaquetCartes</span><span class="p">(</span><span class="s1">&#39;bataille&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_paquetBataille</span> <span class="o">=</span> <span class="n">PaquetCartes</span><span class="p">(</span><span class="s1">'bataille'</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
         <span class="n">donne</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_paquetBataille</span><span class="o">.</span><span class="n">melange</span><span class="p">()</span><span class="o">.</span><span class="n">distribution</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_cartesj1</span> <span class="o">=</span> <span class="n">File</span><span class="p">(</span><span class="n">donne</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_cartesj2</span> <span class="o">=</span> <span class="n">File</span><span class="p">(</span><span class="n">donne</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_defausse</span> <span class="o">=</span> <span class="n">File</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_nb_tours</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_nb_batailles</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cartes j1&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Cartes j1"</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_cartesj1</span><span class="o">.</span><span class="n">printFile</span><span class="p">()</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cartes j2&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Cartes j2"</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_cartesj2</span><span class="o">.</span><span class="n">printFile</span><span class="p">()</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">jouer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -5708,27 +5708,27 @@ Quand tu parles d'<strong>enchaînement de méthodes</strong>, il s'agit génér
 <span class="n">baston</span> <span class="o">=</span> <span class="n">JeuBataille</span><span class="p">()</span>
 <span class="p">(</span><span class="n">mat</span><span class="p">,</span><span class="n">gagnant</span><span class="p">,</span><span class="n">nb_batailles</span><span class="p">,</span><span class="n">tours</span><span class="p">)</span> <span class="o">=</span> <span class="n">baston</span><span class="o">.</span><span class="n">jouer</span><span class="p">()</span>
 <span class="k">if</span> <span class="n">mat</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;match nul, ce n&#39;est pas fréquent. En récompense, calculer la probabilité de cet évènement.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"match nul, ce n'est pas fréquent. En récompense, calculer la probabilité de cet évènement."</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">gagnant</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;trop de tours de jeu. Il y a eu &quot;</span><span class="p">,</span><span class="n">nb_batailles</span><span class="p">,</span><span class="s2">&quot; batailles&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"trop de tours de jeu. Il y a eu "</span><span class="p">,</span><span class="n">nb_batailles</span><span class="p">,</span><span class="s2">" batailles"</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">gagnant</span><span class="p">,</span><span class="s2">&quot; a gagné en &quot;</span><span class="p">,</span><span class="n">tours</span><span class="p">,</span><span class="s2">&quot; tours de jeu, et &quot;</span><span class="p">,</span><span class="n">nb_batailles</span><span class="p">,</span><span class="s2">&quot; batailles.&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">gagnant</span><span class="p">,</span><span class="s2">" a gagné en "</span><span class="p">,</span><span class="n">tours</span><span class="p">,</span><span class="s2">" tours de jeu, et "</span><span class="p">,</span><span class="n">nb_batailles</span><span class="p">,</span><span class="s2">" batailles."</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># -*- coding: utf-8 -*-</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 <span class="sd">Created on Sun Sep 20 21:54:13 2020</span>
 
 <span class="sd">@author: SOPHIE</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">file</span><span class="w"> </span><span class="kn">import</span> <span class="n">File</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">PaquetCartes</span><span class="w"> </span><span class="kn">import</span> <span class="n">PaquetCartes</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">carte</span><span class="w"> </span><span class="kn">import</span> <span class="n">Carte</span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">JeuBataille</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Jeu de bataille</span>
 <span class="sd">    Attributs:</span>
 <span class="sd">        - nom_joueur1 : chaine</span>
@@ -5738,16 +5738,16 @@ Quand tu parles d'<strong>enchaînement de méthodes</strong>, il s'agit génér
 <span class="sd">        - cartes_j2 : pile des cartes du joueur 2</span>
 <span class="sd">        - defausse : pile des cartes de la défausse</span>
 <span class="sd">        - nb_tours : entier, nombre de tours de jeu</span>
-<span class="sd">        - nb_batailles : entier, nombre de cas d&#39;égalité lors des tirages simultanés</span>
+<span class="sd">        - nb_batailles : entier, nombre de cas d'égalité lors des tirages simultanés</span>
 
 <span class="sd">        Remarque : certains de ces attributs auraient peut-être plutôt leur place en tant que variable </span>
 <span class="sd">        dans la méthode jouer, et vice-versa (?).</span>
-<span class="sd">        Dans la version proposée ici, le jeu étant automatique, c&#39;est même certain. Mais si on veut</span>
+<span class="sd">        Dans la version proposée ici, le jeu étant automatique, c'est même certain. Mais si on veut</span>
 <span class="sd">        plus visualiser/intervenir lors du jeu, il vaut mieux avoir les attributs ci-dessus.</span>
 
 <span class="sd">    Méthodes :</span>
 <span class="sd">        - __init__</span>
-<span class="sd">        - jouer : jeu de l&#39;oridnateur contre lui-même. Il est conseillé:</span>
+<span class="sd">        - jouer : jeu de l'oridnateur contre lui-même. Il est conseillé:</span>
 <span class="sd">            soit de mettre très peu de cartes (8 au total max)</span>
 <span class="sd">            soit de préciser un nombre maximal de tours de jeu</span>
 <span class="sd">            Renvoie :</span>
@@ -5755,13 +5755,13 @@ Quand tu parles d'<strong>enchaînement de méthodes</strong>, il s'agit génér
 <span class="sd">                gagnant : chaîne de caractères</span>
 <span class="sd">                self.nb_batailles</span>
 <span class="sd">                self.nb_tours</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom_joueur1</span> <span class="o">=</span> <span class="s1">&#39;ordi1&#39;</span><span class="p">,</span> <span class="n">nom_joueur2</span> <span class="o">=</span> <span class="s1">&#39;ordi2&#39;</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Constructeur du jeu&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom_joueur1</span> <span class="o">=</span> <span class="s1">'ordi1'</span><span class="p">,</span> <span class="n">nom_joueur2</span> <span class="o">=</span> <span class="s1">'ordi2'</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""Constructeur du jeu"""</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_nomjoueur1</span> <span class="o">=</span> <span class="n">nom_joueur1</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_nomjoueur2</span> <span class="o">=</span> <span class="n">nom_joueur2</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_paquetBataille</span> <span class="o">=</span> <span class="n">PaquetCartes</span><span class="p">(</span><span class="s1">&#39;bataille&#39;</span><span class="p">,</span><span class="mi">12</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_paquetBataille</span> <span class="o">=</span> <span class="n">PaquetCartes</span><span class="p">(</span><span class="s1">'bataille'</span><span class="p">,</span><span class="mi">12</span><span class="p">)</span>
         <span class="c1">#On mélange et on distribue entre les 2 joueurs.</span>
         <span class="c1">#Pour rappel, distribution(2) distribue toutes les cartes entre les  2 joueurs.</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_paquetBataille</span><span class="o">.</span><span class="n">melange</span><span class="p">()</span>
@@ -5774,23 +5774,23 @@ Quand tu parles d'<strong>enchaînement de méthodes</strong>, il s'agit génér
         <span class="bp">self</span><span class="o">.</span><span class="n">_defausse</span> <span class="o">=</span> <span class="n">File</span><span class="p">()</span>
         <span class="c1">#Initialisation du nb de tours à 0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_nb_tours</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="c1">#Crétaion d&#39;un compteur de bataille</span>
+        <span class="c1">#Crétaion d'un compteur de bataille</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_nb_batailles</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cartes j1&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Cartes j1"</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_cartesj1</span><span class="o">.</span><span class="n">printFile</span><span class="p">()</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cartes j2&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Cartes j2"</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_cartesj2</span><span class="o">.</span><span class="n">printFile</span><span class="p">()</span>
 
 
     <span class="k">def</span><span class="w"> </span><span class="nf">jouer</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
         <span class="c1"># jouez avec très peu de cartes (4 à 10). Fixez un maximum de nombre de tours de jeu</span>
         <span class="n">poursuivre</span> <span class="o">=</span> <span class="kc">True</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Partie principale : &#39;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;   - </span><span class="si">{}</span><span class="s1"> : </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nomjoueur1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cartesj1</span><span class="o">.</span><span class="n">printFile</span><span class="p">()))</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;   - </span><span class="si">{}</span><span class="s1"> : </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nomjoueur2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cartesj2</span><span class="o">.</span><span class="n">printFile</span><span class="p">()))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'Partie principale : '</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'   - </span><span class="si">{}</span><span class="s1"> : </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nomjoueur1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cartesj1</span><span class="o">.</span><span class="n">printFile</span><span class="p">()))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'   - </span><span class="si">{}</span><span class="s1"> : </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nomjoueur2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cartesj2</span><span class="o">.</span><span class="n">printFile</span><span class="p">()))</span>
         <span class="k">while</span> <span class="n">poursuivre</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nb_tours</span> <span class="o">&lt;</span> <span class="mi">5</span>  <span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_nb_tours</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="c1">#Cas ou l&#39;un des joueurs n&#39;a plus de carte, on arrête la partie</span>
+            <span class="c1">#Cas ou l'un des joueurs n'a plus de carte, on arrête la partie</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cartesj1</span><span class="o">.</span><span class="n">estFileVide</span><span class="p">()</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cartesj2</span><span class="o">.</span><span class="n">estFileVide</span><span class="p">()</span> <span class="p">:</span>
                 <span class="n">poursuivre</span> <span class="o">=</span> <span class="kc">False</span>
             <span class="k">else</span> <span class="p">:</span> 
@@ -5803,7 +5803,7 @@ Quand tu parles d'<strong>enchaînement de méthodes</strong>, il s'agit génér
                 <span class="c1">#On lance une bataille uniquement si les 2 joueurs ont un minimum de trois cartes chacun, sinon on arrête le jeu</span>
                 <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cartesj1</span><span class="o">.</span><span class="n">getNb_elements</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cartesj2</span><span class="o">.</span><span class="n">getNb_elements</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="p">:</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">_nb_batailles</span> <span class="o">+=</span> <span class="mi">1</span>
-                    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;   - BATAILLE.&#39;</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s1">'   - BATAILLE.'</span><span class="p">)</span>
                     <span class="c1">#on crée un liste des cartes cachées</span>
                     <span class="n">setJoueur1</span> <span class="o">=</span> <span class="p">[]</span>
                     <span class="n">setJoueur2</span> <span class="o">=</span> <span class="p">[]</span>
@@ -5824,7 +5824,7 @@ Quand tu parles d'<strong>enchaînement de méthodes</strong>, il s'agit génér
                         <span class="bp">self</span><span class="o">.</span><span class="n">_cartesj1</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">setJoueur1</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
                         <span class="bp">self</span><span class="o">.</span><span class="n">_cartesj1</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">setJoueur2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
                         <span class="bp">self</span><span class="o">.</span><span class="n">_cartesj1</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">setJoueur2</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-                        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;   - </span><span class="si">{}</span><span class="s1"> gagne la bataille.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nomjoueur1</span><span class="p">))</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="s1">'   - </span><span class="si">{}</span><span class="s1"> gagne la bataille.'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nomjoueur1</span><span class="p">))</span>
                     <span class="k">else</span> <span class="p">:</span> 
                         <span class="c1">#Le joueur2 a gagné, on ajoute les 2 cartes dans son paquet</span>
                         <span class="bp">self</span><span class="o">.</span><span class="n">_cartesj2</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">carte1</span><span class="p">)</span>
@@ -5833,19 +5833,19 @@ Quand tu parles d'<strong>enchaînement de méthodes</strong>, il s'agit génér
                         <span class="bp">self</span><span class="o">.</span><span class="n">_cartesj2</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">setJoueur1</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
                         <span class="bp">self</span><span class="o">.</span><span class="n">_cartesj2</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">setJoueur2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
                         <span class="bp">self</span><span class="o">.</span><span class="n">_cartesj2</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">setJoueur2</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-                        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;   - </span><span class="si">{}</span><span class="s1"> gagne la bataille.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nomjoueur2</span><span class="p">))</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="s1">'   - </span><span class="si">{}</span><span class="s1"> gagne la bataille.'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nomjoueur2</span><span class="p">))</span>
                 <span class="k">else</span> <span class="p">:</span> <span class="n">poursuivre</span> <span class="o">=</span> <span class="kc">False</span>
 
             <span class="k">elif</span> <span class="n">carte1</span><span class="o">.</span><span class="n">estSuperieure</span><span class="p">(</span><span class="n">carte2</span><span class="p">):</span>
                 <span class="c1">#Le joueur1 a gagné, on ajoute les 2 cartes dans son paquet</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">_cartesj1</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">carte1</span><span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">_cartesj1</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">carte2</span><span class="p">)</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;   - </span><span class="si">{}</span><span class="s1"> gagne la main.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nomjoueur1</span><span class="p">))</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">'   - </span><span class="si">{}</span><span class="s1"> gagne la main.'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nomjoueur1</span><span class="p">))</span>
             <span class="k">else</span> <span class="p">:</span> 
                 <span class="c1">#Le joueur2 a gagné, on ajoute les 2 cartes dans son paquet</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">_cartesj2</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">carte1</span><span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">_cartesj2</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">carte2</span><span class="p">)</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;   - </span><span class="si">{}</span><span class="s1"> gagne la main.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nomjoueur2</span><span class="p">))</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">'   - </span><span class="si">{}</span><span class="s1"> gagne la main.'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nomjoueur2</span><span class="p">))</span>
 
         <span class="c1">#Determine le gagnant</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cartesj1</span><span class="o">.</span><span class="n">getNb_elements</span><span class="p">()</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cartesj2</span><span class="o">.</span><span class="n">getNb_elements</span><span class="p">():</span>
@@ -6009,13 +6009,15 @@ Quand tu parles d'<strong>enchaînement de méthodes</strong>, il s'agit génér
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="../../../xtra/javascript/mathjax.js"></script>
       

@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -4674,11 +4674,11 @@
 </ol>
 <h3 id="creation-des-tables">Création des tables<a class="headerlink" href="#creation-des-tables" title="Permanent link">⚓︎</a></h3>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">sqlite3</span>
-<span class="n">bdd</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;dis_db&quot;</span><span class="p">)</span>
+<span class="n">bdd</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">"dis_db"</span><span class="p">)</span>
 <span class="n">curseur</span> <span class="o">=</span> <span class="n">bdd</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
 </code></pre></div>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># Creation table Communes</span>
-<span class="n">requete</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="n">requete</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">CREATE TABLE Communes</span>
 <span class="s2">(</span>
 <span class="s2">    IdCommune INTEGER  PRIMARY KEY,</span>
@@ -4688,7 +4688,7 @@
 <span class="s2">    cdreseau TEXT,</span>
 <span class="s2">    nomreseau TEXT,</span>
 <span class="s2">    debutalim DATE</span>
-<span class="s2">);&quot;&quot;&quot;</span>
+<span class="s2">);"""</span>
 <span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">requete</span><span class="p">)</span>
 
 <span class="c1"># Creation des tables Prelevements et Resultats</span>
@@ -4698,11 +4698,11 @@
 <span class="n">bdd</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
 </code></pre></div>
 <h3 id="alimentation-de-la-base-de-donnees">Alimentation de la base de données<a class="headerlink" href="#alimentation-de-la-base-de-donnees" title="Permanent link">⚓︎</a></h3>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># Exemple d&#39;import d&#39;un fichier CSV dans une BDD</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># Exemple d'import d'un fichier CSV dans une BDD</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;DIS_COM_UDI_2020.txt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'DIS_COM_UDI_2020.txt'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
     <span class="n">nb_lignes</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">lignes</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">csvfile</span><span class="p">)</span>
     <span class="n">entete</span> <span class="o">=</span> <span class="kc">True</span>
@@ -4711,27 +4711,27 @@
             <span class="n">entete</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">nb_lignes</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="n">requete</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+            <span class="n">requete</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span>
 <span class="s2">            INSERT INTO Communes</span>
 <span class="s2">                (inseecommune,nomcommune,quartier,cdreseau,nomreseau,debutalim)</span>
 <span class="s2">            VALUES</span>
 <span class="s2">                (?, ?, ?, ?, ?, ?)</span>
-<span class="s2">            &quot;&quot;&quot;</span>
+<span class="s2">            """</span>
             <span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">requete</span><span class="p">,</span> <span class="n">l</span><span class="p">)</span>
     <span class="n">bdd</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">nb_lignes</span><span class="si">}</span><span class="s2"> enregistrements créés&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">nb_lignes</span><span class="si">}</span><span class="s2"> enregistrements créés"</span><span class="p">)</span>
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">A faire</p>
 <p>Procédez de même pour le fichier prélèvement</p>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT COUNT(*) FROM Prelevements;&quot;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"SELECT COUNT(*) FROM Prelevements;"</span><span class="p">)</span>
 <span class="k">assert</span> <span class="n">curseur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">126730</span>
 </code></pre></div>
 </div>
 <div class="admonition example">
 <p class="admonition-title">A faire</p>
 <p>Procédez de même pour le fichier Resultat</p>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT COUNT(*) FROM Resultats;&quot;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"SELECT COUNT(*) FROM Resultats;"</span><span class="p">)</span>
 <span class="k">assert</span> <span class="n">curseur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3683342</span>
 </code></pre></div>
 </div>
@@ -4760,11 +4760,11 @@
 </ul>
 </li>
 </ul>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">assert</span> <span class="s2">&quot;CAEN&quot;</span> <span class="ow">in</span> <span class="n">liste_communes</span><span class="p">(</span><span class="n">curseur</span><span class="p">,</span> <span class="mi">14</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">assert</span> <span class="s2">"CAEN"</span> <span class="ow">in</span> <span class="n">liste_communes</span><span class="p">(</span><span class="n">curseur</span><span class="p">,</span> <span class="mi">14</span><span class="p">)</span>
 </code></pre></div>
-<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">anomalies</span><span class="p">(</span><span class="n">curseur</span><span class="p">,</span> <span class="s2">&quot;HEROUVILLE-SAINT-CLAIR&quot;</span><span class="p">)</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">anomalies</span><span class="p">(</span><span class="n">curseur</span><span class="p">,</span> <span class="s2">"HEROUVILLE-SAINT-CLAIR"</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">resultats</span><span class="p">(</span><span class="n">curseur</span><span class="p">,</span> <span class="s2">&quot;01400207768&quot;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">resultats</span><span class="p">(</span><span class="n">curseur</span><span class="p">,</span> <span class="s2">"01400207768"</span><span class="p">)</span>
 </code></pre></div></p>
 <h3 id="amusez-vous">Amusez vous<a class="headerlink" href="#amusez-vous" title="Permanent link">⚓︎</a></h3>
 <p>Interrogez la base de données pour rechercher des anomalies dans votre commune ou les environs, et récupérez les résultats détaillés des analyses en cas de problème pour identifier la source de l'anomalie.</p>
@@ -4925,13 +4925,15 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="../../../xtra/javascript/mathjax.js"></script>
       

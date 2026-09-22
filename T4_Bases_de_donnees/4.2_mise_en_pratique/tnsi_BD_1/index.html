@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -4917,8 +4917,8 @@ LIVRE (<u>idLivre</u> int, titre str, #idAuteur int, #idTheme int)
 <span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Langues</span><span class="w"> </span>
 <span class="w">    </span><span class="p">(</span><span class="n">Langue</span><span class="p">)</span>
 <span class="k">VALUES</span>
-<span class="w">    </span><span class="p">(</span><span class="ss">&quot;Anglais&quot;</span><span class="p">),</span>
-<span class="w">    </span><span class="p">(</span><span class="ss">&quot;Français&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">(</span><span class="ss">"Anglais"</span><span class="p">),</span>
+<span class="w">    </span><span class="p">(</span><span class="ss">"Français"</span><span class="p">);</span>
 </code></pre></div>
 <h3 id="quelques-explications_1">Quelques explications :<a class="headerlink" href="#quelques-explications_1" title="Permanent link">⚓︎</a></h3>
 <p>La requête <strong>INSERT</strong> s'utilise ainsi :</p>
@@ -5068,7 +5068,7 @@ LIVRE (<u>idLivre</u> int, titre str, #idAuteur int, #idTheme int)
 
 <span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Auteurs</span><span class="w"> </span><span class="p">(</span><span class="n">idAuteur</span><span class="p">,</span><span class="w"> </span><span class="n">NomAuteur</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span>
 <span class="k">VALUES</span>
-<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Orwell&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Georges&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">"Orwell"</span><span class="p">,</span><span class="w"> </span><span class="ss">"Georges"</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block"></div>
@@ -5283,7 +5283,7 @@ LIVRE (<u>idLivre</u> int, titre str, #idAuteur int, #idTheme int)
 <div class="tabbed-block">
 <p>saisissez la requête pour créer la table <strong>Livres</strong> puis insérer les données dans la table </p>
 <p>Vérifiez votre travail en listant tous les enregistrements de la table <strong>LIVRES</strong> dans la variable <code>resultat</code></p>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">assert</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;1984&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1949</span><span class="p">)</span> <span class="ow">in</span> <span class="n">resultat</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">assert</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">'1984'</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1949</span><span class="p">)</span> <span class="ow">in</span> <span class="n">resultat</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block"></div>
@@ -5320,7 +5320,7 @@ LIVRE (<u>idLivre</u> int, titre str, #idAuteur int, #idTheme int)
 - Une pour créer la table Themes<br />
 - Une pour insérer les données dans la table.</p>
 <p>Vérifiez votre travail en lisant tous les enregistrements de la table <strong>Themes</strong> dans la variable <code>resultat</code></p>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">assert</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Science-fiction&quot;</span><span class="p">)</span> <span class="ow">in</span> <span class="n">resultat</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">assert</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"Science-fiction"</span><span class="p">)</span> <span class="ow">in</span> <span class="n">resultat</span>
 </code></pre></div>
 </div>
 <h3 id="une-table-manquante">Une table manquante !<a class="headerlink" href="#une-table-manquante" title="Permanent link">⚓︎</a></h3>
@@ -5491,13 +5491,15 @@ LIVRE (<u>idLivre</u> int, titre str, #idAuteur int, #idTheme int)
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="../../../xtra/javascript/mathjax.js"></script>
       

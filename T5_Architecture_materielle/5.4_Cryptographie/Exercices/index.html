@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -4772,7 +4772,7 @@
 <span class="normal">6</span>
 <span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">sympy.crypto.crypto</span><span class="w"> </span><span class="kn">import</span> <span class="n">encipher_affine</span>
 
-<span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;RYTVJKGCLJWRTZCVRMVTLEDFULCVHLZWRZKKFLKRMFKIVGCRTV&#39;</span>
+<span class="n">msg</span> <span class="o">=</span> <span class="s1">'RYTVJKGCLJWRTZCVRMVTLEDFULCVHLZWRZKKFLKRMFKIVGCRTV'</span>
 
 <span class="k">for</span> <span class="n">cle</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">26</span><span class="p">):</span>
     <span class="n">phrase</span> <span class="o">=</span> <span class="n">decipher_shift</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">cle</span><span class="p">)</span>
@@ -4804,7 +4804,7 @@
     <span class="k">return</span> <span class="nb">ord</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span> <span class="o">-</span> <span class="mi">65</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">affine</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="n">sol</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">sol</span> <span class="o">=</span> <span class="s2">""</span>
     <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">msg</span><span class="p">:</span>
         <span class="n">rg</span> <span class="o">=</span> <span class="n">rang</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span>
         <span class="n">nv_rg</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">rg</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">%</span> <span class="mi">26</span> <span class="c1">#chiffrement affine</span>
@@ -4831,8 +4831,8 @@
 <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">26</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="n">p</span> <span class="o">=</span> <span class="n">decipher_affine</span><span class="p">(</span><span class="s1">&#39;UCGXLODCMOXPMFMSRJCFQOGTCRSUSXC&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
-            <span class="k">if</span> <span class="s1">&#39;TRAVAIL&#39;</span> <span class="ow">in</span> <span class="n">p</span><span class="p">:</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="n">decipher_affine</span><span class="p">(</span><span class="s1">'UCGXLODCMOXPMFMSRJCFQOGTCRSUSXC'</span><span class="p">,</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
+            <span class="k">if</span> <span class="s1">'TRAVAIL'</span> <span class="ow">in</span> <span class="n">p</span><span class="p">:</span>
                 <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </details>
@@ -4843,7 +4843,7 @@
     <span class="kn">from</span><span class="w"> </span><span class="nn">Crypto.Random</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_random_bytes</span> 
 
     <span class="n">bits</span> <span class="o">=</span> <span class="mi">256</span>
-    <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;en NSI on fait de la crypto&quot;</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="s2">"en NSI on fait de la crypto"</span>
 
     <span class="n">p</span> <span class="o">=</span> <span class="n">Crypto</span><span class="o">.</span><span class="n">Util</span><span class="o">.</span><span class="n">number</span><span class="o">.</span><span class="n">getPrime</span><span class="p">(</span><span class="n">bits</span><span class="p">,</span> <span class="n">randfunc</span><span class="o">=</span><span class="n">get_random_bytes</span><span class="p">)</span>
     <span class="n">q</span> <span class="o">=</span> <span class="n">Crypto</span><span class="o">.</span><span class="n">Util</span><span class="o">.</span><span class="n">number</span><span class="o">.</span><span class="n">getPrime</span><span class="p">(</span><span class="n">bits</span><span class="p">,</span> <span class="n">randfunc</span><span class="o">=</span><span class="n">get_random_bytes</span><span class="p">)</span>
@@ -4852,9 +4852,9 @@
     <span class="n">phi</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">q</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 
     <span class="n">e</span> <span class="o">=</span> <span class="mi">65537</span>  <span class="c1"># 65537 est un nombre premier, donc forcément premier avec phi</span>
-    <span class="n">d</span> <span class="o">=</span> <span class="n">libnum</span><span class="o">.</span><span class="n">invmod</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">phi</span><span class="p">)</span>  <span class="c1"># on calcule l&#39;inverse de e modulo phi</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">libnum</span><span class="o">.</span><span class="n">invmod</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">phi</span><span class="p">)</span>  <span class="c1"># on calcule l'inverse de e modulo phi</span>
 
-    <span class="n">M</span> <span class="o">=</span> <span class="n">bytes_to_long</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+    <span class="n">M</span> <span class="o">=</span> <span class="n">bytes_to_long</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">))</span>
 
     <span class="n">c</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="c1"># M puissance e modulo n</span>
     <span class="n">res</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
@@ -4911,7 +4911,7 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">Crypto.Random</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_random_bytes</span> 
 
 <span class="n">bits</span> <span class="o">=</span> <span class="mi">256</span>
-<span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;en NSI on fait de la crypto&quot;</span>
+<span class="n">msg</span> <span class="o">=</span> <span class="s2">"en NSI on fait de la crypto"</span>
 
 <span class="c1"># p = Crypto.Util.number.getPrime(bits, randfunc=get_random_bytes)</span>
 <span class="c1"># q = Crypto.Util.number.getPrime(bits, randfunc=get_random_bytes)</span>
@@ -4923,9 +4923,9 @@
 <span class="n">phi</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">q</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="n">e</span> <span class="o">=</span> <span class="mi">65537</span>  <span class="c1"># 65537 est un nombre premier, donc forcément premier avec phi</span>
-<span class="n">d</span> <span class="o">=</span> <span class="n">libnum</span><span class="o">.</span><span class="n">invmod</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">phi</span><span class="p">)</span>  <span class="c1"># on calcule l&#39;inverse de e modulo phi</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">libnum</span><span class="o">.</span><span class="n">invmod</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">phi</span><span class="p">)</span>  <span class="c1"># on calcule l'inverse de e modulo phi</span>
 
-<span class="c1"># M = bytes_to_long(msg.encode(&#39;utf-8&#39;))</span>
+<span class="c1"># M = bytes_to_long(msg.encode('utf-8'))</span>
 <span class="c1"># </span>
 <span class="c1"># c = pow(M, e, n) # M puissance e modulo n</span>
 
@@ -4950,15 +4950,15 @@
 <span class="n">privKeyPEM</span> <span class="o">=</span> <span class="n">keyPair</span><span class="o">.</span><span class="n">exportKey</span><span class="p">()</span>
 
 
-<span class="n">msg</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;vive la crypto en NSI !&#39;</span>
+<span class="n">msg</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">'vive la crypto en NSI !'</span>
 <span class="n">encryptor</span> <span class="o">=</span> <span class="n">PKCS1_OAEP</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">pubKey</span><span class="p">)</span>
 <span class="n">encrypted</span> <span class="o">=</span> <span class="n">encryptor</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Encrypted:&quot;</span><span class="p">,</span> <span class="n">binascii</span><span class="o">.</span><span class="n">hexlify</span><span class="p">(</span><span class="n">encrypted</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Encrypted:"</span><span class="p">,</span> <span class="n">binascii</span><span class="o">.</span><span class="n">hexlify</span><span class="p">(</span><span class="n">encrypted</span><span class="p">))</span>
 
 
 <span class="n">decryptor</span> <span class="o">=</span> <span class="n">PKCS1_OAEP</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">keyPair</span><span class="p">)</span>
 <span class="n">decrypted</span> <span class="o">=</span> <span class="n">decryptor</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">encrypted</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Decrypted:&#39;</span><span class="p">,</span> <span class="n">decrypted</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Decrypted:'</span><span class="p">,</span> <span class="n">decrypted</span><span class="p">)</span>
 </code></pre></div>
 </details>
 <h2 id="exercice-5">Exercice 5<a class="headerlink" href="#exercice-5" title="Permanent link">⚓︎</a></h2>
@@ -5161,13 +5161,15 @@ AES, Advanced Encryption Standart, algorithme de chiffrement symétrique</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="../../../xtra/javascript/mathjax.js"></script>
       

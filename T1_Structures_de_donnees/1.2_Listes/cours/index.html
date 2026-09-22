@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -4871,20 +4871,20 @@
 <p class="admonition-title">Une implémentation de la liste chainée des rois de France</p>
 <p>Avec cette implémentation d'une liste chainée sous forme de couples, on pourra donc écrire :</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">Bourbons</span> <span class="o">=</span> <span class="n">ListeChainee</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La liste chainée des rois de la dynastie des Bourbons est vide au départ : &quot;</span><span class="p">,</span> <span class="n">Bourbons</span><span class="p">)</span>  
-<span class="n">Bourbons</span> <span class="o">=</span> <span class="n">Bourbons</span><span class="o">.</span><span class="n">inserer_en_tete</span><span class="p">(</span><span class="s2">&quot;Louis XVI&quot;</span><span class="p">)</span>  
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La liste chainée des rois de la dynastie des Bourbons au premier ajout : &quot;</span><span class="p">,</span> <span class="n">Bourbons</span><span class="p">)</span>  
-<span class="n">Bourbons</span> <span class="o">=</span> <span class="n">Bourbons</span><span class="o">.</span><span class="n">inserer_en_tete</span><span class="p">(</span><span class="s2">&quot;Louis XV&quot;</span><span class="p">)</span>
-<span class="n">Bourbons</span> <span class="o">=</span> <span class="n">Bourbons</span><span class="o">.</span><span class="n">inserer_en_tete</span><span class="p">(</span><span class="s2">&quot;Louis XIV&quot;</span><span class="p">)</span>
-<span class="n">Bourbons</span> <span class="o">=</span> <span class="n">Bourbons</span><span class="o">.</span><span class="n">inserer_en_tete</span><span class="p">(</span><span class="s2">&quot;Louis XIII&quot;</span><span class="p">)</span>
-<span class="n">Bourbons</span> <span class="o">=</span> <span class="n">Bourbons</span><span class="o">.</span><span class="n">inserer_en_tete</span><span class="p">(</span><span class="s2">&quot;Henri IV&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La liste chainée des rois de la dynastie des Bourbons : &quot;</span><span class="p">,</span> <span class="n">Bourbons</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"La liste chainée des rois de la dynastie des Bourbons est vide au départ : "</span><span class="p">,</span> <span class="n">Bourbons</span><span class="p">)</span>  
+<span class="n">Bourbons</span> <span class="o">=</span> <span class="n">Bourbons</span><span class="o">.</span><span class="n">inserer_en_tete</span><span class="p">(</span><span class="s2">"Louis XVI"</span><span class="p">)</span>  
+<span class="nb">print</span><span class="p">(</span><span class="s2">"La liste chainée des rois de la dynastie des Bourbons au premier ajout : "</span><span class="p">,</span> <span class="n">Bourbons</span><span class="p">)</span>  
+<span class="n">Bourbons</span> <span class="o">=</span> <span class="n">Bourbons</span><span class="o">.</span><span class="n">inserer_en_tete</span><span class="p">(</span><span class="s2">"Louis XV"</span><span class="p">)</span>
+<span class="n">Bourbons</span> <span class="o">=</span> <span class="n">Bourbons</span><span class="o">.</span><span class="n">inserer_en_tete</span><span class="p">(</span><span class="s2">"Louis XIV"</span><span class="p">)</span>
+<span class="n">Bourbons</span> <span class="o">=</span> <span class="n">Bourbons</span><span class="o">.</span><span class="n">inserer_en_tete</span><span class="p">(</span><span class="s2">"Louis XIII"</span><span class="p">)</span>
+<span class="n">Bourbons</span> <span class="o">=</span> <span class="n">Bourbons</span><span class="o">.</span><span class="n">inserer_en_tete</span><span class="p">(</span><span class="s2">"Henri IV"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"La liste chainée des rois de la dynastie des Bourbons : "</span><span class="p">,</span> <span class="n">Bourbons</span><span class="p">)</span>
 <span class="n">roi</span> <span class="o">=</span> <span class="n">Bourbons</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La tête de la liste chaine : &quot;</span><span class="p">,</span> <span class="n">roi</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"La tête de la liste chaine : "</span><span class="p">,</span> <span class="n">roi</span><span class="p">)</span>
 <span class="n">queLesLouis</span> <span class="o">=</span> <span class="n">Bourbons</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Après la tête de la liste chainée, il y a &quot;</span><span class="p">,</span> <span class="n">queLesLouis</span><span class="p">)</span>
-<span class="n">Bourbons</span> <span class="o">=</span> <span class="n">Bourbons</span><span class="o">.</span><span class="n">inserer_en_tete</span><span class="p">(</span><span class="s2">&quot;Henri III&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;On a rajouté un roi en tête de la chaine  : &quot;</span><span class="p">,</span> <span class="n">Bourbons</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Après la tête de la liste chainée, il y a "</span><span class="p">,</span> <span class="n">queLesLouis</span><span class="p">)</span>
+<span class="n">Bourbons</span> <span class="o">=</span> <span class="n">Bourbons</span><span class="o">.</span><span class="n">inserer_en_tete</span><span class="p">(</span><span class="s2">"Henri III"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"On a rajouté un roi en tête de la chaine  : "</span><span class="p">,</span> <span class="n">Bourbons</span><span class="p">)</span>
 </code></pre></div>
 <p>Voici le contenu visuel du <em>tuple</em> <code>Bourbons</code> (le <code>0</code> indique le contenu de la case d'indice 0 du tuple et le <code>1</code> le contenu de la case d'indice 1).</p>
 <p><img alt="" class="center" src="../data/schema_chaine_bourbons.png" width="100%" /></p>
@@ -4898,14 +4898,14 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">lst</span> <span class="o">=</span> <span class="n">data</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">inserer_en_tete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">donnée</span> <span class="p">)</span> <span class="p">:</span>
-        <span class="c1"># on crée un nouveau couple (donnée, L) et on le renvoie sous forme d&#39;une nouvelle liste chaînée</span>
+        <span class="c1"># on crée un nouveau couple (donnée, L) et on le renvoie sous forme d'une nouvelle liste chaînée</span>
         <span class="k">return</span> <span class="n">ListeChainee</span><span class="p">(</span> <span class="p">(</span><span class="n">donnée</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">)</span> <span class="p">)</span> 
 
     <span class="k">def</span><span class="w"> </span><span class="nf">head</span><span class="p">(</span> <span class="bp">self</span> <span class="p">)</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># c&#39;est ce qu&#39;il y a en position 0 du couple L et donc la tête</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># c'est ce qu'il y a en position 0 du couple L et donc la tête</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">tail</span><span class="p">(</span> <span class="bp">self</span> <span class="p">)</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># c&#39;est ce qu&#39;il y a en position 1 du couple L et donc la queue</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># c'est ce qu'il y a en position 1 du couple L et donc la queue</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">est_vide</span><span class="p">(</span> <span class="bp">self</span> <span class="p">)</span> <span class="p">:</span>
         <span class="k">return</span> <span class="nb">len</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">lst</span> <span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
@@ -4926,10 +4926,10 @@
 <li>
 <p>Réponse :
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">chaineAlimentaire</span> <span class="o">=</span> <span class="n">creer_liste_vide</span><span class="p">()</span>
-<span class="n">inserer_en_tete</span><span class="p">(</span><span class="n">chaineAlimentaire</span><span class="p">,</span> <span class="s2">&quot;owl&quot;</span><span class="p">)</span>
-<span class="n">inserer_en_tete</span><span class="p">(</span><span class="n">chaineAlimentaire</span><span class="p">,</span> <span class="s2">&quot;snake&quot;</span><span class="p">)</span>
-<span class="n">inserer_en_tete</span><span class="p">(</span><span class="n">chaineAlimentaire</span><span class="p">,</span> <span class="s2">&quot;mouse&quot;</span><span class="p">)</span>
-<span class="n">inserer_en_tete</span><span class="p">(</span><span class="n">chaineAlimentaire</span><span class="p">,</span> <span class="s2">&quot;corn&quot;</span><span class="p">)</span>
+<span class="n">inserer_en_tete</span><span class="p">(</span><span class="n">chaineAlimentaire</span><span class="p">,</span> <span class="s2">"owl"</span><span class="p">)</span>
+<span class="n">inserer_en_tete</span><span class="p">(</span><span class="n">chaineAlimentaire</span><span class="p">,</span> <span class="s2">"snake"</span><span class="p">)</span>
+<span class="n">inserer_en_tete</span><span class="p">(</span><span class="n">chaineAlimentaire</span><span class="p">,</span> <span class="s2">"mouse"</span><span class="p">)</span>
+<span class="n">inserer_en_tete</span><span class="p">(</span><span class="n">chaineAlimentaire</span><span class="p">,</span> <span class="s2">"corn"</span><span class="p">)</span>
 </code></pre></div></p>
 </li>
 <li>
@@ -4956,11 +4956,11 @@
 <div class="admonition done">
 <p class="admonition-title">Exemple avec la liste chainée des rois de France</p>
 <p>On peut alors créer (<em>"instancier"</em>) les objets suivants :
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">roi5</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;Louis XVI&quot;</span><span class="p">)</span> <span class="c1"># pas besoin de préciser le 2ème argument, c&#39;est None par défaut</span>
-<span class="n">roi4</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;Louis XV&quot;</span><span class="p">,</span> <span class="n">roi5</span><span class="p">)</span>
-<span class="n">roi3</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;Louis XIV&quot;</span><span class="p">,</span> <span class="n">roi4</span><span class="p">)</span>
-<span class="n">roi2</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;Louis XIII&quot;</span><span class="p">,</span> <span class="n">roi3</span><span class="p">)</span>
-<span class="n">roi1</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;Henri IV&quot;</span><span class="p">,</span> <span class="n">roi2</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">roi5</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">"Louis XVI"</span><span class="p">)</span> <span class="c1"># pas besoin de préciser le 2ème argument, c'est None par défaut</span>
+<span class="n">roi4</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">"Louis XV"</span><span class="p">,</span> <span class="n">roi5</span><span class="p">)</span>
+<span class="n">roi3</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">"Louis XIV"</span><span class="p">,</span> <span class="n">roi4</span><span class="p">)</span>
+<span class="n">roi2</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">"Louis XIII"</span><span class="p">,</span> <span class="n">roi3</span><span class="p">)</span>
+<span class="n">roi1</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">"Henri IV"</span><span class="p">,</span> <span class="n">roi2</span><span class="p">)</span>
 <span class="n">Bourbons</span> <span class="o">=</span> <span class="n">roi1</span> <span class="c1"># on tient la liste par son premier maillon</span>
 </code></pre></div></p>
 <p>Puis on peut utiliser ainsi la liste chainée :</p>
@@ -4969,18 +4969,18 @@
     <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="o">=</span> <span class="n">data</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">tail</span> <span class="o">=</span> <span class="n">suivant</span>
 
-<span class="n">roi5</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;Louis XVI&quot;</span><span class="p">)</span> <span class="c1"># pas besoin de préciser le 2ème argument, c&#39;est None par défaut</span>
-<span class="n">roi4</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;Louis XV&quot;</span><span class="p">,</span> <span class="n">roi5</span><span class="p">)</span>
-<span class="n">roi3</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;Louis XIV&quot;</span><span class="p">,</span> <span class="n">roi4</span><span class="p">)</span>
-<span class="n">roi2</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;Louis XIII&quot;</span><span class="p">,</span> <span class="n">roi3</span><span class="p">)</span>
-<span class="n">roi1</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;Henri IV&quot;</span><span class="p">,</span> <span class="n">roi2</span><span class="p">)</span>
+<span class="n">roi5</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">"Louis XVI"</span><span class="p">)</span> <span class="c1"># pas besoin de préciser le 2ème argument, c'est None par défaut</span>
+<span class="n">roi4</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">"Louis XV"</span><span class="p">,</span> <span class="n">roi5</span><span class="p">)</span>
+<span class="n">roi3</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">"Louis XIV"</span><span class="p">,</span> <span class="n">roi4</span><span class="p">)</span>
+<span class="n">roi2</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">"Louis XIII"</span><span class="p">,</span> <span class="n">roi3</span><span class="p">)</span>
+<span class="n">roi1</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">"Henri IV"</span><span class="p">,</span> <span class="n">roi2</span><span class="p">)</span>
 <span class="n">Bourbons</span> <span class="o">=</span> <span class="n">roi1</span> <span class="c1"># on tient la liste par son premier maillon</span>
-<span class="c1"># exemple d&#39;utilisation</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La tête de la liste chainée : &quot;</span><span class="p">,</span> <span class="n">Bourbons</span><span class="o">.</span><span class="n">head</span> <span class="p">)</span>
+<span class="c1"># exemple d'utilisation</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"La tête de la liste chainée : "</span><span class="p">,</span> <span class="n">Bourbons</span><span class="o">.</span><span class="n">head</span> <span class="p">)</span>
 <span class="n">queLesLouis</span> <span class="o">=</span> <span class="n">Bourbons</span><span class="o">.</span><span class="n">tail</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Après la tête de la liste chainée, on trouve &quot;</span><span class="p">,</span> <span class="n">queLesLouis</span><span class="o">.</span><span class="n">head</span> <span class="p">)</span>
-<span class="n">Bourbons</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;Henri III&quot;</span><span class="p">,</span> <span class="n">Bourbons</span><span class="p">)</span> <span class="c1"># insertion en tête de la liste chainée</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;On rajoute un roi à notre chaine : en tête, on a maintenant &quot;</span><span class="p">,</span> <span class="n">Bourbons</span><span class="o">.</span><span class="n">head</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Après la tête de la liste chainée, on trouve "</span><span class="p">,</span> <span class="n">queLesLouis</span><span class="o">.</span><span class="n">head</span> <span class="p">)</span>
+<span class="n">Bourbons</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">"Henri III"</span><span class="p">,</span> <span class="n">Bourbons</span><span class="p">)</span> <span class="c1"># insertion en tête de la liste chainée</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"On rajoute un roi à notre chaine : en tête, on a maintenant "</span><span class="p">,</span> <span class="n">Bourbons</span><span class="o">.</span><span class="n">head</span> <span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="admonition info">
@@ -4995,10 +4995,10 @@
 <details class="danger">
 <summary>Solution</summary>
 <p>On écrit le code suivant :</p>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">hibou</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;owl&quot;</span><span class="p">)</span>
-<span class="n">serpent</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;snake&quot;</span><span class="p">,</span> <span class="n">hibou</span><span class="p">)</span>
-<span class="n">souris</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;mouse&quot;</span><span class="p">,</span> <span class="n">serpent</span><span class="p">)</span>
-<span class="n">chaineAlimentaire</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;corn&quot;</span><span class="p">,</span><span class="n">souris</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">hibou</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">"owl"</span><span class="p">)</span>
+<span class="n">serpent</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">"snake"</span><span class="p">,</span> <span class="n">hibou</span><span class="p">)</span>
+<span class="n">souris</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">"mouse"</span><span class="p">,</span> <span class="n">serpent</span><span class="p">)</span>
+<span class="n">chaineAlimentaire</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">"corn"</span><span class="p">,</span><span class="n">souris</span><span class="p">)</span>
 </code></pre></div>
 </details>
 <h2 id="6-et-les-listes-de-python">6. Et les listes de Python ???<a class="headerlink" href="#6-et-les-listes-de-python" title="Permanent link">⚓︎</a></h2>
@@ -5164,13 +5164,15 @@ Néanmoins, l'implémentation qui a été choisie par les concepteurs de Python 
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="../../../xtra/javascript/mathjax.js"></script>
       

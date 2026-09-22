@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -4869,13 +4869,13 @@
 <p>Exemples de palindromes : "kayak", "laval", "mon nom", "non", "ressasser", "serres"</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="sd">&#39;&#39;&#39;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="sd">'''</span>
 <span class="sd">La première étape est de définir notre scénario de base, qui vérifiera si la chaîne est égale à 0 et, </span>
 <span class="sd">si oui, retourne la chaîne elle-même.</span>
 
-<span class="sd">La deuxième étape est d&#39;appeler de manière récursif la fonction d&#39;inversion </span>
-<span class="sd">afin d&#39;extraire le premier caractère et ensuite l&#39;ajouter à la fin de la chaîne.</span>
-<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">La deuxième étape est d'appeler de manière récursif la fonction d'inversion </span>
+<span class="sd">afin d'extraire le premier caractère et ensuite l'ajouter à la fin de la chaîne.</span>
+<span class="sd">'''</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">inverse</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span> <span class="p">:</span>
@@ -4883,19 +4883,19 @@
     <span class="k">else</span> <span class="p">:</span>
         <span class="k">return</span> <span class="n">inverse</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span> <span class="o">+</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">inverse</span><span class="p">(</span><span class="s1">&#39;toto&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">inverse</span><span class="p">(</span><span class="s1">'toto'</span><span class="p">))</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">isPalin</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="p">:</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">s</span> <span class="o">==</span> <span class="n">inverse</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">isPalin</span><span class="p">(</span><span class="s1">&#39;kayak&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">isPalin</span><span class="p">(</span><span class="s1">'kayak'</span><span class="p">))</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">palindrome</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="p">:</span> 
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="p">:</span>
         <span class="k">return</span> <span class="kc">True</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">s</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="ow">and</span> <span class="n">palindrome</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">palindrome</span><span class="p">(</span><span class="s1">&#39;kayak&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">palindrome</span><span class="p">(</span><span class="s1">'kayak'</span><span class="p">))</span>
 </code></pre></div>
 </div>
 </div>
@@ -4995,7 +4995,7 @@
     <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
     <span class="n">t</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;temps de vol :&#39;</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'temps de vol :'</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
         <span class="k">return</span> <span class="kc">None</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">syracuse</span><span class="p">(</span><span class="n">n</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
@@ -5177,19 +5177,19 @@ Le but est de faire passer toutes les assiettes de A vers C, sachant qu'une assi
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">hanoi</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">inter</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot; n : nombre d&#39;assiettes dans la pile</span>
-<span class="sd">    # depart : la pile de départ(&quot;A&quot;, &quot;B&quot; ou &quot;C&quot;)</span>
-<span class="sd">    # inter : la pile intermédaire(&quot;A&quot;, &quot;B&quot; ou &quot;C&quot;)</span>
-<span class="sd">    # arrivee : la pile d&#39;arrivée (&quot;A&quot;, &quot;B&quot; ou &quot;C&quot;) &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">""" n : nombre d'assiettes dans la pile</span>
+<span class="sd">    # depart : la pile de départ("A", "B" ou "C")</span>
+<span class="sd">    # inter : la pile intermédaire("A", "B" ou "C")</span>
+<span class="sd">    # arrivee : la pile d'arrivée ("A", "B" ou "C") """</span>
 
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">depart</span> <span class="o">+</span> <span class="s2">&quot; vers &quot;</span> <span class="o">+</span> <span class="n">arrivee</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">depart</span> <span class="o">+</span> <span class="s2">" vers "</span> <span class="o">+</span> <span class="n">arrivee</span><span class="p">)</span>
     <span class="k">else</span> <span class="p">:</span>
         <span class="n">hanoi</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">,</span> <span class="n">inter</span><span class="p">)</span> 
-        <span class="nb">print</span><span class="p">(</span><span class="n">depart</span> <span class="o">+</span> <span class="s2">&quot; vers &quot;</span> <span class="o">+</span> <span class="n">arrivee</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">depart</span> <span class="o">+</span> <span class="s2">" vers "</span> <span class="o">+</span> <span class="n">arrivee</span><span class="p">)</span>
         <span class="n">hanoi</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">inter</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">)</span>
 
-<span class="n">hanoi</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">)</span>
+<span class="n">hanoi</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s2">"A"</span><span class="p">,</span> <span class="s2">"B"</span><span class="p">,</span> <span class="s2">"C"</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
@@ -5418,13 +5418,15 @@ Le but est de faire passer toutes les assiettes de A vers C, sachant qu'une assi
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="../../../xtra/javascript/mathjax.js"></script>
       

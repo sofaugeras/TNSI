@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -4831,12 +4831,12 @@ c2 renvoie <code>Lieutenant → Capitaine → Colonel → Géneral</code></p>
         <span class="bp">self</span><span class="o">.</span><span class="n">tail</span> <span class="o">=</span> <span class="n">suivant</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">()</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
-<span class="n">roi5</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;Louis XVI&quot;</span><span class="p">)</span> <span class="c1"># pas besoin de préciser le 2ème argument, c&#39;est None par défaut</span>
-<span class="n">roi4</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;Louis XV&quot;</span><span class="p">,</span> <span class="n">roi5</span><span class="p">)</span>
-<span class="n">roi3</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;Louis XIV&quot;</span><span class="p">,</span> <span class="n">roi4</span><span class="p">)</span>
-<span class="n">roi2</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;Louis XIII&quot;</span><span class="p">,</span> <span class="n">roi3</span><span class="p">)</span>
-<span class="n">roi1</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;Henri IV&quot;</span><span class="p">,</span> <span class="n">roi2</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s2">""</span>
+<span class="n">roi5</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">"Louis XVI"</span><span class="p">)</span> <span class="c1"># pas besoin de préciser le 2ème argument, c'est None par défaut</span>
+<span class="n">roi4</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">"Louis XV"</span><span class="p">,</span> <span class="n">roi5</span><span class="p">)</span>
+<span class="n">roi3</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">"Louis XIV"</span><span class="p">,</span> <span class="n">roi4</span><span class="p">)</span>
+<span class="n">roi2</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">"Louis XIII"</span><span class="p">,</span> <span class="n">roi3</span><span class="p">)</span>
+<span class="n">roi1</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">"Henri IV"</span><span class="p">,</span> <span class="n">roi2</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">roi1</span><span class="p">)</span>
 </code></pre></div>
 👉 Complétez la redéfinition de la fonction print pour afficher une liste chainée <br />
@@ -4853,54 +4853,54 @@ exemple : Henri IV → Louis XIII → Louis XIV → Louis XV → Louis XVI</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">tail</span> <span class="o">=</span> <span class="n">suivant</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Affiche la liste chaînée depuis ce maillon&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Affiche la liste chaînée depuis ce maillon"""</span>
         <span class="n">courant</span> <span class="o">=</span> <span class="bp">self</span>
-        <span class="n">chaine</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="n">chaine</span> <span class="o">=</span> <span class="s2">""</span>
         <span class="k">while</span> <span class="n">courant</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">chaine</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">courant</span><span class="o">.</span><span class="n">head</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">courant</span><span class="o">.</span><span class="n">tail</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="n">chaine</span> <span class="o">+=</span> <span class="s2">&quot; → &quot;</span>
+                <span class="n">chaine</span> <span class="o">+=</span> <span class="s2">" → "</span>
             <span class="n">courant</span> <span class="o">=</span> <span class="n">courant</span><span class="o">.</span><span class="n">tail</span>
         <span class="k">return</span> <span class="n">chaine</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">insere</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Insère un nouveau maillon avec la donnée data au début de la liste chaînée&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Insère un nouveau maillon avec la donnée data au début de la liste chaînée"""</span>
         <span class="k">return</span> <span class="n">Maillon</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span> <span class="n">s</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">head</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Renvoie la donnée du maillon courant&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Renvoie la donnée du maillon courant"""</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">tail</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Renvoie le maillon suivant&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Renvoie le maillon suivant"""</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">tail</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">est_vide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Renvoie True si la liste chaînée est vide, False sinon&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Renvoie True si la liste chaînée est vide, False sinon"""</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">tail</span> <span class="ow">is</span> <span class="kc">None</span>
 </code></pre></div>
 </details>
 <p>👉 Ecrire le code d'une fonction <code>renverserListeChainée(maListe)</code> qui prend en paramètre une <strong><em>liste chainée</em></strong> et qui renvoie une autre liste chainée correspondant au parcours dans le sens inverse de <code>maListe</code>.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># Quelques tests </span>
 <span class="c1">#Création de la chaine Grade : `Général → Colonel → Capitaine → Lieutenant → Sergent → Soldat`.</span>
-<span class="n">soldat</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;Soldat&quot;</span><span class="p">)</span>
-<span class="n">sergent</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;Sergent&quot;</span><span class="p">,</span> <span class="n">soldat</span><span class="p">)</span>
-<span class="n">lieutenant</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;Lieutenant&quot;</span><span class="p">,</span> <span class="n">sergent</span><span class="p">)</span>
-<span class="n">capitaine</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;Capitaine&quot;</span><span class="p">,</span> <span class="n">lieutenant</span><span class="p">)</span>
-<span class="n">colonel</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;Colonel&quot;</span><span class="p">,</span> <span class="n">capitaine</span><span class="p">)</span>
-<span class="n">general</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;Général&quot;</span><span class="p">,</span> <span class="n">colonel</span><span class="p">)</span>
+<span class="n">soldat</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">"Soldat"</span><span class="p">)</span>
+<span class="n">sergent</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">"Sergent"</span><span class="p">,</span> <span class="n">soldat</span><span class="p">)</span>
+<span class="n">lieutenant</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">"Lieutenant"</span><span class="p">,</span> <span class="n">sergent</span><span class="p">)</span>
+<span class="n">capitaine</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">"Capitaine"</span><span class="p">,</span> <span class="n">lieutenant</span><span class="p">)</span>
+<span class="n">colonel</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">"Colonel"</span><span class="p">,</span> <span class="n">capitaine</span><span class="p">)</span>
+<span class="n">general</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">"Général"</span><span class="p">,</span> <span class="n">colonel</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">general</span><span class="p">)</span>  <span class="c1"># Affiche : Général → Colonel → Capitaine → Lieutenant → Sergent → Soldat</span>
-<span class="c1">#Insertion d&#39;un nouveau maillon au début de la liste chaînée</span>
-<span class="n">Maréchal</span> <span class="o">=</span> <span class="n">general</span><span class="o">.</span><span class="n">insere</span><span class="p">(</span><span class="s2">&quot;Maréchal&quot;</span><span class="p">)</span>
+<span class="c1">#Insertion d'un nouveau maillon au début de la liste chaînée</span>
+<span class="n">Maréchal</span> <span class="o">=</span> <span class="n">general</span><span class="o">.</span><span class="n">insere</span><span class="p">(</span><span class="s2">"Maréchal"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">Maréchal</span><span class="p">)</span>  <span class="c1"># Affiche : Maréchal → Général → Colonel → Capitaine → Lieutenant → Sergent → Soldat</span>
 
 <span class="c1">#ou autrement avec la méthode insere</span>
-<span class="n">soldat</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">&quot;Soldat&quot;</span><span class="p">)</span>
-<span class="n">sergent</span> <span class="o">=</span> <span class="n">soldat</span><span class="o">.</span><span class="n">insere</span><span class="p">(</span><span class="s2">&quot;Sergent&quot;</span><span class="p">)</span>
-<span class="n">lieutenant</span> <span class="o">=</span> <span class="n">sergent</span><span class="o">.</span><span class="n">insere</span><span class="p">(</span><span class="s2">&quot;Lieutenant&quot;</span><span class="p">)</span>
-<span class="n">capitaine</span> <span class="o">=</span> <span class="n">lieutenant</span><span class="o">.</span><span class="n">insere</span><span class="p">(</span><span class="s2">&quot;Capitaine&quot;</span><span class="p">)</span>
-<span class="n">colonel</span> <span class="o">=</span> <span class="n">capitaine</span><span class="o">.</span><span class="n">insere</span><span class="p">(</span><span class="s2">&quot;Colonel&quot;</span><span class="p">)</span>
-<span class="n">general</span> <span class="o">=</span> <span class="n">colonel</span><span class="o">.</span><span class="n">insere</span><span class="p">(</span><span class="s2">&quot;Général&quot;</span><span class="p">)</span>
+<span class="n">soldat</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="s2">"Soldat"</span><span class="p">)</span>
+<span class="n">sergent</span> <span class="o">=</span> <span class="n">soldat</span><span class="o">.</span><span class="n">insere</span><span class="p">(</span><span class="s2">"Sergent"</span><span class="p">)</span>
+<span class="n">lieutenant</span> <span class="o">=</span> <span class="n">sergent</span><span class="o">.</span><span class="n">insere</span><span class="p">(</span><span class="s2">"Lieutenant"</span><span class="p">)</span>
+<span class="n">capitaine</span> <span class="o">=</span> <span class="n">lieutenant</span><span class="o">.</span><span class="n">insere</span><span class="p">(</span><span class="s2">"Capitaine"</span><span class="p">)</span>
+<span class="n">colonel</span> <span class="o">=</span> <span class="n">capitaine</span><span class="o">.</span><span class="n">insere</span><span class="p">(</span><span class="s2">"Colonel"</span><span class="p">)</span>
+<span class="n">general</span> <span class="o">=</span> <span class="n">colonel</span><span class="o">.</span><span class="n">insere</span><span class="p">(</span><span class="s2">"Général"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">general</span><span class="p">)</span>  <span class="c1"># Affiche : Général → Colonel → Capitaine → Lieutenant → Sergent → Soldat</span>
 
 <span class="n">general_renverse</span> <span class="o">=</span> <span class="n">general</span><span class="o">.</span><span class="n">renverse</span><span class="p">()</span>
@@ -4909,9 +4909,9 @@ exemple : Henri IV → Louis XIII → Louis XIV → Louis XV → Louis XVI</p>
 <details class="question">
 <summary>Correction</summary>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code>    <span class="k">def</span><span class="w"> </span><span class="nf">renverse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Renvoie une nouvelle liste chaînée qui est l&#39;inverse de la liste courante&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Renvoie une nouvelle liste chaînée qui est l'inverse de la liste courante"""</span>
     <span class="n">courant</span> <span class="o">=</span> <span class="bp">self</span>
-    <span class="c1"># On crée une nouvelle liste chaînée vide pour y ajouter les maillons dans l&#39;ordre inverse</span>
+    <span class="c1"># On crée une nouvelle liste chaînée vide pour y ajouter les maillons dans l'ordre inverse</span>
     <span class="n">chaineRenversee</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="c1">#On parcourt la liste chaînée courante et on ajoute chaque maillon au début de la nouvelle liste</span>
     <span class="k">while</span> <span class="n">courant</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -4919,7 +4919,7 @@ exemple : Henri IV → Louis XIII → Louis XIV → Louis XV → Louis XVI</p>
         <span class="n">next_maillon</span> <span class="o">=</span> <span class="n">courant</span><span class="o">.</span><span class="n">tail</span>
         <span class="c1"># On insère le maillon courant au début de la nouvelle liste</span>
         <span class="n">courant</span><span class="o">.</span><span class="n">tail</span> <span class="o">=</span> <span class="n">chaineRenversee</span>
-        <span class="c1"># On met à jour la nouvelle liste renversée pour qu&#39;elle commence par le maillon courant</span>
+        <span class="c1"># On met à jour la nouvelle liste renversée pour qu'elle commence par le maillon courant</span>
         <span class="n">chaineRenversee</span> <span class="o">=</span> <span class="n">courant</span>
         <span class="c1"># On passe au maillon suivant dans la liste courante</span>
         <span class="n">courant</span> <span class="o">=</span> <span class="n">next_maillon</span>
@@ -4942,12 +4942,12 @@ exemple : Henri IV → Louis XIII → Louis XIV → Louis XV → Louis XVI</p>
 </code></pre></div>
 <p>et quelques test ...</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1">#Test de la méthode longueur_rec</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tests de la méthode longueur_rec :&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Tests de la méthode longueur_rec :"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">general</span><span class="o">.</span><span class="n">longueur_rec</span><span class="p">())</span>  <span class="c1"># Affiche : 6</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">Maréchal</span><span class="o">.</span><span class="n">longueur_rec</span><span class="p">())</span>  <span class="c1"># Affiche : 7</span>
 
 <span class="c1">#Test sur une chaine vide</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tests sur une chaîne vide :&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Tests sur une chaîne vide :"</span><span class="p">)</span>
 <span class="n">chaine_vide</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">chaine_vide</span><span class="o">.</span><span class="n">est_vide</span><span class="p">())</span>  <span class="c1"># Affiche : True</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">chaine_vide</span><span class="o">.</span><span class="n">longueur_rec</span><span class="p">())</span>  <span class="c1"># Affiche : 0</span>
@@ -4971,7 +4971,7 @@ exemple : Henri IV → Louis XIII → Louis XIV → Louis XV → Louis XVI</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">tail</span> <span class="o">=</span> <span class="n">suivant</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">inserer</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">chaine</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot; insére la donnée dans la chaine après le n-ième maillon&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">""" insére la donnée dans la chaine après le n-ième maillon"""</span>
         <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
             <span class="k">return</span> 
         <span class="k">else</span> <span class="p">:</span>
@@ -4979,30 +4979,30 @@ exemple : Henri IV → Louis XIII → Louis XIV → Louis XV → Louis XVI</p>
 </code></pre></div>
 <p>Et quelques Tests ...
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1">#Test de la méthode inserer</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tests de la méthode inserer :&quot;</span><span class="p">)</span>
-<span class="n">nouvelle_chaine</span> <span class="o">=</span> <span class="n">general_renverse</span><span class="o">.</span><span class="n">inserer</span><span class="p">(</span><span class="s2">&quot;Adjudant&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Tests de la méthode inserer :"</span><span class="p">)</span>
+<span class="n">nouvelle_chaine</span> <span class="o">=</span> <span class="n">general_renverse</span><span class="o">.</span><span class="n">inserer</span><span class="p">(</span><span class="s2">"Adjudant"</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">nouvelle_chaine</span><span class="p">)</span>  <span class="c1"># Affiche : Soldat → Sergent → Adjudant → Lieutenant → Capitaine → Colonel → Général</span>
-<span class="c1">#Test du cas limite ou l&#39;on insere à la fin de la chaine</span>
-<span class="n">nouvelle_chaine2</span> <span class="o">=</span> <span class="n">general_renverse</span><span class="o">.</span><span class="n">inserer</span><span class="p">(</span><span class="s2">&quot;Général d&#39;armée&quot;</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">nouvelle_chaine2</span><span class="p">)</span>  <span class="c1"># Affiche : Soldat → Sergent → Adjudant → Lieutenant → Capitaine → Colonel → Général → Général d&#39;armée</span>
+<span class="c1">#Test du cas limite ou l'on insere à la fin de la chaine</span>
+<span class="n">nouvelle_chaine2</span> <span class="o">=</span> <span class="n">general_renverse</span><span class="o">.</span><span class="n">inserer</span><span class="p">(</span><span class="s2">"Général d'armée"</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nouvelle_chaine2</span><span class="p">)</span>  <span class="c1"># Affiche : Soldat → Sergent → Adjudant → Lieutenant → Capitaine → Colonel → Général → Général d'armée</span>
 </code></pre></div></p>
 <details class="question">
 <summary>Correction</summary>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">inserer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">""""</span>
 <span class="sd">    insére la donnée dans la chaine après le n-ième maillon</span>
 <span class="sd">    On utiliser une approche récursive.</span>
 <span class="sd">    @param val : la valeur à insérer</span>
 <span class="sd">    @param n : la position après laquelle insérer (1 pour insérer en tête)</span>
 <span class="sd">    @return : None : on modifie la liste en place</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="c1"># Cas de base : on insère en tête</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
         <span class="k">return</span> <span class="n">Maillon</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
         <span class="c1"># newMaillon = Maillon(val, self.tail)</span>
         <span class="c1"># self.tail = newMaillon</span>
     <span class="k">else</span> <span class="p">:</span>
-        <span class="c1">#Cas récursif : on délègue l&#39;insertion au maillon suivant</span>
+        <span class="c1">#Cas récursif : on délègue l'insertion au maillon suivant</span>
         <span class="c1">#Cas particulier : si on est en fin de liste, on ajoute un nouveau maillon</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tail</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">tail</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
@@ -5047,37 +5047,37 @@ exemple : Henri IV → Louis XIII → Louis XIV → Louis XV → Louis XVI</p>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
-            <span class="k">return</span> <span class="s2">&quot;[]&quot;</span>
+            <span class="k">return</span> <span class="s2">"[]"</span>
         <span class="n">courant</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">premier_maillon</span>
         <span class="n">elements</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">while</span> <span class="n">courant</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">nom</span><span class="p">,</span> <span class="n">masse</span><span class="p">,</span> <span class="n">demi_vie</span> <span class="o">=</span> <span class="n">courant</span><span class="o">.</span><span class="n">head</span>
             <span class="k">if</span> <span class="n">demi_vie</span> <span class="o">&gt;=</span> <span class="mf">1e99</span><span class="p">:</span>   <span class="c1"># élément stable</span>
-                <span class="n">elements</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">nom</span><span class="si">}{</span><span class="n">masse</span><span class="si">}</span><span class="s2"> (stable)&quot;</span><span class="p">)</span>
+                <span class="n">elements</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">nom</span><span class="si">}{</span><span class="n">masse</span><span class="si">}</span><span class="s2"> (stable)"</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="n">elements</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">nom</span><span class="si">}{</span><span class="n">masse</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="n">elements</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">nom</span><span class="si">}{</span><span class="n">masse</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
             <span class="n">courant</span> <span class="o">=</span> <span class="n">courant</span><span class="o">.</span><span class="n">tail</span>
-        <span class="k">return</span> <span class="s2">&quot; → &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">elements</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s2">" → "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">elements</span><span class="p">)</span>
 </code></pre></div>
 <p>La chaine de désintégration du Radon est donc instanciée par le code suivant :</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">desintegrationRa</span> <span class="o">=</span> <span class="n">Chaine</span><span class="p">()</span>
-<span class="n">desintegrationRa</span><span class="o">.</span><span class="n">ajout_en_tete</span><span class="p">((</span><span class="s1">&#39;Pb&#39;</span><span class="p">,</span> <span class="mi">206</span><span class="p">,</span> <span class="mf">1e100</span><span class="p">))</span>
-<span class="n">desintegrationRa</span><span class="o">.</span><span class="n">ajout_en_tete</span><span class="p">((</span><span class="s1">&#39;Po&#39;</span><span class="p">,</span> <span class="mi">210</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">))</span>
-<span class="n">desintegrationRa</span><span class="o">.</span><span class="n">ajout_en_tete</span><span class="p">((</span><span class="s1">&#39;Bi&#39;</span><span class="p">,</span> <span class="mi">210</span><span class="p">,</span> <span class="mf">0.014</span><span class="p">))</span>
-<span class="n">desintegrationRa</span><span class="o">.</span><span class="n">ajout_en_tete</span><span class="p">((</span><span class="s1">&#39;Pb&#39;</span><span class="p">,</span> <span class="mi">210</span><span class="p">,</span> <span class="mf">22.2</span><span class="p">))</span>
-<span class="n">desintegrationRa</span><span class="o">.</span><span class="n">ajout_en_tete</span><span class="p">((</span><span class="s1">&#39;Po&#39;</span><span class="p">,</span> <span class="mi">214</span><span class="p">,</span> <span class="mf">5.2e-12</span><span class="p">))</span>
-<span class="n">desintegrationRa</span><span class="o">.</span><span class="n">ajout_en_tete</span><span class="p">((</span><span class="s1">&#39;Bi&#39;</span><span class="p">,</span> <span class="mi">214</span><span class="p">,</span> <span class="mf">3.8e-2</span><span class="p">))</span>
-<span class="n">desintegrationRa</span><span class="o">.</span><span class="n">ajout_en_tete</span><span class="p">((</span><span class="s1">&#39;Pb&#39;</span><span class="p">,</span> <span class="mi">214</span><span class="p">,</span> <span class="mf">5.7e-5</span><span class="p">))</span>
-<span class="n">desintegrationRa</span><span class="o">.</span><span class="n">ajout_en_tete</span><span class="p">((</span><span class="s1">&#39;Po&#39;</span><span class="p">,</span> <span class="mi">218</span><span class="p">,</span> <span class="mf">5.7e-6</span><span class="p">))</span>
-<span class="n">desintegrationRa</span><span class="o">.</span><span class="n">ajout_en_tete</span><span class="p">((</span><span class="s1">&#39;Rn&#39;</span><span class="p">,</span> <span class="mi">222</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">))</span>
-<span class="n">desintegrationRa</span><span class="o">.</span><span class="n">ajout_en_tete</span><span class="p">((</span><span class="s1">&#39;Ra&#39;</span><span class="p">,</span> <span class="mi">226</span><span class="p">,</span> <span class="mi">1600</span><span class="p">))</span>
+<span class="n">desintegrationRa</span><span class="o">.</span><span class="n">ajout_en_tete</span><span class="p">((</span><span class="s1">'Pb'</span><span class="p">,</span> <span class="mi">206</span><span class="p">,</span> <span class="mf">1e100</span><span class="p">))</span>
+<span class="n">desintegrationRa</span><span class="o">.</span><span class="n">ajout_en_tete</span><span class="p">((</span><span class="s1">'Po'</span><span class="p">,</span> <span class="mi">210</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">))</span>
+<span class="n">desintegrationRa</span><span class="o">.</span><span class="n">ajout_en_tete</span><span class="p">((</span><span class="s1">'Bi'</span><span class="p">,</span> <span class="mi">210</span><span class="p">,</span> <span class="mf">0.014</span><span class="p">))</span>
+<span class="n">desintegrationRa</span><span class="o">.</span><span class="n">ajout_en_tete</span><span class="p">((</span><span class="s1">'Pb'</span><span class="p">,</span> <span class="mi">210</span><span class="p">,</span> <span class="mf">22.2</span><span class="p">))</span>
+<span class="n">desintegrationRa</span><span class="o">.</span><span class="n">ajout_en_tete</span><span class="p">((</span><span class="s1">'Po'</span><span class="p">,</span> <span class="mi">214</span><span class="p">,</span> <span class="mf">5.2e-12</span><span class="p">))</span>
+<span class="n">desintegrationRa</span><span class="o">.</span><span class="n">ajout_en_tete</span><span class="p">((</span><span class="s1">'Bi'</span><span class="p">,</span> <span class="mi">214</span><span class="p">,</span> <span class="mf">3.8e-2</span><span class="p">))</span>
+<span class="n">desintegrationRa</span><span class="o">.</span><span class="n">ajout_en_tete</span><span class="p">((</span><span class="s1">'Pb'</span><span class="p">,</span> <span class="mi">214</span><span class="p">,</span> <span class="mf">5.7e-5</span><span class="p">))</span>
+<span class="n">desintegrationRa</span><span class="o">.</span><span class="n">ajout_en_tete</span><span class="p">((</span><span class="s1">'Po'</span><span class="p">,</span> <span class="mi">218</span><span class="p">,</span> <span class="mf">5.7e-6</span><span class="p">))</span>
+<span class="n">desintegrationRa</span><span class="o">.</span><span class="n">ajout_en_tete</span><span class="p">((</span><span class="s1">'Rn'</span><span class="p">,</span> <span class="mi">222</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">))</span>
+<span class="n">desintegrationRa</span><span class="o">.</span><span class="n">ajout_en_tete</span><span class="p">((</span><span class="s1">'Ra'</span><span class="p">,</span> <span class="mi">226</span><span class="p">,</span> <span class="mi">1600</span><span class="p">))</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">desintegrationRa</span><span class="p">)</span>
 </code></pre></div>
 <p>La chaine de désintégration du Césium est plus courte et elle est instanciée par le code suivant :</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">desintegrationCs</span> <span class="o">=</span> <span class="n">Chaine</span><span class="p">()</span>
-<span class="n">desintegrationCs</span><span class="o">.</span><span class="n">ajout_en_tete</span><span class="p">((</span><span class="s1">&#39;Ba&#39;</span><span class="p">,</span> <span class="mi">137</span><span class="p">,</span> <span class="mf">1e100</span><span class="p">))</span>
-<span class="n">desintegrationCs</span><span class="o">.</span><span class="n">ajout_en_tete</span><span class="p">((</span><span class="s1">&#39;Cs&#39;</span><span class="p">,</span> <span class="mi">137</span><span class="p">,</span> <span class="mf">30.2</span><span class="p">))</span>
+<span class="n">desintegrationCs</span><span class="o">.</span><span class="n">ajout_en_tete</span><span class="p">((</span><span class="s1">'Ba'</span><span class="p">,</span> <span class="mi">137</span><span class="p">,</span> <span class="mf">1e100</span><span class="p">))</span>
+<span class="n">desintegrationCs</span><span class="o">.</span><span class="n">ajout_en_tete</span><span class="p">((</span><span class="s1">'Cs'</span><span class="p">,</span> <span class="mi">137</span><span class="p">,</span> <span class="mf">30.2</span><span class="p">))</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">desintegrationCs</span><span class="p">)</span>
 </code></pre></div>
@@ -5091,13 +5091,13 @@ exemple : Henri IV → Louis XIII → Louis XIV → Louis XV → Louis XVI</p>
 <span class="n">estStable</span><span class="p">(</span><span class="n">desintegrationRa</span><span class="p">)</span>
 <span class="c1"># test 2</span>
 <span class="n">desintegrationPb</span> <span class="o">=</span> <span class="n">Chaine</span><span class="p">()</span>
-<span class="n">desintegrationPb</span><span class="o">.</span><span class="n">ajout_en_tete</span><span class="p">((</span><span class="s1">&#39;Pb&#39;</span><span class="p">,</span> <span class="mi">206</span><span class="p">,</span> <span class="mf">1e100</span><span class="p">))</span>
+<span class="n">desintegrationPb</span><span class="o">.</span><span class="n">ajout_en_tete</span><span class="p">((</span><span class="s1">'Pb'</span><span class="p">,</span> <span class="mi">206</span><span class="p">,</span> <span class="mf">1e100</span><span class="p">))</span>
 <span class="n">estStable</span><span class="p">(</span><span class="n">desintegrationPb</span><span class="p">)</span>
 </code></pre></div>
 <details class="question">
 <summary>Correction</summary>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">estStable</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
-<span class="c1"># stable ↔ il n&#39;y a pas de maillon suivant</span>
+<span class="c1"># stable ↔ il n'y a pas de maillon suivant</span>
 <span class="k">return</span> <span class="n">chaine</span><span class="o">.</span><span class="n">queue</span><span class="p">()</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">chaine</span><span class="o">.</span><span class="n">queue</span><span class="p">()</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span>
 </code></pre></div>
 </details>
@@ -5139,13 +5139,13 @@ exemple : Henri IV → Louis XIII → Louis XIV → Louis XV → Louis XVI</p>
     <span class="k">if</span> <span class="n">chaine</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="p">:</span>
         <span class="k">return</span> <span class="o">...</span>
     <span class="k">else</span> <span class="p">:</span>
-        <span class="c1"># conversion d&#39;un booléen en entier avec la régle : True -&gt; 1 et False -&gt; 0</span>
+        <span class="c1"># conversion d'un booléen en entier avec la régle : True -&gt; 1 et False -&gt; 0</span>
         <span class="n">occurence</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">chaine</span><span class="o">.</span><span class="n">tete</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">nom_atome</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">occurence</span> <span class="o">+</span> <span class="n">nbIsotopes</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 
 <span class="c1"># quelques tests</span>
-<span class="n">nbIsotopes</span><span class="p">(</span><span class="n">desintegrationRa</span><span class="p">,</span> <span class="s1">&#39;Po&#39;</span><span class="p">)</span>
-<span class="n">nbIsotopes</span><span class="p">(</span><span class="n">desintegrationRa</span><span class="p">,</span> <span class="s1">&#39;Rn&#39;</span><span class="p">)</span>
+<span class="n">nbIsotopes</span><span class="p">(</span><span class="n">desintegrationRa</span><span class="p">,</span> <span class="s1">'Po'</span><span class="p">)</span>
+<span class="n">nbIsotopes</span><span class="p">(</span><span class="n">desintegrationRa</span><span class="p">,</span> <span class="s1">'Rn'</span><span class="p">)</span>
 </code></pre></div>
 <details class="question">
 <summary>Correction</summary>
@@ -5283,12 +5283,12 @@ Un gestionnaire de course de kayak développe un programme Python pour gérer le
         <span class="bp">self</span><span class="o">.</span><span class="n">premier_maillon</span> <span class="o">=</span> <span class="n">nouveau_maillon</span>
 </code></pre></div>
 <p>Pour reprendre l'exemple de l'énoncé :</p>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">c1</span> <span class="o">=</span> <span class="n">Concurrent</span><span class="p">(</span><span class="s2">&quot;Mosquito&quot;</span><span class="p">,</span> <span class="mf">87.67</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
-<span class="n">c2</span> <span class="o">=</span> <span class="n">Concurrent</span><span class="p">(</span><span class="s2">&quot;Python Fute&quot;</span><span class="p">,</span> <span class="mf">89.73</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="n">c3</span> <span class="o">=</span> <span class="n">Concurrent</span><span class="p">(</span><span class="s2">&quot;Piranha Vorace&quot;</span><span class="p">,</span> <span class="mf">90.54</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="n">c4</span> <span class="o">=</span> <span class="n">Concurrent</span><span class="p">(</span><span class="s2">&quot;Truite Agile&quot;</span><span class="p">,</span> <span class="mf">84.32</span><span class="p">,</span> <span class="mi">52</span><span class="p">)</span>
-<span class="n">c5</span> <span class="o">=</span> <span class="n">Concurrent</span><span class="p">(</span><span class="s2">&quot;Tortue Rapide&quot;</span><span class="p">,</span> <span class="mf">92.12</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">c6</span> <span class="o">=</span> <span class="n">Concurrent</span><span class="p">(</span><span class="s2">&quot;Lievre Tranquille&quot;</span><span class="p">,</span> <span class="mf">93.45</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">c1</span> <span class="o">=</span> <span class="n">Concurrent</span><span class="p">(</span><span class="s2">"Mosquito"</span><span class="p">,</span> <span class="mf">87.67</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="n">c2</span> <span class="o">=</span> <span class="n">Concurrent</span><span class="p">(</span><span class="s2">"Python Fute"</span><span class="p">,</span> <span class="mf">89.73</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">c3</span> <span class="o">=</span> <span class="n">Concurrent</span><span class="p">(</span><span class="s2">"Piranha Vorace"</span><span class="p">,</span> <span class="mf">90.54</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">c4</span> <span class="o">=</span> <span class="n">Concurrent</span><span class="p">(</span><span class="s2">"Truite Agile"</span><span class="p">,</span> <span class="mf">84.32</span><span class="p">,</span> <span class="mi">52</span><span class="p">)</span>
+<span class="n">c5</span> <span class="o">=</span> <span class="n">Concurrent</span><span class="p">(</span><span class="s2">"Tortue Rapide"</span><span class="p">,</span> <span class="mf">92.12</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">c6</span> <span class="o">=</span> <span class="n">Concurrent</span><span class="p">(</span><span class="s2">"Lievre Tranquille"</span><span class="p">,</span> <span class="mf">93.45</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 
 <span class="n">resultats</span> <span class="o">=</span> <span class="n">Liste</span><span class="p">()</span>
 <span class="n">resultats</span><span class="o">.</span><span class="n">ajout</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
@@ -5311,7 +5311,7 @@ Un gestionnaire de course de kayak développe un programme Python pour gérer le
 <p><strong>2.b</strong> Écrire la (ou les) instruction(s) qui permet(tent) d'accéder au temps total du concurrent stocké en tête de la liste <code>resultats</code> :</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># compléter ici</span>
 <span class="n">val</span> <span class="o">=</span> <span class="o">...</span>
-<span class="k">assert</span> <span class="n">val</span> <span class="o">==</span> <span class="mf">93.45</span><span class="p">,</span> <span class="s2">&quot;problème de code&quot;</span>
+<span class="k">assert</span> <span class="n">val</span> <span class="o">==</span> <span class="mf">93.45</span><span class="p">,</span> <span class="s2">"problème de code"</span>
 </code></pre></div>
 <details class="question">
 <summary>Correction</summary>
@@ -5338,7 +5338,7 @@ Un gestionnaire de course de kayak développe un programme Python pour gérer le
     <span class="k">return</span> <span class="o">...</span>
 
 <span class="c1"># un test</span>
-<span class="k">assert</span> <span class="n">meilleur_concurrent</span><span class="p">(</span><span class="n">resultats</span><span class="p">)</span><span class="o">.</span><span class="n">nom</span> <span class="o">==</span> <span class="s1">&#39;Piranha Vorace&#39;</span><span class="p">,</span> <span class="s2">&quot;problème de code&quot;</span>
+<span class="k">assert</span> <span class="n">meilleur_concurrent</span><span class="p">(</span><span class="n">resultats</span><span class="p">)</span><span class="o">.</span><span class="n">nom</span> <span class="o">==</span> <span class="s1">'Piranha Vorace'</span><span class="p">,</span> <span class="s2">"problème de code"</span>
 </code></pre></div>
 <details class="question">
 <summary>Correction</summary>
@@ -5501,13 +5501,15 @@ Un gestionnaire de course de kayak développe un programme Python pour gérer le
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="../../../xtra/javascript/mathjax.js"></script>
       

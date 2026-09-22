@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -4763,20 +4763,20 @@
 </div>
 <p><strong>Opérations essentielles</strong></p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># Créer</span>
-<span class="n">scores</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Alice&quot;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span> <span class="s2">&quot;Bob&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;Clara&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">}</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"Alice"</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span> <span class="s2">"Bob"</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">"Clara"</span><span class="p">:</span> <span class="mi">15</span><span class="p">}</span>
 
 <span class="c1"># Accéder</span>
-<span class="n">scores</span><span class="p">[</span><span class="s2">&quot;Alice&quot;</span><span class="p">]</span>          <span class="c1"># → 17</span>
+<span class="n">scores</span><span class="p">[</span><span class="s2">"Alice"</span><span class="p">]</span>          <span class="c1"># → 17</span>
 
 <span class="c1"># Ajouter / Modifier</span>
-<span class="n">scores</span><span class="p">[</span><span class="s2">&quot;Dylan&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span>
-<span class="n">scores</span><span class="p">[</span><span class="s2">&quot;Bob&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">13</span>
+<span class="n">scores</span><span class="p">[</span><span class="s2">"Dylan"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span>
+<span class="n">scores</span><span class="p">[</span><span class="s2">"Bob"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">13</span>
 
 <span class="c1"># Supprimer</span>
-<span class="k">del</span> <span class="n">scores</span><span class="p">[</span><span class="s2">&quot;Clara&quot;</span><span class="p">]</span>
+<span class="k">del</span> <span class="n">scores</span><span class="p">[</span><span class="s2">"Clara"</span><span class="p">]</span>
 
-<span class="c1"># Tester l&#39;appartenance</span>
-<span class="s2">&quot;Alice&quot;</span> <span class="ow">in</span> <span class="n">scores</span>        <span class="c1"># → True</span>
+<span class="c1"># Tester l'appartenance</span>
+<span class="s2">"Alice"</span> <span class="ow">in</span> <span class="n">scores</span>        <span class="c1"># → True</span>
 
 <span class="c1"># Parcourir</span>
 <span class="k">for</span> <span class="n">eleve</span> <span class="ow">in</span> <span class="n">scores</span><span class="p">:</span>
@@ -4789,10 +4789,10 @@
 <p><strong>Piège classique</strong></p>
 <div class="admonition warning">
 <p class="admonition-title">KeyError</p>
-<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">scores</span><span class="p">[</span><span class="s2">&quot;Eva&quot;</span><span class="p">]</span>        <span class="c1"># → KeyError si la clé n&#39;existe pas !</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">scores</span><span class="p">[</span><span class="s2">"Eva"</span><span class="p">]</span>        <span class="c1"># → KeyError si la clé n'existe pas !</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">if</span> <span class="s2">&quot;Eva&quot;</span> <span class="ow">in</span> <span class="n">scores</span><span class="p">:</span>  <span class="c1"># ✅ toujours tester avant d&#39;accéder</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">scores</span><span class="p">[</span><span class="s2">&quot;Eva&quot;</span><span class="p">])</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">if</span> <span class="s2">"Eva"</span> <span class="ow">in</span> <span class="n">scores</span><span class="p">:</span>  <span class="c1"># ✅ toujours tester avant d'accéder</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">scores</span><span class="p">[</span><span class="s2">"Eva"</span><span class="p">])</span>
 </code></pre></div></p>
 </div>
 </details>
@@ -4834,7 +4834,7 @@
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span>
-<span class="n">boo</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">boo</span> <span class="o">=</span> <span class="s2">"a"</span> <span class="ow">in</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span>
 </code></pre></div>
@@ -4847,7 +4847,7 @@
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span>
-<span class="n">boo</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">boo</span> <span class="o">=</span> <span class="s2">"a"</span> <span class="ow">in</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span>
 </code></pre></div>
@@ -4860,7 +4860,7 @@
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span>
-<span class="n">boo</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">boo</span> <span class="o">=</span> <span class="s2">"a"</span> <span class="ow">in</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
 <span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span>
 </code></pre></div>
@@ -4875,7 +4875,7 @@
 </ul>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">dct</span> <span class="o">=</span> <span class="n">fabrique_dict</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">dct</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="s2">"a"</span> <span class="ow">in</span> <span class="n">dct</span>
 </code></pre></div>
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>31.2 ns ± 0.221 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
 </code></pre></div>
@@ -4885,7 +4885,7 @@
 </ul>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">dct</span> <span class="o">=</span> <span class="n">fabrique_dict</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">dct</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="s2">"a"</span> <span class="ow">in</span> <span class="n">dct</span>
 </code></pre></div>
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>31.2 ns ± 0.233 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
 </code></pre></div>
@@ -4895,7 +4895,7 @@
 </ul>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">dct</span> <span class="o">=</span> <span class="n">fabrique_dict</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">dct</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="s2">"a"</span> <span class="ow">in</span> <span class="n">dct</span>
 </code></pre></div>
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>33.9 ns ± 0.168 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
 </code></pre></div>
@@ -4951,7 +4951,7 @@ Re-essayons alors avec l'empreinte  <code>e74fb2f94c052bbf16cea4a795145e35</code
 <p>En quoi les fonctions de hachage ont-elles un rôle à jouer dans l'implémentation d'un dictionnaire ?  </p>
 <p>L'idée essentielle est que chaque clé est hachée pour donner une empreinte unique, qui est ensuite transformée en un indice de positionnement dans un tableau.</p>
 <p>Le dictionnaire :</p>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;pommes&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;poires&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;bananes&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">}</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"pommes"</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s2">"poires"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="s2">"bananes"</span><span class="p">:</span><span class="mi">5</span><span class="p">}</span>
 </code></pre></div>
 <p>serait donc par exemple implémenté dans un tableau comme celui-ci :</p>
 <p><img alt="" class="center" src="../data/hashdico.png" /></p>
@@ -4972,13 +4972,13 @@ Re-essayons alors avec l'empreinte  <code>e74fb2f94c052bbf16cea4a795145e35</code
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">mondico</span> <span class="o">=</span> <span class="p">{}</span>
 
 <span class="c1"># un nombre peut-il être une clé?</span>
-<span class="n">mondico</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;foo&quot;</span>
+<span class="n">mondico</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"foo"</span>
 
 <span class="c1"># une chaîne de caractères peut-elle être une clé ?</span>
-<span class="n">mondico</span><span class="p">[</span><span class="s2">&quot;riri&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;fifi&quot;</span>
+<span class="n">mondico</span><span class="p">[</span><span class="s2">"riri"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"fifi"</span>
 
 <span class="c1"># une liste peut-elle être une clé ?</span>
-<span class="n">mondico</span><span class="p">[[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">]]</span> <span class="o">=</span> <span class="s2">&quot;loulou&quot;</span>
+<span class="n">mondico</span><span class="p">[[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">]]</span> <span class="o">=</span> <span class="s2">"loulou"</span>
 </code></pre></div>
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>---------------------------------------------------------------------------
 
@@ -4987,10 +4987,10 @@ TypeError                                 Traceback (most recent call last)
 &lt;ipython-input-1-585560b5c422&gt; in &lt;module&gt;
       8 
       9 # une liste peut-elle être une clé ?
-- 10 mondico[[2,5]] = &quot;loulou&quot;
+- 10 mondico[[2,5]] = "loulou"
 
 
-TypeError: unhashable type: &#39;list&#39;
+TypeError: unhashable type: 'list'
 </code></pre></div>
 <p>Le message d'erreur est explicite : le type <code>list</code> que nous avons voulu utiliser comme clé n'est pas hachable, car c'est un type d'objet pouvant être modifié a posteriori tout en gardant la même référence (on dit que c'est un objet <strong>mutable</strong>):</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
@@ -5158,13 +5158,15 @@ TypeError: unhashable type: &#39;list&#39;
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="../../../xtra/javascript/mathjax.js"></script>
       

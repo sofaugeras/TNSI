@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -4783,16 +4783,16 @@
 <p>Pour faciliter la lecture, le code de la classe <code>Panier</code> n'est pas écrit.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Panier</span><span class="p">():</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="s2">&quot;Initialise la file comme une file vide.&quot;</span>
+        <span class="s2">"Initialise la file comme une file vide."</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">est_vide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="s2">&quot;Renvoie True si la file est vide, False sinon.&quot;</span>
+        <span class="s2">"Renvoie True si la file est vide, False sinon."</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">enfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
-        <span class="s2">&quot;Ajoute l&#39;élément e en dernière position de la file, ne renvoie rien.&quot;</span>
+        <span class="s2">"Ajoute l'élément e en dernière position de la file, ne renvoie rien."</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">defile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="s2">&quot;Retire le premier élément de la file et le renvoie.&quot;</span>
+        <span class="s2">"Retire le premier élément de la file et le renvoie."</span>
 </code></pre></div>
 <p>Le panier d'un client sera représenté par une file contenant les articles scannés.</p>
 <p>Les articles sont représentés par des tuples <code>(code_barre, designation, prix, horaire_scan)</code> où</p>
@@ -4806,7 +4806,7 @@
 <p>Écrire le code utilisant une des quatre méthodes ci-dessus permettant d'ajouter l'article à l'objet de classe <code>Panier</code> appelé <code>panier_1</code>.</p>
 <details class="success">
 <summary>Réponse</summary>
-<p><code class="highlight"><span class="n">panier_1</span><span class="o">.</span><span class="n">enfile</span><span class="p">((</span><span class="mi">31002</span><span class="p">,</span> <span class="s2">&quot;café noir&quot;</span><span class="p">,</span> <span class="mf">1.50</span><span class="p">,</span> <span class="mi">50525</span><span class="p">))</span></code></p>
+<p><code class="highlight"><span class="n">panier_1</span><span class="o">.</span><span class="n">enfile</span><span class="p">((</span><span class="mi">31002</span><span class="p">,</span> <span class="s2">"café noir"</span><span class="p">,</span> <span class="mf">1.50</span><span class="p">,</span> <span class="mi">50525</span><span class="p">))</span></code></p>
 </details>
 <p><strong>2.</strong> On souhaite définir une méthode <code>remplir</code> de paramètre <code>panier_temp</code> dans la classe <code>Panier</code> permettant de transférer vers la file tout le contenu d'un autre panier <code>panier_temp</code> qui est aussi un objet de type <code>Panier</code>. Recopier et compléter le code de la méthode <code>remplir</code>.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">remplir</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">panier_temp</span><span class="p">):</span>
@@ -4960,16 +4960,16 @@ L'expression simplifiée C précédente est également mal parenthésée (parent
 <span class="normal">17</span>
 <span class="normal">18</span>
 <span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">parenthesage_correct</span><span class="p">(</span><span class="n">expression</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot; fonction renvoyant True si l&#39;expression arithmétique</span>
+<span class="w">    </span><span class="sd">""" fonction renvoyant True si l'expression arithmétique</span>
 <span class="sd">    simplifiée (str) est correctement parenthésée, False sinon.</span>
 <span class="sd">    Condition: expression ne contient que</span>
 <span class="sd">      des parenthèses ouvrantes et fermantes</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">controleur</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">parenthese</span> <span class="ow">in</span> <span class="n">expression</span><span class="p">:</span>  <span class="c1"># pour chaque parenthèse</span>
-        <span class="k">if</span> <span class="n">parenthese</span> <span class="o">==</span> <span class="s1">&#39;(&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">parenthese</span> <span class="o">==</span> <span class="s1">'('</span><span class="p">:</span>
             <span class="n">controleur</span> <span class="o">=</span> <span class="n">controleur</span> <span class="o">+</span> <span class="mi">1</span>
-        <span class="k">else</span><span class="p">:</span>  <span class="c1"># parenthese == &#39;)&#39;</span>
+        <span class="k">else</span><span class="p">:</span>  <span class="c1"># parenthese == ')'</span>
             <span class="n">controleur</span> <span class="o">=</span> <span class="n">controleur</span> <span class="o">-</span> <span class="mi">1</span>
             <span class="k">if</span> <span class="n">controleur</span> <span class="o">...</span> <span class="p">:</span>  <span class="c1"># test 1 (à recopier et compléter)</span>
                 <span class="c1"># parenthèse fermante sans parenthèse ouvrante</span>
@@ -4989,7 +4989,7 @@ L'expression simplifiée C précédente est également mal parenthésée (parent
 </details>
 <h3 id="partie-b-texte-correctement-balise">Partie B : Texte correctement balisé<a class="headerlink" href="#partie-b-texte-correctement-balise" title="Permanent link">⚓︎</a></h3>
 <p>On peut faire l'analogie entre le texte simplifié des fichiers HTML (uniquement constitué de balises ouvrantes <code class="highlight"><span class="p">&lt;</span><span class="nt">nom</span><span class="p">&gt;</span></code> et fermantes <code class="highlight"><span class="p">&lt;/</span><span class="nt">nom</span><span class="p">&gt;</span></code>) et les expressions parenthésées.</p>
-<p>Par exemple, l'expression HTML simplifiée : <code class="highlight">&quot;<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>&quot;</code> est correctement balisée.</p>
+<p>Par exemple, l'expression HTML simplifiée : <code class="highlight">"<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>"</code> est correctement balisée.</p>
 <p>On ne tiendra pas compte dans cette partie des balises ne comportant pas de fermeture comme <code class="highlight"><span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span></code> ou <code class="highlight"><span class="p">&lt;</span><span class="nt">img</span> <span class="err">...</span><span class="p">&gt;</span></code>.</p>
 <p>Afin de vérifier qu'une expression HTML simplifiée est correctement balisée, on peut utiliser une pile (initialement vide) selon l'algorithme suivant :</p>
 <ul>
@@ -5074,28 +5074,28 @@ Donc le balisage est incorrect.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:6"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Départ</label><label for="__tabbed_1_2">Étape 1</label><label for="__tabbed_1_3">Étape 2</label><label for="__tabbed_1_4">Étape 3</label><label for="__tabbed_1_5">Étape 4</label><label for="__tabbed_1_6">Fin</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">Parcours de l'expression</span><pre><span></span><code>&quot;<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>&quot;
+<div class="highlight"><span class="filename">Parcours de l&#x27;expression</span><pre><span></span><code>"<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>"
 ↑
 </code></pre></div>
 <pre class="mermaid"><code>flowchart TD
     A["&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;=====&lt;br&gt;Pile"]</code></pre>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">Parcours de l'expression</span><pre><span></span><code>&quot;<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>&quot;
+<div class="highlight"><span class="filename">Parcours de l&#x27;expression</span><pre><span></span><code>"<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>"
   ↑                  Balise  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>  ouvrante, on empile
 </code></pre></div>
 <pre class="mermaid"><code>flowchart TD
     A["&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;&amp;lt;p&amp;gt;&lt;br&gt;=====&lt;br&gt;Pile"]</code></pre>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">Parcours de l'expression</span><pre><span></span><code>&quot;<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>&quot;
+<div class="highlight"><span class="filename">Parcours de l&#x27;expression</span><pre><span></span><code>"<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>"
       ↑              Balise  <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span> ouvrante, on empile
 </code></pre></div>
 <pre class="mermaid"><code>flowchart TD
     A["&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;&amp;lt;em&amp;gt;&lt;br&gt;&amp;lt;p&amp;gt;&lt;br&gt;=====&lt;br&gt;Pile"]</code></pre>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">Parcours de l'expression</span><pre><span></span><code>&quot;<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>&quot;
+<div class="highlight"><span class="filename">Parcours de l&#x27;expression</span><pre><span></span><code>"<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>"
           ↑          Balise <span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> fermante, on dépile
 </code></pre></div>
 <pre class="mermaid"><code>flowchart TD
@@ -5103,7 +5103,7 @@ Donc le balisage est incorrect.</p>
 <p><code>&lt;#!html em&gt;</code> et <code class="highlight"><span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span></code> se correspondent.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">Parcours de l'expression</span><pre><span></span><code>&quot;<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>&quot;
+<div class="highlight"><span class="filename">Parcours de l&#x27;expression</span><pre><span></span><code>"<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>"
                ↑     Balise <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>  fermante, on dépile
 </code></pre></div>
 <pre class="mermaid"><code>flowchart TD
@@ -5111,7 +5111,7 @@ Donc le balisage est incorrect.</p>
 <p><code class="highlight"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span></code> et <code class="highlight"><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code> se correspondent.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">Parcours de l'expression</span><pre><span></span><code>&quot;<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>&quot;
+<div class="highlight"><span class="filename">Parcours de l&#x27;expression</span><pre><span></span><code>"<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>"
                  ↑
 </code></pre></div>
 <pre class="mermaid"><code>flowchart TD
@@ -5228,7 +5228,7 @@ son analyse.</p>
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">depile_max</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="k">assert</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">(),</span> <span class="s2">&quot;Pile vide&quot;</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">(),</span> <span class="s2">"Pile vide"</span>
     <span class="n">q</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
     <span class="n">maxi</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
@@ -5259,7 +5259,7 @@ son analyse.</p>
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">depile_max</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="k">assert</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">(),</span> <span class="s2">&quot;Pile vide&quot;</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">(),</span> <span class="s2">"Pile vide"</span>
     <span class="n">q</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
     <span class="n">maxi</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
@@ -5813,13 +5813,15 @@ modifiant en place. Cette fonction renvoie le booléen <code>est_reduit</code> i
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="../../xtra/javascript/mathjax.js"></script>
       

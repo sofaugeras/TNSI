@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -4747,8 +4747,8 @@
 <div class="tabbed-block">
 <p>Tri en place, itératif</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">insere</span><span class="p">(</span><span class="n">donnees</span><span class="p">,</span> <span class="n">indice</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;insere la donnee d&#39;indice indice à sa bonne place dans la liste formée des</span>
-<span class="sd">    éléments d&#39;indice inférieur ou égaux à indice.</span>
+<span class="w">    </span><span class="sd">"""insere la donnee d'indice indice à sa bonne place dans la liste formée des</span>
+<span class="sd">    éléments d'indice inférieur ou égaux à indice.</span>
 <span class="sd">    Le début de la liste est sensé être trié.</span>
 <span class="sd">    LA MODIFICATION SE FAIT EN PLACE</span>
 
@@ -4762,25 +4762,25 @@
 <span class="sd">    &gt;&gt;&gt; a</span>
 <span class="sd">    [3, 5, 9, 6, 4, 1]</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="k">while</span> <span class="n">indice</span><span class="o">&gt;</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">donnees</span><span class="p">[</span><span class="n">indice</span><span class="p">]</span><span class="o">&lt;</span><span class="n">donnees</span><span class="p">[</span><span class="n">indice</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
         <span class="n">donnees</span><span class="p">[</span><span class="n">indice</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">donnees</span><span class="p">[</span><span class="n">indice</span><span class="p">]</span> <span class="o">=</span> <span class="n">donnees</span><span class="p">[</span><span class="n">indice</span><span class="p">],</span> <span class="n">donnees</span><span class="p">[</span><span class="n">indice</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
         <span class="n">indice</span> <span class="o">=</span> <span class="n">indice</span> <span class="o">-</span><span class="mi">1</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">tri_insertion</span><span class="p">(</span><span class="n">donnees</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;tri la liste données en place, avec l&#39;algorithme de tri par insertion</span>
+<span class="w">    </span><span class="sd">"""tri la liste données en place, avec l'algorithme de tri par insertion</span>
 <span class="sd">    LE TRI SE FAIT EN PLACE.</span>
 
 <span class="sd">    param :</span>
 <span class="sd">        donnees : list</span>
 
 <span class="sd">    exemple :</span>
-<span class="sd">    &gt;&gt;&gt; liste3 = [ &quot;ruby&quot;, &quot;python&quot;, &quot;logo&quot;, &quot;elan&quot;, &quot;rust&quot;]</span>
+<span class="sd">    &gt;&gt;&gt; liste3 = [ "ruby", "python", "logo", "elan", "rust"]</span>
 <span class="sd">    &gt;&gt;&gt; tri_insertion(liste3)</span>
 <span class="sd">    &gt;&gt;&gt; liste3</span>
-<span class="sd">    [&#39;elan&#39;, &#39;logo&#39;, &#39;python&#39;, &#39;ruby&#39;, &#39;rust&#39;]</span>
+<span class="sd">    ['elan', 'logo', 'python', 'ruby', 'rust']</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">donnees</span><span class="p">)):</span>
         <span class="n">insere</span><span class="p">(</span><span class="n">donnees</span><span class="p">,</span><span class="n">ind</span><span class="p">)</span>
 </code></pre></div>
@@ -4788,7 +4788,7 @@
 <div class="tabbed-block">
 <p>Tri itératif qui renvoie une nouvelle liste</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">insere2</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Insère la valeur dans la liste, supposée triée. la modification est en place</span>
+<span class="w">    </span><span class="sd">"""Insère la valeur dans la liste, supposée triée. la modification est en place</span>
 
 <span class="sd">    param :</span>
 <span class="sd">        liste : list : liste de nombres</span>
@@ -4801,7 +4801,7 @@
 <span class="sd">        &gt;&gt;&gt; insere2(liste1, 4)</span>
 <span class="sd">        &gt;&gt;&gt; liste1</span>
 <span class="sd">        [3, 4, 5.2, 6]</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
     <span class="n">liste</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
     <span class="n">indice</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
     <span class="k">while</span> <span class="n">indice</span><span class="o">&gt;</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">liste</span><span class="p">[</span><span class="n">indice</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">liste</span><span class="p">[</span><span class="n">indice</span><span class="p">]:</span>
@@ -4810,7 +4810,7 @@
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">tri_insertion2</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;renvoie une nouvelle liste qui est une version triée de liste</span>
+<span class="w">    </span><span class="sd">"""renvoie une nouvelle liste qui est une version triée de liste</span>
 
 <span class="sd">     param :</span>
 <span class="sd">            liste : list</span>
@@ -4820,7 +4820,7 @@
 <span class="sd">    Exemple :</span>
 <span class="sd">        &gt;&gt;&gt; tri_insertion2([8,2,6,5])</span>
 <span class="sd">        [2, 5, 6, 8]</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
     <span class="n">liste_triee</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">liste</span><span class="p">:</span>
         <span class="n">insere2</span><span class="p">(</span><span class="n">liste_triee</span><span class="p">,</span> <span class="n">element</span><span class="p">)</span>
@@ -4830,7 +4830,7 @@
 <div class="tabbed-block">
 <p>Tri récursif qui renvoie une nouvelle liste</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">insere3</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
-<span class="sd">&quot;&quot;&quot;Insère la valeur dans la liste, supposée triée</span>
+<span class="sd">"""Insère la valeur dans la liste, supposée triée</span>
 
 <span class="sd">    param :</span>
 <span class="sd">        liste : list : liste de nombres</span>
@@ -4843,7 +4843,7 @@
 <span class="sd">        &gt;&gt;&gt; liste2 = insere3(liste1, 4)</span>
 <span class="sd">        &gt;&gt;&gt; liste2</span>
 <span class="sd">        [3, 4, 5.2, 6]</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
     <span class="k">if</span> <span class="n">liste</span> <span class="o">==</span> <span class="p">[]:</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">valeur</span><span class="p">]</span>
     <span class="k">elif</span> <span class="n">liste</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;</span><span class="n">valeur</span><span class="p">:</span>
@@ -4852,7 +4852,7 @@
         <span class="k">return</span> <span class="n">liste</span> <span class="o">+</span> <span class="p">[</span><span class="n">valeur</span><span class="p">]</span>
 
  <span class="k">def</span><span class="w"> </span><span class="nf">tri_recursif_insertion3</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
-<span class="sd">&quot;&quot;&quot;renvoie une nouvelle liste qui est une version triée de liste. Méthode récursive.</span>
+<span class="sd">"""renvoie une nouvelle liste qui est une version triée de liste. Méthode récursive.</span>
 
 <span class="sd">    param :</span>
 <span class="sd">        liste : list</span>
@@ -4862,7 +4862,7 @@
 <span class="sd">    Exemple :</span>
 <span class="sd">    &gt;&gt;&gt; tri_recursif_insertion3([8,2,6,5])</span>
 <span class="sd">        [2, 5, 6, 8]</span>
-<span class="sd"> &quot;&quot;&quot;</span>
+<span class="sd"> """</span>
     <span class="k">if</span> <span class="n">liste</span> <span class="o">==</span> <span class="p">[]:</span>
         <span class="k">return</span> <span class="p">[]</span>
     <span class="k">else</span><span class="p">:</span>
@@ -4877,13 +4877,13 @@
 <summary>Tri par sélection</summary>
 <p>Fonction qui renvoie la liste triée par ordre croissant.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">index_min</span><span class="p">(</span><span class="n">donnees</span><span class="p">,</span> <span class="n">indice</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;retourne l&#39;indice du plus petit élément d&#39;une liste, à partir d&#39;un indice donné</span>
+<span class="w">    </span><span class="sd">"""retourne l'indice du plus petit élément d'une liste, à partir d'un indice donné</span>
 <span class="sd">    Exemple:  </span>
-<span class="sd">    &gt;&gt;&gt; index_min([&quot;curl&quot;, &quot;bash&quot;, &quot;python&quot;, &quot;cilk&quot;, &quot;nesl&quot;], 0)</span>
+<span class="sd">    &gt;&gt;&gt; index_min(["curl", "bash", "python", "cilk", "nesl"], 0)</span>
 <span class="sd">    1</span>
-<span class="sd">    &gt;&gt;&gt; index_min([&quot;curl&quot;, &quot;bash&quot;, &quot;python&quot;, &quot;cilk&quot;, &quot;nesl&quot;], 2)</span>
+<span class="sd">    &gt;&gt;&gt; index_min(["curl", "bash", "python", "cilk", "nesl"], 2)</span>
 <span class="sd">    3 </span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">pos</span> <span class="o">=</span> <span class="n">indice</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">indice</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">donnees</span><span class="p">)):</span>
         <span class="k">if</span> <span class="n">donnees</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;</span><span class="n">donnees</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span> <span class="p">:</span>
@@ -4891,12 +4891,12 @@
     <span class="k">return</span> <span class="n">pos</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">tri_selection</span><span class="p">(</span><span class="n">donnees</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;tri la liste donnees en place, avec l&#39;algorithme de tri par sélection</span>
-<span class="sd">    &gt;&gt;&gt; liste3 = [ &quot;ruby&quot;, &quot;python&quot;, &quot;logo&quot;, &quot;elan&quot;, &quot;rust&quot;]</span>
+<span class="w">    </span><span class="sd">"""tri la liste donnees en place, avec l'algorithme de tri par sélection</span>
+<span class="sd">    &gt;&gt;&gt; liste3 = [ "ruby", "python", "logo", "elan", "rust"]</span>
 <span class="sd">    &gt;&gt;&gt; tri_selection(liste3)</span>
 <span class="sd">    &gt;&gt;&gt; liste3</span>
-<span class="sd">    [&#39;elan&#39;, &#39;logo&#39;, &#39;python&#39;, &#39;ruby&#39;, &#39;rust&#39;] </span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    ['elan', 'logo', 'python', 'ruby', 'rust'] </span>
+<span class="sd">    """</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">donnees</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
         <span class="n">j</span> <span class="o">=</span> <span class="n">index_min</span><span class="p">(</span><span class="n">donnees</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
         <span class="n">donnees</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">donnees</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">donnees</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">donnees</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
@@ -5072,13 +5072,15 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="../../../xtra/javascript/mathjax.js"></script>
       

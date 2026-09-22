@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -4852,18 +4852,18 @@
 <div class="tabbed-block">
 <p>Créer une fonction <code>inverse_md5()</code> qui va chercher dans un dictionnaire (construit préalablement) le mot correspondant au hash donné en paramètre.</p>
 <p>Exemple : 
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>&gt;&gt;&gt; inverse_md5(&#39;0571749e2ac330a7455809c6b0e7af90&#39;)
-&gt;&gt;&gt; &#39;sunshine&#39;
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>&gt;&gt;&gt; inverse_md5('0571749e2ac330a7455809c6b0e7af90')
+&gt;&gt;&gt; 'sunshine'
 </code></pre></div></p>
 <p><strong>Aide :</strong></p>
 <ul>
 <li>liste de 1000 mots de passe fréquents : <a href="http://glassus1.free.fr/extraitrockyou.txt">ici</a></li>
 <li>comment lire / convertir le contenu d'un fichier dans une liste de <code>string</code> :
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;monfichier.txt&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"monfichier.txt"</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
 </code></pre></div></li>
 <li>comment calculer du MD5 en Python : 
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="s1">&#39;azerty&#39;</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="s1">'azerty'</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">())</span>
 </code></pre></div></li>
 </ul>
@@ -4872,20 +4872,20 @@
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">inverse_md5</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">dico</span><span class="p">)</span> <span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    fonction qui va chercher dans un dictionnaire passé en paramètre</span>
 <span class="sd">    le mot correspondant au hash donné en paramètre.</span>
-<span class="sd">    &gt;&gt;&gt; inverse_md5(&#39;0571749e2ac330a7455809c6b0e7af90&#39;)</span>
-<span class="sd">    &gt;&gt;&gt; &#39;sunshine&#39;</span>
+<span class="sd">    &gt;&gt;&gt; inverse_md5('0571749e2ac330a7455809c6b0e7af90')</span>
+<span class="sd">    &gt;&gt;&gt; 'sunshine'</span>
 <span class="sd">    @param entree : h : chaine de caractère : hash du mdp à rechercher</span>
 <span class="sd">                    dico : dictionnaire de correspondance hash/mdp</span>
 <span class="sd">    @param sortie : chaine de caractère : un mot de passe</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="k">return</span>  <span class="n">dico</span><span class="p">[</span><span class="n">h</span><span class="p">]</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">contruct_dico</span><span class="p">():</span>
     <span class="n">dico</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="n">lst</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;extraitrockyou.txt&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+    <span class="n">lst</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"extraitrockyou.txt"</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
         <span class="n">h</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="n">elt</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
         <span class="n">dico</span><span class="p">[</span><span class="n">h</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()]</span> <span class="o">=</span> <span class="n">elt</span>
@@ -4893,7 +4893,7 @@
     <span class="k">return</span> <span class="n">dico</span>
 
 <span class="n">dico</span> <span class="o">=</span> <span class="n">contruct_dico</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">inverse_md5</span><span class="p">(</span><span class="s1">&#39;48238b7f2aa5f76a1d1e119f8942ebe7&#39;</span><span class="p">,</span> <span class="n">dico</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">inverse_md5</span><span class="p">(</span><span class="s1">'48238b7f2aa5f76a1d1e119f8942ebe7'</span><span class="p">,</span> <span class="n">dico</span><span class="p">))</span>
 </code></pre></div>
 </div>
 </div>
@@ -4927,16 +4927,16 @@ le pirate possède donc le moyen de se connecter à concurrent.fr avec le compte
 
 <span class="c1"># generate new salt, hash password</span>
 <span class="c1"># h est le sel qui sera utilisé pour le hachage</span>
-<span class="n">h</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;monsite.fr&quot;</span>
+<span class="n">h</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">"monsite.fr"</span>
 <span class="c1"># Hash du mot de passe classique sans salage</span>
-<span class="n">pwd_md5</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;secret&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+<span class="n">pwd_md5</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="sa">b</span><span class="s2">"secret"</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">pwd_md5</span><span class="p">)</span>
 <span class="c1"># Hash du mot de passe classique avec salage</span>
-<span class="n">pwd</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">pbkdf2_hmac</span><span class="p">(</span><span class="s1">&#39;md5&#39;</span><span class="p">,</span> <span class="sa">b</span><span class="s2">&quot;secret&quot;</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="mi">100000</span><span class="p">)</span>
+<span class="n">pwd</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">pbkdf2_hmac</span><span class="p">(</span><span class="s1">'md5'</span><span class="p">,</span> <span class="sa">b</span><span class="s2">"secret"</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="mi">100000</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">pwd</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>5ebe2294ecd0e0f08eab7690d2a6ee69
-b&#39;\xc3;K\xc2\xfb\xb4z\xca`f\xc4T\xc9I\x1b.&#39;
+b'\xc3;K\xc2\xfb\xb4z\xca`f\xc4T\xc9I\x1b.'
 </code></pre></div></p>
 
 
@@ -5084,13 +5084,15 @@ b&#39;\xc3;K\xc2\xfb\xb4z\xca`f\xc4T\xc9I\x1b.&#39;
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="../../../xtra/javascript/mathjax.js"></script>
       

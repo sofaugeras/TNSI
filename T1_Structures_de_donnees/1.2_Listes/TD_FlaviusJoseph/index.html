@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -4860,19 +4860,19 @@ Il y a deux sous-problèmes :<br /></p>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">donnee</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
-            <span class="k">return</span> <span class="s1">&#39;()&#39;</span>
+            <span class="k">return</span> <span class="s1">'()'</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="c1"># la 1ère possibilité met l&#39;aspect récursif en avant</span>
-            <span class="c1"># la 2ème possibilité met l&#39;aspect chaîné en avant</span>
-            <span class="c1">#return &#39;(&#39; + str(self.donnee) + repr(self.suivant).replace(&#39;None&#39;,&#39;()&#39;) + &#39;)&#39;  </span>
-            <span class="k">return</span>  <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">donnee</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;-&gt;&#39;</span> <span class="o">+</span> <span class="nb">repr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">suivant</span><span class="p">)</span>
+            <span class="c1"># la 1ère possibilité met l'aspect récursif en avant</span>
+            <span class="c1"># la 2ème possibilité met l'aspect chaîné en avant</span>
+            <span class="c1">#return '(' + str(self.donnee) + repr(self.suivant).replace('None','()') + ')'  </span>
+            <span class="k">return</span>  <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">donnee</span><span class="p">)</span> <span class="o">+</span> <span class="s1">'-&gt;'</span> <span class="o">+</span> <span class="nb">repr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">suivant</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">estVide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">longueur</span> <span class="o">==</span> <span class="mi">0</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">lire</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span> <span class="p">:</span>
         <span class="k">if</span> <span class="n">k</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">longueur</span> <span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="s1">&#39;Index trop grand&#39;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="s1">'Index trop grand'</span><span class="p">)</span>
         <span class="k">else</span> <span class="p">:</span>
             <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">donnee</span>
@@ -4882,7 +4882,7 @@ Il y a deux sous-problèmes :<br /></p>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">supprimer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">k</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">longueur</span> <span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="s1">&#39;Index trop grand&#39;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="s1">'Index trop grand'</span><span class="p">)</span>
         <span class="k">elif</span> <span class="n">k</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
             <span class="k">return</span> <span class="n">CelluleL</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">suivant</span><span class="o">.</span><span class="n">donnee</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">suivant</span><span class="o">.</span><span class="n">suivant</span><span class="p">)</span>
         <span class="k">else</span> <span class="p">:</span>
@@ -4891,7 +4891,7 @@ Il y a deux sous-problèmes :<br /></p>
     <span class="k">def</span><span class="w"> </span><span class="nf">inserer</span><span class="p">(</span><span class="bp">self</span> <span class="p">,</span> <span class="n">element</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span> <span class="p">:</span>
         <span class="c1"># peut insérer en fin de liste avec k = self.longueur</span>
         <span class="k">if</span> <span class="n">k</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">longueur</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="s1">&#39;Index trop grand&#39;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="s1">'Index trop grand'</span><span class="p">)</span>
         <span class="k">elif</span> <span class="n">k</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">estVide</span><span class="p">():</span>
             <span class="k">return</span> <span class="n">CelluleL</span><span class="p">(</span><span class="n">element</span><span class="p">,</span><span class="bp">self</span><span class="p">)</span>
         <span class="k">elif</span> <span class="n">k</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">estVide</span><span class="p">():</span>
@@ -4904,35 +4904,35 @@ Il y a deux sous-problèmes :<br /></p>
 <summary>Quelques Tests</summary>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># quelques tests</span>
 <span class="n">liste_vide</span> <span class="o">=</span> <span class="n">CelluleL</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;test liste vide : &quot;</span><span class="p">,</span> <span class="n">liste_vide</span><span class="p">,</span> <span class="s2">&quot;est vide : &quot;</span><span class="p">,</span> <span class="n">liste_vide</span><span class="o">.</span><span class="n">estVide</span><span class="p">(),</span> <span class="s2">&quot; et de longueur &quot;</span><span class="p">,</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"test liste vide : "</span><span class="p">,</span> <span class="n">liste_vide</span><span class="p">,</span> <span class="s2">"est vide : "</span><span class="p">,</span> <span class="n">liste_vide</span><span class="o">.</span><span class="n">estVide</span><span class="p">(),</span> <span class="s2">" et de longueur "</span><span class="p">,</span>
     <span class="n">liste_vide</span><span class="o">.</span><span class="n">longueur</span><span class="p">)</span>
 <span class="n">maliste</span> <span class="o">=</span> <span class="n">CelluleL</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="n">liste_vide</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span> <span class="p">,</span> <span class="o">-</span><span class="mi">1</span> <span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">:</span>
     <span class="n">maliste</span> <span class="o">=</span> <span class="n">CelluleL</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">maliste</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La liste : &quot;</span><span class="p">,</span><span class="n">maliste</span><span class="p">,</span> <span class="s2">&quot;a pour longueur &quot;</span><span class="p">,</span><span class="n">maliste</span><span class="o">.</span><span class="n">longueur</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;lecture des éléments d&#39;indices 1 et 5 :&quot;</span><span class="p">,</span><span class="n">maliste</span><span class="o">.</span><span class="n">lire</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="n">maliste</span><span class="o">.</span><span class="n">lire</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"La liste : "</span><span class="p">,</span><span class="n">maliste</span><span class="p">,</span> <span class="s2">"a pour longueur "</span><span class="p">,</span><span class="n">maliste</span><span class="o">.</span><span class="n">longueur</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"lecture des éléments d'indices 1 et 5 :"</span><span class="p">,</span><span class="n">maliste</span><span class="o">.</span><span class="n">lire</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="n">maliste</span><span class="o">.</span><span class="n">lire</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">()</span>
 
 <span class="n">i</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Suppression puis ajout de l&#39;élément d&#39;indice &quot;</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Suppression puis ajout de l'élément d'indice "</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
 <span class="n">maliste</span> <span class="o">=</span> <span class="n">maliste</span><span class="o">.</span><span class="n">supprimer</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Après suppression : &quot;</span><span class="p">,</span><span class="n">maliste</span><span class="p">,</span> <span class="s2">&quot;de longueur &quot;</span><span class="p">,</span><span class="n">maliste</span><span class="o">.</span><span class="n">longueur</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Après suppression : "</span><span class="p">,</span><span class="n">maliste</span><span class="p">,</span> <span class="s2">"de longueur "</span><span class="p">,</span><span class="n">maliste</span><span class="o">.</span><span class="n">longueur</span><span class="p">)</span>
 <span class="n">maliste</span> <span class="o">=</span> <span class="n">maliste</span><span class="o">.</span><span class="n">inserer</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Après insertion : &quot;</span><span class="p">,</span><span class="n">maliste</span><span class="p">,</span> <span class="s2">&quot;de longueur &quot;</span><span class="p">,</span><span class="n">maliste</span><span class="o">.</span><span class="n">longueur</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Après insertion : "</span><span class="p">,</span><span class="n">maliste</span><span class="p">,</span> <span class="s2">"de longueur "</span><span class="p">,</span><span class="n">maliste</span><span class="o">.</span><span class="n">longueur</span><span class="p">)</span>
 </code></pre></div>
 </details>
 <h2 id="3-application-au-probleme-de-josephe">3. Application au problème de Josèphe<a class="headerlink" href="#3-application-au-probleme-de-josephe" title="Permanent link">⚓︎</a></h2>
 <p>On rappelle le terrible problème de Josèphe. Un nombre <em>n</em> de soldats juifs sont positionnés en cercle. Les soldats romains tuent le 1er soldat, puis tuent un soldat sur <em>k</em> jusqu'à ce qu'il n'y ait plus que <em>s</em> survivants. On demande le(s) numéro(s) du(des) survivants.<br />
 Résoudre ce problème en utilisant une liste chainée.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">josephe</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Résoud le problème de Josèphe. Les soldats sont numérotés de 1 à n</span>
 <span class="sd">    @param n : entier &gt;= 1, nombre initial de soldats</span>
 <span class="sd">    @param k : entier &gt;= 2, saut entre deux meurtres de soldats</span>
 <span class="sd">    @param s: entier &gt;=0, nombre de soldats survivants</span>
-<span class="sd">    @return survivor : liste d&#39;entiers, numéros des soldats survivants</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    @return survivor : liste d'entiers, numéros des soldats survivants</span>
+<span class="sd">    """</span>
     <span class="c1">#Construction de la liste vide initiale.</span>
     <span class="n">survivor</span> <span class="o">=</span> <span class="n">CelluleL</span><span class="p">()</span>
     <span class="c1">#Création de la liste intiale de soldat</span>
@@ -4942,63 +4942,63 @@ Résoudre ce problème en utilisant une liste chainée.</p>
     <span class="c1">#Retourne la liste des soldats survivants</span>
     <span class="k">return</span> <span class="n">survivor</span>
 
-<span class="c1">#tests à compléter (ça ne risque pas de fonctionner avec les &quot;?&quot;)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;un soldat sur deux&quot;</span><span class="p">)</span>
+<span class="c1">#tests à compléter (ça ne risque pas de fonctionner avec les "?")</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"un soldat sur deux"</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">42</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Survivant pour &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;soldats :&quot;</span><span class="p">,</span><span class="n">josephe</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="err">???</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Survivant pour "</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">"soldats :"</span><span class="p">,</span><span class="n">josephe</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="err">???</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">()</span>
 <span class="n">tset</span> <span class="o">=</span> <span class="n">josephe</span><span class="p">(</span><span class="mi">41</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2 survivants pour 41 soldats, avec 1 sur 3  :&quot;</span><span class="p">,</span> <span class="n">tset</span><span class="o">.</span><span class="err">????</span><span class="p">,</span> <span class="n">tset</span><span class="o">.</span><span class="err">????</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"2 survivants pour 41 soldats, avec 1 sur 3  :"</span><span class="p">,</span> <span class="n">tset</span><span class="o">.</span><span class="err">????</span><span class="p">,</span> <span class="n">tset</span><span class="o">.</span><span class="err">????</span><span class="p">)</span>
 <span class="n">tset</span> <span class="o">=</span> <span class="n">josephe</span><span class="p">(</span><span class="mi">1234</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;10 survivants pour 1234 soldats, avec 1 sur 7  :&quot;</span><span class="p">,</span> <span class="n">tset</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"10 survivants pour 1234 soldats, avec 1 sur 7  :"</span><span class="p">,</span> <span class="n">tset</span><span class="p">)</span>
 </code></pre></div>
 <details class="question">
 <summary>Correction</summary>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">celluleL</span><span class="w"> </span><span class="kn">import</span> <span class="n">CelluleL</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">josephe</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Résoud le problème de Josèphe. Les soldats sont numérotés de 1 à n</span>
 <span class="sd">    @param n : entier &gt;= 1, nombre initial de soldats</span>
 <span class="sd">    @param k : entier &gt;= 2, saut entre deux meurtres de soldats</span>
 <span class="sd">    @param s: entier &gt;=0, nombre de soldats survivants</span>
-<span class="sd">    @return survivor : liste d&#39;entiers, numéros des sopldats survivants</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    @return survivor : liste d'entiers, numéros des sopldats survivants</span>
+<span class="sd">    """</span>
     <span class="n">survivor</span> <span class="o">=</span> <span class="n">CelluleL</span><span class="p">()</span>
     <span class="c1">#Instanciation de la liste chaînée des n soldats en commencant par le numéro le plus élévé </span>
-    <span class="c1">#pour obtenir une liste chainée dans l&#39;ordre croissant : 0-&gt;1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;()</span>
+    <span class="c1">#pour obtenir une liste chainée dans l'ordre croissant : 0-&gt;1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;()</span>
     <span class="n">survivor</span> <span class="o">=</span> <span class="n">CelluleL</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">survivor</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">:</span>
         <span class="n">survivor</span> <span class="o">=</span> <span class="n">CelluleL</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">survivor</span><span class="p">)</span>
 
     <span class="c1">#print(survivor)</span>
-    <span class="c1">#noVictime est la variable temporaire indiquant le n° d&#39;ordre de la victime</span>
+    <span class="c1">#noVictime est la variable temporaire indiquant le n° d'ordre de la victime</span>
     <span class="n">noVictime</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="c1">#Tant que la longueur de la liste est supérieur au nb de survivants souhaités, on élimine de la liste</span>
     <span class="k">while</span> <span class="n">survivor</span><span class="o">.</span><span class="n">longueur</span> <span class="o">&gt;</span> <span class="n">s</span> <span class="p">:</span>
         <span class="c1">#On calcule qui sera la prochaine victime</span>
         <span class="n">noVictime</span> <span class="o">=</span> <span class="p">(</span><span class="n">noVictime</span> <span class="o">+</span> <span class="n">k</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="p">(</span><span class="n">survivor</span><span class="o">.</span><span class="n">longueur</span><span class="p">)</span>
-        <span class="c1">#print(&quot;La &quot; + str(n-survivor.longueur) + &quot;e victime est le &quot; + str(survivor.lire(noVictime)))</span>
+        <span class="c1">#print("La " + str(n-survivor.longueur) + "e victime est le " + str(survivor.lire(noVictime)))</span>
         <span class="n">survivor</span><span class="o">=</span> <span class="n">survivor</span><span class="o">.</span><span class="n">supprimer</span><span class="p">(</span><span class="n">noVictime</span><span class="p">)</span>
         <span class="c1">#print(survivor)</span>
     <span class="k">return</span> <span class="n">survivor</span>
 
 <span class="c1">#Test pour 1 survivant, tout les 3 soldats avec 41 soldats au départ</span>
 <span class="c1"># tset = josephe(41, 3, 1)</span>
-<span class="c1"># print(&quot;le Survivant pour 1 survivant, tout les 3 soldats avec 41 soldats au départ est : &quot;,tset.donnee)</span>
+<span class="c1"># print("le Survivant pour 1 survivant, tout les 3 soldats avec 41 soldats au départ est : ",tset.donnee)</span>
 
-<span class="c1"># #tests à compléter (ça ne risque pas de fonctionner avec les &quot;?&quot;)</span>
-<span class="c1"># print(&quot;un soldat sur deux&quot;)</span>
+<span class="c1"># #tests à compléter (ça ne risque pas de fonctionner avec les "?")</span>
+<span class="c1"># print("un soldat sur deux")</span>
 <span class="c1"># for i in range(40, 42):</span>
-<span class="c1">#     print(&quot;Survivant pour &quot;, i, &quot;soldats :&quot;,josephe(i,2,1).donnee)</span>
+<span class="c1">#     print("Survivant pour ", i, "soldats :",josephe(i,2,1).donnee)</span>
 <span class="c1"># print()</span>
 
 <span class="n">test2</span> <span class="o">=</span> <span class="n">josephe</span><span class="p">(</span><span class="mi">41</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="c1">#print(&quot;2 survivants pour 41 soldats, avec 1 sur 3  :&quot;, tset.donnee, tset.suivant.donnee)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2 survivants pour 41 soldats, avec 1 sur 3  :&quot;</span><span class="p">,</span> <span class="n">test2</span><span class="o">.</span><span class="n">donnee</span><span class="p">,</span> <span class="n">test2</span><span class="o">.</span><span class="n">suivant</span><span class="o">.</span><span class="n">donnee</span><span class="p">)</span>
+<span class="c1">#print("2 survivants pour 41 soldats, avec 1 sur 3  :", tset.donnee, tset.suivant.donnee)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"2 survivants pour 41 soldats, avec 1 sur 3  :"</span><span class="p">,</span> <span class="n">test2</span><span class="o">.</span><span class="n">donnee</span><span class="p">,</span> <span class="n">test2</span><span class="o">.</span><span class="n">suivant</span><span class="o">.</span><span class="n">donnee</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">test2</span><span class="p">)</span>
 <span class="n">test3</span> <span class="o">=</span> <span class="n">josephe</span><span class="p">(</span><span class="mi">1234</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;10 survivants pour 1234 soldats, avec 1 sur 7  :&quot;</span><span class="p">,</span> <span class="n">test3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"10 survivants pour 1234 soldats, avec 1 sur 7  :"</span><span class="p">,</span> <span class="n">test3</span><span class="p">)</span>
 </code></pre></div>
 </details>
 <h2 id="4-un-deuxieme-type-de-liste-la-liste-chainee-circulaire">4. Un deuxième type de liste : la liste chaînée circulaire<a class="headerlink" href="#4-un-deuxieme-type-de-liste-la-liste-chainee-circulaire" title="Permanent link">⚓︎</a></h2>
@@ -5037,7 +5037,7 @@ Les attributs de <code>Noeud</code> sont:  <br /></p>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">donnee</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+            <span class="k">return</span> <span class="s2">""</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">donnee</span><span class="p">)</span>
 
@@ -5069,7 +5069,7 @@ Les attributs de <code>Noeud</code> sont:  <br /></p>
             <span class="n">precedent</span><span class="o">.</span><span class="n">suivant</span> <span class="o">=</span> <span class="n">courant</span><span class="o">.</span><span class="n">suivant</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">ajoutfin</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">donnee</span><span class="p">):</span>           
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">donnee</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>     <span class="c1"># on remplit d&#39;abord la tête  </span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">donnee</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>     <span class="c1"># on remplit d'abord la tête  </span>
             <span class="bp">self</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">donnee</span> <span class="o">=</span> <span class="n">donnee</span> 
         <span class="k">else</span><span class="p">:</span>                            <span class="c1"># sinon on crée un nouveau noeud</span>
             <span class="n">nouveauNoeud</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">donnee</span><span class="p">)</span>
@@ -5079,52 +5079,52 @@ Les attributs de <code>Noeud</code> sont:  <br /></p>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">donnee</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
-            <span class="k">return</span> <span class="s1">&#39;Liste vide&#39;</span>
+            <span class="k">return</span> <span class="s1">'Liste vide'</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">chaine</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">donnee</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;-&gt;&quot;</span>
+            <span class="n">chaine</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">donnee</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"-&gt;"</span>
             <span class="n">courant</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span>
             <span class="k">while</span> <span class="n">courant</span><span class="o">.</span><span class="n">suivant</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span> <span class="ow">and</span> <span class="n">courant</span><span class="o">.</span><span class="n">suivant</span><span class="o">.</span><span class="n">donnee</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="p">:</span>    
                 <span class="n">courant</span> <span class="o">=</span> <span class="n">courant</span><span class="o">.</span><span class="n">suivant</span>    
-                <span class="n">chaine</span> <span class="o">=</span> <span class="n">chaine</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">courant</span><span class="o">.</span><span class="n">donnee</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;-&gt;&quot;</span>
-            <span class="n">chaine</span> <span class="o">=</span> <span class="n">chaine</span> <span class="o">+</span> <span class="s2">&quot;tête&quot;</span>
+                <span class="n">chaine</span> <span class="o">=</span> <span class="n">chaine</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">courant</span><span class="o">.</span><span class="n">donnee</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"-&gt;"</span>
+            <span class="n">chaine</span> <span class="o">=</span> <span class="n">chaine</span> <span class="o">+</span> <span class="s2">"tête"</span>
             <span class="k">return</span>  <span class="n">chaine</span>
 </code></pre></div>
 <h2 id="5-le-retour-de-flavius">5. Le retour de Flavius<a class="headerlink" href="#5-le-retour-de-flavius" title="Permanent link">⚓︎</a></h2>
 <p><img alt="▶" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/25b6.svg" title=":arrow_forward:" /> <ins>objectif :</ins> Résoudre le problème de Flavius Josèphe avec une liste chaînée circulaire.  <br />
 <em>Remarque</em> : on utilisera la spécificité des listes circulaires, un petit schéma pour s'en sortir sur les courants/précédents est bien utile</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">josephe</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Résoud le problème de Josèphe. Les soldats sont numérotés de 1 à n</span>
 <span class="sd">    @param n : entier &gt;= 1, nombre initial de soldats</span>
 <span class="sd">    @param k : entier &gt;= 2, saut entre deux meurtres de soldats</span>
 <span class="sd">    @param s: entier &gt;=0, nombre de soldats survivants</span>
-<span class="sd">    @return survivor : liste d&#39;entiers, numéros des sopldats survivants</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    @return survivor : liste d'entiers, numéros des sopldats survivants</span>
+<span class="sd">    """</span>
     <span class="n">survivor</span> <span class="o">=</span> <span class="n">ListeCirc</span><span class="p">()</span>
 
     <span class="k">return</span> <span class="n">survivor</span>
 
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;un soldat sur deux&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"un soldat sur deux"</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">42</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Survivant pour &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;soldats :&quot;</span><span class="p">,</span><span class="n">josephe</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">donnee</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Survivant pour "</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">"soldats :"</span><span class="p">,</span><span class="n">josephe</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">donnee</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">()</span>
 
 <span class="n">tset</span> <span class="o">=</span> <span class="n">josephe</span><span class="p">(</span><span class="mi">41</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2 survivants pour 41 soldats, avec 1 sur 3  :&quot;</span><span class="p">,</span> <span class="n">tset</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">donnee</span><span class="p">,</span> <span class="n">tset</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">donnee</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"2 survivants pour 41 soldats, avec 1 sur 3  :"</span><span class="p">,</span> <span class="n">tset</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">donnee</span><span class="p">,</span> <span class="n">tset</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">donnee</span><span class="p">)</span>
 <span class="n">tset</span> <span class="o">=</span> <span class="n">josephe</span><span class="p">(</span><span class="mi">1234</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;10 survivants pour 1234 soldats, avec 1 sur 7  :&quot;</span><span class="p">,</span> <span class="n">tset</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"10 survivants pour 1234 soldats, avec 1 sur 7  :"</span><span class="p">,</span> <span class="n">tset</span><span class="p">)</span>
 </code></pre></div>
 <details class="question">
 <summary>Correction</summary>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">josephe</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Résoud le problème de Josèphe. Les soldats sont numérotés de 1 à n</span>
 <span class="sd">    @param n : entier &gt;= 1, nombre initial de soldats</span>
 <span class="sd">    @param k : entier &gt;= 2, saut entre deux meurtres de soldats</span>
 <span class="sd">    @param s: entier &gt;=0, nombre de soldats survivants</span>
-<span class="sd">    @return survivor : liste d&#39;entiers, numéros des sopldats survivants</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    @return survivor : liste d'entiers, numéros des sopldats survivants</span>
+<span class="sd">    """</span>
     <span class="n">survivor</span> <span class="o">=</span> <span class="n">ListeCirc</span><span class="p">()</span>
 
     <span class="c1">#Instanciation de la liste chaînée des soldats</span>
@@ -5149,16 +5149,16 @@ Les attributs de <code>Noeud</code> sont:  <br /></p>
     <span class="k">return</span> <span class="n">survivor</span>
 
 
-<span class="c1"># print(&quot;un soldat sur deux&quot;)</span>
+<span class="c1"># print("un soldat sur deux")</span>
 <span class="c1"># for i in range(1,42):</span>
-<span class="c1">#     print(&quot;Survivant pour &quot;, i, &quot;soldats :&quot;,josephe(i,2,1).tete.donnee)</span>
+<span class="c1">#     print("Survivant pour ", i, "soldats :",josephe(i,2,1).tete.donnee)</span>
 <span class="c1"># print()</span>
 
 <span class="n">tset</span> <span class="o">=</span> <span class="n">josephe</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2 survivants pour 41 soldats, avec 1 sur 3  :&quot;</span><span class="p">,</span> <span class="n">tset</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">donnee</span><span class="p">,</span> <span class="n">tset</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">suivant</span><span class="o">.</span><span class="n">donnee</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"2 survivants pour 41 soldats, avec 1 sur 3  :"</span><span class="p">,</span> <span class="n">tset</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">donnee</span><span class="p">,</span> <span class="n">tset</span><span class="o">.</span><span class="n">tete</span><span class="o">.</span><span class="n">suivant</span><span class="o">.</span><span class="n">donnee</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">tset</span><span class="p">)</span>
 <span class="c1"># tset = josephe(1234,7,10)</span>
-<span class="c1"># print(&quot;10 survivants pour 1234 soldats, avec 1 sur 7  :&quot;, tset)</span>
+<span class="c1"># print("10 survivants pour 1234 soldats, avec 1 sur 7  :", tset)</span>
 </code></pre></div>
 </details>
 <h2 id="6-bonus">6. Bonus<a class="headerlink" href="#6-bonus" title="Permanent link">⚓︎</a></h2>
@@ -5168,35 +5168,35 @@ Les attributs de <code>Noeud</code> sont:  <br /></p>
 <summary>Correction</summary>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># quelques tests</span>
 <span class="n">liste_vide</span> <span class="o">=</span> <span class="n">ListeCirc</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;test liste vide : &quot;</span><span class="p">,</span> <span class="n">liste_vide</span><span class="p">,</span> <span class="s2">&quot;--&gt; est vide : &quot;</span><span class="p">,</span> <span class="n">liste_vide</span><span class="o">.</span><span class="n">estVide</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"test liste vide : "</span><span class="p">,</span> <span class="n">liste_vide</span><span class="p">,</span> <span class="s2">"--&gt; est vide : "</span><span class="p">,</span> <span class="n">liste_vide</span><span class="o">.</span><span class="n">estVide</span><span class="p">())</span>
 
 <span class="n">maliste</span> <span class="o">=</span> <span class="n">ListeCirc</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="p">:</span>
     <span class="n">maliste</span><span class="o">.</span><span class="n">ajoutfin</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La liste : &quot;</span><span class="p">,</span><span class="n">maliste</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;longeur de maliste :&quot;</span><span class="p">,</span> <span class="n">maliste</span><span class="o">.</span><span class="n">longueur</span><span class="p">())</span>
-<span class="c1"># print(&quot;lecture des éléments d&#39;indices 1 et 5 :&quot;,maliste.lire(1),maliste.lire(5))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"La liste : "</span><span class="p">,</span><span class="n">maliste</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"longeur de maliste :"</span><span class="p">,</span> <span class="n">maliste</span><span class="o">.</span><span class="n">longueur</span><span class="p">())</span>
+<span class="c1"># print("lecture des éléments d'indices 1 et 5 :",maliste.lire(1),maliste.lire(5))</span>
 <span class="c1"># print()</span>
 
 <span class="n">noeudcourant</span> <span class="o">=</span> <span class="n">maliste</span><span class="o">.</span><span class="n">tete</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">noeudcourant</span><span class="p">)</span>
 
 <span class="n">maliste</span><span class="o">.</span><span class="n">supprimerCourant</span><span class="p">(</span><span class="n">noeudcourant</span><span class="o">.</span><span class="n">suivant</span><span class="p">,</span> <span class="n">noeudcourant</span><span class="o">.</span><span class="n">suivant</span><span class="o">.</span><span class="n">suivant</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La liste apres suppression element +2 : &quot;</span><span class="p">,</span><span class="n">maliste</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"La liste apres suppression element +2 : "</span><span class="p">,</span><span class="n">maliste</span><span class="p">)</span>
 
-<span class="c1"># print(&quot;ordre inverse&quot;)</span>
+<span class="c1"># print("ordre inverse")</span>
 <span class="c1"># maliste2 = CelluleL(10,liste_vide)</span>
 <span class="c1"># for i in range(9,0,-1) :</span>
 <span class="c1">#     maliste2 = CelluleL(i,maliste2)</span>
 <span class="c1"># print(maliste2)</span>
 
 <span class="c1"># i = 5</span>
-<span class="c1"># print(&quot;Suppression puis ajout de l&#39;élément d&#39;indice &quot;,i)</span>
+<span class="c1"># print("Suppression puis ajout de l'élément d'indice ",i)</span>
 <span class="c1"># maliste = maliste.supprimer(i)</span>
-<span class="c1"># print(&quot;Après suppression : &quot;,maliste, &quot;de longueur &quot;,maliste.longueur)</span>
+<span class="c1"># print("Après suppression : ",maliste, "de longueur ",maliste.longueur)</span>
 <span class="c1"># maliste = maliste.inserer(i,i)</span>
-<span class="c1"># print(&quot;Après insertion : &quot;,maliste, &quot;de longueur &quot;,maliste.longueur)</span>
+<span class="c1"># print("Après insertion : ",maliste, "de longueur ",maliste.longueur)</span>
 </code></pre></div>
 </details>
 <h3 id="62-coder-la-methode-longueur-pour-la-classe-listecirc">6.2 Coder la méthode <code>longueur</code> pour la classe <code>ListeCirc</code><a class="headerlink" href="#62-coder-la-methode-longueur-pour-la-classe-listecirc" title="Permanent link">⚓︎</a></h3>
@@ -5391,13 +5391,15 @@ Les attributs de <code>Noeud</code> sont:  <br /></p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="../../../xtra/javascript/mathjax.js"></script>
       

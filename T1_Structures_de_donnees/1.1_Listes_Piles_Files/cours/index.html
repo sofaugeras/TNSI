@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5097,15 +5097,15 @@ Des renseignement intéressants à son sujet peuvent être trouvés <a href="htt
         <span class="k">pass</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>       <span class="c1"># Hors-Programme : pour afficher </span>
-        <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;|&quot;</span>              <span class="c1"># convenablement la pile avec print(p)</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="s2">"|"</span>              <span class="c1"># convenablement la pile avec print(p)</span>
         <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="p">:</span>
-            <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;|&quot;</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"|"</span>
         <span class="k">return</span> <span class="n">s</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>       <span class="c1"># Hors-Programme : pour afficher </span>
-        <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;|&quot;</span>              <span class="c1"># convenablement la pile avec p</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="s2">"|"</span>              <span class="c1"># convenablement la pile avec p</span>
         <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="p">:</span>
-            <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;|&quot;</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"|"</span>
         <span class="k">return</span> <span class="n">s</span>  
 
 <span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
@@ -5134,20 +5134,20 @@ Des renseignement intéressants à son sujet peuvent être trouvés <a href="htt
 
     <span class="k">def</span><span class="w"> </span><span class="nf">depile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="s2">&quot;Vous avez essayé de dépiler une pile vide !&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="s2">"Vous avez essayé de dépiler une pile vide !"</span><span class="p">)</span>
         <span class="k">else</span> <span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> 
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>       <span class="c1"># Hors-Programme : pour afficher </span>
-        <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;|&quot;</span>              <span class="c1"># convenablement la pile avec print(p)</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="s2">"|"</span>              <span class="c1"># convenablement la pile avec print(p)</span>
         <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="p">:</span>
-            <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;|&quot;</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"|"</span>
         <span class="k">return</span> <span class="n">s</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>       <span class="c1"># Hors-Programme : pour afficher </span>
-        <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;|&quot;</span>              <span class="c1"># convenablement la pile avec p</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="s2">"|"</span>              <span class="c1"># convenablement la pile avec p</span>
         <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="p">:</span>
-            <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;|&quot;</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"|"</span>
         <span class="k">return</span> <span class="n">s</span>  
 
 <span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
@@ -5174,7 +5174,7 @@ Des renseignement intéressants à son sujet peuvent être trouvés <a href="htt
 <p>À l'aide de deux variables <code>adresses</code> et <code>adresse_courante</code>, et de la classe <code>Pile</code> créée plus haut, simulez une gestion de l'historique de navigation internet.<br />
 Seules deux fonctions <code>go_to(nouvelle_adresse)</code> et <code>back()</code> sont à créer.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">adresses</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
-<span class="n">adresse_courante</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">adresse_courante</span> <span class="o">=</span> <span class="s2">""</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">go_to</span><span class="p">(</span><span class="n">nouvelle_adresse</span><span class="p">)</span> <span class="p">:</span>
     <span class="k">global</span> <span class="n">adresse_courante</span>
@@ -5186,19 +5186,19 @@ Seules deux fonctions <code>go_to(nouvelle_adresse)</code> et <code>back()</code
     <span class="c1">#</span>
     <span class="c1">#</span>
 
-<span class="c1">#Exemple d&#39;utilisation :</span>
-<span class="n">go_to</span><span class="p">(</span><span class="s2">&quot;google.fr&quot;</span><span class="p">)</span>
-<span class="n">go_to</span><span class="p">(</span><span class="s2">&quot;lemonde.fr&quot;</span><span class="p">)</span>
-<span class="n">go_to</span><span class="p">(</span><span class="s2">&quot;blabla.fr&quot;</span><span class="p">)</span>
+<span class="c1">#Exemple d'utilisation :</span>
+<span class="n">go_to</span><span class="p">(</span><span class="s2">"google.fr"</span><span class="p">)</span>
+<span class="n">go_to</span><span class="p">(</span><span class="s2">"lemonde.fr"</span><span class="p">)</span>
+<span class="n">go_to</span><span class="p">(</span><span class="s2">"blabla.fr"</span><span class="p">)</span>
 
 <span class="n">back</span><span class="p">()</span>
 <span class="n">adresse_courante</span>
-<span class="o">&gt;&gt;</span> <span class="s1">&#39;lemonde.fr&#39;</span>
+<span class="o">&gt;&gt;</span> <span class="s1">'lemonde.fr'</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">adresses</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
-<span class="n">adresse_courante</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">adresse_courante</span> <span class="o">=</span> <span class="s2">""</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">go_to</span><span class="p">(</span><span class="n">nouvelle_adresse</span><span class="p">)</span> <span class="p">:</span>
     <span class="k">global</span> <span class="n">adresse_courante</span>
@@ -5285,9 +5285,9 @@ Pour être utilisée, une file doit permettre a minima :<br />
         <span class="k">pass</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>       <span class="c1"># Hors-Programme : pour afficher </span>
-        <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;|&quot;</span>              <span class="c1"># convenablement la file avec print(p)</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="s2">"|"</span>              <span class="c1"># convenablement la file avec print(p)</span>
         <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="p">:</span>
-            <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;|&quot;</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"|"</span>
         <span class="k">return</span> <span class="n">s</span>
 
     <span class="n">f</span> <span class="o">=</span> <span class="n">File</span><span class="p">()</span>
@@ -5311,14 +5311,14 @@ Pour être utilisée, une file doit permettre a minima :<br />
 
     <span class="k">def</span><span class="w"> </span><span class="nf">defile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="o">==</span> <span class="kc">True</span> <span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="s2">&quot;Vous avez essayé de défiler une file vide !&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="s2">"Vous avez essayé de défiler une file vide !"</span><span class="p">)</span>
         <span class="k">else</span> <span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> 
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>       <span class="c1"># Hors-Programme : pour afficher </span>
-        <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;|&quot;</span>              <span class="c1"># convenablement la file avec print(p)</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="s2">"|"</span>              <span class="c1"># convenablement la file avec print(p)</span>
         <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="p">:</span>
-            <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;|&quot;</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"|"</span>
         <span class="k">return</span> <span class="n">s</span>
 </code></pre></div>
 </div>
@@ -5348,20 +5348,20 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie. <br
 
             <span class="k">def</span><span class="w"> </span><span class="nf">depile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
                 <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="p">:</span>
-                    <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="s2">&quot;Vous avez essayé de dépiler une pile vide !&quot;</span><span class="p">)</span>
+                    <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="s2">"Vous avez essayé de dépiler une pile vide !"</span><span class="p">)</span>
                 <span class="k">else</span> <span class="p">:</span>
                     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> 
 
             <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>       <span class="c1"># Hors-Programme : pour afficher </span>
-                <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;|&quot;</span>              <span class="c1"># convenablement la pile avec print(p)</span>
+                <span class="n">s</span> <span class="o">=</span> <span class="s2">"|"</span>              <span class="c1"># convenablement la pile avec print(p)</span>
                 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="p">:</span>
-                    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;|&quot;</span>
+                    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"|"</span>
                 <span class="k">return</span> <span class="n">s</span>
 
             <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>       <span class="c1"># Hors-Programme : pour afficher </span>
-                <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;|&quot;</span>              <span class="c1"># convenablement la pile avec p</span>
+                <span class="n">s</span> <span class="o">=</span> <span class="s2">"|"</span>              <span class="c1"># convenablement la pile avec p</span>
                 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="p">:</span>
-                    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;|&quot;</span>
+                    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"|"</span>
                 <span class="k">return</span> <span class="n">s</span>  
 </code></pre></div>
 <div class="admonition abstract">
@@ -5386,7 +5386,7 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie. <br
     <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">entree_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entree</span><span class="p">)</span>
         <span class="n">sortie_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sortie</span><span class="p">)</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;entrée : </span><span class="si">{</span><span class="n">entree_str</span><span class="si">}</span><span class="s2">, sortie : </span><span class="si">{</span><span class="n">sortie_str</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">"entrée : </span><span class="si">{</span><span class="n">entree_str</span><span class="si">}</span><span class="s2">, sortie : </span><span class="si">{</span><span class="n">sortie_str</span><span class="si">}</span><span class="s2">."</span>
 
 <span class="n">f</span> <span class="o">=</span> <span class="n">File</span><span class="p">()</span>
 <span class="n">f</span><span class="o">.</span><span class="n">enfile</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -5409,7 +5409,7 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie. <br
 
     <span class="k">def</span><span class="w"> </span><span class="nf">defile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
-            <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="s2">&quot;File vide !&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="s2">"File vide !"</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sortie</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="o">==</span> <span class="kc">True</span> <span class="p">:</span>
             <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">entree</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="o">==</span> <span class="kc">False</span> <span class="p">:</span>
@@ -5579,13 +5579,15 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie. <br
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="../../../xtra/javascript/mathjax.js"></script>
       

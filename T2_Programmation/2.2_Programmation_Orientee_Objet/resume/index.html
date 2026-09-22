@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -4814,15 +4814,15 @@ L’instance est crée grâce à un <strong>constructeur</strong>.<br /></p>
 <p>Le code suivant montre, étape par étape, la classe « <em>personnage</em> » telle qu’on l’a définie au paragraphe précédent.
 <img alt="▶" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/25b6.svg" title=":arrow_forward:" /> Le mot-clé pour définir une classe est <code>class</code>. On donne ensuite les spécifications de la classe (on documente).</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code>    <span class="k">class</span><span class="w"> </span><span class="nc">Personnage</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Personnage d&#39;un jeu de type hack &#39;n slash</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Personnage d'un jeu de type hack 'n slash</span>
 
 <span class="sd">    Attributs :</span>
 <span class="sd">        _nom : chaine de caratères, nom du personnage</span>
 <span class="sd">        _pv : entier positif ou nul, points de vie du personnage</span>
 <span class="sd">        _degats : entier strictement positif, dégats maximum</span>
 <span class="sd"> du personnage</span>
-<span class="sd">        _position : couple d&#39;entiers donnant l&#39;abscisse et l&#39;ordonnée</span>
+<span class="sd">        _position : couple d'entiers donnant l'abscisse et l'ordonnée</span>
 <span class="sd">                        du personnage sur la carte</span>
 <span class="sd">    Méthodes:</span>
 <span class="sd">        Init() constructeur de la classe Personnage</span>
@@ -4831,23 +4831,23 @@ L’instance est crée grâce à un <strong>constructeur</strong>.<br /></p>
 <span class="sd">                Uniquement pour les attributs _pv et _position</span>
 <span class="sd">        deplacement(paramètres) : permet de changer la position</span>
 <span class="sd"> du personnage</span>
-<span class="sd">        attaque() : renvoie les dégâts faits à l&#39;adversaire</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">        attaque() : renvoie les dégâts faits à l'adversaire</span>
+<span class="sd">    """</span>
 </code></pre></div>
 <p><img alt="▶" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/25b6.svg" title=":arrow_forward:" /> La première méthode dans la classe est le <strong>constructeur</strong>, appelé <code>__init__</code> en Python. Toutes les méthodes d’une classe ont au moins le paramètre <code>self</code>, c’est-à-dire que <mark>la méthode s’applique à l’objet lui-même</mark>. Dans le constructeur de Personnage est aussi passé en argument le paramètre nom. Le constructeur initialise les <strong>attributs</strong> de l’objet (points de vie, dégâts, position). Tous les attributs sont précédés d’un tiret bas « _ »  pour signifier qu’ils sont privés.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">nom</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Constructeur de la classe Personnage</span>
 <span class="sd">        Données:   </span>
 <span class="sd">            _nom : chaine de caratères, nom du personnage</span>
 <span class="sd">            _pv : entier positif ou nul, points de vie du personnage</span>
 <span class="sd">            _degats : entier strictement positif, dégats maximum du</span>
 <span class="sd"> personnage</span>
-<span class="sd">            _position : couple d&#39;entiers donnant l&#39;abscisse et</span>
-<span class="sd"> l&#39;ordonné du personnage sur la carte</span>
+<span class="sd">            _position : couple d'entiers donnant l'abscisse et</span>
+<span class="sd"> l'ordonné du personnage sur la carte</span>
 <span class="sd">        Résultat : </span>
 <span class="sd">            ne retourne rien, crée un nouveau Personnage</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_nom</span> <span class="o">=</span> <span class="n">nom</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_pv</span> <span class="o">=</span> <span class="mi">80</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_degats</span> <span class="o">=</span> <span class="mi">8</span>
@@ -4866,9 +4866,9 @@ L’instance est crée grâce à un <strong>constructeur</strong>.<br /></p>
 
 <span class="c1">#mutateurs des attributs</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">setPv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">nouveaux_pv</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Les points de vie d’un personnage sont positifs ou nul.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="k">if</span> <span class="n">nouveaux_pv</span> <span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_pv</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">else</span><span class="p">:</span>
@@ -4879,18 +4879,18 @@ L’instance est crée grâce à un <strong>constructeur</strong>.<br /></p>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">setPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">nouvelle_pos</span><span class="p">):</span>
     <span class="c1"># un contrôle sur la position doit se faire en communiquant avec</span>
-    <span class="c1"># l&#39;objet carte: x et y doivent être compatibles.</span>
+    <span class="c1"># l'objet carte: x et y doivent être compatibles.</span>
     <span class="c1"># Il y aura des instructions du type carte.getDimensions(),</span>
     <span class="c1"># cartes.getObstacles() etc. dans cette méthode</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_position</span> <span class="o">=</span> <span class="n">nouvelle_position</span>
 </code></pre></div>
 <img alt="▶" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/25b6.svg" title=":arrow_forward:" /> <strong>Méthodes de la classe</strong>. Comme précédemment, les méthodes ont <code>self</code> en premier paramètre. Dans cet exemple, la méthode de déplacement reste à programmer suivant le jeu.</p>
 <p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">deplacement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">paramètres</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Données: paramètres dépendant des règles</span>
 <span class="sd">    Résultat: renvoie le booléen tout_s_est_bien_passe Vrai si le déplacement est possible à programmer suivant les règles, </span>
 <span class="sd">    le return est assez inélégant ici !</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">tout_s_est_bien_passe</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="c1">#...code...</span>
     <span class="k">if</span> <span class="n">tout_s_est_bien_passe</span> <span class="p">:</span>
@@ -4898,24 +4898,24 @@ L’instance est crée grâce à un <strong>constructeur</strong>.<br /></p>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">False</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">Attaque</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Données: pas de paramètre dans cette méthode</span>
 <span class="sd">    Résultat: renvoie un entier aléatoire compris entre 1 et _degats</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="k">return</span><span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">_degats</span><span class="p">))</span>
 </code></pre></div>
 On représente la classe comme ceci :</p>
 <p><img alt="classe" class="center" src="../data/personnage.png" width="50%" /></p>
 <h2 id="4-creation-dune-instance-et-acces-aux-attributs">4. Création d’une instance et accès aux attributs.<a class="headerlink" href="#4-creation-dune-instance-et-acces-aux-attributs" title="Permanent link">⚓︎</a></h2>
 <p><strong>Création/Instanciation d’un objet :</strong></p>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>&gt;&gt;&gt; perso_1 = Personnage(&quot;Un Seul Bras Les Tua Tous&quot;)
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>&gt;&gt;&gt; perso_1 = Personnage("Un Seul Bras Les Tua Tous")
 l’appel à mon_perso renvoie l’adresse de l’objet :
 &gt;&gt;&gt; perso_1
 &lt;__main__.Personnage object at 0x110c892b0&gt;
 </code></pre></div>
 <p>Pour <strong>accéder</strong> aux attributs, on utilise l’accesseur, sans préciser le paramètre <code>self</code> :
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>&gt;&gt;&gt; perso_1.getNom()
-&#39;Un Seul Bras Les Tua Tous&#39;
+'Un Seul Bras Les Tua Tous'
 </code></pre></div>
 Pour <strong>modifier</strong> un attribut, on utilise le mutateur, sans préciser le paramètre <code>self</code> :</p>
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>&gt;&gt;&gt; perso_1.setDegats(12)
@@ -4926,17 +4926,17 @@ Pour <strong>modifier</strong> un attribut, on utilise le mutateur, sans précis
 <p>En programmation objet, indépendamment du langage, on considère que les attributs doivent être <strong>privés</strong>, <strong>encapsulés</strong> à l’intérieur de la classe et accessibles uniquement par mutateurs. En Python avancé la situation est différente : les propriétés et décorateurs, que l’on ne verra pas cette année, évitent qu’un objet extérieur modifie un attribut sans en respecter les spécifications.<br /></p>
 <p>Les attributs dans le constructeur ne sont plus précédés du double tiret, le code devient :
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">nom</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Constructeur de la classe Personnage</span>
 <span class="sd">    ...</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">nom</span> <span class="o">=</span> <span class="n">nom</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">pv</span> <span class="o">=</span> <span class="mi">80</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">degats</span> <span class="o">=</span> <span class="mi">8</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
 </code></pre></div></p>
 <p>Après création du personnage, on peut alors accéder et modifier les attributs sans getters ni setters :</p>
-<p><div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>&gt;&gt;&gt; perso_1 = Personnage(&quot;Un Seul Bras Les Tua Tous&quot;)
+<p><div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>&gt;&gt;&gt; perso_1 = Personnage("Un Seul Bras Les Tua Tous")
 &gt;&gt;&gt; perso_1.degats = 12
 &gt;&gt;&gt; perso_1.degats
 12
@@ -4948,9 +4948,9 @@ Vous trouverez sur le web de nombreux exemples de code rédigés de cette maniè
 <p><img alt="1⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/31-20e3.svg" title=":one:" /> On importe la classe dans notre programme principal ; en effet il est conseillé de faire <span class="arithmatex">\(1\)</span> fichier par classe. On donne un alias plus court (perso).<br />
 <code>import classe_personnage as perso</code></p>
 <p><img alt="2⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/32-20e3.svg" title=":two:" /> On crée les personnages et on modifie leurs attributs<br /></p>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">perso_1</span> <span class="o">=</span> <span class="n">perso</span><span class="o">.</span><span class="n">Personnage</span><span class="p">(</span><span class="s2">&quot;Un Seul Bras Les Tua Tous&quot;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">perso_1</span> <span class="o">=</span> <span class="n">perso</span><span class="o">.</span><span class="n">Personnage</span><span class="p">(</span><span class="s2">"Un Seul Bras Les Tua Tous"</span><span class="p">)</span>
 <span class="n">perso_1</span><span class="o">.</span><span class="n">setDegats</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
-<span class="n">perso_2</span> <span class="o">=</span> <span class="n">perso</span><span class="o">.</span><span class="n">Personnage</span><span class="p">(</span><span class="s2">&quot;Ventre de Fer&quot;</span><span class="p">)</span>
+<span class="n">perso_2</span> <span class="o">=</span> <span class="n">perso</span><span class="o">.</span><span class="n">Personnage</span><span class="p">(</span><span class="s2">"Ventre de Fer"</span><span class="p">)</span>
 <span class="n">perso_2</span><span class="o">.</span><span class="n">setPv</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
 </code></pre></div>
 <div class="admonition tip">
@@ -4969,7 +4969,7 @@ Vous trouverez sur le web de nombreux exemples de code rédigés de cette maniè
 <li><code>__lt__(self , autre_instance)</code> permet de faire une méthode de comparaison entre deux objets (lt = less than)<br /></li>
 </ul>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_nom</span><span class="si">}</span><span class="s1"> a </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_pv</span><span class="si">}</span><span class="s1"> points de vie,</span><span class="se">\n</span><span class="s1">inflige </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_degats</span><span class="si">}</span><span class="s1"> points de dégats au plus, </span><span class="se">\n</span><span class="s1">et est en position </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_position</span><span class="si">}</span><span class="s1">&#39;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_nom</span><span class="si">}</span><span class="s1"> a </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_pv</span><span class="si">}</span><span class="s1"> points de vie,</span><span class="se">\n</span><span class="s1">inflige </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_degats</span><span class="si">}</span><span class="s1"> points de dégats au plus, </span><span class="se">\n</span><span class="s1">et est en position </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_position</span><span class="si">}</span><span class="s1">'</span>
 </code></pre></div>
 
 
@@ -5117,13 +5117,15 @@ Vous trouverez sur le web de nombreux exemples de code rédigés de cette maniè
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="../../../xtra/javascript/mathjax.js"></script>
       

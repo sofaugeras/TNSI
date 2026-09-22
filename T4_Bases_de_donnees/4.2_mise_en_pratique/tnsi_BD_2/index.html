@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -4829,7 +4829,7 @@
 </table>
 
 <p><img alt="⌛" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/231b.svg" title=":hourglass:" /> Pour obtenir les auteurs prénommés <em>Jules</em> :</p>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">%</span><span class="n">sql</span> <span class="n">SELECT</span> <span class="n">NomAuteur</span><span class="p">,</span> <span class="n">PrenomAuteur</span> <span class="kn">from</span><span class="w"> </span><span class="nn">Auteurs</span> <span class="n">WHERE</span> <span class="n">PrenomAuteur</span> <span class="o">=</span> <span class="s1">&#39;Jules&#39;</span><span class="p">;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">%</span><span class="n">sql</span> <span class="n">SELECT</span> <span class="n">NomAuteur</span><span class="p">,</span> <span class="n">PrenomAuteur</span> <span class="kn">from</span><span class="w"> </span><span class="nn">Auteurs</span> <span class="n">WHERE</span> <span class="n">PrenomAuteur</span> <span class="o">=</span> <span class="s1">'Jules'</span><span class="p">;</span>
 </code></pre></div>
 <table>
     <tr>
@@ -4846,7 +4846,7 @@
 <p><strong><em>Attention</em></strong> : essayez de remplacer <strong>Jules</strong> par <strong>jules</strong> et vous constaterez que la recherche est sensible aux majuscules.</p>
 <p><img alt="⌛" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/231b.svg" title=":hourglass:" /> Supposns maintenant que l'on recherche les auteurs dont le prénom commence par <strong>P</strong> <br />
 Nous utiliserons une clause <em>LIKE</em> de cette manière.</p>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">%</span><span class="n">sql</span> <span class="n">SELECT</span> <span class="n">NomAuteur</span><span class="p">,</span> <span class="n">PrenomAuteur</span> <span class="kn">from</span><span class="w"> </span><span class="nn">Auteurs</span> <span class="n">WHERE</span> <span class="n">PrenomAuteur</span> <span class="n">LIKE</span> <span class="s1">&#39;P%&#39;</span><span class="p">;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">%</span><span class="n">sql</span> <span class="n">SELECT</span> <span class="n">NomAuteur</span><span class="p">,</span> <span class="n">PrenomAuteur</span> <span class="kn">from</span><span class="w"> </span><span class="nn">Auteurs</span> <span class="n">WHERE</span> <span class="n">PrenomAuteur</span> <span class="n">LIKE</span> <span class="s1">'P%'</span><span class="p">;</span>
 </code></pre></div>
 <h3 id="selection-multiple">Sélection multiple<a class="headerlink" href="#selection-multiple" title="Permanent link">⚓︎</a></h3>
 <p>Il est possible de croiser plusieurs critères à l'aide d'opérateurs booleens : <strong>AND</strong> et <strong>OR</strong>. </p>
@@ -4859,7 +4859,7 @@ Vous verrez à l'occation l'utilisation de l'opérateur <em>BETWEEN</em> pour te
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">nbr</span> <span class="o">=</span> <span class="o">%</span><span class="n">sql</span> <span class="n">SELECT</span> <span class="n">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">Auteurs</span> <span class="n">WHERE</span> <span class="n">AnneeNaissance</span> <span class="n">BETWEEN</span> <span class="mi">1900</span> <span class="n">AND</span> <span class="mi">1915</span><span class="p">;</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">nbr</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;récupérer juste le nombre : &quot;</span><span class="p">,</span> <span class="n">nbr</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"récupérer juste le nombre : "</span><span class="p">,</span> <span class="n">nbr</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
 </code></pre></div>
 <h3 id="trier-les-reponses">Trier les réponses<a class="headerlink" href="#trier-les-reponses" title="Permanent link">⚓︎</a></h3>
 <p><img alt="⌛" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/231b.svg" title=":hourglass:" /> Nous allons lister tous les auteurs par ordre croissant d'année de naissance</p>
@@ -4887,7 +4887,7 @@ Vous verrez à l'occation l'utilisation de l'opérateur <em>BETWEEN</em> pour te
 </ol>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># Vérification des réponses</span>
 
-<span class="k">assert</span> <span class="n">reponse_1</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Les Robots&#39;</span>
+<span class="k">assert</span> <span class="n">reponse_1</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'Les Robots'</span>
 <span class="k">assert</span> <span class="n">reponse_2</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">6</span>
 </code></pre></div>
 </div>
@@ -4926,8 +4926,8 @@ Vous verrez à l'occation l'utilisation de l'opérateur <em>BETWEEN</em> pour te
 <li>récupérer dans la variable <code>reponse_1</code> une liste dont les attributs sont <strong>Titre</strong>, <strong>PrenomAuteur</strong>, <strong>NomAuteur</strong> et <strong>AnneePubli</strong>, triée du plus récent au plus ancien.</li>
 <li>récupérer dans la variable <code>reponse_2</code> une liste dont les attributs sont <strong>Titre</strong>, <strong>PrenomAuteur</strong>, <strong>NomAuteur</strong> et <strong>AnneePubli</strong> écrits en français.</li>
 </ol>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">assert</span> <span class="n">reponse_1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="p">(</span><span class="s1">&#39;Ubik&#39;</span><span class="p">,</span> <span class="s1">&#39;Philip&#39;</span><span class="p">,</span> <span class="s1">&#39;K. Dick&#39;</span><span class="p">,</span> <span class="mi">1969</span><span class="p">)</span>
-<span class="k">assert</span> <span class="n">reponse_2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="p">(</span><span class="s1">&#39;La nuit des temps&#39;</span><span class="p">,</span> <span class="s1">&#39;René&#39;</span><span class="p">,</span> <span class="s1">&#39;Barjavel&#39;</span><span class="p">,</span> <span class="mi">1968</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">assert</span> <span class="n">reponse_1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="p">(</span><span class="s1">'Ubik'</span><span class="p">,</span> <span class="s1">'Philip'</span><span class="p">,</span> <span class="s1">'K. Dick'</span><span class="p">,</span> <span class="mi">1969</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">reponse_2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="p">(</span><span class="s1">'La nuit des temps'</span><span class="p">,</span> <span class="s1">'René'</span><span class="p">,</span> <span class="s1">'Barjavel'</span><span class="p">,</span> <span class="mi">1968</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block"></div>
@@ -4946,7 +4946,7 @@ Vous verrez à l'occation l'utilisation de l'opérateur <em>BETWEEN</em> pour te
 <div class="tabbed-block">
 <p>Ecrire une requête permettant d'obtenir une liste dont les attributs sont <strong>Titre</strong>, <strong>NomAuteur</strong> et <strong>Langue</strong> triée par ordre croissant de date de naissance de l'auteur.</p>
 <p>Vous stockerez le résultat dans une variable <code>result</code>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">assert</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="p">(</span><span class="s1">&#39;De la Terre à la Lune&#39;</span><span class="p">,</span> <span class="s1">&#39;Verne&#39;</span><span class="p">,</span> <span class="s1">&#39;Français&#39;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">assert</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="p">(</span><span class="s1">'De la Terre à la Lune'</span><span class="p">,</span> <span class="s1">'Verne'</span><span class="p">,</span> <span class="s1">'Français'</span><span class="p">)</span>
 </code></pre></div></p>
 </div>
 <div class="tabbed-block"></div>
@@ -5099,13 +5099,15 @@ Vous verrez à l'occation l'utilisation de l'opérateur <em>BETWEEN</em> pour te
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="../../../xtra/javascript/mathjax.js"></script>
       

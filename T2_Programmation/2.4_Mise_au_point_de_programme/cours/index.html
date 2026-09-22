@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5155,8 +5155,8 @@
 <p>Lorsque Python lève une exception telle que celles présentes dans le tableau, le programme est stoppé immédiatement et un message d’erreur est affiché pour prévenir l’utilisateur de la cause du problème.</p>
 <p>Prenons l’exemple de ce programme qui saisit un nombre et calcule son inverse :
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1">#version normale</span>
-<span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Saisir x : &quot;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1/x =&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="n">x</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Saisir x : "</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"1/x ="</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="n">x</span><span class="p">)</span>
 </code></pre></div>
 Selon ce que va saisir l’utilisateur, le résultat sera très différent. En cas de mauvaise saisie, le programme stoppe.</p>
 <table>
@@ -5186,61 +5186,61 @@ Selon ce que va saisir l’utilisateur, le résultat sera très différent. En c
 <p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">try</span><span class="p">:</span>
     <span class="c1"># Code à risque</span>
 <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">erreur</span><span class="p">:</span>
-    <span class="c1"># Traitement de l&#39;erreur (affichage...)</span>
+    <span class="c1"># Traitement de l'erreur (affichage...)</span>
 </code></pre></div>
 Pour le programme qui calcule l’inverse cela donnerait :
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># Version avec capture simple et affichage de l&#39;erreur</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># Version avec capture simple et affichage de l'erreur</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Saisir x : &quot;</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1/x =&quot;</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Saisir x : "</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"1/x ="</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">x</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">erreur</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Erreur :&quot;</span><span class="p">,</span> <span class="n">erreur</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Erreur :"</span><span class="p">,</span> <span class="n">erreur</span><span class="p">)</span>
 </code></pre></div></p>
 <h3 id="22-differenciation">2.2 - Différenciation<a class="headerlink" href="#22-differenciation" title="Permanent link">⚓︎</a></h3>
 <p>Si l’on souhaite différencier le traitement des erreurs, il faudra ajouter plusieurs blocs except, typiquement un par type d’erreur
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># Version avec capture et traitement différenciés</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Saisir x : &quot;</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1/x =&quot;</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Saisir x : "</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"1/x ="</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">x</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">erreur</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Erreur de saisie :&quot;</span><span class="p">,</span> <span class="n">erreur</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Erreur de saisie :"</span><span class="p">,</span> <span class="n">erreur</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">ZeroDivisionError</span> <span class="k">as</span> <span class="n">erreur</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Impossible de diviser par zéro :&quot;</span><span class="p">,</span> <span class="n">erreur</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Impossible de diviser par zéro :"</span><span class="p">,</span> <span class="n">erreur</span><span class="p">)</span>
 </code></pre></div></p>
 <h3 id="23-et-quoi-quil-arrive">2.3 - Et quoi qu’il arrive...<a class="headerlink" href="#23-et-quoi-quil-arrive" title="Permanent link">⚓︎</a></h3>
 <p>On peut également ajouter un bloc d’instructions qui sera exécuté quoiqu’il arrive : erreur ou comportement normal. Pour cela on ajoutera à la fin le mot clef <code>finally</code> :
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># Version avec capture et traitement différenciés et</span>
-<span class="c1"># quoiqu&#39;il arrive un message de fin</span>
+<span class="c1"># quoiqu'il arrive un message de fin</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Saisir x : &quot;</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1/x =&quot;</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Saisir x : "</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"1/x ="</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">x</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">erreur</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Erreur de saisie :&quot;</span><span class="p">,</span> <span class="n">erreur</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Erreur de saisie :"</span><span class="p">,</span> <span class="n">erreur</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">ZeroDivisionError</span> <span class="k">as</span> <span class="n">erreur</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Impossible de diviser par zéro :&quot;</span><span class="p">,</span> <span class="n">erreur</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Impossible de diviser par zéro :"</span><span class="p">,</span> <span class="n">erreur</span><span class="p">)</span>
 <span class="k">finally</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Merci d&#39;avoir utiliser ce calculateur&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Merci d'avoir utiliser ce calculateur"</span><span class="p">)</span>
 </code></pre></div></p>
 <h3 id="24-lever-soi-meme-une-exception">2.4 - Lever soi même une Exception<a class="headerlink" href="#24-lever-soi-meme-une-exception" title="Permanent link">⚓︎</a></h3>
 <p>Quand on écrit son propre module Python avec ses fonctions, ses classes, ses méthodes, on a souvent besoin de lever nous même des exceptions sans attendre l’interpréteur Python.</p>
 <p>A l’aide du mot-clef <code>raise</code>, on peut lever une exception à tout moment.
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># Levée d&#39;exception</span>
-<span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Saisir x : &quot;</span><span class="p">))</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># Levée d'exception</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Saisir x : "</span><span class="p">))</span>
 <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">13</span><span class="p">:</span>
-    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Désolé, je suis superstitieux&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1/x =&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Désolé, je suis superstitieux"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"1/x ="</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="n">x</span><span class="p">)</span>
 </code></pre></div>
 Celle-ci sera interceptée par un bloc <code>try/except</code>ou pas. Il est également possible de définir ses propres exceptions personnalisées en la rattachant à la classe <code>Exception</code> via l’héritage.</p>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># Définition d&#39;une Exception personnalisée</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># Définition d'une Exception personnalisée</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">SuperstitionError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Classe représentation l&#39;erreur liée au nombre 13&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Classe représentation l'erreur liée au nombre 13"""</span>
     <span class="k">pass</span>
 
-<span class="c1"># Levée d&#39;une exception personnalisée</span>
-<span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Saisir x : &quot;</span><span class="p">))</span>
+<span class="c1"># Levée d'une exception personnalisée</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Saisir x : "</span><span class="p">))</span>
 <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">13</span><span class="p">:</span>
-    <span class="k">raise</span> <span class="n">SuperstitionError</span><span class="p">(</span><span class="s2">&quot;Désolé, je suis superstitieux&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1/x =&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="n">SuperstitionError</span><span class="p">(</span><span class="s2">"Désolé, je suis superstitieux"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"1/x ="</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="n">x</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="3-bogues-et-debogueur">3 - Bogues et débogueur<a class="headerlink" href="#3-bogues-et-debogueur" title="Permanent link">⚓︎</a></h2>
 <h3 id="31-causes-des-bogues">3.1 - Causes des bogues<a class="headerlink" href="#31-causes-des-bogues" title="Permanent link">⚓︎</a></h3>
@@ -5324,11 +5324,11 @@ Pour réaliser des tests unitaires sur votre module, vous allez devoir créer un
 <h4 id="422-module-calculspy">4.2.2 - Module calculs.py<a class="headerlink" href="#422-module-calculspy" title="Permanent link">⚓︎</a></h4>
 <p>Soit le module <code>calculs.py</code>ci-dessous à tester.
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">additionner</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calcule et retourne la somme de a et b&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Calcule et retourne la somme de a et b"""</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">etre_pair</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test la parité d&#39;un nombre&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Test la parité d'un nombre"""</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">True</span>
     <span class="k">else</span><span class="p">:</span>
@@ -5339,15 +5339,15 @@ Tout l’intérêt des tests unitaires va être de repérer cette erreur suffisa
 <h4 id="423-tests-unitaires-avec-les-assertions">4.2.3 - Tests unitaires avec les assertions<a class="headerlink" href="#423-tests-unitaires-avec-les-assertions" title="Permanent link">⚓︎</a></h4>
 <p>Afin de tester ce module <code>calculs.py</code>, il va falloir créer un fichier test_calculs.py contenant nos tests unitaires.
 Ce fichier va utiliser le mot clef Python <code>assert</code> pour vérifier que le résultat produit par une fonction et bien conforme aux attentes. Si ce n’est pas le cas une erreur <code>AssertionError</code> stoppe le programme.</p>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># Assertion vraie, ne produisant pas d&#39;erreur</span>
-<span class="k">assert</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;1 doit être égal à 1&quot;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># Assertion vraie, ne produisant pas d'erreur</span>
+<span class="k">assert</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">"1 doit être égal à 1"</span>
 
 <span class="c1"># Assertion fausse, produisant une AssertionError</span>
-<span class="k">assert</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;1 = 0 devrait lever une erreur&quot;</span>
+<span class="k">assert</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"1 = 0 devrait lever une erreur"</span>
 
 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-  <span class="n">File</span> <span class="s2">&quot;tests_assert.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">4</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-    <span class="k">assert</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;1 = 0 devrait lever une erreur&quot;</span>
+  <span class="n">File</span> <span class="s2">"tests_assert.py"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">4</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+    <span class="k">assert</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"1 = 0 devrait lever une erreur"</span>
 <span class="ne">AssertionError</span>
 </code></pre></div>
 <p>Pour les tests unitaires du module <code>calculs.py</code>, on pourrait écrire les assertions suivantes :</p>
@@ -5355,19 +5355,19 @@ Ce fichier va utiliser le mot clef Python <code>assert</code> pour vérifier que
 <span class="kn">from</span><span class="w"> </span><span class="nn">calculs</span><span class="w"> </span><span class="kn">import</span> <span class="n">additionner</span><span class="p">,</span> <span class="n">etre_pair</span>
 
 <span class="c1"># Tests unitaires de la fonction additionner()</span>
-<span class="k">assert</span> <span class="n">additionner</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;2 + 2 = 4&quot;</span>
-<span class="k">assert</span> <span class="n">additionner</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;0 + 0 = 0&quot;</span>
-<span class="k">assert</span> <span class="n">additionner</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">16</span><span class="p">,</span> <span class="s2">&quot;11 + 5 = 16&quot;</span>
+<span class="k">assert</span> <span class="n">additionner</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">"2 + 2 = 4"</span>
+<span class="k">assert</span> <span class="n">additionner</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"0 + 0 = 0"</span>
+<span class="k">assert</span> <span class="n">additionner</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">16</span><span class="p">,</span> <span class="s2">"11 + 5 = 16"</span>
 
 <span class="c1"># Tests unitaires de la fonction etre_pair()</span>
-<span class="k">assert</span> <span class="n">etre_pair</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;5 n’est pas pair&quot;</span>
-<span class="k">assert</span> <span class="n">etre_pair</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;4 est pair&quot;</span>
-<span class="k">assert</span> <span class="n">etre_pair</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;0 est pair&quot;</span>
+<span class="k">assert</span> <span class="n">etre_pair</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">"5 n’est pas pair"</span>
+<span class="k">assert</span> <span class="n">etre_pair</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">"4 est pair"</span>
+<span class="k">assert</span> <span class="n">etre_pair</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">"0 est pair"</span>
 </code></pre></div>
 <p>Le lancement de test_calculs.py produira alors l’erreur suivante :
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-  <span class="n">File</span> <span class="s2">&quot;tests_calculs.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">7</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-    <span class="k">assert</span> <span class="n">additionner</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">16</span><span class="p">,</span> <span class="s2">&quot;11 + 5 = 16&quot;</span>
+  <span class="n">File</span> <span class="s2">"tests_calculs.py"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">7</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+    <span class="k">assert</span> <span class="n">additionner</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">16</span><span class="p">,</span> <span class="s2">"11 + 5 = 16"</span>
 <span class="ne">AssertionError</span>
 </code></pre></div></p>
 <p>Notre script de tests unitaires a bien repéré une erreur sur la fonction <code>additionner()</code> qu’il devrait être aisé de corriger.<br/>
@@ -5387,22 +5387,22 @@ A noter que les 2 premiers tests sont passés malgré l’erreur de codage, d’
 <span class="kn">from</span><span class="w"> </span><span class="nn">calculs</span><span class="w"> </span><span class="kn">import</span> <span class="n">additionner</span><span class="p">,</span> <span class="n">etre_pair</span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">TestCalculs</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Classe gérant les tests unitaires du module calculs&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Classe gérant les tests unitaires du module calculs"""</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">test_additionner</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Tests unitaires de la fonction additionner()&quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">additionner</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;2 + 2 =&gt; 4&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">additionner</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;0 + 0 =&gt; 0&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">additionner</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="mi">16</span><span class="p">,</span> <span class="s2">&quot;11 + 5 =&gt; 16&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="sd">"""Tests unitaires de la fonction additionner()"""</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">additionner</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">"2 + 2 =&gt; 4"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">additionner</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"0 + 0 =&gt; 0"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">additionner</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="mi">16</span><span class="p">,</span> <span class="s2">"11 + 5 =&gt; 16"</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">test_etre_pair</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Tests unitaires de la fonction etre_pair()&quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">etre_pair</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;5 est impair&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">etre_pair</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;4 est pair&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">etre_pair</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;0 est pair&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="sd">"""Tests unitaires de la fonction etre_pair()"""</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">etre_pair</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">"5 est impair"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">etre_pair</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">"4 est pair"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">etre_pair</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">"0 est pair"</span><span class="p">)</span>
 
 <span class="c1"># Lancement des tests</span>
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
     <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
 </code></pre></div>
 On retrouve dans ce code :<br /></p>
@@ -5443,8 +5443,8 @@ On retrouve dans ce code :<br /></p>
 <span class="n">Tests</span> <span class="n">unitaires</span> <span class="n">de</span> <span class="n">la</span> <span class="n">fonction</span> <span class="n">additionner</span><span class="p">()</span>
 <span class="o">----------------------------------------------------------------------</span>
 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-  <span class="n">File</span> <span class="s2">&quot;test_calculs.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">21</span><span class="p">,</span> <span class="ow">in</span> <span class="n">test_additionner</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">additionner</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="mi">16</span><span class="p">,</span> <span class="s2">&quot;11 + 5 =&gt; 16&quot;</span><span class="p">)</span>
+  <span class="n">File</span> <span class="s2">"test_calculs.py"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">21</span><span class="p">,</span> <span class="ow">in</span> <span class="n">test_additionner</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">additionner</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="mi">16</span><span class="p">,</span> <span class="s2">"11 + 5 =&gt; 16"</span><span class="p">)</span>
 <span class="ne">AssertionError</span><span class="p">:</span> <span class="mi">55</span> <span class="o">!=</span> <span class="mi">16</span> <span class="p">:</span> <span class="mi">11</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">=&gt;</span> <span class="mi">16</span>
 
 <span class="o">----------------------------------------------------------------------</span>
@@ -5467,15 +5467,15 @@ On retrouve dans ce code :<br /></p>
 </ul>
 <p>La librairie <code>unittest</code> permet également d’initialiser (<code>setUp</code>) l’environnement (<code>fixture</code>) avant l’exécution de chaque test et aussi de le désactiver (<code>tearDown</code>) pour le prochain. Dans cet exemple on ouvre et ferme un fichier de données :
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">TestCalculs</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Classe gérant les tests unitaires du module calculs&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Classe gérant les tests unitaires du module calculs"""</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialisation des tests&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Initialisation des tests"""</span>
         <span class="c1"># Ouverture du fichier contenant le jeu de test</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">fichier</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fichier</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"data.json"</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Désactivation des tests&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Désactivation des tests"""</span>
         <span class="c1"># Fermeture du fichier contenant le jeu de test</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fichier</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
@@ -5492,7 +5492,7 @@ On retrouve dans ce code :<br /></p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># Importation des outils pour mesurer le temps</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
-<span class="c1"># Fonction qu&#39;on souhaite chronométrer</span>
+<span class="c1"># Fonction qu'on souhaite chronométrer</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">additionner</span><span class="p">(</span><span class="n">limite</span><span class="p">):</span>
     <span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">limite</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
@@ -5504,10 +5504,10 @@ On retrouve dans ce code :<br /></p>
 <span class="n">resultat</span> <span class="o">=</span> <span class="n">additionner</span><span class="p">(</span><span class="mi">1000000</span><span class="p">)</span>
 <span class="n">fin</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
 
-<span class="c1"># Affichage du résultat et de la durée d&#39;exécution</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La somme jusqu’à 1000000 est </span><span class="si">{</span><span class="n">resultat</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># Affichage du résultat et de la durée d'exécution</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"La somme jusqu’à 1000000 est </span><span class="si">{</span><span class="n">resultat</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <span class="n">delai</span> <span class="o">=</span> <span class="n">fin</span> <span class="o">-</span> <span class="n">debut</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Durée d&#39;exécution = </span><span class="si">{</span><span class="n">delai</span><span class="si">}</span><span class="s2"> s&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Durée d'exécution = </span><span class="si">{</span><span class="n">delai</span><span class="si">}</span><span class="s2"> s"</span><span class="p">)</span>
 </code></pre></div></p>
 <h3 id="52-profilage">5.2 - Profilage<a class="headerlink" href="#52-profilage" title="Permanent link">⚓︎</a></h3>
 <p>Le profilage d’un code donne des résultats beaucoup plus complet avec pour chaque fonction :</p>
@@ -5668,13 +5668,15 @@ On retrouve dans ce code :<br /></p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="../../../xtra/javascript/mathjax.js"></script>
       

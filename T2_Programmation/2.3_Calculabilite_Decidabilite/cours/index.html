@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -4843,7 +4843,7 @@
 <p>Les codes que nous manipulons ressemblent souvent à cela :
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">accueil</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;bonjour&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"bonjour"</span><span class="p">)</span>
 </code></pre></div></p>
 <p>Le programme s'appelle <code>accueil</code>, et pour fonctionner il a besoin d'un paramètre, qui sera ici un nombre entier <code>n</code>.</p>
 <p>Voici comment nous pouvons représenter notre machine <code>accueil</code>, son paramètre d'entrée (5) et sa sortie (les 5 «bonjour»)</p>
@@ -4851,7 +4851,7 @@
 <p>Maintenant, enregistrons le code suivant dans un fichier <code>test.py</code> :
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">accueil</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;bonjour&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"bonjour"</span><span class="p">)</span>
 
 <span class="n">accueil</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </code></pre></div></p>
@@ -4878,7 +4878,7 @@ Ce type de code (magique !) existe dans tous les langages et s'appelle un <a cla
     <span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
         <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fini&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"fini"</span><span class="p">)</span>
 </code></pre></div>
 <p>En l'observant attentivement, je peux prévoir que <code>countdown(10)</code> affichera les nombres de 10 à 1 avant d'écrire "fini". Puis le programme s'arrêtera.</p>
 <p>Mais que va provoquer <code>countdown(10.8)</code> ?</p>
@@ -4903,7 +4903,7 @@ Un tel programme (appelons-le <code>halt</code>) prendrait en entrées :</p>
 <p><img alt="image" class="center" src="../data/halt2.png" width="60%" /></p>
 <p><strong>Tentative d'écriture de <code>halt</code> en Python :</strong></p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">halt</span><span class="p">(</span><span class="n">prog</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-    <span class="k">if</span> <span class="s2">&quot;prog(x) s&#39;arrête&quot;</span><span class="p">:</span>   <span class="c1"># mes excuses, je n&#39;ai pas eu le temps de finir totalement ce code</span>
+    <span class="k">if</span> <span class="s2">"prog(x) s'arrête"</span><span class="p">:</span>   <span class="c1"># mes excuses, je n'ai pas eu le temps de finir totalement ce code</span>
         <span class="k">return</span> <span class="kc">True</span>
     <span class="k">else</span> <span class="p">:</span>
         <span class="k">return</span> <span class="kc">False</span>
@@ -4914,7 +4914,7 @@ Un tel programme (appelons-le <code>halt</code>) prendrait en entrées :</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">sym</span><span class="p">(</span><span class="n">prog</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">halt</span><span class="p">(</span><span class="n">prog</span><span class="p">,</span> <span class="n">prog</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
         <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;vers l&#39;infini et au-delà !&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"vers l'infini et au-delà !"</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">1</span>
 </code></pre></div>
@@ -5189,13 +5189,15 @@ Cela signifie qu'ils pensent que certains problèmes ne pourront jamais avoir un
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="../../../xtra/javascript/mathjax.js"></script>
       

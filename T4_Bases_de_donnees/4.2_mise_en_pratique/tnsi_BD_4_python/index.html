@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -4800,14 +4800,14 @@
 - ouvrir le fichier de base de données
 - créer un curseur</p>
 <p>Le <em>curseur</em> est un objet python offrant des méthodes pour exécuter des requêtes et récupérer le ou les résultats de ces requêtes.</p>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">bdd</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;livres_db&quot;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">bdd</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">"livres_db"</span><span class="p">)</span>
 <span class="n">curseur</span> <span class="o">=</span> <span class="n">bdd</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
 </code></pre></div>
 <p><em>livres_db</em> est le nom du fichier contenant la base de donnéees SQLite que nous allons exploiter. Si le fichier n'existe pas, une nouvelle base de données sera créée.</p>
 <h2 id="executer-des-requetes-de-selection">Exécuter des requêtes de sélection<a class="headerlink" href="#executer-des-requetes-de-selection" title="Permanent link">⚓︎</a></h2>
 <h3 id="le-principe">Le principe<a class="headerlink" href="#le-principe" title="Permanent link">⚓︎</a></h3>
 <p>Reste ensuite à exécuter notre première requête. Pour cela, nous utiliserons la méthode <strong>execute()</strong> du curseur, la requête étant une chaîne de caractères passée en paramètre.</p>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">requete</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM Livres;&quot;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">requete</span> <span class="o">=</span> <span class="s2">"SELECT * FROM Livres;"</span>
 <span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">requete</span><span class="p">)</span>
 </code></pre></div>
 <p>Pour visualiser le résultat de notre requête, nous utiliserons encore notre curseur. Deux méthodes permettent principalement de le faire :
@@ -4840,7 +4840,7 @@ Un indice : si vous réexécutez une nouvelle fois la méthode <strong>fetchall(
 - qui renvoie son prénom</p>
 <p>Si le nom de l'auteur ne figure pas dans la table <em>Auteurs</em>, la fonction renverra <strong>None</strong>.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">prenom</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">nom</span><span class="p">):</span>
-    <span class="n">requete</span> <span class="o">=</span> <span class="s2">&quot;SELECT PrenomAuteur FROM Auteurs WHERE NomAuteur = ?&quot;</span>
+    <span class="n">requete</span> <span class="o">=</span> <span class="s2">"SELECT PrenomAuteur FROM Auteurs WHERE NomAuteur = ?"</span>
     <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">requete</span><span class="p">,</span> <span class="p">[</span><span class="n">nom</span><span class="p">])</span>
     <span class="n">r</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -4848,7 +4848,7 @@ Un indice : si vous réexécutez une nouvelle fois la méthode <strong>fetchall(
     <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">prenom</span><span class="p">(</span><span class="n">curseur</span><span class="p">,</span> <span class="s2">&quot;Verne&quot;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">prenom</span><span class="p">(</span><span class="n">curseur</span><span class="p">,</span> <span class="s2">"Verne"</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="explications">Explications<a class="headerlink" href="#explications" title="Permanent link">⚓︎</a></h3>
 <p>Dans cet exemple, nous construisons une requête à partir d'une variable Python. SQLite propose un mécanisme de substitution sécurisé permettant d'injecter une ou plusieurs variables à l'intérieur d'une requête. <strong>C'est ce mécanisme que vous devez utiliser</strong> : ne construisez pas vous même la chaîne de caractère contenant la requête complète, c'est une mauvaise pratique qui vous conduira inévitablement à des problèmes.</p>
@@ -4864,18 +4864,18 @@ Un indice : si vous réexécutez une nouvelle fois la méthode <strong>fetchall(
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">romans</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">nom</span><span class="p">):</span>
     <span class="c1"># YOUR CODE HERE</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">assert</span> <span class="n">romans</span><span class="p">(</span><span class="n">curseur</span><span class="p">,</span> <span class="s2">&quot;Asimov&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;Fondation&#39;</span><span class="p">,</span> <span class="s1">&#39;Les Robots&#39;</span><span class="p">,</span> <span class="s1">&#39;La Fin de l’éternité&#39;</span><span class="p">]</span>
-<span class="k">assert</span> <span class="n">romans</span><span class="p">(</span><span class="n">curseur</span><span class="p">,</span> <span class="s2">&quot;Verne&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;De la Terre à la Lune&#39;</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">assert</span> <span class="n">romans</span><span class="p">(</span><span class="n">curseur</span><span class="p">,</span> <span class="s2">"Asimov"</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">'Fondation'</span><span class="p">,</span> <span class="s1">'Les Robots'</span><span class="p">,</span> <span class="s1">'La Fin de l’éternité'</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">romans</span><span class="p">(</span><span class="n">curseur</span><span class="p">,</span> <span class="s2">"Verne"</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">'De la Terre à la Lune'</span><span class="p">]</span>
 </code></pre></div>
 <h2 id="inserer-de-nouveaux-enregistrements">Insérer de nouveaux enregistrements<a class="headerlink" href="#inserer-de-nouveaux-enregistrements" title="Permanent link">⚓︎</a></h2>
 <p>Les requêtes de modification sur la base se font de la même manière que les requêtes de sélection, à une petite subtilité près : après exécution de la requête, il faudra faire appel à la méthode <strong>commit()</strong> de l'objet <em>bdd</em> (issu de la connexion) afin que les modifications soient prises en compte dans le fichier de base de données. </p>
 <p><strong>Attention</strong> : Si vous oubliez l'appel à commit, vos modifications seront perdues lorsque vous quitterez votre programme car elles ne seront pas inscrites dans le fichier de la base de données.</p>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">requete</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">requete</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">INSERT INTO Auteurs </span>
 <span class="s2">  (NomAuteur, PrenomAuteur, IdLangue, AnneeNaissance)</span>
 <span class="s2">VALUES</span>
-<span class="s2">  (&#39;Lecluse&#39;, &#39;Olivier&#39;, 2, 1870);</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">  ('Lecluse', 'Olivier', 2, 1870);</span>
+<span class="s2">"""</span>
 
 <span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">requete</span><span class="p">)</span>
 <span class="n">bdd</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
@@ -4884,7 +4884,7 @@ Un indice : si vous réexécutez une nouvelle fois la méthode <strong>fetchall(
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">last_id</span> <span class="o">=</span> <span class="n">curseur</span><span class="o">.</span><span class="n">lastrowid</span>
 <span class="n">last_id</span> 
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">requete</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM Auteurs WHERE IdAuteur = ?&quot;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">requete</span> <span class="o">=</span> <span class="s2">"SELECT * FROM Auteurs WHERE IdAuteur = ?"</span>
 <span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">requete</span><span class="p">,</span> <span class="p">[</span><span class="n">last_id</span><span class="p">])</span>
 <span class="n">curseur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
 </code></pre></div>
@@ -4892,11 +4892,11 @@ Un indice : si vous réexécutez une nouvelle fois la méthode <strong>fetchall(
 <p>Effacez de la table auteur ce dernier enregistrement que nous avons créé.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># YOUR CODE HERE</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">requete</span> <span class="o">=</span> <span class="s2">&quot;SELECT COUNT(*) from Auteurs&quot;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">requete</span> <span class="o">=</span> <span class="s2">"SELECT COUNT(*) from Auteurs"</span>
 <span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">requete</span><span class="p">)</span>
 <span class="k">assert</span> <span class="n">curseur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">10</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM Auteurs&quot;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"SELECT * FROM Auteurs"</span><span class="p">)</span>
 <span class="n">curseur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 </code></pre></div>
 <h2 id="pour-finir">Pour Finir<a class="headerlink" href="#pour-finir" title="Permanent link">⚓︎</a></h2>
@@ -4906,7 +4906,7 @@ Un indice : si vous réexécutez une nouvelle fois la méthode <strong>fetchall(
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">curseur</span>
 </code></pre></div>
 <p>A partir de ce moment là, plus acune opération n'est possible sur la base de données comme le montre la cellule suivante :</p>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">requete</span> <span class="o">=</span> <span class="s2">&quot;SELECT COUNT(*) from Auteurs&quot;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">requete</span> <span class="o">=</span> <span class="s2">"SELECT COUNT(*) from Auteurs"</span>
 <span class="n">curseur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">requete</span><span class="p">)</span>
 </code></pre></div>
 
@@ -5055,13 +5055,15 @@ Un indice : si vous réexécutez une nouvelle fois la méthode <strong>fetchall(
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="../../../xtra/javascript/mathjax.js"></script>
       

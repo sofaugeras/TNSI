@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -4692,10 +4692,10 @@
 <span class="normal">5</span>
 <span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">adresse</span><span class="p">(</span><span class="n">IP</span><span class="p">,</span> <span class="n">liste_IP</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">IP</span> <span class="ow">in</span> <span class="n">liste_IP</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;trouvée&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"trouvée"</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">liste_IP</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">IP</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pas trouvée, ajoutée&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"pas trouvée, ajoutée"</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </details>
 </div>
@@ -5271,8 +5271,8 @@ bornes de commandes et l’interface du routeur, il reste 250 adresses IP dispon
 <p>Le but de cette partie est de classer les adresses IP des différents réseaux afin de faciliter leur recherche.
 La fonction <code>ip_bin</code> prend en argument une chaîne de caractères décrivant une adresse IP en notation décimale, et renvoie une chaîne de caractères, de longueur 35 (32 bits et les 3 points), décrivant l’adresse IP en notation binaire.</p>
 <p>Exemple :
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">ip_bin</span><span class="p">(</span><span class="s1">&#39;192.168.10.1&#39;</span><span class="p">)</span>
-<span class="s1">&#39;11000000.10101000.00001010.00000001&#39;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">ip_bin</span><span class="p">(</span><span class="s1">'192.168.10.1'</span><span class="p">)</span>
+<span class="s1">'11000000.10101000.00001010.00000001'</span>
 </code></pre></div>
 10_ Donner la chaîne de caractères renvoyée par ip_bin('192.168.20.12').</p>
 <details class="tip">
@@ -5282,8 +5282,8 @@ La fonction <code>ip_bin</code> prend en argument une chaîne de caractères dé
 </details>
 <p>La fonction <code>precede</code> prend en paramètres deux adresses IP en notation binaire, sous forme de chaînes de caractères identiques à celles renvoyées par la fonction <code>ip_bin</code>. La fonction <code>precede</code> renvoie un booléen qui vaut <code>True</code> si la première adresse IP en paramètre précède la seconde adresse IP.</p>
 <p>Exemple :
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;11000000.10101000.00001010.00000001&#39;</span> 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="s1">&#39;11000000.10101000.00001111.00000001&#39;</span> 
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="s1">'11000000.10101000.00001010.00000001'</span> 
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="s1">'11000000.10101000.00001111.00000001'</span> 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">precede</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> 
 <span class="kc">True</span>
 </code></pre></div></p>
@@ -5320,9 +5320,9 @@ L’algorithme de comparaison est traduit dans le langage Python sous la forme s
         <span class="bp">self</span><span class="o">.</span><span class="n">interface</span> <span class="o">=</span> <span class="n">interface</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">passerelle</span> <span class="o">=</span> <span class="n">passerelle</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cout</span> <span class="o">=</span> <span class="n">cout</span>  
-        <span class="k">if</span> <span class="n">adresse_ip</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">:</span> 
-            <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="n">Abr</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> 
-            <span class="bp">self</span><span class="o">.</span><span class="n">droite</span> <span class="o">=</span> <span class="n">Abr</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> 
+        <span class="k">if</span> <span class="n">adresse_ip</span> <span class="o">!=</span> <span class="s1">''</span><span class="p">:</span> 
+            <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="n">Abr</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> 
+            <span class="bp">self</span><span class="o">.</span><span class="n">droite</span> <span class="o">=</span> <span class="n">Abr</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">est_vide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">return</span> <span class="o">...</span>
@@ -5344,7 +5344,7 @@ Dans cette représentation :
 <p>14_ Recopier et compléter la ligne 14 du code de la classe <code>Abr</code>.</p>
 <details class="tip">
 <summary>Correction</summary>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="mi">14</span>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">adresse_ip</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="mi">14</span>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">adresse_ip</span> <span class="o">==</span> <span class="s1">''</span>
 </code></pre></div>
 </details>
 <p>15_ Justifier, en mobilisant des connaissances de cours, l’intérêt qu’il peut y avoir à représenter la table de routage par un arbre binaire de recherche.</p>
@@ -5361,8 +5361,8 @@ Dans cette représentation :
         <span class="bp">self</span><span class="o">.</span><span class="n">interface</span> <span class="o">=</span> <span class="n">interface</span> 
         <span class="bp">self</span><span class="o">.</span><span class="n">passerelle</span> <span class="o">=</span> <span class="n">passerelle</span> 
         <span class="bp">self</span><span class="o">.</span><span class="n">cout</span> <span class="o">=</span> <span class="n">cout</span> 
-        <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="n">Abr</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> 
-        <span class="bp">self</span><span class="o">.</span><span class="n">droite</span> <span class="o">=</span> <span class="n">Abr</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="n">Abr</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">droite</span> <span class="o">=</span> <span class="n">Abr</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> 
     <span class="k">else</span><span class="p">:</span> 
         <span class="bp">self</span><span class="o">.</span><span class="n">adresse_ip</span> <span class="o">=</span> <span class="n">adresse_ip</span> 
         <span class="bp">self</span><span class="o">.</span><span class="n">interface</span> <span class="o">=</span> <span class="n">interface</span> 
@@ -5377,8 +5377,8 @@ Les lignes 20 à 23 sont exactement les mêmes que les lignes 27 à 30.</p>
             <span class="n">interface</span><span class="p">,</span> <span class="n">passerelle</span><span class="p">,</span> 
             <span class="n">cout</span><span class="p">):</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="n">Abr</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> 
-        <span class="bp">self</span><span class="o">.</span><span class="n">droite</span> <span class="o">=</span> <span class="n">Abr</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="n">Abr</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">droite</span> <span class="o">=</span> <span class="n">Abr</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> 
     <span class="bp">self</span><span class="o">.</span><span class="n">adresse_ip</span> <span class="o">=</span> <span class="n">adresse_ip</span> 
     <span class="bp">self</span><span class="o">.</span><span class="n">interface</span> <span class="o">=</span> <span class="n">interface</span> 
     <span class="bp">self</span><span class="o">.</span><span class="n">passerelle</span> <span class="o">=</span> <span class="n">passerelle</span> 
@@ -5557,13 +5557,15 @@ On rappelle que la fonction <code>precede</code> prend en arguments des adresses
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="../../../xtra/javascript/mathjax.js"></script>
       

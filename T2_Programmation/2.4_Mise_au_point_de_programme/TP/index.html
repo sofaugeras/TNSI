@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -4859,8 +4859,8 @@
 <p>Les types ne sont pas vérifiés dans <code>doubler()</code> et dans la saisie. 
 Comme l'opérateur <code>*</code> fonctionne aussi bien avec des <code>string</code> qu'avec des <code>int</code>, il ne retourne
 aucune erreur mais un résultat erroné.</p>
-<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;3&quot;</span> <span class="o">*</span> <span class="mi">2</span>
-<span class="s1">&#39;33&#39;</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="s2">"3"</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="s1">'33'</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">2</span>
 <span class="mi">6</span>
 </code></pre></div>
@@ -4871,7 +4871,7 @@ On peut corriger le programme ainsi :</p>
 <span class="k">def</span><span class="w"> </span><span class="nf">tripler</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">y</span> <span class="o">*</span> <span class="mi">3</span>
 
-<span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Saisir un nombre : &quot;</span><span class="p">))</span>  <span class="c1"># Ajout de int() pour avoir un int</span>
+<span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Saisir un nombre : "</span><span class="p">))</span>  <span class="c1"># Ajout de int() pour avoir un int</span>
 <span class="nb">print</span><span class="p">(</span> <span class="n">tripler</span><span class="p">(</span><span class="n">doubler</span><span class="p">(</span><span class="n">nombre</span><span class="p">))</span> <span class="p">)</span>
 </code></pre></div>
 </details>
@@ -4879,23 +4879,23 @@ On peut corriger le programme ainsi :</p>
 <summary>bogue 01</summary>
 <p>L'erreur vient d'un mauvais choix d'opérateur. 
 Ici on utilise = au lieu de += pour faire la concaténation</p>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">nouveau_mot</span> <span class="o">=</span> <span class="n">mot</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;_&quot;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">nouveau_mot</span> <span class="o">=</span> <span class="n">mot</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="s2">"_"</span>
 </code></pre></div>
 <p>Il suffit donc de modifier cette ligne ainsi :
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">nouveau_mot</span> <span class="o">+=</span> <span class="n">mot</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;_&quot;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">nouveau_mot</span> <span class="o">+=</span> <span class="n">mot</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="s2">"_"</span>
 </code></pre></div></p>
 </details>
 <details class="bug">
 <summary>bogue 02</summary>
 <p>Cette ligne est fautive, car le résultat de la suppression de la voyelle ne fonctionnera que pour la dernière voyelle du mot.</p>
-<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">nouveau_mot</span> <span class="o">=</span> <span class="n">mot</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">lettre</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">nouveau_mot</span> <span class="o">=</span> <span class="n">mot</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">lettre</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span>
 </code></pre></div>
 Pour pouvoir fonctionner sur toutes les voyelles, il faut que le résultat du remplacement soit réaffecté à nouveau pour la prochaine voyelle.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code>    <span class="n">nouveau_mot</span> <span class="o">=</span> <span class="n">mot</span> 
-    <span class="n">les_voyelles</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;u&#39;</span><span class="p">)</span>
+    <span class="n">les_voyelles</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'a'</span><span class="p">,</span> <span class="s1">'e'</span><span class="p">,</span> <span class="s1">'i'</span><span class="p">,</span> <span class="s1">'o'</span><span class="p">,</span> <span class="s1">'u'</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">mot</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
         <span class="k">if</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">les_voyelles</span><span class="p">:</span>
-            <span class="n">nouveau_mot</span> <span class="o">=</span> <span class="n">nouveau_mot</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">lettre</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+            <span class="n">nouveau_mot</span> <span class="o">=</span> <span class="n">nouveau_mot</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">lettre</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">nouveau_mot</span>
 </code></pre></div>
 </details>
@@ -4903,7 +4903,7 @@ Pour pouvoir fonctionner sur toutes les voyelles, il faut que le résultat du re
 <summary>bogue 03</summary>
 <p>Le problème vient ici de la méthode cloner(). </p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">cloner</span><span class="p">(</span><span class="n">notes</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Clone un tableau de notes passé en paramètre&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Clone un tableau de notes passé en paramètre"""</span>
     <span class="n">nouvelles_notes</span> <span class="o">=</span> <span class="n">notes</span>  <span class="c1"># notes et nouvelles_notes sont en fait le même tableau</span>
     <span class="k">return</span> <span class="n">nouvelles_notes</span>
 </code></pre></div>
@@ -4925,7 +4925,7 @@ Pour comprendre en image : <a href="https://www.youtube.com/watch?v=I3dbeflpI-Q"
 </code></pre></div>
 <p>La fonction malaxer() devra être réécrite comme ci-dessous :</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">malaxer</span><span class="p">(</span><span class="n">farine</span><span class="p">,</span> <span class="n">oeufs</span><span class="p">,</span> <span class="n">chocolat</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Malaxe les 3 ingrédients dans certaines quantités exprimées en grammes&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Malaxe les 3 ingrédients dans certaines quantités exprimées en grammes"""</span>
     <span class="c1"># Poids total de la pate</span>
     <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
 
@@ -4961,7 +4961,7 @@ Pour comprendre en image : <a href="https://www.youtube.com/watch?v=I3dbeflpI-Q"
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">modifier_poids</span><span class="p">(</span><span class="n">nouveau_poids</span><span class="p">):</span>
     <span class="k">global</span> <span class="n">poids</span>
     <span class="n">poids</span> <span class="o">=</span> <span class="n">nouveau_poids</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mon nouveau poids est de </span><span class="si">%d</span><span class="s2"> kg&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">poids</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Mon nouveau poids est de </span><span class="si">%d</span><span class="s2"> kg"</span> <span class="o">%</span> <span class="p">(</span><span class="n">poids</span><span class="p">))</span>
 </code></pre></div>
 Dans une fonction, si il y a une affectation de variable comme dans modifier_poids(), alors Python créé une nouvelle variable locale
 Par contre dans la fonction afficher_poids(), comme il n'y a pas d'affectation, Python utilise la variable globale (sans besoin de préciser global poids)</p>
@@ -4972,7 +4972,7 @@ Par contre dans la fonction afficher_poids(), comme il n'y a pas d'affectation, 
 <summary>bogue 07</summary>
 <p>La condition du while != est trop restrictive et la limite jamais atteinte =&gt; on obtient une boucle infinie. Mieux vaut utiliser l'opérateur &lt; comme ci-dessous :</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">while</span> <span class="n">nombre</span> <span class="o">&lt;</span> <span class="n">limite</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">nombre</span><span class="si">}</span><span class="s2"> &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">nombre</span><span class="si">}</span><span class="s2"> "</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
     <span class="n">nombre</span> <span class="o">+=</span> <span class="mi">2</span>
 </code></pre></div>
 </details>
@@ -4980,21 +4980,21 @@ Par contre dans la fonction afficher_poids(), comme il n'y a pas d'affectation, 
 <summary>bogue 08</summary>
 <p><strong>Pas de test d'égalité sur des flottants !!</strong></p>
 <p>L'affichage arrondi à 2 digits après la virgule ci-dessous cache l'erreur de calcul</p>
-<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;J&#39;accélère : acceleration_fusee = </span><span class="si">{</span><span class="n">acceleration_fusee</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"J'accélère : acceleration_fusee = </span><span class="si">{</span><span class="n">acceleration_fusee</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </code></pre></div>
 En le modifiant ainsi, on peut voir le vrai calcul effectué et pourquoi les if de la fonction verifier() passent à côté</p>
-<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;J&#39;accélère : acceleration_fusee = </span><span class="si">{</span><span class="n">acceleration_fusee</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"J'accélère : acceleration_fusee = </span><span class="si">{</span><span class="n">acceleration_fusee</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </code></pre></div>
 En fait il faut éviter l'opérateur == avec les float à cause des erreurs d'arrondis dans les calculs
 Mieux vaudrait écrire la fonction verifier() ainsi :</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">verifier_et_conseiller</span><span class="p">(</span><span class="n">acceleration</span><span class="p">):</span>
     <span class="n">delta</span> <span class="o">=</span> <span class="mf">0.001</span>
     <span class="k">if</span> <span class="n">acceleration</span> <span class="o">&gt;</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">delta</span><span class="p">)</span> <span class="ow">and</span> <span class="n">acceleration</span> <span class="o">&lt;</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">+</span> <span class="n">delta</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[30;32mOK, accélération de 1G</span><span class="se">\033</span><span class="s2">[00m&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\033</span><span class="s2">[30;32mOK, accélération de 1G</span><span class="se">\033</span><span class="s2">[00m"</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">acceleration</span> <span class="o">&gt;</span> <span class="p">(</span><span class="mf">2.0</span> <span class="o">-</span> <span class="n">delta</span><span class="p">)</span> <span class="ow">and</span> <span class="n">acceleration</span> <span class="o">&lt;</span> <span class="p">(</span><span class="mf">2.0</span> <span class="o">+</span> <span class="n">delta</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[30;33mAttention, accélération de 2G </span><span class="se">\033</span><span class="s2">[00m&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\033</span><span class="s2">[30;33mAttention, accélération de 2G </span><span class="se">\033</span><span class="s2">[00m"</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">acceleration</span> <span class="o">&gt;</span> <span class="p">(</span><span class="mf">3.0</span> <span class="o">-</span> <span class="n">delta</span><span class="p">)</span> <span class="ow">and</span> <span class="n">acceleration</span> <span class="o">&lt;</span> <span class="p">(</span><span class="mf">3.0</span> <span class="o">+</span> <span class="n">delta</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[30;31mUrgence, accélération de 3G, veuillez freiner</span><span class="se">\033</span><span class="s2">[00m&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\033</span><span class="s2">[30;31mUrgence, accélération de 3G, veuillez freiner</span><span class="se">\033</span><span class="s2">[00m"</span><span class="p">)</span>
 </code></pre></div>
 </details>
 <h2 id="3-tests-unitaires">3 - Tests unitaires<a class="headerlink" href="#3-tests-unitaires" title="Permanent link">⚓︎</a></h2>
@@ -5015,7 +5015,7 @@ Le développeur avant vous dans le service a commencé à développer une classe
 <p>Si vous détectez des problèmes potentiels, vous pourrez les signaler en levant une Exception comme ci-dessous :</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1">#Un problème potentiel</span>
 <span class="k">if</span> <span class="n">probleme</span> <span class="o">==</span> <span class="kc">True</span> <span class="p">:</span>
-    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Un probléme est survenu&quot;</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">"Un probléme est survenu"</span><span class="p">)</span>
 </code></pre></div>
 <p>Le responsable du service vous demande de finir de coder cette classe et d’écrire les tests unitaires qui permettront de la valider et de l’intégrer dans le reste du logiciel de dessin industriel.
 Concernant les tests unitaires, vous créerez 2 versions et donc 2 fichiers  :</p>
@@ -5208,13 +5208,15 @@ Chronométrez cette nouvelle version comme précédemment et conclure.
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="../../../xtra/javascript/mathjax.js"></script>
       

@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -4870,16 +4870,16 @@ aux appels de fonctions prédéfinies <code>min(val1, val2)</code> et <code>max(
 <div class="admonition note">
 <p class="admonition-title">Interface de la structure <code>ArbreBinaire</code></p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">est_vide</span><span class="p">(</span><span class="n">arbre</span><span class="p">:</span> <span class="n">ArbreBinaire</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;renvoie True si arbre est vide, False sinon&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""renvoie True si arbre est vide, False sinon"""</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">racine</span><span class="p">(</span><span class="n">arbre</span><span class="p">:</span> <span class="n">ArbreBinaire</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;renvoie l&#39;étiquette du nœud racine de arbre&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""renvoie l'étiquette du nœud racine de arbre"""</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">gauche</span><span class="p">(</span><span class="n">arbre</span><span class="p">:</span> <span class="n">ArbreBinaire</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ArbreBinaire</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;renvoie le sous-arbre à gauche de arbre&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""renvoie le sous-arbre à gauche de arbre"""</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">droite</span><span class="p">(</span><span class="n">arbre</span><span class="p">:</span> <span class="n">ArbreBinaire</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ArbreBinaire</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;renvoie le sous-arbre à droite de arbre&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""renvoie le sous-arbre à droite de arbre"""</span>
 </code></pre></div>
 </div>
 <p><strong>1)</strong> On appelle feuille, un nœud qui ne possède pas de successeurs ou dit autrement dont l'arbre dont il est la racine possède deux sous-arbres vides. On définit la hauteur d'un arbre binaire non vide comme la longueur (en nombre de nœuds) du plus long chemin allant de la racine à une feuille. Un arbre vide a une hauteur égale à <span class="arithmatex">\(0\)</span>. </p>
@@ -4940,7 +4940,7 @@ aux appels de fonctions prédéfinies <code>min(val1, val2)</code> et <code>max(
 <details class="success">
 <summary>Réponse</summary>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">membres_p</span>
-<span class="go">[&#39;AnneB&#39;, &#39;Pedro&#39;, &#39;FredB&#39;, &#39;Sophia&#39;, &#39;Malik2&#39;, &#39;Marc&#39;, &#39;AstridM&#39;, &#39;KevinH&#39;, &#39;Nico&#39;]</span>
+<span class="go">['AnneB', 'Pedro', 'FredB', 'Sophia', 'Malik2', 'Marc', 'AstridM', 'KevinH', 'Nico']</span>
 </code></pre></div>
 </details>
 <p><strong>2.b)</strong> Indiquer le nom du type de parcours d'arbre binaire réalisé par la fonction <code>membres</code>.</p>
@@ -4978,13 +4978,13 @@ aux appels de fonctions prédéfinies <code>min(val1, val2)</code> et <code>max(
 <span class="normal">8</span>
 <span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">profile</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">gauche</span><span class="p">(</span><span class="n">arbre</span><span class="p">)):</span>
-        <span class="c1"># l&#39;énoncé indique que le sous arbre à droite sera vide</span>
-        <span class="k">return</span> <span class="s1">&#39;bronze&#39;</span>
+        <span class="c1"># l'énoncé indique que le sous arbre à droite sera vide</span>
+        <span class="k">return</span> <span class="s1">'bronze'</span>
     <span class="k">elif</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">droite</span><span class="p">(</span><span class="n">arbre</span><span class="p">)):</span>
         <span class="c1"># ici le sous arbre à gauche est non vide</span>
-        <span class="k">return</span> <span class="s1">&#39;argent&#39;</span>
+        <span class="k">return</span> <span class="s1">'argent'</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;or&#39;</span>
+        <span class="k">return</span> <span class="s1">'or'</span>
 </code></pre></div></td></tr></table></div>
 <p>Autre solution, consistant à compter le nombre de sous-arbres non vides qui correspond au nombre de personnes parrainées. On en déduit le profil :</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">profil version 2</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -4995,7 +4995,7 @@ aux appels de fonctions prédéfinies <code>min(val1, val2)</code> et <code>max(
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">profile</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
-    <span class="n">les_profiles</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;bronze&#39;</span><span class="p">,</span> <span class="s1">&#39;argent&#39;</span><span class="p">,</span> <span class="s1">&#39;or&#39;</span><span class="p">)</span>
+    <span class="n">les_profiles</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'bronze'</span><span class="p">,</span> <span class="s1">'argent'</span><span class="p">,</span> <span class="s1">'or'</span><span class="p">)</span>
     <span class="n">nb_parraines</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">gauche</span><span class="p">(</span><span class="n">arbre</span><span class="p">)):</span>
         <span class="n">nb_parraines</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -5019,7 +5019,7 @@ aux appels de fonctions prédéfinies <code>min(val1, val2)</code> et <code>max(
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">liste_2</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">membres_profils</span><span class="p">(</span><span class="n">arbre_2</span><span class="p">,</span> <span class="n">liste_2</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">liste_2</span>
-<span class="go">[(&#39;LeaC&#39;, &#39;or&#39;), (&#39;Ali&#39;, &#39;bronze&#39;), (&#39;Tom45&#39;, &#39;argent&#39;), (&#39;Vero&#39;, &#39;bronze&#39;)]</span>
+<span class="go">[('LeaC', 'or'), ('Ali', 'bronze'), ('Tom45', 'argent'), ('Vero', 'bronze')]</span>
 </code></pre></div>
 <p>Dessiner un arbre possible pouvant correspondre à l'<code>arbre_2</code>.</p>
 <details class="success">
@@ -5037,7 +5037,7 @@ aux appels de fonctions prédéfinies <code>min(val1, val2)</code> et <code>max(
 <details class="success">
 <summary>Réponse</summary>
 <p>On commence par définir un dictionnaire des tarifs de cotisations :</p>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">tarifs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;or&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;argent&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;bronze&#39;</span><span class="p">:</span> <span class="mi">40</span><span class="p">}</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">tarifs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'or'</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">'argent'</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">'bronze'</span><span class="p">:</span> <span class="mi">40</span><span class="p">}</span>
 </code></pre></div>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">cotisations</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -5215,13 +5215,15 @@ aux appels de fonctions prédéfinies <code>min(val1, val2)</code> et <code>max(
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="../../xtra/javascript/mathjax.js"></script>
       

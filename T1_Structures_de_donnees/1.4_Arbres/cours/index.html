@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5435,7 +5435,7 @@ parcours suffixe : <span class="arithmatex">\(5 7 + 5 * 25 7 - 3 7\)</span> (not
 Un arbre est composé d'un noeud et de deux sous-arbres. Un sous-arbre est un arbre composé d'un noeud et de deux sous-arbres ... Ce qui induit une approche récursive de cette structure.</p>
 <div class="admonition abstract">
 <p class="admonition-title">interface souhaitée</p>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="c1"># pour créer l&#39;arbre dont le nœud a pour valeur 4,</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="c1"># pour créer l'arbre dont le nœud a pour valeur 4,</span>
                  <span class="c1"># et dont les sous-arbres gauche et droit sont None</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># pour donner la valeur 3 au nœud du sous-arbre gauche de a</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">droit</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># pour donner la valeur 1 au nœud du sous-arbre droit de a</span>
@@ -5580,19 +5580,19 @@ Un arbre est composé d'un noeud et de deux sous-arbres. Un sous-arbre est un ar
 
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">noeud</span><span class="p">)</span> <span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gauche</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;None&#39;</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">)</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">droit</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;None&#39;</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">noeud</span><span class="p">)</span> <span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gauche</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'None'</span><span class="p">,</span><span class="s1">'.'</span><span class="p">)</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">droit</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'None'</span><span class="p">,</span><span class="s1">'.'</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">arbre</span><span class="w"> </span><span class="kn">import</span> <span class="n">ArbreB</span>
-<span class="n">arbre_f</span> <span class="o">=</span> <span class="n">ArbreB</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
-<span class="n">arbre_g</span> <span class="o">=</span> <span class="n">ArbreB</span><span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
-<span class="n">arbre_c</span> <span class="o">=</span> <span class="n">ArbreB</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="n">arbre_f</span><span class="p">,</span><span class="n">arbre_g</span><span class="p">)</span>
-<span class="n">arbre_j</span> <span class="o">=</span> <span class="n">ArbreB</span><span class="p">(</span><span class="s1">&#39;j&#39;</span><span class="p">)</span>
-<span class="n">arbre_e</span> <span class="o">=</span> <span class="n">ArbreB</span><span class="p">(</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="n">arbre_j</span><span class="p">)</span>
-<span class="n">arbre_h</span> <span class="o">=</span> <span class="n">ArbreB</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">)</span>
-<span class="n">arbre_i</span> <span class="o">=</span> <span class="n">ArbreB</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">)</span>
-<span class="n">arbre_d</span> <span class="o">=</span> <span class="n">ArbreB</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="n">arbre_h</span><span class="p">,</span><span class="n">arbre_i</span><span class="p">)</span>
-<span class="n">arbre_b</span> <span class="o">=</span> <span class="n">ArbreB</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">arbre_d</span><span class="p">,</span> <span class="n">arbre_e</span><span class="p">)</span>
-<span class="n">arbre</span> <span class="o">=</span> <span class="n">ArbreB</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">arbre_b</span><span class="p">,</span> <span class="n">arbre_c</span><span class="p">)</span>
+<span class="n">arbre_f</span> <span class="o">=</span> <span class="n">ArbreB</span><span class="p">(</span><span class="s1">'f'</span><span class="p">)</span>
+<span class="n">arbre_g</span> <span class="o">=</span> <span class="n">ArbreB</span><span class="p">(</span><span class="s1">'g'</span><span class="p">)</span>
+<span class="n">arbre_c</span> <span class="o">=</span> <span class="n">ArbreB</span><span class="p">(</span><span class="s1">'c'</span><span class="p">,</span><span class="n">arbre_f</span><span class="p">,</span><span class="n">arbre_g</span><span class="p">)</span>
+<span class="n">arbre_j</span> <span class="o">=</span> <span class="n">ArbreB</span><span class="p">(</span><span class="s1">'j'</span><span class="p">)</span>
+<span class="n">arbre_e</span> <span class="o">=</span> <span class="n">ArbreB</span><span class="p">(</span><span class="s1">'e'</span><span class="p">,</span><span class="n">arbre_j</span><span class="p">)</span>
+<span class="n">arbre_h</span> <span class="o">=</span> <span class="n">ArbreB</span><span class="p">(</span><span class="s1">'h'</span><span class="p">)</span>
+<span class="n">arbre_i</span> <span class="o">=</span> <span class="n">ArbreB</span><span class="p">(</span><span class="s1">'i'</span><span class="p">)</span>
+<span class="n">arbre_d</span> <span class="o">=</span> <span class="n">ArbreB</span><span class="p">(</span><span class="s1">'d'</span><span class="p">,</span> <span class="n">arbre_h</span><span class="p">,</span><span class="n">arbre_i</span><span class="p">)</span>
+<span class="n">arbre_b</span> <span class="o">=</span> <span class="n">ArbreB</span><span class="p">(</span><span class="s1">'b'</span><span class="p">,</span> <span class="n">arbre_d</span><span class="p">,</span> <span class="n">arbre_e</span><span class="p">)</span>
+<span class="n">arbre</span> <span class="o">=</span> <span class="n">ArbreB</span><span class="p">(</span><span class="s1">'a'</span><span class="p">,</span> <span class="n">arbre_b</span><span class="p">,</span> <span class="n">arbre_c</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">arbre</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><span class="filename">Bash Session</span><pre><span></span><code><span class="go">&gt;&gt; abdh..i..ej...cf..g..</span>
@@ -5633,13 +5633,13 @@ N'oubliez pas d'installer les modules <code>matplotlib</code> et <code>networkx<
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">repr_graph</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
-    <span class="n">noeuds</span> <span class="o">=</span> <span class="p">[]</span>             <span class="c1">#liste des noeuds, racines et feuilles de l&#39;arbre</span>
-    <span class="n">branches</span> <span class="o">=</span><span class="p">[]</span>            <span class="c1"># liste des branches de l&#39;arbre</span>
-    <span class="n">profond</span> <span class="o">=</span> <span class="n">hauteur</span><span class="p">(</span><span class="n">arbre</span><span class="p">)</span>        <span class="c1">#hauteur de l&#39;arbre</span>
+    <span class="n">noeuds</span> <span class="o">=</span> <span class="p">[]</span>             <span class="c1">#liste des noeuds, racines et feuilles de l'arbre</span>
+    <span class="n">branches</span> <span class="o">=</span><span class="p">[]</span>            <span class="c1"># liste des branches de l'arbre</span>
+    <span class="n">profond</span> <span class="o">=</span> <span class="n">hauteur</span><span class="p">(</span><span class="n">arbre</span><span class="p">)</span>        <span class="c1">#hauteur de l'arbre</span>
     <span class="n">pos_courante</span> <span class="o">=</span> <span class="mi">2</span><span class="o">**</span><span class="p">(</span><span class="n">profond</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>   <span class="c1"># position de la racine (en abscisse)</span>
     <span class="n">position</span> <span class="o">=</span> <span class="p">{}</span>                <span class="c1"># dictionnaire des positions des noeuds sur la figure</span>
 
-    <span class="c1"># appel d&#39;une fonction récursive de parcours, ici prefixe mais ça n&#39;a pas d&#39;importance</span>
+    <span class="c1"># appel d'une fonction récursive de parcours, ici prefixe mais ça n'a pas d'importance</span>
     <span class="c1"># on récupère : la liste des noeuds, la liste des branches,</span>
     <span class="c1"># le dictionnaire des positions des noeuds</span>
     <span class="n">noeuds</span><span class="p">,</span> <span class="n">branche</span><span class="p">,</span> <span class="n">position</span>  <span class="o">=</span> <span class="n">parkour</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">noeuds</span><span class="p">,</span> <span class="n">branches</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">profond</span><span class="p">,</span> <span class="n">pos_courante</span><span class="p">)</span>    
@@ -5653,21 +5653,21 @@ N'oubliez pas d'installer les modules <code>matplotlib</code> et <code>networkx<
     <span class="c1">#Si vous voulez changer des couleurs, amusez-vous ci-dessous</span>
     <span class="c1">#Plein de noms de couleurs là : http://www.letoileauxsecrets.fr/couleurs/couleurs-gris.html</span>
     <span class="n">options</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s2">&quot;font_size&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
-        <span class="s2">&quot;node_size&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
-        <span class="s2">&quot;node_color&quot;</span><span class="p">:</span> <span class="s2">&quot;white&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;edge_color&quot;</span> <span class="p">:</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;edgecolors&quot;</span><span class="p">:</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;linewidths&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">"font_size"</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+        <span class="s2">"node_size"</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+        <span class="s2">"node_color"</span><span class="p">:</span> <span class="s2">"white"</span><span class="p">,</span>
+        <span class="s2">"edge_color"</span> <span class="p">:</span> <span class="s2">"green"</span><span class="p">,</span>
+        <span class="s2">"edgecolors"</span><span class="p">:</span> <span class="s2">"blue"</span><span class="p">,</span>
+        <span class="s2">"linewidths"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">"width"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
     <span class="p">}</span>
     <span class="c1"># plt.figure(figsize=(12,8))     # pour changer la taille de la figure</span>
     <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx</span><span class="p">(</span><span class="n">mon_arbre</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="n">position</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">)</span>
     <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="mf">0.20</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">"off"</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-    <span class="k">return</span><span class="p">(</span><span class="n">mon_arbre</span><span class="p">)</span>      <span class="c1">#on renvoie l&#39;objet graphe networkxx au cas où</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">mon_arbre</span><span class="p">)</span>      <span class="c1">#on renvoie l'objet graphe networkxx au cas où</span>
 <span class="c1">########################################################################################################</span>
 <span class="n">arbredessin</span> <span class="o">=</span> <span class="n">repr_graph</span><span class="p">(</span><span class="n">arbre</span><span class="p">)</span>
 </code></pre></div>
@@ -5688,16 +5688,16 @@ N'oubliez pas d'installer les modules <code>matplotlib</code> et <code>networkx<
 <span class="normal">12</span>
 <span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">affiche</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indent</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
     <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">indent</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="s1">' '</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">indent</span> <span class="o">+</span> <span class="s1">'|'</span> <span class="o">+</span> <span class="s1">'_'</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="o">+</span> <span class="s1">'</span><span class="se">\n</span><span class="s1">'</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">s</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">affiche</span><span class="p">(</span><span class="n">indent</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39; &#39;</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">indent</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="s1">&#39;None&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>     
+        <span class="n">s</span> <span class="o">+=</span> <span class="s1">' '</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">indent</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="s1">'|'</span> <span class="o">+</span> <span class="s1">'_'</span> <span class="o">+</span> <span class="s1">'None'</span> <span class="o">+</span> <span class="s1">'</span><span class="se">\n</span><span class="s1">'</span>     
 
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">s</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">droit</span><span class="o">.</span><span class="n">affiche</span><span class="p">(</span><span class="n">indent</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39; &#39;</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">indent</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="s1">&#39;None&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>  
+        <span class="n">s</span> <span class="o">+=</span> <span class="s1">' '</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">indent</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="s1">'|'</span> <span class="o">+</span> <span class="s1">'_'</span> <span class="o">+</span> <span class="s1">'None'</span> <span class="o">+</span> <span class="s1">'</span><span class="se">\n</span><span class="s1">'</span>  
     <span class="k">return</span> <span class="n">s</span>
 </code></pre></div></td></tr></table></div>
 <div class="admonition example">
@@ -5754,10 +5754,10 @@ Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, 
 <div class="tabbed-block">
 <p>Coder les fonctions suivantes : </p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">est_Vide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="sd">&quot;&quot;&quot;&quot;retourne True si l&#39;arbre est vide&quot;&quot;&quot;</span>
+<span class="sd">""""retourne True si l'arbre est vide"""</span>
 
 <span class="n">estFeuille</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="sd">&quot;&quot;&quot;&quot;retourne True si l&#39;arbre est une feuille&quot;&quot;&quot;</span>
+<span class="sd">""""retourne True si l'arbre est une feuille"""</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -5769,12 +5769,12 @@ Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, 
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">est_Vide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;&quot;retourne True si l&#39;arbre est vide&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">""""retourne True si l'arbre est vide"""</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">noeud</span> <span class="ow">is</span> <span class="kc">None</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">estFeuille</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;&quot;retourne True si l&#39;arbre est une feuille&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">""""retourne True si l'arbre est une feuille"""</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">noeud</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
 </code></pre></div></td></tr></table></div>
 </div>
@@ -5786,19 +5786,19 @@ Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, 
 <div class="admonition note">
 <p class="admonition-title">Parcours préfixe <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2764.svg" title=":heart:" /></p>
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>fonction prefixe(arbre):
-    Si l&#39;arbre est vide :
+    Si l'arbre est vide :
         return None
     afficher le noeud courant en chaine de caractère ou dans une liste
     # appel récursif de chaque fils
-    Si l&#39;arbre gauche n&#39;est pas vide :
+    Si l'arbre gauche n'est pas vide :
         prefixe(arbre.gauche)
-    Si l&#39;arbre droit n&#39;est pas vide
+    Si l'arbre droit n'est pas vide
         prefixe(arbre.droit)
 </code></pre></div>
 </div>
 <p>Exemple avec l'arbre 
 <img alt="arbre exercice" class="center" src="../data/arbre_parfait2b.jpg" /></p>
-<p><div class="highlight"><span class="filename">Bash Session</span><pre><span></span><code><span class="go">&gt;&gt; prefixe :  [&#39;a&#39;, &#39;b&#39;, &#39;d&#39;, &#39;h&#39;, &#39;i&#39;, &#39;e&#39;, &#39;j&#39;, &#39;c&#39;, &#39;f&#39;, &#39;g&#39;]</span>
+<p><div class="highlight"><span class="filename">Bash Session</span><pre><span></span><code><span class="go">&gt;&gt; prefixe :  ['a', 'b', 'd', 'h', 'i', 'e', 'j', 'c', 'f', 'g']</span>
 </code></pre></div>
 Exemple avec l'arbre 
 <img alt="" class="center" src="../data/exo_imp.png" /></p>
@@ -5813,7 +5813,7 @@ Exemple avec l'arbre
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">parcoursPrefixe</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="c1"># Condition d&#39;arrêt</span>
+    <span class="c1"># Condition d'arrêt</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">noeud</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span> <span class="p">[]</span>
     <span class="c1"># Appel récursif et retourne la réponse</span>
@@ -5828,7 +5828,7 @@ Exemple avec l'arbre
 
 <span class="c1">#autre solution</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">parcoursPrefixe2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;parcours préfixe&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""parcours préfixe"""</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_Vide</span><span class="p">():</span>
         <span class="k">return</span> <span class="p">[]</span>
     <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">noeud</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">parcoursPrefixe</span><span class="p">()</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">droit</span><span class="o">.</span><span class="n">parcoursPrefixe</span><span class="p">()</span>
@@ -5841,19 +5841,19 @@ Exemple avec l'arbre
 <div class="admonition note">
 <p class="admonition-title">Parcours Infixe <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2764.svg" title=":heart:" /></p>
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>fonction infixe(arbre):
-    Si l&#39;arbre est vide :
+    Si l'arbre est vide :
         return None
     # appel récursif de chaque fils
-    Si l&#39;arbre gauche n&#39;est pas vide :
+    Si l'arbre gauche n'est pas vide :
         infixe(arbre.gauche)
     afficher le noeud courant en chaine de caractère ou dans une liste
-    Si l&#39;arbre droit n&#39;est pas vide
+    Si l'arbre droit n'est pas vide
         infixe(arbre.droit)
 </code></pre></div>
 </div>
 <p>Exemple avec l'arbre 
 <img alt="arbre exercice" class="center" src="../data/arbre_parfait2b.jpg" /></p>
-<p><div class="highlight"><span class="filename">Bash Session</span><pre><span></span><code><span class="go">&gt;&gt; infixe :  [&#39;h&#39;, &#39;d&#39;, &#39;i&#39;, &#39;b&#39;, &#39;j&#39;, &#39;e&#39;, &#39;a&#39;, &#39;f&#39;, &#39;c&#39;, &#39;g&#39;]</span>
+<p><div class="highlight"><span class="filename">Bash Session</span><pre><span></span><code><span class="go">&gt;&gt; infixe :  ['h', 'd', 'i', 'b', 'j', 'e', 'a', 'f', 'c', 'g']</span>
 </code></pre></div>
 Exemple avec l'arbre 
 <img alt="" class="center" src="../data/exo_imp.png" /></p>
@@ -5868,7 +5868,7 @@ Exemple avec l'arbre
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">parcoursInfixe</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="c1"># Condition d&#39;arrêt</span>
+    <span class="c1"># Condition d'arrêt</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">noeud</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span> <span class="p">[]</span>
     <span class="c1"># Appel récursif et retourne la réponse</span>
@@ -5889,19 +5889,19 @@ Exemple avec l'arbre
 <div class="admonition note">
 <p class="admonition-title">Parcours suffixe <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2764.svg" title=":heart:" /></p>
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>fonction suffixe(arbre):
-    Si l&#39;arbre est vide :
+    Si l'arbre est vide :
         return None
     # appel récursif de chaque fils
-    Si l&#39;arbre gauche n&#39;est pas vide :
+    Si l'arbre gauche n'est pas vide :
         suffixe(arbre.gauche)
-    Si l&#39;arbre droit n&#39;est pas vide
+    Si l'arbre droit n'est pas vide
         suffixe(arbre.droit)
     afficher le noeud courant en chaine de caractère ou dans une liste
 </code></pre></div>
 </div>
 <p>Exemple avec l'arbre 
 <img alt="arbre exercice" class="center" src="../data/arbre_parfait2b.jpg" /></p>
-<p><div class="highlight"><span class="filename">Bash Session</span><pre><span></span><code><span class="go">&gt;&gt; suffixe :  [&#39;h&#39;, &#39;i&#39;, &#39;d&#39;, &#39;j&#39;, &#39;e&#39;, &#39;b&#39;, &#39;f&#39;, &#39;g&#39;, &#39;c&#39;, &#39;a&#39;]</span>
+<p><div class="highlight"><span class="filename">Bash Session</span><pre><span></span><code><span class="go">&gt;&gt; suffixe :  ['h', 'i', 'd', 'j', 'e', 'b', 'f', 'g', 'c', 'a']</span>
 </code></pre></div>
 Exemple avec l'arbre 
 <img alt="" class="center" src="../data/exo_imp.png" /></p>
@@ -5916,7 +5916,7 @@ Exemple avec l'arbre
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">parcoursSuffixe</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="c1"># Condition d&#39;arrêt</span>
+    <span class="c1"># Condition d'arrêt</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">noeud</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span> <span class="p">[]</span>
     <span class="c1"># Appel récursif et retourne la réponse</span>
@@ -5999,8 +5999,8 @@ Exemple avec l'arbre
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">taille</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;retourne la taille de l&#39;arbre&quot;&quot;&quot;</span>
-    <span class="c1"># condition d&#39;arrêt</span>
+<span class="w">    </span><span class="sd">"""retourne la taille de l'arbre"""</span>
+    <span class="c1"># condition d'arrêt</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_Vide</span><span class="p">():</span>
         <span class="k">return</span> <span class="mi">0</span>
     <span class="c1"># Appel récursif</span>
@@ -6043,7 +6043,7 @@ Exemple avec l'arbre
     Si l arbre est vide
         on renvoie 0
     Sinon
-        on renvoie 1 + le max entre la hauteur de l&#39;arbre gauche et celle de l arbre droit
+        on renvoie 1 + le max entre la hauteur de l'arbre gauche et celle de l arbre droit
 </code></pre></div>
 </div>
 <div class="admonition question">
@@ -6055,7 +6055,7 @@ Exemple avec l'arbre
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">hauteur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="sd">&quot;&quot;&quot;retourne la hauteur de l&#39;arbre&quot;&quot;&quot;</span>
+<span class="sd">"""retourne la hauteur de l'arbre"""</span>
 <span class="n">hauteur_gauche</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">hauteur_droite</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_Vide</span><span class="p">():</span>
@@ -6099,7 +6099,7 @@ Exemple avec l'arbre
 <span class="c1">#Autre version </span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">nb_feuilles</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;retourne le nombre de feuilles de l&#39;arbre&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""retourne le nombre de feuilles de l'arbre"""</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_Vide</span><span class="p">():</span>
         <span class="k">return</span> <span class="mi">0</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">estFeuille</span><span class="p">():</span>
@@ -6124,7 +6124,7 @@ Exemple avec l'arbre
 <div class="tabbed-block">
 <p>Coder la recherche d'une valeur dans un arbre en respectant le paradigme récursif</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;retourne True si la valeur est dans l&#39;arbre et False sinon&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""retourne True si la valeur est dans l'arbre et False sinon"""</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -6145,10 +6145,10 @@ Exemple avec l'arbre
 </div>
 </div>
 </div>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">assert</span> <span class="n">arbre</span><span class="o">.</span><span class="n">recherche</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
-<span class="k">assert</span> <span class="n">arbre</span><span class="o">.</span><span class="n">recherche</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span> <span class="c1">#cas d&#39;une valeur non présente</span>
-<span class="k">assert</span> <span class="n">arbre</span><span class="o">.</span><span class="n">recherche</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span> <span class="c1">#cas ou la valeur rechérchée est une feuille à gauche</span>
-<span class="k">assert</span> <span class="n">arbre</span><span class="o">.</span><span class="n">recherche</span><span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span> <span class="c1">#cas ou la valeur rechérchée est une feuille à droite</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">assert</span> <span class="n">arbre</span><span class="o">.</span><span class="n">recherche</span><span class="p">(</span><span class="s1">'a'</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">arbre</span><span class="o">.</span><span class="n">recherche</span><span class="p">(</span><span class="s1">'z'</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span> <span class="c1">#cas d'une valeur non présente</span>
+<span class="k">assert</span> <span class="n">arbre</span><span class="o">.</span><span class="n">recherche</span><span class="p">(</span><span class="s1">'h'</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span> <span class="c1">#cas ou la valeur rechérchée est une feuille à gauche</span>
+<span class="k">assert</span> <span class="n">arbre</span><span class="o">.</span><span class="n">recherche</span><span class="p">(</span><span class="s1">'g'</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span> <span class="c1">#cas ou la valeur rechérchée est une feuille à droite</span>
 </code></pre></div>
 <h3 id="58-parcours-en-largeur">5.8 Parcours en largeur<a class="headerlink" href="#58-parcours-en-largeur" title="Permanent link">⚓︎</a></h3>
 <p>Le parcours en largeur (BFS) est le plus simple à faire visuellement : mais il est plus difficile à coder que les parcours préfixe, infixe, postfixe.<br />
@@ -6178,17 +6178,17 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">File</span><span class="w"> </span><span class="kn">import</span> <span class="n">File</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">parcoursLargeur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;parcours en largeur</span>
-<span class="sd">    @param: l&#39;arbre à parcourir</span>
-<span class="sd">    @return: la liste des noeuds dans l&#39;ordre en largeur</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1">#Initialisation d&#39;une file vide pour stocker les éléments à traiter</span>
+<span class="w">    </span><span class="sd">"""parcours en largeur</span>
+<span class="sd">    @param: l'arbre à parcourir</span>
+<span class="sd">    @return: la liste des noeuds dans l'ordre en largeur</span>
+<span class="sd">    """</span>
+    <span class="c1">#Initialisation d'une file vide pour stocker les éléments à traiter</span>
     <span class="n">f</span><span class="o">=</span><span class="n">File</span><span class="p">()</span>
     <span class="c1">#Mettre le noeud source</span>
     <span class="n">f</span><span class="o">.</span><span class="n">enfile</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
     <span class="c1">#Liste des sommets pour restituer le parcours en largeur</span>
     <span class="n">l</span><span class="o">=</span><span class="p">[]</span>
-    <span class="c1">#Tant quee la file n&#39;est pas vide</span>
+    <span class="c1">#Tant quee la file n'est pas vide</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">f</span><span class="o">.</span><span class="n">estFileVide</span><span class="p">():</span>
         <span class="c1"># on dépile le noeud du début de la file pour le traiter</span>
         <span class="n">a</span><span class="o">=</span><span class="n">f</span><span class="o">.</span><span class="n">defile</span><span class="p">()</span>
@@ -6202,7 +6202,7 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
     <span class="k">return</span> <span class="n">l</span>
 </code></pre></div>
 </div>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">assert</span> <span class="n">arbre</span><span class="o">.</span><span class="n">parcoursLargeur</span><span class="p">()</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;j&#39;</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">assert</span> <span class="n">arbre</span><span class="o">.</span><span class="n">parcoursLargeur</span><span class="p">()</span> <span class="o">==</span> <span class="p">[</span><span class="s1">'a'</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">,</span> <span class="s1">'d'</span><span class="p">,</span> <span class="s1">'e'</span><span class="p">,</span> <span class="s1">'f'</span><span class="p">,</span> <span class="s1">'g'</span><span class="p">,</span> <span class="s1">'h'</span><span class="p">,</span> <span class="s1">'i'</span><span class="p">,</span> <span class="s1">'j'</span><span class="p">]</span>
 <span class="k">assert</span> <span class="n">arbre2</span><span class="o">.</span><span class="n">parcoursLargeur</span><span class="p">()</span> <span class="o">==</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
 </code></pre></div>
 <div class="admonition success">
@@ -6366,13 +6366,15 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="../../../xtra/javascript/mathjax.js"></script>
       
