@@ -932,6 +932,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TP_piles_files_notation_polonaise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP NPI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -5203,12 +5231,13 @@ Seules deux fonctions <code>go_to(nouvelle_adresse)</code> et <code>back()</code
 <span class="k">def</span><span class="w"> </span><span class="nf">go_to</span><span class="p">(</span><span class="n">nouvelle_adresse</span><span class="p">)</span> <span class="p">:</span>
     <span class="k">global</span> <span class="n">adresse_courante</span>
     <span class="n">adresses</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="n">nouvelle_adresse</span><span class="p">)</span>
-    <span class="n">adresse_courante</span> <span class="o">=</span> <span class="n">nouvelle_adresse</span>
+    <span class="n">adresse_courante</span> <span class="o">=</span> <span class="n">adresses</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">back</span><span class="p">():</span>
     <span class="k">global</span> <span class="n">adresse_courante</span>
-    <span class="n">adresses</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>
-    <span class="n">adresse_courante</span> <span class="o">=</span> <span class="n">adresses</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">contenu</span>
+    <span class="n">adresse_back</span> <span class="o">=</span> <span class="n">adresses</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>
+    <span class="n">adresse_courante</span> <span class="o">=</span> <span class="n">adresses</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span>  <span class="n">adresse_back</span>
 </code></pre></div>
 </div>
 </div>
