@@ -1790,6 +1790,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1806,6 +1824,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice 1
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercice 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partie-a-boucle-while" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partie A : boucle while
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partie-b-fonction-recursive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partie B : fonction récursive
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partie-c-le-probleme-de-larret" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partie C : le problème de l'arrêt
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice 2
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4685,6 +4783,337 @@
 <h1 id="pour-aller-plus-loin">Pour aller plus loin<a class="headerlink" href="#pour-aller-plus-loin" title="Permanent link">⚓︎</a></h1>
 <p>L'excellente vidéo <strong>Nos algorithmes pourraient-ils être BEAUCOUP plus rapides ? (P=NP ?)</strong> de l'excellent David Louapre :</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AgtOCNCejQ8?si=AQDsO3yCt05vJCRE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h2 id="exercice-1">Exercice 1<a class="headerlink" href="#exercice-1" title="Permanent link">⚓︎</a></h2>
+<blockquote>
+<p>D'après le sujet de bac du 12 septembre 2024, Métropole, J2, Exercice 1 (24-NSIJ2ME3)</p>
+</blockquote>
+<p><em>Cet exercice porte sur l’exécution d’un programme Python et sur la décidabilité.</em></p>
+<p>Dans cet exercice, on dira qu’un appel <code>f(x)</code>, où <code>f</code> est une fonction Python prenant un argument et <code>x</code> est une valeur, <strong>termine</strong> lorsque l’évaluation de <code>f(x)</code> renvoie toujours une valeur au bout d’un nombre fini d’étapes. À l'opposé, un tel appel ne termine pas s'il est 
+possible qu'il effectue des instructions à l'infini.</p>
+<h3 id="partie-a-boucle-while">Partie A : boucle <code>while</code><a class="headerlink" href="#partie-a-boucle-while" title="Permanent link">⚓︎</a></h3>
+<p>Commençons par un premier exemple, avec une fonction prenant un entier
+    en argument et utilisant une boucle <code>while</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">f1</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">n</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">i</span>
+</code></pre></div>
+<p><strong>1.</strong> Sur votre copie, donner les valeurs successives de la variable <code>i</code>
+    lors de l'exécution de <code>f1(7)</code> et indiquer si <code>f1(7)</code> termine.</p>
+<details class="success">
+<summary>Réponse</summary>
+<ul>
+<li><code>i = 7</code> : initialisation</li>
+<li><code>i = 8</code>, puis le test <code>i != 10</code> est vrai</li>
+<li><code>i = 9</code>, puis le test <code>i != 10</code> est vrai</li>
+<li><code>i = 10</code>, puis le test <code>i != 10</code> est <strong>faux</strong></li>
+<li>La fonction renvoie <code>10</code>.</li>
+</ul>
+<p><code>f1(7)</code> termine donc et renvoie 10.</p>
+</details>
+<p><strong>2.</strong> Indiquer si l'appel <code>f1(-2)</code> se termine. Si oui, indiquer la valeur renvoyée.</p>
+<details class="success">
+<summary>Réponse</summary>
+<ul>
+<li><code>i = -2</code> : initialisation</li>
+<li><code>i = -1</code>, puis le test <code>i != 10</code> est vrai</li>
+<li><code>i = 0</code>, puis le test <code>i != 10</code> est vrai</li>
+<li><code>i = 1</code>, puis le test <code>i != 10</code> est vrai</li>
+<li><code>i = 2</code>, puis le test <code>i != 10</code> est vrai</li>
+<li>...</li>
+<li><code>i = 9</code>, puis le test <code>i != 10</code> est vrai</li>
+<li><code>i = 10</code>, puis le test <code>i != 10</code> est <strong>faux</strong></li>
+<li>La fonction renvoie <code>10</code>.</li>
+</ul>
+<p><code>f1(-2)</code> termine donc et renvoie 10.</p>
+</details>
+<p><strong>3.</strong> Sur votre copie, donner les 5 premières valeurs prises par la variable <code>i</code>
+    lors de l'exécution <code>f1(12)</code>, et indiquer si l'appel <code>f1(12)</code> va terminer ou non.</p>
+<details class="success">
+<summary>Réponse</summary>
+<ul>
+<li><code>i = 12</code> : initialisation</li>
+<li><code>i = 13</code>, puis le test <code>i != 10</code> est vrai</li>
+<li><code>i = 14</code>, puis le test <code>i != 10</code> est vrai</li>
+<li><code>i = 15</code>, puis le test <code>i != 10</code> est vrai</li>
+<li><code>i = 16</code>, puis le test <code>i != 10</code> est vrai</li>
+</ul>
+<p><code>f1(12)</code> ne termine donc pas car la condition <code>i != 10</code> est toujours vraie. On ne sort pas de la boucle <code>while</code></p>
+</details>
+<p><strong>4.</strong> Préciser pour quels entiers <code>n</code> l'appel <code>f1(n)</code> se termine.</p>
+<details class="success">
+<summary>Réponse</summary>
+<ul>
+<li>Pour <code>n &lt;= 10</code>, l'appel <code>f1(n)</code> se termine.</li>
+<li>Pour <code>n &gt; 10</code>, l'appel <code>f1(n)</code> ne se termine pas. </li>
+</ul>
+</details>
+<h3 id="partie-b-fonction-recursive">Partie B : fonction récursive<a class="headerlink" href="#partie-b-fonction-recursive" title="Permanent link">⚓︎</a></h3>
+<p>Prenons maintenant un deuxième exemple, avec une fonction récursive
+    (prenant, elle aussi, un entier en argument).</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">f2</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span> <span class="o">+</span> <span class="n">f2</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>5.</strong> L'appel <code>f2(4)</code> termine-t-il ?
+    Si oui, indiquer la valeur renvoyée par <code>f2(4)</code> ; sinon, justifier brièvement.</p>
+<details class="success">
+<summary>Réponse</summary>
+<ul>
+<li><code>f2(4)</code> essaie de calculer <code>4 + f2(2)</code>, donc il y a un appel à <code>f2(2)</code>.</li>
+<li><code>f2(2)</code> essaie de calculer <code>2 + f2(0)</code>, donc il y a un appel à <code>f2(0)</code>.</li>
+<li><code>f2(0)</code> renvoie immédiatement 0.</li>
+<li><code>f2(2)</code> renvoie alors <code>2 + 0</code>, donc <code>2</code>.</li>
+<li><code>f2(4)</code> renvoie alors <code>4 + 2</code>, donc <code>6</code>.</li>
+</ul>
+<p><code>f2(4)</code> termine et renvoie <code>6</code>.</p>
+</details>
+<p><strong>6.</strong> L'appel <code>f2(5)</code> termine-t-il ?
+    Si oui, indiquer la valeur renvoyée par <code>f2(5)</code> ; sinon, justifier brièvement.</p>
+<details class="success">
+<summary>Réponse</summary>
+<ul>
+<li><code>f2(5)</code> essaie de calculer <code>5 + f2(3)</code>, donc il y a un appel à <code>f2(3)</code>.</li>
+<li><code>f2(3)</code> essaie de calculer <code>3 + f2(1)</code>, donc il y a un appel à <code>f2(1)</code>.</li>
+<li><code>f2(1)</code> essaie de calculer <code>1 + f2(-1)</code>, donc il y a un appel à <code>f2(-1)</code>.</li>
+<li><code>f2(-1)</code> essaie de calculer <code>-1 + f2(-3)</code>, donc il y a un appel à <code>f2(-3)</code>.
+La condition d'arret <code>if n == 0:</code> n'est jamais atteinte car <code>n</code> ne prend que des valeurs impaires.<br />
+<code>f2(5)</code> ne termine pas donc pas.  </li>
+</ul>
+<details class="warning">
+<summary>Remarque</summary>
+<p>Si on exécute ce code, au bout de 1000 appels récursifs (valeur par défaut) un mécanisme de Python stoppe le programme.<br />
+Il s'affiche alors : <code>RecursionError: maximum recursion depth exceeded</code></p>
+</details>
+</details>
+<p><strong>7.</strong> Déterminer l'ensemble des entiers naturels <code>n</code> pour lesquels l'appel <code>f2(n)</code> termine.</p>
+<details class="success">
+<summary>Réponse</summary>
+<p>L'appel <code>f2(n)</code> termine pour tous les entiers pairs et positifs.</p>
+</details>
+<p><strong>8.</strong> Écrire une fonction Python <code>infini</code>, récursive, telle que
+    l'appel <code>infini(n)</code> ne termine pour aucun entier <code>n</code>.</p>
+<details class="success">
+<summary>Réponse</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">infini</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""n est un entier naturel donc positif ou nul."""</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>  <span class="c1"># Cette condition ne sera jamais réalisée</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">infini</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+<p>Une autre réponse possible :</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">infini</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">infini</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<h3 id="partie-c-le-probleme-de-larret">Partie C : le problème de l'arrêt<a class="headerlink" href="#partie-c-le-probleme-de-larret" title="Permanent link">⚓︎</a></h3>
+<p>On se demande maintenant s'il est possible d'écrire une fonction <code>arret</code> qui
+    prend en arguments une chaine de caractères <code>code_f</code> contenant le code
+    d'une fonction <code>f</code> et un argument <code>x</code> de <code>f</code>, et tel que
+    <code>arret(code_f, x)</code> renvoie <code>True</code> si l'appel <code>f(x)</code> va terminer et <code>False</code> sinon.</p>
+<p>Dans la suite de cet exercice, on suppose disposer d'une fonction <code>arret</code>
+    et on implémente la fonction suivante, utilisant cette fonction <code>arret</code>,
+    ainsi que la fonction <code>infini</code> de la question précédente
+    dont l'appel <code>infini(n)</code> ne termine jamais, quelle que soit la valeur de <code>n</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">paradoxe</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arret</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">infini</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+</code></pre></div></td></tr></table></div>
+<p>De même, on suppose disposer d'une variable <code>code_paradoxe</code> contenant
+    le code de la fonction <code>paradoxe</code> sous la forme d'une chaine de caractères,
+    et on s'intéresse à l'appel <code>paradoxe(code_paradoxe)</code>.</p>
+<p>Cet appel de fonction commence par effectuer le test
+    <code>arret(code_paradoxe, code_paradoxe)</code> dans le <code>if</code> de la ligne 2.</p>
+<p><strong>9.</strong> Dans le cas où <code>arret(code_paradoxe, code_paradoxe)</code> renvoie <code>True</code>,
+    préciser la prochaine instruction à être exécutée.
+    Dans ce cas, expliquer si l'appel <code>paradoxe(code_paradoxe)</code> termine.</p>
+<details class="success">
+<summary>Réponse</summary>
+<p>Si <code>arret(code_paradoxe, code_paradoxe)</code> renvoie <code>True</code>, alors la prochaine instruction sera <code>infini(42)</code> qui ne termine pas. Cela prouve que l'appel <code>paradoxe(code_paradoxe)</code> ne termine pas.</p>
+</details>
+<p><strong>10.</strong> Dans le cas où <code>arret(code_paradoxe, code_paradoxe)</code> renvoie <code>False</code>,
+    préciser la prochaine instruction à être exécutée.
+    Dans ce cas, expliquer si l'appel <code>paradoxe(code_paradoxe)</code> termine.</p>
+<details class="success">
+<summary>Réponse</summary>
+<p>Si <code>arret(code_paradoxe, code_paradoxe)</code> renvoie <code>False</code>, alors la prochaine instruction sera <code>return 0</code> qui termine. Cela prouve  que l'appel <code>paradoxe(code_paradoxe)</code> termine.</p>
+</details>
+<p><strong>11.</strong> En déduire qu'une telle fonction <code>arret</code> ne peut exister.</p>
+<details class="success">
+<summary>Réponse</summary>
+<p>Supposons que la fonction <code>arret</code> existe. <br />
+<code>arret(code_paradoxe, code_paradoxe)</code> peut renvoyer soit <code>True</code>, soit <code>False</code>.</p>
+<ul>
+<li>Supposons que <code>arret(code_paradoxe, code_paradoxe)</code> renvoie <code>True</code>. D'après la question <strong>9.</strong> l'appel <code>paradoxe(code_paradoxe)</code> ne termine pas. Donc ce n'est pas possible car il faudrait que <code>arret(code_paradoxe, code_paradoxe)</code> renvoie <code>False</code>, ce qui est en contradiction avec notre hypothèse.</li>
+<li>Supposons que <code>arret(code_paradoxe, code_paradoxe)</code> renvoie <code>False</code>. D'après la question <strong>10.</strong> l'appel <code>paradoxe(code_paradoxe)</code>  termine. Donc ce n'est pas possible car il faudrait que <code>arret(code_paradoxe, code_paradoxe)</code> renvoie <code>True</code>, ce qui est en contradiction avec notre hypothèse.</li>
+</ul>
+<p>On a démontré que si la fonction <code>arret</code> existait, ce n'était pas possible. Ceci montre "par l'absurde" que la fonction <code>arret</code> ne peut pas exister.</p>
+</details>
+<h2 id="exercice-2">Exercice 2<a class="headerlink" href="#exercice-2" title="Permanent link">⚓︎</a></h2>
+<p>Sujet de bac Asie jour 1 session 2025</p>
+<p>Décidabilité, algorithmique et programmation Python </p>
+<p>En Python, on peut utiliser le triple guillemet pour écrire une chaîne de caractères sur plusieurs lignes. Par exemple, on peut définir une variable <code>programme1</code> qui contient la chaîne de caractères correspondant à un petit programme Python de la manière suivante :</p>
+<div class="highlight"><pre><span></span><code><span class="n">programme1</span> <span class="o">=</span> <span class="s2">"""</span>
+<span class="s2">x = 10</span>
+<span class="s2">y = 10</span>
+<span class="s2">while x &gt; 0:</span>
+<span class="s2">    x = x - 1</span>
+<span class="s2">    y = y + 1</span>
+<span class="s2">"""</span>
+</code></pre></div>
+<p>De même, on peut définir la variable <code>programme2</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="n">programme2</span> <span class="o">=</span> <span class="s2">"""</span>
+<span class="s2">def boucle_infinie():</span>
+<span class="s2">    while True:</span>
+<span class="s2">        pass # Ne rien faire</span>
+<span class="s2">boucle_infinie()</span>
+<span class="s2">"""</span>
+</code></pre></div>
+<p><strong>1.</strong> On suppose que l'on exécute le programme contenu dans la variable <code>programme1</code>. Donner les valeurs de <code>x</code> et de <code>y</code> après exécution de ce programme.</p>
+<details class="success">
+<summary>Réponse</summary>
+<p><code>x</code> vaut 0 et <code>y</code> vaut 20.  </p>
+</details>
+<p><strong>2.</strong> Expliquer pourquoi tout programme Python peut être vu comme une chaîne de caractères.</p>
+<details class="success">
+<summary>Réponse</summary>
+<p>Un fichier Python est un fichier texte, on peut donc le percevoir comme une chaine de caractères. </p>
+</details>
+<p>En Python, la fonction <code>exec</code> permet d'exécuter le programme correspondant à une chaîne de caractères passée en paramètre.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">exec</span><span class="p">(</span><span class="s2">"r = 42"</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">r</span>
+<span class="mi">42</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">exec</span><span class="p">(</span><span class="n">programme1</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="mi">20</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">exec</span><span class="p">(</span><span class="n">programme2</span><span class="p">)</span>
+<span class="p">[</span><span class="n">ne</span> <span class="n">termine</span> <span class="n">pas</span><span class="p">]</span>
+</code></pre></div>
+<p>On considère les quatre variables <code>programme3</code>, <code>programme4</code>, <code>programme5</code> et <code>programme6</code> suivantes :</p>
+<div class="highlight"><pre><span></span><code><span class="n">programme3</span> <span class="o">=</span> <span class="s2">"""</span>
+<span class="s2">x = 10</span>
+<span class="s2">while x != 0:</span>
+<span class="s2">    x = x - 2</span>
+<span class="s2">"""</span>
+
+<span class="n">programme4</span> <span class="o">=</span> <span class="s2">"""</span>
+<span class="s2">x = 10</span>
+<span class="s2">while x &gt; 0:</span>
+<span class="s2">    x = x + 2</span>
+<span class="s2">"""</span>
+
+<span class="n">programme5</span> <span class="o">=</span> <span class="s2">"""</span>
+<span class="s2">x = 10</span>
+<span class="s2">while x &lt; 0:</span>
+<span class="s2">    x = x + 4</span>
+<span class="s2">"""</span>
+
+<span class="n">programme6</span> <span class="o">=</span> <span class="s2">"""</span>
+<span class="s2">x = 10</span>
+<span class="s2">while x != 0:</span>
+<span class="s2">    x = x - 4</span>
+<span class="s2">"""</span>
+</code></pre></div>
+<p><strong>3.</strong> On exécute les variables <code>programme3</code>, <code>programme4</code>, <code>programme5</code> et <code>programme6</code> avec la fonction <code>exec</code>. Déterminer lesquelles terminent et lesquelles ne terminent pas.</p>
+<details class="success">
+<summary>Réponse</summary>
+<p>Les programmes 3 et 5 terminent.</p>
+<p>Les programmes 4 et 6 ne terminent pas. </p>
+</details>
+<p>On cherche à écrire une fonction <code>arret</code> telle que <code>arret(programme)</code> renvoie <code>True</code> si <code>exec(programme)</code> termine et <code>False</code> si <code>exec(programme)</code> ne termine pas. Cette fonction <code>arret</code> doit donc s'arrêter dans tous les cas.</p>
+<p><strong>4.</strong> Indiquer ce que réalise le programme suivant et s'il permet de répondre au problème posé ci-dessus.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">arret_essai1</span><span class="p">(</span><span class="n">programme</span><span class="p">):</span>
+    <span class="n">exec</span><span class="p">(</span><span class="n">programme</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">True</span>
+</code></pre></div>
+<details class="success">
+<summary>Réponse</summary>
+<p>Ce programme ne répond pas au problème car si le programme ne s'arrête pas (à la ligne 2), le programme ne renverra jamais <code>False</code>.   </p>
+</details>
+<p>On suppose disposer d'une fonction <code>recherche(mot, texte)</code> qui renvoie <code>True</code> si une chaîne de caractères <code>mot</code> est présente dans une chaîne de caractères <code>texte</code> et <code>False</code> sinon.</p>
+<p><strong>5.</strong> Expliquer succinctement le principe de l'algorithme de Boyer-Moore qui permet d'implémenter cette fonction <code>recherche</code>.</p>
+<details class="success">
+<summary>Réponse</summary>
+<p>L'algorithme de Boyer-Moore est un algorithme de recherche de texte qui utilise un dictionnaire pour faire des décalages intelligents et ainsi accélérer la recherche.  </p>
+</details>
+<p>Une idée est d'écrire une fonction qui décrète qu'un programme s'arrête s'il ne contient pas de <code>while</code> et ne s'arrête pas s'il en contient un.</p>
+<p><strong>6.</strong> Écrire une fonction <code>arret_essai2(programme)</code> qui renvoie <code>True</code> si la chaîne de caractères <code>"while"</code> n'est pas utilisée dans la chaîne de caractères <code>programme</code> et <code>False</code> sinon.</p>
+<details class="success">
+<summary>Réponse</summary>
+<div class="highlight"><pre><span></span><code>    <span class="k">def</span><span class="w"> </span><span class="nf">arret_essai2</span><span class="p">(</span><span class="n">programme</span><span class="p">):</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="n">recherche</span><span class="p">(</span><span class="s1">'while'</span><span class="p">,</span> <span class="n">programme</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<p><strong>7.</strong> Montrer qu'il est possible que :</p>
+<ul>
+<li><code>arret_essai2(programme)</code> renvoie <code>True</code> alors que le programme ne s'arrête pas ;</li>
+<li><code>arret_essai2(programme)</code> renvoie <code>False</code> alors que le programme s'arrête.</li>
+</ul>
+<blockquote>
+<p><em>Indication : il n'y a pas que les boucles <code>while</code> qui peuvent poser des problèmes de non terminaison.</em></p>
+</blockquote>
+<details class="success">
+<summary>Réponse</summary>
+<p>Avec le programme suivant :
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">programme</span><span class="p">():</span>
+    <span class="n">programme</span><span class="p">()</span>
+</code></pre></div></p>
+<p><code>arret_essai2(programme)</code> renverra <code>True</code> alors que le programme ne s'arrête pas.  </p>
+<p>Avec le programme suivant :
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">programme</span><span class="p">():</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="n">n</span> <span class="o">-=</span> <span class="mi">1</span>
+</code></pre></div>
+<code>arret_essai2(programme)</code> renverra <code>False</code> alors que le programme s'arrête.  </p>
+</details>
+<p>Nos tentatives pour écrire une telle fonction <code>arret</code> sont restées vaines. Nous allons montrer qu'il est en réalité <em>impossible</em> d'écrire une telle fonction. On va supposer qu'une telle fonction <code>arret</code> existe. On va montrer que cette supposition aboutit à un paradoxe ce qui prouvera que la supposition est fausse.</p>
+<p><strong>8.</strong> Écrire une fonction <code>terminaison_inverse</code> telle que l'appel <code>terminaison_inverse(programme)</code> termine si la chaîne de caractères <code>programme</code> représente un programme qui ne termine pas et ne termine pas si la chaîne de caractères <code>programme</code> représente un programme qui termine. On pourra utiliser la fonction <code>boucle_infinie</code> de <code>programme2</code> ainsi bien sûr que la fonction <code>arret</code> dont on a supposé l'existence.</p>
+<details class="success">
+<summary>Réponse</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">terminaison_inverse</span><span class="p">(</span><span class="n">programme</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arret</span><span class="p">(</span><span class="n">programme</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">boucle_infinie</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'stop'</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<p>On considère <code>"terminaison_inverse(programme_paradoxal)"</code> qui n'est rien d'autre qu'une chaîne de caractères, et on définit une variable que l'on appelle <code>programme_paradoxal</code> à laquelle on affecte cette chaîne de caractères :</p>
+<div class="highlight"><pre><span></span><code><span class="n">programme_paradoxal</span> <span class="o">=</span> <span class="s2">"terminaison_inverse(programme_paradoxal)"</span>
+</code></pre></div>
+<p><strong>9.</strong> Étudier si le programme paradoxal termine ou non, c'est-à-dire si <code>exec(programme_paradoxal)</code> termine ou non.</p>
+<details class="success">
+<summary>Réponse</summary>
+<p>Si <code>programme_paradoxal</code> termine, alors <code>terminaison_inverse(programme_paradoxal)</code> ne termine pas.</p>
+<p>Si <code>programme_paradoxal</code> ne termine pas, alors <code>terminaison_inverse(programme_paradoxal)</code> termine.     </p>
+</details>
+<p><strong>10.</strong> Indiquer ce que l'on peut conclure sur la fonction <code>arret</code>.</p>
+<details class="success">
+<summary>Réponse</summary>
+<p>La question 9. a abouti à une contradiction. Celle-ci est due à la non-existence de la fonction <code>arret</code>.</p>
+</details>
+<p><strong>11.</strong> Expliquer si l'impossibilité d'écrire une telle fonction <code>arret</code> est due aux limitations du langage Python.</p>
+<details class="success">
+<summary>Réponse</summary>
+<p>Cette impossibilité n'est pas due aux limitations du langage Python. Elle est générale, et a été démontrée en 1936 par Alan Turing sous le nom <em>Théorème de l'arrêt</em>.   </p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Crédits</p>
+<p>La plus grande partie de l'exercice 1 est retranscrite et corrigée par Franck Chambon sous <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">licence cc-by-nc-sa</a>. Modifications : Mireille Coilhac.</p>
+<p>Crédit exercice 2 : Gilles Lassus</p>
+</div>
 
 
 
